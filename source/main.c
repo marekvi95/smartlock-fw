@@ -45,6 +45,8 @@
 #include "demo_sigfox.h"
 #include "epaper_2in13.h"
 #include "ltc2942.h"
+#include "Fonts/fonts.h"
+#include "GUI/GUI_Paint.h"
 /* TODO: insert other definitions and declarations here. */
 /* Maximum number characters (bytes) in record. */
 #define MSG_CHAR_MAX     40
@@ -57,7 +59,7 @@ int main(void) {
 	status_t status = kStatus_Success;
 
 	/* NFC record to be send via Sigfox (ended by '\0'). */
-	unsigned char msg[] = "SigfoxTest";
+	unsigned char msg[] = "SigfoxInit";
 	/* Length of text record in "msg". Negative value if the record is not valid. */
 	uint32_t msgLen = sizeof(msg);
 
@@ -67,6 +69,23 @@ int main(void) {
 	BOARD_InitBootPeripherals();
 	/* Init FSL debug console. */
 	BOARD_InitDebugConsole();
+
+	/* Initialize Waveshare display */
+	EPD_Init(FULL_UPDATE);
+
+	/* Display NXP logo */
+	EPD_Display(nxp_image);
+	EPD_Clear();
+
+	unsigned char BlackImage[4000];
+	Paint_NewImage(BlackImage, EPD_WIDTH, EPD_HEIGHT, 270, WHITE);
+	Paint_SelectImage(BlackImage);
+	Paint_SetMirroring(MIRROR_HORIZONTAL); //
+	Paint_Clear(WHITE);
+
+	Paint_DrawString_EN(2,2,"$*,^`",&Font24, WHITE, BLACK);
+	Paint_DrawString_EN(30,50,"Swipe card",&Font24, WHITE, BLACK);
+	EPD_Display(BlackImage);
 
 	status = SIGFOX_SetupDriver(&sfDrvData);
 	if (status != kStatus_Success)
@@ -94,11 +113,7 @@ int main(void) {
 			task_nfc(&sfDrvData);
 		}
     }
-//
-//    PRINTF("Hello World\n");
-//    printf("\nRunning the NXP-NCI project.\n");
-//
-//	task_nfc();
+
 
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;
