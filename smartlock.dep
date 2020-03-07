@@ -1,0 +1,1492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>319086458</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\drivers\fsl_common.h</file>
+            <file>$PROJ_DIR$\device\system_K32L2B31A.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_dma.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_clock.c</file>
+            <file>$PROJ_DIR$\component\serial_manager\serial_port_internal.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_version.h</file>
+            <file>$PROJ_DIR$\CMSIS_driver\Driver_I2C.h</file>
+            <file>$PROJ_DIR$\CMSIS\core_armv81mml.h</file>
+            <file>$PROJ_DIR$\CMSIS\mpu_armv7.h</file>
+            <file>$PROJ_DIR$\CMSIS_driver\Driver_SPI.h</file>
+            <file>$PROJ_DIR$\component\lists\generic_list.c</file>
+            <file>$PROJ_DIR$\component\uart\uart.h</file>
+            <file>$PROJ_DIR$\device\K32L2B31A.h</file>
+            <file>$PROJ_DIR$\component\lists\generic_list.h</file>
+            <file>$PROJ_DIR$\CMSIS\core_armv8mbl.h</file>
+            <file>$PROJ_DIR$\CMSIS\mpu_armv8.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\CMSIS\core_armv8mml.h</file>
+            <file>$PROJ_DIR$\CMSIS\core_cm0plus.h</file>
+            <file>$PROJ_DIR$\component\serial_manager\serial_port_uart.h</file>
+            <file>$PROJ_DIR$\component\uart\lpuart_adapter.c</file>
+            <file>$PROJ_DIR$\device\fsl_device_registers.h</file>
+            <file>$PROJ_DIR$\CMSIS_driver\Driver_Common.h</file>
+            <file>$PROJ_DIR$\component\serial_manager\serial_manager.c</file>
+            <file>$PROJ_DIR$\component\serial_manager\serial_manager.h</file>
+            <file>$PROJ_DIR$\component\serial_manager\serial_port_uart.c</file>
+            <file>$PROJ_DIR$\device\K32L2B31A_features.h</file>
+            <file>$PROJ_DIR$\device\system_K32L2B31A.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_clock.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_common.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_gpio.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_port.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_smc.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_i2c_dma.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_i2c_dma.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_lptmr.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_dmamux.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_gpio.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_i2c_cmsis.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_smc.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_spi.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_i2c.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_lptmr.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_dmamux.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_dma.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_lpuart.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_lpuart.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_i2c.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_i2c_cmsis.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_llwu.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_llwu.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_i2c.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_spi.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_dma.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_tpm.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T2T.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T4T.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\sf.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\sf.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_clock.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_smc.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_MIFARE.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\spi_aml.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\T4T_NDEF_emu.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T2T.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T1T.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_uart.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_uart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T3T.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\P2P_NDEF.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_spi_cmsis.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\P2P_NDEF.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\NxpNci.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T3T.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_lptmr.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\T4T_NDEF_emu.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\smartlock.pbd</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_lpuart.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_k32l2b31a.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\ftm_aml.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\nfc_task.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_lpuart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_llwu.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\board.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\semihost_hardfault.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_common.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\nfc_task.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_spi_cmsis.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_spi.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\lpuart_adapter.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\peripherals.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\serial_port_uart.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\tpm_aml.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\semihost_hardfault.o</file>
+            <file>$PROJ_DIR$\Debug\Exe\smartlock.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_gpio.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\K32L2B31xxxxA_Project.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_lptmr.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\serial_manager.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\serial_manager.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_clock.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\P2P_NDEF.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\ftm_aml.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\wait_aml.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\generic_list.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_spi_cmsis.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\serial_port_uart.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\demo_sigfox.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\pin_mux.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\mtb.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_spi_dma.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_spi.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\ndef_helper.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\ndef_helper.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_uart.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\demo_sigfox.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\generic_list.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\spi_aml.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\lpuart_adapter.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_k32l2b31a.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\serial_port_uart.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\serial_manager.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\T4T_NDEF_emu.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_smc.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\semihost_hardfault.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\ftm_aml.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\tpm_aml.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\tpm_aml.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_smc.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_spi_dma.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\lpuart_adapter.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T4T.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_debug_console.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\generic_list.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_i2c.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\tml.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_k32l2b31a.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\mtb.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_str.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\demo_sigfox.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T2T.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_assert.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T1T.__cstat.et</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\inc\RW_NDEF.h</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF_T2T.c</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF_T3T.c</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\inc\RW_NDEF_MIFARE.h</file>
+            <file>$PROJ_DIR$\NfcLibrary\inc\Nfc.h</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF_MIFARE.c</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\inc\RW_NDEF_T2T.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_tpm.c</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF_T1T.c</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF_T4T.c</file>
+            <file>$PROJ_DIR$\NfcLibrary\inc\Nfc_settings.h</file>
+            <file>$PROJ_DIR$\NfcLibrary\NxpNci\inc\NxpNci.h</file>
+            <file>$PROJ_DIR$\sf\sf.c</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF.c</file>
+            <file>$PROJ_DIR$\sf\sf.h</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\T4T_NDEF_emu.c</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\inc\RW_NDEF_T3T.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_spi.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_spi_dma.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_uart.h</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\inc\RW_NDEF_T1T.h</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\inc\P2P_NDEF.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_uart.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_tpm.h</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\inc\T4T_NDEF_emu.h</file>
+            <file>$PROJ_DIR$\NfcLibrary\NxpNci\src\NxpNci.c</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\P2P_NDEF.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_spi_cmsis.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_spi_dma.h</file>
+            <file>$PROJ_DIR$\NfcLibrary\NdefLibrary\inc\RW_NDEF_T4T.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_spi_cmsis.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\mtb.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_dmamux.o</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_tpm.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\clock_config.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_clock.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_spi_dma.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\clock_config.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\board.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_i2c.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\sf_setup.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_gpio.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\wait_aml.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_common.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\sf_setup.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_K32L2B31A.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\wait_aml.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_str.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\board.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_i2c_dma.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\K32L2B31xxxxA_Project.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_common.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_i2c_cmsis.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_K32L2B31A.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_dmamux.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_llwu.xcl</file>
+            <file>$PROJ_DIR$\board\peripherals.c</file>
+            <file>$PROJ_DIR$\board\peripherals.h</file>
+            <file>$PROJ_DIR$\aml\spi_aml\spi_aml.h</file>
+            <file>$PROJ_DIR$\CMSIS\arm_common_tables.h</file>
+            <file>$PROJ_DIR$\board\clock_config.h</file>
+            <file>$PROJ_DIR$\board\board.h</file>
+            <file>$PROJ_DIR$\aml\gpio_aml.h</file>
+            <file>$PROJ_DIR$\board\pin_mux.h</file>
+            <file>$PROJ_DIR$\aml\tmr_aml\tpm_aml.c</file>
+            <file>$PROJ_DIR$\board\RTE_Device.h</file>
+            <file>$PROJ_DIR$\CMSIS\arm_const_structs.h</file>
+            <file>$PROJ_DIR$\aml\wait_aml\wait_aml.c</file>
+            <file>$PROJ_DIR$\board\board.c</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_armclang.h</file>
+            <file>$PROJ_DIR$\board\clock_config.c</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_armclang_ltm.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\CMSIS\arm_math.h</file>
+            <file>$PROJ_DIR$\aml\wait_aml\wait_aml.h</file>
+            <file>$PROJ_DIR$\aml\common_aml.h</file>
+            <file>$PROJ_DIR$\aml\spi_aml\spi_aml.c</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_gcc.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_armcc.h</file>
+            <file>$PROJ_DIR$\aml\tmr_aml\ftm_aml.h</file>
+            <file>$PROJ_DIR$\aml\tmr_aml\tmr_aml.h</file>
+            <file>$PROJ_DIR$\board\pin_mux.c</file>
+            <file>$PROJ_DIR$\aml\tmr_aml\ftm_aml.c</file>
+            <file>$PROJ_DIR$\aml\tmr_aml\tpm_aml.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_lpuart.xcl</file>
+            <file>$PROJ_DIR$\source\app_config.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T1T.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_MIFARE.o</file>
+            <file>$PROJ_DIR$\source\TML\tml.c</file>
+            <file>$PROJ_DIR$\source\nfc_task.c</file>
+            <file>$PROJ_DIR$\utilities\fsl_debug_console_conf.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T3T.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_T4T.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\spi_aml.xcl</file>
+            <file>$PROJ_DIR$\startup\startup_k32l2b31a.c</file>
+            <file>$PROJ_DIR$\source\demo_sigfox.h</file>
+            <file>$PROJ_DIR$\source\FreeRTOSConfig.h</file>
+            <file>$PROJ_DIR$\source\mtb.c</file>
+            <file>$PROJ_DIR$\sf\sf_model.h</file>
+            <file>$PROJ_DIR$\sf\sf_ol23xx.h</file>
+            <file>$PROJ_DIR$\sf\sf_setup.h</file>
+            <file>$PROJ_DIR$\utilities\fsl_debug_console.h</file>
+            <file>$PROJ_DIR$\utilities\fsl_str.c</file>
+            <file>$PROJ_DIR$\source\ndef_helper.c</file>
+            <file>$PROJ_DIR$\source\demo_sigfox.c</file>
+            <file>$PROJ_DIR$\utilities\fsl_str.h</file>
+            <file>$PROJ_DIR$\source\tool.h</file>
+            <file>$PROJ_DIR$\source\K32L2B31xxxxA_Project.c</file>
+            <file>$PROJ_DIR$\sf\sf_setup.c</file>
+            <file>$PROJ_DIR$\source\nfc_task.h</file>
+            <file>$PROJ_DIR$\source\TML\tml.h</file>
+            <file>$PROJ_DIR$\source\ndef_helper.h</file>
+            <file>$PROJ_DIR$\source\semihost_hardfault.c</file>
+            <file>$PROJ_DIR$\utilities\fsl_assert.c</file>
+            <file>$PROJ_DIR$\utilities\fsl_debug_console.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_K32L2B31A.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_debug_console.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_debug_console.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_dmamux.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_i2c_dma.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\sf.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\K32L2B31xxxxA_Project.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\peripherals.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\NxpNci.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_i2c_cmsis.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_dma.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\peripherals.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_str.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_dma.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\pin_mux.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\sf_setup.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\nfc_task.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\pin_mux.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_lptmr.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\tml.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\clock_config.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_i2c_dma.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\ndef_helper.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_llwu.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_assert.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\tml.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\NxpNci.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\RW_NDEF_MIFARE.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_assert.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_tpm.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_i2c_cmsis.__cstat.et</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_dma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 294</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 297</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 54</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 44 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_clock.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 198</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 114</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 61</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 28 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\component\lists\generic_list.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 130</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 152</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 118</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 13</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\component\uart\lpuart_adapter.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 132</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 147</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 100</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 45 11</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\component\serial_manager\serial_manager.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 112</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 111</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 138</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 24 19 4 13</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\component\serial_manager\serial_port_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 135</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 120</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 102</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 24 19 4 11</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\device\system_K32L2B31A.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 221</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 284</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 210</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 200 87 82 213 211 107 21 12 18 5 240 16 252 1 26</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_common.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 218</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 96</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 208</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 106</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 113</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 206</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 37 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_smc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 145</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 140</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 63</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 39 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_i2c_dma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 305</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 288</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 216</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 33 47 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 44</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_dmamux.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 194</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 287</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 222</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 43 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 99</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 125</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 52</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 179 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 204</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 153</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 51</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_lptmr.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 302</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 110</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 80</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 35 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_lpuart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 92</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 86</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 253</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 45 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_i2c_cmsis.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 293</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 314</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 219</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 38 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 6 22 233 47 43 33 44</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_llwu.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 307</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 93</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 223</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 50 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 105</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF_T2T.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 69</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 159</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF_T3T.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 78</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 260</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 73</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF_MIFARE.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 256</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 311</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 64</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_tpm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 55</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 313</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 196</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 185 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF_T1T.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 255</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 161</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 70</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF_T4T.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 261</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 149</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 57</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\sf\sf.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 59</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 289</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 58</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 176 267 269 243 200 87 82 213 211 107 60 0 66 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 230 37 226 179 268 242</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\RW_NDEF.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 150</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 53</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\T4T_NDEF_emu.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 139</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 81</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_spi_dma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 146</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 124</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 201</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190 179 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 44</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 72</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 128</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 71</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 181 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\NfcLibrary\NxpNci\src\NxpNci.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 292</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 77</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 310</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 275 79 87 82 213 211 107 91 220 62 66 200 199 242 243 60 0 85 148 21 12 18 5 240 16 252 1 26 28 279 173 166 172</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\NfcLibrary\NdefLibrary\src\P2P_NDEF.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 115</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 76</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_spi_cmsis.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 98</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 119</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 75</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 189 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 179 233 9 22 190 44 43</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 108</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 137</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\board\peripherals.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 291</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 101</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 295</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 225 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 35</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\aml\tmr_aml\tpm_aml.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 144</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 103</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 143</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 248 243 200 87 82 213 211 107 60 0 66 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 251 185</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\aml\wait_aml\wait_aml.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 212</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 117</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 207</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 242 200 87 82 213 211 107 243 60 0 66 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\board\board.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 203</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 94</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 215</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 200 87 82 213 211 107 229 228 0 60 66 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 37 270 24 19 31 35</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\board\clock_config.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 197</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 304</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 202</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 39 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 228</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\aml\spi_aml\spi_aml.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 65</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 131</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 262</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 226 66 200 87 82 213 211 107 199 91 243 60 0 220 62 85 148 21 12 18 5 240 16 252 1 26 28 230 37 179</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\board\pin_mux.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 301</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 122</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 298</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 31 37 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\aml\tmr_aml\ftm_aml.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 142</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 116</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 89</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 248 243 200 87 82 213 211 107 60 0 66 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 251 185 247</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\TML\tml.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 309</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 154</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 303</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 200 87 82 213 211 107 231 47 0 60 66 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 31 37 275 79 242 243 279</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\nfc_task.c</name>
+            <outputs>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 300</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 97</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 79 87 82 213 211 107 91 200 220 62 275 66 199 242 243 60 0 85 148 21 12 18 5 240 16 252 1 26 28 166 280 162 278 176 267 269 230 37 226 179 268 229 228 270 24 19 254 264</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup\startup_k32l2b31a.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 88</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 155</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\mtb.c</name>
+            <outputs>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 156</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 123</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\utilities\fsl_str.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 296</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 157</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 214</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 136 87 82 213 211 107 134 83 85 91 148 274 0 60 66 200 220 62 199 21 12 18 5 240 16 252 1 26 28 259</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\ndef_helper.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 127</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 306</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 126</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 79 87 82 213 211 107 91 200 220 62 280</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\demo_sigfox.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 129</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 158</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 121</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 79 87 82 213 211 107 91 254 264 176 267 269 243 200 60 0 66 220 62 85 148 199 21 12 18 5 240 16 252 1 26 28 230 37 226 179 268 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\K32L2B31xxxxA_Project.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 109</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 290</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 217</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 79 87 82 213 211 107 91 229 228 0 60 66 200 220 62 85 148 199 21 12 18 5 240 16 252 1 26 28 37 225 35 231 270 24 19 278 176 267 269 243 230 226 179 268 264</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\sf\sf_setup.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 205</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 299</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 209</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 269 243 200 87 82 213 211 107 60 0 66 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 230 37 226 179</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\semihost_hardfault.c</name>
+            <outputs>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 141</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 95</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\utilities\fsl_assert.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 312</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 160</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 308</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 60 87 82 213 211 107 66 200 220 91 62 85 148 199 21 12 18 5 240 16 252 1 26 28 270 24 19</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\utilities\fsl_debug_console.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 286</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 151</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 285</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 83 85 87 82 213 211 107 91 148 259 274 0 60 66 200 220 62 199 21 12 18 5 240 16 252 1 26 28 24 19 270</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\source\nfc_task.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\source\mtb.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\source\semihost_hardfault.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+</project>

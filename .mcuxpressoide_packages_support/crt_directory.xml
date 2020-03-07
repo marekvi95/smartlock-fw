@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?debugstack-directory version="1.0"?>
+<directory xmlns:xi="http://www.w3.org/2001/XInclude">
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/LPC55S69_support/LPC55xx_dir_part.xml"/>
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/MK64FN1M0xxx12_support/K6x_dir_part.xml"/>
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/K32L2B31xxxxA_support/K32L2Bx_dir_part.xml"/>
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/MIMXRT685S_support/MIMXRT600_dir_part.xml"/>
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/MIMXRT685S_support/MIMXRT600_dir_part.xml"/>
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/MIMXRT685S_support/MIMXRT600_dir_part.xml"/>
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/MIMXRT633S_support/MIMXRT600_dir_part.xml"/>
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/MKL27Z64xxx4_support/KL2x_dir_part.xml"/>
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/MIMXRT1021xxxxx_support/MIMXRT1020_dir_part.xml"/>
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/LPC54S018_support/LPC540xx_dir_part.xml"/>
+   <xi:include href="file:/C:/Users/nxf46245/Documents/github/smartlock-fw/.mcuxpressoide_packages_support/LPC54608J512_support/LPC546xx_dir_part.xml"/>
+</directory>
