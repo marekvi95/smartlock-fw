@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "nfc_settings.h": "c",
+        "fsl_debug_console.h": "c"
     }
 }

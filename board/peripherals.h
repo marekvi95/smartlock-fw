@@ -6,9 +6,60 @@
 #ifndef _PERIPHERALS_H_
 #define _PERIPHERALS_H_
 
+/***********************************************************************************************************************
+ * Included files
+ **********************************************************************************************************************/
+#include "fsl_common.h"
+#include "fsl_i2c.h"
+#include "fsl_llwu.h"
+#include "fsl_spi.h"
+#include "fsl_clock.h"
+#include "fsl_tpm.h"
+
 #if defined(__cplusplus)
 extern "C" {
 #endif /* __cplusplus */
+
+/***********************************************************************************************************************
+ * Definitions
+ **********************************************************************************************************************/
+/* Definitions for BOARD_InitPeripherals functional group */
+/* BOARD_InitPeripherals defines for I2C1 */
+/* Definition of peripheral ID */
+#define I2C1_PERIPHERAL I2C1
+/* Definition of the clock source */
+#define I2C1_CLOCK_SOURCE I2C1_CLK_SRC
+/* Definition of the clock source frequency */
+#define I2C1_CLK_FREQ CLOCK_GetFreq(I2C1_CLOCK_SOURCE)
+/* BOARD_InitPeripherals defines for LLWU */
+/* Definition of peripheral ID. */
+#define LLWU_PERIPHERAL LLWU
+/* LLWU interrupt vector ID (number). */
+#define LLWU_IRQN LLWU_IRQn
+/* LLWU interrupt handler identifier. */
+#define LLWU_IRQHANDLER LLWU_IRQHandler
+/* BOARD_InitPeripherals defines for SPI1 */
+/* Definition of peripheral ID */
+#define SPI1_PERIPHERAL SPI1
+/* Definition of the clock source */
+#define SPI1_CLOCK_SOURCE SPI1_CLK_SRC
+/* Definition of the clock source frequency */
+#define SPI1_CLK_FREQ CLOCK_GetFreq(SPI1_CLOCK_SOURCE)
+/* Definition of peripheral ID */
+#define TPM0_PERIPHERAL TPM0
+/* Definition of the clock source frequency */
+#define TPM0_CLOCK_SOURCE 8000000UL
+/* TPM0 interrupt vector ID (number). */
+#define TPM0_IRQN TPM0_IRQn
+/* TPM0 interrupt handler identifier. */
+#define TPM0_IRQHANDLER TPM0_IRQHandler
+
+/***********************************************************************************************************************
+ * Global variables
+ **********************************************************************************************************************/
+extern const i2c_master_config_t I2C1_config;
+extern const spi_master_config_t SPI1_config;
+extern const tpm_config_t TPM0_config;
 
 /***********************************************************************************************************************
  * Initialization functions

@@ -85,7 +85,6 @@ void BOARD_InitBootPins(void);
 
 /*! @name PORTB0 (number 35), J4[2]/A0/LCD_P0/NFC_IRQ
   @{ */
-#define BOARD_INITPINS_NFC_INT_GPIO GPIOB /*!<@brief GPIO device name: GPIOB */
 #define BOARD_INITPINS_NFC_INT_PORT PORTB /*!<@brief PORT device name: PORTB */
 #define BOARD_INITPINS_NFC_INT_PIN 0U     /*!<@brief PORTB pin index: 0 */
                                           /* @} */
@@ -104,23 +103,15 @@ void BOARD_InitBootPins(void);
 #define BOARD_INITPINS_SIGFOX_RST_PIN 1U     /*!<@brief PORTE pin index: 1 */
                                              /* @} */
 
-/*! @name USB0_DP (number 5), J10[3]/USB_DP
-  @{ */
-/* @} */
-
-/*! @name USB0_DM (number 6), J10[2]/USB_DM
-  @{ */
-/* @} */
-
 /*! @name VREGIN (number 8), USB_REGIN
   @{ */
 /* @} */
 
 /*! @name PORTC3 (number 46), SW3/LLWU_P7/LCD_P23/BATT_C
   @{ */
-#define BOARD_INITPINS_SW3_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITPINS_SW3_PIN 3U     /*!<@brief PORTC pin index: 3 */
-                                      /* @} */
+#define BOARD_INITPINS_BATT_C_PORT PORTC /*!<@brief PORT device name: PORTC */
+#define BOARD_INITPINS_BATT_C_PIN 3U     /*!<@brief PORTC pin index: 3 */
+                                         /* @} */
 
 /*! @name PORTE31 (number 19), LED2/IN1A
   @{ */
@@ -130,9 +121,9 @@ void BOARD_InitBootPins(void);
 
 /*! @name PORTC4 (number 53), J1[7]/LCD_P24/POWER_STAT
   @{ */
-#define BOARD_INITPINS_LCD_P24_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITPINS_LCD_P24_PIN 4U     /*!<@brief PORTC pin index: 4 */
-                                          /* @} */
+#define BOARD_INITPINS_POWER_STAT_PORT PORTC /*!<@brief PORT device name: PORTC */
+#define BOARD_INITPINS_POWER_STAT_PIN 4U     /*!<@brief PORTC pin index: 4 */
+                                             /* @} */
 
 /*! @name PORTC5 (number 54), J1[15]/INT1_ACCEL/LCD_P25/BUTTON_1
   @{ */

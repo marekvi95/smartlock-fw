@@ -40,10 +40,232 @@ component:
 #include "peripherals.h"
 
 /***********************************************************************************************************************
+ * BOARD_InitPeripherals functional group
+ **********************************************************************************************************************/
+/***********************************************************************************************************************
+ * I2C1 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'I2C1'
+- type: 'i2c'
+- mode: 'I2C_Polling'
+- custom_name_enabled: 'false'
+- type_id: 'i2c_2566d7363e7e9aaedabb432110e372d7'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'I2C1'
+- config_sets:
+  - fsl_i2c:
+    - i2c_mode: 'kI2C_Master'
+    - clockSource: 'BusInterfaceClock'
+    - clockSourceFreq: 'GetFreq'
+    - i2c_master_config:
+      - enableMaster: 'true'
+      - enableStopHold: 'false'
+      - baudRate_Bps: '100000'
+      - glitchFilterWidth: '0'
+    - quick_selection: 'QS_I2C_1'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const i2c_master_config_t I2C1_config = {
+  .enableMaster = true,
+  .enableStopHold = false,
+  .baudRate_Bps = 100000,
+  .glitchFilterWidth = 0
+};
+
+void I2C1_init(void) {
+  /* Initialization function */
+  I2C_MasterInit(I2C1_PERIPHERAL, &I2C1_config, I2C1_CLK_FREQ);
+}
+
+/***********************************************************************************************************************
+ * LLWU initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'LLWU'
+- type: 'llwu'
+- mode: 'LLWU_GENERAL'
+- custom_name_enabled: 'false'
+- type_id: 'llwu_3300b573fd6e3303f27cdce526747338'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'LLWU'
+- config_sets:
+  - fsl_llwu:
+    - enable_irq: 'true'
+    - interrupt:
+      - IRQn: 'LLWU_IRQn'
+      - enable_priority: 'false'
+      - priority: '0'
+      - enable_custom_name: 'false'
+    - input_pins:
+      - 0:
+        - wakeupPin: 'P.7'
+        - pinMode: 'RisingEdge'
+        - filter: 'false'
+      - 1:
+        - wakeupPin: 'P.8'
+        - pinMode: 'RisingEdge'
+        - filter: 'false'
+      - 2:
+        - wakeupPin: 'P.5'
+        - pinMode: 'RisingEdge'
+        - filter: 'false'
+    - internal_modules: []
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+
+void LLWU_init(void) {
+  /* Initialize the LLWU wakeup pin 7. */
+  LLWU_SetExternalWakeupPinMode(LLWU_PERIPHERAL, 7U, kLLWU_ExternalPinRisingEdge);
+  /* Initialize the LLWU wakeup pin 8. */
+  LLWU_SetExternalWakeupPinMode(LLWU_PERIPHERAL, 8U, kLLWU_ExternalPinRisingEdge);
+  /* Initialize the LLWU wakeup pin 5. */
+  LLWU_SetExternalWakeupPinMode(LLWU_PERIPHERAL, 5U, kLLWU_ExternalPinRisingEdge);
+  /* Enable interrupt LLWU_IRQN request in the NVIC */
+  EnableIRQ(LLWU_IRQN);
+}
+
+/***********************************************************************************************************************
+ * SPI1 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'SPI1'
+- type: 'spi'
+- mode: 'SPI_Polling'
+- custom_name_enabled: 'false'
+- type_id: 'spi_672b694426b0a10a1d774659ee8f8435'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'SPI1'
+- config_sets:
+  - fsl_spi:
+    - spi_mode: 'kSPI_Master'
+    - clockSource: 'BusInterfaceClock'
+    - clockSourceFreq: 'GetFreq'
+    - spi_master_config:
+      - enableMaster: 'true'
+      - enableStopInWaitMode: 'false'
+      - polarity: 'kSPI_ClockPolarityActiveHigh'
+      - phase: 'kSPI_ClockPhaseFirstEdge'
+      - direction: 'kSPI_MsbFirst'
+      - dataMode: 'kSPI_8BitMode'
+      - txWatermark: 'kSPI_TxFifoOneHalfEmpty'
+      - rxWatermark: 'kSPI_RxFifoOneHalfFull'
+      - outputMode: 'kSPI_SlaveSelectAutomaticOutput'
+      - pinMode: 'kSPI_PinModeNormal'
+      - baudRate_Bps: '500000'
+    - quick_selection: 'QS_SPI_1'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const spi_master_config_t SPI1_config = {
+  .enableMaster = true,
+  .enableStopInWaitMode = false,
+  .polarity = kSPI_ClockPolarityActiveHigh,
+  .phase = kSPI_ClockPhaseFirstEdge,
+  .direction = kSPI_MsbFirst,
+  .dataMode = kSPI_8BitMode,
+  .txWatermark = kSPI_TxFifoOneHalfEmpty,
+  .rxWatermark = kSPI_RxFifoOneHalfFull,
+  .outputMode = kSPI_SlaveSelectAutomaticOutput,
+  .pinMode = kSPI_PinModeNormal,
+  .baudRate_Bps = 500000
+};
+
+void SPI1_init(void) {
+  /* Initialization function */
+  SPI_MasterInit(SPI1_PERIPHERAL, &SPI1_config, SPI1_CLK_FREQ);
+}
+
+/***********************************************************************************************************************
+ * TPM0 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'TPM0'
+- type: 'tpm'
+- mode: 'EdgeAligned'
+- custom_name_enabled: 'false'
+- type_id: 'tpm_e7472ea12d53461b8d293488f3ed72ec'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'TPM0'
+- config_sets:
+  - tpm_main_config:
+    - tpm_config:
+      - clockSource: 'kTPM_SystemClock'
+      - tpmSrcClkFreq: 'BOARD_BootClockRUN'
+      - prescale: 'kTPM_Prescale_Divide_1'
+      - timerFrequency: '10000'
+      - useGlobalTimeBase: 'false'
+      - triggerSelect: 'kTPM_Trigger_Select_0'
+      - triggerSource: 'kTPM_TriggerSource_Internal'
+      - enableDoze: 'false'
+      - enableDebugMode: 'false'
+      - enableReloadOnTrigger: 'false'
+      - enableStopOnOverflow: 'false'
+      - enableStartOnTrigger: 'false'
+      - enablePauseOnTrigger: 'false'
+    - timer_interrupts: ''
+    - enable_irq: 'false'
+    - tpm_interrupt:
+      - IRQn: 'TPM0_IRQn'
+      - enable_priority: 'false'
+      - priority: '0'
+      - enable_custom_name: 'false'
+    - EnableTimerInInit: 'true'
+  - tpm_edge_aligned_mode:
+    - tpm_edge_aligned_channels_config:
+      - 0:
+        - edge_aligned_mode: 'kTPM_EdgeAlignedPwm'
+        - edge_aligned_pwm:
+          - chnlNumber: 'kTPM_Chnl_0'
+          - level: 'kTPM_HighTrue'
+          - dutyCyclePercent: '90'
+          - enable_chan_irq: 'false'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const tpm_config_t TPM0_config = {
+  .prescale = kTPM_Prescale_Divide_1,
+  .useGlobalTimeBase = false,
+  .triggerSelect = kTPM_Trigger_Select_0,
+  .triggerSource = kTPM_TriggerSource_Internal,
+  .enableDoze = false,
+  .enableDebugMode = false,
+  .enableReloadOnTrigger = false,
+  .enableStopOnOverflow = false,
+  .enableStartOnTrigger = false,
+  .enablePauseOnTrigger = false
+};
+
+const tpm_chnl_pwm_signal_param_t TPM0_pwmSignalParams[] = { 
+  {
+    .chnlNumber = kTPM_Chnl_0,
+    .level = kTPM_HighTrue,
+    .dutyCyclePercent = 90
+  }
+};
+
+void TPM0_init(void) {
+  TPM_Init(TPM0_PERIPHERAL, &TPM0_config);
+  TPM_SetupPwm(TPM0_PERIPHERAL, TPM0_pwmSignalParams, sizeof(TPM0_pwmSignalParams) / sizeof(tpm_chnl_pwm_signal_param_t), kTPM_EdgeAlignedPwm, 10000U, TPM0_CLOCK_SOURCE);
+  TPM_StartTimer(TPM0_PERIPHERAL, kTPM_SystemClock);
+}
+
+/***********************************************************************************************************************
  * Initialization functions
  **********************************************************************************************************************/
 void BOARD_InitPeripherals(void)
 {
+  /* Initialize components */
+  I2C1_init();
+  LLWU_init();
+  SPI1_init();
+  TPM0_init();
 }
 
 /***********************************************************************************************************************

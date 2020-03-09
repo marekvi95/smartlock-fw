@@ -39,6 +39,9 @@
 #include "clock_config.h"
 #include "K32L2B31A.h"
 #include "fsl_debug_console.h"
+#include "fsl_smc.h"
+#include "fsl_rcm.h"
+#include "fsl_pmc.h"
 /* TODO: insert other include files here. */
 #include "nfc_task.h"
 #include "sf/sf.h"
@@ -47,6 +50,7 @@
 #include "ltc2942.h"
 #include "Fonts/fonts.h"
 #include "GUI/GUI_Paint.h"
+//#include "power_mode_switch.h"
 /* TODO: insert other definitions and declarations here. */
 /* Maximum number characters (bytes) in record. */
 #define MSG_CHAR_MAX     40
@@ -57,6 +61,9 @@ int main(void) {
 	sf_drv_data_t sfDrvData;
 	sf_device_info_t devInfo;
 	status_t status = kStatus_Success;
+	// smc_power_state_t curPowerState;
+    // app_power_mode_t targetPowerMode;
+    // bool needSetWakeup; /* Need to set wakeup. */
 
 	/* NFC record to be send via Sigfox (ended by '\0'). */
 	unsigned char msg[] = "SigfoxInit";
@@ -64,11 +71,20 @@ int main(void) {
 	uint32_t msgLen = sizeof(msg);
 
 	/* Init board hardware. */
-	BOARD_InitBootPins();
+	BOARD_InitBootPins(); /* Must configure pins before PMC_ClearPeriphIOIsolationFlag */
+
+	/* Power related. */
+	SMC_SetPowerModeProtection(SMC, kSMC_AllowPowerModeAll);
+	if (kRCM_SourceWakeup & RCM_GetPreviousResetSources(RCM)) /* Wakeup from VLLS. */
+	{
+		PMC_ClearPeriphIOIsolationFlag(PMC);
+		NVIC_ClearPendingIRQ(LLWU_IRQn);
+	}
+
 	BOARD_InitBootClocks();
 	BOARD_InitBootPeripherals();
 	/* Init FSL debug console. */
-	BOARD_InitDebugConsole();
+	// BOARD_InitDebugConsole();
 
 	/* Initialize Waveshare display */
 	EPD_Init(FULL_UPDATE);

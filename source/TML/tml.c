@@ -17,10 +17,14 @@
 #include "fsl_i2c.h"
 #include "fsl_port.h"
 #include "fsl_gpio.h"
+#include "fsl_smc.h"
 #include <tool.h>
 #include "tml.h"
+#include "power_mode_switch.h"
 
 i2c_master_transfer_t masterXfer;
+smc_power_state_t curPowerState;
+app_power_mode_t targetPowerMode;
 
 typedef enum {ERROR = 0, SUCCESS = !ERROR} Status;
 
@@ -116,7 +120,20 @@ static Status tml_Rx(uint8_t *pBuff, uint16_t buffLen, uint16_t *pBytesRead) {
 
 static Status tml_WaitForRx(uint32_t timeout) {
 	if (timeout == 0) {
-		while ((GPIO_PinRead(BOARD_INITPINS_NFC_INT_GPIO, BOARD_INITPINS_NFC_INT_PIN) == 0));
+	//	put the MCU to sleep here
+	// 	NVIC_EnableIRQ(LLWU_IRQn);
+    // 	NVIC_EnableIRQ(LPTMR0_IRQn);
+    // 	NVIC_EnableIRQ(APP_WAKEUP_BUTTON_IRQ);
+	targetPowerMode = kAPP_PowerModeLls; /* Set up target power mode */
+	curPowerState = SMC_GetPowerModeState(SMC);
+	// APP_GetWakeupConfig(targetPowerMode);
+	APP_PowerPreSwitchHook(curPowerState, targetPowerMode);
+	APP_SetWakeupConfig(targetPowerMode);
+	APP_PowerModeSwitch(curPowerState, targetPowerMode); /* Go sleep */
+	APP_PowerPostSwitchHook(curPowerState, targetPowerMode); /* After wakeup hook */
+
+	// while ((GPIO_PinRead(BOARD_INITPINS_NFC_INT_GPIO, BOARD_INITPINS_NFC_INT_PIN) == 0))
+	// 	;
 	} else {
 		int16_t to = timeout;
 		while ((GPIO_PinRead(BOARD_INITPINS_NFC_INT_GPIO, BOARD_INITPINS_NFC_INT_PIN) == 0)) {

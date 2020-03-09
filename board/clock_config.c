@@ -36,6 +36,7 @@ board: FRDM-K32L2B
 #define OSC_CAP0P                                         0U  /*!< Oscillator 0pF capacitor load */
 #define OSC_ER_CLK_DISABLE                                0U  /*!< Disable external reference clock */
 #define SIM_OSC32KSEL_OSC32KCLK_CLK                       0U  /*!< OSC32KSEL select: OSC32KCLK clock */
+#define SIM_TPM_CLK_SEL_MCGIRCLK_CLK                      3U  /*!< TPM clock select: MCGIRCLK clock */
 
 /*******************************************************************************
  * Variables
@@ -66,6 +67,10 @@ outputs:
 - {id: LPO_clock.outFreq, value: 1 kHz}
 - {id: MCGIRCLK.outFreq, value: 8 MHz}
 - {id: System_clock.outFreq, value: 8 MHz}
+- {id: TPMCLK.outFreq, value: 8 MHz}
+settings:
+- {id: SIM.TPMSRCSEL.sel, value: MCG.MCGIRCLK}
+- {id: TPMClkConfig, value: 'yes'}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 
@@ -110,6 +115,8 @@ void BOARD_BootClockRUN(void)
     CLOCK_SetSimConfig(&simConfig_BOARD_BootClockRUN);
     /* Set SystemCoreClock variable. */
     SystemCoreClock = BOARD_BOOTCLOCKRUN_CORE_CLOCK;
+    /* Set TPM clock source. */
+    CLOCK_SetTpmClock(SIM_TPM_CLK_SEL_MCGIRCLK_CLK);
 }
 
 /*******************************************************************************

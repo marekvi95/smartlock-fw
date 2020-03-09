@@ -45,7 +45,7 @@
                <pin_label pin_num="54" pin_signal="LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT" label="J1[15]/INT1_ACCEL/LCD_P25/BUTTON_1" identifier="INT1_ACCEL"/>
                <pin_label pin_num="56" pin_signal="LCD_P27/CMP0_IN1/PTC7/SPI0_MISO/USB_SOF_OUT/SPI0_MOSI" label="J1[11]/USB_SOF_OUT/LCD_P27/SPI_RF_MISO" identifier="LCD_P27"/>
                <pin_label pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO" label="J1[9]/LCD_P26/BUTTON_2" identifier="LCD_P26"/>
-               <pin_label pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3" label="J1[7]/LCD_P24/POWER_STAT" identifier="LCD_P24"/>
+               <pin_label pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3" label="J1[7]/LCD_P24/POWER_STAT" identifier="LCD_P24;POWER_STAT"/>
                <pin_label pin_num="43" pin_signal="LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT" label="J1[5]/LCD_P20/USB_SOF_OUT" identifier="LCD_P20;USB_SOF_OUT"/>
                <pin_label pin_num="42" pin_signal="LCD_P15/PTB19/TPM2_CH1" label="J1[3]/LCD_P15" identifier="LCD_P15"/>
                <pin_label pin_num="41" pin_signal="LCD_P14/PTB18/TPM2_CH0" label="J1[1]/LCD_P14" identifier="LCD_P14"/>
@@ -66,7 +66,7 @@
                <pin_label pin_num="32" pin_signal="EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0" label="EXTAL_32KHZ/PSAVE" identifier="EXTAL_32KHZ"/>
                <pin_label pin_num="33" pin_signal="XTAL0/PTA19/LPUART1_TX/TPM_CLKIN1/LPTMR0_ALT1" label="XTAL_32KHZ" identifier="XTAL_32KHZ"/>
                <pin_label pin_num="34" pin_signal="PTA20/RESET_b" label="J11[10]/J3[6]/RESET/SW2"/>
-               <pin_label pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT" label="SW3/LLWU_P7/LCD_P23/BATT_C" identifier="SW3"/>
+               <pin_label pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT" label="SW3/LLWU_P7/LCD_P23/BATT_C" identifier="SW3;BATT_C"/>
                <pin_label pin_num="58" pin_signal="LCD_P41/ADC0_SE5b/PTD1/SPI0_SCK/TPM0_CH1/FXIO0_D1" label="U2[9]/U10[9]/INT2_ACCEL/INT1_MAG/LCD_P41/SPI_RF_SCK" identifier="INT2_ACCEL;INT1_MAG;SIGFOX_SCK"/>
                <pin_label pin_num="21" pin_signal="PTE25/TPM0_CH1/I2C0_SDA" label="U2[6]/U10[6]/I2C0_SDA/I2C_NFC_SDA" identifier="I2C0_SDA"/>
                <pin_label pin_num="20" pin_signal="PTE24/TPM0_CH0/I2C0_SCL" label="U2[7]/U10[4]/I2C0_SCL/I2C_NFC_SCL" identifier="I2C0_SCL"/>
@@ -114,6 +114,11 @@
                         <data>true</data>
                      </feature>
                   </dependency>
+                  <dependency resourceType="Peripheral" resourceId="LLWU" description="Peripheral LLWU is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
                   <dependency resourceType="Peripheral" resourceId="USB0" description="Peripheral USB0 is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
                      <feature name="initialized" evaluation="equal">
                         <data>true</data>
@@ -135,11 +140,6 @@
                      </feature>
                   </dependency>
                   <dependency resourceType="Peripheral" resourceId="I2C1" description="Peripheral I2C1 is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
-                     <feature name="initialized" evaluation="equal">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="Peripheral" resourceId="LLWU" description="Peripheral LLWU is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
                      <feature name="initialized" evaluation="equal">
                         <data>true</data>
                      </feature>
@@ -210,7 +210,7 @@
                   </pin>
                   <pin peripheral="SPI1" signal="MOSI" pin_num="63" pin_signal="LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6"/>
                   <pin peripheral="SPI1" signal="MISO" pin_num="64" pin_signal="LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7"/>
-                  <pin peripheral="GPIOB" signal="GPIO, 0" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0"/>
+                  <pin peripheral="LLWU" signal="P, 5" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0"/>
                   <pin peripheral="GPIOE" signal="GPIO, 0" pin_num="1" pin_signal="LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA">
                      <pin_features>
                         <pin_feature name="identifier" value="NFC_RST"/>
@@ -224,8 +224,6 @@
                      </pin_features>
                   </pin>
                   <pin peripheral="GPIOE" signal="GPIO, 30" pin_num="18" pin_signal="DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1"/>
-                  <pin peripheral="USB0" signal="DP" pin_num="5" pin_signal="USB0_DP"/>
-                  <pin peripheral="USB0" signal="DM" pin_num="6" pin_signal="USB0_DM"/>
                   <pin peripheral="USB0" signal="VOUT33" pin_num="7" pin_signal="VOUT33"/>
                   <pin peripheral="USB0" signal="VREGIN" pin_num="8" pin_signal="VREGIN"/>
                   <pin peripheral="SUPPLY" signal="VDD, 0" pin_num="3" pin_signal="VDD17"/>
@@ -239,9 +237,17 @@
                   <pin peripheral="SWD" signal="DIO" pin_num="25" pin_signal="PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO"/>
                   <pin peripheral="I2C1" signal="SCL" pin_num="44" pin_signal="LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0"/>
                   <pin peripheral="I2C1" signal="SDA" pin_num="45" pin_signal="LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1"/>
-                  <pin peripheral="LLWU" signal="P, 7" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT"/>
+                  <pin peripheral="LLWU" signal="P, 7" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT">
+                     <pin_features>
+                        <pin_feature name="identifier" value="BATT_C"/>
+                     </pin_features>
+                  </pin>
                   <pin peripheral="TPM0" signal="CH, 4" pin_num="19" pin_signal="PTE31/TPM0_CH4"/>
-                  <pin peripheral="LLWU" signal="P, 8" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3"/>
+                  <pin peripheral="LLWU" signal="P, 8" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3">
+                     <pin_features>
+                        <pin_feature name="identifier" value="POWER_STAT"/>
+                     </pin_features>
+                  </pin>
                   <pin peripheral="LLWU" signal="P, 9" pin_num="54" pin_signal="LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT"/>
                   <pin peripheral="LLWU" signal="P, 10" pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO"/>
                   <pin peripheral="TPM1" signal="CH, 0" pin_num="28" pin_signal="PTA12/TPM1_CH0"/>
@@ -259,6 +265,13 @@
                   <pin peripheral="GPIOC" signal="GPIO, 22" pin_num="51" pin_signal="VCAP2/LCD_P6/PTC22"/>
                   <pin peripheral="GPIOC" signal="GPIO, 21" pin_num="50" pin_signal="VLL1/LCD_P5/PTC21"/>
                   <pin peripheral="GPIOC" signal="GPIO, 20" pin_num="49" pin_signal="VLL2/LCD_P4/PTC20"/>
+                  <pin peripheral="GPIOB" signal="GPIO, 0" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOC" signal="GPIO, 3" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT"/>
+                  <pin peripheral="GPIOC" signal="GPIO, 4" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3"/>
                </pins>
             </function>
             <function name="BOARD_InitLCDPins">
@@ -310,6 +323,7 @@
                   </pin>
                   <pin peripheral="LCD" signal="P, 24" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3">
                      <pin_features>
+                        <pin_feature name="identifier" value="LCD_P24"/>
                         <pin_feature name="slew_rate" value="slow"/>
                         <pin_feature name="pull_select" value="up"/>
                         <pin_feature name="pull_enable" value="disable"/>
@@ -413,6 +427,7 @@
                   </pin>
                   <pin peripheral="GPIOC" signal="GPIO, 3" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT">
                      <pin_features>
+                        <pin_feature name="identifier" value="SW3"/>
                         <pin_feature name="direction" value="INPUT"/>
                         <pin_feature name="slew_rate" value="fast"/>
                         <pin_feature name="pull_select" value="up"/>
@@ -688,8 +703,12 @@
                   <clock_output id="LPO_clock.outFreq" value="1 kHz" locked="false" accuracy=""/>
                   <clock_output id="MCGIRCLK.outFreq" value="8 MHz" locked="false" accuracy=""/>
                   <clock_output id="System_clock.outFreq" value="8 MHz" locked="false" accuracy=""/>
+                  <clock_output id="TPMCLK.outFreq" value="8 MHz" locked="false" accuracy=""/>
                </clock_outputs>
-               <clock_settings/>
+               <clock_settings>
+                  <setting id="SIM.TPMSRCSEL.sel" value="MCG.MCGIRCLK" locked="false"/>
+                  <setting id="TPMClkConfig" value="yes" locked="false"/>
+               </clock_settings>
                <called_from_default_init>true</called_from_default_init>
             </clock_configuration>
             <clock_configuration name="BOARD_BootClockVLPR">
@@ -739,6 +758,48 @@
          <dcdx_configurations/>
       </dcdx>
       <periphs name="Peripherals" version="7.0" enabled="true" update_project_code="true">
+         <dependencies>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.i2c" description="I2C Driver not found in the toolchain/IDE project. Project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.i2c" description="Unsupported version of the I2C Driver in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. Project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="equivalent">
+                  <data type="Version">2.0.5</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.llwu" description="LLWU Driver not found in the toolchain/IDE project. Project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.llwu" description="Unsupported version of the LLWU Driver in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. Project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="equivalent">
+                  <data type="Version">2.0.1</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.spi" description="SPI Driver not found in the toolchain/IDE project. Project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.spi" description="Unsupported version of the SPI Driver in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. Project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="equivalent">
+                  <data type="Version">2.0.4</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.tpm" description="TPM Driver not found in the toolchain/IDE project. Project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.tpm" description="Unsupported version of the TPM Driver in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. Project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="equivalent">
+                  <data type="Version">2.0.2</data>
+               </feature>
+            </dependency>
+         </dependencies>
          <generated_project_files>
             <file path="board/peripherals.c" update_enabled="true"/>
             <file path="board/peripherals.h" update_enabled="true"/>
@@ -750,15 +811,202 @@
             <functional_group name="BOARD_InitPeripherals" uuid="8b715967-9b3a-43ea-9baa-744b97113d6c" called_from_default_init="true" id_prefix="" core="core0">
                <description></description>
                <options/>
-               <dependencies/>
-               <instances/>
+               <dependencies>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="I2C1.i2c_scl" description="Signal serial clock of the peripheral I2C1 is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="I2C1.i2c_sda" description="Signal serial data of the peripheral I2C1 is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="System_clock" description="System clock is inactive. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="LLWU.llwu_wakeup.7" description="Signal 7 of the peripheral LLWU is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="LLWU.llwu_wakeup.7" description="Direction of pin 7 of peripheral LLWU has to be configured as input in Pins Tool. Problem must be resolved in another tool." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="direction" evaluation="equal">
+                        <data type="String">INPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="LLWU.llwu_wakeup.8" description="Signal 8 of the peripheral LLWU is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="LLWU.llwu_wakeup.8" description="Direction of pin 8 of peripheral LLWU has to be configured as input in Pins Tool. Problem must be resolved in another tool." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="direction" evaluation="equal">
+                        <data type="String">INPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="LLWU.llwu_wakeup.5" description="Signal 5 of the peripheral LLWU is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="LLWU.llwu_wakeup.5" description="Direction of pin 5 of peripheral LLWU has to be configured as input in Pins Tool. Problem must be resolved in another tool." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="direction" evaluation="equal">
+                        <data type="String">INPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="SPI1.spi_miso" description="Signal master data in, slave data out of the peripheral SPI1 is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="SPI1.spi_mosi" description="Signal master data out, slave data in of the peripheral SPI1 is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="SPI1.spi_sck" description="Signal serial clock of the peripheral SPI1 is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="SPI1.spi_ss0" description="Signal slave select of the peripheral SPI1 is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="System_clock" description="System clock is inactive. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="TPMCLK" description="TPM clock is inactive. Problem must be resolved in another tool." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="TPM0.tmr_ch.0" description="Signal CH0 of peripheral TPM0 is not routed Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <instances>
+                  <instance name="I2C1" uuid="e8d4b563-5462-4437-b0b2-25db7d0876d7" type="i2c" type_id="i2c_2566d7363e7e9aaedabb432110e372d7" mode="I2C_Polling" peripheral="I2C1" enabled="true" comment="" custom_name_enabled="false">
+                     <config_set name="fsl_i2c" quick_selection="QS_I2C_1">
+                        <setting name="i2c_mode" value="kI2C_Master"/>
+                        <setting name="clockSource" value="BusInterfaceClock"/>
+                        <setting name="clockSourceFreq" value="GetFreq"/>
+                        <struct name="i2c_master_config">
+                           <setting name="enableMaster" value="true"/>
+                           <setting name="enableStopHold" value="false"/>
+                           <setting name="baudRate_Bps" value="100000"/>
+                           <setting name="glitchFilterWidth" value="0"/>
+                        </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="LLWU" uuid="a549a703-0d9e-431e-bde4-9a22cc6a412d" type="llwu" type_id="llwu_3300b573fd6e3303f27cdce526747338" mode="LLWU_GENERAL" peripheral="LLWU" enabled="true" comment="" custom_name_enabled="false">
+                     <config_set name="fsl_llwu">
+                        <setting name="enable_irq" value="true"/>
+                        <struct name="interrupt">
+                           <setting name="IRQn" value="LLWU_IRQn"/>
+                           <setting name="enable_priority" value="false"/>
+                           <setting name="priority" value="0"/>
+                           <setting name="enable_custom_name" value="false"/>
+                        </struct>
+                        <array name="input_pins">
+                           <struct name="0">
+                              <setting name="wakeupPin" value="P.7"/>
+                              <setting name="pinMode" value="RisingEdge"/>
+                              <setting name="filter" value="false"/>
+                           </struct>
+                           <struct name="1">
+                              <setting name="wakeupPin" value="P.8"/>
+                              <setting name="pinMode" value="RisingEdge"/>
+                              <setting name="filter" value="false"/>
+                           </struct>
+                           <struct name="2">
+                              <setting name="wakeupPin" value="P.5"/>
+                              <setting name="pinMode" value="RisingEdge"/>
+                              <setting name="filter" value="false"/>
+                           </struct>
+                        </array>
+                        <array name="internal_modules"/>
+                     </config_set>
+                  </instance>
+                  <instance name="SPI1" uuid="543bd410-6ffd-458e-9d3b-2e43005395f7" type="spi" type_id="spi_672b694426b0a10a1d774659ee8f8435" mode="SPI_Polling" peripheral="SPI1" enabled="true" comment="" custom_name_enabled="false">
+                     <config_set name="fsl_spi" quick_selection="QS_SPI_1">
+                        <setting name="spi_mode" value="kSPI_Master"/>
+                        <setting name="clockSource" value="BusInterfaceClock"/>
+                        <setting name="clockSourceFreq" value="GetFreq"/>
+                        <struct name="spi_master_config">
+                           <setting name="enableMaster" value="true"/>
+                           <setting name="enableStopInWaitMode" value="false"/>
+                           <setting name="polarity" value="kSPI_ClockPolarityActiveHigh"/>
+                           <setting name="phase" value="kSPI_ClockPhaseFirstEdge"/>
+                           <setting name="direction" value="kSPI_MsbFirst"/>
+                           <setting name="dataMode" value="kSPI_8BitMode"/>
+                           <setting name="txWatermark" value="kSPI_TxFifoOneHalfEmpty"/>
+                           <setting name="rxWatermark" value="kSPI_RxFifoOneHalfFull"/>
+                           <setting name="outputMode" value="kSPI_SlaveSelectAutomaticOutput"/>
+                           <setting name="pinMode" value="kSPI_PinModeNormal"/>
+                           <setting name="baudRate_Bps" value="500000"/>
+                        </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="TPM0" uuid="a3c48e37-9795-4d32-b932-ba21f00e5e48" type="tpm" type_id="tpm_e7472ea12d53461b8d293488f3ed72ec" mode="EdgeAligned" peripheral="TPM0" enabled="true" comment="" custom_name_enabled="false">
+                     <config_set name="tpm_main_config">
+                        <struct name="tpm_config">
+                           <setting name="clockSource" value="kTPM_SystemClock"/>
+                           <setting name="tpmSrcClkFreq" value="BOARD_BootClockRUN"/>
+                           <setting name="prescale" value="kTPM_Prescale_Divide_1"/>
+                           <setting name="timerFrequency" value="10000"/>
+                           <setting name="useGlobalTimeBase" value="false"/>
+                           <setting name="triggerSelect" value="kTPM_Trigger_Select_0"/>
+                           <setting name="triggerSource" value="kTPM_TriggerSource_Internal"/>
+                           <setting name="enableDoze" value="false"/>
+                           <setting name="enableDebugMode" value="false"/>
+                           <setting name="enableReloadOnTrigger" value="false"/>
+                           <setting name="enableStopOnOverflow" value="false"/>
+                           <setting name="enableStartOnTrigger" value="false"/>
+                           <setting name="enablePauseOnTrigger" value="false"/>
+                        </struct>
+                        <set name="timer_interrupts">
+                           <selected/>
+                        </set>
+                        <setting name="enable_irq" value="false"/>
+                        <struct name="tpm_interrupt">
+                           <setting name="IRQn" value="TPM0_IRQn"/>
+                           <setting name="enable_priority" value="false"/>
+                           <setting name="priority" value="0"/>
+                           <setting name="enable_custom_name" value="false"/>
+                        </struct>
+                        <setting name="EnableTimerInInit" value="true"/>
+                     </config_set>
+                     <config_set name="tpm_edge_aligned_mode">
+                        <array name="tpm_edge_aligned_channels_config">
+                           <struct name="0">
+                              <setting name="edge_aligned_mode" value="kTPM_EdgeAlignedPwm"/>
+                              <struct name="edge_aligned_pwm">
+                                 <setting name="chnlNumber" value="kTPM_Chnl_0"/>
+                                 <setting name="level" value="kTPM_HighTrue"/>
+                                 <setting name="dutyCyclePercent" value="90"/>
+                                 <setting name="enable_chan_irq" value="false"/>
+                              </struct>
+                           </struct>
+                        </array>
+                     </config_set>
+                  </instance>
+               </instances>
             </functional_group>
          </functional_groups>
          <components>
             <component name="system" uuid="3030c1c4-1a7a-45b4-9742-a7429aff803c" type_id="system_54b53072540eeeb8f8e9343e71f28176">
                <config_set_global name="global_system_definitions"/>
             </component>
-            <component name="msg" uuid="d3756df1-4842-40e1-86da-47060b049941" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+            <component name="msg" uuid="01233554-11ad-4d6e-8702-048214a3c80b" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
                <config_set_global name="global_messages"/>
             </component>
          </components>
