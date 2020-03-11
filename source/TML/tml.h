@@ -20,6 +20,7 @@
 #define NXPNCI_I2C_INSTANCE         I2C0
 #define NXPNCI_I2C_BAUDRATE         (100000)
 #define NXPNCI_I2C_ADDR             (0x28)
+//#define BOARD_INITPINS_NFC_INT_GPIO GPIOB
 
 void tml_Connect(void);
 void tml_Disconnect(void);

@@ -139,15 +139,15 @@ void LLWU_IRQHandler(void)
 //    }
 //}
 
-void NFC_INT_IRQ_HANDLER(void)
-{
-    if ((1U << BOARD_INITPINS_NFC_INT_PIN) & PORT_GetPinsInterruptFlags(BOARD_INITPINS_NFC_INT_PORT))
-    {
-        /* Disable interrupt. */
-        PORT_SetPinInterruptConfig(BOARD_INITPINS_NFC_INT_PORT, BOARD_INITPINS_NFC_INT_PIN, kPORT_InterruptOrDMADisabled);
-        PORT_ClearPinsInterruptFlags(BOARD_INITPINS_NFC_INT_PORT, (1U << BOARD_INITPINS_NFC_INT_PIN));
-    }
-}
+//void PORTA_IRQHandler(void)
+//{
+//    if ((1U << BOARD_INITPINS_NFC_INT_PIN) & PORT_GetPinsInterruptFlags(BOARD_INITPINS_NFC_INT_PORT))
+//    {
+//        /* Disable interrupt. */
+//        PORT_SetPinInterruptConfig(BOARD_INITPINS_NFC_INT_PORT, BOARD_INITPINS_NFC_INT_PIN, kPORT_InterruptOrDMADisabled);
+//        PORT_ClearPinsInterruptFlags(BOARD_INITPINS_NFC_INT_PORT, (1U << BOARD_INITPINS_NFC_INT_PIN));
+//    }
+//}
 
 // /*!
 //  * @brief Get input from user about wakeup timeout

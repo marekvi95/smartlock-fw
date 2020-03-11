@@ -159,6 +159,11 @@
                         <data>true</data>
                      </feature>
                   </dependency>
+                  <dependency resourceType="Peripheral" resourceId="GPIOB" description="Peripheral GPIOB is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
                   <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
                      <feature name="enabled" evaluation="equal" configuration="core0">
                         <data>true</data>
@@ -214,6 +219,7 @@
                   <pin peripheral="GPIOE" signal="GPIO, 0" pin_num="1" pin_signal="LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA">
                      <pin_features>
                         <pin_feature name="identifier" value="NFC_RST"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
                      </pin_features>
                   </pin>
                   <pin peripheral="GPIOE" signal="GPIO, 1" pin_num="2" pin_signal="LCD_P49/PTE1/SPI1_MOSI/LPUART1_RX/SPI1_MISO/I2C1_SCL">
@@ -262,12 +268,26 @@
                         <pin_feature name="pull_enable" value="enable"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="GPIOC" signal="GPIO, 22" pin_num="51" pin_signal="VCAP2/LCD_P6/PTC22"/>
-                  <pin peripheral="GPIOC" signal="GPIO, 21" pin_num="50" pin_signal="VLL1/LCD_P5/PTC21"/>
-                  <pin peripheral="GPIOC" signal="GPIO, 20" pin_num="49" pin_signal="VLL2/LCD_P4/PTC20"/>
+                  <pin peripheral="GPIOC" signal="GPIO, 22" pin_num="51" pin_signal="VCAP2/LCD_P6/PTC22">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOC" signal="GPIO, 21" pin_num="50" pin_signal="VLL1/LCD_P5/PTC21">
+                     <pin_features>
+                        <pin_feature name="direction" value="INPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOC" signal="GPIO, 20" pin_num="49" pin_signal="VLL2/LCD_P4/PTC20">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
                   <pin peripheral="GPIOB" signal="GPIO, 0" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0">
                      <pin_features>
                         <pin_feature name="identifier" value=""/>
+                        <pin_feature name="direction" value="INPUT"/>
+                        <pin_feature name="gpio_interrupt" value="kPORT_InterruptRisingEdge"/>
                      </pin_features>
                   </pin>
                   <pin peripheral="GPIOC" signal="GPIO, 3" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT"/>
@@ -1006,7 +1026,7 @@
             <component name="system" uuid="3030c1c4-1a7a-45b4-9742-a7429aff803c" type_id="system_54b53072540eeeb8f8e9343e71f28176">
                <config_set_global name="global_system_definitions"/>
             </component>
-            <component name="msg" uuid="01233554-11ad-4d6e-8702-048214a3c80b" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+            <component name="msg" uuid="d9ec1d1c-0b57-46c2-ba7c-5b674b9ca6f5" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
                <config_set_global name="global_messages"/>
             </component>
          </components>

@@ -93,6 +93,19 @@ int main(void) {
 	EPD_Display(nxp_image);
 	EPD_Clear();
 
+	uint8_t status_register = LTC2942_GetStatus();
+	uint8_t control = LTC2942_GetControl();
+
+	printf("Status: %x \r\n", status_register);
+	printf("Control register: %x \r\n", control);
+
+
+	uint32_t voltage = LTC2942_GetVoltage();
+	uint32_t temperature = LTC2942_GetTemperature();
+
+	printf("Voltage: %d mV\r\n", voltage);
+	printf("Temperature: %d C\r\n", temperature);
+
 	unsigned char BlackImage[4000];
 	Paint_NewImage(BlackImage, EPD_WIDTH, EPD_HEIGHT, 270, WHITE);
 	Paint_SelectImage(BlackImage);

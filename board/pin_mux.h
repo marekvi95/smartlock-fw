@@ -85,6 +85,7 @@ void BOARD_InitBootPins(void);
 
 /*! @name PORTB0 (number 35), J4[2]/A0/LCD_P0/NFC_IRQ
   @{ */
+#define BOARD_INITPINS_NFC_INT_GPIO GPIOB
 #define BOARD_INITPINS_NFC_INT_PORT PORTB /*!<@brief PORT device name: PORTB */
 #define BOARD_INITPINS_NFC_INT_PIN 0U     /*!<@brief PORTB pin index: 0 */
                                           /* @} */

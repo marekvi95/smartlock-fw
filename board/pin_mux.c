@@ -117,7 +117,8 @@ BOARD_InitPins:
   - {pin_num: '63', peripheral: SPI1, signal: MOSI, pin_signal: LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6}
   - {pin_num: '64', peripheral: SPI1, signal: MISO, pin_signal: LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7}
   - {pin_num: '35', peripheral: LLWU, signal: 'P, 5', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0}
-  - {pin_num: '1', peripheral: GPIOE, signal: 'GPIO, 0', pin_signal: LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA, identifier: NFC_RST}
+  - {pin_num: '1', peripheral: GPIOE, signal: 'GPIO, 0', pin_signal: LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA, identifier: NFC_RST,
+    direction: OUTPUT}
   - {pin_num: '2', peripheral: GPIOE, signal: 'GPIO, 1', pin_signal: LCD_P49/PTE1/SPI1_MOSI/LPUART1_RX/SPI1_MISO/I2C1_SCL, identifier: SIGFOX_RST, direction: OUTPUT,
     gpio_init_state: 'false'}
   - {pin_num: '18', peripheral: GPIOE, signal: 'GPIO, 30', pin_signal: DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1}
@@ -145,10 +146,10 @@ BOARD_InitPins:
   - {pin_num: '32', peripheral: GPIOA, signal: 'GPIO, 18', pin_signal: EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0}
   - {pin_num: '22', peripheral: SWD, signal: CLK, pin_signal: PTA0/TPM0_CH5/SWD_CLK}
   - {pin_num: '52', peripheral: GPIOC, signal: 'GPIO, 23', pin_signal: VCAP1/LCD_P39/PTC23, identifier: SIGFOX_AK, direction: INPUT, pull_enable: enable}
-  - {pin_num: '51', peripheral: GPIOC, signal: 'GPIO, 22', pin_signal: VCAP2/LCD_P6/PTC22}
-  - {pin_num: '50', peripheral: GPIOC, signal: 'GPIO, 21', pin_signal: VLL1/LCD_P5/PTC21}
-  - {pin_num: '49', peripheral: GPIOC, signal: 'GPIO, 20', pin_signal: VLL2/LCD_P4/PTC20}
-  - {pin_num: '35', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, identifier: ''}
+  - {pin_num: '51', peripheral: GPIOC, signal: 'GPIO, 22', pin_signal: VCAP2/LCD_P6/PTC22, direction: OUTPUT}
+  - {pin_num: '50', peripheral: GPIOC, signal: 'GPIO, 21', pin_signal: VLL1/LCD_P5/PTC21, direction: INPUT}
+  - {pin_num: '49', peripheral: GPIOC, signal: 'GPIO, 20', pin_signal: VLL2/LCD_P4/PTC20, direction: OUTPUT}
+  - {pin_num: '35', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, identifier: '', direction: INPUT, gpio_interrupt: kPORT_InterruptRisingEdge}
   - {pin_num: '46', peripheral: GPIOC, signal: 'GPIO, 3', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT}
   - {pin_num: '53', peripheral: GPIOC, signal: 'GPIO, 4', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
@@ -174,12 +175,47 @@ void BOARD_InitPins(void)
     /* Port E Clock Gate Control: Clock enabled */
     CLOCK_EnableClock(kCLOCK_PortE);
 
+    gpio_pin_config_t NFC_INT_config = {
+        .pinDirection = kGPIO_DigitalInput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTB0 (pin 35)  */
+    GPIO_PinInit(BOARD_INITPINS_NFC_INT_GPIO, BOARD_INITPINS_NFC_INT_PIN, &NFC_INT_config);
+
+    gpio_pin_config_t DP_DC_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTC20 (pin 49)  */
+    GPIO_PinInit(BOARD_INITPINS_DP_DC_GPIO, BOARD_INITPINS_DP_DC_PIN, &DP_DC_config);
+
+    gpio_pin_config_t DP_BUSY_config = {
+        .pinDirection = kGPIO_DigitalInput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTC21 (pin 50)  */
+    GPIO_PinInit(BOARD_INITPINS_DP_BUSY_GPIO, BOARD_INITPINS_DP_BUSY_PIN, &DP_BUSY_config);
+
+    gpio_pin_config_t DP_RST_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTC22 (pin 51)  */
+    GPIO_PinInit(BOARD_INITPINS_DP_RST_GPIO, BOARD_INITPINS_DP_RST_PIN, &DP_RST_config);
+
     gpio_pin_config_t SIGFOX_AK_config = {
         .pinDirection = kGPIO_DigitalInput,
         .outputLogic = 0U
     };
     /* Initialize GPIO functionality on pin PTC23 (pin 52)  */
     GPIO_PinInit(BOARD_INITPINS_SIGFOX_AK_GPIO, BOARD_INITPINS_SIGFOX_AK_PIN, &SIGFOX_AK_config);
+
+    gpio_pin_config_t NFC_RST_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTE0 (pin 1)  */
+    GPIO_PinInit(BOARD_INITPINS_NFC_RST_GPIO, BOARD_INITPINS_NFC_RST_PIN, &NFC_RST_config);
 
     gpio_pin_config_t SIGFOX_RST_config = {
         .pinDirection = kGPIO_DigitalOutput,
@@ -208,6 +244,9 @@ void BOARD_InitPins(void)
 
     /* PORTB0 (pin 35) is configured as LLWU_P5, PTB0 */
     PORT_SetPinMux(BOARD_INITPINS_NFC_INT_PORT, BOARD_INITPINS_NFC_INT_PIN, kPORT_MuxAsGpio);
+
+    /* Interrupt configuration on PORTB0 (pin 35): Interrupt on rising edge */
+    PORT_SetPinInterruptConfig(BOARD_INITPINS_NFC_INT_PORT, BOARD_INITPINS_NFC_INT_PIN, kPORT_InterruptRisingEdge);
 
     /* PORTB2 (pin 37) is configured as TPM2_CH0 */
     PORT_SetPinMux(PORTB, 2U, kPORT_MuxAlt3);

@@ -6,8 +6,8 @@
 #define LTC2942_I2C_PORT                I2C1 // I2C port where the LTC2942 connected
 
 // LTC2942 address
-#define LTC2942_ADDR                    (0x64 << 1)
-
+//#define LTC2942_ADDR                    (0x64 << 1)
+#define LTC2942_ADDR 					0b1100100
 
 // LTC2942 register definitions
 #define LTC2942_REG_STATUS              (uint8_t)0x00 // (A) Status
@@ -42,6 +42,7 @@
 #define LTC2942_CTL_ALCC_MSK            (uint8_t)0xF9 // AL/CC pin control [2:1]
 #define LTC2942_CTL_SHUTDOWN            (uint8_t)0x01 // B[0] Shutdown
 
+#define WAIT_TIME 1000
 
 // LTC2942 ADC mode enumeration
 enum {

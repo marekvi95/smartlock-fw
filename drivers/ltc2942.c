@@ -15,6 +15,7 @@ static void LTC2942_WriteReg(uint8_t reg, uint8_t value) {
 //
 //	I2Cx_Transmit(LTC2942_I2C_PORT,buf,2,LTC2942_ADDR,I2C_STOP);
 
+
 	i2c_master_transfer_t masterXfer;
 	memset(&masterXfer, 0, sizeof(masterXfer));
 
@@ -38,13 +39,40 @@ static uint8_t LTC2942_ReadReg(uint8_t reg) {
 
 	uint8_t value = 0; // Initialize value in case of I2C timeout
 	i2c_master_transfer_t masterXfer;
+	uint8_t g_master_txBuff[2];
+	uint8_t g_master_rxBuff[2];
+
+	g_master_txBuff[0] = reg;
+	g_master_rxBuff[0] = 0;
+//	i2c_master_transfer_t masterXfer;
+	memset(&masterXfer, 0, sizeof(masterXfer));
+
+	masterXfer.slaveAddress   = LTC2942_ADDR;
+	masterXfer.direction      = kI2C_Write;
+	masterXfer.subaddress     = 0;
+//	masterXfer.subaddressSize = 1;
+//	masterXfer.data           = reg;
+	masterXfer.dataSize       = 1;
+	masterXfer.flags          = kI2C_TransferDefaultFlag;
+
+	I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
+
+    /* Wait until the slave is ready for transmit, wait time depend on user's case.
+       Slave devices that need some time to process received byte or are not ready yet to
+       send the next byte, can pull the clock low to signal to the master that it should wait.*/
+    for (uint32_t i = 0U; i < WAIT_TIME; i++)
+    {
+        __NOP();
+    }
+
+
 	memset(&masterXfer, 0, sizeof(masterXfer));
 
 	masterXfer.slaveAddress   = LTC2942_ADDR;
 	masterXfer.direction      = kI2C_Read;
-	masterXfer.subaddress     = reg;
+	masterXfer.subaddress     = 0;
 	masterXfer.subaddressSize = 1;
-	masterXfer.data           = &value;
+	masterXfer.data           = g_master_rxBuff;
 	masterXfer.dataSize       = 1;
 	masterXfer.flags          = kI2C_TransferDefaultFlag;
 
@@ -55,7 +83,7 @@ static uint8_t LTC2942_ReadReg(uint8_t reg) {
 //	// Read register value
 //	I2Cx_Receive(LTC2942_I2C_PORT,&value,1,LTC2942_ADDR);
 
-	return value;
+	return g_master_rxBuff[0];
 }
 
 // Read STATUS register
