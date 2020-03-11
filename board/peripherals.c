@@ -71,7 +71,7 @@ instance:
 const i2c_master_config_t I2C1_config = {
   .enableMaster = true,
   .enableStopHold = false,
-  .baudRate_Bps = 10000,
+  .baudRate_Bps = 100000,
   .glitchFilterWidth = 0
 };
 

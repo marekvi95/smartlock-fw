@@ -42,7 +42,8 @@
 #define LTC2942_CTL_ALCC_MSK            (uint8_t)0xF9 // AL/CC pin control [2:1]
 #define LTC2942_CTL_SHUTDOWN            (uint8_t)0x01 // B[0] Shutdown
 
-#define WAIT_TIME 1000
+// I2C wait time
+#define WAIT_TIME 						10U
 
 // LTC2942 ADC mode enumeration
 enum {

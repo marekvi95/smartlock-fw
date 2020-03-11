@@ -1,59 +1,57 @@
-// Library to interact with the LTC2942-1 chip via I2C interface.
-// Compatible with LTC2941.
-
+/**
+ * Library to interact with the LTC2942-1 chip via I2C interface.
+ * Compatible with LTC2941.
+ * Based on LonelyWolf version for STM32 https://github.com/LonelyWolf/stm32
+ * Ported to Kinetis SDK by Marek Vitula
+ */
 
 #include "fsl_i2c.h"
 #include "ltc2942.h"
 
-
-// Write new value to LTC2942 register
-// input:
-//   reg - register number
-//   value - new register value
-static void LTC2942_WriteReg(uint8_t reg, uint8_t value) {
-//	uint8_t buf[2] = { reg, value };
-//
-//	I2Cx_Transmit(LTC2942_I2C_PORT,buf,2,LTC2942_ADDR,I2C_STOP);
-
-
+/**
+ * @brief Write new value to the LTC2942/1 register
+ * 
+ * @param reg register number
+ * @param value new register value
+ */
+static void LTC2942_WriteReg(uint8_t reg, uint8_t value) 
+{
+	uint8_t buf[2] = { reg, value };
 	i2c_master_transfer_t masterXfer;
 	memset(&masterXfer, 0, sizeof(masterXfer));
 
 	masterXfer.slaveAddress   = LTC2942_ADDR;
 	masterXfer.direction      = kI2C_Write;
-	masterXfer.subaddress     = reg;
-	masterXfer.subaddressSize = 1;
-	masterXfer.data           = &value;
-	masterXfer.dataSize       = 1;
+	masterXfer.subaddress     = (uint32_t)NULL;
+    masterXfer.subaddressSize = 0;  
+	masterXfer.data           = buf;
+	masterXfer.dataSize       = 2;
 	masterXfer.flags          = kI2C_TransferDefaultFlag;
 
 	I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
 }
 
-// Read LTC2942 register
-// input:
-//   reg - register number
-// return:
-//   register value
-static uint8_t LTC2942_ReadReg(uint8_t reg) {
-
+/**
+ * @brief Read the LTC2942 register
+ * 
+ * @param reg register number
+ * @return uint8_t register value
+ */
+static uint8_t LTC2942_ReadReg(uint8_t reg) 
+{
 	uint8_t value = 0; // Initialize value in case of I2C timeout
 	i2c_master_transfer_t masterXfer;
-	uint8_t g_master_txBuff[2];
-	uint8_t g_master_rxBuff[2];
 
-	g_master_txBuff[0] = reg;
-	g_master_rxBuff[0] = 0;
-//	i2c_master_transfer_t masterXfer;
 	memset(&masterXfer, 0, sizeof(masterXfer));
 
 	masterXfer.slaveAddress   = LTC2942_ADDR;
 	masterXfer.direction      = kI2C_Write;
 	masterXfer.subaddress     = 0;
-//	masterXfer.subaddressSize = 1;
-//	masterXfer.data           = reg;
+	masterXfer.subaddress     = (uint32_t)NULL;
+    masterXfer.subaddressSize = 0; 
+	masterXfer.data           = &reg;
 	masterXfer.dataSize       = 1;
-	masterXfer.flags          = kI2C_TransferDefaultFlag;
+	masterXfer.flags          = kI2C_TransferNoStopFlag;
 
 	I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
 
@@ -65,71 +63,79 @@ static uint8_t LTC2942_ReadReg(uint8_t reg) {
         __NOP();
     }
 
-
 	memset(&masterXfer, 0, sizeof(masterXfer));
 
 	masterXfer.slaveAddress   = LTC2942_ADDR;
 	masterXfer.direction      = kI2C_Read;
-	masterXfer.subaddress     = 0;
-	masterXfer.subaddressSize = 1;
-	masterXfer.data           = g_master_rxBuff;
+	masterXfer.subaddress     = (uint32_t)NULL;
+    masterXfer.subaddressSize = 0; 
+	masterXfer.data           = &value;
 	masterXfer.dataSize       = 1;
 	masterXfer.flags          = kI2C_TransferDefaultFlag;
 
 	I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
 
-//	// Send register address
-//	I2Cx_Transmit(LTC2942_I2C_PORT,&reg,1,LTC2942_ADDR,I2C_NOSTOP);
-//	// Read register value
-//	I2Cx_Receive(LTC2942_I2C_PORT,&value,1,LTC2942_ADDR);
-
-	return g_master_rxBuff[0];
+	return value;
 }
 
-// Read STATUS register
-// return: value of STATUS register
-// note: all bits in this register will be cleared after reading
-inline uint8_t LTC2942_GetStatus(void) {
+/**
+ * @brief Read STATUS register, all bits in this register will be cleared after reading.
+ * 
+ * @return uint8_t value of STATUS register
+ */
+inline uint8_t LTC2942_GetStatus(void) 
+{
 	return LTC2942_ReadReg(LTC2942_REG_STATUS);
 }
 
-// Read CONTROL register
-// return: value of CONTROL register
-inline uint8_t LTC2942_GetControl(void) {
+/**
+ * @brief Read CONTROL register
+ * 
+ * @return uint8_t value of CONTROL register
+ */
+inline uint8_t LTC2942_GetControl(void) 
+{
 	return LTC2942_ReadReg(LTC2942_REG_CONTROL);
 }
 
-// Read battery voltage
-// return: voltage in millivolts (value of '4263' represents 4.263V)
-// note: in case of I2C error the return value will be 0x80000
-uint32_t LTC2942_GetVoltage(void) {
+/**
+ * @brief Read battery voltage
+ * 
+ * @return uint32_t voltage in millivolts (value of '4263' represents 4.263V), 
+ * in case of I2C error the return value will be 0x80000
+ */
+uint32_t LTC2942_GetVoltage(void) 
+{
 	uint8_t buf[2];
 	uint32_t value = 0x80000; // Initialize with error value in case of I2C timeout
-
-//	// Send voltage MSB register address
-//	buf[0] = LTC2942_REG_VOL_H;
-//	if (I2Cx_Transmit(LTC2942_I2C_PORT,&buf[0],1,LTC2942_ADDR,I2C_NOSTOP) == I2C_SUCCESS) {
-//		// Read voltage MSB and LSB
-//		I2Cx_Receive(LTC2942_I2C_PORT,buf,2,LTC2942_ADDR);
-//		// Calculate voltage
-//		value  = buf[1] | (buf[0] << 8);
-//		value *= 6000;
-//		value /= 65535;
-//	}
-
+	buf[0] = LTC2942_REG_VOL_H;
 	i2c_master_transfer_t masterXfer;
 	memset(&masterXfer, 0, sizeof(masterXfer));
 
 	// Send voltage MSB register address
 	masterXfer.slaveAddress   = LTC2942_ADDR;
-	masterXfer.direction      = kI2C_Read;
-	masterXfer.subaddress     = LTC2942_REG_VOL_H;
-	masterXfer.subaddressSize = 1;
-	masterXfer.data           = buf;
-	masterXfer.dataSize       = 2;
-	masterXfer.flags          = kI2C_TransferDefaultFlag;
+	masterXfer.direction      = kI2C_Write;
+	masterXfer.subaddress     = (uint32_t)NULL;
+    masterXfer.subaddressSize = 0; 
+	masterXfer.data           = &buf[0];
+	masterXfer.dataSize       = 1;
+	masterXfer.flags          = kI2C_TransferNoStopFlag;
 
-	if (I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer) == kStatus_Success) {
+	if (I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer) == kStatus_Success) 
+	{
+		memset(&masterXfer, 0, sizeof(masterXfer));
+
+		// Read voltage MSB and LSB
+		masterXfer.slaveAddress = LTC2942_ADDR;
+		masterXfer.direction = kI2C_Read;
+		masterXfer.subaddress = (uint32_t)NULL;
+		masterXfer.subaddressSize = 0;
+		masterXfer.data = buf;
+		masterXfer.dataSize = 2;
+		masterXfer.flags = kI2C_TransferDefaultFlag;
+
+		I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
+
 		// Calculate voltage
 		value  = buf[1] | (buf[0] << 8);
 		value *= 6000;
@@ -139,40 +145,44 @@ uint32_t LTC2942_GetVoltage(void) {
 	return value;
 }
 
-// Read chip temperature
-// return: temperature in Celsius (value of '2538' represents 25.38C)
-// note: in case of I2C error the return value will be 0x80000
-int32_t LTC2942_GetTemperature(void) {
+/**
+ * @brief Read chip temperature 
+ * 
+ * @return int32_t temperature in temperature in Celsius (value of '2538' represents 25.38C),
+ * in case of I2C error the return value will be 0x80000
+ */
+int32_t LTC2942_GetTemperature(void) 
+{
 	uint8_t buf[2];
 	uint32_t value = 0x80000; // Initialize with error value in case of I2C timeout
-
-//	// Send temperature MSB register address
-//	buf[0] = LTC2942_REG_TEMP_H;
-//	if (I2Cx_Transmit(LTC2942_I2C_PORT,&buf[0],1,LTC2942_ADDR,I2C_NOSTOP) == I2C_SUCCESS) {
-//		// Read temperature MSB and LSB
-//		I2Cx_Receive(LTC2942_I2C_PORT,buf,2,LTC2942_ADDR);
-//
-//		// Calculate temperature
-//		value  = (buf[1] | (buf[0] << 8)) >> 4;
-//		value *= 60000;
-//		value /= 4092;
-//		// By now the temperature value in Kelvins, convert it to Celsius degrees
-//		value -= 27315;
-//	}
-
+	buf[0] = LTC2942_REG_TEMP_H;
 	i2c_master_transfer_t masterXfer;
 	memset(&masterXfer, 0, sizeof(masterXfer));
 
 	// Send voltage MSB register address
 	masterXfer.slaveAddress   = LTC2942_ADDR;
-	masterXfer.direction      = kI2C_Read;
-	masterXfer.subaddress     = LTC2942_REG_TEMP_H;
-	masterXfer.subaddressSize = 1;
-	masterXfer.data           = buf;
-	masterXfer.dataSize       = 2;
-	masterXfer.flags          = kI2C_TransferDefaultFlag;
+	masterXfer.direction      = kI2C_Write;
+	masterXfer.subaddress     = (uint32_t)NULL;
+    masterXfer.subaddressSize = 0; 
+	masterXfer.data           = &buf[0];
+	masterXfer.dataSize       = 1;
+	masterXfer.flags          = kI2C_TransferNoStopFlag;
 
-	if (I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer) == kStatus_Success) {
+	if (I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer) == kStatus_Success) 
+	{
+		memset(&masterXfer, 0, sizeof(masterXfer));
+
+		// Read temperature MSB and LSB
+		masterXfer.slaveAddress = LTC2942_ADDR;
+		masterXfer.direction = kI2C_Read;
+		masterXfer.subaddress = (uint32_t)NULL;
+		masterXfer.subaddressSize = 0;
+		masterXfer.data = buf;
+		masterXfer.dataSize = 2;
+		masterXfer.flags = kI2C_TransferDefaultFlag;
+
+		I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
+
 		// Calculate temperature
 		value  = (buf[1] | (buf[0] << 8)) >> 4;
 		value *= 60000;
@@ -181,40 +191,49 @@ int32_t LTC2942_GetTemperature(void) {
 		value -= 27315;
 	}
 
-
 	return value;
 }
 
-// Read accumulated charge value
-// note: in case of I2C error the return value will be 0x0000
-uint16_t LTC2942_GetAC(void) {
+/**
+ * @brief Read accumulated charge value
+ * 
+ * @return uint16_t accumulated charge value, in case of I2C error the return value will be 0 
+ */
+uint16_t LTC2942_GetAC(void) 
+{
 	uint8_t buf[2];
-	uint32_t value = 0x0000; // Initialize with error value in case of I2C timeout
-
-//	// Send accumulated charge MSB register address
-//	buf[0] = LTC2942_REG_AC_H;
-//	if (I2Cx_Transmit(LTC2942_I2C_PORT,&buf[0],1,LTC2942_ADDR,I2C_NOSTOP) == I2C_SUCCESS) {
-//		// Read accumulated charge MSB and LSB
-//		I2Cx_Receive(LTC2942_I2C_PORT,buf,2,LTC2942_ADDR);
-//		value = buf[1] | (buf[0] << 8);
-//	}
+	uint32_t value = 0; // Initialize with error value in case of I2C timeout
+	buf[0] = LTC2942_REG_AC_H;
 	i2c_master_transfer_t masterXfer;
 	memset(&masterXfer, 0, sizeof(masterXfer));
 
 	// Send voltage MSB register address
 	masterXfer.slaveAddress   = LTC2942_ADDR;
-	masterXfer.direction      = kI2C_Read;
-	masterXfer.subaddress     = LTC2942_REG_TEMP_H;
-	masterXfer.subaddressSize = 1;
-	masterXfer.data           = buf;
-	masterXfer.dataSize       = 2;
-	masterXfer.flags          = kI2C_TransferDefaultFlag;
+	masterXfer.direction      = kI2C_Write;
+	masterXfer.subaddress     = (uint32_t)NULL;
+    masterXfer.subaddressSize = 0; 
+	masterXfer.data           = &buf[0];
+	masterXfer.dataSize       = 1;
+	masterXfer.flags          = kI2C_TransferNoStopFlag;
 
-	if (I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer) == kStatus_Success) {
+	if (I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer) == kStatus_Success) 
+	{
+		
+		memset(&masterXfer, 0, sizeof(masterXfer));
+
 		// Read accumulated charge MSB and LSB
+		masterXfer.slaveAddress = LTC2942_ADDR;
+		masterXfer.direction = kI2C_Read;
+		masterXfer.subaddress = (uint32_t)NULL;
+		masterXfer.subaddressSize = 0;
+		masterXfer.data = buf;
+		masterXfer.dataSize = 2;
+		masterXfer.flags = kI2C_TransferDefaultFlag;
+
+		I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
+		
 		value = buf[1] | (buf[0] << 8);
 	}
-
 
 	return value;
 }
@@ -222,7 +241,8 @@ uint16_t LTC2942_GetAC(void) {
 // Program accumulated charge value
 // input:
 //   AC - new accumulated charge value
-void LTC2942_SetAC(uint16_t AC) {
+void LTC2942_SetAC(uint16_t AC) 
+{
 	uint8_t reg;
 
 	// Before programming new AC value the analog section must be shut down
@@ -240,7 +260,8 @@ void LTC2942_SetAC(uint16_t AC) {
 // Configure ADC mode
 // input:
 //   mode - new ADC mode (one of LTC2942_ADC_XXX values)
-void LTC2942_SetADCMode(uint8_t mode) {
+void LTC2942_SetADCMode(uint8_t mode) 
+{
 	uint8_t reg;
 
 	// Read CONTROL register, clear ADC mode bits and configure new value
@@ -251,7 +272,8 @@ void LTC2942_SetADCMode(uint8_t mode) {
 // Configure coulomb counter prescaling factor M between 1 and 128
 // input:
 //   psc - new prescaler value (one of LTC2942_PSCM_XXX values)
-void LTC2942_SetPrescaler(uint8_t psc) {
+void LTC2942_SetPrescaler(uint8_t psc) 
+{
 	uint8_t reg;
 
 	// Read CONTROL register, clear prescaler M bits and configure new value
@@ -262,7 +284,8 @@ void LTC2942_SetPrescaler(uint8_t psc) {
 // Configure the AL/CC pin
 // input:
 //   mode - new pin configuration (one of LTC2942_ALCC_XXX values)
-void LTC2942_SetALCCMode(uint8_t mode) {
+void LTC2942_SetALCCMode(uint8_t mode) 
+{
 	uint8_t reg;
 
 	// Read CONTROL register, clear AL/CC bits and configure new value
@@ -273,7 +296,8 @@ void LTC2942_SetALCCMode(uint8_t mode) {
 // Configure state of the analog section of the chip
 // input:
 //   state - new analog section state (one of LTC2942_AN_XXX values)
-void LTC2942_SetAnalog(uint8_t state) {
+void LTC2942_SetAnalog(uint8_t state) 
+{
 	uint8_t reg;
 
 	// Read CONTROL register value
@@ -293,7 +317,8 @@ void LTC2942_SetAnalog(uint8_t state) {
 // Configure charge threshold high level
 // input:
 //   level - new threshold level (0..65535)
-inline void LTC2942_SetChargeThresholdH(uint16_t level) {
+inline void LTC2942_SetChargeThresholdH(uint16_t level) 
+{
 	LTC2942_WriteReg(LTC2942_REG_CTH_H,(uint8_t)(level >> 8));
 	LTC2942_WriteReg(LTC2942_REG_CTH_L,(uint8_t)level);
 }
@@ -301,7 +326,8 @@ inline void LTC2942_SetChargeThresholdH(uint16_t level) {
 // Configure charge threshold low level
 // input:
 //   level - new threshold level (0..65535)
-inline void LTC2942_SetChargeThresholdL(uint16_t level) {
+inline void LTC2942_SetChargeThresholdL(uint16_t level) 
+{
 	LTC2942_WriteReg(LTC2942_REG_CTL_H,(uint8_t)(level >> 8));
 	LTC2942_WriteReg(LTC2942_REG_CTL_L,(uint8_t)level);
 }
@@ -309,27 +335,31 @@ inline void LTC2942_SetChargeThresholdL(uint16_t level) {
 // Configure voltage threshold high level
 // input:
 //   level - new threshold level (0..255)
-inline void LTC2942_SetVoltageThresholdH(uint8_t level) {
+inline void LTC2942_SetVoltageThresholdH(uint8_t level) 
+{
 	LTC2942_WriteReg(LTC2942_REG_VOLT_H,level);
 }
 
 // Configure voltage threshold low level
 // input:
 //   level - new threshold level (0..255)
-inline void LTC2942_SetVoltageThresholdL(uint8_t level) {
+inline void LTC2942_SetVoltageThresholdL(uint8_t level)
+ {
 	LTC2942_WriteReg(LTC2942_REG_VOLT_L,level);
 }
 
 // Configure temperature threshold high level
 // input:
 //   level - new threshold level (0..255)
-inline void LTC2942_SetTemperatureThresholdH(uint8_t level) {
+inline void LTC2942_SetTemperatureThresholdH(uint8_t level)
+{
 	LTC2942_WriteReg(LTC2942_REG_TEMPT_H,level);
 }
 
 // Configure temperature threshold low level
 // input:
 //   level - new threshold level (0..255)
-inline void LTC2942_SetTemperatureThresholdL(uint8_t level) {
+inline void LTC2942_SetTemperatureThresholdL(uint8_t level) 
+{
 	LTC2942_WriteReg(LTC2942_REG_TEMPT_L,level);
 }
