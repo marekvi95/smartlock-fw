@@ -27,12 +27,12 @@
                <pin_label pin_num="23" pin_signal="PTA1/LPUART0_RX/TPM2_CH0" label="J1[2]/D0/UART0_RX" identifier="DEBUG_UART0_RX"/>
                <pin_label pin_num="24" pin_signal="PTA2/LPUART0_TX/TPM2_CH1" label="J1[4]/D1/UART0_TX" identifier="DEBUG_UART0_TX"/>
                <pin_label pin_num="60" pin_signal="LCD_P43/PTD3/SPI0_MISO/UART2_TX/TPM0_CH3/SPI0_MOSI/FXIO0_D3" label="J1[6]/D2/LCD_P43/SPI_RF_MISO" identifier="LCD_P43;SIGFOX_SDI"/>
-               <pin_label pin_num="28" pin_signal="PTA12/TPM1_CH0" label="J1[8]/D3/IN1B"/>
+               <pin_label pin_num="28" pin_signal="PTA12/TPM1_CH0" label="J1[8]/D3/IN1B" identifier="IN1B"/>
                <pin_label pin_num="26" pin_signal="PTA4/I2C1_SDA/TPM0_CH1/NMI_b" label="J1[10]/D4/SW1" identifier="SW1"/>
                <pin_label pin_num="27" pin_signal="PTA5/USB_CLKIN/TPM0_CH2" label="J1[12]/D5/USB_CLKIN" identifier="USB0_CLKIN"/>
                <pin_label pin_num="17" pin_signal="CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0" label="J1[14]/D6/CMP0_IN5"/>
                <pin_label pin_num="18" pin_signal="DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1" label="J1[16]/J4[11]/D7/CMP0_IN4/DAC_OUT/DP_CS"/>
-               <pin_label pin_num="29" pin_signal="PTA13/TPM1_CH1" label="J2[2]/D8/IN2A"/>
+               <pin_label pin_num="29" pin_signal="PTA13/TPM1_CH1" label="J2[2]/D8/IN2A" identifier="IN2A"/>
                <pin_label pin_num="59" pin_signal="LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2" label="J2[4]/D9/LCD_P42/SPI_RF_MOSI" identifier="LCD_P42;SIGFOX_SDO"/>
                <pin_label pin_num="61" pin_signal="LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4" label="J2[6]/D10/SPI1_PCS0/LCD_P44/SPI_DP_SS" identifier="LCD_P44;DP_CS"/>
                <pin_label pin_num="63" pin_signal="LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6" label="J2[8]/D11/SPI1_MOSI/LCD_P46/SPI_DP_MOSI" identifier="DP_DIN"/>
@@ -44,7 +44,7 @@
                <pin_label pin_num="40" pin_signal="LCD_P13/PTB17/SPI1_MISO/LPUART0_TX/TPM_CLKIN1/SPI1_MOSI" label="J2[17]/LCD_P13"/>
                <pin_label pin_num="54" pin_signal="LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT" label="J1[15]/INT1_ACCEL/LCD_P25/BUTTON_1" identifier="INT1_ACCEL"/>
                <pin_label pin_num="56" pin_signal="LCD_P27/CMP0_IN1/PTC7/SPI0_MISO/USB_SOF_OUT/SPI0_MOSI" label="J1[11]/USB_SOF_OUT/LCD_P27/SPI_RF_MISO" identifier="LCD_P27"/>
-               <pin_label pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO" label="J1[9]/LCD_P26/BUTTON_2" identifier="LCD_P26"/>
+               <pin_label pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO" label="J1[9]/LCD_P26/BUTTON_2" identifier="LCD_P26;BUTTON_2"/>
                <pin_label pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3" label="J1[7]/LCD_P24/POWER_STAT" identifier="LCD_P24;POWER_STAT"/>
                <pin_label pin_num="43" pin_signal="LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT" label="J1[5]/LCD_P20/USB_SOF_OUT" identifier="LCD_P20;USB_SOF_OUT"/>
                <pin_label pin_num="42" pin_signal="LCD_P15/PTB19/TPM2_CH1" label="J1[3]/LCD_P15" identifier="LCD_P15"/>
@@ -55,7 +55,7 @@
                <pin_label pin_num="9" pin_signal="LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4" label="J4[1]/DIFF_ADC0_DP/LCD_P59" identifier="LCD_P59"/>
                <pin_label pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0" label="J4[2]/A0/LCD_P0/NFC_IRQ" identifier="NFC_INT"/>
                <pin_label pin_num="36" pin_signal="LCD_P1/ADC0_SE9/PTB1/I2C0_SDA/TPM1_CH1" label="J4[4]/A1/LCD_P1"/>
-               <pin_label pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0" label="J4[6]/A2/LCD_P2/IN2B"/>
+               <pin_label pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0" label="J4[6]/A2/LCD_P2/IN2B" identifier="IN2B"/>
                <pin_label pin_num="38" pin_signal="LCD_P3/ADC0_SE13/PTB3/I2C0_SDA/TPM2_CH1" label="J4[8]/A3/LCD_P3"/>
                <pin_label pin_num="45" pin_signal="LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1" label="J4[10]/A4/LCD_P22/I2C_PW_D"/>
                <pin_label pin_num="44" pin_signal="LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0" label="J4[12]/A5/LCD_P21/I2C_PW_C"/>
@@ -81,7 +81,7 @@
                <pin_label pin_num="8" pin_signal="VREGIN" label="USB_REGIN" identifier="USB0_VREGIN"/>
                <pin_label pin_num="15" pin_signal="VREFL" label="GND"/>
                <pin_label pin_num="14" pin_signal="VREFH" label="J19[2]/P3V3_K32L2B"/>
-               <pin_label pin_num="19" pin_signal="PTE31/TPM0_CH4" label="LED2/IN1A" identifier="LED2"/>
+               <pin_label pin_num="19" pin_signal="PTE31/TPM0_CH4" label="LED2/IN1A" identifier="LED2;IN1A"/>
                <pin_label pin_num="48" pin_signal="VLL3" label="J12[1]/P3V3_K32L2B"/>
                <pin_label pin_num="49" pin_signal="VLL2/LCD_P4/PTC20" label="TP12/LCD_P4/DP_DC" identifier="DP_DC"/>
                <pin_label pin_num="50" pin_signal="VLL1/LCD_P5/PTC21" label="TP10/LCD_P5/DP_LED" identifier="DP_BUSY"/>
@@ -215,7 +215,11 @@
                   </pin>
                   <pin peripheral="SPI1" signal="MOSI" pin_num="63" pin_signal="LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6"/>
                   <pin peripheral="SPI1" signal="MISO" pin_num="64" pin_signal="LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7"/>
-                  <pin peripheral="LLWU" signal="P, 5" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0"/>
+                  <pin peripheral="LLWU" signal="P, 5" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
                   <pin peripheral="GPIOE" signal="GPIO, 0" pin_num="1" pin_signal="LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA">
                      <pin_features>
                         <pin_feature name="identifier" value="NFC_RST"/>
@@ -229,7 +233,6 @@
                         <pin_feature name="gpio_init_state" value="false"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="GPIOE" signal="GPIO, 30" pin_num="18" pin_signal="DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1"/>
                   <pin peripheral="USB0" signal="VOUT33" pin_num="7" pin_signal="VOUT33"/>
                   <pin peripheral="USB0" signal="VREGIN" pin_num="8" pin_signal="VREGIN"/>
                   <pin peripheral="SUPPLY" signal="VDD, 0" pin_num="3" pin_signal="VDD17"/>
@@ -248,18 +251,25 @@
                         <pin_feature name="identifier" value="BATT_C"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="TPM0" signal="CH, 4" pin_num="19" pin_signal="PTE31/TPM0_CH4"/>
+                  <pin peripheral="TPM0" signal="CH, 4" pin_num="19" pin_signal="PTE31/TPM0_CH4">
+                     <pin_features>
+                        <pin_feature name="identifier" value="IN1A"/>
+                     </pin_features>
+                  </pin>
                   <pin peripheral="LLWU" signal="P, 8" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3">
                      <pin_features>
                         <pin_feature name="identifier" value="POWER_STAT"/>
                      </pin_features>
                   </pin>
                   <pin peripheral="LLWU" signal="P, 9" pin_num="54" pin_signal="LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT"/>
-                  <pin peripheral="LLWU" signal="P, 10" pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO"/>
+                  <pin peripheral="LLWU" signal="P, 10" pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO">
+                     <pin_features>
+                        <pin_feature name="identifier" value="BUTTON_2"/>
+                     </pin_features>
+                  </pin>
                   <pin peripheral="TPM1" signal="CH, 0" pin_num="28" pin_signal="PTA12/TPM1_CH0"/>
                   <pin peripheral="TPM1" signal="CH, 1" pin_num="29" pin_signal="PTA13/TPM1_CH1"/>
                   <pin peripheral="TPM2" signal="CH, 0" pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0"/>
-                  <pin peripheral="GPIOA" signal="GPIO, 18" pin_num="32" pin_signal="EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0"/>
                   <pin peripheral="SWD" signal="CLK" pin_num="22" pin_signal="PTA0/TPM0_CH5/SWD_CLK"/>
                   <pin peripheral="GPIOC" signal="GPIO, 23" pin_num="52" pin_signal="VCAP1/LCD_P39/PTC23">
                      <pin_features>
@@ -285,7 +295,6 @@
                   </pin>
                   <pin peripheral="GPIOB" signal="GPIO, 0" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0">
                      <pin_features>
-                        <pin_feature name="identifier" value=""/>
                         <pin_feature name="direction" value="INPUT"/>
                         <pin_feature name="gpio_interrupt" value="kPORT_InterruptRisingEdge"/>
                      </pin_features>
@@ -294,402 +303,165 @@
                   <pin peripheral="GPIOC" signal="GPIO, 4" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3"/>
                </pins>
             </function>
-            <function name="BOARD_InitLCDPins">
-               <description>Configures pin routing and optionally pin electrical features.</description>
+            <function name="BOARD_DisablePins">
+               <description>Disable output pins before going to sleep mode</description>
                <options>
-                  <prefix>BOARD_</prefix>
+                  <callFromInitBoot>false</callFromInitBoot>
                   <coreID>core0</coreID>
-                  <enableClock>true</enableClock>
+                  <enableClock>false</enableClock>
                </options>
                <dependencies>
-                  <dependency resourceType="Peripheral" resourceId="LCD" description="Peripheral LCD is not initialized" problem_level="1" source="Pins:BOARD_InitLCDPins">
+                  <dependency resourceType="Peripheral" resourceId="LLWU" description="Peripheral LLWU is not initialized" problem_level="1" source="Pins:BOARD_DisablePins">
                      <feature name="initialized" evaluation="equal">
                         <data>true</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitLCDPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitLCDPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <pins>
-                  <pin peripheral="LCD" signal="P, 14" pin_num="41" pin_signal="LCD_P14/PTB18/TPM2_CH0">
-                     <pin_features>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 15" pin_num="42" pin_signal="LCD_P15/PTB19/TPM2_CH1">
-                     <pin_features>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 20" pin_num="43" pin_signal="LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT">
-                     <pin_features>
-                        <pin_feature name="identifier" value="LCD_P20"/>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 24" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3">
-                     <pin_features>
-                        <pin_feature name="identifier" value="LCD_P24"/>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 26" pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO">
-                     <pin_features>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 27" pin_num="56" pin_signal="LCD_P27/CMP0_IN1/PTC7/SPI0_MISO/USB_SOF_OUT/SPI0_MOSI">
-                     <pin_features>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 40" pin_num="57" pin_signal="LCD_P40/PTD0/SPI0_SS/TPM0_CH0/FXIO0_D0">
-                     <pin_features>
-                        <pin_feature name="identifier" value="LCD_P40"/>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 42" pin_num="59" pin_signal="LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2">
-                     <pin_features>
-                        <pin_feature name="identifier" value="LCD_P42"/>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 43" pin_num="60" pin_signal="LCD_P43/PTD3/SPI0_MISO/UART2_TX/TPM0_CH3/SPI0_MOSI/FXIO0_D3">
-                     <pin_features>
-                        <pin_feature name="identifier" value="LCD_P43"/>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 44" pin_num="61" pin_signal="LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4">
-                     <pin_features>
-                        <pin_feature name="identifier" value="LCD_P44"/>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 59" pin_num="9" pin_signal="LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4">
-                     <pin_features>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LCD" signal="P, 60" pin_num="10" pin_signal="LCD_P60/ADC0_DM0/ADC0_SE4a/PTE21/TPM1_CH1/LPUART0_RX/FXIO0_D5">
-                     <pin_features>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-               </pins>
-            </function>
-            <function name="BOARD_InitBUTTONSPins">
-               <description>Configures pin routing and optionally pin electrical features.</description>
-               <options>
-                  <prefix>BOARD_</prefix>
-                  <coreID>core0</coreID>
-                  <enableClock>true</enableClock>
-               </options>
-               <dependencies>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitBUTTONSPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitBUTTONSPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.gpio" description="Pins initialization requires the GPIO Driver in the project." problem_level="2" source="Pins:BOARD_InitBUTTONSPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <pins>
-                  <pin peripheral="GPIOA" signal="GPIO, 4" pin_num="26" pin_signal="PTA4/I2C1_SDA/TPM0_CH1/NMI_b">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT"/>
-                        <pin_feature name="slew_rate" value="fast"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="enable"/>
-                        <pin_feature name="passive_filter" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="GPIOC" signal="GPIO, 3" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT">
-                     <pin_features>
-                        <pin_feature name="identifier" value="SW3"/>
-                        <pin_feature name="direction" value="INPUT"/>
-                        <pin_feature name="slew_rate" value="fast"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="enable"/>
-                     </pin_features>
-                  </pin>
-               </pins>
-            </function>
-            <function name="BOARD_InitLEDsPins">
-               <description>Configures pin routing and optionally pin electrical features.</description>
-               <options>
-                  <prefix>BOARD_</prefix>
-                  <coreID>core0</coreID>
-                  <enableClock>true</enableClock>
-               </options>
-               <dependencies>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitLEDsPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitLEDsPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.gpio" description="Pins initialization requires the GPIO Driver in the project." problem_level="2" source="Pins:BOARD_InitLEDsPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <pins>
-                  <pin peripheral="GPIOE" signal="GPIO, 31" pin_num="19" pin_signal="PTE31/TPM0_CH4">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="gpio_init_state" value="true"/>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="down"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="GPIOD" signal="GPIO, 5" pin_num="62" pin_signal="LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5">
-                     <pin_features>
-                        <pin_feature name="identifier" value="LED1"/>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="gpio_init_state" value="true"/>
-                        <pin_feature name="slew_rate" value="slow"/>
-                        <pin_feature name="pull_select" value="down"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-               </pins>
-            </function>
-            <function name="BOARD_InitDEBUG_UARTPins">
-               <description>Configures pin routing and optionally pin electrical features.</description>
-               <options>
-                  <callFromInitBoot>true</callFromInitBoot>
-                  <prefix>BOARD_</prefix>
-                  <coreID>core0</coreID>
-                  <enableClock>true</enableClock>
-               </options>
-               <dependencies>
-                  <dependency resourceType="Peripheral" resourceId="LPUART0" description="Peripheral LPUART0 is not initialized" problem_level="1" source="Pins:BOARD_InitDEBUG_UARTPins">
+                  <dependency resourceType="Peripheral" resourceId="USB0" description="Peripheral USB0 is not initialized" problem_level="1" source="Pins:BOARD_DisablePins">
                      <feature name="initialized" evaluation="equal">
                         <data>true</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitDEBUG_UARTPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitDEBUG_UARTPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <pins>
-                  <pin peripheral="LPUART0" signal="RX" pin_num="23" pin_signal="PTA1/LPUART0_RX/TPM2_CH0">
-                     <pin_features>
-                        <pin_feature name="slew_rate" value="fast"/>
-                        <pin_feature name="pull_select" value="down"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LPUART0" signal="TX" pin_num="24" pin_signal="PTA2/LPUART0_TX/TPM2_CH1">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="slew_rate" value="fast"/>
-                        <pin_feature name="pull_select" value="down"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-               </pins>
-            </function>
-            <function name="BOARD_InitUSBPins">
-               <description>Configures pin routing and optionally pin electrical features.</description>
-               <options>
-                  <prefix>BOARD_</prefix>
-                  <coreID>core0</coreID>
-                  <enableClock>true</enableClock>
-               </options>
-               <dependencies>
-                  <dependency resourceType="Peripheral" resourceId="USB0" description="Peripheral USB0 is not initialized" problem_level="1" source="Pins:BOARD_InitUSBPins">
+                  <dependency resourceType="Peripheral" resourceId="SUPPLY" description="Peripheral SUPPLY is not initialized" problem_level="1" source="Pins:BOARD_DisablePins">
                      <feature name="initialized" evaluation="equal">
                         <data>true</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitUSBPins">
+                  <dependency resourceType="Peripheral" resourceId="RCM" description="Peripheral RCM is not initialized" problem_level="1" source="Pins:BOARD_DisablePins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="SWD" description="Peripheral SWD is not initialized" problem_level="1" source="Pins:BOARD_DisablePins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="GPIOB" description="Peripheral GPIOB is not initialized" problem_level="1" source="Pins:BOARD_DisablePins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="n/a" description="Peripheral n/a is not initialized" problem_level="1" source="Pins:BOARD_DisablePins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="LCD" description="Peripheral LCD is not initialized" problem_level="1" source="Pins:BOARD_DisablePins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="ADC0" description="Peripheral ADC0 is not initialized" problem_level="1" source="Pins:BOARD_DisablePins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_DisablePins">
                      <feature name="enabled" evaluation="equal" configuration="core0">
                         <data>true</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitUSBPins">
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_DisablePins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.gpio" description="Pins initialization requires the GPIO Driver in the project." problem_level="2" source="Pins:BOARD_DisablePins">
                      <feature name="enabled" evaluation="equal" configuration="core0">
                         <data>true</data>
                      </feature>
                   </dependency>
                </dependencies>
                <pins>
-                  <pin peripheral="USB0" signal="DP" pin_num="5" pin_signal="USB0_DP"/>
-                  <pin peripheral="USB0" signal="DM" pin_num="6" pin_signal="USB0_DM"/>
+                  <pin peripheral="LLWU" signal="P, 5" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="USB0" signal="VOUT33" pin_num="7" pin_signal="VOUT33"/>
                   <pin peripheral="USB0" signal="VREGIN" pin_num="8" pin_signal="VREGIN"/>
-                  <pin peripheral="USB0" signal="SOF_OUT" pin_num="43" pin_signal="LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT">
+                  <pin peripheral="SUPPLY" signal="VDD, 0" pin_num="3" pin_signal="VDD17"/>
+                  <pin peripheral="SUPPLY" signal="VSS, 0" pin_num="4" pin_signal="VSS18"/>
+                  <pin peripheral="SUPPLY" signal="VDDA, 0" pin_num="13" pin_signal="VDDA"/>
+                  <pin peripheral="SUPPLY" signal="VSSA, 0" pin_num="16" pin_signal="VSSA"/>
+                  <pin peripheral="SUPPLY" signal="VDD, 1" pin_num="30" pin_signal="VDD94"/>
+                  <pin peripheral="SUPPLY" signal="VSS, 1" pin_num="31" pin_signal="VSS95"/>
+                  <pin peripheral="SUPPLY" signal="VSS, 2" pin_num="47" pin_signal="VSS136"/>
+                  <pin peripheral="RCM" signal="RESET" pin_num="34" pin_signal="PTA20/RESET_b"/>
+                  <pin peripheral="SWD" signal="DIO" pin_num="25" pin_signal="PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO"/>
+                  <pin peripheral="LLWU" signal="P, 7" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT">
                      <pin_features>
-                        <pin_feature name="identifier" value="USB_SOF_OUT"/>
-                        <pin_feature name="slew_rate" value="fast"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
+                        <pin_feature name="identifier" value="BATT_C"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="USB0" signal="CLKIN" pin_num="27" pin_signal="PTA5/USB_CLKIN/TPM0_CH2">
+                  <pin peripheral="LLWU" signal="P, 8" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3">
                      <pin_features>
-                        <pin_feature name="slew_rate" value="fast"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
+                        <pin_feature name="identifier" value="POWER_STAT"/>
                      </pin_features>
                   </pin>
-               </pins>
-            </function>
-            <function name="BOARD_InitACCEL_I2CPins">
-               <description>Configures pin routing and optionally pin electrical features.</description>
-               <options>
-                  <prefix>BOARD_</prefix>
-                  <coreID>core0</coreID>
-                  <enableClock>true</enableClock>
-               </options>
-               <dependencies>
-                  <dependency resourceType="Peripheral" resourceId="I2C0" description="Peripheral I2C0 is not initialized" problem_level="1" source="Pins:BOARD_InitACCEL_I2CPins">
-                     <feature name="initialized" evaluation="equal">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitACCEL_I2CPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitACCEL_I2CPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.gpio" description="Pins initialization requires the GPIO Driver in the project." problem_level="2" source="Pins:BOARD_InitACCEL_I2CPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <pins>
-                  <pin peripheral="I2C0" signal="SCL" pin_num="20" pin_signal="PTE24/TPM0_CH0/I2C0_SCL">
+                  <pin peripheral="LLWU" signal="P, 9" pin_num="54" pin_signal="LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT"/>
+                  <pin peripheral="LLWU" signal="P, 10" pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO">
                      <pin_features>
-                        <pin_feature name="slew_rate" value="fast"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="enable"/>
+                        <pin_feature name="identifier" value="BUTTON_2"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="I2C0" signal="SDA" pin_num="21" pin_signal="PTE25/TPM0_CH1/I2C0_SDA">
-                     <pin_features>
-                        <pin_feature name="slew_rate" value="fast"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="enable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="GPIOD" signal="GPIO, 1" pin_num="58" pin_signal="LCD_P41/ADC0_SE5b/PTD1/SPI0_SCK/TPM0_CH1/FXIO0_D1">
-                     <pin_features>
-                        <pin_feature name="identifier" value="INT2_ACCEL"/>
-                        <pin_feature name="direction" value="INPUT"/>
-                        <pin_feature name="slew_rate" value="fast"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="GPIOC" signal="GPIO, 5" pin_num="54" pin_signal="LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT">
+                  <pin peripheral="SWD" signal="CLK" pin_num="22" pin_signal="PTA0/TPM0_CH5/SWD_CLK"/>
+                  <pin peripheral="GPIOB" signal="GPIO, 0" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0">
                      <pin_features>
                         <pin_feature name="direction" value="INPUT"/>
-                        <pin_feature name="slew_rate" value="fast"/>
-                        <pin_feature name="pull_select" value="up"/>
-                        <pin_feature name="pull_enable" value="disable"/>
+                        <pin_feature name="gpio_interrupt" value="kPORT_InterruptRisingEdge"/>
                      </pin_features>
                   </pin>
-               </pins>
-            </function>
-            <function name="BOARD_InitOSCPins">
-               <description>Configures pin routing and optionally pin electrical features.</description>
-               <options>
-                  <prefix>BOARD_</prefix>
-                  <coreID>core0</coreID>
-                  <enableClock>true</enableClock>
-               </options>
-               <dependencies>
-                  <dependency resourceType="Peripheral" resourceId="OSC0" description="Peripheral OSC0 is not initialized" problem_level="1" source="Pins:BOARD_InitOSCPins">
-                     <feature name="initialized" evaluation="equal">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitOSCPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitOSCPins">
-                     <feature name="enabled" evaluation="equal" configuration="core0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <pins>
-                  <pin peripheral="OSC0" signal="EXTAL0" pin_num="32" pin_signal="EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0">
+                  <pin peripheral="GPIOC" signal="GPIO, 3" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT"/>
+                  <pin peripheral="GPIOC" signal="GPIO, 4" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3"/>
+                  <pin peripheral="n/a" signal="disabled" pin_num="19" pin_signal="PTE31/TPM0_CH4"/>
+                  <pin peripheral="n/a" signal="disabled" pin_num="20" pin_signal="PTE24/TPM0_CH0/I2C0_SCL">
                      <pin_features>
-                        <pin_feature name="slew_rate" value="no_init"/>
-                        <pin_feature name="pull_select" value="no_init"/>
-                        <pin_feature name="pull_enable" value="no_init"/>
+                        <pin_feature name="identifier" value=""/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="OSC0" signal="XTAL0" pin_num="33" pin_signal="XTAL0/PTA19/LPUART1_TX/TPM_CLKIN1/LPTMR0_ALT1">
+                  <pin peripheral="n/a" signal="disabled" pin_num="21" pin_signal="PTE25/TPM0_CH1/I2C0_SDA"/>
+                  <pin peripheral="n/a" signal="disabled" pin_num="28" pin_signal="PTA12/TPM1_CH0">
                      <pin_features>
-                        <pin_feature name="slew_rate" value="no_init"/>
-                        <pin_feature name="pull_select" value="no_init"/>
-                        <pin_feature name="pull_enable" value="no_init"/>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="n/a" signal="disabled" pin_num="29" pin_signal="PTA13/TPM1_CH1">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="LCD" signal="P, 48" pin_num="1" pin_signal="LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA"/>
+                  <pin peripheral="LCD" signal="P, 49" pin_num="2" pin_signal="LCD_P49/PTE1/SPI1_MOSI/LPUART1_RX/SPI1_MISO/I2C1_SCL"/>
+                  <pin peripheral="ADC0" signal="SE, 12" pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="ADC0" signal="SE, 15" pin_num="44" pin_signal="LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0"/>
+                  <pin peripheral="ADC0" signal="SE, 11" pin_num="45" pin_signal="LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1"/>
+                  <pin peripheral="LCD" signal="P, 4" pin_num="49" pin_signal="VLL2/LCD_P4/PTC20"/>
+                  <pin peripheral="LCD" signal="P, 5" pin_num="50" pin_signal="VLL1/LCD_P5/PTC21">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="LCD" signal="P, 39" pin_num="52" pin_signal="VCAP1/LCD_P39/PTC23"/>
+                  <pin peripheral="LCD" signal="P, 40" pin_num="57" pin_signal="LCD_P40/PTD0/SPI0_SS/TPM0_CH0/FXIO0_D0"/>
+                  <pin peripheral="ADC0" signal="SE, 5b" pin_num="58" pin_signal="LCD_P41/ADC0_SE5b/PTD1/SPI0_SCK/TPM0_CH1/FXIO0_D1"/>
+                  <pin peripheral="LCD" signal="P, 42" pin_num="59" pin_signal="LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2"/>
+                  <pin peripheral="LCD" signal="P, 43" pin_num="60" pin_signal="LCD_P43/PTD3/SPI0_MISO/UART2_TX/TPM0_CH3/SPI0_MOSI/FXIO0_D3"/>
+                  <pin peripheral="LCD" signal="P, 44" pin_num="61" pin_signal="LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4"/>
+                  <pin peripheral="ADC0" signal="SE, 6b" pin_num="62" pin_signal="LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5"/>
+                  <pin peripheral="ADC0" signal="SE, 7b" pin_num="63" pin_signal="LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="LCD" signal="P, 47" pin_num="64" pin_signal="LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7"/>
+                  <pin peripheral="LCD" signal="P, 6" pin_num="51" pin_signal="VCAP2/LCD_P6/PTC22">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
                      </pin_features>
                   </pin>
                </pins>

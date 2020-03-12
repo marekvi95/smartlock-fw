@@ -17,12 +17,12 @@ pin_labels:
 - {pin_num: '23', pin_signal: PTA1/LPUART0_RX/TPM2_CH0, label: 'J1[2]/D0/UART0_RX', identifier: DEBUG_UART0_RX}
 - {pin_num: '24', pin_signal: PTA2/LPUART0_TX/TPM2_CH1, label: 'J1[4]/D1/UART0_TX', identifier: DEBUG_UART0_TX}
 - {pin_num: '60', pin_signal: LCD_P43/PTD3/SPI0_MISO/UART2_TX/TPM0_CH3/SPI0_MOSI/FXIO0_D3, label: 'J1[6]/D2/LCD_P43/SPI_RF_MISO', identifier: LCD_P43;SIGFOX_SDI}
-- {pin_num: '28', pin_signal: PTA12/TPM1_CH0, label: 'J1[8]/D3/IN1B'}
+- {pin_num: '28', pin_signal: PTA12/TPM1_CH0, label: 'J1[8]/D3/IN1B', identifier: IN1B}
 - {pin_num: '26', pin_signal: PTA4/I2C1_SDA/TPM0_CH1/NMI_b, label: 'J1[10]/D4/SW1', identifier: SW1}
 - {pin_num: '27', pin_signal: PTA5/USB_CLKIN/TPM0_CH2, label: 'J1[12]/D5/USB_CLKIN', identifier: USB0_CLKIN}
 - {pin_num: '17', pin_signal: CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0, label: 'J1[14]/D6/CMP0_IN5'}
 - {pin_num: '18', pin_signal: DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1, label: 'J1[16]/J4[11]/D7/CMP0_IN4/DAC_OUT/DP_CS'}
-- {pin_num: '29', pin_signal: PTA13/TPM1_CH1, label: 'J2[2]/D8/IN2A'}
+- {pin_num: '29', pin_signal: PTA13/TPM1_CH1, label: 'J2[2]/D8/IN2A', identifier: IN2A}
 - {pin_num: '59', pin_signal: LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2, label: 'J2[4]/D9/LCD_P42/SPI_RF_MOSI', identifier: LCD_P42;SIGFOX_SDO}
 - {pin_num: '61', pin_signal: LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4, label: 'J2[6]/D10/SPI1_PCS0/LCD_P44/SPI_DP_SS', identifier: LCD_P44;DP_CS}
 - {pin_num: '63', pin_signal: LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6, label: 'J2[8]/D11/SPI1_MOSI/LCD_P46/SPI_DP_MOSI', identifier: DP_DIN}
@@ -35,7 +35,7 @@ pin_labels:
 - {pin_num: '40', pin_signal: LCD_P13/PTB17/SPI1_MISO/LPUART0_TX/TPM_CLKIN1/SPI1_MOSI, label: 'J2[17]/LCD_P13'}
 - {pin_num: '54', pin_signal: LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT, label: 'J1[15]/INT1_ACCEL/LCD_P25/BUTTON_1', identifier: INT1_ACCEL}
 - {pin_num: '56', pin_signal: LCD_P27/CMP0_IN1/PTC7/SPI0_MISO/USB_SOF_OUT/SPI0_MOSI, label: 'J1[11]/USB_SOF_OUT/LCD_P27/SPI_RF_MISO', identifier: LCD_P27}
-- {pin_num: '55', pin_signal: LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO, label: 'J1[9]/LCD_P26/BUTTON_2', identifier: LCD_P26}
+- {pin_num: '55', pin_signal: LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO, label: 'J1[9]/LCD_P26/BUTTON_2', identifier: LCD_P26;BUTTON_2}
 - {pin_num: '53', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3, label: 'J1[7]/LCD_P24/POWER_STAT', identifier: LCD_P24;POWER_STAT}
 - {pin_num: '43', pin_signal: LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT, label: 'J1[5]/LCD_P20/USB_SOF_OUT', identifier: LCD_P20;USB_SOF_OUT}
 - {pin_num: '42', pin_signal: LCD_P15/PTB19/TPM2_CH1, label: 'J1[3]/LCD_P15', identifier: LCD_P15}
@@ -46,7 +46,7 @@ pin_labels:
 - {pin_num: '9', pin_signal: LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4, label: 'J4[1]/DIFF_ADC0_DP/LCD_P59', identifier: LCD_P59}
 - {pin_num: '35', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, label: 'J4[2]/A0/LCD_P0/NFC_IRQ', identifier: NFC_INT}
 - {pin_num: '36', pin_signal: LCD_P1/ADC0_SE9/PTB1/I2C0_SDA/TPM1_CH1, label: 'J4[4]/A1/LCD_P1'}
-- {pin_num: '37', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0, label: 'J4[6]/A2/LCD_P2/IN2B'}
+- {pin_num: '37', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0, label: 'J4[6]/A2/LCD_P2/IN2B', identifier: IN2B}
 - {pin_num: '38', pin_signal: LCD_P3/ADC0_SE13/PTB3/I2C0_SDA/TPM2_CH1, label: 'J4[8]/A3/LCD_P3'}
 - {pin_num: '45', pin_signal: LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1, label: 'J4[10]/A4/LCD_P22/I2C_PW_D'}
 - {pin_num: '44', pin_signal: LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0, label: 'J4[12]/A5/LCD_P21/I2C_PW_C'}
@@ -72,7 +72,7 @@ pin_labels:
 - {pin_num: '8', pin_signal: VREGIN, label: USB_REGIN, identifier: USB0_VREGIN}
 - {pin_num: '15', pin_signal: VREFL, label: GND}
 - {pin_num: '14', pin_signal: VREFH, label: 'J19[2]/P3V3_K32L2B'}
-- {pin_num: '19', pin_signal: PTE31/TPM0_CH4, label: LED2/IN1A, identifier: LED2}
+- {pin_num: '19', pin_signal: PTE31/TPM0_CH4, label: LED2/IN1A, identifier: LED2;IN1A}
 - {pin_num: '48', pin_signal: VLL3, label: 'J12[1]/P3V3_K32L2B'}
 - {pin_num: '49', pin_signal: VLL2/LCD_P4/PTC20, label: TP12/LCD_P4/DP_DC, identifier: DP_DC}
 - {pin_num: '50', pin_signal: VLL1/LCD_P5/PTC21, label: TP10/LCD_P5/DP_LED, identifier: DP_BUSY}
@@ -97,7 +97,6 @@ pin_labels:
 void BOARD_InitBootPins(void)
 {
     BOARD_InitPins();
-    BOARD_InitDEBUG_UARTPins();
 }
 
 /* clang-format off */
@@ -116,12 +115,11 @@ BOARD_InitPins:
   - {pin_num: '62', peripheral: SPI1, signal: SCK, pin_signal: LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5, identifier: DP_SCK}
   - {pin_num: '63', peripheral: SPI1, signal: MOSI, pin_signal: LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6}
   - {pin_num: '64', peripheral: SPI1, signal: MISO, pin_signal: LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7}
-  - {pin_num: '35', peripheral: LLWU, signal: 'P, 5', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0}
+  - {pin_num: '35', peripheral: LLWU, signal: 'P, 5', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, identifier: ''}
   - {pin_num: '1', peripheral: GPIOE, signal: 'GPIO, 0', pin_signal: LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA, identifier: NFC_RST,
     direction: OUTPUT}
   - {pin_num: '2', peripheral: GPIOE, signal: 'GPIO, 1', pin_signal: LCD_P49/PTE1/SPI1_MOSI/LPUART1_RX/SPI1_MISO/I2C1_SCL, identifier: SIGFOX_RST, direction: OUTPUT,
     gpio_init_state: 'false'}
-  - {pin_num: '18', peripheral: GPIOE, signal: 'GPIO, 30', pin_signal: DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1}
   - {pin_num: '7', peripheral: USB0, signal: VOUT33, pin_signal: VOUT33}
   - {pin_num: '8', peripheral: USB0, signal: VREGIN, pin_signal: VREGIN}
   - {pin_num: '3', peripheral: SUPPLY, signal: 'VDD, 0', pin_signal: VDD17}
@@ -136,20 +134,19 @@ BOARD_InitPins:
   - {pin_num: '44', peripheral: I2C1, signal: SCL, pin_signal: LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0}
   - {pin_num: '45', peripheral: I2C1, signal: SDA, pin_signal: LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1}
   - {pin_num: '46', peripheral: LLWU, signal: 'P, 7', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, identifier: BATT_C}
-  - {pin_num: '19', peripheral: TPM0, signal: 'CH, 4', pin_signal: PTE31/TPM0_CH4}
+  - {pin_num: '19', peripheral: TPM0, signal: 'CH, 4', pin_signal: PTE31/TPM0_CH4, identifier: IN1A}
   - {pin_num: '53', peripheral: LLWU, signal: 'P, 8', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3, identifier: POWER_STAT}
   - {pin_num: '54', peripheral: LLWU, signal: 'P, 9', pin_signal: LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT}
-  - {pin_num: '55', peripheral: LLWU, signal: 'P, 10', pin_signal: LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO}
+  - {pin_num: '55', peripheral: LLWU, signal: 'P, 10', pin_signal: LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO, identifier: BUTTON_2}
   - {pin_num: '28', peripheral: TPM1, signal: 'CH, 0', pin_signal: PTA12/TPM1_CH0}
   - {pin_num: '29', peripheral: TPM1, signal: 'CH, 1', pin_signal: PTA13/TPM1_CH1}
   - {pin_num: '37', peripheral: TPM2, signal: 'CH, 0', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0}
-  - {pin_num: '32', peripheral: GPIOA, signal: 'GPIO, 18', pin_signal: EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0}
   - {pin_num: '22', peripheral: SWD, signal: CLK, pin_signal: PTA0/TPM0_CH5/SWD_CLK}
   - {pin_num: '52', peripheral: GPIOC, signal: 'GPIO, 23', pin_signal: VCAP1/LCD_P39/PTC23, identifier: SIGFOX_AK, direction: INPUT, pull_enable: enable}
   - {pin_num: '51', peripheral: GPIOC, signal: 'GPIO, 22', pin_signal: VCAP2/LCD_P6/PTC22, direction: OUTPUT}
   - {pin_num: '50', peripheral: GPIOC, signal: 'GPIO, 21', pin_signal: VLL1/LCD_P5/PTC21, direction: INPUT}
   - {pin_num: '49', peripheral: GPIOC, signal: 'GPIO, 20', pin_signal: VLL2/LCD_P4/PTC20, direction: OUTPUT}
-  - {pin_num: '35', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, identifier: '', direction: INPUT, gpio_interrupt: kPORT_InterruptRisingEdge}
+  - {pin_num: '35', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, direction: INPUT, gpio_interrupt: kPORT_InterruptRisingEdge}
   - {pin_num: '46', peripheral: GPIOC, signal: 'GPIO, 3', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT}
   - {pin_num: '53', peripheral: GPIOC, signal: 'GPIO, 4', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
@@ -228,13 +225,10 @@ void BOARD_InitPins(void)
     PORT_SetPinMux(PORTA, 0U, kPORT_MuxAlt7);
 
     /* PORTA12 (pin 28) is configured as TPM1_CH0 */
-    PORT_SetPinMux(PORTA, 12U, kPORT_MuxAlt3);
+    PORT_SetPinMux(BOARD_INITPINS_IN1B_PORT, BOARD_INITPINS_IN1B_PIN, kPORT_MuxAlt3);
 
     /* PORTA13 (pin 29) is configured as TPM1_CH1 */
-    PORT_SetPinMux(PORTA, 13U, kPORT_MuxAlt3);
-
-    /* PORTA18 (pin 32) is configured as PTA18 */
-    PORT_SetPinMux(BOARD_INITPINS_EXTAL_32KHZ_PORT, BOARD_INITPINS_EXTAL_32KHZ_PIN, kPORT_MuxAsGpio);
+    PORT_SetPinMux(BOARD_INITPINS_IN2A_PORT, BOARD_INITPINS_IN2A_PIN, kPORT_MuxAlt3);
 
     /* PORTA20 (pin 34) is configured as RESET_b */
     PORT_SetPinMux(PORTA, 20U, kPORT_MuxAlt7);
@@ -249,7 +243,7 @@ void BOARD_InitPins(void)
     PORT_SetPinInterruptConfig(BOARD_INITPINS_NFC_INT_PORT, BOARD_INITPINS_NFC_INT_PIN, kPORT_InterruptRisingEdge);
 
     /* PORTB2 (pin 37) is configured as TPM2_CH0 */
-    PORT_SetPinMux(PORTB, 2U, kPORT_MuxAlt3);
+    PORT_SetPinMux(BOARD_INITPINS_IN2B_PORT, BOARD_INITPINS_IN2B_PIN, kPORT_MuxAlt3);
 
     /* PORTC1 (pin 44) is configured as I2C1_SCL */
     PORT_SetPinMux(PORTC, 1U, kPORT_MuxAlt2);
@@ -286,7 +280,7 @@ void BOARD_InitPins(void)
     PORT_SetPinMux(BOARD_INITPINS_INT1_ACCEL_PORT, BOARD_INITPINS_INT1_ACCEL_PIN, kPORT_MuxAsGpio);
 
     /* PORTC6 (pin 55) is configured as LLWU_P10 */
-    PORT_SetPinMux(BOARD_INITPINS_LCD_P26_PORT, BOARD_INITPINS_LCD_P26_PIN, kPORT_MuxAsGpio);
+    PORT_SetPinMux(BOARD_INITPINS_BUTTON_2_PORT, BOARD_INITPINS_BUTTON_2_PIN, kPORT_MuxAsGpio);
 
     /* PORTD0 (pin 57) is configured as PTD0 */
     PORT_SetPinMux(BOARD_INITPINS_SIGFOX_CS_PORT, BOARD_INITPINS_SIGFOX_CS_PIN, kPORT_MuxAsGpio);
@@ -324,11 +318,8 @@ void BOARD_InitPins(void)
     /* PORTE25 (pin 21) is configured as I2C0_SDA */
     PORT_SetPinMux(BOARD_INITPINS_I2C0_SDA_PORT, BOARD_INITPINS_I2C0_SDA_PIN, kPORT_MuxAlt5);
 
-    /* PORTE30 (pin 18) is configured as PTE30 */
-    PORT_SetPinMux(PORTE, 30U, kPORT_MuxAsGpio);
-
     /* PORTE31 (pin 19) is configured as TPM0_CH4 */
-    PORT_SetPinMux(BOARD_INITPINS_LED2_PORT, BOARD_INITPINS_LED2_PIN, kPORT_MuxAlt3);
+    PORT_SetPinMux(BOARD_INITPINS_IN1A_PORT, BOARD_INITPINS_IN1A_PIN, kPORT_MuxAlt3);
 
     SIM->SOPT4 = ((SIM->SOPT4 &
                    /* Mask bits to zero which are setting */
@@ -344,667 +335,163 @@ void BOARD_InitPins(void)
 /* clang-format off */
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-BOARD_InitLCDPins:
-- options: {prefix: BOARD_, coreID: core0, enableClock: 'true'}
+BOARD_DisablePins:
+- options: {callFromInitBoot: 'false', coreID: core0, enableClock: 'false'}
 - pin_list:
-  - {pin_num: '41', peripheral: LCD, signal: 'P, 14', pin_signal: LCD_P14/PTB18/TPM2_CH0, slew_rate: slow, pull_select: up, pull_enable: disable}
-  - {pin_num: '42', peripheral: LCD, signal: 'P, 15', pin_signal: LCD_P15/PTB19/TPM2_CH1, slew_rate: slow, pull_select: up, pull_enable: disable}
-  - {pin_num: '43', peripheral: LCD, signal: 'P, 20', pin_signal: LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT, identifier: LCD_P20, slew_rate: slow, pull_select: up,
-    pull_enable: disable}
-  - {pin_num: '53', peripheral: LCD, signal: 'P, 24', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3, identifier: LCD_P24, slew_rate: slow, pull_select: up,
-    pull_enable: disable}
-  - {pin_num: '55', peripheral: LCD, signal: 'P, 26', pin_signal: LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO, slew_rate: slow, pull_select: up, pull_enable: disable}
-  - {pin_num: '56', peripheral: LCD, signal: 'P, 27', pin_signal: LCD_P27/CMP0_IN1/PTC7/SPI0_MISO/USB_SOF_OUT/SPI0_MOSI, slew_rate: slow, pull_select: up, pull_enable: disable}
-  - {pin_num: '57', peripheral: LCD, signal: 'P, 40', pin_signal: LCD_P40/PTD0/SPI0_SS/TPM0_CH0/FXIO0_D0, identifier: LCD_P40, slew_rate: slow, pull_select: up, pull_enable: disable}
-  - {pin_num: '59', peripheral: LCD, signal: 'P, 42', pin_signal: LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2, identifier: LCD_P42, slew_rate: slow,
-    pull_select: up, pull_enable: disable}
-  - {pin_num: '60', peripheral: LCD, signal: 'P, 43', pin_signal: LCD_P43/PTD3/SPI0_MISO/UART2_TX/TPM0_CH3/SPI0_MOSI/FXIO0_D3, identifier: LCD_P43, slew_rate: slow,
-    pull_select: up, pull_enable: disable}
-  - {pin_num: '61', peripheral: LCD, signal: 'P, 44', pin_signal: LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4, identifier: LCD_P44, slew_rate: slow,
-    pull_select: up, pull_enable: disable}
-  - {pin_num: '9', peripheral: LCD, signal: 'P, 59', pin_signal: LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4, slew_rate: slow, pull_select: up, pull_enable: disable}
-  - {pin_num: '10', peripheral: LCD, signal: 'P, 60', pin_signal: LCD_P60/ADC0_DM0/ADC0_SE4a/PTE21/TPM1_CH1/LPUART0_RX/FXIO0_D5, slew_rate: slow, pull_select: up,
-    pull_enable: disable}
+  - {pin_num: '35', peripheral: LLWU, signal: 'P, 5', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, identifier: ''}
+  - {pin_num: '7', peripheral: USB0, signal: VOUT33, pin_signal: VOUT33}
+  - {pin_num: '8', peripheral: USB0, signal: VREGIN, pin_signal: VREGIN}
+  - {pin_num: '3', peripheral: SUPPLY, signal: 'VDD, 0', pin_signal: VDD17}
+  - {pin_num: '4', peripheral: SUPPLY, signal: 'VSS, 0', pin_signal: VSS18}
+  - {pin_num: '13', peripheral: SUPPLY, signal: 'VDDA, 0', pin_signal: VDDA}
+  - {pin_num: '16', peripheral: SUPPLY, signal: 'VSSA, 0', pin_signal: VSSA}
+  - {pin_num: '30', peripheral: SUPPLY, signal: 'VDD, 1', pin_signal: VDD94}
+  - {pin_num: '31', peripheral: SUPPLY, signal: 'VSS, 1', pin_signal: VSS95}
+  - {pin_num: '47', peripheral: SUPPLY, signal: 'VSS, 2', pin_signal: VSS136}
+  - {pin_num: '34', peripheral: RCM, signal: RESET, pin_signal: PTA20/RESET_b}
+  - {pin_num: '25', peripheral: SWD, signal: DIO, pin_signal: PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO}
+  - {pin_num: '46', peripheral: LLWU, signal: 'P, 7', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, identifier: BATT_C}
+  - {pin_num: '53', peripheral: LLWU, signal: 'P, 8', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3, identifier: POWER_STAT}
+  - {pin_num: '54', peripheral: LLWU, signal: 'P, 9', pin_signal: LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT}
+  - {pin_num: '55', peripheral: LLWU, signal: 'P, 10', pin_signal: LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO, identifier: BUTTON_2}
+  - {pin_num: '22', peripheral: SWD, signal: CLK, pin_signal: PTA0/TPM0_CH5/SWD_CLK}
+  - {pin_num: '35', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, direction: INPUT, gpio_interrupt: kPORT_InterruptRisingEdge}
+  - {pin_num: '46', peripheral: GPIOC, signal: 'GPIO, 3', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT}
+  - {pin_num: '53', peripheral: GPIOC, signal: 'GPIO, 4', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3}
+  - {pin_num: '19', peripheral: n/a, signal: disabled, pin_signal: PTE31/TPM0_CH4}
+  - {pin_num: '20', peripheral: n/a, signal: disabled, pin_signal: PTE24/TPM0_CH0/I2C0_SCL, identifier: ''}
+  - {pin_num: '21', peripheral: n/a, signal: disabled, pin_signal: PTE25/TPM0_CH1/I2C0_SDA}
+  - {pin_num: '28', peripheral: n/a, signal: disabled, pin_signal: PTA12/TPM1_CH0, identifier: ''}
+  - {pin_num: '29', peripheral: n/a, signal: disabled, pin_signal: PTA13/TPM1_CH1, identifier: ''}
+  - {pin_num: '1', peripheral: LCD, signal: 'P, 48', pin_signal: LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA}
+  - {pin_num: '2', peripheral: LCD, signal: 'P, 49', pin_signal: LCD_P49/PTE1/SPI1_MOSI/LPUART1_RX/SPI1_MISO/I2C1_SCL}
+  - {pin_num: '37', peripheral: ADC0, signal: 'SE, 12', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0, identifier: ''}
+  - {pin_num: '44', peripheral: ADC0, signal: 'SE, 15', pin_signal: LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0}
+  - {pin_num: '45', peripheral: ADC0, signal: 'SE, 11', pin_signal: LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1}
+  - {pin_num: '49', peripheral: LCD, signal: 'P, 4', pin_signal: VLL2/LCD_P4/PTC20}
+  - {pin_num: '50', peripheral: LCD, signal: 'P, 5', pin_signal: VLL1/LCD_P5/PTC21, identifier: ''}
+  - {pin_num: '52', peripheral: LCD, signal: 'P, 39', pin_signal: VCAP1/LCD_P39/PTC23}
+  - {pin_num: '57', peripheral: LCD, signal: 'P, 40', pin_signal: LCD_P40/PTD0/SPI0_SS/TPM0_CH0/FXIO0_D0}
+  - {pin_num: '58', peripheral: ADC0, signal: 'SE, 5b', pin_signal: LCD_P41/ADC0_SE5b/PTD1/SPI0_SCK/TPM0_CH1/FXIO0_D1}
+  - {pin_num: '59', peripheral: LCD, signal: 'P, 42', pin_signal: LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2}
+  - {pin_num: '60', peripheral: LCD, signal: 'P, 43', pin_signal: LCD_P43/PTD3/SPI0_MISO/UART2_TX/TPM0_CH3/SPI0_MOSI/FXIO0_D3}
+  - {pin_num: '61', peripheral: LCD, signal: 'P, 44', pin_signal: LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4}
+  - {pin_num: '62', peripheral: ADC0, signal: 'SE, 6b', pin_signal: LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5}
+  - {pin_num: '63', peripheral: ADC0, signal: 'SE, 7b', pin_signal: LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6, identifier: ''}
+  - {pin_num: '64', peripheral: LCD, signal: 'P, 47', pin_signal: LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7}
+  - {pin_num: '51', peripheral: LCD, signal: 'P, 6', pin_signal: VCAP2/LCD_P6/PTC22, identifier: ''}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
 
 /* FUNCTION ************************************************************************************************************
  *
- * Function Name : BOARD_InitLCDPins
- * Description   : Configures pin routing and optionally pin electrical features.
+ * Function Name : BOARD_DisablePins
+ * Description   : Disable output pins before going to sleep mode
  *
  * END ****************************************************************************************************************/
-void BOARD_InitLCDPins(void)
+void BOARD_DisablePins(void)
 {
-    /* Port B Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortB);
-    /* Port C Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortC);
-    /* Port D Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortD);
-    /* Port E Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortE);
 
-    /* PORTB18 (pin 41) is configured as LCD_P14 */
-    PORT_SetPinMux(BOARD_LCD_P14_PORT, BOARD_LCD_P14_PIN, kPORT_PinDisabledOrAnalog);
+    gpio_pin_config_t NFC_INT_config = {
+        .pinDirection = kGPIO_DigitalInput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTB0 (pin 35)  */
+    GPIO_PinInit(BOARD_DISABLEPINS_NFC_INT_GPIO, BOARD_DISABLEPINS_NFC_INT_PIN, &NFC_INT_config);
 
-    PORTB->PCR[18] = ((PORTB->PCR[18] &
-                       /* Mask bits to zero which are setting */
-                       (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
+    /* PORTA0 (pin 22) is configured as SWD_CLK */
+    PORT_SetPinMux(PORTA, 0U, kPORT_MuxAlt7);
 
-                      /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                       * corresponding PE field is set. */
-                      | PORT_PCR_PS(kPORT_PullUp)
+    /* PORTA12 (pin 28) is disabled */
+    PORT_SetPinMux(PORTA, 12U, kPORT_PinDisabledOrAnalog);
 
-                      /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding
-                       * pin. */
-                      | PORT_PCR_PE(kPORT_PullDisable)
+    /* PORTA13 (pin 29) is disabled */
+    PORT_SetPinMux(PORTA, 13U, kPORT_PinDisabledOrAnalog);
 
-                      /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                       * configured as a digital output. */
-                      | PORT_PCR_SRE(kPORT_SlowSlewRate));
+    /* PORTA20 (pin 34) is configured as RESET_b */
+    PORT_SetPinMux(PORTA, 20U, kPORT_MuxAlt7);
 
-    /* PORTB19 (pin 42) is configured as LCD_P15 */
-    PORT_SetPinMux(BOARD_LCD_P15_PORT, BOARD_LCD_P15_PIN, kPORT_PinDisabledOrAnalog);
+    /* PORTA3 (pin 25) is configured as SWD_DIO */
+    PORT_SetPinMux(PORTA, 3U, kPORT_MuxAlt7);
 
-    PORTB->PCR[19] = ((PORTB->PCR[19] &
-                       /* Mask bits to zero which are setting */
-                       (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
+    /* PORTB0 (pin 35) is configured as LLWU_P5, PTB0 */
+    PORT_SetPinMux(BOARD_DISABLEPINS_NFC_INT_PORT, BOARD_DISABLEPINS_NFC_INT_PIN, kPORT_MuxAsGpio);
 
-                      /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                       * corresponding PE field is set. */
-                      | PORT_PCR_PS(kPORT_PullUp)
+    /* Interrupt configuration on PORTB0 (pin 35): Interrupt on rising edge */
+    PORT_SetPinInterruptConfig(BOARD_DISABLEPINS_NFC_INT_PORT, BOARD_DISABLEPINS_NFC_INT_PIN, kPORT_InterruptRisingEdge);
 
-                      /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding
-                       * pin. */
-                      | PORT_PCR_PE(kPORT_PullDisable)
+    /* PORTB2 (pin 37) is configured as ADC0_SE12 */
+    PORT_SetPinMux(PORTB, 2U, kPORT_PinDisabledOrAnalog);
 
-                      /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                       * configured as a digital output. */
-                      | PORT_PCR_SRE(kPORT_SlowSlewRate));
+    /* PORTC1 (pin 44) is configured as ADC0_SE15 */
+    PORT_SetPinMux(PORTC, 1U, kPORT_PinDisabledOrAnalog);
 
-    /* PORTC0 (pin 43) is configured as LCD_P20 */
-    PORT_SetPinMux(BOARD_LCD_P20_PORT, BOARD_LCD_P20_PIN, kPORT_PinDisabledOrAnalog);
+    /* PORTC2 (pin 45) is configured as ADC0_SE11 */
+    PORT_SetPinMux(PORTC, 2U, kPORT_PinDisabledOrAnalog);
 
-    PORTC->PCR[0] = ((PORTC->PCR[0] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
+    /* PORTC20 (pin 49) is configured as LCD_P4 */
+    PORT_SetPinMux(BOARD_DISABLEPINS_DP_DC_PORT, BOARD_DISABLEPINS_DP_DC_PIN, kPORT_PinDisabledOrAnalog);
 
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
+    /* PORTC21 (pin 50) is configured as LCD_P5 */
+    PORT_SetPinMux(PORTC, 21U, kPORT_PinDisabledOrAnalog);
 
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
+    /* PORTC22 (pin 51) is configured as LCD_P6 */
+    PORT_SetPinMux(PORTC, 22U, kPORT_PinDisabledOrAnalog);
 
-                     /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_SlowSlewRate));
+    /* PORTC23 (pin 52) is configured as LCD_P39 */
+    PORT_SetPinMux(PORTC, 23U, kPORT_PinDisabledOrAnalog);
 
-    /* PORTC4 (pin 53) is configured as LCD_P24 */
-    PORT_SetPinMux(BOARD_LCD_P24_PORT, BOARD_LCD_P24_PIN, kPORT_PinDisabledOrAnalog);
+    /* PORTC3 (pin 46) is configured as LLWU_P7, PTC3 */
+    PORT_SetPinMux(BOARD_DISABLEPINS_BATT_C_PORT, BOARD_DISABLEPINS_BATT_C_PIN, kPORT_MuxAsGpio);
 
-    PORTC->PCR[4] = ((PORTC->PCR[4] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
+    /* PORTC4 (pin 53) is configured as LLWU_P8, PTC4 */
+    PORT_SetPinMux(BOARD_DISABLEPINS_POWER_STAT_PORT, BOARD_DISABLEPINS_POWER_STAT_PIN, kPORT_MuxAsGpio);
 
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
+    /* PORTC5 (pin 54) is configured as LLWU_P9 */
+    PORT_SetPinMux(BOARD_DISABLEPINS_INT1_ACCEL_PORT, BOARD_DISABLEPINS_INT1_ACCEL_PIN, kPORT_MuxAsGpio);
 
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
-
-                     /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_SlowSlewRate));
-
-    /* PORTC6 (pin 55) is configured as LCD_P26 */
-    PORT_SetPinMux(BOARD_LCD_P26_PORT, BOARD_LCD_P26_PIN, kPORT_PinDisabledOrAnalog);
-
-    PORTC->PCR[6] = ((PORTC->PCR[6] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
-
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
-
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
-
-                     /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_SlowSlewRate));
-
-    /* PORTC7 (pin 56) is configured as LCD_P27 */
-    PORT_SetPinMux(BOARD_LCD_P27_PORT, BOARD_LCD_P27_PIN, kPORT_PinDisabledOrAnalog);
-
-    PORTC->PCR[7] = ((PORTC->PCR[7] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
-
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
-
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
-
-                     /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_SlowSlewRate));
+    /* PORTC6 (pin 55) is configured as LLWU_P10 */
+    PORT_SetPinMux(BOARD_DISABLEPINS_BUTTON_2_PORT, BOARD_DISABLEPINS_BUTTON_2_PIN, kPORT_MuxAsGpio);
 
     /* PORTD0 (pin 57) is configured as LCD_P40 */
-    PORT_SetPinMux(BOARD_LCD_P40_PORT, BOARD_LCD_P40_PIN, kPORT_PinDisabledOrAnalog);
+    PORT_SetPinMux(PORTD, 0U, kPORT_PinDisabledOrAnalog);
 
-    PORTD->PCR[0] = ((PORTD->PCR[0] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
-
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
-
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
-
-                     /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_SlowSlewRate));
+    /* PORTD1 (pin 58) is configured as ADC0_SE5b */
+    PORT_SetPinMux(PORTD, 1U, kPORT_PinDisabledOrAnalog);
 
     /* PORTD2 (pin 59) is configured as LCD_P42 */
-    PORT_SetPinMux(BOARD_LCD_P42_PORT, BOARD_LCD_P42_PIN, kPORT_PinDisabledOrAnalog);
-
-    PORTD->PCR[2] = ((PORTD->PCR[2] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
-
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
-
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
-
-                     /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_SlowSlewRate));
+    PORT_SetPinMux(PORTD, 2U, kPORT_PinDisabledOrAnalog);
 
     /* PORTD3 (pin 60) is configured as LCD_P43 */
-    PORT_SetPinMux(BOARD_LCD_P43_PORT, BOARD_LCD_P43_PIN, kPORT_PinDisabledOrAnalog);
-
-    PORTD->PCR[3] = ((PORTD->PCR[3] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
-
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
-
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
-
-                     /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_SlowSlewRate));
+    PORT_SetPinMux(PORTD, 3U, kPORT_PinDisabledOrAnalog);
 
     /* PORTD4 (pin 61) is configured as LCD_P44 */
-    PORT_SetPinMux(BOARD_LCD_P44_PORT, BOARD_LCD_P44_PIN, kPORT_PinDisabledOrAnalog);
+    PORT_SetPinMux(PORTD, 4U, kPORT_PinDisabledOrAnalog);
 
-    PORTD->PCR[4] = ((PORTD->PCR[4] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
+    /* PORTD5 (pin 62) is configured as ADC0_SE6b */
+    PORT_SetPinMux(PORTD, 5U, kPORT_PinDisabledOrAnalog);
 
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
+    /* PORTD6 (pin 63) is configured as ADC0_SE7b */
+    PORT_SetPinMux(PORTD, 6U, kPORT_PinDisabledOrAnalog);
 
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
+    /* PORTD7 (pin 64) is configured as LCD_P47 */
+    PORT_SetPinMux(PORTD, 7U, kPORT_PinDisabledOrAnalog);
 
-                     /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_SlowSlewRate));
+    /* PORTE0 (pin 1) is configured as LCD_P48 */
+    PORT_SetPinMux(PORTE, 0U, kPORT_PinDisabledOrAnalog);
 
-    /* PORTE20 (pin 9) is configured as LCD_P59 */
-    PORT_SetPinMux(BOARD_LCD_P59_PORT, BOARD_LCD_P59_PIN, kPORT_PinDisabledOrAnalog);
+    /* PORTE1 (pin 2) is configured as LCD_P49 */
+    PORT_SetPinMux(PORTE, 1U, kPORT_PinDisabledOrAnalog);
 
-    PORTE->PCR[20] = ((PORTE->PCR[20] &
-                       /* Mask bits to zero which are setting */
-                       (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
+    /* PORTE24 (pin 20) is disabled */
+    PORT_SetPinMux(PORTE, 24U, kPORT_PinDisabledOrAnalog);
 
-                      /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                       * corresponding PE field is set. */
-                      | PORT_PCR_PS(kPORT_PullUp)
+    /* PORTE25 (pin 21) is disabled */
+    PORT_SetPinMux(BOARD_DISABLEPINS_I2C0_SDA_PORT, BOARD_DISABLEPINS_I2C0_SDA_PIN, kPORT_PinDisabledOrAnalog);
 
-                      /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding
-                       * pin. */
-                      | PORT_PCR_PE(kPORT_PullDisable)
-
-                      /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                       * configured as a digital output. */
-                      | PORT_PCR_SRE(kPORT_SlowSlewRate));
-
-    /* PORTE21 (pin 10) is configured as LCD_P60 */
-    PORT_SetPinMux(BOARD_LCD_P60_PORT, BOARD_LCD_P60_PIN, kPORT_PinDisabledOrAnalog);
-
-    PORTE->PCR[21] = ((PORTE->PCR[21] &
-                       /* Mask bits to zero which are setting */
-                       (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
-
-                      /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                       * corresponding PE field is set. */
-                      | PORT_PCR_PS(kPORT_PullUp)
-
-                      /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding
-                       * pin. */
-                      | PORT_PCR_PE(kPORT_PullDisable)
-
-                      /* Slew Rate Enable: Slow slew rate is configured on the corresponding pin, if the pin is
-                       * configured as a digital output. */
-                      | PORT_PCR_SRE(kPORT_SlowSlewRate));
-}
-
-/* clang-format off */
-/*
- * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-BOARD_InitBUTTONSPins:
-- options: {prefix: BOARD_, coreID: core0, enableClock: 'true'}
-- pin_list:
-  - {pin_num: '26', peripheral: GPIOA, signal: 'GPIO, 4', pin_signal: PTA4/I2C1_SDA/TPM0_CH1/NMI_b, direction: INPUT, slew_rate: fast, pull_select: up, pull_enable: enable,
-    passive_filter: disable}
-  - {pin_num: '46', peripheral: GPIOC, signal: 'GPIO, 3', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, identifier: SW3, direction: INPUT,
-    slew_rate: fast, pull_select: up, pull_enable: enable}
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
- */
-/* clang-format on */
-
-/* FUNCTION ************************************************************************************************************
- *
- * Function Name : BOARD_InitBUTTONSPins
- * Description   : Configures pin routing and optionally pin electrical features.
- *
- * END ****************************************************************************************************************/
-void BOARD_InitBUTTONSPins(void)
-{
-    /* Port A Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortA);
-    /* Port C Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortC);
-
-    gpio_pin_config_t SW1_config = {
-        .pinDirection = kGPIO_DigitalInput,
-        .outputLogic = 0U
-    };
-    /* Initialize GPIO functionality on pin PTA4 (pin 26)  */
-    GPIO_PinInit(BOARD_SW1_GPIO, BOARD_SW1_PIN, &SW1_config);
-
-    gpio_pin_config_t SW3_config = {
-        .pinDirection = kGPIO_DigitalInput,
-        .outputLogic = 0U
-    };
-    /* Initialize GPIO functionality on pin PTC3 (pin 46)  */
-    GPIO_PinInit(BOARD_SW3_GPIO, BOARD_SW3_PIN, &SW3_config);
-
-    const port_pin_config_t SW1 = {/* Internal pull-up resistor is enabled */
-                                   kPORT_PullUp,
-                                   /* Fast slew rate is configured */
-                                   kPORT_FastSlewRate,
-                                   /* Passive filter is disabled */
-                                   kPORT_PassiveFilterDisable,
-                                   /* Low drive strength is configured */
-                                   kPORT_LowDriveStrength,
-                                   /* Pin is configured as PTA4 */
-                                   kPORT_MuxAsGpio};
-    /* PORTA4 (pin 26) is configured as PTA4 */
-    PORT_SetPinConfig(BOARD_SW1_PORT, BOARD_SW1_PIN, &SW1);
-
-    const port_pin_config_t SW3 = {/* Internal pull-up resistor is enabled */
-                                   kPORT_PullUp,
-                                   /* Fast slew rate is configured */
-                                   kPORT_FastSlewRate,
-                                   /* Passive filter is disabled */
-                                   kPORT_PassiveFilterDisable,
-                                   /* Low drive strength is configured */
-                                   kPORT_LowDriveStrength,
-                                   /* Pin is configured as PTC3 */
-                                   kPORT_MuxAsGpio};
-    /* PORTC3 (pin 46) is configured as PTC3 */
-    PORT_SetPinConfig(BOARD_SW3_PORT, BOARD_SW3_PIN, &SW3);
-}
-
-/* clang-format off */
-/*
- * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-BOARD_InitLEDsPins:
-- options: {prefix: BOARD_, coreID: core0, enableClock: 'true'}
-- pin_list:
-  - {pin_num: '19', peripheral: GPIOE, signal: 'GPIO, 31', pin_signal: PTE31/TPM0_CH4, direction: OUTPUT, gpio_init_state: 'true', slew_rate: slow, pull_select: down,
-    pull_enable: disable}
-  - {pin_num: '62', peripheral: GPIOD, signal: 'GPIO, 5', pin_signal: LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5, identifier: LED1, direction: OUTPUT,
-    gpio_init_state: 'true', slew_rate: slow, pull_select: down, pull_enable: disable}
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
- */
-/* clang-format on */
-
-/* FUNCTION ************************************************************************************************************
- *
- * Function Name : BOARD_InitLEDsPins
- * Description   : Configures pin routing and optionally pin electrical features.
- *
- * END ****************************************************************************************************************/
-void BOARD_InitLEDsPins(void)
-{
-    /* Port D Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortD);
-    /* Port E Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortE);
-
-    gpio_pin_config_t LED1_config = {
-        .pinDirection = kGPIO_DigitalOutput,
-        .outputLogic = 1U
-    };
-    /* Initialize GPIO functionality on pin PTD5 (pin 62)  */
-    GPIO_PinInit(BOARD_LED1_GPIO, BOARD_LED1_PIN, &LED1_config);
-
-    gpio_pin_config_t LED2_config = {
-        .pinDirection = kGPIO_DigitalOutput,
-        .outputLogic = 1U
-    };
-    /* Initialize GPIO functionality on pin PTE31 (pin 19)  */
-    GPIO_PinInit(BOARD_LED2_GPIO, BOARD_LED2_PIN, &LED2_config);
-
-    const port_pin_config_t LED1 = {/* Internal pull-up/down resistor is disabled */
-                                    kPORT_PullDisable,
-                                    /* Slow slew rate is configured */
-                                    kPORT_SlowSlewRate,
-                                    /* Passive filter is disabled */
-                                    kPORT_PassiveFilterDisable,
-                                    /* Low drive strength is configured */
-                                    kPORT_LowDriveStrength,
-                                    /* Pin is configured as PTD5 */
-                                    kPORT_MuxAsGpio};
-    /* PORTD5 (pin 62) is configured as PTD5 */
-    PORT_SetPinConfig(BOARD_LED1_PORT, BOARD_LED1_PIN, &LED1);
-
-    const port_pin_config_t LED2 = {/* Internal pull-up/down resistor is disabled */
-                                    kPORT_PullDisable,
-                                    /* Slow slew rate is configured */
-                                    kPORT_SlowSlewRate,
-                                    /* Passive filter is disabled */
-                                    kPORT_PassiveFilterDisable,
-                                    /* Low drive strength is configured */
-                                    kPORT_LowDriveStrength,
-                                    /* Pin is configured as PTE31 */
-                                    kPORT_MuxAsGpio};
-    /* PORTE31 (pin 19) is configured as PTE31 */
-    PORT_SetPinConfig(BOARD_LED2_PORT, BOARD_LED2_PIN, &LED2);
-}
-
-/* clang-format off */
-/*
- * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-BOARD_InitDEBUG_UARTPins:
-- options: {callFromInitBoot: 'true', prefix: BOARD_, coreID: core0, enableClock: 'true'}
-- pin_list:
-  - {pin_num: '23', peripheral: LPUART0, signal: RX, pin_signal: PTA1/LPUART0_RX/TPM2_CH0, slew_rate: fast, pull_select: down, pull_enable: disable}
-  - {pin_num: '24', peripheral: LPUART0, signal: TX, pin_signal: PTA2/LPUART0_TX/TPM2_CH1, direction: OUTPUT, slew_rate: fast, pull_select: down, pull_enable: disable}
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
- */
-/* clang-format on */
-
-/* FUNCTION ************************************************************************************************************
- *
- * Function Name : BOARD_InitDEBUG_UARTPins
- * Description   : Configures pin routing and optionally pin electrical features.
- *
- * END ****************************************************************************************************************/
-void BOARD_InitDEBUG_UARTPins(void)
-{
-    /* Port A Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortA);
-
-    const port_pin_config_t DEBUG_UART0_RX = {/* Internal pull-up/down resistor is disabled */
-                                              kPORT_PullDisable,
-                                              /* Fast slew rate is configured */
-                                              kPORT_FastSlewRate,
-                                              /* Passive filter is disabled */
-                                              kPORT_PassiveFilterDisable,
-                                              /* Low drive strength is configured */
-                                              kPORT_LowDriveStrength,
-                                              /* Pin is configured as LPUART0_RX */
-                                              kPORT_MuxAlt2};
-    /* PORTA1 (pin 23) is configured as LPUART0_RX */
-    PORT_SetPinConfig(BOARD_DEBUG_UART0_RX_PORT, BOARD_DEBUG_UART0_RX_PIN, &DEBUG_UART0_RX);
-
-    const port_pin_config_t DEBUG_UART0_TX = {/* Internal pull-up/down resistor is disabled */
-                                              kPORT_PullDisable,
-                                              /* Fast slew rate is configured */
-                                              kPORT_FastSlewRate,
-                                              /* Passive filter is disabled */
-                                              kPORT_PassiveFilterDisable,
-                                              /* Low drive strength is configured */
-                                              kPORT_LowDriveStrength,
-                                              /* Pin is configured as LPUART0_TX */
-                                              kPORT_MuxAlt2};
-    /* PORTA2 (pin 24) is configured as LPUART0_TX */
-    PORT_SetPinConfig(BOARD_DEBUG_UART0_TX_PORT, BOARD_DEBUG_UART0_TX_PIN, &DEBUG_UART0_TX);
-
-    SIM->SOPT5 = ((SIM->SOPT5 &
-                   /* Mask bits to zero which are setting */
-                   (~(SIM_SOPT5_LPUART0TXSRC_MASK | SIM_SOPT5_LPUART0RXSRC_MASK)))
-
-                  /* LPUART0 Transmit Data Source Select: LPUART0_TX pin. */
-                  | SIM_SOPT5_LPUART0TXSRC(SOPT5_LPUART0TXSRC_LPUART_TX)
-
-                  /* LPUART0 Receive Data Source Select: LPUART_RX pin. */
-                  | SIM_SOPT5_LPUART0RXSRC(SOPT5_LPUART0RXSRC_LPUART_RX));
-}
-
-/* clang-format off */
-/*
- * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-BOARD_InitUSBPins:
-- options: {prefix: BOARD_, coreID: core0, enableClock: 'true'}
-- pin_list:
-  - {pin_num: '5', peripheral: USB0, signal: DP, pin_signal: USB0_DP}
-  - {pin_num: '6', peripheral: USB0, signal: DM, pin_signal: USB0_DM}
-  - {pin_num: '8', peripheral: USB0, signal: VREGIN, pin_signal: VREGIN}
-  - {pin_num: '43', peripheral: USB0, signal: SOF_OUT, pin_signal: LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT, identifier: USB_SOF_OUT, slew_rate: fast,
-    pull_select: up, pull_enable: disable}
-  - {pin_num: '27', peripheral: USB0, signal: CLKIN, pin_signal: PTA5/USB_CLKIN/TPM0_CH2, slew_rate: fast, pull_select: up, pull_enable: disable}
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
- */
-/* clang-format on */
-
-/* FUNCTION ************************************************************************************************************
- *
- * Function Name : BOARD_InitUSBPins
- * Description   : Configures pin routing and optionally pin electrical features.
- *
- * END ****************************************************************************************************************/
-void BOARD_InitUSBPins(void)
-{
-    /* Port A Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortA);
-    /* Port C Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortC);
-
-    /* PORTA5 (pin 27) is configured as USB_CLKIN */
-    PORT_SetPinMux(BOARD_USB0_CLKIN_PORT, BOARD_USB0_CLKIN_PIN, kPORT_MuxAlt2);
-
-    PORTA->PCR[5] = ((PORTA->PCR[5] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
-
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
-
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
-
-                     /* Slew Rate Enable: Fast slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_FastSlewRate));
-
-    /* PORTC0 (pin 43) is configured as USB_SOF_OUT */
-    PORT_SetPinMux(BOARD_USB_SOF_OUT_PORT, BOARD_USB_SOF_OUT_PIN, kPORT_MuxAlt4);
-
-    PORTC->PCR[0] = ((PORTC->PCR[0] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
-
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
-
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
-
-                     /* Slew Rate Enable: Fast slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_FastSlewRate));
-}
-
-/* clang-format off */
-/*
- * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-BOARD_InitACCEL_I2CPins:
-- options: {prefix: BOARD_, coreID: core0, enableClock: 'true'}
-- pin_list:
-  - {pin_num: '20', peripheral: I2C0, signal: SCL, pin_signal: PTE24/TPM0_CH0/I2C0_SCL, slew_rate: fast, pull_select: up, pull_enable: enable}
-  - {pin_num: '21', peripheral: I2C0, signal: SDA, pin_signal: PTE25/TPM0_CH1/I2C0_SDA, slew_rate: fast, pull_select: up, pull_enable: enable}
-  - {pin_num: '58', peripheral: GPIOD, signal: 'GPIO, 1', pin_signal: LCD_P41/ADC0_SE5b/PTD1/SPI0_SCK/TPM0_CH1/FXIO0_D1, identifier: INT2_ACCEL, direction: INPUT,
-    slew_rate: fast, pull_select: up, pull_enable: disable}
-  - {pin_num: '54', peripheral: GPIOC, signal: 'GPIO, 5', pin_signal: LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT, direction: INPUT, slew_rate: fast, pull_select: up,
-    pull_enable: disable}
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
- */
-/* clang-format on */
-
-/* FUNCTION ************************************************************************************************************
- *
- * Function Name : BOARD_InitACCEL_I2CPins
- * Description   : Configures pin routing and optionally pin electrical features.
- *
- * END ****************************************************************************************************************/
-void BOARD_InitACCEL_I2CPins(void)
-{
-    /* Port C Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortC);
-    /* Port D Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortD);
-    /* Port E Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortE);
-
-    gpio_pin_config_t INT1_ACCEL_config = {
-        .pinDirection = kGPIO_DigitalInput,
-        .outputLogic = 0U
-    };
-    /* Initialize GPIO functionality on pin PTC5 (pin 54)  */
-    GPIO_PinInit(BOARD_INT1_ACCEL_GPIO, BOARD_INT1_ACCEL_PIN, &INT1_ACCEL_config);
-
-    gpio_pin_config_t INT2_ACCEL_config = {
-        .pinDirection = kGPIO_DigitalInput,
-        .outputLogic = 0U
-    };
-    /* Initialize GPIO functionality on pin PTD1 (pin 58)  */
-    GPIO_PinInit(BOARD_INT2_ACCEL_GPIO, BOARD_INT2_ACCEL_PIN, &INT2_ACCEL_config);
-
-    /* PORTC5 (pin 54) is configured as PTC5 */
-    PORT_SetPinMux(BOARD_INT1_ACCEL_PORT, BOARD_INT1_ACCEL_PIN, kPORT_MuxAsGpio);
-
-    PORTC->PCR[5] = ((PORTC->PCR[5] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
-
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
-
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
-
-                     /* Slew Rate Enable: Fast slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_FastSlewRate));
-
-    /* PORTD1 (pin 58) is configured as PTD1 */
-    PORT_SetPinMux(BOARD_INT2_ACCEL_PORT, BOARD_INT2_ACCEL_PIN, kPORT_MuxAsGpio);
-
-    PORTD->PCR[1] = ((PORTD->PCR[1] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_SRE_MASK | PORT_PCR_ISF_MASK)))
-
-                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
-                      * corresponding PE field is set. */
-                     | PORT_PCR_PS(kPORT_PullUp)
-
-                     /* Pull Enable: Internal pullup or pulldown resistor is not enabled on the corresponding pin. */
-                     | PORT_PCR_PE(kPORT_PullDisable)
-
-                     /* Slew Rate Enable: Fast slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_FastSlewRate));
-
-    const port_pin_config_t I2C0_SCL = {/* Internal pull-up resistor is enabled */
-                                        kPORT_PullUp,
-                                        /* Fast slew rate is configured */
-                                        kPORT_FastSlewRate,
-                                        /* Passive filter is disabled */
-                                        kPORT_PassiveFilterDisable,
-                                        /* Low drive strength is configured */
-                                        kPORT_LowDriveStrength,
-                                        /* Pin is configured as I2C0_SCL */
-                                        kPORT_MuxAlt5};
-    /* PORTE24 (pin 20) is configured as I2C0_SCL */
-    PORT_SetPinConfig(BOARD_I2C0_SCL_PORT, BOARD_I2C0_SCL_PIN, &I2C0_SCL);
-
-    const port_pin_config_t I2C0_SDA = {/* Internal pull-up resistor is enabled */
-                                        kPORT_PullUp,
-                                        /* Fast slew rate is configured */
-                                        kPORT_FastSlewRate,
-                                        /* Passive filter is disabled */
-                                        kPORT_PassiveFilterDisable,
-                                        /* Low drive strength is configured */
-                                        kPORT_LowDriveStrength,
-                                        /* Pin is configured as I2C0_SDA */
-                                        kPORT_MuxAlt5};
-    /* PORTE25 (pin 21) is configured as I2C0_SDA */
-    PORT_SetPinConfig(BOARD_I2C0_SDA_PORT, BOARD_I2C0_SDA_PIN, &I2C0_SDA);
-}
-
-/* clang-format off */
-/*
- * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-BOARD_InitOSCPins:
-- options: {prefix: BOARD_, coreID: core0, enableClock: 'true'}
-- pin_list:
-  - {pin_num: '32', peripheral: OSC0, signal: EXTAL0, pin_signal: EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0, slew_rate: no_init, pull_select: no_init, pull_enable: no_init}
-  - {pin_num: '33', peripheral: OSC0, signal: XTAL0, pin_signal: XTAL0/PTA19/LPUART1_TX/TPM_CLKIN1/LPTMR0_ALT1, slew_rate: no_init, pull_select: no_init, pull_enable: no_init}
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
- */
-/* clang-format on */
-
-/* FUNCTION ************************************************************************************************************
- *
- * Function Name : BOARD_InitOSCPins
- * Description   : Configures pin routing and optionally pin electrical features.
- *
- * END ****************************************************************************************************************/
-void BOARD_InitOSCPins(void)
-{
-    /* Port A Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortA);
-
-    /* PORTA18 (pin 32) is configured as EXTAL0 */
-    PORT_SetPinMux(BOARD_EXTAL_32KHZ_PORT, BOARD_EXTAL_32KHZ_PIN, kPORT_PinDisabledOrAnalog);
-
-    /* PORTA19 (pin 33) is configured as XTAL0 */
-    PORT_SetPinMux(BOARD_XTAL_32KHZ_PORT, BOARD_XTAL_32KHZ_PIN, kPORT_PinDisabledOrAnalog);
+    /* PORTE31 (pin 19) is disabled */
+    PORT_SetPinMux(PORTE, 31U, kPORT_PinDisabledOrAnalog);
 }
 /***********************************************************************************************************************
  * EOF
