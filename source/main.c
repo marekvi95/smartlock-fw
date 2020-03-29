@@ -43,7 +43,8 @@
 #include "fsl_rcm.h"
 #include "fsl_pmc.h"
 /* TODO: insert other include files here. */
-#include "nfc_task.h"
+//#include "nfc_task.h"
+#include "nfc_task2.h"
 #include "sf/sf.h"
 #include "demo_sigfox.h"
 #include "epaper_2in13.h"
@@ -61,9 +62,6 @@ int main(void) {
 	sf_drv_data_t sfDrvData;
 	sf_device_info_t devInfo;
 	status_t status = kStatus_Success;
-	// smc_power_state_t curPowerState;
-    // app_power_mode_t targetPowerMode;
-    // bool needSetWakeup; /* Need to set wakeup. */
 
 	/* NFC record to be send via Sigfox (ended by '\0'). */
 	unsigned char msg[] = "SigfoxInit";
@@ -81,12 +79,11 @@ int main(void) {
 		NVIC_ClearPendingIRQ(LLWU_IRQn);
 	}
 
+	/* Initialize clocks and peripherals */
 	BOARD_InitBootClocks();
 	BOARD_InitBootPeripherals();
-	/* Init FSL debug console. */
-	// BOARD_InitDebugConsole();
 
-	/* Initialize Waveshare display */
+	/* Initialize Waveshare display with full update */
 	EPD_Init(FULL_UPDATE);
 
 	/* Display NXP logo */
@@ -99,7 +96,6 @@ int main(void) {
 	printf("Status: %x \r\n", status_register);
 	printf("Control register: %x \r\n", control);
 
-
 	uint32_t voltage = LTC2942_GetVoltage();
 	uint32_t temperature = LTC2942_GetTemperature();
 
@@ -109,7 +105,7 @@ int main(void) {
 	unsigned char BlackImage[4000];
 	Paint_NewImage(BlackImage, EPD_WIDTH, EPD_HEIGHT, 270, WHITE);
 	Paint_SelectImage(BlackImage);
-	Paint_SetMirroring(MIRROR_HORIZONTAL); //
+	Paint_SetMirroring(MIRROR_HORIZONTAL);
 	Paint_Clear(WHITE);
 
 	Paint_DrawString_EN(2,2,"$*,^`",&Font24, WHITE, BLACK);
@@ -137,9 +133,9 @@ int main(void) {
 		if (status == kStatus_Success)
 		{
 			SIGFOX_SendRecords(&sfDrvData, msg, msgLen);
-			/* Run the NFC polling app. */
-			printf("\nRunning the NXP-NCI project.\n");
-			task_nfc(&sfDrvData);
+			/* Run the NFC task. */
+			printf("\nRunning the NFC task.\n");
+			task_nfc2(&sfDrvData);
 		}
     }
 

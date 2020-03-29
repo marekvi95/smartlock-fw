@@ -3,9 +3,7 @@
 #include <string.h>
 #include <tool.h>
 #include <Nfc.h>
-#include <ndef_helper.h>
-#include "NfcLibrary/NdefLibrary/inc/RW_NDEF.h"
-#include "nfc_task.h"
+#include "nfc_task2.h"
 #include "board.h"
 #include "fsl_debug_console.h"
 #include "app_config.h"
@@ -36,7 +34,7 @@ int32_t nfcRecLen = -1;
 /* Stores:
  * - a string to "nfcRec" text array.
  * - its length to "nfcRecLen". */
-void DEMO_AddRecord(unsigned char *m, uint32_t lenght)
+void addRecord(unsigned char *m, uint32_t lenght)
 {
     if ((nfcRecLen < 0) && (lenght > 0))
     {
@@ -47,7 +45,7 @@ void DEMO_AddRecord(unsigned char *m, uint32_t lenght)
 }
 
 /* Returns true if "nfcRec" is not equal to "external" and "nfcRecLen" is between 1 and 10 characters. */
-bool DEMO_IsLockApproved(void)
+bool isLockApproved(void)
 {
 	/* Check if record is valid (nfcRecLen >= 0) is automatically included. */
     if ((nfcRecLen > 0) && (nfcRecLen <= 10) && strcasecmp((char *)nfcRec, "external"))
@@ -59,9 +57,9 @@ bool DEMO_IsLockApproved(void)
 }
 
 /* Turns the motor for a while in order to unlock the mechanical lock. */
-inline static void DEMO_Unlock(void)
+inline static void unlock(void)
 {
-    PRINTF("DEMO unlocked \n");
+    PRINTF("UNLOCKING \n");
 //    GPIO_PinWrite(BOARD_INITPINS_HBRIDGE_END_GPIO, BOARD_INITPINS_HBRIDGE_END_GPIO_PIN, 1);
 //    App_WaitMsec(SF_MOTOR_RUNTIME_MS);
 //    GPIO_PinWrite(BOARD_INITPINS_HBRIDGE_END_GPIO, BOARD_INITPINS_HBRIDGE_END_GPIO_PIN, 0);
@@ -69,20 +67,19 @@ inline static void DEMO_Unlock(void)
 }
 
 /* Turns the motor for a while in order to lock the mechanical lock. */
-inline static void DEMO_Lock(void)
+inline static void lock(void)
 {
-    PRINTF("DEMO locked \n");
+    PRINTF("LOCKING \n");
 //    GPIO_PinWrite(BOARD_INITPINS_HBRIDGE_END_GPIO, BOARD_INITPINS_HBRIDGE_END_GPIO_PIN, 1);
 //    App_WaitMsec(SF_MOTOR_RUNTIME_MS);
 //    GPIO_PinWrite(BOARD_INITPINS_HBRIDGE_END_GPIO, BOARD_INITPINS_HBRIDGE_END_GPIO_PIN, 0);
 //    GPIO_PinWrite(BOARD_INITPINS_HBRIDGE_DIR_GPIO, BOARD_INITPINS_HBRIDGE_DIR_GPIO_PIN, 0);
 }
 
-void PCD_MIFARE_scenario (void)
+void readKey(void)
 {
     #define BLK_NB_MFC      4
     #define KEY_MFC         0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
-    #define DATA_WRITE_MFC  0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff
 
     bool status;
     unsigned char Resp[256];
@@ -91,9 +88,6 @@ void PCD_MIFARE_scenario (void)
     unsigned char Auth[] = {0x40, BLK_NB_MFC/4, 0x10, KEY_MFC};
     /* Read block 4 */
     unsigned char Read[] = {0x10, 0x30, BLK_NB_MFC};
-    /* Write block 4 */
-    unsigned char WritePart1[] = {0x10, 0xA0, BLK_NB_MFC};
-    unsigned char WritePart2[] = {0x10, DATA_WRITE_MFC};
 
     /* Authenticate */
     status = NxpNci_ReaderTagCmd(Auth, sizeof(Auth), Resp, &RespSize);
@@ -109,30 +103,6 @@ void PCD_MIFARE_scenario (void)
     if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
     {
         PRINTF(" Read block %d failed with error 0x%02x\n", Read[2], Resp[RespSize-1]);
-        return;
-    }
-    PRINTF(" Read block %d:", Read[2]); print_buf(" ", (Resp+1), RespSize-2);
-
-    /* Write block */
-    status = NxpNci_ReaderTagCmd(WritePart1, sizeof(WritePart1), Resp, &RespSize);
-    if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
-    {
-        PRINTF(" Write block %d failed with error 0x%02x\n", WritePart1[2], Resp[RespSize-1]);
-        return;
-    }
-    status = NxpNci_ReaderTagCmd(WritePart2, sizeof(WritePart2), Resp, &RespSize);
-    if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
-    {
-        PRINTF(" Write block %d failed with error 0x%02x\n", WritePart1[2], Resp[RespSize-1]);
-        return;
-    }
-    PRINTF(" Block %d written\n", WritePart1[2]);
-
-    /* Read block */
-    status = NxpNci_ReaderTagCmd(Read, sizeof(Read), Resp, &RespSize);
-    if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
-    {
-        PRINTF(" Read failed with error 0x%02x\n", Resp[RespSize-1]);
         return;
     }
     PRINTF(" Read block %d:", Read[2]); print_buf(" ", (Resp+1), RespSize-2);
@@ -195,8 +165,8 @@ void task_nfc_reader(NxpNci_RfIntf_t RfIntf)
         /* What's the detected card type ? */
         switch(RfIntf.Protocol) {
         case PROT_MIFARE:
-            /* Run dedicated scenario to demonstrate MIFARE card management */
-            PCD_MIFARE_scenario();
+            /* Read key stored at the sector 1 block 4 */
+            readKey();
             break;
 
         default:
@@ -270,7 +240,7 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
         {
             task_nfc_reader(RfInterface);
 
-             if (DEMO_IsLockApproved())
+             if (isLockApproved())
             {
 
             	/* Open/Close the door and create a Sigfox message. */
@@ -280,12 +250,12 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
             	}
             	if (doorClosed)
             	{
-            		DEMO_Unlock();
+            		unlock();
             		nfcRec[0] = 'O';
             	}
             	else
             	{
-            		DEMO_Lock();
+            		lock();
             		nfcRec[0] = 'C';
             	}
             	nfcRec[1] = ':';
@@ -324,7 +294,6 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
             				break;
             			}
             			WAIT_AML_WaitMs(50);
-//            			App_WaitMsec(50);
             			timeoutMs -= 50;
             		}
 
@@ -341,7 +310,7 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
             	else
             	{
             		PRINTF("Transmission failed\n\n");
-            		// App_WaitMsec(2000);
+            		WAIT_AML_WaitMs(2000);
 
             	}
             }
@@ -352,7 +321,7 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
             	{
             		PRINTF("Access denied!\n\nUser: %s", nfcRec);
 
-            		// App_WaitMsec(2000);
+            		WAIT_AML_WaitMs(2000);
 
             	}
             	else
