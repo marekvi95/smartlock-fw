@@ -29,9 +29,11 @@
  */
  
 /**
- * @file    K32L2B31xxxxA_Project.c
+ * @file   	main.c
  * @brief   Application entry point.
  */
+
+#include <sigfox.h>
 #include <stdio.h>
 #include "board.h"
 #include "peripherals.h"
@@ -42,17 +44,13 @@
 #include "fsl_smc.h"
 #include "fsl_rcm.h"
 #include "fsl_pmc.h"
-/* TODO: insert other include files here. */
-//#include "nfc_task.h"
-#include "nfc_task2.h"
 #include "sf/sf.h"
-#include "demo_sigfox.h"
+#include "nfc_task.h"
 #include "epaper_2in13.h"
 #include "ltc2942.h"
 #include "Fonts/fonts.h"
 #include "GUI/GUI_Paint.h"
-//#include "power_mode_switch.h"
-/* TODO: insert other definitions and declarations here. */
+
 /* Maximum number characters (bytes) in record. */
 #define MSG_CHAR_MAX     40
 /*
@@ -135,7 +133,7 @@ int main(void) {
 			SIGFOX_SendRecords(&sfDrvData, msg, msgLen);
 			/* Run the NFC task. */
 			printf("\nRunning the NFC task.\n");
-			task_nfc2(&sfDrvData);
+			task_nfc(&sfDrvData);
 		}
     }
 
