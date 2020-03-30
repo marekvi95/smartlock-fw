@@ -5,11 +5,14 @@
  *      Author: nxf05489
  */
 
-#ifndef DEMO_SIGFOX_H_
-#define DEMO_SIGFOX_H_
+#ifndef SIGFOX_H_
+#define SIGFOX_H_
 
 #define BOARD_INITPINS_SIGFOX_CS_INST instanceD
 #define BOARD_INITPINS_SIGFOX_AK_INST instanceC
+
+/* Maximum number characters (bytes) in Sigfox message. */
+#define SIGFOX_RECORD_CHAR_MAX  12
 
 #include "sf/sf.h"
 
@@ -48,4 +51,4 @@ bool SIGFOX_IsAckFrameReady(sf_drv_data_t *sfDriverConfig);
  */
 status_t SIGFOX_FinishNonBlock(sf_drv_data_t *sfDriverConfig);
 
-#endif /* DEMO_SIGFOX_H_ */
+#endif /* SIGFOX_H_ */

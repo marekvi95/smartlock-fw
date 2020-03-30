@@ -5,10 +5,9 @@
  *      Author: nxf05489
  */
 
+#include <sigfox.h>
 #include <stdio.h>
 #include "app_config.h"
-#include "demo_sigfox.h"
-//#include "demo_lcd.h"
 #include "pin_mux.h"
 
 /*!
@@ -16,9 +15,6 @@
  */
 #define GET_SPI_MODULE_CLK() \
     (CLOCK_GetFreq(kCLOCK_BusClk))
-
-/* Maximum number characters (bytes) in Sigfox message. */
-#define SIGFOX_RECORD_CHAR_MAX  12
 
 /* OL2385 PA Table for RCZ1 and RCZ3. */
 uint8_t etsiPA[SF_PA_TBL_SIZE] =
