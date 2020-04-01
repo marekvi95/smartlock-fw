@@ -46,13 +46,8 @@
 #include "fsl_pmc.h"
 #include "sf/sf.h"
 #include "nfc_task.h"
-#include "epaper_2in13.h"
-#include "ltc2942.h"
-#include "Fonts/fonts.h"
-#include "GUI/GUI_Paint.h"
+#include "display.h"
 
-/* Maximum number characters (bytes) in record. */
-#define MSG_CHAR_MAX     40
 /*
  * @brief   Application entry point.
  */
@@ -81,34 +76,8 @@ int main(void) {
 	BOARD_InitBootClocks();
 	BOARD_InitBootPeripherals();
 
-	/* Initialize Waveshare display with full update */
-	EPD_Init(FULL_UPDATE);
-
-	/* Display NXP logo */
-	EPD_Display(nxp_image);
-	EPD_Clear();
-
-	uint8_t status_register = LTC2942_GetStatus();
-	uint8_t control = LTC2942_GetControl();
-
-	printf("Status: %x \r\n", status_register);
-	printf("Control register: %x \r\n", control);
-
-	uint32_t voltage = LTC2942_GetVoltage();
-	uint32_t temperature = LTC2942_GetTemperature();
-
-	printf("Voltage: %d mV\r\n", voltage);
-	printf("Temperature: %d C\r\n", temperature);
-
-	unsigned char BlackImage[4000];
-	Paint_NewImage(BlackImage, EPD_WIDTH, EPD_HEIGHT, 270, WHITE);
-	Paint_SelectImage(BlackImage);
-	Paint_SetMirroring(MIRROR_HORIZONTAL);
-	Paint_Clear(WHITE);
-
-	Paint_DrawString_EN(2,2,"$*,^`",&Font24, WHITE, BLACK);
-	Paint_DrawString_EN(30,50,"Swipe card",&Font24, WHITE, BLACK);
-	EPD_Display(BlackImage);
+	initDisplay();
+	displayText(1, "Init...", "please wait");
 
 	status = SIGFOX_SetupDriver(&sfDrvData);
 	if (status != kStatus_Success)
@@ -132,6 +101,7 @@ int main(void) {
 		{
 			SIGFOX_SendRecords(&sfDrvData, msg, msgLen);
 			/* Run the NFC task. */
+			displayText(1, "Sigfox OK", "initialization of NFC...");
 			printf("\nRunning the NFC task.\n");
 			task_nfc(&sfDrvData);
 		}

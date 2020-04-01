@@ -7,7 +7,8 @@
 
 // LTC2942 address
 //#define LTC2942_ADDR                    (0x64 << 1)
-#define LTC2942_ADDR 					0b1100100
+//#define LTC2942_ADDR 					0b1100100
+#define LTC2942_ADDR					100
 
 // LTC2942 register definitions
 #define LTC2942_REG_STATUS              (uint8_t)0x00 // (A) Status

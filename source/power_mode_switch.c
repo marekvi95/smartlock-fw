@@ -38,7 +38,7 @@ void APP_PowerPreSwitchHook(smc_power_state_t originPowerState, app_power_mode_t
          * Set pins for current leakage to disabled or analog.
          * Keep only LLWU pins routed as GPIO
          */
-        BOARD_DisablePins();
+//        BOARD_DisablePins();
     }
 }
 
@@ -62,7 +62,7 @@ void APP_PowerPostSwitchHook(smc_power_state_t originPowerState, app_power_mode_
         /*
          * Set pins back to normal
          */
-        BOARD_InitPins();
+//        BOARD_InitPins();
     }
 }
 
@@ -74,8 +74,8 @@ void LLWU_IRQHandler(void)
     /* If wakeup by NFC pin. */
     if (LLWU_GetExternalWakeupPinFlag(LLWU, LLWU_WAKEUP_NFC_PIN))
     {
-        // PORT_SetPinInterruptConfig(BOARD_INITPINS_NFC_INT_PORT, BOARD_INITPINS_NFC_INT_PIN, kPORT_InterruptOrDMADisabled);
-        // PORT_ClearPinsInterruptFlags(BOARD_INITPINS_NFC_INT_PORT, (1U << BOARD_INITPINS_NFC_INT_PIN));
+    	PORT_SetPinInterruptConfig(BOARD_INITPINS_NFC_INT_PORT, BOARD_INITPINS_NFC_INT_PIN, kPORT_InterruptOrDMADisabled);
+    	PORT_ClearPinsInterruptFlags(BOARD_INITPINS_NFC_INT_PORT, (1U << BOARD_INITPINS_NFC_INT_PIN));
         LLWU_ClearExternalWakeupPinFlag(LLWU, LLWU_WAKEUP_NFC_PIN);
         PRINTF("LLWU Wakeup by NFC Pin.\r\n");
     }

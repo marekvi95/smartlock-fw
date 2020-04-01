@@ -133,22 +133,25 @@ BOARD_InitPins:
   - {pin_num: '25', peripheral: SWD, signal: DIO, pin_signal: PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO}
   - {pin_num: '44', peripheral: I2C1, signal: SCL, pin_signal: LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0}
   - {pin_num: '45', peripheral: I2C1, signal: SDA, pin_signal: LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1}
-  - {pin_num: '46', peripheral: LLWU, signal: 'P, 7', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, identifier: BATT_C}
-  - {pin_num: '19', peripheral: TPM0, signal: 'CH, 4', pin_signal: PTE31/TPM0_CH4, identifier: IN1A}
-  - {pin_num: '53', peripheral: LLWU, signal: 'P, 8', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3, identifier: POWER_STAT}
+  - {pin_num: '46', peripheral: LLWU, signal: 'P, 7', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT}
+  - {pin_num: '19', peripheral: TPM0, signal: 'CH, 4', pin_signal: PTE31/TPM0_CH4, identifier: IN1A, direction: OUTPUT}
+  - {pin_num: '53', peripheral: LLWU, signal: 'P, 8', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3}
   - {pin_num: '54', peripheral: LLWU, signal: 'P, 9', pin_signal: LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT}
   - {pin_num: '55', peripheral: LLWU, signal: 'P, 10', pin_signal: LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO, identifier: BUTTON_2}
-  - {pin_num: '28', peripheral: TPM1, signal: 'CH, 0', pin_signal: PTA12/TPM1_CH0}
-  - {pin_num: '29', peripheral: TPM1, signal: 'CH, 1', pin_signal: PTA13/TPM1_CH1}
-  - {pin_num: '37', peripheral: TPM2, signal: 'CH, 0', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0}
+  - {pin_num: '28', peripheral: TPM1, signal: 'CH, 0', pin_signal: PTA12/TPM1_CH0, direction: OUTPUT}
+  - {pin_num: '29', peripheral: TPM1, signal: 'CH, 1', pin_signal: PTA13/TPM1_CH1, direction: OUTPUT}
+  - {pin_num: '37', peripheral: TPM2, signal: 'CH, 0', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0, direction: OUTPUT}
   - {pin_num: '22', peripheral: SWD, signal: CLK, pin_signal: PTA0/TPM0_CH5/SWD_CLK}
   - {pin_num: '52', peripheral: GPIOC, signal: 'GPIO, 23', pin_signal: VCAP1/LCD_P39/PTC23, identifier: SIGFOX_AK, direction: INPUT, pull_enable: enable}
   - {pin_num: '51', peripheral: GPIOC, signal: 'GPIO, 22', pin_signal: VCAP2/LCD_P6/PTC22, direction: OUTPUT}
   - {pin_num: '50', peripheral: GPIOC, signal: 'GPIO, 21', pin_signal: VLL1/LCD_P5/PTC21, direction: INPUT}
   - {pin_num: '49', peripheral: GPIOC, signal: 'GPIO, 20', pin_signal: VLL2/LCD_P4/PTC20, direction: OUTPUT}
-  - {pin_num: '35', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, direction: INPUT, gpio_interrupt: kPORT_InterruptRisingEdge}
-  - {pin_num: '46', peripheral: GPIOC, signal: 'GPIO, 3', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT}
-  - {pin_num: '53', peripheral: GPIOC, signal: 'GPIO, 4', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3}
+  - {pin_num: '35', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, direction: INPUT, gpio_interrupt: kPORT_InterruptRisingEdge,
+    pull_enable: enable}
+  - {pin_num: '46', peripheral: GPIOC, signal: 'GPIO, 3', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, identifier: BATT_C, direction: INPUT,
+    pull_enable: enable}
+  - {pin_num: '53', peripheral: GPIOC, signal: 'GPIO, 4', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3, identifier: POWER_STAT, direction: INPUT,
+    pull_enable: enable}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -178,6 +181,20 @@ void BOARD_InitPins(void)
     };
     /* Initialize GPIO functionality on pin PTB0 (pin 35)  */
     GPIO_PinInit(BOARD_INITPINS_NFC_INT_GPIO, BOARD_INITPINS_NFC_INT_PIN, &NFC_INT_config);
+
+    gpio_pin_config_t BATT_C_config = {
+        .pinDirection = kGPIO_DigitalInput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTC3 (pin 46)  */
+    GPIO_PinInit(BOARD_INITPINS_BATT_C_GPIO, BOARD_INITPINS_BATT_C_PIN, &BATT_C_config);
+
+    gpio_pin_config_t POWER_STAT_config = {
+        .pinDirection = kGPIO_DigitalInput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTC4 (pin 53)  */
+    GPIO_PinInit(BOARD_INITPINS_POWER_STAT_GPIO, BOARD_INITPINS_POWER_STAT_PIN, &POWER_STAT_config);
 
     gpio_pin_config_t DP_DC_config = {
         .pinDirection = kGPIO_DigitalOutput,
@@ -242,6 +259,13 @@ void BOARD_InitPins(void)
     /* Interrupt configuration on PORTB0 (pin 35): Interrupt on rising edge */
     PORT_SetPinInterruptConfig(BOARD_INITPINS_NFC_INT_PORT, BOARD_INITPINS_NFC_INT_PIN, kPORT_InterruptRisingEdge);
 
+    PORTB->PCR[0] = ((PORTB->PCR[0] &
+                      /* Mask bits to zero which are setting */
+                      (~(PORT_PCR_PE_MASK | PORT_PCR_ISF_MASK)))
+
+                     /* Pull Enable: Internal pullup or pulldown resistor is enabled on the corresponding pin. */
+                     | (uint32_t)(PORT_PCR_PE_MASK));
+
     /* PORTB2 (pin 37) is configured as TPM2_CH0 */
     PORT_SetPinMux(BOARD_INITPINS_IN2B_PORT, BOARD_INITPINS_IN2B_PIN, kPORT_MuxAlt3);
 
@@ -273,8 +297,22 @@ void BOARD_InitPins(void)
     /* PORTC3 (pin 46) is configured as LLWU_P7, PTC3 */
     PORT_SetPinMux(BOARD_INITPINS_BATT_C_PORT, BOARD_INITPINS_BATT_C_PIN, kPORT_MuxAsGpio);
 
+    PORTC->PCR[3] = ((PORTC->PCR[3] &
+                      /* Mask bits to zero which are setting */
+                      (~(PORT_PCR_PE_MASK | PORT_PCR_ISF_MASK)))
+
+                     /* Pull Enable: Internal pullup or pulldown resistor is enabled on the corresponding pin. */
+                     | (uint32_t)(PORT_PCR_PE_MASK));
+
     /* PORTC4 (pin 53) is configured as LLWU_P8, PTC4 */
     PORT_SetPinMux(BOARD_INITPINS_POWER_STAT_PORT, BOARD_INITPINS_POWER_STAT_PIN, kPORT_MuxAsGpio);
+
+    PORTC->PCR[4] = ((PORTC->PCR[4] &
+                      /* Mask bits to zero which are setting */
+                      (~(PORT_PCR_PE_MASK | PORT_PCR_ISF_MASK)))
+
+                     /* Pull Enable: Internal pullup or pulldown resistor is enabled on the corresponding pin. */
+                     | (uint32_t)(PORT_PCR_PE_MASK));
 
     /* PORTC5 (pin 54) is configured as LLWU_P9 */
     PORT_SetPinMux(BOARD_INITPINS_INT1_ACCEL_PORT, BOARD_INITPINS_INT1_ACCEL_PIN, kPORT_MuxAsGpio);

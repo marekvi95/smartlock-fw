@@ -4,6 +4,7 @@
         "nfc_settings.h": "c",
         "fsl_debug_console.h": "c",
         "fsl_smc.h": "c",
-        "fsl_common.h": "c"
+        "fsl_common.h": "c",
+        "app_config.h": "c"
     }
 }

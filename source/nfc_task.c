@@ -8,6 +8,7 @@
 #include "board.h"
 #include "fsl_debug_console.h"
 #include "app_config.h"
+#include "display.h"
 
 
 #define print_buf(x,y,z)  {int loop; PRINTF(x); for(loop=0;loop<z;loop++) PRINTF("%.2x ", y[loop]); PRINTF("\n");}
@@ -56,20 +57,27 @@ void addRecord(unsigned char *m, uint32_t lenght)
  */
 bool isLockApproved(void)
 {
-	static unsigned char authKey[] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
-	/* Check if record is valid (nfcMsgLen >= 0) is automatically included. */
+//	static unsigned char authKey[] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+	//42 54 69 63 69 6e 6f 43 41 00 00 00 00 00 00 00
+	static unsigned char authKey[] = {0x42, 0x54, 0x69, 0x63, 0x69, 0x6e, 0x6f, 0x43, 0x41, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+	/* Check if record is valid */
     if (memcmp(nfcRec, authKey, AUTH_KEY_SIZE) == 0)
     {
-        return true;
+        // null array
+    	memset(nfcRec, 0, sizeof(nfcRec));
+    	displayText(0, "Approved", "Ready to unlock");
+    	return true;
     }
 
+    displayText(0, "Not approved", "Trespassers will be prosecuted");
     return false;
 }
 
 /* Turns the motor for a while in order to unlock the mechanical lock. */
 inline static void unlock(void)
 {
-    PRINTF("UNLOCKING \n");
+	displayText(0, "Unlocking", "Driving motor");
+	PRINTF("UNLOCKING \n");
 //    GPIO_PinWrite(BOARD_INITPINS_HBRIDGE_END_GPIO, BOARD_INITPINS_HBRIDGE_END_GPIO_PIN, 1);
 //    App_WaitMsec(SF_MOTOR_RUNTIME_MS);
 //    GPIO_PinWrite(BOARD_INITPINS_HBRIDGE_END_GPIO, BOARD_INITPINS_HBRIDGE_END_GPIO_PIN, 0);
@@ -79,7 +87,8 @@ inline static void unlock(void)
 /* Turns the motor for a while in order to lock the mechanical lock. */
 inline static void lock(void)
 {
-    PRINTF("LOCKING \n");
+	displayText(0, "Locking", "Driving motor");
+	PRINTF("LOCKING \n");
 //    GPIO_PinWrite(BOARD_INITPINS_HBRIDGE_END_GPIO, BOARD_INITPINS_HBRIDGE_END_GPIO_PIN, 1);
 //    App_WaitMsec(SF_MOTOR_RUNTIME_MS);
 //    GPIO_PinWrite(BOARD_INITPINS_HBRIDGE_END_GPIO, BOARD_INITPINS_HBRIDGE_END_GPIO_PIN, 0);
@@ -94,7 +103,8 @@ inline static void lock(void)
 status_t readKey(void)
 {
     #define BLK_NB_MFC      4
-    #define KEY_MFC         0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
+//    #define KEY_MFC         0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
+	#define KEY_MFC 		  0x02, 0x12, 0x09, 0x19, 0x75, 0x91
 
     status_t status = 0;
     unsigned char Resp[256];
@@ -108,23 +118,27 @@ status_t readKey(void)
     status |= NxpNci_ReaderTagCmd(Auth, sizeof(Auth), Resp, &RespSize);
     if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
     {
-        PRINTF(" Authenticate sector %d failed with error 0x%02x\n", Auth[1], Resp[RespSize-1]);
+    	displayText(0, "Auth. Error", "Try it again, authentication failed");
+    	PRINTF(" Authenticate sector %d failed with error 0x%02x\n", Auth[1], Resp[RespSize-1]);
         return status;
     }
+    displayText(0, "Auth OK", "Reading key");
     PRINTF(" Authenticate sector %d succeed\n", Auth[1]);
 
     /* Read block */
     status |= NxpNci_ReaderTagCmd(Read, sizeof(Read), Resp, &RespSize);
     if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
     {
-        PRINTF(" Read block %d failed with error 0x%02x\n", Read[2], Resp[RespSize-1]);
+    	displayText(0, "Key read NOK", "Key could not be read, try it again");
+    	PRINTF(" Read block %d failed with error 0x%02x\n", Read[2], Resp[RespSize-1]);
         return status;
     }
+    displayText(0, "Key read OK", "Finding user in the database...");
     PRINTF(" Read block %d:", Read[2]); print_buf(" ", (Resp+1), RespSize-2);
 
     //TODO: hash keyss
     /* Copy key to nfcRec variable */
-    memcpy((Resp+1), nfcRec, AUTH_KEY_SIZE);
+    memcpy(nfcRec, (Resp+1), AUTH_KEY_SIZE);
 
     return status;
 }
@@ -219,7 +233,7 @@ void task_nfc_reader(NxpNci_RfIntf_t RfIntf)
 
     /* Restart discovery loop */
     NxpNci_StopDiscovery();
-    NxpNci_StartDiscovery(DiscoveryTechnologies,sizeof(DiscoveryTechnologies));
+//    NxpNci_StartDiscovery(DiscoveryTechnologies,sizeof(DiscoveryTechnologies));
 }
 
 void task_nfc(sf_drv_data_t* sfDriverConfig)
@@ -258,10 +272,12 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
 
     nfcMsgLen = -1;
 
-    PRINTF("Demo initialized for RCZ%d.", ((uint8_t)SF_STANDARD)+1);
+    PRINTF("App initialized for RCZ%d.", ((uint8_t)SF_STANDARD)+1);
+
     while(1)
     {
-        PRINTF("\nWAITING FOR DEVICE DISCOVERY\n");
+        displayText(doorClosed, default_text, "waiting for the tag discovery");
+    	PRINTF("\nWAITING FOR DEVICE DISCOVERY\n");
 
         /* Wait until a peer is discovered */
         while(NxpNci_WaitForDiscoveryNotification(&RfInterface) != NFC_SUCCESS)
@@ -308,6 +324,7 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
             	timeoutMs -= 2000;
 
             	/* Send data via Sigfox */
+            	displayText(doorClosed, "Sending...", (char*)nfcMsg);
             	PRINTF("   Sending \"%s\" via Sigfox\n\n", nfcMsg);
 
 
@@ -358,6 +375,7 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
             	else
             	{
             		/* NFC tag removed to early or it does not contain a text record. */
+            		PRINTF("Tag removed too early\n\n");
             	}
             }
 

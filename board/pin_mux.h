@@ -101,23 +101,11 @@ void BOARD_InitBootPins(void);
   @{ */
 /* @} */
 
-/*! @name PORTC3 (number 46), SW3/LLWU_P7/LCD_P23/BATT_C
-  @{ */
-#define BOARD_INITPINS_BATT_C_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITPINS_BATT_C_PIN 3U     /*!<@brief PORTC pin index: 3 */
-                                         /* @} */
-
 /*! @name PORTE31 (number 19), LED2/IN1A
   @{ */
 #define BOARD_INITPINS_IN1A_PORT PORTE /*!<@brief PORT device name: PORTE */
 #define BOARD_INITPINS_IN1A_PIN 31U    /*!<@brief PORTE pin index: 31 */
                                        /* @} */
-
-/*! @name PORTC4 (number 53), J1[7]/LCD_P24/POWER_STAT
-  @{ */
-#define BOARD_INITPINS_POWER_STAT_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITPINS_POWER_STAT_PIN 4U     /*!<@brief PORTC pin index: 4 */
-                                             /* @} */
 
 /*! @name PORTC5 (number 54), J1[15]/INT1_ACCEL/LCD_P25/BUTTON_1
   @{ */
@@ -183,6 +171,20 @@ void BOARD_InitBootPins(void);
 #define BOARD_INITPINS_NFC_INT_PORT PORTB /*!<@brief PORT device name: PORTB */
 #define BOARD_INITPINS_NFC_INT_PIN 0U     /*!<@brief PORTB pin index: 0 */
                                           /* @} */
+
+/*! @name PORTC3 (number 46), SW3/LLWU_P7/LCD_P23/BATT_C
+  @{ */
+#define BOARD_INITPINS_BATT_C_GPIO GPIOC /*!<@brief GPIO device name: GPIOC */
+#define BOARD_INITPINS_BATT_C_PORT PORTC /*!<@brief PORT device name: PORTC */
+#define BOARD_INITPINS_BATT_C_PIN 3U     /*!<@brief PORTC pin index: 3 */
+                                         /* @} */
+
+/*! @name PORTC4 (number 53), J1[7]/LCD_P24/POWER_STAT
+  @{ */
+#define BOARD_INITPINS_POWER_STAT_GPIO GPIOC /*!<@brief GPIO device name: GPIOC */
+#define BOARD_INITPINS_POWER_STAT_PORT PORTC /*!<@brief PORT device name: PORTC */
+#define BOARD_INITPINS_POWER_STAT_PIN 4U     /*!<@brief PORTC pin index: 4 */
+                                             /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
