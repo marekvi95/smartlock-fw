@@ -16,16 +16,16 @@
  */
 static void LTC2942_WriteReg(uint8_t reg, uint8_t value) 
 {
-	uint8_t buf[2] = { reg, value };
+	//	uint8_t buf[2] = { reg, value };
 	i2c_master_transfer_t masterXfer;
 	memset(&masterXfer, 0, sizeof(masterXfer));
 
 	masterXfer.slaveAddress   = LTC2942_ADDR;
 	masterXfer.direction      = kI2C_Write;
-	masterXfer.subaddress     = (uint32_t)NULL;
-    masterXfer.subaddressSize = 0;  
-	masterXfer.data           = buf;
-	masterXfer.dataSize       = 2;
+	masterXfer.subaddress     = reg;
+	masterXfer.subaddressSize = 1;
+	masterXfer.data           = &value;
+	masterXfer.dataSize       = 1;
 	masterXfer.flags          = kI2C_TransferDefaultFlag;
 
 	I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
@@ -48,30 +48,30 @@ static uint8_t LTC2942_ReadReg(uint8_t reg)
 	masterXfer.direction      = kI2C_Write;
 	masterXfer.subaddress     = 0;
 	masterXfer.subaddress     = (uint32_t)NULL;
-    masterXfer.subaddressSize = 0; 
+	masterXfer.subaddressSize = 0;
 	masterXfer.data           = &reg;
 	masterXfer.dataSize       = 1;
 	masterXfer.flags          = kI2C_TransferNoStopFlag;
 
 	I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
 
-    /* Wait until the slave is ready for transmit, wait time depend on user's case.
+	/* Wait until the slave is ready for transmit, wait time depend on user's case.
        Slave devices that need some time to process received byte or are not ready yet to
        send the next byte, can pull the clock low to signal to the master that it should wait.*/
-    for (uint32_t i = 0U; i < WAIT_TIME; i++)
-    {
-        __NOP();
-    }
+	for (uint32_t i = 0U; i < WAIT_TIME; i++)
+	{
+		__NOP();
+	}
 
 	memset(&masterXfer, 0, sizeof(masterXfer));
 
 	masterXfer.slaveAddress   = LTC2942_ADDR;
 	masterXfer.direction      = kI2C_Read;
 	masterXfer.subaddress     = (uint32_t)NULL;
-    masterXfer.subaddressSize = 0; 
+	masterXfer.subaddressSize = 0;
 	masterXfer.data           = &value;
 	masterXfer.dataSize       = 1;
-	masterXfer.flags          = kI2C_TransferDefaultFlag;
+	masterXfer.flags          = kI2C_TransferRepeatedStartFlag;
 
 	I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
 
@@ -116,7 +116,7 @@ uint32_t LTC2942_GetVoltage(void)
 	masterXfer.slaveAddress   = LTC2942_ADDR;
 	masterXfer.direction      = kI2C_Write;
 	masterXfer.subaddress     = (uint32_t)NULL;
-    masterXfer.subaddressSize = 0; 
+	masterXfer.subaddressSize = 0;
 	masterXfer.data           = &buf[0];
 	masterXfer.dataSize       = 1;
 	masterXfer.flags          = kI2C_TransferNoStopFlag;
@@ -163,7 +163,7 @@ int32_t LTC2942_GetTemperature(void)
 	masterXfer.slaveAddress   = LTC2942_ADDR;
 	masterXfer.direction      = kI2C_Write;
 	masterXfer.subaddress     = (uint32_t)NULL;
-    masterXfer.subaddressSize = 0; 
+	masterXfer.subaddressSize = 0;
 	masterXfer.data           = &buf[0];
 	masterXfer.dataSize       = 1;
 	masterXfer.flags          = kI2C_TransferNoStopFlag;
@@ -211,14 +211,14 @@ uint16_t LTC2942_GetAC(void)
 	masterXfer.slaveAddress   = LTC2942_ADDR;
 	masterXfer.direction      = kI2C_Write;
 	masterXfer.subaddress     = (uint32_t)NULL;
-    masterXfer.subaddressSize = 0; 
+	masterXfer.subaddressSize = 0;
 	masterXfer.data           = &buf[0];
 	masterXfer.dataSize       = 1;
 	masterXfer.flags          = kI2C_TransferNoStopFlag;
 
 	if (I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer) == kStatus_Success) 
 	{
-		
+
 		memset(&masterXfer, 0, sizeof(masterXfer));
 
 		// Read accumulated charge MSB and LSB
@@ -231,7 +231,7 @@ uint16_t LTC2942_GetAC(void)
 		masterXfer.flags = kI2C_TransferDefaultFlag;
 
 		I2C_MasterTransferBlocking(LTC2942_I2C_PORT, &masterXfer);
-		
+
 		value = buf[1] | (buf[0] << 8);
 	}
 
@@ -344,7 +344,7 @@ inline void LTC2942_SetVoltageThresholdH(uint8_t level)
 // input:
 //   level - new threshold level (0..255)
 inline void LTC2942_SetVoltageThresholdL(uint8_t level)
- {
+{
 	LTC2942_WriteReg(LTC2942_REG_VOLT_L,level);
 }
 
