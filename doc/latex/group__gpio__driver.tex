@@ -1,0 +1,110 @@
+\hypertarget{group__gpio__driver}{}\section{Gpio\+\_\+driver}
+\label{group__gpio__driver}\index{Gpio\_driver@{Gpio\_driver}}
+\subsection*{G\+P\+IO Configuration}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__gpio__driver_ga0793a4e8cb6e746485012da3e487db53}{G\+P\+I\+O\+\_\+\+Pin\+Init}} (\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$base, uint32\+\_\+t pin, const \mbox{\hyperlink{group__gpio_ga9279df0a87f2432dc3c5d596028223b7}{gpio\+\_\+pin\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Initializes a G\+P\+IO pin used by the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{G\+P\+IO Interrupt}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__gpio__driver_ga8685e0d5f2bc5573e9a229e9147cf143}{G\+P\+I\+O\+\_\+\+Port\+Get\+Interrupt\+Flags}} (\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Reads the G\+P\+IO port interrupt status flag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__gpio__driver_ga2a8f3b5ceb113519221582c2ed741fb6}{G\+P\+I\+O\+\_\+\+Port\+Clear\+Interrupt\+Flags}} (\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$base, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Clears multiple G\+P\+IO pin interrupt status flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gpio__driver_ga0793a4e8cb6e746485012da3e487db53}\label{group__gpio__driver_ga0793a4e8cb6e746485012da3e487db53}} 
+\index{Gpio\_driver@{Gpio\_driver}!GPIO\_PinInit@{GPIO\_PinInit}}
+\index{GPIO\_PinInit@{GPIO\_PinInit}!Gpio\_driver@{Gpio\_driver}}
+\subsubsection{\texorpdfstring{GPIO\_PinInit()}{GPIO\_PinInit()}}
+{\footnotesize\ttfamily void G\+P\+I\+O\+\_\+\+Pin\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{pin,  }\item[{const \mbox{\hyperlink{group__gpio_ga9279df0a87f2432dc3c5d596028223b7}{gpio\+\_\+pin\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Initializes a G\+P\+IO pin used by the board. 
+
+To initialize the G\+P\+IO, define a pin configuration, as either input or output, in the user file. Then, call the \mbox{\hyperlink{group__gpio__driver_ga0793a4e8cb6e746485012da3e487db53}{G\+P\+I\+O\+\_\+\+Pin\+Init()}} function.
+
+This is an example to define an input pin or an output pin configuration. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Define a digital input pin configuration,}
+\DoxyCodeLine{\mbox{\hyperlink{struct__gpio__pin__config}{gpio\_pin\_config\_t}} config =}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \mbox{\hyperlink{group__gpio_gga0df4be96fa56f3bdd7bfa048fdaacd6babacf19933be1940ab40c83535e6a46d4}{kGPIO\_DigitalInput}},}
+\DoxyCodeLine{  0,}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{Define a digital output pin configuration,}
+\DoxyCodeLine{\mbox{\hyperlink{struct__gpio__pin__config}{gpio\_pin\_config\_t}} config =}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \mbox{\hyperlink{group__gpio_gga0df4be96fa56f3bdd7bfa048fdaacd6ba509ebcd228fc813cf4afcacd258680f9}{kGPIO\_DigitalOutput}},}
+\DoxyCodeLine{  0,}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & G\+P\+IO peripheral base pointer (G\+P\+I\+OA, G\+P\+I\+OB, G\+P\+I\+OC, and so on.) \\
+\hline
+{\em pin} & G\+P\+IO port pin number \\
+\hline
+{\em config} & G\+P\+IO pin configuration pointer\\
+\hline
+\end{DoxyParams}
+brief Initializes a G\+P\+IO pin used by the board.
+
+To initialize the G\+P\+IO, define a pin configuration, as either input or output, in the user file. Then, call the \mbox{\hyperlink{group__gpio__driver_ga0793a4e8cb6e746485012da3e487db53}{G\+P\+I\+O\+\_\+\+Pin\+Init()}} function.
+
+This is an example to define an input pin or an output pin configuration. code Define a digital input pin configuration, gpio\+\_\+pin\+\_\+config\+\_\+t config = \{ k\+G\+P\+I\+O\+\_\+\+Digital\+Input, 0, \} Define a digital output pin configuration, gpio\+\_\+pin\+\_\+config\+\_\+t config = \{ k\+G\+P\+I\+O\+\_\+\+Digital\+Output, 0, \} endcode
+
+param base G\+P\+IO peripheral base pointer (G\+P\+I\+OA, G\+P\+I\+OB, G\+P\+I\+OC, and so on.) param pin G\+P\+IO port pin number param config G\+P\+IO pin configuration pointer \mbox{\Hypertarget{group__gpio__driver_ga2a8f3b5ceb113519221582c2ed741fb6}\label{group__gpio__driver_ga2a8f3b5ceb113519221582c2ed741fb6}} 
+\index{Gpio\_driver@{Gpio\_driver}!GPIO\_PortClearInterruptFlags@{GPIO\_PortClearInterruptFlags}}
+\index{GPIO\_PortClearInterruptFlags@{GPIO\_PortClearInterruptFlags}!Gpio\_driver@{Gpio\_driver}}
+\subsubsection{\texorpdfstring{GPIO\_PortClearInterruptFlags()}{GPIO\_PortClearInterruptFlags()}}
+{\footnotesize\ttfamily void G\+P\+I\+O\+\_\+\+Port\+Clear\+Interrupt\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Clears multiple G\+P\+IO pin interrupt status flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & G\+P\+IO peripheral base pointer (G\+P\+I\+OA, G\+P\+I\+OB, G\+P\+I\+OC, and so on.) \\
+\hline
+{\em mask} & G\+P\+IO pin number macro\\
+\hline
+\end{DoxyParams}
+brief Clears multiple G\+P\+IO pin interrupt status flags.
+
+param base G\+P\+IO peripheral base pointer (G\+P\+I\+OA, G\+P\+I\+OB, G\+P\+I\+OC, and so on.) param mask G\+P\+IO pin number macro \mbox{\Hypertarget{group__gpio__driver_ga8685e0d5f2bc5573e9a229e9147cf143}\label{group__gpio__driver_ga8685e0d5f2bc5573e9a229e9147cf143}} 
+\index{Gpio\_driver@{Gpio\_driver}!GPIO\_PortGetInterruptFlags@{GPIO\_PortGetInterruptFlags}}
+\index{GPIO\_PortGetInterruptFlags@{GPIO\_PortGetInterruptFlags}!Gpio\_driver@{Gpio\_driver}}
+\subsubsection{\texorpdfstring{GPIO\_PortGetInterruptFlags()}{GPIO\_PortGetInterruptFlags()}}
+{\footnotesize\ttfamily uint32\+\_\+t G\+P\+I\+O\+\_\+\+Port\+Get\+Interrupt\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Reads the G\+P\+IO port interrupt status flag. 
+
+If a pin is configured to generate the D\+MA request, the corresponding flag is cleared automatically at the completion of the requested D\+MA transfer. Otherwise, the flag remains set until a logic one is written to that flag. If configured for a level sensitive interrupt that remains asserted, the flag is set again immediately.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & G\+P\+IO peripheral base pointer (G\+P\+I\+OA, G\+P\+I\+OB, G\+P\+I\+OC, and so on.) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & current G\+P\+IO port interrupt status flag, for example, 0x00010001 means the pin 0 and 17 have the interrupt.\\
+\hline
+\end{DoxyRetVals}
+brief Reads the G\+P\+IO port interrupt status flag.
+
+If a pin is configured to generate the D\+MA request, the corresponding flag is cleared automatically at the completion of the requested D\+MA transfer. Otherwise, the flag remains set until a logic one is written to that flag. If configured for a level sensitive interrupt that remains asserted, the flag is set again immediately.
+
+param base G\+P\+IO peripheral base pointer (G\+P\+I\+OA, G\+P\+I\+OB, G\+P\+I\+OC, and so on.) retval The current G\+P\+IO port interrupt status flag, for example, 0x00010001 means the pin 0 and 17 have the interrupt. 

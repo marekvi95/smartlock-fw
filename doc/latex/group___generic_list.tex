@@ -1,0 +1,668 @@
+\hypertarget{group___generic_list}{}\section{Generic\+List}
+\label{group___generic_list}\index{GenericList@{GenericList}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlist__label}{list\+\_\+label}}
+\begin{DoxyCompactList}\small\item\em The list structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em The list element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{group___generic_list_ga803f4a1563b84327f6c4ece67bee52ff}{\+\_\+list\+\_\+status}} \mbox{\hyperlink{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}{list\+\_\+status\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The list status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___generic_list_ga55ca6411baa0fa3fdf11f12b1b597eae}\label{group___generic_list_ga55ca6411baa0fa3fdf11f12b1b597eae}} 
+typedef struct \mbox{\hyperlink{structlist__label}{list\+\_\+label}} \mbox{\hyperlink{group___generic_list_ga55ca6411baa0fa3fdf11f12b1b597eae}{list\+\_\+label\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The list structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___generic_list_ga3b6160f7fecb9e59b14985c725602a80}\label{group___generic_list_ga3b6160f7fecb9e59b14985c725602a80}} 
+typedef struct \mbox{\hyperlink{structlist__label}{list\+\_\+label}} $\ast$ {\bfseries list\+\_\+handle\+\_\+t}
+\item 
+\mbox{\Hypertarget{group___generic_list_gaaf37a4cc3cea190f1e70556b0db5a622}\label{group___generic_list_gaaf37a4cc3cea190f1e70556b0db5a622}} 
+typedef struct \mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+tag}} \mbox{\hyperlink{group___generic_list_gaaf37a4cc3cea190f1e70556b0db5a622}{list\+\_\+element\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The list element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___generic_list_ga1e44fd3b5d824f4ecfa858e3eba25a49}\label{group___generic_list_ga1e44fd3b5d824f4ecfa858e3eba25a49}} 
+typedef struct \mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+tag}} $\ast$ {\bfseries list\+\_\+element\+\_\+handle\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___generic_list_ga803f4a1563b84327f6c4ece67bee52ff}{\+\_\+list\+\_\+status}} \{ \newline
+\mbox{\hyperlink{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffa399f3c85ffa7551e0b398a9549bd0eea}{k\+L\+I\+S\+T\+\_\+\+Ok}} = k\+Status\+\_\+\+Success, 
+\mbox{\hyperlink{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffaba4e0d8373c58275247b212ec1e1cd4b}{k\+L\+I\+S\+T\+\_\+\+Duplicate\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+L\+I\+ST, 1), 
+\mbox{\hyperlink{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffaed1e4c08fcd8714e0bf56e65fcd802d5}{k\+L\+I\+S\+T\+\_\+\+Full}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+L\+I\+ST, 2), 
+\mbox{\hyperlink{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffa5cd6d9d0242b51b6050b3edaccf0db97}{k\+L\+I\+S\+T\+\_\+\+Empty}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+L\+I\+ST, 3), 
+\newline
+\mbox{\hyperlink{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffa57f5f3af2ec503436ce122889f5c8b2a}{k\+L\+I\+S\+T\+\_\+\+Orphan\+Element}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+L\+I\+ST, 4)
+ \}
+\begin{DoxyCompactList}\small\item\em The list status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___generic_list_gab8252f6f60664cadc5a977fb3c0c4bdc}{L\+I\+S\+T\+\_\+\+Init}} (\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}} list, uint32\+\_\+t max)
+\begin{DoxyCompactList}\small\item\em Initialize the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}} \mbox{\hyperlink{group___generic_list_gac2821270f5b05d6e5a492dca3b7a5a07}{L\+I\+S\+T\+\_\+\+Get\+List}} (\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} element)
+\begin{DoxyCompactList}\small\item\em Gets the list that contains the given element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}{list\+\_\+status\+\_\+t}} \mbox{\hyperlink{group___generic_list_ga4c491e8a89ae3322086cb414242c7f3f}{L\+I\+S\+T\+\_\+\+Add\+Head}} (\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}} list, \mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} element)
+\begin{DoxyCompactList}\small\item\em Links element to the head of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}{list\+\_\+status\+\_\+t}} \mbox{\hyperlink{group___generic_list_ga06283836b30da75730f755ea4be30b93}{L\+I\+S\+T\+\_\+\+Add\+Tail}} (\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}} list, \mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} element)
+\begin{DoxyCompactList}\small\item\em Links element to the tail of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} \mbox{\hyperlink{group___generic_list_gafdc7a7cdb706ad205fbbc308b91d1e73}{L\+I\+S\+T\+\_\+\+Remove\+Head}} (\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}} list)
+\begin{DoxyCompactList}\small\item\em Unlinks element from the head of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} \mbox{\hyperlink{group___generic_list_ga33117981034d1af2c97fe60d1ca26629}{L\+I\+S\+T\+\_\+\+Get\+Head}} (\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}} list)
+\begin{DoxyCompactList}\small\item\em Gets head element handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} \mbox{\hyperlink{group___generic_list_ga81ccc9e202a9475e56ce9735fb33c0fe}{L\+I\+S\+T\+\_\+\+Get\+Next}} (\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} element)
+\begin{DoxyCompactList}\small\item\em Gets next element handle for given element handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} \mbox{\hyperlink{group___generic_list_ga745fa7114f0facf6edb011e2c7139aa4}{L\+I\+S\+T\+\_\+\+Get\+Prev}} (\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} element)
+\begin{DoxyCompactList}\small\item\em Gets previous element handle for given element handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}{list\+\_\+status\+\_\+t}} \mbox{\hyperlink{group___generic_list_gac92c4d99a64c3cef1c7c6c74b97fb93b}{L\+I\+S\+T\+\_\+\+Remove\+Element}} (\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} element)
+\begin{DoxyCompactList}\small\item\em Unlinks an element from its list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}{list\+\_\+status\+\_\+t}} \mbox{\hyperlink{group___generic_list_ga715b202be720d60e063a6b0dbac502a9}{L\+I\+S\+T\+\_\+\+Add\+Prev\+Element}} (\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} element, \mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} new\+Element)
+\begin{DoxyCompactList}\small\item\em Links an element in the previous position relative to a given member of a list. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___generic_list_ga1125ff8a5fe9b3ef81cccad538dae9c7}{L\+I\+S\+T\+\_\+\+Get\+Size}} (\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}} list)
+\begin{DoxyCompactList}\small\item\em Gets the current size of a list. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___generic_list_ga4200c963f6db8ab4b91c11fb56bc99e2}{L\+I\+S\+T\+\_\+\+Get\+Available\+Size}} (\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}} list)
+\begin{DoxyCompactList}\small\item\em Gets the number of free places in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}\label{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}} 
+\index{GenericList@{GenericList}!list\_status\_t@{list\_status\_t}}
+\index{list\_status\_t@{list\_status\_t}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{list\_status\_t}{list\_status\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___generic_list_ga803f4a1563b84327f6c4ece67bee52ff}{\+\_\+list\+\_\+status}}  \mbox{\hyperlink{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}{list\+\_\+status\+\_\+t}}}
+
+
+
+The list status. 
+
+
+
+
+
+Include \begin{DoxyVerb}\end{DoxyVerb}
+
+
+
+
+
+
+Public macro definitions \begin{DoxyVerb}\end{DoxyVerb}
+
+
+
+
+
+
+Public type definitions \begin{DoxyVerb}\end{DoxyVerb}
+ 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___generic_list_ga803f4a1563b84327f6c4ece67bee52ff}\label{group___generic_list_ga803f4a1563b84327f6c4ece67bee52ff}} 
+\index{GenericList@{GenericList}!\_list\_status@{\_list\_status}}
+\index{\_list\_status@{\_list\_status}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{\_list\_status}{\_list\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___generic_list_ga803f4a1563b84327f6c4ece67bee52ff}{\+\_\+list\+\_\+status}}}
+
+
+
+The list status. 
+
+
+
+
+
+Include \begin{DoxyVerb}\end{DoxyVerb}
+
+
+
+
+
+
+Public macro definitions \begin{DoxyVerb}\end{DoxyVerb}
+
+
+
+
+
+
+Public type definitions \begin{DoxyVerb}\end{DoxyVerb}
+ \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLIST\_Ok@{kLIST\_Ok}!GenericList@{GenericList}}\index{GenericList@{GenericList}!kLIST\_Ok@{kLIST\_Ok}}}\mbox{\Hypertarget{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffa399f3c85ffa7551e0b398a9549bd0eea}\label{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffa399f3c85ffa7551e0b398a9549bd0eea}} 
+k\+L\+I\+S\+T\+\_\+\+Ok&Success \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLIST\_DuplicateError@{kLIST\_DuplicateError}!GenericList@{GenericList}}\index{GenericList@{GenericList}!kLIST\_DuplicateError@{kLIST\_DuplicateError}}}\mbox{\Hypertarget{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffaba4e0d8373c58275247b212ec1e1cd4b}\label{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffaba4e0d8373c58275247b212ec1e1cd4b}} 
+k\+L\+I\+S\+T\+\_\+\+Duplicate\+Error&Duplicate Error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLIST\_Full@{kLIST\_Full}!GenericList@{GenericList}}\index{GenericList@{GenericList}!kLIST\_Full@{kLIST\_Full}}}\mbox{\Hypertarget{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffaed1e4c08fcd8714e0bf56e65fcd802d5}\label{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffaed1e4c08fcd8714e0bf56e65fcd802d5}} 
+k\+L\+I\+S\+T\+\_\+\+Full&F\+U\+LL \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLIST\_Empty@{kLIST\_Empty}!GenericList@{GenericList}}\index{GenericList@{GenericList}!kLIST\_Empty@{kLIST\_Empty}}}\mbox{\Hypertarget{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffa5cd6d9d0242b51b6050b3edaccf0db97}\label{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffa5cd6d9d0242b51b6050b3edaccf0db97}} 
+k\+L\+I\+S\+T\+\_\+\+Empty&Empty \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLIST\_OrphanElement@{kLIST\_OrphanElement}!GenericList@{GenericList}}\index{GenericList@{GenericList}!kLIST\_OrphanElement@{kLIST\_OrphanElement}}}\mbox{\Hypertarget{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffa57f5f3af2ec503436ce122889f5c8b2a}\label{group___generic_list_gga803f4a1563b84327f6c4ece67bee52ffa57f5f3af2ec503436ce122889f5c8b2a}} 
+k\+L\+I\+S\+T\+\_\+\+Orphan\+Element&Orphan Element \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___generic_list_ga4c491e8a89ae3322086cb414242c7f3f}\label{group___generic_list_ga4c491e8a89ae3322086cb414242c7f3f}} 
+\index{GenericList@{GenericList}!LIST\_AddHead@{LIST\_AddHead}}
+\index{LIST\_AddHead@{LIST\_AddHead}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_AddHead()}{LIST\_AddHead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}{list\+\_\+status\+\_\+t}} L\+I\+S\+T\+\_\+\+Add\+Head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}}}]{list,  }\item[{\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Links element to the head of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ Handle of the list. \\
+\hline
+{\em element} & -\/ Handle of the element. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+L\+I\+S\+T\+\_\+\+Full} & if list is full, k\+L\+I\+S\+T\+\_\+\+Ok if insertion was successful.\\
+\hline
+\end{DoxyRetVals}
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em list} & -\/ ID of list to insert into. element -\/ element to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+k\+L\+I\+S\+T\+\_\+\+Full if list is full. k\+L\+I\+S\+T\+\_\+\+Ok if insertion was successful.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_ga715b202be720d60e063a6b0dbac502a9}\label{group___generic_list_ga715b202be720d60e063a6b0dbac502a9}} 
+\index{GenericList@{GenericList}!LIST\_AddPrevElement@{LIST\_AddPrevElement}}
+\index{LIST\_AddPrevElement@{LIST\_AddPrevElement}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_AddPrevElement()}{LIST\_AddPrevElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}{list\+\_\+status\+\_\+t}} L\+I\+S\+T\+\_\+\+Add\+Prev\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}}}]{element,  }\item[{\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}}}]{new\+Element }\end{DoxyParamCaption})}
+
+
+
+Links an element in the previous position relative to a given member of a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & -\/ Handle of the element. \\
+\hline
+{\em new\+Element} & -\/ New element to insert before the given member.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+L\+I\+S\+T\+\_\+\+Orphan\+Element} & if element is not part of any list. \\
+\hline
+{\em k\+L\+I\+S\+T\+\_\+\+Ok} & if removal was successful.\\
+\hline
+\end{DoxyRetVals}
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em element} & -\/ ID of a member of a list. new\+Element -\/ new element to insert before the given member.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+k\+L\+I\+S\+T\+\_\+\+Orphan\+Element if element is not part of any list. k\+L\+I\+S\+T\+\_\+\+Full if list is full. k\+L\+I\+S\+T\+\_\+\+Ok if insertion was successful.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_ga06283836b30da75730f755ea4be30b93}\label{group___generic_list_ga06283836b30da75730f755ea4be30b93}} 
+\index{GenericList@{GenericList}!LIST\_AddTail@{LIST\_AddTail}}
+\index{LIST\_AddTail@{LIST\_AddTail}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_AddTail()}{LIST\_AddTail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}{list\+\_\+status\+\_\+t}} L\+I\+S\+T\+\_\+\+Add\+Tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}}}]{list,  }\item[{\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Links element to the tail of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ Handle of the list. \\
+\hline
+{\em element} & -\/ Handle of the element. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+L\+I\+S\+T\+\_\+\+Full} & if list is full, k\+L\+I\+S\+T\+\_\+\+Ok if insertion was successful.\\
+\hline
+\end{DoxyRetVals}
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em list} & -\/ ID of list to insert into. element -\/ element to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+k\+L\+I\+S\+T\+\_\+\+Full if list is full. k\+L\+I\+S\+T\+\_\+\+Ok if insertion was successful.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_ga4200c963f6db8ab4b91c11fb56bc99e2}\label{group___generic_list_ga4200c963f6db8ab4b91c11fb56bc99e2}} 
+\index{GenericList@{GenericList}!LIST\_GetAvailableSize@{LIST\_GetAvailableSize}}
+\index{LIST\_GetAvailableSize@{LIST\_GetAvailableSize}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_GetAvailableSize()}{LIST\_GetAvailableSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+I\+S\+T\+\_\+\+Get\+Available\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}}}]{list }\end{DoxyParamCaption})}
+
+
+
+Gets the number of free places in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ Handle of the list.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Available} & size of the list.\\
+\hline
+\end{DoxyRetVals}
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em list} & -\/ ID of the list.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Available size of the list.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_ga33117981034d1af2c97fe60d1ca26629}\label{group___generic_list_ga33117981034d1af2c97fe60d1ca26629}} 
+\index{GenericList@{GenericList}!LIST\_GetHead@{LIST\_GetHead}}
+\index{LIST\_GetHead@{LIST\_GetHead}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_GetHead()}{LIST\_GetHead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} L\+I\+S\+T\+\_\+\+Get\+Head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}}}]{list }\end{DoxyParamCaption})}
+
+
+
+Gets head element handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ Handle of the list.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & if list is empty, handle of removed element(pointer) if removal was successful.\\
+\hline
+\end{DoxyRetVals}
+Gets head element handle.
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em list} & -\/ ID of list.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if list is empty. ID of head element if list is not empty.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_gac2821270f5b05d6e5a492dca3b7a5a07}\label{group___generic_list_gac2821270f5b05d6e5a492dca3b7a5a07}} 
+\index{GenericList@{GenericList}!LIST\_GetList@{LIST\_GetList}}
+\index{LIST\_GetList@{LIST\_GetList}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_GetList()}{LIST\_GetList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}} L\+I\+S\+T\+\_\+\+Get\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Gets the list that contains the given element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & -\/ Handle of the element. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & if element is orphan, Handle of the list the element is inserted into.\\
+\hline
+\end{DoxyRetVals}
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em element} & -\/ Handle of the element.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if element is orphan. Handle of the list the element is inserted into.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_ga81ccc9e202a9475e56ce9735fb33c0fe}\label{group___generic_list_ga81ccc9e202a9475e56ce9735fb33c0fe}} 
+\index{GenericList@{GenericList}!LIST\_GetNext@{LIST\_GetNext}}
+\index{LIST\_GetNext@{LIST\_GetNext}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_GetNext()}{LIST\_GetNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} L\+I\+S\+T\+\_\+\+Get\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Gets next element handle for given element handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & -\/ Handle of the element.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & if list is empty, handle of removed element(pointer) if removal was successful.\\
+\hline
+\end{DoxyRetVals}
+Gets next element handle for given element handle.
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em element} & -\/ ID of the element.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if element is tail. ID of next element if exists.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_ga745fa7114f0facf6edb011e2c7139aa4}\label{group___generic_list_ga745fa7114f0facf6edb011e2c7139aa4}} 
+\index{GenericList@{GenericList}!LIST\_GetPrev@{LIST\_GetPrev}}
+\index{LIST\_GetPrev@{LIST\_GetPrev}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_GetPrev()}{LIST\_GetPrev()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} L\+I\+S\+T\+\_\+\+Get\+Prev (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Gets previous element handle for given element handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & -\/ Handle of the element.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & if list is empty, handle of removed element(pointer) if removal was successful.\\
+\hline
+\end{DoxyRetVals}
+Gets previous element handle for given element handle.
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em element} & -\/ ID of the element.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if element is head. ID of previous element if exists.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_ga1125ff8a5fe9b3ef81cccad538dae9c7}\label{group___generic_list_ga1125ff8a5fe9b3ef81cccad538dae9c7}} 
+\index{GenericList@{GenericList}!LIST\_GetSize@{LIST\_GetSize}}
+\index{LIST\_GetSize@{LIST\_GetSize}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_GetSize()}{LIST\_GetSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+I\+S\+T\+\_\+\+Get\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}}}]{list }\end{DoxyParamCaption})}
+
+
+
+Gets the current size of a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ Handle of the list.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Current} & size of the list.\\
+\hline
+\end{DoxyRetVals}
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em list} & -\/ ID of the list.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current size of the list.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_gab8252f6f60664cadc5a977fb3c0c4bdc}\label{group___generic_list_gab8252f6f60664cadc5a977fb3c0c4bdc}} 
+\index{GenericList@{GenericList}!LIST\_Init@{LIST\_Init}}
+\index{LIST\_Init@{LIST\_Init}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_Init()}{LIST\_Init()}}
+{\footnotesize\ttfamily void L\+I\+S\+T\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}}}]{list,  }\item[{uint32\+\_\+t}]{max }\end{DoxyParamCaption})}
+
+
+
+Initialize the list. 
+
+
+
+
+
+Public prototypes \begin{DoxyVerb}\end{DoxyVerb}
+
+
+This function initialize the list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ List handle to initialize. \\
+\hline
+{\em max} & -\/ Maximum number of elements in list. 0 for unlimited.\\
+\hline
+\end{DoxyParams}
+Initialize the list.
+
+
+
+
+
+Public functions \begin{DoxyVerb}\end{DoxyVerb}
+
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em list} & -\/ L\+I\+S\+T\+\_\+ handle to init. max -\/ Maximum number of elements in list. 0 for unlimited.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_gac92c4d99a64c3cef1c7c6c74b97fb93b}\label{group___generic_list_gac92c4d99a64c3cef1c7c6c74b97fb93b}} 
+\index{GenericList@{GenericList}!LIST\_RemoveElement@{LIST\_RemoveElement}}
+\index{LIST\_RemoveElement@{LIST\_RemoveElement}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_RemoveElement()}{LIST\_RemoveElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___generic_list_gaae3dc4a15b24287b8c3ac8706195aa7e}{list\+\_\+status\+\_\+t}} L\+I\+S\+T\+\_\+\+Remove\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Unlinks an element from its list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & -\/ Handle of the element.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+L\+I\+S\+T\+\_\+\+Orphan\+Element} & if element is not part of any list. \\
+\hline
+{\em k\+L\+I\+S\+T\+\_\+\+Ok} & if removal was successful.\\
+\hline
+\end{DoxyRetVals}
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em element} & -\/ ID of the element to remove.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+k\+L\+I\+S\+T\+\_\+\+Orphan\+Element if element is not part of any list. k\+L\+I\+S\+T\+\_\+\+Ok if removal was successful.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group___generic_list_gafdc7a7cdb706ad205fbbc308b91d1e73}\label{group___generic_list_gafdc7a7cdb706ad205fbbc308b91d1e73}} 
+\index{GenericList@{GenericList}!LIST\_RemoveHead@{LIST\_RemoveHead}}
+\index{LIST\_RemoveHead@{LIST\_RemoveHead}!GenericList@{GenericList}}
+\subsubsection{\texorpdfstring{LIST\_RemoveHead()}{LIST\_RemoveHead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlist__element__tag}{list\+\_\+element\+\_\+handle\+\_\+t}} L\+I\+S\+T\+\_\+\+Remove\+Head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlist__label}{list\+\_\+handle\+\_\+t}}}]{list }\end{DoxyParamCaption})}
+
+
+
+Unlinks element from the head of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ Handle of the list.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & if list is empty, handle of removed element(pointer) if removal was successful.\\
+\hline
+\end{DoxyRetVals}
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em list} & -\/ ID of list to remove from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if list is empty. ID of removed element(pointer) if removal was successful.
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyRemark}

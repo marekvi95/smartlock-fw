@@ -1,0 +1,320 @@
+\hypertarget{group__debugconsole}{}\section{Debugconsole}
+\label{group__debugconsole}\index{Debugconsole@{Debugconsole}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__debugconsole_gabb8f0adbec02f143b4f84d2eb42126df}{D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+L\+E\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T\+\_\+\+T\+O\+\_\+\+T\+O\+O\+L\+C\+H\+A\+IN}}~0U
+\begin{DoxyCompactList}\small\item\em Definition select redirect toolchain printf, scanf to uart or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__debugconsole_gac33031f28afa29dc8fe1718bbc86ee23}{D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+L\+E\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T\+\_\+\+T\+O\+\_\+\+S\+DK}}~1U
+\item 
+\#define \mbox{\hyperlink{group__debugconsole_gaf8f85fd102e4aedcee3d061dc2d3e0c2}{D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+I\+S\+A\+B\+LE}}~2U
+\item 
+\mbox{\Hypertarget{group__debugconsole_ga7fdd594efdc8374ecd8684ed758d6cec}\label{group__debugconsole_ga7fdd594efdc8374ecd8684ed758d6cec}} 
+\#define \mbox{\hyperlink{group__debugconsole_ga7fdd594efdc8374ecd8684ed758d6cec}{S\+D\+K\+\_\+\+D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+LE}}~1U
+\begin{DoxyCompactList}\small\item\em Definition to select sdk or toolchain printf, scanf. The macro only support to be redefined in project setting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__debugconsole_gae225e7555c0f73bb3b705a22fe8b71e4}\label{group__debugconsole_gae225e7555c0f73bb3b705a22fe8b71e4}} 
+\#define \mbox{\hyperlink{group__debugconsole_gae225e7555c0f73bb3b705a22fe8b71e4}{S\+D\+K\+\_\+\+D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+L\+E\+\_\+\+U\+A\+RT}}
+\begin{DoxyCompactList}\small\item\em whether provide low level IO implementation to toolchain printf and scanf. For example, within M\+C\+U\+Xpresso, if the macro S\+D\+K\+\_\+\+D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+L\+E\+\_\+\+U\+A\+RT is defined, {\bfseries{sys\+\_\+write and \+\_\+\+\_\+sys\+\_\+readc will be used when \+\_\+\+\_\+\+R\+E\+D\+L\+IB}} is defined; \+\_\+write and \+\_\+read will be used in other cases. If the macro S\+D\+K\+\_\+\+D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+L\+E\+\_\+\+U\+A\+RT is not defined, the semihost will be used. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__debugconsole_gae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+TF}}~\mbox{\hyperlink{group__debugconsole_ga1019139ac1c69fd62687250130c6ca7f}{Dbg\+Console\+\_\+\+Printf}}
+\begin{DoxyCompactList}\small\item\em Definition to select redirect toolchain printf, scanf to uart or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__debugconsole_ga1799711cd7a7b727846cfe2068f67c66}\label{group__debugconsole_ga1799711cd7a7b727846cfe2068f67c66}} 
+\#define {\bfseries S\+C\+A\+NF}~\mbox{\hyperlink{group__debugconsole_ga6d87d10b03e4aaf8464206fe3829dd28}{Dbg\+Console\+\_\+\+Scanf}}
+\item 
+\mbox{\Hypertarget{group__debugconsole_ga0dc96cafe08557356d4e7f32e850531a}\label{group__debugconsole_ga0dc96cafe08557356d4e7f32e850531a}} 
+\#define {\bfseries P\+U\+T\+C\+H\+AR}~\mbox{\hyperlink{group__debugconsole_gada572d86a06f028b5b1a5d0440f683e3}{Dbg\+Console\+\_\+\+Putchar}}
+\item 
+\mbox{\Hypertarget{group__debugconsole_ga919615abb35a234b304cfeb179cd41de}\label{group__debugconsole_ga919615abb35a234b304cfeb179cd41de}} 
+\#define {\bfseries G\+E\+T\+C\+H\+AR}~\mbox{\hyperlink{group__debugconsole_ga11898c5015274863741c4f3f4d9edc08}{Dbg\+Console\+\_\+\+Getchar}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__debugconsole_ga85e7bd4e26348dd4b87e4c3a600868c9}\label{group__debugconsole_ga85e7bd4e26348dd4b87e4c3a600868c9}} 
+typedef void($\ast$ \mbox{\hyperlink{group__debugconsole_ga85e7bd4e26348dd4b87e4c3a600868c9}{printf\+Cb}}) (char $\ast$buf, int32\+\_\+t $\ast$indicator, char val, int len)
+\begin{DoxyCompactList}\small\item\em A function pointer which is used when format printf log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group__debugconsole_ga50b9d66ac2ba38b23b99dac4e81f4b8c}{Str\+Format\+Printf}} (const char $\ast$fmt, va\+\_\+list ap, char $\ast$buf, \mbox{\hyperlink{group__debugconsole_ga85e7bd4e26348dd4b87e4c3a600868c9}{printf\+Cb}} cb)
+\begin{DoxyCompactList}\small\item\em This function outputs its parameters according to a formatted string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__debugconsole_gafe318e0fd8d0f6ebad0c8a871a7a196f}{Str\+Format\+Scanf}} (const char $\ast$line\+\_\+ptr, char $\ast$format, va\+\_\+list args\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Converts an input line of A\+S\+C\+II characters based upon a provided string format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+serial\+\_\+handle\+\_\+t \mbox{\hyperlink{group__debugconsole_gaad3c4240a1364156a239471ccdb9aa0b}{g\+\_\+serial\+Handle}}
+\end{DoxyCompactItemize}
+\subsection*{Initialization}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__debugconsole_ga12e50ee0450679fd8ca950a89338d366}{Dbg\+Console\+\_\+\+Init}} (uint8\+\_\+t instance, uint32\+\_\+t baud\+Rate, \mbox{\hyperlink{group__serialmanager_gaa7dc5f93aacda72d14bb0fa66b0401f3}{serial\+\_\+port\+\_\+type\+\_\+t}} device, uint32\+\_\+t clk\+Src\+Freq)
+\begin{DoxyCompactList}\small\item\em Initializes the peripheral used for debug messages. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__debugconsole_gad80e7aa70bbb3fce1a9168621372833e}{Dbg\+Console\+\_\+\+Deinit}} (void)
+\begin{DoxyCompactList}\small\item\em De-\/initializes the peripheral used for debug messages. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__debugconsole_ga1019139ac1c69fd62687250130c6ca7f}{Dbg\+Console\+\_\+\+Printf}} (const char $\ast$format\+String,...)
+\begin{DoxyCompactList}\small\item\em Writes formatted output to the standard output stream. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__debugconsole_gada572d86a06f028b5b1a5d0440f683e3}{Dbg\+Console\+\_\+\+Putchar}} (int ch)
+\begin{DoxyCompactList}\small\item\em Writes a character to stdout. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__debugconsole_ga6d87d10b03e4aaf8464206fe3829dd28}{Dbg\+Console\+\_\+\+Scanf}} (char $\ast$format\+String,...)
+\begin{DoxyCompactList}\small\item\em Reads formatted data from the standard input stream. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__debugconsole_ga11898c5015274863741c4f3f4d9edc08}{Dbg\+Console\+\_\+\+Getchar}} (void)
+\begin{DoxyCompactList}\small\item\em Reads a character from standard input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__debugconsole_ga3194467c3dae6c5015b8b29c3cc1db1e}{Dbg\+Console\+\_\+\+Flush}} (void)
+\begin{DoxyCompactList}\small\item\em Debug console flush. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__debugconsole_gaf8f85fd102e4aedcee3d061dc2d3e0c2}\label{group__debugconsole_gaf8f85fd102e4aedcee3d061dc2d3e0c2}} 
+\index{Debugconsole@{Debugconsole}!DEBUGCONSOLE\_DISABLE@{DEBUGCONSOLE\_DISABLE}}
+\index{DEBUGCONSOLE\_DISABLE@{DEBUGCONSOLE\_DISABLE}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{DEBUGCONSOLE\_DISABLE}{DEBUGCONSOLE\_DISABLE}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+I\+S\+A\+B\+LE~2U}
+
+Disable debugconsole function. \mbox{\Hypertarget{group__debugconsole_gac33031f28afa29dc8fe1718bbc86ee23}\label{group__debugconsole_gac33031f28afa29dc8fe1718bbc86ee23}} 
+\index{Debugconsole@{Debugconsole}!DEBUGCONSOLE\_REDIRECT\_TO\_SDK@{DEBUGCONSOLE\_REDIRECT\_TO\_SDK}}
+\index{DEBUGCONSOLE\_REDIRECT\_TO\_SDK@{DEBUGCONSOLE\_REDIRECT\_TO\_SDK}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{DEBUGCONSOLE\_REDIRECT\_TO\_SDK}{DEBUGCONSOLE\_REDIRECT\_TO\_SDK}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+L\+E\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T\+\_\+\+T\+O\+\_\+\+S\+DK~1U}
+
+Select S\+DK version printf, scanf. \mbox{\Hypertarget{group__debugconsole_gabb8f0adbec02f143b4f84d2eb42126df}\label{group__debugconsole_gabb8f0adbec02f143b4f84d2eb42126df}} 
+\index{Debugconsole@{Debugconsole}!DEBUGCONSOLE\_REDIRECT\_TO\_TOOLCHAIN@{DEBUGCONSOLE\_REDIRECT\_TO\_TOOLCHAIN}}
+\index{DEBUGCONSOLE\_REDIRECT\_TO\_TOOLCHAIN@{DEBUGCONSOLE\_REDIRECT\_TO\_TOOLCHAIN}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{DEBUGCONSOLE\_REDIRECT\_TO\_TOOLCHAIN}{DEBUGCONSOLE\_REDIRECT\_TO\_TOOLCHAIN}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+L\+E\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T\+\_\+\+T\+O\+\_\+\+T\+O\+O\+L\+C\+H\+A\+IN~0U}
+
+
+
+Definition select redirect toolchain printf, scanf to uart or not. 
+
+Select toolchain printf and scanf. \mbox{\Hypertarget{group__debugconsole_gae1649fc947ca37a86917a08354f48d1a}\label{group__debugconsole_gae1649fc947ca37a86917a08354f48d1a}} 
+\index{Debugconsole@{Debugconsole}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF~\mbox{\hyperlink{group__debugconsole_ga1019139ac1c69fd62687250130c6ca7f}{Dbg\+Console\+\_\+\+Printf}}}
+
+
+
+Definition to select redirect toolchain printf, scanf to uart or not. 
+
+if S\+D\+K\+\_\+\+D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+LE defined to 0,it represents select toolchain printf, scanf. if S\+D\+K\+\_\+\+D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+LE defined to 1,it represents select S\+DK version printf, scanf. if S\+D\+K\+\_\+\+D\+E\+B\+U\+G\+C\+O\+N\+S\+O\+LE defined to 2,it represents disable debugconsole function. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__debugconsole_gad80e7aa70bbb3fce1a9168621372833e}\label{group__debugconsole_gad80e7aa70bbb3fce1a9168621372833e}} 
+\index{Debugconsole@{Debugconsole}!DbgConsole\_Deinit@{DbgConsole\_Deinit}}
+\index{DbgConsole\_Deinit@{DbgConsole\_Deinit}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{DbgConsole\_Deinit()}{DbgConsole\_Deinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} Dbg\+Console\+\_\+\+Deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+De-\/initializes the peripheral used for debug messages. 
+
+Call this function to disable debug log messages to be output via the specified peripheral initialized by the serial manager module.
+
+\begin{DoxyReturn}{Returns}
+Indicates whether de-\/initialization was successful or not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__debugconsole_ga3194467c3dae6c5015b8b29c3cc1db1e}\label{group__debugconsole_ga3194467c3dae6c5015b8b29c3cc1db1e}} 
+\index{Debugconsole@{Debugconsole}!DbgConsole\_Flush@{DbgConsole\_Flush}}
+\index{DbgConsole\_Flush@{DbgConsole\_Flush}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{DbgConsole\_Flush()}{DbgConsole\_Flush()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} Dbg\+Console\+\_\+\+Flush (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Debug console flush. 
+
+Call this function to wait the tx buffer empty. If interrupt transfer is using, make sure the global I\+RQ is enable before call this function This function should be called when 1, before enter power down mode 2, log is required to print to terminal immediately \begin{DoxyReturn}{Returns}
+Indicates whether wait idle was successful or not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__debugconsole_ga11898c5015274863741c4f3f4d9edc08}\label{group__debugconsole_ga11898c5015274863741c4f3f4d9edc08}} 
+\index{Debugconsole@{Debugconsole}!DbgConsole\_Getchar@{DbgConsole\_Getchar}}
+\index{DbgConsole\_Getchar@{DbgConsole\_Getchar}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{DbgConsole\_Getchar()}{DbgConsole\_Getchar()}}
+{\footnotesize\ttfamily int Dbg\+Console\+\_\+\+Getchar (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reads a character from standard input. 
+
+Call this function to read a character from standard input.
+
+\begin{DoxyNote}{Note}
+Due the limitation in the BM O\+SA environment (C\+PU is blocked in the function, other tasks will not be scheduled), the function cannot be used when the D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+N\+\_\+\+B\+L\+O\+C\+K\+I\+NG is set in the BM O\+SA environment. And an error is returned when the function called in this case. The suggestion is that polling the non-\/blocking function Dbg\+Console\+\_\+\+Try\+Getchar to get the input char.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the character read. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__debugconsole_ga12e50ee0450679fd8ca950a89338d366}\label{group__debugconsole_ga12e50ee0450679fd8ca950a89338d366}} 
+\index{Debugconsole@{Debugconsole}!DbgConsole\_Init@{DbgConsole\_Init}}
+\index{DbgConsole\_Init@{DbgConsole\_Init}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{DbgConsole\_Init()}{DbgConsole\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} Dbg\+Console\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{instance,  }\item[{uint32\+\_\+t}]{baud\+Rate,  }\item[{\mbox{\hyperlink{group__serialmanager_gaa7dc5f93aacda72d14bb0fa66b0401f3}{serial\+\_\+port\+\_\+type\+\_\+t}}}]{device,  }\item[{uint32\+\_\+t}]{clk\+Src\+Freq }\end{DoxyParamCaption})}
+
+
+
+Initializes the peripheral used for debug messages. 
+
+Call this function to enable debug log messages to be output via the specified peripheral initialized by the serial manager module. After this function has returned, stdout and stdin are connected to the selected peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & The instance of the module. \\
+\hline
+{\em baud\+Rate} & The desired baud rate in bits per second. \\
+\hline
+{\em device} & Low level device type for the debug console, can be one of the following. \begin{DoxyItemize}
+\item k\+Serial\+Port\+\_\+\+Uart, \item k\+Serial\+Port\+\_\+\+Usb\+Cdc \item k\+Serial\+Port\+\_\+\+Usb\+Cdc\+Virtual. \end{DoxyItemize}
+\\
+\hline
+{\em clk\+Src\+Freq} & Frequency of peripheral source clock.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Indicates whether initialization was successful or not. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Execution successfully \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__debugconsole_ga1019139ac1c69fd62687250130c6ca7f}\label{group__debugconsole_ga1019139ac1c69fd62687250130c6ca7f}} 
+\index{Debugconsole@{Debugconsole}!DbgConsole\_Printf@{DbgConsole\_Printf}}
+\index{DbgConsole\_Printf@{DbgConsole\_Printf}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{DbgConsole\_Printf()}{DbgConsole\_Printf()}}
+{\footnotesize\ttfamily int Dbg\+Console\+\_\+\+Printf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format\+String,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Writes formatted output to the standard output stream. 
+
+Call this function to write a formatted output to the standard output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em format\+String} & Format control string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the number of characters printed or a negative value if an error occurs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__debugconsole_gada572d86a06f028b5b1a5d0440f683e3}\label{group__debugconsole_gada572d86a06f028b5b1a5d0440f683e3}} 
+\index{Debugconsole@{Debugconsole}!DbgConsole\_Putchar@{DbgConsole\_Putchar}}
+\index{DbgConsole\_Putchar@{DbgConsole\_Putchar}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{DbgConsole\_Putchar()}{DbgConsole\_Putchar()}}
+{\footnotesize\ttfamily int Dbg\+Console\+\_\+\+Putchar (\begin{DoxyParamCaption}\item[{int}]{ch }\end{DoxyParamCaption})}
+
+
+
+Writes a character to stdout. 
+
+Call this function to write a character to stdout.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & Character to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the character written. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__debugconsole_ga6d87d10b03e4aaf8464206fe3829dd28}\label{group__debugconsole_ga6d87d10b03e4aaf8464206fe3829dd28}} 
+\index{Debugconsole@{Debugconsole}!DbgConsole\_Scanf@{DbgConsole\_Scanf}}
+\index{DbgConsole\_Scanf@{DbgConsole\_Scanf}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{DbgConsole\_Scanf()}{DbgConsole\_Scanf()}}
+{\footnotesize\ttfamily int Dbg\+Console\+\_\+\+Scanf (\begin{DoxyParamCaption}\item[{char $\ast$}]{format\+String,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Reads formatted data from the standard input stream. 
+
+Call this function to read formatted data from the standard input stream.
+
+\begin{DoxyNote}{Note}
+Due the limitation in the BM O\+SA environment (C\+PU is blocked in the function, other tasks will not be scheduled), the function cannot be used when the D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+N\+\_\+\+B\+L\+O\+C\+K\+I\+NG is set in the BM O\+SA environment. And an error is returned when the function called in this case. The suggestion is that polling the non-\/blocking function Dbg\+Console\+\_\+\+Try\+Getchar to get the input char.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em format\+String} & Format control string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the number of fields successfully converted and assigned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__debugconsole_ga50b9d66ac2ba38b23b99dac4e81f4b8c}\label{group__debugconsole_ga50b9d66ac2ba38b23b99dac4e81f4b8c}} 
+\index{Debugconsole@{Debugconsole}!StrFormatPrintf@{StrFormatPrintf}}
+\index{StrFormatPrintf@{StrFormatPrintf}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{StrFormatPrintf()}{StrFormatPrintf()}}
+{\footnotesize\ttfamily int Str\+Format\+Printf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{va\+\_\+list}]{ap,  }\item[{char $\ast$}]{buf,  }\item[{\mbox{\hyperlink{group__debugconsole_ga85e7bd4e26348dd4b87e4c3a600868c9}{printf\+Cb}}}]{cb }\end{DoxyParamCaption})}
+
+
+
+This function outputs its parameters according to a formatted string. 
+
+\begin{DoxyNote}{Note}
+I/O is performed by calling given function pointer using following ($\ast$func\+\_\+ptr)(c);
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fmt} & Format string for printf. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ap} & Arguments to printf. \\
+\hline
+\mbox{\texttt{ in}}  & {\em buf} & pointer to the buffer \\
+\hline
+ & {\em cb} & print callbck function pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of characters to be print
+\end{DoxyReturn}
+brief This function outputs its parameters according to a formatted string.
+
+note I/O is performed by calling given function pointer using following ($\ast$func\+\_\+ptr)(c);
+
+param\mbox{[}in\mbox{]} fmt\+\_\+ptr Format string for printf. param\mbox{[}in\mbox{]} args\+\_\+ptr Arguments to printf. param\mbox{[}in\mbox{]} buf pointer to the buffer param cb print callback function pointer
+
+return Number of characters to be print \mbox{\Hypertarget{group__debugconsole_gafe318e0fd8d0f6ebad0c8a871a7a196f}\label{group__debugconsole_gafe318e0fd8d0f6ebad0c8a871a7a196f}} 
+\index{Debugconsole@{Debugconsole}!StrFormatScanf@{StrFormatScanf}}
+\index{StrFormatScanf@{StrFormatScanf}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{StrFormatScanf()}{StrFormatScanf()}}
+{\footnotesize\ttfamily int Str\+Format\+Scanf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{line\+\_\+ptr,  }\item[{char $\ast$}]{format,  }\item[{va\+\_\+list}]{args\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Converts an input line of A\+S\+C\+II characters based upon a provided string format. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em line\+\_\+ptr} & The input line of A\+S\+C\+II data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em format} & Format first points to the format string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em args\+\_\+ptr} & The list of parameters.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of input items converted and assigned. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em I\+O\+\_\+\+E\+OF} & When line\+\_\+ptr is empty string \char`\"{}\char`\"{}.\\
+\hline
+\end{DoxyRetVals}
+brief Converts an input line of A\+S\+C\+II characters based upon a provided string format.
+
+param\mbox{[}in\mbox{]} line\+\_\+ptr The input line of A\+S\+C\+II data. param\mbox{[}in\mbox{]} format Format first points to the format string. param\mbox{[}in\mbox{]} args\+\_\+ptr The list of parameters.
+
+return Number of input items converted and assigned. retval I\+O\+\_\+\+E\+OF When line\+\_\+ptr is empty string \char`\"{}\char`\"{}. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__debugconsole_gaad3c4240a1364156a239471ccdb9aa0b}\label{group__debugconsole_gaad3c4240a1364156a239471ccdb9aa0b}} 
+\index{Debugconsole@{Debugconsole}!g\_serialHandle@{g\_serialHandle}}
+\index{g\_serialHandle@{g\_serialHandle}!Debugconsole@{Debugconsole}}
+\subsubsection{\texorpdfstring{g\_serialHandle}{g\_serialHandle}}
+{\footnotesize\ttfamily serial\+\_\+handle\+\_\+t g\+\_\+serial\+Handle}
+
+serial manager handle 

@@ -1,0 +1,65 @@
+\hypertarget{structsf__user__config__t}{}\section{sf\+\_\+user\+\_\+config\+\_\+t Struct Reference}
+\label{structsf__user__config__t}\index{sf\_user\_config\_t@{sf\_user\_config\_t}}
+
+
+This structure is used by the user to initialize the S\+I\+G\+F\+OX device. It contains a configuration of the S\+I\+G\+F\+OX device only (no S\+PI, etc. configuration).  
+
+
+
+
+{\ttfamily \#include $<$sf.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} \mbox{\hyperlink{structsf__user__config__t_ab90aa96aca46c0b99f92de71ca11d792}{net\+Standard}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structsf__user__config__t_ab9629fb6d8a7c0cbe42b58030e087e94}{tx\+Att\+Steps}}
+\item 
+\mbox{\hyperlink{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}{sf\+\_\+xtal\+\_\+type\+\_\+t}} \mbox{\hyperlink{structsf__user__config__t_a39dc4132c306ddfd5c953d25ec462e82}{xtal}}
+\item 
+\mbox{\hyperlink{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}{sf\+\_\+tx\+\_\+repeat\+\_\+t}} \mbox{\hyperlink{structsf__user__config__t_ac3c47b91470c93e7ddee7c38182cc50c}{tx\+Repeat}}
+\item 
+\mbox{\hyperlink{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}{sf\+\_\+pa\+\_\+type\+\_\+t}} \mbox{\hyperlink{structsf__user__config__t_a690c474c8cd0d99898f711b187fbef43}{pa\+Type}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure is used by the user to initialize the S\+I\+G\+F\+OX device. It contains a configuration of the S\+I\+G\+F\+OX device only (no S\+PI, etc. configuration). 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structsf__user__config__t_ab90aa96aca46c0b99f92de71ca11d792}\label{structsf__user__config__t_ab90aa96aca46c0b99f92de71ca11d792}} 
+\index{sf\_user\_config\_t@{sf\_user\_config\_t}!netStandard@{netStandard}}
+\index{netStandard@{netStandard}!sf\_user\_config\_t@{sf\_user\_config\_t}}
+\subsubsection{\texorpdfstring{netStandard}{netStandard}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} net\+Standard}
+
+Selection of a standard defining network communication parameters. \mbox{\Hypertarget{structsf__user__config__t_a690c474c8cd0d99898f711b187fbef43}\label{structsf__user__config__t_a690c474c8cd0d99898f711b187fbef43}} 
+\index{sf\_user\_config\_t@{sf\_user\_config\_t}!paType@{paType}}
+\index{paType@{paType}!sf\_user\_config\_t@{sf\_user\_config\_t}}
+\subsubsection{\texorpdfstring{paType}{paType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}{sf\+\_\+pa\+\_\+type\+\_\+t}} pa\+Type}
+
+Selection of internal PA type used in the device. \mbox{\Hypertarget{structsf__user__config__t_ab9629fb6d8a7c0cbe42b58030e087e94}\label{structsf__user__config__t_ab9629fb6d8a7c0cbe42b58030e087e94}} 
+\index{sf\_user\_config\_t@{sf\_user\_config\_t}!txAttSteps@{txAttSteps}}
+\index{txAttSteps@{txAttSteps}!sf\_user\_config\_t@{sf\_user\_config\_t}}
+\subsubsection{\texorpdfstring{txAttSteps}{txAttSteps}}
+{\footnotesize\ttfamily uint8\+\_\+t tx\+Att\+Steps}
+
+Amount of 0.\+25 dB steps that needs to be subtracted from TX power. \mbox{\Hypertarget{structsf__user__config__t_ac3c47b91470c93e7ddee7c38182cc50c}\label{structsf__user__config__t_ac3c47b91470c93e7ddee7c38182cc50c}} 
+\index{sf\_user\_config\_t@{sf\_user\_config\_t}!txRepeat@{txRepeat}}
+\index{txRepeat@{txRepeat}!sf\_user\_config\_t@{sf\_user\_config\_t}}
+\subsubsection{\texorpdfstring{txRepeat}{txRepeat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}{sf\+\_\+tx\+\_\+repeat\+\_\+t}} tx\+Repeat}
+
+Amount of transmissions that will happen on one time invoking of S\+F\+\_\+\+Send\+Payload function. \mbox{\Hypertarget{structsf__user__config__t_a39dc4132c306ddfd5c953d25ec462e82}\label{structsf__user__config__t_a39dc4132c306ddfd5c953d25ec462e82}} 
+\index{sf\_user\_config\_t@{sf\_user\_config\_t}!xtal@{xtal}}
+\index{xtal@{xtal}!sf\_user\_config\_t@{sf\_user\_config\_t}}
+\subsubsection{\texorpdfstring{xtal}{xtal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}{sf\+\_\+xtal\+\_\+type\+\_\+t}} xtal}
+
+Selection of X\+T\+AL type used in the device. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sf/\mbox{\hyperlink{sf_8h}{sf.\+h}}\end{DoxyCompactItemize}

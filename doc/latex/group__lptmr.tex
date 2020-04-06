@@ -1,0 +1,419 @@
+\hypertarget{group__lptmr}{}\section{Lptmr}
+\label{group__lptmr}\index{Lptmr@{Lptmr}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__lptmr__config}{\+\_\+lptmr\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR config structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__lptmr_ga37c4ca922036c3e0e5af194799d3cfad}\label{group__lptmr_ga37c4ca922036c3e0e5af194799d3cfad}} 
+typedef enum \mbox{\hyperlink{group__lptmr_gad7812eb27238f5bd2cb3edc40d5f25ed}{\+\_\+lptmr\+\_\+pin\+\_\+select}} \mbox{\hyperlink{group__lptmr_ga37c4ca922036c3e0e5af194799d3cfad}{lptmr\+\_\+pin\+\_\+select\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR pin selection used in pulse counter mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lptmr_gaa2ac38a4cb3ac1cfb704baec44f4174c}\label{group__lptmr_gaa2ac38a4cb3ac1cfb704baec44f4174c}} 
+typedef enum \mbox{\hyperlink{group__lptmr_ga9bd2404c984ac5eea420a396e7cdda77}{\+\_\+lptmr\+\_\+pin\+\_\+polarity}} \mbox{\hyperlink{group__lptmr_gaa2ac38a4cb3ac1cfb704baec44f4174c}{lptmr\+\_\+pin\+\_\+polarity\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR pin polarity used in pulse counter mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lptmr_ga507b12d91dad8bbc571b4d651d3a17c2}\label{group__lptmr_ga507b12d91dad8bbc571b4d651d3a17c2}} 
+typedef enum \mbox{\hyperlink{group__lptmr_ga40237256921d8a780c71b2f4ce162498}{\+\_\+lptmr\+\_\+timer\+\_\+mode}} \mbox{\hyperlink{group__lptmr_ga507b12d91dad8bbc571b4d651d3a17c2}{lptmr\+\_\+timer\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR timer mode selection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lptmr_gad3d903364803228c64b5b650c2624ac0}\label{group__lptmr_gad3d903364803228c64b5b650c2624ac0}} 
+typedef enum \mbox{\hyperlink{group__lptmr_gad4e93a569a14f82f31f9cac1582daddd}{\+\_\+lptmr\+\_\+prescaler\+\_\+glitch\+\_\+value}} \mbox{\hyperlink{group__lptmr_gad3d903364803228c64b5b650c2624ac0}{lptmr\+\_\+prescaler\+\_\+glitch\+\_\+value\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR prescaler/glitch filter values. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{group__lptmr_ga68d8b01f0167f938bfa86442f4772ced}{\+\_\+lptmr\+\_\+prescaler\+\_\+clock\+\_\+select}} \mbox{\hyperlink{group__lptmr_ga63bfd703c032aeb0820e8131c4720cb8}{lptmr\+\_\+prescaler\+\_\+clock\+\_\+select\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR prescaler/glitch filter clock select. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lptmr_gaeb8b682e5e92adfff936a174dc93a128}\label{group__lptmr_gaeb8b682e5e92adfff936a174dc93a128}} 
+typedef enum \mbox{\hyperlink{group__lptmr_gade9e5cb91c7534d9b9ac51909edae02e}{\+\_\+lptmr\+\_\+interrupt\+\_\+enable}} \mbox{\hyperlink{group__lptmr_gaeb8b682e5e92adfff936a174dc93a128}{lptmr\+\_\+interrupt\+\_\+enable\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em List of the L\+P\+T\+MR interrupts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lptmr_gad3b97974a37534695fe465fdb7703439}\label{group__lptmr_gad3b97974a37534695fe465fdb7703439}} 
+typedef enum \mbox{\hyperlink{group__lptmr_ga114bc57ed4e972d512911d9d866a7573}{\+\_\+lptmr\+\_\+status\+\_\+flags}} \mbox{\hyperlink{group__lptmr_gad3b97974a37534695fe465fdb7703439}{lptmr\+\_\+status\+\_\+flags\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em List of the L\+P\+T\+MR status flags. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct__lptmr__config}{\+\_\+lptmr\+\_\+config}} \mbox{\hyperlink{group__lptmr_gad0d6720b03ee0674c139c7b9bb3d0419}{lptmr\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR config structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__lptmr_gad7812eb27238f5bd2cb3edc40d5f25ed}{\+\_\+lptmr\+\_\+pin\+\_\+select}} \{ \mbox{\hyperlink{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25edaa5591ed16b209e49a55d782b0152d27b}{k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Select\+Input\+\_\+0}} = 0x0U, 
+\mbox{\hyperlink{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25edaf380fdd8c93021e9b0cc2520b9942faf}{k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Select\+Input\+\_\+1}} = 0x1U, 
+\mbox{\hyperlink{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25eda804a4b70aa7e0a2996cb054e1feddf4e}{k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Select\+Input\+\_\+2}} = 0x2U, 
+\mbox{\hyperlink{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25eda35b44045498f8af998d6ca99563009be}{k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Select\+Input\+\_\+3}} = 0x3U
+ \}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR pin selection used in pulse counter mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__lptmr_ga9bd2404c984ac5eea420a396e7cdda77}{\+\_\+lptmr\+\_\+pin\+\_\+polarity}} \{ \mbox{\hyperlink{group__lptmr_gga9bd2404c984ac5eea420a396e7cdda77a2f387787b10172f719dbc304573fc0c6}{k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Polarity\+Active\+High}} = 0x0U, 
+\mbox{\hyperlink{group__lptmr_gga9bd2404c984ac5eea420a396e7cdda77aa083f88b878d9781b91cdf5a7cbc5fe1}{k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Polarity\+Active\+Low}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR pin polarity used in pulse counter mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__lptmr_ga40237256921d8a780c71b2f4ce162498}{\+\_\+lptmr\+\_\+timer\+\_\+mode}} \{ \mbox{\hyperlink{group__lptmr_gga40237256921d8a780c71b2f4ce162498a308f1e902c37f04845e88dbdcf090d1d}{k\+L\+P\+T\+M\+R\+\_\+\+Timer\+Mode\+Time\+Counter}} = 0x0U, 
+\mbox{\hyperlink{group__lptmr_gga40237256921d8a780c71b2f4ce162498a3e671df6c6027b048c5878d45031415d}{k\+L\+P\+T\+M\+R\+\_\+\+Timer\+Mode\+Pulse\+Counter}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR timer mode selection. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__lptmr_gad4e93a569a14f82f31f9cac1582daddd}{\+\_\+lptmr\+\_\+prescaler\+\_\+glitch\+\_\+value}} \{ \newline
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda112121efd220fe2bf6d6c371ee2e7de9}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+0}} = 0x0U, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda89602ece7c01cee81cdf02386926d3bb}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+1}} = 0x1U, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddad52a7b1bc3feb4aef749238f4888bf60}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+2}} = 0x2U, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddaa6c44c168e0d6f6d138c3d0a6055c1ea}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+3}} = 0x3U, 
+\newline
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda3673e511ea9bfc1b69db3ec35c2ea4ea}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+4}} = 0x4U, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda18463b98220efab5003aee9ed0c4c8e3}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+5}} = 0x5U, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda76d3ecf9e0694dfa18aa463ddef44043}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+6}} = 0x6U, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda002055b58f8cd211b9f45160f2b35347}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+7}} = 0x7U, 
+\newline
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddaef05cfa9678ac5a33740c7a0e3481707}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+8}} = 0x8U, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddad76b4636eed4be5a6e42bd95ccf35272}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+9}} = 0x9U, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda888b287eaa57577f9f68e33f5cfed22a}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+10}} = 0x\+AU, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddadd34f2e32e760276641b68ed9b2e8c29}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+11}} = 0x\+BU, 
+\newline
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda859b48e0bcbddfa8550c38121faedccc}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+12}} = 0x\+CU, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddad89da696529cb28e8a68c68533564249}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+13}} = 0x\+DU, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddafcf75b60e904cb458bcd28cd4f9ec92a}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+14}} = 0x\+EU, 
+\mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda38731d6f04ade303c0f002ac558c319a}{k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+15}} = 0x\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR prescaler/glitch filter values. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__lptmr_ga68d8b01f0167f938bfa86442f4772ced}{\+\_\+lptmr\+\_\+prescaler\+\_\+clock\+\_\+select}} \{ \mbox{\hyperlink{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda6799e08f040c9277a2e30de3b96b69c5}{k\+L\+P\+T\+M\+R\+\_\+\+Prescaler\+Clock\+\_\+0}} = 0x0U, 
+\mbox{\hyperlink{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda36de7a40ece786199804426d58e73c4e}{k\+L\+P\+T\+M\+R\+\_\+\+Prescaler\+Clock\+\_\+1}} = 0x1U, 
+\mbox{\hyperlink{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda2590ba1f8ad0bd638bcec43712213935}{k\+L\+P\+T\+M\+R\+\_\+\+Prescaler\+Clock\+\_\+2}} = 0x2U, 
+\mbox{\hyperlink{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda5aeb8e70968f58667bb2769847585106}{k\+L\+P\+T\+M\+R\+\_\+\+Prescaler\+Clock\+\_\+3}} = 0x3U
+ \}
+\begin{DoxyCompactList}\small\item\em L\+P\+T\+MR prescaler/glitch filter clock select. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__lptmr_gade9e5cb91c7534d9b9ac51909edae02e}{\+\_\+lptmr\+\_\+interrupt\+\_\+enable}} \{ \mbox{\hyperlink{group__lptmr_ggade9e5cb91c7534d9b9ac51909edae02ea6788e58f3d338bb386463f092e5d94f3}{k\+L\+P\+T\+M\+R\+\_\+\+Timer\+Interrupt\+Enable}} = L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK
+ \}
+\begin{DoxyCompactList}\small\item\em List of the L\+P\+T\+MR interrupts. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__lptmr_ga114bc57ed4e972d512911d9d866a7573}{\+\_\+lptmr\+\_\+status\+\_\+flags}} \{ \mbox{\hyperlink{group__lptmr_gga114bc57ed4e972d512911d9d866a7573ab51c1e072bf8436d8b7546a3777dbadd}{k\+L\+P\+T\+M\+R\+\_\+\+Timer\+Compare\+Flag}} = L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+C\+F\+\_\+\+M\+A\+SK
+ \}
+\begin{DoxyCompactList}\small\item\em List of the L\+P\+T\+MR status flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__lptmr_ga2418e533da0b331dbcc7b04ebf90b54e}{F\+S\+L\+\_\+\+L\+P\+T\+M\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 1, 1))
+\end{DoxyCompactItemize}
+\subsection*{Initialization and deinitialization}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__lptmr_ga1f2e64506623dc66e329e136931b4e25}{L\+P\+T\+M\+R\+\_\+\+Init}} (\mbox{\hyperlink{struct_l_p_t_m_r___type}{L\+P\+T\+M\+R\+\_\+\+Type}} $\ast$base, const \mbox{\hyperlink{group__lptmr_gad0d6720b03ee0674c139c7b9bb3d0419}{lptmr\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Ungates the L\+P\+T\+MR clock and configures the peripheral for a basic operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__lptmr_ga2436bf246a0aab4a0191d059b80ff088}{L\+P\+T\+M\+R\+\_\+\+Deinit}} (\mbox{\hyperlink{struct_l_p_t_m_r___type}{L\+P\+T\+M\+R\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Gates the L\+P\+T\+MR clock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__lptmr_ga11a8100adcd8f9f0cf167b2d84a51d11}{L\+P\+T\+M\+R\+\_\+\+Get\+Default\+Config}} (\mbox{\hyperlink{group__lptmr_gad0d6720b03ee0674c139c7b9bb3d0419}{lptmr\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Fills in the L\+P\+T\+MR configuration structure with default settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__lptmr_ga2418e533da0b331dbcc7b04ebf90b54e}\label{group__lptmr_ga2418e533da0b331dbcc7b04ebf90b54e}} 
+\index{Lptmr@{Lptmr}!FSL\_LPTMR\_DRIVER\_VERSION@{FSL\_LPTMR\_DRIVER\_VERSION}}
+\index{FSL\_LPTMR\_DRIVER\_VERSION@{FSL\_LPTMR\_DRIVER\_VERSION}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{FSL\_LPTMR\_DRIVER\_VERSION}{FSL\_LPTMR\_DRIVER\_VERSION}}
+{\footnotesize\ttfamily \#define F\+S\+L\+\_\+\+L\+P\+T\+M\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 1, 1))}
+
+Version 2.\+1.\+1 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__lptmr_gad0d6720b03ee0674c139c7b9bb3d0419}\label{group__lptmr_gad0d6720b03ee0674c139c7b9bb3d0419}} 
+\index{Lptmr@{Lptmr}!lptmr\_config\_t@{lptmr\_config\_t}}
+\index{lptmr\_config\_t@{lptmr\_config\_t}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{lptmr\_config\_t}{lptmr\_config\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__lptmr__config}{\+\_\+lptmr\+\_\+config}}  \mbox{\hyperlink{group__lptmr_gad0d6720b03ee0674c139c7b9bb3d0419}{lptmr\+\_\+config\+\_\+t}}}
+
+
+
+L\+P\+T\+MR config structure. 
+
+This structure holds the configuration settings for the L\+P\+T\+MR peripheral. To initialize this structure to reasonable defaults, call the \mbox{\hyperlink{group__lptmr_ga11a8100adcd8f9f0cf167b2d84a51d11}{L\+P\+T\+M\+R\+\_\+\+Get\+Default\+Config()}} function and pass a pointer to your configuration structure instance.
+
+The configuration struct can be made constant so it resides in flash. \mbox{\Hypertarget{group__lptmr_ga63bfd703c032aeb0820e8131c4720cb8}\label{group__lptmr_ga63bfd703c032aeb0820e8131c4720cb8}} 
+\index{Lptmr@{Lptmr}!lptmr\_prescaler\_clock\_select\_t@{lptmr\_prescaler\_clock\_select\_t}}
+\index{lptmr\_prescaler\_clock\_select\_t@{lptmr\_prescaler\_clock\_select\_t}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{lptmr\_prescaler\_clock\_select\_t}{lptmr\_prescaler\_clock\_select\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group__lptmr_ga68d8b01f0167f938bfa86442f4772ced}{\+\_\+lptmr\+\_\+prescaler\+\_\+clock\+\_\+select}}  \mbox{\hyperlink{group__lptmr_ga63bfd703c032aeb0820e8131c4720cb8}{lptmr\+\_\+prescaler\+\_\+clock\+\_\+select\+\_\+t}}}
+
+
+
+L\+P\+T\+MR prescaler/glitch filter clock select. 
+
+\begin{DoxyNote}{Note}
+Clock connections are So\+C-\/specific 
+\end{DoxyNote}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__lptmr_gade9e5cb91c7534d9b9ac51909edae02e}\label{group__lptmr_gade9e5cb91c7534d9b9ac51909edae02e}} 
+\index{Lptmr@{Lptmr}!\_lptmr\_interrupt\_enable@{\_lptmr\_interrupt\_enable}}
+\index{\_lptmr\_interrupt\_enable@{\_lptmr\_interrupt\_enable}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{\_lptmr\_interrupt\_enable}{\_lptmr\_interrupt\_enable}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__lptmr_gade9e5cb91c7534d9b9ac51909edae02e}{\+\_\+lptmr\+\_\+interrupt\+\_\+enable}}}
+
+
+
+List of the L\+P\+T\+MR interrupts. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_TimerInterruptEnable@{kLPTMR\_TimerInterruptEnable}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_TimerInterruptEnable@{kLPTMR\_TimerInterruptEnable}}}\mbox{\Hypertarget{group__lptmr_ggade9e5cb91c7534d9b9ac51909edae02ea6788e58f3d338bb386463f092e5d94f3}\label{group__lptmr_ggade9e5cb91c7534d9b9ac51909edae02ea6788e58f3d338bb386463f092e5d94f3}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Timer\+Interrupt\+Enable&Timer interrupt enable \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__lptmr_ga9bd2404c984ac5eea420a396e7cdda77}\label{group__lptmr_ga9bd2404c984ac5eea420a396e7cdda77}} 
+\index{Lptmr@{Lptmr}!\_lptmr\_pin\_polarity@{\_lptmr\_pin\_polarity}}
+\index{\_lptmr\_pin\_polarity@{\_lptmr\_pin\_polarity}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{\_lptmr\_pin\_polarity}{\_lptmr\_pin\_polarity}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__lptmr_ga9bd2404c984ac5eea420a396e7cdda77}{\+\_\+lptmr\+\_\+pin\+\_\+polarity}}}
+
+
+
+L\+P\+T\+MR pin polarity used in pulse counter mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_PinPolarityActiveHigh@{kLPTMR\_PinPolarityActiveHigh}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_PinPolarityActiveHigh@{kLPTMR\_PinPolarityActiveHigh}}}\mbox{\Hypertarget{group__lptmr_gga9bd2404c984ac5eea420a396e7cdda77a2f387787b10172f719dbc304573fc0c6}\label{group__lptmr_gga9bd2404c984ac5eea420a396e7cdda77a2f387787b10172f719dbc304573fc0c6}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Polarity\+Active\+High&Pulse Counter input source is active-\/high \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_PinPolarityActiveLow@{kLPTMR\_PinPolarityActiveLow}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_PinPolarityActiveLow@{kLPTMR\_PinPolarityActiveLow}}}\mbox{\Hypertarget{group__lptmr_gga9bd2404c984ac5eea420a396e7cdda77aa083f88b878d9781b91cdf5a7cbc5fe1}\label{group__lptmr_gga9bd2404c984ac5eea420a396e7cdda77aa083f88b878d9781b91cdf5a7cbc5fe1}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Polarity\+Active\+Low&Pulse Counter input source is active-\/low \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__lptmr_gad7812eb27238f5bd2cb3edc40d5f25ed}\label{group__lptmr_gad7812eb27238f5bd2cb3edc40d5f25ed}} 
+\index{Lptmr@{Lptmr}!\_lptmr\_pin\_select@{\_lptmr\_pin\_select}}
+\index{\_lptmr\_pin\_select@{\_lptmr\_pin\_select}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{\_lptmr\_pin\_select}{\_lptmr\_pin\_select}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__lptmr_gad7812eb27238f5bd2cb3edc40d5f25ed}{\+\_\+lptmr\+\_\+pin\+\_\+select}}}
+
+
+
+L\+P\+T\+MR pin selection used in pulse counter mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_PinSelectInput\_0@{kLPTMR\_PinSelectInput\_0}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_PinSelectInput\_0@{kLPTMR\_PinSelectInput\_0}}}\mbox{\Hypertarget{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25edaa5591ed16b209e49a55d782b0152d27b}\label{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25edaa5591ed16b209e49a55d782b0152d27b}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Select\+Input\+\_\+0&Pulse counter input 0 is selected \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_PinSelectInput\_1@{kLPTMR\_PinSelectInput\_1}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_PinSelectInput\_1@{kLPTMR\_PinSelectInput\_1}}}\mbox{\Hypertarget{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25edaf380fdd8c93021e9b0cc2520b9942faf}\label{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25edaf380fdd8c93021e9b0cc2520b9942faf}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Select\+Input\+\_\+1&Pulse counter input 1 is selected \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_PinSelectInput\_2@{kLPTMR\_PinSelectInput\_2}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_PinSelectInput\_2@{kLPTMR\_PinSelectInput\_2}}}\mbox{\Hypertarget{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25eda804a4b70aa7e0a2996cb054e1feddf4e}\label{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25eda804a4b70aa7e0a2996cb054e1feddf4e}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Select\+Input\+\_\+2&Pulse counter input 2 is selected \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_PinSelectInput\_3@{kLPTMR\_PinSelectInput\_3}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_PinSelectInput\_3@{kLPTMR\_PinSelectInput\_3}}}\mbox{\Hypertarget{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25eda35b44045498f8af998d6ca99563009be}\label{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25eda35b44045498f8af998d6ca99563009be}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Select\+Input\+\_\+3&Pulse counter input 3 is selected \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__lptmr_ga68d8b01f0167f938bfa86442f4772ced}\label{group__lptmr_ga68d8b01f0167f938bfa86442f4772ced}} 
+\index{Lptmr@{Lptmr}!\_lptmr\_prescaler\_clock\_select@{\_lptmr\_prescaler\_clock\_select}}
+\index{\_lptmr\_prescaler\_clock\_select@{\_lptmr\_prescaler\_clock\_select}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{\_lptmr\_prescaler\_clock\_select}{\_lptmr\_prescaler\_clock\_select}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__lptmr_ga68d8b01f0167f938bfa86442f4772ced}{\+\_\+lptmr\+\_\+prescaler\+\_\+clock\+\_\+select}}}
+
+
+
+L\+P\+T\+MR prescaler/glitch filter clock select. 
+
+\begin{DoxyNote}{Note}
+Clock connections are So\+C-\/specific 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_PrescalerClock\_0@{kLPTMR\_PrescalerClock\_0}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_PrescalerClock\_0@{kLPTMR\_PrescalerClock\_0}}}\mbox{\Hypertarget{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda6799e08f040c9277a2e30de3b96b69c5}\label{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda6799e08f040c9277a2e30de3b96b69c5}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescaler\+Clock\+\_\+0&Prescaler/glitch filter clock 0 selected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_PrescalerClock\_1@{kLPTMR\_PrescalerClock\_1}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_PrescalerClock\_1@{kLPTMR\_PrescalerClock\_1}}}\mbox{\Hypertarget{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda36de7a40ece786199804426d58e73c4e}\label{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda36de7a40ece786199804426d58e73c4e}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescaler\+Clock\+\_\+1&Prescaler/glitch filter clock 1 selected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_PrescalerClock\_2@{kLPTMR\_PrescalerClock\_2}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_PrescalerClock\_2@{kLPTMR\_PrescalerClock\_2}}}\mbox{\Hypertarget{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda2590ba1f8ad0bd638bcec43712213935}\label{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda2590ba1f8ad0bd638bcec43712213935}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescaler\+Clock\+\_\+2&Prescaler/glitch filter clock 2 selected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_PrescalerClock\_3@{kLPTMR\_PrescalerClock\_3}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_PrescalerClock\_3@{kLPTMR\_PrescalerClock\_3}}}\mbox{\Hypertarget{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda5aeb8e70968f58667bb2769847585106}\label{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda5aeb8e70968f58667bb2769847585106}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescaler\+Clock\+\_\+3&Prescaler/glitch filter clock 3 selected. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__lptmr_gad4e93a569a14f82f31f9cac1582daddd}\label{group__lptmr_gad4e93a569a14f82f31f9cac1582daddd}} 
+\index{Lptmr@{Lptmr}!\_lptmr\_prescaler\_glitch\_value@{\_lptmr\_prescaler\_glitch\_value}}
+\index{\_lptmr\_prescaler\_glitch\_value@{\_lptmr\_prescaler\_glitch\_value}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{\_lptmr\_prescaler\_glitch\_value}{\_lptmr\_prescaler\_glitch\_value}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__lptmr_gad4e93a569a14f82f31f9cac1582daddd}{\+\_\+lptmr\+\_\+prescaler\+\_\+glitch\+\_\+value}}}
+
+
+
+L\+P\+T\+MR prescaler/glitch filter values. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_0@{kLPTMR\_Prescale\_Glitch\_0}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_0@{kLPTMR\_Prescale\_Glitch\_0}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda112121efd220fe2bf6d6c371ee2e7de9}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda112121efd220fe2bf6d6c371ee2e7de9}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+0&Prescaler divide 2, glitch filter does not support this setting \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_1@{kLPTMR\_Prescale\_Glitch\_1}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_1@{kLPTMR\_Prescale\_Glitch\_1}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda89602ece7c01cee81cdf02386926d3bb}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda89602ece7c01cee81cdf02386926d3bb}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+1&Prescaler divide 4, glitch filter 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_2@{kLPTMR\_Prescale\_Glitch\_2}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_2@{kLPTMR\_Prescale\_Glitch\_2}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddad52a7b1bc3feb4aef749238f4888bf60}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddad52a7b1bc3feb4aef749238f4888bf60}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+2&Prescaler divide 8, glitch filter 4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_3@{kLPTMR\_Prescale\_Glitch\_3}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_3@{kLPTMR\_Prescale\_Glitch\_3}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddaa6c44c168e0d6f6d138c3d0a6055c1ea}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddaa6c44c168e0d6f6d138c3d0a6055c1ea}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+3&Prescaler divide 16, glitch filter 8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_4@{kLPTMR\_Prescale\_Glitch\_4}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_4@{kLPTMR\_Prescale\_Glitch\_4}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda3673e511ea9bfc1b69db3ec35c2ea4ea}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda3673e511ea9bfc1b69db3ec35c2ea4ea}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+4&Prescaler divide 32, glitch filter 16 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_5@{kLPTMR\_Prescale\_Glitch\_5}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_5@{kLPTMR\_Prescale\_Glitch\_5}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda18463b98220efab5003aee9ed0c4c8e3}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda18463b98220efab5003aee9ed0c4c8e3}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+5&Prescaler divide 64, glitch filter 32 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_6@{kLPTMR\_Prescale\_Glitch\_6}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_6@{kLPTMR\_Prescale\_Glitch\_6}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda76d3ecf9e0694dfa18aa463ddef44043}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda76d3ecf9e0694dfa18aa463ddef44043}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+6&Prescaler divide 128, glitch filter 64 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_7@{kLPTMR\_Prescale\_Glitch\_7}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_7@{kLPTMR\_Prescale\_Glitch\_7}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda002055b58f8cd211b9f45160f2b35347}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda002055b58f8cd211b9f45160f2b35347}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+7&Prescaler divide 256, glitch filter 128 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_8@{kLPTMR\_Prescale\_Glitch\_8}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_8@{kLPTMR\_Prescale\_Glitch\_8}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddaef05cfa9678ac5a33740c7a0e3481707}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddaef05cfa9678ac5a33740c7a0e3481707}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+8&Prescaler divide 512, glitch filter 256 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_9@{kLPTMR\_Prescale\_Glitch\_9}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_9@{kLPTMR\_Prescale\_Glitch\_9}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddad76b4636eed4be5a6e42bd95ccf35272}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddad76b4636eed4be5a6e42bd95ccf35272}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+9&Prescaler divide 1024, glitch filter 512 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_10@{kLPTMR\_Prescale\_Glitch\_10}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_10@{kLPTMR\_Prescale\_Glitch\_10}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda888b287eaa57577f9f68e33f5cfed22a}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda888b287eaa57577f9f68e33f5cfed22a}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+10&Prescaler divide 2048 glitch filter 1024 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_11@{kLPTMR\_Prescale\_Glitch\_11}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_11@{kLPTMR\_Prescale\_Glitch\_11}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddadd34f2e32e760276641b68ed9b2e8c29}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddadd34f2e32e760276641b68ed9b2e8c29}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+11&Prescaler divide 4096, glitch filter 2048 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_12@{kLPTMR\_Prescale\_Glitch\_12}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_12@{kLPTMR\_Prescale\_Glitch\_12}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda859b48e0bcbddfa8550c38121faedccc}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda859b48e0bcbddfa8550c38121faedccc}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+12&Prescaler divide 8192, glitch filter 4096 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_13@{kLPTMR\_Prescale\_Glitch\_13}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_13@{kLPTMR\_Prescale\_Glitch\_13}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddad89da696529cb28e8a68c68533564249}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddad89da696529cb28e8a68c68533564249}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+13&Prescaler divide 16384, glitch filter 8192 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_14@{kLPTMR\_Prescale\_Glitch\_14}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_14@{kLPTMR\_Prescale\_Glitch\_14}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddafcf75b60e904cb458bcd28cd4f9ec92a}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582dadddafcf75b60e904cb458bcd28cd4f9ec92a}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+14&Prescaler divide 32768, glitch filter 16384 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_Prescale\_Glitch\_15@{kLPTMR\_Prescale\_Glitch\_15}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_Prescale\_Glitch\_15@{kLPTMR\_Prescale\_Glitch\_15}}}\mbox{\Hypertarget{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda38731d6f04ade303c0f002ac558c319a}\label{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda38731d6f04ade303c0f002ac558c319a}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+15&Prescaler divide 65536, glitch filter 32768 \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__lptmr_ga114bc57ed4e972d512911d9d866a7573}\label{group__lptmr_ga114bc57ed4e972d512911d9d866a7573}} 
+\index{Lptmr@{Lptmr}!\_lptmr\_status\_flags@{\_lptmr\_status\_flags}}
+\index{\_lptmr\_status\_flags@{\_lptmr\_status\_flags}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{\_lptmr\_status\_flags}{\_lptmr\_status\_flags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__lptmr_ga114bc57ed4e972d512911d9d866a7573}{\+\_\+lptmr\+\_\+status\+\_\+flags}}}
+
+
+
+List of the L\+P\+T\+MR status flags. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_TimerCompareFlag@{kLPTMR\_TimerCompareFlag}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_TimerCompareFlag@{kLPTMR\_TimerCompareFlag}}}\mbox{\Hypertarget{group__lptmr_gga114bc57ed4e972d512911d9d866a7573ab51c1e072bf8436d8b7546a3777dbadd}\label{group__lptmr_gga114bc57ed4e972d512911d9d866a7573ab51c1e072bf8436d8b7546a3777dbadd}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Timer\+Compare\+Flag&Timer compare flag \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__lptmr_ga40237256921d8a780c71b2f4ce162498}\label{group__lptmr_ga40237256921d8a780c71b2f4ce162498}} 
+\index{Lptmr@{Lptmr}!\_lptmr\_timer\_mode@{\_lptmr\_timer\_mode}}
+\index{\_lptmr\_timer\_mode@{\_lptmr\_timer\_mode}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{\_lptmr\_timer\_mode}{\_lptmr\_timer\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__lptmr_ga40237256921d8a780c71b2f4ce162498}{\+\_\+lptmr\+\_\+timer\+\_\+mode}}}
+
+
+
+L\+P\+T\+MR timer mode selection. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_TimerModeTimeCounter@{kLPTMR\_TimerModeTimeCounter}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_TimerModeTimeCounter@{kLPTMR\_TimerModeTimeCounter}}}\mbox{\Hypertarget{group__lptmr_gga40237256921d8a780c71b2f4ce162498a308f1e902c37f04845e88dbdcf090d1d}\label{group__lptmr_gga40237256921d8a780c71b2f4ce162498a308f1e902c37f04845e88dbdcf090d1d}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Timer\+Mode\+Time\+Counter&Time Counter mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLPTMR\_TimerModePulseCounter@{kLPTMR\_TimerModePulseCounter}!Lptmr@{Lptmr}}\index{Lptmr@{Lptmr}!kLPTMR\_TimerModePulseCounter@{kLPTMR\_TimerModePulseCounter}}}\mbox{\Hypertarget{group__lptmr_gga40237256921d8a780c71b2f4ce162498a3e671df6c6027b048c5878d45031415d}\label{group__lptmr_gga40237256921d8a780c71b2f4ce162498a3e671df6c6027b048c5878d45031415d}} 
+k\+L\+P\+T\+M\+R\+\_\+\+Timer\+Mode\+Pulse\+Counter&Pulse Counter mode \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__lptmr_ga2436bf246a0aab4a0191d059b80ff088}\label{group__lptmr_ga2436bf246a0aab4a0191d059b80ff088}} 
+\index{Lptmr@{Lptmr}!LPTMR\_Deinit@{LPTMR\_Deinit}}
+\index{LPTMR\_Deinit@{LPTMR\_Deinit}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{LPTMR\_Deinit()}{LPTMR\_Deinit()}}
+{\footnotesize\ttfamily void L\+P\+T\+M\+R\+\_\+\+Deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_p_t_m_r___type}{L\+P\+T\+M\+R\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Gates the L\+P\+T\+MR clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & L\+P\+T\+MR peripheral base address\\
+\hline
+\end{DoxyParams}
+brief Gates the L\+P\+T\+MR clock.
+
+param base L\+P\+T\+MR peripheral base address \mbox{\Hypertarget{group__lptmr_ga11a8100adcd8f9f0cf167b2d84a51d11}\label{group__lptmr_ga11a8100adcd8f9f0cf167b2d84a51d11}} 
+\index{Lptmr@{Lptmr}!LPTMR\_GetDefaultConfig@{LPTMR\_GetDefaultConfig}}
+\index{LPTMR\_GetDefaultConfig@{LPTMR\_GetDefaultConfig}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{LPTMR\_GetDefaultConfig()}{LPTMR\_GetDefaultConfig()}}
+{\footnotesize\ttfamily void L\+P\+T\+M\+R\+\_\+\+Get\+Default\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__lptmr_gad0d6720b03ee0674c139c7b9bb3d0419}{lptmr\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Fills in the L\+P\+T\+MR configuration structure with default settings. 
+
+The default values are as follows. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{config->timerMode = \mbox{\hyperlink{group__lptmr_gga40237256921d8a780c71b2f4ce162498a308f1e902c37f04845e88dbdcf090d1d}{kLPTMR\_TimerModeTimeCounter}};}
+\DoxyCodeLine{config->pinSelect = \mbox{\hyperlink{group__lptmr_ggad7812eb27238f5bd2cb3edc40d5f25edaa5591ed16b209e49a55d782b0152d27b}{kLPTMR\_PinSelectInput\_0}};}
+\DoxyCodeLine{config->pinPolarity = \mbox{\hyperlink{group__lptmr_gga9bd2404c984ac5eea420a396e7cdda77a2f387787b10172f719dbc304573fc0c6}{kLPTMR\_PinPolarityActiveHigh}};}
+\DoxyCodeLine{config->enableFreeRunning = \textcolor{keyword}{false};}
+\DoxyCodeLine{config->bypassPrescaler = \textcolor{keyword}{true};}
+\DoxyCodeLine{config->prescalerClockSource = \mbox{\hyperlink{group__lptmr_gga68d8b01f0167f938bfa86442f4772ceda36de7a40ece786199804426d58e73c4e}{kLPTMR\_PrescalerClock\_1}};}
+\DoxyCodeLine{config->value = \mbox{\hyperlink{group__lptmr_ggad4e93a569a14f82f31f9cac1582daddda112121efd220fe2bf6d6c371ee2e7de9}{kLPTMR\_Prescale\_Glitch\_0}};}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the L\+P\+T\+MR configuration structure.\\
+\hline
+\end{DoxyParams}
+brief Fills in the L\+P\+T\+MR configuration structure with default settings.
+
+The default values are as follows. code config-\/$>$timer\+Mode = k\+L\+P\+T\+M\+R\+\_\+\+Timer\+Mode\+Time\+Counter; config-\/$>$pin\+Select = k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Select\+Input\+\_\+0; config-\/$>$pin\+Polarity = k\+L\+P\+T\+M\+R\+\_\+\+Pin\+Polarity\+Active\+High; config-\/$>$enable\+Free\+Running = false; config-\/$>$bypass\+Prescaler = true; config-\/$>$prescaler\+Clock\+Source = k\+L\+P\+T\+M\+R\+\_\+\+Prescaler\+Clock\+\_\+1; config-\/$>$value = k\+L\+P\+T\+M\+R\+\_\+\+Prescale\+\_\+\+Glitch\+\_\+0; endcode param config A pointer to the L\+P\+T\+MR configuration structure. \mbox{\Hypertarget{group__lptmr_ga1f2e64506623dc66e329e136931b4e25}\label{group__lptmr_ga1f2e64506623dc66e329e136931b4e25}} 
+\index{Lptmr@{Lptmr}!LPTMR\_Init@{LPTMR\_Init}}
+\index{LPTMR\_Init@{LPTMR\_Init}!Lptmr@{Lptmr}}
+\subsubsection{\texorpdfstring{LPTMR\_Init()}{LPTMR\_Init()}}
+{\footnotesize\ttfamily void L\+P\+T\+M\+R\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_p_t_m_r___type}{L\+P\+T\+M\+R\+\_\+\+Type}} $\ast$}]{base,  }\item[{const \mbox{\hyperlink{group__lptmr_gad0d6720b03ee0674c139c7b9bb3d0419}{lptmr\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Ungates the L\+P\+T\+MR clock and configures the peripheral for a basic operation. 
+
+\begin{DoxyNote}{Note}
+This A\+PI should be called at the beginning of the application using the L\+P\+T\+MR driver.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & L\+P\+T\+MR peripheral base address \\
+\hline
+{\em config} & A pointer to the L\+P\+T\+MR configuration structure.\\
+\hline
+\end{DoxyParams}
+brief Ungates the L\+P\+T\+MR clock and configures the peripheral for a basic operation.
+
+note This A\+PI should be called at the beginning of the application using the L\+P\+T\+MR driver.
+
+param base L\+P\+T\+MR peripheral base address param config A pointer to the L\+P\+T\+MR configuration structure. 

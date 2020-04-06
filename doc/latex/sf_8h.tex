@@ -1,0 +1,335 @@
+\hypertarget{sf_8h}{}\section{sf/sf.h File Reference}
+\label{sf_8h}\index{sf/sf.h@{sf/sf.h}}
+{\ttfamily \#include \char`\"{}sf\+\_\+model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sf\+\_\+setup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sf\+\_\+ol23xx.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsf__user__config__t}{sf\+\_\+user\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em This structure is used by the user to initialize the S\+I\+G\+F\+OX device. It contains a configuration of the S\+I\+G\+F\+OX device only (no S\+PI, etc. configuration). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em This data structure is used by the S\+I\+G\+F\+OX driver (it is the first parameter of most S\+I\+G\+F\+OX functions). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em This structure represents the payload of S\+PI frames. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf__device__info__t}{sf\+\_\+device\+\_\+info\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em This structure contains information about the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sf_8h_ae907b079f9fdff2fb7367801b163c60a}{S\+F\+\_\+\+H\+A\+S\+\_\+\+C\+M\+D\+\_\+\+A\+CK}}(cmd)
+\begin{DoxyCompactList}\small\item\em This macro returns true when an acknowledgement is expected for a given S\+PI command. Otherwise it returns false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga1b29c7c81b1098654855dd013cb61b56}{\+\_\+sf\+\_\+status\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a74c58258f59ceb3ec13c27709238ddf7}{k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Ack\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+SF, 0U), 
+\mbox{\hyperlink{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a00e81a58055c9f563ea397797ce408f5}{k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Ack\+Length}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+SF, 1U), 
+\mbox{\hyperlink{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a5ae3424a02fc31c3e6482b6245e0dda8}{k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Timeout}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+SF, 2U), 
+\mbox{\hyperlink{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a82b543f202905c06ab2dca7133ec7617}{k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Test\+Fail}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+SF, 3U)
+ \}
+\begin{DoxyCompactList}\small\item\em Specific error codes for this driver. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a323b9fcd84e1c29fb2bf3bbdc5b485cf}{sf\+Spi\+Cmd\+Send\+Echo}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+E\+C\+H\+O\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4135c70bed7a3c56f4e645e7b2c8c709}{sf\+Spi\+Cmd\+Wakeup}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aac58778261544ebfae70c74d75d0a38e}{sf\+Spi\+Cmd\+Sleep}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+T\+O\+\_\+\+S\+L\+E\+E\+P\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3b6772cd4447ad1e61b0991ec6c73b06}{sf\+Spi\+Cmd\+Send\+Payload}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a8269f4e639fcaa1ef63d40ed98a689eb}{sf\+Spi\+Cmd\+Send\+Bit}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+B\+I\+T\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3adb93e94b6dbf0da045c8e562f502ce}{sf\+Spi\+Cmd\+Out\+Of\+Band}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+O\+U\+T\+\_\+\+B\+A\+N\+D\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a67a249422314b3352a70420adf4971c2}{sf\+Spi\+Cmd\+Receive}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+R\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ac11254b636e96580dc48d8610993374c}{sf\+Spi\+Cmd\+Get\+Info}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+I\+N\+F\+O\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4d9607b70af259dd814f8d37ff8cc227}{sf\+Spi\+Cmd\+Get\+Ul\+Freq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+U\+L\+\_\+\+F\+R\+E\+Q\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4f536b8d125504fe0534b905fda4590c}{sf\+Spi\+Cmd\+Set\+Ul\+Freq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+U\+L\+\_\+\+F\+R\+E\+Q\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa10006c82aea0fb6aa0a52ba12cdfac7}{sf\+Spi\+Cmd\+Cont\+Wave}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+T\+\_\+\+W\+A\+V\+E\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545af126d09b7a286dd66b964230bb330cf6}{sf\+Spi\+Cmd\+Get\+Dev\+Ver}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+\_\+\+V\+E\+R\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ab6acd78f6bf6220ac722308ae77323c5}{sf\+Spi\+Cmd\+Trigger\+Wd}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+W\+D\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aff056e96d6096dc9ae5f7d6e5bc5475d}{sf\+Spi\+Cmd\+Send\+Test\+Mode}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+T\+E\+S\+T\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545adf6be6a6d745bf9c660a7bf39434df63}{sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z1}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+T\+O\+\_\+\+R\+C\+Z1\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aff372fd557435fc9c9cd727f8dd38dcf}{sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z2}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+T\+O\+\_\+\+R\+C\+Z2\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aba87749a06f8b0830a487d0cd98475ac}{sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z3}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+T\+O\+\_\+\+R\+C\+Z3\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa000a585d7f734779a89c40d17c04bdb}{sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z4}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+T\+O\+\_\+\+R\+C\+Z4\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545af63d2ea7a4a64e12aaddb40b6f2f08c7}{sf\+Spi\+Cmd\+Switch\+To\+Private\+Key}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+P\+R\+I\+V\+A\+T\+E\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a127a18f45f6af6d7445507acc71673c2}{sf\+Spi\+Cmd\+Switch\+To\+Public\+Key}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa3fbbb0fbb261f3fef0bfd1979465e42}{sf\+Spi\+Cmd\+Psk\+Ask\+Zero\+Seq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+P\+S\+K\+\_\+\+A\+S\+K\+\_\+\+Z\+E\+R\+O\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a0e6c7302cae22023081fa20c2fecbad3}{sf\+Spi\+Cmd\+Psk\+Ask\+A\+A\+A\+A\+Seq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+P\+S\+K\+\_\+\+A\+S\+K\+\_\+\+A\+A\+A\+A\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a267fd5d2f268a0194c58b7e164aa04db}{sf\+Spi\+Cmd\+Set\+Dl\+Freq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+D\+L\+\_\+\+F\+R\+E\+Q\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a755487e4397f3711946ee9f876ae1a03}{sf\+Spi\+Cmd\+Get\+Dl\+Freq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+D\+L\+\_\+\+F\+R\+E\+Q\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ab5a13bfe3df59a1ee403e7b1ad2f57fe}{sf\+Spi\+Cmd\+Set\+F\+C\+C\+Macro\+Ch}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+F\+C\+C\+\_\+\+C\+H\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a55ce54ac8415b52f7e77ffe3af33c559}{sf\+Spi\+Cmd\+Get\+F\+C\+C\+Macro\+Ch\+Usage}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+F\+C\+C\+\_\+\+C\+H\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3d75dd26ce332b5651fe0b201cea83fc}{sf\+Spi\+Cmd\+Reset\+F\+C\+C\+Macro\+Ch}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+R\+E\+S\+E\+T\+\_\+\+F\+C\+C\+\_\+\+C\+H\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a8623a017ff1ad9f3f2e78e51c1c1c3da}{sf\+Spi\+Cmd\+Static\+Freq\+Cal}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+A\+L\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a6920f892112eb6f26679cac7c36430a1}{sf\+Spi\+Cmd\+Temp\+Freq\+Cal}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+T\+E\+M\+P\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+A\+L\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a254d063e034b51c5b0907d49596ab223}{sf\+Spi\+Cmd\+Get\+Last\+Sent\+R\+S\+SI}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+S\+E\+N\+T\+\_\+\+R\+S\+S\+I\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a2b3e3582f6c7005c892f3416681ded4a}{sf\+Spi\+Cmd\+Update\+P\+A\+Curve}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+P\+A\+\_\+\+C\+U\+R\+V\+E\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545acf5da768d8852e892acfee759cd026e2}{sf\+Spi\+Cmd\+Init\+R\+S\+S\+I\+Cal}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+I\+N\+I\+T\+\_\+\+R\+S\+S\+I\+\_\+\+C\+A\+L\+I\+B\+\_\+\+ID
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI commands of the device. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_gaedd94907ea20da8e6d1cd3e3e3282c2c}{sf\+\_\+intern\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca42c1bdff1b32704ed68401e8630cc52e}{sf\+State\+Idle}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca366330ad10f04c1d7c5625904bd294a5}{sf\+State\+Init}}, 
+\mbox{\hyperlink{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca2d8b641d6cf5e3284f6a8bbe038733c1}{sf\+State\+Wait\+For\+Cmd}}
+ \}
+\begin{DoxyCompactList}\small\item\em The state of the device in O\+L23xx software state machine. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga9f14f69f90dfff97b98977db7a73ba68}{sf\+\_\+intern\+\_\+error\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a19b412cc5c8e6fbdc572d470e91e8f17}{sf\+Err\+None}} = 0x00U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9d3aa2e6bae681608b12f706c1e56b89}{sf\+Err\+Open\+Malloc}} = 0x10U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a5745af3a0917d42e99b35d143d7c841b}{sf\+Err\+Open\+Id\+Ptr}} = 0x11U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a34c89e7cf0ce9d99cdc59bf13cac7ea9}{sf\+Err\+Open\+Get\+Seq}} = 0x12U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a319c7f5da1e94ac59f36032b89c56842}{sf\+Err\+Open\+Get\+Pn}} = 0x13U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aef931d5ec6bbf1af3ba18085cf2f5774}{sf\+Err\+Open\+State}} = 0x14U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7781f096a60abf16956e5ebc1136578b}{sf\+Err\+Open\+Get\+Fh}} = 0x15U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a94b5bce35c5189935246c1a4b0bae296}{sf\+Err\+Open\+Macro\+Channel\+Width}} = 0x16U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a56ae3ee39054ae629a9344ab04c79837}{sf\+Err\+Open\+Rcz\+Ptr}} = 0x17U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a554b0c6f521b9fb69d42ffb5d883c836}{sf\+Err\+Close\+Free}} = 0x20U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aaabea2b6ec2ea395166e23d4942e1f4c}{sf\+Err\+Close\+Rf\+Stop}} = 0x21U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a019946ece406e5708583c14952a39708}{sf\+Err\+Send\+Frame\+Data\+Length}} = 0x30U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa647caea699108aab7337be84c2be6e3}{sf\+Err\+Send\+Frame\+State}} = 0x31U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a021d42fd258a93cea6d590b0d754c840}{sf\+Err\+Send\+Frame\+Response\+Ptr}} = 0x32U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a8cf788b1949f63cfad110e84b0faabac}{sf\+Err\+Send\+Frame\+Build\+Uplink}} = 0x33U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad128acc26ce64b9f4aa9fba217e89ca1}{sf\+Err\+Send\+Frame\+Send\+Uplink}} = 0x34U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a28c9f697991f419d24a9ac7a11ab2a47}{sf\+Err\+Send\+Frame\+Receive}} = 0x35U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6f56a4b080d9727d3aa7f684301183bd}{sf\+Err\+Send\+Frame\+Delay\+Oob\+Ack}} = 0x36U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af534c64aa0f756556edf7aa712fb469b}{sf\+Err\+Send\+Frame\+Build\+Oob\+Ack}} = 0x37U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a151036f32e66d9b79c53589523f1d47f}{sf\+Err\+Send\+Frame\+Send\+Oob\+Ack}} = 0x38U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9ad1d23174c3efeab91d3ade6cf81313}{sf\+Err\+Send\+Frame\+Data\+Ptr}} = 0x39U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a01c819a7539e8362d685325ba45a1e52}{sf\+Err\+Send\+Frame\+Carrier\+Sense\+Config}} = 0x3\+AU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a15a18dbf53466c7b41a80a47afa4eaed}{sf\+Err\+Send\+Frame\+Carrier\+Sense\+Timeout}} = 0x3\+BU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad21b2f8936a006fb59f7137b9049b464}{sf\+Err\+Send\+Frame\+Wait\+Timeout}} = 0x3\+EU, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa85a7c45fd2276a8cc59da2da57e2e69}{sf\+Err\+Send\+Frame\+Invalid\+Fh\+Chan}} = 0x3\+FU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9667dd72eba8aeeba708761b451b1dfc}{sf\+Err\+Send\+Bit\+State}} = 0x41U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afd02149c575f86e8aab0cf0967482e30}{sf\+Err\+Send\+Bit\+Response\+Ptr}} = 0x42U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a1d58e25e82556a1e5da2b2cbd98dbf19}{sf\+Err\+Send\+Bit\+Build\+Uplink}} = 0x43U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a885c9a43abab532c23ae4f09fb19ac22}{sf\+Err\+Send\+Bit\+Send\+Uplink}} = 0x44U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa810b80eb6175489156bbbb6b6f46cce}{sf\+Err\+Send\+Bit\+Receive}} = 0x45U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a38f8a5f19e393d8c8f56b450b2224685}{sf\+Err\+Send\+Bit\+Delay\+Oob\+Ack}} = 0x46U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6993b5122381b1d1fa9c00824fe20a6e}{sf\+Err\+Send\+Bit\+Build\+Oob\+Ack}} = 0x47U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a45c5dd0d0a2f8d8acf1c924103c8246f}{sf\+Err\+Send\+Bit\+Send\+Oob\+Ack}} = 0x48U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2771f6631af7347143da2a62bcb7d7bc}{sf\+Err\+Send\+Bit\+Data\+Ptr}} = 0x49U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a770e546fd8ffbd3f5826e00909e06b2c}{sf\+Err\+Send\+Bit\+Carrier\+Sense\+Config}} = 0x4\+AU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afa5384ba19318d0c1151df9efb1cc1c6}{sf\+Err\+Send\+Bit\+Carrier\+Sense\+Timeout}} = 0x4\+BU, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a357382e45f540e1dbc20336cfb5d46a9}{sf\+Err\+Send\+Bit\+Wait\+Timeout}} = 0x4\+EU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7155e65e9ae3b204b28dbdf0effe5013}{sf\+Err\+Send\+Bit\+Invalid\+Fh\+Chan}} = 0x4\+FU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a5e5631cb5ffb60efdcf4b9ed50d3ba97}{sf\+Err\+Send\+Oob\+State}} = 0x51U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68abbd8f67cfb56ffae3022ca43d0516081}{sf\+Err\+Send\+Oob\+Build\+Uplink}} = 0x53U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a824e815911f539061cd9a055db741419}{sf\+Err\+Send\+Oob\+Send\+Uplink}} = 0x54U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a36494bce251854559d6c364d38ea05c0}{sf\+Err\+Send\+Oob\+Invalid\+Fh\+Chan}} = 0x5\+FU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7963c32510a7541dcb6ab20265087202}{sf\+Err\+Set\+Std\+Config\+Sigfox\+Chan}} = 0x90U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad5584b73f9aad85efdec4565a95c7750}{sf\+Err\+Set\+Std\+Config\+Set}} = 0x91U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a0612d5e84c6c921c40c1199619585dc7}{sf\+Err\+Test\+Mode0\+Rf\+Init}} = 0x\+A0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac06aba9023dcda5e1b1e29ced31d7922}{sf\+Err\+Test\+Mode0\+Change\+Freq}} = 0x\+A1U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a1e0cce4ea1ffd2afbb0a26257b727d4b}{sf\+Err\+Test\+Mode0\+Rf\+Send}} = 0x\+A2U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a11aa88fe3d3b8276a9f6499125766359}{sf\+Err\+Test\+Mode0\+Delay}} = 0x\+A3U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a33ea72779964d1756e185a98339bb7ea}{sf\+Err\+Test\+Mode0\+Rf\+Stop}} = 0x\+A4U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9c0bc4cb4b7cba4e971409112b2cdf22}{sf\+Err\+Test\+Mode\+State}} = 0x\+B1U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af7f4e17faad6cce6c13c72afebb7a59e}{sf\+Err\+Test\+Mode2\+Report\+Test}} = 0x\+C0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afaa24b4f4188489cad464072acb58bab}{sf\+Err\+Test\+Mode3\+Rf\+Init}} = 0x\+D0U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a8b23bbbce2a8f47ea0554f37fd453591}{sf\+Err\+Test\+Mode3\+Change\+Freq}} = 0x\+D1U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a61643a8e6b4ac150b591c944b1e89b8f}{sf\+Err\+Test\+Mode3\+Timer\+Start}} = 0x\+D2U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2238a4c9b35c43888d802ff22be51e2a}{sf\+Err\+Test\+Mode3\+Report\+Test}} = 0x\+D3U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a33c98fbc7c9ac9eba79507827140118e}{sf\+Err\+Test\+Mode3\+Timer\+Stop}} = 0x\+D4U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a4f9de992abfb3c006e0cf68fc2bc18ea}{sf\+Err\+Test\+Mode3\+Rf\+Stop}} = 0x\+D5U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aec92d884ac1e866b20e1d34b8ba238d5}{sf\+Err\+Test\+Mode4\+Build\+Uplink}} = 0x\+E0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac79a179a45604e9cc1345fff42b3f6e1}{sf\+Err\+Test\+Mode4\+Send\+Uplink}} = 0x\+E1U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a48f4e88fbe30c5f8dda07991070d7fbd}{sf\+Err\+Test\+Mode4\+Report\+Test}} = 0x\+E2U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ae4442c6b603ac90b63fcf083cddf32b0}{sf\+Err\+Test\+Mode4\+Get\+Rssi}} = 0x\+E3U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2f782386131bf8c4d591ce34ef599a6a}{sf\+Err\+Test\+Mode4\+Delay}} = 0x\+E4U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab6dc2e8944469dc027af3fa4d76c4b16}{sf\+Err\+Test\+Mode5\+Rf\+Init}} = 0x\+F0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af6bb2efc8d9178d86f3ae926e33f87c3}{sf\+Err\+Test\+Mode5\+Change\+Freq}} = 0x\+F1U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7649594d293dbb217229c440164a4431}{sf\+Err\+Test\+Mode5\+Build\+Uplink}} = 0x\+F2U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a55f5dbb9b94425b67f79ba9c753cffe3}{sf\+Err\+Test\+Mode5\+Send\+Uplink}} = 0x\+F3U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a41e514a0f304c45876c4d11c80c21226}{sf\+Err\+Test\+Mode5\+Rf\+Stop}} = 0x\+F4U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6521e372a5fef561b8d00761abf36f0b}{sf\+Err\+Unknown\+Spi\+Command}} = 0x01U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac9cb3b9252274129a71fe21107c00ba7}{sf\+Err\+Manuf\+None}} = 0x00U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab1e2a619a65d561f5e7923682d1d438b}{sf\+Err\+Manuf\+Malloc}} = 0x08U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a513c8c93b0eb30eeecb0a5a2d4a71d72}{sf\+Err\+Manuf\+Init}} = 0x10U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aca1903fffd6d7be9649640653bc4a312}{sf\+Err\+Manuf\+Send}} = 0x18U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68abc2079bb6e0f41f5c33dd759b01b0353}{sf\+Err\+Manuf\+Free}} = 0x20U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a3ab0507faa95b8c251cac1586dfcf7b3}{sf\+Err\+Manuf\+Volt\+Temp}} = 0x28U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a42fa085868067013540bf5b6f9ec609f}{sf\+Err\+Manuf\+Rf\+Stop}} = 0x30U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a73aa352d9e2d3e24cb22be072a4e53a6}{sf\+Err\+Manuf\+Dly}} = 0x38U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a59a9437cb6440abc225c2c04776fb7df}{sf\+Err\+Manuf\+Ch\+Freq}} = 0x40U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a84c86fd0803ca0927c2eab4da81e00c4}{sf\+Err\+Manuf\+Aes}} = 0x48U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a093b59b03e424aafea8bbf25aaa390d3}{sf\+Err\+Manuf\+Getnvmem}} = 0x50U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a35e73affe78f3354a84c52d8af494fcd}{sf\+Err\+Manuf\+Setnvmem}} = 0x58U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab3fa429b09c512abd7cfec910a5589a4}{sf\+Err\+Manuf\+Get\+Rssi}} = 0x60U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a24310e5268335ac67c0b5fdef9adfff4}{sf\+Err\+Manuf\+Wait\+Frame\+Timeout}} = 0x68U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ada8ddc80995c712fce6d6ee7c498a085}{sf\+Err\+Manuf\+Wait\+Cs\+Timeout}} = 0x69U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a784be46a86c18a044932cc16ea58f03d}{sf\+Err\+Manuf\+Timer\+Start}} = 0x70U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a3e197f949fd2edd42ec97bef2dac7672}{sf\+Err\+Manuf\+Timer\+Start\+Cs}} = 0x71U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a25b90510613601164a7de3052f06e65f}{sf\+Err\+Manuf\+Timer\+Stop\+Cs}} = 0x72U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7975593fe2a3cfdcbcdd4d64b11c42c9}{sf\+Err\+Manuf\+Timer\+Stop}} = 0x78U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a0e7ae4e6d54b60a95076b0b1e940deed}{sf\+Err\+Manuf\+Timer\+End}} = 0x80U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a888ca7f1453eefec77709ce9212e8804}{sf\+Err\+Manuf\+Test\+Report}} = 0x88U
+ \}
+\begin{DoxyCompactList}\small\item\em Error codes of the S\+I\+G\+F\+OX device included in S\+PI acknowledgement frames. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga5c889c0804ec8ccd3741803bd8b12d9c}{sf\+\_\+test\+\_\+mode\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9ca887798a1b768fb56063302b44f5d27d8}{sf\+Test\+Mode\+Tx\+Bpsk}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9caac88812a5a33c5e5012847354396c9a8}{sf\+Test\+Mode\+Tx\+Protocol}}, 
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cae1fbf862817e4e3c1586468660ed2c42}{sf\+Test\+Mode\+Rx\+Protocol}}, 
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9ca7823d41861028f838630e4904644ddec}{sf\+Test\+Mode\+Rx\+Gfsk}}, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cad4b9133e7909590fabcd894ddcebcbda}{sf\+Test\+Mode\+Rx\+Sensi}}, 
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cad51d2bdf24e66c8a5059b162fd5b01bc}{sf\+Test\+Mod\+Tx\+Synth}}
+ \}
+\begin{DoxyCompactList}\small\item\em Selection of a test mode used to verify the protocol, RF and sensitivity. Detailed description of the modes is in the device datasheet. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}{sf\+\_\+xtal\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_gga921cd8c6964917cde98f2a132c5548d5aeec2c76936f143f22966c4e0fc3cf417}{sf\+Xtal552}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga921cd8c6964917cde98f2a132c5548d5a5e6adb116a9a9946e482b94bef60f46b}{sf\+Xtal276}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Selection of X\+T\+AL type used in the device. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}{sf\+\_\+tx\+\_\+repeat\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_gga7d2f06984784542a95d02e422a42d9cfa68731d8416f50490cb067b1a5fac8c49}{sf\+Tx\+Repeat1}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga7d2f06984784542a95d02e422a42d9cfa4da7c9c47dc49a65d23bdea3ab13ace1}{sf\+Tx\+Repeat3}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Amount of transmissions that will happen on one time invoking of S\+F\+\_\+\+Send\+Payload function. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}{sf\+\_\+pa\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_ggac746e971077ef8c8dac9d26a8b47a2f9ae374e75084169a023bad0bff5c534a79}{sf\+Pa14}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_ggac746e971077ef8c8dac9d26a8b47a2f9a42cbf4af933c869670f191acfb3ef422}{sf\+Pa0}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Selection of internal PA type used in the device. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a8280855764dcf37f8006cc6fa9e3882b}{sf\+Net\+Standard\+E\+T\+SI}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a0ea0f3cba82c21c5ecf607640e1f9d08}{sf\+Net\+Standard\+F\+C\+C\+\_\+\+U\+SA}}, 
+\mbox{\hyperlink{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a602fd419505a63597bf81f351623cb99}{sf\+Net\+Standard\+A\+R\+IB}}, 
+\mbox{\hyperlink{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a628eee35ad8745cb5989b1b8b82089f0}{sf\+Net\+Standard\+F\+C\+C\+\_\+\+South\+America}}
+ \}
+\begin{DoxyCompactList}\small\item\em List of standards defining network communication parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gada7c9026ce05c5baaf767bfa10928039}{S\+F\+\_\+\+Init}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const \mbox{\hyperlink{structsf__user__config__t}{sf\+\_\+user\+\_\+config\+\_\+t}} $\ast$user\+Config)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+I\+G\+F\+OX driver based on user configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__sf__functions__group_gaeac5315858b24e339879e28d7578337d}{S\+F\+\_\+\+Get\+Default\+Config}} (\mbox{\hyperlink{structsf__user__config__t}{sf\+\_\+user\+\_\+config\+\_\+t}} $\ast$user\+Config)
+\begin{DoxyCompactList}\small\item\em Fills user configuration structure with default values, i.\+e. E\+T\+SI standard, 55.\+2 M\+Hz X\+T\+AL, 3 TX during Send\+Payload, 14 d\+Bm PA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9c767a31660b3d561fdba39a47903295}{S\+F\+\_\+\+Send\+Command}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}} cmd, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload, \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$recv\+Payload, uint8\+\_\+t recv\+Buffer\+Size)
+\begin{DoxyCompactList}\small\item\em This function sends a command to the device. This function waits for an acknowledgement (if any). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gafcfab93eda54d3831f57470780dae9dd}{S\+F\+\_\+\+Wake\+Up}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Wakeup\char`\"{} command to wake up the device from power down mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga1976f6e21d4d394239d20b241dbb2453}{S\+F\+\_\+\+Sleep}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function puts the device into power off mode with use of the \char`\"{}\+Send To Sleep\char`\"{} command. In this mode the device settings are reset to default values by the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac5651ed6f3c5cb0efc45ed5c15d7697c}{S\+F\+\_\+\+Set\+Ul\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function sets up-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga6652c5c69ff2e8687e5575ea84229c21}{S\+F\+\_\+\+Get\+Ul\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t $\ast$freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function gets up-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga44c782b6ce3a518584e00acb8a8957fd}{S\+F\+\_\+\+Send\+Payload}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Payload\char`\"{} command to the device. It sends user data to S\+I\+G\+F\+OX network. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga2aab15da7a9994b53fe66dfe5c8f85a5}{S\+F\+\_\+\+Send\+Bit}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t bit\+Val)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Bit\char`\"{} command, which transmits just one bit to the S\+I\+G\+F\+OX network. This is the shortest frame that S\+I\+G\+F\+OX library generates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gaf898f1fe312b1d8f9156b18249211b83}{S\+F\+\_\+\+Send\+Out\+Of\+Band}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Out of band\char`\"{} command, which transmits data to the S\+I\+G\+F\+OX network. Data is composed of information about the chip itself (Voltage, Temperature). This function should be called every 24 hours at least or never if an application has some energy critical constraints. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9489fa1c9163a0d028a508d81718274b}{S\+F\+\_\+\+Receive\+Message}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload, \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$recv\+Payload)
+\begin{DoxyCompactList}\small\item\em This function sends and receives a data from S\+I\+G\+F\+OX network with use of the \char`\"{}\+Receive Frame\char`\"{} command. It is available for O\+L2385 device only. Max. size of received data is defined by \mbox{\hyperlink{sf__ol23xx_8h_aca8e44f5d34123c5d83bafdf690358f7}{S\+F\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+R\+\_\+\+A\+C\+K\+\_\+\+P\+L\+D\+\_\+B}} (S\+I\+G\+F\+OX limitation). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gab933b60af5327c7f6289680308f94d5f}{S\+F\+\_\+\+Trigger\+Watchdog}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function resets the S\+I\+G\+F\+OX device with use of the \char`\"{}\+Trigger Watchdog\char`\"{} command. It does not handle watchdog. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac2350dad3fd06accd548ec1e4c761239}{S\+F\+\_\+\+Get\+Device\+Info}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{structsf__device__info__t}{sf\+\_\+device\+\_\+info\+\_\+t}} $\ast$dev\+Info)
+\begin{DoxyCompactList}\small\item\em This function reads device ID, P\+AC, S\+I\+G\+F\+OX library version and device version. It uses \char`\"{}\+Get info\char`\"{} and \char`\"{}\+Get Device Version\char`\"{} commands. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__sf__enum__group_ga9f14f69f90dfff97b98977db7a73ba68}{sf\+\_\+intern\+\_\+error\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga83b0684858db1e51ddd77c542db9570a}{S\+F\+\_\+\+Get\+Error\+Code}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function returns an error code received in a S\+PI frame from the S\+I\+G\+F\+OX device. The error code is updated every time an A\+CK S\+PI frame is received. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga52dd2f875d8870319466379dc564c6ea}{S\+F\+\_\+\+Test\+Spi\+Con}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool $\ast$success)
+\begin{DoxyCompactList}\small\item\em This function tests if the S\+PI bus is working. It uses the \char`\"{}\+Echo\char`\"{} command to send data (see \mbox{\hyperlink{sf_8c_ab3c5eabcda72b90257fd5cc48b500a5a}{S\+F\+\_\+\+E\+C\+H\+O\+\_\+\+P\+L\+D\+\_\+\+A\+R\+R\+AY}} macro in \mbox{\hyperlink{sf_8c}{sf.\+c}}) and checks if the device replies with the inverted payload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gafd1dfd2b45bdd9aea388af2cb4466395}{S\+F\+\_\+\+Test\+Device}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga5c889c0804ec8ccd3741803bd8b12d9c}{sf\+\_\+test\+\_\+mode\+\_\+t}} test\+Mode, uint8\+\_\+t mode\+Config)
+\begin{DoxyCompactList}\small\item\em This function executes a test of up-\/link and down-\/link connectivity using the \char`\"{}\+Send Test Mode\char`\"{} command. Returned status represents result of the test (success or fail), the user can obtain details using the S\+F\+\_\+\+Get\+Error\+Code function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad68e87458650f476db5069272bd80f30}{S\+F\+\_\+\+Generate\+Cont\+Wave}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool enable)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Continuous Wave\char`\"{} command, which can be used for testing. It generates a continuous transmission at last set frequency. The signal can be then checked using spectrum analyzer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga3e532d1631eda3198b1e517be7db5288}{S\+F\+\_\+\+Change\+Network\+Standard}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} standard\+Sel, uint8\+\_\+t tx\+Att\+Steps, \mbox{\hyperlink{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}{sf\+\_\+xtal\+\_\+type\+\_\+t}} xtal, \mbox{\hyperlink{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}{sf\+\_\+tx\+\_\+repeat\+\_\+t}} tx\+Repeat, \mbox{\hyperlink{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}{sf\+\_\+pa\+\_\+type\+\_\+t}} pa\+Type)
+\begin{DoxyCompactList}\small\item\em This function changes Sigfox networking parameters including up-\/link and down-\/link frequency and bit rate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga2901646dfa48cb95c2dca7f7459b64b0}{S\+F\+\_\+\+Switch\+To\+Private\+Key}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Switches to the private key provided by S\+I\+G\+F\+OX, the key is used for normal RF. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gacc6d9bcb60d775ccb2d3739b5d41eb96}{S\+F\+\_\+\+Switch\+To\+Public\+Key}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Switches to the public key provided by S\+I\+G\+F\+OX, it is used for protocol tests. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gaa6162b63ca5d9cc56c054ea2bddac1f2}{S\+F\+\_\+\+Transmit\+Zero\+Seq}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, int16\+\_\+t repetitions)
+\begin{DoxyCompactList}\small\item\em Sends modulated zeros at currently set frequency (P\+SK A\+SK zero sequence command). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga1ba2a22d2c43f1be64c8946e0f8e4d4f}{S\+F\+\_\+\+Transmit\+A\+A\+A\+A\+Seq}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, int16\+\_\+t repetitions)
+\begin{DoxyCompactList}\small\item\em Sends modulated AA at currently set frequency (P\+SK A\+SK A\+A\+AA sequence command). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga74dd3f84beaf121c2004bb457cdc88be}{S\+F\+\_\+\+Set\+Dl\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function sets down-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga63bcdd51a7da55f9e2f204d9d3a56d6b}{S\+F\+\_\+\+Get\+Dl\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t $\ast$freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function gets down-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga94d21504b43b2155491156bff061bf88}{S\+F\+\_\+\+Set\+F\+C\+C\+Macro\+Channel}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const uint32\+\_\+t fh\+Mask\mbox{[}$\,$\mbox{]}, uint8\+\_\+t default\+Ch\+No)
+\begin{DoxyCompactList}\small\item\em Sets the F\+CC Macro Channel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga06e1aa9eda09f899eb5af74991da9bf3}{S\+F\+\_\+\+Get\+F\+C\+C\+Macro\+Ch\+Usage}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t $\ast$channel\+Usage)
+\begin{DoxyCompactList}\small\item\em Gets the F\+CC Macro channel usage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga571dfb5605eba63dd2f275460c26a540}{S\+F\+\_\+\+Reset\+F\+C\+C\+Macro\+Channel}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Restores the default macro channel settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga16f222d9b0c5485b38eae13da3f5f854}{S\+F\+\_\+\+Calibrate\+Freq\+Static}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool sign\+Plus, uint32\+\_\+t drift\+Hz)
+\begin{DoxyCompactList}\small\item\em Calibrates TX frequency. The passed drift offset measured in Hz is added or subtracted to the LO when doing RF TX. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga43ad188a19bc8705116123d0dc16eda0}{S\+F\+\_\+\+Update\+Temp\+Freq\+Cal\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const uint8\+\_\+t drift\+Table\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Updates temperature frequency calibration table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad989de030050a84fb1c9e4e5e29e6173}{S\+F\+\_\+\+Read\+Temp\+Freq\+Cal\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t drift\+Table\+Res\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Reads temperature frequency calibration table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac8894d84b5416dd2c400507acd3553a1}{S\+F\+\_\+\+Set\+Default\+Temp\+Freq\+Cal\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Sets default temperature frequency calibration table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga07eaf722b934e94542d6fd74b6a981d4}{S\+F\+\_\+\+Get\+Last\+Sent\+R\+S\+SI}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t $\ast$rssi\+Res)
+\begin{DoxyCompactList}\small\item\em Gets the recently computed R\+S\+SI measure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga3f0b30bc3200751a313d6a8366048d44}{S\+F\+\_\+\+Get\+Last30\+Sent\+R\+S\+SI}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t $\ast$rssi\+Res)
+\begin{DoxyCompactList}\small\item\em Gets the recently computed R\+S\+SI measure for 30 frames during RX G\+F\+SK test. This is the receiver sensitivity test. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9d1a55dfe0f253669bc615cff200d609}{S\+F\+\_\+\+Reset\+Last\+Sent\+R\+S\+S\+I\+Buffer}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Resets buffer which holds the recently computed R\+S\+SI for 30 frames during RX G\+F\+SK test. This is the receiver sensitivity test. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gabd12f973d453b94074af729e5cb9f1c6}{S\+F\+\_\+\+Read\+Current\+P\+A\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} net\+Std, uint8\+\_\+t $\ast$pa\+Table)
+\begin{DoxyCompactList}\small\item\em Reads current E\+T\+S\+I/\+F\+CC PA table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac338c18f67a2ecbf5f2ce3a266b7292d}{S\+F\+\_\+\+Update\+P\+A\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} net\+Std, uint8\+\_\+t $\ast$pa\+Table)
+\begin{DoxyCompactList}\small\item\em Updates current E\+T\+S\+I/\+F\+CC PA table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad44ab2d70a7132b381104107168ba771}{S\+F\+\_\+\+Set\+Default\+P\+A\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} net\+Std)
+\begin{DoxyCompactList}\small\item\em Sets default E\+T\+S\+I/\+F\+CC PA table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad4d10186e176ecb487ff78e3d5a5cd75}{S\+F\+\_\+\+Calibrate\+Initial\+R\+S\+SI}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool sign\+Plus, uint16\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Sets the initial R\+S\+SI drift offset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9d5eef189c6bc644ca5a1ded155d700b}{S\+F\+\_\+\+Send\+Command\+Non\+Block}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}} cmd, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload)
+\begin{DoxyCompactList}\small\item\em This function sends a command to the device. It does not wait for an acknowledgement. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__sf__functions__group_ga1aa190c9d68ca42596579425130183b2}{S\+F\+\_\+\+Is\+Ack\+Frame\+Ready}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function checks if the S\+I\+G\+F\+OX device is ready to send an acknowledgement. It checks A\+CK pin value, which is active low. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gaea7699d331c28a9e9f708d8d859cacf5}{S\+F\+\_\+\+Read\+Ack\+Frame\+Non\+Block}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$recv\+Payload, uint8\+\_\+t recv\+Buffer\+Size)
+\begin{DoxyCompactList}\small\item\em This function receives an acknowledge frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+I\+G\+F\+OX driver based on A\+ML layer supporting boards based on following N\+XP parts\+: O\+L2361, O\+L2385.
+
+This module is common for all supported models. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sf_8h_ae907b079f9fdff2fb7367801b163c60a}\label{sf_8h_ae907b079f9fdff2fb7367801b163c60a}} 
+\index{sf.h@{sf.h}!SF\_HAS\_CMD\_ACK@{SF\_HAS\_CMD\_ACK}}
+\index{SF\_HAS\_CMD\_ACK@{SF\_HAS\_CMD\_ACK}!sf.h@{sf.h}}
+\subsubsection{\texorpdfstring{SF\_HAS\_CMD\_ACK}{SF\_HAS\_CMD\_ACK}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+H\+A\+S\+\_\+\+C\+M\+D\+\_\+\+A\+CK(\begin{DoxyParamCaption}\item[{}]{cmd }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((cmd) != \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4135c70bed7a3c56f4e645e7b2c8c709}{sfSpiCmdWakeup}}) \&\& ((cmd) != \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aac58778261544ebfae70c74d75d0a38e}{sfSpiCmdSleep}}) \&\& \(\backslash\)}
+\DoxyCodeLine{     ((cmd) != \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa10006c82aea0fb6aa0a52ba12cdfac7}{sfSpiCmdContWave}}) \&\& ((cmd) != \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ab6acd78f6bf6220ac722308ae77323c5}{sfSpiCmdTriggerWd}}) \&\& \(\backslash\)}
+\DoxyCodeLine{     ((cmd) != \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a127a18f45f6af6d7445507acc71673c2}{sfSpiCmdSwitchToPublicKey}}) \&\& ((cmd) != \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa3fbbb0fbb261f3fef0bfd1979465e42}{sfSpiCmdPskAskZeroSeq}}) \&\& \(\backslash\)}
+\DoxyCodeLine{     ((cmd) != \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a0e6c7302cae22023081fa20c2fecbad3}{sfSpiCmdPskAskAAAASeq}}))}
+
+\end{DoxyCode}
+
+
+This macro returns true when an acknowledgement is expected for a given S\+PI command. Otherwise it returns false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & Command number (see sf\+\_\+spi\+\_\+cmd\+\_\+t enumeration). \\
+\hline
+\end{DoxyParams}

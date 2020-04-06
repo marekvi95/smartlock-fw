@@ -1,0 +1,401 @@
+\hypertarget{group__smc}{}\section{Smc}
+\label{group__smc}\index{Smc@{Smc}}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__smc_gae7c2937e0ea1e285d082aa300f98b13c}\label{group__smc_gae7c2937e0ea1e285d082aa300f98b13c}} 
+typedef enum \mbox{\hyperlink{group__smc_ga53fe305f7c8245eb9faac439fc4d5051}{\+\_\+smc\+\_\+power\+\_\+mode\+\_\+protection}} \mbox{\hyperlink{group__smc_gae7c2937e0ea1e285d082aa300f98b13c}{smc\+\_\+power\+\_\+mode\+\_\+protection\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Power Modes Protection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__smc_ga1a2eebdb1e5516b543c27e68d61f8b85}\label{group__smc_ga1a2eebdb1e5516b543c27e68d61f8b85}} 
+typedef enum \mbox{\hyperlink{group__smc_gac5330d1b90932ef578e4e0d06b2f5ae5}{\+\_\+smc\+\_\+power\+\_\+state}} \mbox{\hyperlink{group__smc_ga1a2eebdb1e5516b543c27e68d61f8b85}{smc\+\_\+power\+\_\+state\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Power Modes in P\+M\+S\+T\+AT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__smc_ga861334db15972df1faebfec3992bf211}\label{group__smc_ga861334db15972df1faebfec3992bf211}} 
+typedef enum \mbox{\hyperlink{group__smc_gac2c182287ebbb6119d8bcbb6ead71e53}{\+\_\+smc\+\_\+run\+\_\+mode}} \mbox{\hyperlink{group__smc_ga861334db15972df1faebfec3992bf211}{smc\+\_\+run\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Run mode definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__smc_ga2fdba7a72fb477e8b4515b3a52055291}\label{group__smc_ga2fdba7a72fb477e8b4515b3a52055291}} 
+typedef enum \mbox{\hyperlink{group__smc_ga107d1c64902b4a1a0270a51008b854d5}{\+\_\+smc\+\_\+stop\+\_\+mode}} \mbox{\hyperlink{group__smc_ga2fdba7a72fb477e8b4515b3a52055291}{smc\+\_\+stop\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stop mode definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__smc_gaf4ac8e3c162dfdfca1ab17fc2d78bf82}\label{group__smc_gaf4ac8e3c162dfdfca1ab17fc2d78bf82}} 
+typedef enum \mbox{\hyperlink{group__smc_gaa8d9e56e87c773e0c77995ba8f7fbef1}{\+\_\+smc\+\_\+partial\+\_\+stop\+\_\+mode}} \mbox{\hyperlink{group__smc_gaf4ac8e3c162dfdfca1ab17fc2d78bf82}{smc\+\_\+partial\+\_\+stop\+\_\+option\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Partial S\+T\+OP option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__smc_ga53fe305f7c8245eb9faac439fc4d5051}{\+\_\+smc\+\_\+power\+\_\+mode\+\_\+protection}} \{ \mbox{\hyperlink{group__smc_gga53fe305f7c8245eb9faac439fc4d5051a59c7889c43c88969558086058a70025c}{k\+S\+M\+C\+\_\+\+Allow\+Power\+Mode\+Vlp}} = S\+M\+C\+\_\+\+P\+M\+P\+R\+O\+T\+\_\+\+A\+V\+L\+P\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__smc_gga53fe305f7c8245eb9faac439fc4d5051a2d2790f7f2a43e4fc6f3816cc1693328}{k\+S\+M\+C\+\_\+\+Allow\+Power\+Mode\+All}}
+ \}
+\begin{DoxyCompactList}\small\item\em Power Modes Protection. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__smc_gac5330d1b90932ef578e4e0d06b2f5ae5}{\+\_\+smc\+\_\+power\+\_\+state}} \{ \newline
+\mbox{\hyperlink{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a5b88bef81d70c5bd0d36b4dfbe48c1e5}{k\+S\+M\+C\+\_\+\+Power\+State\+Run}} = 0x01U $<$$<$ 0U, 
+\mbox{\hyperlink{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a4dfa7ded19a0d9fa1f56e7368cd70957}{k\+S\+M\+C\+\_\+\+Power\+State\+Stop}} = 0x01U $<$$<$ 1U, 
+\mbox{\hyperlink{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a2457fcbd1884818e017070eca5f0233c}{k\+S\+M\+C\+\_\+\+Power\+State\+Vlpr}} = 0x01U $<$$<$ 2U, 
+\mbox{\hyperlink{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a5fdb09565e37e164c4aacd389f3e7d87}{k\+S\+M\+C\+\_\+\+Power\+State\+Vlpw}} = 0x01U $<$$<$ 3U, 
+\newline
+\mbox{\hyperlink{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a6cb2be291b02b91744f137b71ebeabd6}{k\+S\+M\+C\+\_\+\+Power\+State\+Vlps}} = 0x01U $<$$<$ 4U
+ \}
+\begin{DoxyCompactList}\small\item\em Power Modes in P\+M\+S\+T\+AT. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__smc_gac2c182287ebbb6119d8bcbb6ead71e53}{\+\_\+smc\+\_\+run\+\_\+mode}} \{ \mbox{\hyperlink{group__smc_ggac2c182287ebbb6119d8bcbb6ead71e53abaeb1d66b5ab95289522985e831186de}{k\+S\+M\+C\+\_\+\+Run\+Normal}} = 0U, 
+\mbox{\hyperlink{group__smc_ggac2c182287ebbb6119d8bcbb6ead71e53ac1461903d002daab1af773d6d506fea3}{k\+S\+M\+C\+\_\+\+Run\+Vlpr}} = 2U
+ \}
+\begin{DoxyCompactList}\small\item\em Run mode definition. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__smc_ga107d1c64902b4a1a0270a51008b854d5}{\+\_\+smc\+\_\+stop\+\_\+mode}} \{ \mbox{\hyperlink{group__smc_gga107d1c64902b4a1a0270a51008b854d5ac642d13640f334c1c509aa89568028dc}{k\+S\+M\+C\+\_\+\+Stop\+Normal}} = 0U, 
+\mbox{\hyperlink{group__smc_gga107d1c64902b4a1a0270a51008b854d5a0309375b2672e8c29eebd50bd80236c3}{k\+S\+M\+C\+\_\+\+Stop\+Vlps}} = 2U
+ \}
+\begin{DoxyCompactList}\small\item\em Stop mode definition. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__smc_gaa8d9e56e87c773e0c77995ba8f7fbef1}{\+\_\+smc\+\_\+partial\+\_\+stop\+\_\+mode}} \{ \mbox{\hyperlink{group__smc_ggaa8d9e56e87c773e0c77995ba8f7fbef1a04f63da1ef433f2240cc42337c55e1b0}{k\+S\+M\+C\+\_\+\+Partial\+Stop}} = 0U, 
+\mbox{\hyperlink{group__smc_ggaa8d9e56e87c773e0c77995ba8f7fbef1a2ebc7dc8a6bd5f83dd842cddcc6483a3}{k\+S\+M\+C\+\_\+\+Partial\+Stop1}} = 1U, 
+\mbox{\hyperlink{group__smc_ggaa8d9e56e87c773e0c77995ba8f7fbef1afca17db21b7e59ecd2e271e566001b63}{k\+S\+M\+C\+\_\+\+Partial\+Stop2}} = 2U
+ \}
+\begin{DoxyCompactList}\small\item\em Partial S\+T\+OP option. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__smc_gabecec62029f0326a4d132d680946ac14}{\+\_\+smc\+\_\+status}} \{ \mbox{\hyperlink{group__smc_ggabecec62029f0326a4d132d680946ac14ac8b70e0e27736678bcb91340b06c011e}{k\+Status\+\_\+\+S\+M\+C\+\_\+\+Stop\+Abort}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+P\+O\+W\+ER, 0)
+ \}
+\begin{DoxyCompactList}\small\item\em S\+MC configuration status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__smc_ga2da32483d11c4177371c992631d5680c}\label{group__smc_ga2da32483d11c4177371c992631d5680c}} 
+\#define \mbox{\hyperlink{group__smc_ga2da32483d11c4177371c992631d5680c}{F\+S\+L\+\_\+\+S\+M\+C\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 0, 5))
+\begin{DoxyCompactList}\small\item\em S\+MC driver version 2.\+0.\+5. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{System mode controller A\+P\+Is}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__smc_ga4e3f84838f007e3b5939838dafd0a7f9}{S\+M\+C\+\_\+\+Pre\+Enter\+Stop\+Modes}} (void)
+\begin{DoxyCompactList}\small\item\em Prepares to enter stop modes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__smc_ga2ce7e977d78cbc1c355aea3b7acb1b4e}{S\+M\+C\+\_\+\+Post\+Exit\+Stop\+Modes}} (void)
+\begin{DoxyCompactList}\small\item\em Recovers after wake up from stop modes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__smc_ga3e21b9caeb6f72076f1ba5fa839c4410}{S\+M\+C\+\_\+\+Pre\+Enter\+Wait\+Modes}} (void)
+\begin{DoxyCompactList}\small\item\em Prepares to enter wait modes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__smc_gad91c84fedf08f14580c4c86b52bc52d2}{S\+M\+C\+\_\+\+Post\+Exit\+Wait\+Modes}} (void)
+\begin{DoxyCompactList}\small\item\em Recovers after wake up from stop modes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__smc_ga8f141beaa4867a3d1606b714e63c30c3}{S\+M\+C\+\_\+\+Set\+Power\+Mode\+Run}} (\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Configures the system to R\+UN power mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__smc_gaaf1664f2d4a78b756e5e30f5433af975}{S\+M\+C\+\_\+\+Set\+Power\+Mode\+Wait}} (\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Configures the system to W\+A\+IT power mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__smc_gaa1e2666198ce75322be3280472a224ee}{S\+M\+C\+\_\+\+Set\+Power\+Mode\+Stop}} (\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__smc_gaf4ac8e3c162dfdfca1ab17fc2d78bf82}{smc\+\_\+partial\+\_\+stop\+\_\+option\+\_\+t}} option)
+\begin{DoxyCompactList}\small\item\em Configures the system to Stop power mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__smc_gaa1439e98fb0d82099217f822e3329b14}{S\+M\+C\+\_\+\+Set\+Power\+Mode\+Vlpr}} (\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Configures the system to V\+L\+PR power mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__smc_ga69d0fb061423ef6ed718f3acee96ebf6}{S\+M\+C\+\_\+\+Set\+Power\+Mode\+Vlpw}} (\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Configures the system to V\+L\+PW power mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__smc_ga7f7303f155f36716cc68672e0a4027cf}{S\+M\+C\+\_\+\+Set\+Power\+Mode\+Vlps}} (\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Configures the system to V\+L\+PS power mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__smc_gaa8d9e56e87c773e0c77995ba8f7fbef1}\label{group__smc_gaa8d9e56e87c773e0c77995ba8f7fbef1}} 
+\index{Smc@{Smc}!\_smc\_partial\_stop\_mode@{\_smc\_partial\_stop\_mode}}
+\index{\_smc\_partial\_stop\_mode@{\_smc\_partial\_stop\_mode}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{\_smc\_partial\_stop\_mode}{\_smc\_partial\_stop\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__smc_gaa8d9e56e87c773e0c77995ba8f7fbef1}{\+\_\+smc\+\_\+partial\+\_\+stop\+\_\+mode}}}
+
+
+
+Partial S\+T\+OP option. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_PartialStop@{kSMC\_PartialStop}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_PartialStop@{kSMC\_PartialStop}}}\mbox{\Hypertarget{group__smc_ggaa8d9e56e87c773e0c77995ba8f7fbef1a04f63da1ef433f2240cc42337c55e1b0}\label{group__smc_ggaa8d9e56e87c773e0c77995ba8f7fbef1a04f63da1ef433f2240cc42337c55e1b0}} 
+k\+S\+M\+C\+\_\+\+Partial\+Stop&S\+T\+OP -\/ Normal Stop mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_PartialStop1@{kSMC\_PartialStop1}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_PartialStop1@{kSMC\_PartialStop1}}}\mbox{\Hypertarget{group__smc_ggaa8d9e56e87c773e0c77995ba8f7fbef1a2ebc7dc8a6bd5f83dd842cddcc6483a3}\label{group__smc_ggaa8d9e56e87c773e0c77995ba8f7fbef1a2ebc7dc8a6bd5f83dd842cddcc6483a3}} 
+k\+S\+M\+C\+\_\+\+Partial\+Stop1&Partial Stop with both system and bus clocks disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_PartialStop2@{kSMC\_PartialStop2}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_PartialStop2@{kSMC\_PartialStop2}}}\mbox{\Hypertarget{group__smc_ggaa8d9e56e87c773e0c77995ba8f7fbef1afca17db21b7e59ecd2e271e566001b63}\label{group__smc_ggaa8d9e56e87c773e0c77995ba8f7fbef1afca17db21b7e59ecd2e271e566001b63}} 
+k\+S\+M\+C\+\_\+\+Partial\+Stop2&Partial Stop with system clock disabled and bus clock enabled \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__smc_ga53fe305f7c8245eb9faac439fc4d5051}\label{group__smc_ga53fe305f7c8245eb9faac439fc4d5051}} 
+\index{Smc@{Smc}!\_smc\_power\_mode\_protection@{\_smc\_power\_mode\_protection}}
+\index{\_smc\_power\_mode\_protection@{\_smc\_power\_mode\_protection}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{\_smc\_power\_mode\_protection}{\_smc\_power\_mode\_protection}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__smc_ga53fe305f7c8245eb9faac439fc4d5051}{\+\_\+smc\+\_\+power\+\_\+mode\+\_\+protection}}}
+
+
+
+Power Modes Protection. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_AllowPowerModeVlp@{kSMC\_AllowPowerModeVlp}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_AllowPowerModeVlp@{kSMC\_AllowPowerModeVlp}}}\mbox{\Hypertarget{group__smc_gga53fe305f7c8245eb9faac439fc4d5051a59c7889c43c88969558086058a70025c}\label{group__smc_gga53fe305f7c8245eb9faac439fc4d5051a59c7889c43c88969558086058a70025c}} 
+k\+S\+M\+C\+\_\+\+Allow\+Power\+Mode\+Vlp&Allow Very-\/\+Low-\/power Mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_AllowPowerModeAll@{kSMC\_AllowPowerModeAll}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_AllowPowerModeAll@{kSMC\_AllowPowerModeAll}}}\mbox{\Hypertarget{group__smc_gga53fe305f7c8245eb9faac439fc4d5051a2d2790f7f2a43e4fc6f3816cc1693328}\label{group__smc_gga53fe305f7c8245eb9faac439fc4d5051a2d2790f7f2a43e4fc6f3816cc1693328}} 
+k\+S\+M\+C\+\_\+\+Allow\+Power\+Mode\+All&Allow all power mode. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__smc_gac5330d1b90932ef578e4e0d06b2f5ae5}\label{group__smc_gac5330d1b90932ef578e4e0d06b2f5ae5}} 
+\index{Smc@{Smc}!\_smc\_power\_state@{\_smc\_power\_state}}
+\index{\_smc\_power\_state@{\_smc\_power\_state}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{\_smc\_power\_state}{\_smc\_power\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__smc_gac5330d1b90932ef578e4e0d06b2f5ae5}{\+\_\+smc\+\_\+power\+\_\+state}}}
+
+
+
+Power Modes in P\+M\+S\+T\+AT. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_PowerStateRun@{kSMC\_PowerStateRun}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_PowerStateRun@{kSMC\_PowerStateRun}}}\mbox{\Hypertarget{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a5b88bef81d70c5bd0d36b4dfbe48c1e5}\label{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a5b88bef81d70c5bd0d36b4dfbe48c1e5}} 
+k\+S\+M\+C\+\_\+\+Power\+State\+Run&0000\+\_\+0001 -\/ Current power mode is R\+UN \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_PowerStateStop@{kSMC\_PowerStateStop}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_PowerStateStop@{kSMC\_PowerStateStop}}}\mbox{\Hypertarget{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a4dfa7ded19a0d9fa1f56e7368cd70957}\label{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a4dfa7ded19a0d9fa1f56e7368cd70957}} 
+k\+S\+M\+C\+\_\+\+Power\+State\+Stop&0000\+\_\+0010 -\/ Current power mode is S\+T\+OP \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_PowerStateVlpr@{kSMC\_PowerStateVlpr}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_PowerStateVlpr@{kSMC\_PowerStateVlpr}}}\mbox{\Hypertarget{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a2457fcbd1884818e017070eca5f0233c}\label{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a2457fcbd1884818e017070eca5f0233c}} 
+k\+S\+M\+C\+\_\+\+Power\+State\+Vlpr&0000\+\_\+0100 -\/ Current power mode is V\+L\+PR \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_PowerStateVlpw@{kSMC\_PowerStateVlpw}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_PowerStateVlpw@{kSMC\_PowerStateVlpw}}}\mbox{\Hypertarget{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a5fdb09565e37e164c4aacd389f3e7d87}\label{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a5fdb09565e37e164c4aacd389f3e7d87}} 
+k\+S\+M\+C\+\_\+\+Power\+State\+Vlpw&0000\+\_\+1000 -\/ Current power mode is V\+L\+PW \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_PowerStateVlps@{kSMC\_PowerStateVlps}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_PowerStateVlps@{kSMC\_PowerStateVlps}}}\mbox{\Hypertarget{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a6cb2be291b02b91744f137b71ebeabd6}\label{group__smc_ggac5330d1b90932ef578e4e0d06b2f5ae5a6cb2be291b02b91744f137b71ebeabd6}} 
+k\+S\+M\+C\+\_\+\+Power\+State\+Vlps&0001\+\_\+0000 -\/ Current power mode is V\+L\+PS \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__smc_gac2c182287ebbb6119d8bcbb6ead71e53}\label{group__smc_gac2c182287ebbb6119d8bcbb6ead71e53}} 
+\index{Smc@{Smc}!\_smc\_run\_mode@{\_smc\_run\_mode}}
+\index{\_smc\_run\_mode@{\_smc\_run\_mode}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{\_smc\_run\_mode}{\_smc\_run\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__smc_gac2c182287ebbb6119d8bcbb6ead71e53}{\+\_\+smc\+\_\+run\+\_\+mode}}}
+
+
+
+Run mode definition. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_RunNormal@{kSMC\_RunNormal}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_RunNormal@{kSMC\_RunNormal}}}\mbox{\Hypertarget{group__smc_ggac2c182287ebbb6119d8bcbb6ead71e53abaeb1d66b5ab95289522985e831186de}\label{group__smc_ggac2c182287ebbb6119d8bcbb6ead71e53abaeb1d66b5ab95289522985e831186de}} 
+k\+S\+M\+C\+\_\+\+Run\+Normal&Normal R\+UN mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_RunVlpr@{kSMC\_RunVlpr}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_RunVlpr@{kSMC\_RunVlpr}}}\mbox{\Hypertarget{group__smc_ggac2c182287ebbb6119d8bcbb6ead71e53ac1461903d002daab1af773d6d506fea3}\label{group__smc_ggac2c182287ebbb6119d8bcbb6ead71e53ac1461903d002daab1af773d6d506fea3}} 
+k\+S\+M\+C\+\_\+\+Run\+Vlpr&Very-\/low-\/power R\+UN mode. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__smc_gabecec62029f0326a4d132d680946ac14}\label{group__smc_gabecec62029f0326a4d132d680946ac14}} 
+\index{Smc@{Smc}!\_smc\_status@{\_smc\_status}}
+\index{\_smc\_status@{\_smc\_status}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{\_smc\_status}{\_smc\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__smc_gabecec62029f0326a4d132d680946ac14}{\+\_\+smc\+\_\+status}}}
+
+
+
+S\+MC configuration status. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SMC\_StopAbort@{kStatus\_SMC\_StopAbort}!Smc@{Smc}}\index{Smc@{Smc}!kStatus\_SMC\_StopAbort@{kStatus\_SMC\_StopAbort}}}\mbox{\Hypertarget{group__smc_ggabecec62029f0326a4d132d680946ac14ac8b70e0e27736678bcb91340b06c011e}\label{group__smc_ggabecec62029f0326a4d132d680946ac14ac8b70e0e27736678bcb91340b06c011e}} 
+k\+Status\+\_\+\+S\+M\+C\+\_\+\+Stop\+Abort&Entering Stop mode is abort \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__smc_ga107d1c64902b4a1a0270a51008b854d5}\label{group__smc_ga107d1c64902b4a1a0270a51008b854d5}} 
+\index{Smc@{Smc}!\_smc\_stop\_mode@{\_smc\_stop\_mode}}
+\index{\_smc\_stop\_mode@{\_smc\_stop\_mode}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{\_smc\_stop\_mode}{\_smc\_stop\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__smc_ga107d1c64902b4a1a0270a51008b854d5}{\+\_\+smc\+\_\+stop\+\_\+mode}}}
+
+
+
+Stop mode definition. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_StopNormal@{kSMC\_StopNormal}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_StopNormal@{kSMC\_StopNormal}}}\mbox{\Hypertarget{group__smc_gga107d1c64902b4a1a0270a51008b854d5ac642d13640f334c1c509aa89568028dc}\label{group__smc_gga107d1c64902b4a1a0270a51008b854d5ac642d13640f334c1c509aa89568028dc}} 
+k\+S\+M\+C\+\_\+\+Stop\+Normal&Normal S\+T\+OP mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSMC\_StopVlps@{kSMC\_StopVlps}!Smc@{Smc}}\index{Smc@{Smc}!kSMC\_StopVlps@{kSMC\_StopVlps}}}\mbox{\Hypertarget{group__smc_gga107d1c64902b4a1a0270a51008b854d5a0309375b2672e8c29eebd50bd80236c3}\label{group__smc_gga107d1c64902b4a1a0270a51008b854d5a0309375b2672e8c29eebd50bd80236c3}} 
+k\+S\+M\+C\+\_\+\+Stop\+Vlps&Very-\/low-\/power S\+T\+OP mode. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__smc_ga2ce7e977d78cbc1c355aea3b7acb1b4e}\label{group__smc_ga2ce7e977d78cbc1c355aea3b7acb1b4e}} 
+\index{Smc@{Smc}!SMC\_PostExitStopModes@{SMC\_PostExitStopModes}}
+\index{SMC\_PostExitStopModes@{SMC\_PostExitStopModes}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{SMC\_PostExitStopModes()}{SMC\_PostExitStopModes()}}
+{\footnotesize\ttfamily void S\+M\+C\+\_\+\+Post\+Exit\+Stop\+Modes (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Recovers after wake up from stop modes. 
+
+This function should be called after wake up from S\+T\+O\+P/\+V\+L\+P\+S/\+L\+L\+S/\+V\+L\+LS modes. It is used with \mbox{\hyperlink{group__smc_ga4e3f84838f007e3b5939838dafd0a7f9}{S\+M\+C\+\_\+\+Pre\+Enter\+Stop\+Modes}}.
+
+brief Recovers after wake up from stop modes.
+
+This function should be called after wake up from S\+T\+O\+P/\+V\+L\+P\+S/\+L\+L\+S/\+V\+L\+LS modes. It is used with ref S\+M\+C\+\_\+\+Pre\+Enter\+Stop\+Modes. \mbox{\Hypertarget{group__smc_gad91c84fedf08f14580c4c86b52bc52d2}\label{group__smc_gad91c84fedf08f14580c4c86b52bc52d2}} 
+\index{Smc@{Smc}!SMC\_PostExitWaitModes@{SMC\_PostExitWaitModes}}
+\index{SMC\_PostExitWaitModes@{SMC\_PostExitWaitModes}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{SMC\_PostExitWaitModes()}{SMC\_PostExitWaitModes()}}
+{\footnotesize\ttfamily void S\+M\+C\+\_\+\+Post\+Exit\+Wait\+Modes (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Recovers after wake up from stop modes. 
+
+This function should be called after wake up from W\+A\+I\+T/\+V\+L\+PW modes. It is used with \mbox{\hyperlink{group__smc_ga3e21b9caeb6f72076f1ba5fa839c4410}{S\+M\+C\+\_\+\+Pre\+Enter\+Wait\+Modes}}.
+
+brief Recovers after wake up from stop modes.
+
+This function should be called after wake up from W\+A\+I\+T/\+V\+L\+PW modes. It is used with ref S\+M\+C\+\_\+\+Pre\+Enter\+Wait\+Modes. \mbox{\Hypertarget{group__smc_ga4e3f84838f007e3b5939838dafd0a7f9}\label{group__smc_ga4e3f84838f007e3b5939838dafd0a7f9}} 
+\index{Smc@{Smc}!SMC\_PreEnterStopModes@{SMC\_PreEnterStopModes}}
+\index{SMC\_PreEnterStopModes@{SMC\_PreEnterStopModes}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{SMC\_PreEnterStopModes()}{SMC\_PreEnterStopModes()}}
+{\footnotesize\ttfamily void S\+M\+C\+\_\+\+Pre\+Enter\+Stop\+Modes (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Prepares to enter stop modes. 
+
+This function should be called before entering S\+T\+O\+P/\+V\+L\+P\+S/\+L\+L\+S/\+V\+L\+LS modes.
+
+brief Prepares to enter stop modes.
+
+This function should be called before entering S\+T\+O\+P/\+V\+L\+P\+S/\+L\+L\+S/\+V\+L\+LS modes. \mbox{\Hypertarget{group__smc_ga3e21b9caeb6f72076f1ba5fa839c4410}\label{group__smc_ga3e21b9caeb6f72076f1ba5fa839c4410}} 
+\index{Smc@{Smc}!SMC\_PreEnterWaitModes@{SMC\_PreEnterWaitModes}}
+\index{SMC\_PreEnterWaitModes@{SMC\_PreEnterWaitModes}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{SMC\_PreEnterWaitModes()}{SMC\_PreEnterWaitModes()}}
+{\footnotesize\ttfamily void S\+M\+C\+\_\+\+Pre\+Enter\+Wait\+Modes (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Prepares to enter wait modes. 
+
+This function should be called before entering W\+A\+I\+T/\+V\+L\+PW modes.
+
+brief Prepares to enter wait modes.
+
+This function should be called before entering W\+A\+I\+T/\+V\+L\+PW modes. \mbox{\Hypertarget{group__smc_ga8f141beaa4867a3d1606b714e63c30c3}\label{group__smc_ga8f141beaa4867a3d1606b714e63c30c3}} 
+\index{Smc@{Smc}!SMC\_SetPowerModeRun@{SMC\_SetPowerModeRun}}
+\index{SMC\_SetPowerModeRun@{SMC\_SetPowerModeRun}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{SMC\_SetPowerModeRun()}{SMC\_SetPowerModeRun()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+M\+C\+\_\+\+Set\+Power\+Mode\+Run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Configures the system to R\+UN power mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+MC peripheral base address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+MC configuration error code.
+\end{DoxyReturn}
+brief Configures the system to R\+UN power mode.
+
+param base S\+MC peripheral base address. return S\+MC configuration error code. \mbox{\Hypertarget{group__smc_gaa1e2666198ce75322be3280472a224ee}\label{group__smc_gaa1e2666198ce75322be3280472a224ee}} 
+\index{Smc@{Smc}!SMC\_SetPowerModeStop@{SMC\_SetPowerModeStop}}
+\index{SMC\_SetPowerModeStop@{SMC\_SetPowerModeStop}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{SMC\_SetPowerModeStop()}{SMC\_SetPowerModeStop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+M\+C\+\_\+\+Set\+Power\+Mode\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__smc_gaf4ac8e3c162dfdfca1ab17fc2d78bf82}{smc\+\_\+partial\+\_\+stop\+\_\+option\+\_\+t}}}]{option }\end{DoxyParamCaption})}
+
+
+
+Configures the system to Stop power mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+MC peripheral base address. \\
+\hline
+{\em option} & Partial Stop mode option. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+MC configuration error code.
+\end{DoxyReturn}
+brief Configures the system to Stop power mode.
+
+param base S\+MC peripheral base address. param option Partial Stop mode option. return S\+MC configuration error code. \mbox{\Hypertarget{group__smc_gaa1439e98fb0d82099217f822e3329b14}\label{group__smc_gaa1439e98fb0d82099217f822e3329b14}} 
+\index{Smc@{Smc}!SMC\_SetPowerModeVlpr@{SMC\_SetPowerModeVlpr}}
+\index{SMC\_SetPowerModeVlpr@{SMC\_SetPowerModeVlpr}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{SMC\_SetPowerModeVlpr()}{SMC\_SetPowerModeVlpr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+M\+C\+\_\+\+Set\+Power\+Mode\+Vlpr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Configures the system to V\+L\+PR power mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+MC peripheral base address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+MC configuration error code.
+\end{DoxyReturn}
+brief Configures the system to V\+L\+PR power mode.
+
+param base S\+MC peripheral base address. return S\+MC configuration error code. \mbox{\Hypertarget{group__smc_ga7f7303f155f36716cc68672e0a4027cf}\label{group__smc_ga7f7303f155f36716cc68672e0a4027cf}} 
+\index{Smc@{Smc}!SMC\_SetPowerModeVlps@{SMC\_SetPowerModeVlps}}
+\index{SMC\_SetPowerModeVlps@{SMC\_SetPowerModeVlps}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{SMC\_SetPowerModeVlps()}{SMC\_SetPowerModeVlps()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+M\+C\+\_\+\+Set\+Power\+Mode\+Vlps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Configures the system to V\+L\+PS power mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+MC peripheral base address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+MC configuration error code.
+\end{DoxyReturn}
+brief Configures the system to V\+L\+PS power mode.
+
+param base S\+MC peripheral base address. return S\+MC configuration error code. \mbox{\Hypertarget{group__smc_ga69d0fb061423ef6ed718f3acee96ebf6}\label{group__smc_ga69d0fb061423ef6ed718f3acee96ebf6}} 
+\index{Smc@{Smc}!SMC\_SetPowerModeVlpw@{SMC\_SetPowerModeVlpw}}
+\index{SMC\_SetPowerModeVlpw@{SMC\_SetPowerModeVlpw}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{SMC\_SetPowerModeVlpw()}{SMC\_SetPowerModeVlpw()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+M\+C\+\_\+\+Set\+Power\+Mode\+Vlpw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Configures the system to V\+L\+PW power mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+MC peripheral base address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+MC configuration error code.
+\end{DoxyReturn}
+brief Configures the system to V\+L\+PW power mode.
+
+param base S\+MC peripheral base address. return S\+MC configuration error code. \mbox{\Hypertarget{group__smc_gaaf1664f2d4a78b756e5e30f5433af975}\label{group__smc_gaaf1664f2d4a78b756e5e30f5433af975}} 
+\index{Smc@{Smc}!SMC\_SetPowerModeWait@{SMC\_SetPowerModeWait}}
+\index{SMC\_SetPowerModeWait@{SMC\_SetPowerModeWait}!Smc@{Smc}}
+\subsubsection{\texorpdfstring{SMC\_SetPowerModeWait()}{SMC\_SetPowerModeWait()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+M\+C\+\_\+\+Set\+Power\+Mode\+Wait (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_m_c___type}{S\+M\+C\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Configures the system to W\+A\+IT power mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+MC peripheral base address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+MC configuration error code.
+\end{DoxyReturn}
+brief Configures the system to W\+A\+IT power mode.
+
+param base S\+MC peripheral base address. return S\+MC configuration error code. 

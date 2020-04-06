@@ -1,0 +1,186 @@
+\hypertarget{group__ftfx__cache__driver}{}\section{Ftfx\+\_\+cache\+\_\+driver}
+\label{group__ftfx__cache__driver}\index{Ftfx\_cache\_driver@{Ftfx\_cache\_driver}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__flash__prefetch__speculation__status}{\+\_\+flash\+\_\+prefetch\+\_\+speculation\+\_\+status}}
+\begin{DoxyCompactList}\small\item\em F\+T\+Fx prefetch speculation status. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__ftfx__cache__config}{\+\_\+ftfx\+\_\+cache\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em F\+T\+Fx cache driver state information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ftfx__cache__driver_ga4ee23b743843fdca0f97dfbb91c105b7}\label{group__ftfx__cache__driver_ga4ee23b743843fdca0f97dfbb91c105b7}} 
+typedef struct \mbox{\hyperlink{struct__flash__prefetch__speculation__status}{\+\_\+flash\+\_\+prefetch\+\_\+speculation\+\_\+status}} \mbox{\hyperlink{group__ftfx__cache__driver_ga4ee23b743843fdca0f97dfbb91c105b7}{ftfx\+\_\+prefetch\+\_\+speculation\+\_\+status\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em F\+T\+Fx prefetch speculation status. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct__ftfx__cache__config}{\+\_\+ftfx\+\_\+cache\+\_\+config}} \mbox{\hyperlink{group__ftfx__cache__driver_ga8ddae8f98cec13ff7c33bc515d01c487}{ftfx\+\_\+cache\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em F\+T\+Fx cache driver state information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__ftfx__cache__driver_ga94656a81b8ad03c18f8b74dc1a4150d1}{\+\_\+ftfx\+\_\+cache\+\_\+ram\+\_\+func\+\_\+constants}} \{ \mbox{\hyperlink{group__ftfx__cache__driver_gga94656a81b8ad03c18f8b74dc1a4150d1a780ff9cafbfa8b208994881cbe18c182}{k\+F\+T\+Fx\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Ram\+Func\+Max\+Size\+In\+Words}} = 16U
+ \}
+\begin{DoxyCompactList}\small\item\em Constants for execute-\/in-\/\+R\+AM flash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__cache__driver_ga4615ae98db65653ab1a578eb588d1be4}{F\+T\+Fx\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Init}} (\mbox{\hyperlink{group__ftfx__cache__driver_ga8ddae8f98cec13ff7c33bc515d01c487}{ftfx\+\_\+cache\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Initializes the global F\+T\+Fx cache structure members. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__cache__driver_ga9de53487ab56d930f26f14f4410b6f20}{F\+T\+Fx\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Clear\+Cache\+Prefetch\+Speculation}} (\mbox{\hyperlink{group__ftfx__cache__driver_ga8ddae8f98cec13ff7c33bc515d01c487}{ftfx\+\_\+cache\+\_\+config\+\_\+t}} $\ast$config, bool is\+Pre\+Process)
+\begin{DoxyCompactList}\small\item\em Process the cache/prefetch/speculation to the flash. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__cache__driver_ga00b01fe1b09708867e1302f35da35e0d}{F\+T\+Fx\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Pflash\+Set\+Prefetch\+Speculation}} (\mbox{\hyperlink{group__ftfx__cache__driver_ga4ee23b743843fdca0f97dfbb91c105b7}{ftfx\+\_\+prefetch\+\_\+speculation\+\_\+status\+\_\+t}} $\ast$speculation\+Status)
+\begin{DoxyCompactList}\small\item\em Sets the P\+Flash prefetch speculation to the intended speculation status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__cache__driver_gaa1841b33e5241e1a94e54bd35dc58c9e}{F\+T\+Fx\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Pflash\+Get\+Prefetch\+Speculation}} (\mbox{\hyperlink{group__ftfx__cache__driver_ga4ee23b743843fdca0f97dfbb91c105b7}{ftfx\+\_\+prefetch\+\_\+speculation\+\_\+status\+\_\+t}} $\ast$speculation\+Status)
+\begin{DoxyCompactList}\small\item\em Gets the P\+Flash prefetch speculation status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{F\+T\+Fx cache version}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__ftfx__cache__driver_ga03d2543029c1ddce74f55c6ebf83cf93}{F\+S\+L\+\_\+\+F\+T\+F\+X\+\_\+\+C\+A\+C\+H\+E\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(3, 0, 0))
+\begin{DoxyCompactList}\small\item\em Flexnvm driver version for S\+DK. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__ftfx__cache__driver_ga03d2543029c1ddce74f55c6ebf83cf93}\label{group__ftfx__cache__driver_ga03d2543029c1ddce74f55c6ebf83cf93}} 
+\index{Ftfx\_cache\_driver@{Ftfx\_cache\_driver}!FSL\_FTFX\_CACHE\_DRIVER\_VERSION@{FSL\_FTFX\_CACHE\_DRIVER\_VERSION}}
+\index{FSL\_FTFX\_CACHE\_DRIVER\_VERSION@{FSL\_FTFX\_CACHE\_DRIVER\_VERSION}!Ftfx\_cache\_driver@{Ftfx\_cache\_driver}}
+\subsubsection{\texorpdfstring{FSL\_FTFX\_CACHE\_DRIVER\_VERSION}{FSL\_FTFX\_CACHE\_DRIVER\_VERSION}}
+{\footnotesize\ttfamily \#define F\+S\+L\+\_\+\+F\+T\+F\+X\+\_\+\+C\+A\+C\+H\+E\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(3, 0, 0))}
+
+
+
+Flexnvm driver version for S\+DK. 
+
+Version 1.\+0.\+0. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__ftfx__cache__driver_ga8ddae8f98cec13ff7c33bc515d01c487}\label{group__ftfx__cache__driver_ga8ddae8f98cec13ff7c33bc515d01c487}} 
+\index{Ftfx\_cache\_driver@{Ftfx\_cache\_driver}!ftfx\_cache\_config\_t@{ftfx\_cache\_config\_t}}
+\index{ftfx\_cache\_config\_t@{ftfx\_cache\_config\_t}!Ftfx\_cache\_driver@{Ftfx\_cache\_driver}}
+\subsubsection{\texorpdfstring{ftfx\_cache\_config\_t}{ftfx\_cache\_config\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ftfx__cache__config}{\+\_\+ftfx\+\_\+cache\+\_\+config}}  \mbox{\hyperlink{group__ftfx__cache__driver_ga8ddae8f98cec13ff7c33bc515d01c487}{ftfx\+\_\+cache\+\_\+config\+\_\+t}}}
+
+
+
+F\+T\+Fx cache driver state information. 
+
+An instance of this structure is allocated by the user of the flash driver and passed into each of the driver A\+P\+Is. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__ftfx__cache__driver_ga94656a81b8ad03c18f8b74dc1a4150d1}\label{group__ftfx__cache__driver_ga94656a81b8ad03c18f8b74dc1a4150d1}} 
+\index{Ftfx\_cache\_driver@{Ftfx\_cache\_driver}!\_ftfx\_cache\_ram\_func\_constants@{\_ftfx\_cache\_ram\_func\_constants}}
+\index{\_ftfx\_cache\_ram\_func\_constants@{\_ftfx\_cache\_ram\_func\_constants}!Ftfx\_cache\_driver@{Ftfx\_cache\_driver}}
+\subsubsection{\texorpdfstring{\_ftfx\_cache\_ram\_func\_constants}{\_ftfx\_cache\_ram\_func\_constants}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ftfx__cache__driver_ga94656a81b8ad03c18f8b74dc1a4150d1}{\+\_\+ftfx\+\_\+cache\+\_\+ram\+\_\+func\+\_\+constants}}}
+
+
+
+Constants for execute-\/in-\/\+R\+AM flash function. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_CACHE\_RamFuncMaxSizeInWords@{kFTFx\_CACHE\_RamFuncMaxSizeInWords}!Ftfx\_cache\_driver@{Ftfx\_cache\_driver}}\index{Ftfx\_cache\_driver@{Ftfx\_cache\_driver}!kFTFx\_CACHE\_RamFuncMaxSizeInWords@{kFTFx\_CACHE\_RamFuncMaxSizeInWords}}}\mbox{\Hypertarget{group__ftfx__cache__driver_gga94656a81b8ad03c18f8b74dc1a4150d1a780ff9cafbfa8b208994881cbe18c182}\label{group__ftfx__cache__driver_gga94656a81b8ad03c18f8b74dc1a4150d1a780ff9cafbfa8b208994881cbe18c182}} 
+k\+F\+T\+Fx\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Ram\+Func\+Max\+Size\+In\+Words&The maximum size of execute-\/in-\/\+R\+AM function. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__ftfx__cache__driver_ga9de53487ab56d930f26f14f4410b6f20}\label{group__ftfx__cache__driver_ga9de53487ab56d930f26f14f4410b6f20}} 
+\index{Ftfx\_cache\_driver@{Ftfx\_cache\_driver}!FTFx\_CACHE\_ClearCachePrefetchSpeculation@{FTFx\_CACHE\_ClearCachePrefetchSpeculation}}
+\index{FTFx\_CACHE\_ClearCachePrefetchSpeculation@{FTFx\_CACHE\_ClearCachePrefetchSpeculation}!Ftfx\_cache\_driver@{Ftfx\_cache\_driver}}
+\subsubsection{\texorpdfstring{FTFx\_CACHE\_ClearCachePrefetchSpeculation()}{FTFx\_CACHE\_ClearCachePrefetchSpeculation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Clear\+Cache\+Prefetch\+Speculation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__cache__driver_ga8ddae8f98cec13ff7c33bc515d01c487}{ftfx\+\_\+cache\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{bool}]{is\+Pre\+Process }\end{DoxyParamCaption})}
+
+
+
+Process the cache/prefetch/speculation to the flash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em process} & The possible option used to control flash cache/prefetch/speculation \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & Invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available.\\
+\hline
+\end{DoxyRetVals}
+Process the cache/prefetch/speculation to the flash.
+
+This function is used to perform the cache and prefetch speculation clear process to the flash. \mbox{\Hypertarget{group__ftfx__cache__driver_ga4615ae98db65653ab1a578eb588d1be4}\label{group__ftfx__cache__driver_ga4615ae98db65653ab1a578eb588d1be4}} 
+\index{Ftfx\_cache\_driver@{Ftfx\_cache\_driver}!FTFx\_CACHE\_Init@{FTFx\_CACHE\_Init}}
+\index{FTFx\_CACHE\_Init@{FTFx\_CACHE\_Init}!Ftfx\_cache\_driver@{Ftfx\_cache\_driver}}
+\subsubsection{\texorpdfstring{FTFx\_CACHE\_Init()}{FTFx\_CACHE\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__cache__driver_ga8ddae8f98cec13ff7c33bc515d01c487}{ftfx\+\_\+cache\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Initializes the global F\+T\+Fx cache structure members. 
+
+This function checks and initializes the Flash module for the other F\+T\+Fx cache A\+P\+Is.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the storage for the driver runtime state.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__cache__driver_gaa1841b33e5241e1a94e54bd35dc58c9e}\label{group__ftfx__cache__driver_gaa1841b33e5241e1a94e54bd35dc58c9e}} 
+\index{Ftfx\_cache\_driver@{Ftfx\_cache\_driver}!FTFx\_CACHE\_PflashGetPrefetchSpeculation@{FTFx\_CACHE\_PflashGetPrefetchSpeculation}}
+\index{FTFx\_CACHE\_PflashGetPrefetchSpeculation@{FTFx\_CACHE\_PflashGetPrefetchSpeculation}!Ftfx\_cache\_driver@{Ftfx\_cache\_driver}}
+\subsubsection{\texorpdfstring{FTFx\_CACHE\_PflashGetPrefetchSpeculation()}{FTFx\_CACHE\_PflashGetPrefetchSpeculation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Pflash\+Get\+Prefetch\+Speculation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__cache__driver_ga4ee23b743843fdca0f97dfbb91c105b7}{ftfx\+\_\+prefetch\+\_\+speculation\+\_\+status\+\_\+t}} $\ast$}]{speculation\+Status }\end{DoxyParamCaption})}
+
+
+
+Gets the P\+Flash prefetch speculation status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speculation\+Status} & Speculation status returned by the P\+Flash IP. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__cache__driver_ga00b01fe1b09708867e1302f35da35e0d}\label{group__ftfx__cache__driver_ga00b01fe1b09708867e1302f35da35e0d}} 
+\index{Ftfx\_cache\_driver@{Ftfx\_cache\_driver}!FTFx\_CACHE\_PflashSetPrefetchSpeculation@{FTFx\_CACHE\_PflashSetPrefetchSpeculation}}
+\index{FTFx\_CACHE\_PflashSetPrefetchSpeculation@{FTFx\_CACHE\_PflashSetPrefetchSpeculation}!Ftfx\_cache\_driver@{Ftfx\_cache\_driver}}
+\subsubsection{\texorpdfstring{FTFx\_CACHE\_PflashSetPrefetchSpeculation()}{FTFx\_CACHE\_PflashSetPrefetchSpeculation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+A\+C\+H\+E\+\_\+\+Pflash\+Set\+Prefetch\+Speculation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__cache__driver_ga4ee23b743843fdca0f97dfbb91c105b7}{ftfx\+\_\+prefetch\+\_\+speculation\+\_\+status\+\_\+t}} $\ast$}]{speculation\+Status }\end{DoxyParamCaption})}
+
+
+
+Sets the P\+Flash prefetch speculation to the intended speculation status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speculation\+Status} & The expected protect status to set to the P\+Flash protection register. Each bit is \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ab985d0a6c5a30e7bda837a04ce61dcc7}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Speculation\+Option}}} & An invalid speculation option argument is provided. \\
+\hline
+\end{DoxyRetVals}

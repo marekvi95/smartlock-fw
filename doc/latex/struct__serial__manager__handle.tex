@@ -1,0 +1,28 @@
+\hypertarget{struct__serial__manager__handle}{}\section{\+\_\+serial\+\_\+manager\+\_\+handle Struct Reference}
+\label{struct__serial__manager__handle}\index{\_serial\_manager\_handle@{\_serial\_manager\_handle}}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct__serial__manager__handle_ab4fbee8e3087b8cfd3fe1d7c003fc8b2}\label{struct__serial__manager__handle_ab4fbee8e3087b8cfd3fe1d7c003fc8b2}} 
+\mbox{\hyperlink{struct__serial__manager__send__handle}{serial\+\_\+manager\+\_\+read\+\_\+handle\+\_\+t}} $\ast$volatile {\bfseries opened\+Read\+Handle\+Head}
+\item 
+\mbox{\Hypertarget{struct__serial__manager__handle_a151ecfcebede36e37fe3516fd2d337b4}\label{struct__serial__manager__handle_a151ecfcebede36e37fe3516fd2d337b4}} 
+volatile uint32\+\_\+t {\bfseries opened\+Write\+Handle\+Count}
+\item 
+\mbox{\Hypertarget{struct__serial__manager__handle_ad6e948bcb92477606945adbe3c2cf031}\label{struct__serial__manager__handle_ad6e948bcb92477606945adbe3c2cf031}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint8\_t {\bfseries lowLevelhandleBuffer} \mbox{[}1\mbox{]}\\
+\>uint8\_t {\bfseries uartHandleBuffer} \mbox{[}\mbox{\hyperlink{group__serial__port__uart_ga2109c092d5f72ef7729b0454b40e892f}{SERIAL\_PORT\_UART\_HANDLE\_SIZE}}\mbox{]}\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{struct__serial__manager__handle_a03112637c9c98af9974c331c761283a5}\label{struct__serial__manager__handle_a03112637c9c98af9974c331c761283a5}} 
+\mbox{\hyperlink{group__serialmanager_gaa7dc5f93aacda72d14bb0fa66b0401f3}{serial\+\_\+port\+\_\+type\+\_\+t}} {\bfseries type}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+component/serial\+\_\+manager/serial\+\_\+manager.\+c\end{DoxyCompactItemize}

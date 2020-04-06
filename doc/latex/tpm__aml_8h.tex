@@ -1,0 +1,66 @@
+\hypertarget{tpm__aml_8h}{}\section{aml/tmr\+\_\+aml/tpm\+\_\+aml.h File Reference}
+\label{tpm__aml_8h}\index{aml/tmr\_aml/tpm\_aml.h@{aml/tmr\_aml/tpm\_aml.h}}
+{\ttfamily \#include \char`\"{}../common\+\_\+aml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tmr\+\_\+aml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+tpm.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtmr__sdk__pwm__t}{tmr\+\_\+sdk\+\_\+pwm\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em P\+WM mode configuration for T\+PM device for K\+S\+DK. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtmr__sdk__outcmp__ch__t}{tmr\+\_\+sdk\+\_\+outcmp\+\_\+ch\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Configuration of a channel for output compare mode. It contains input parameters of Setup\+Output\+Compare function of T\+PM device for K\+S\+DK. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtmr__sdk__outcmp__t}{tmr\+\_\+sdk\+\_\+outcmp\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Output compare mode configuration of T\+PM channels for K\+S\+DK. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtmr__sdk__incpt__ch__t}{tmr\+\_\+sdk\+\_\+incpt\+\_\+ch\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Configuration of a channel for input capture mode. It contains input parameters of Setup\+Input\+Capture function of T\+PM device for K\+S\+DK. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtmr__sdk__incpt__t}{tmr\+\_\+sdk\+\_\+incpt\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Input capture mode configuration of T\+PM channels for K\+S\+DK. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtmr__sdk__config__t}{tmr\+\_\+sdk\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Initial configuration of the T\+PM device for K\+S\+DK. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtmr__data__t}{tmr\+\_\+data\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Device data structure needed by A\+ML driver in K\+S\+DK. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{Indent}\textbf{ Timer configuration (S\+DK specific)}\par
+{\em General timer configuration and P\+WM mode configuration are needed by A\+ML driver. Types are defined according to used S\+DK (K\+S\+DK or S32 S\+DK) and peripheral type (T\+PM or F\+TM). }\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{group__tpm_ga5647039a18486c876df5cdeb84c9621d}{tpm\+\_\+config\+\_\+t}} \mbox{\hyperlink{group__struct__group_gaf1f378b0bcc8ef613858b973521fc013}{tmr\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+DK specific timer general configuration. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{group__tpm_ga19383e0a3baf4033a37e96df9016ab1c}{tpm\+\_\+chnl\+\_\+pwm\+\_\+signal\+\_\+param\+\_\+t}} \mbox{\hyperlink{group__struct__group_ga2b5f2d9df9d1e36f051fe92e6c6f1905}{tmr\+\_\+sdk\+\_\+pwm\+\_\+ch\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+DK specific P\+WM mode configuration of a channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__enum__group_gaa9b50d4e28389b134475b2dbb5846b17}{tmr\+\_\+aml\+\_\+int\+\_\+flags\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a4acd7c09e0a47f0569baee418f9641ea}{tmr\+Int\+Chnl0}} = (1U $<$$<$ 0), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17ab4d6bf48c75c1dfcefcc9b2774a22c62}{tmr\+Int\+Chnl1}} = (1U $<$$<$ 1), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17ae4f49d517742b76708ffb9673c6acc65}{tmr\+Int\+Chnl2}} = (1U $<$$<$ 2), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a95e13854acdc91a76895d8149aa013b4}{tmr\+Int\+Chnl3}} = (1U $<$$<$ 3), 
+\newline
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a8581914354b56e8e31f0d4c289c4d7f4}{tmr\+Int\+Chnl4}} = (1U $<$$<$ 4), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17aecddfbac211b2a93915e85535c9e26e2}{tmr\+Int\+Chnl5}} = (1U $<$$<$ 5), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17aeb8c42f578ea11ae61047e4b59e36d76}{tmr\+Int\+Chnl6}} = (1U $<$$<$ 6), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a9bedb729137293a4358f0bd4e25098f1}{tmr\+Int\+Chnl7}} = (1U $<$$<$ 7), 
+\newline
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a3b05a044c7e411d95eff939a195ac322}{tmr\+Int\+Time\+Overflow}} = (1U $<$$<$ 8)
+ \}
+\begin{DoxyCompactList}\small\item\em Timer interrupt flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_gaedc3704bf4a783ff4204528e405541f9}{tmr\+\_\+aml\+\_\+status\+\_\+flags\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ae1c2d7a0c81cfb245fa66df17ef8dcc7}{tmr\+Sts\+Chnl0}} = (1U $<$$<$ 0), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ab91b617f53bd37caf4ee4aef0839cb0b}{tmr\+Sts\+Chnl1}} = (1U $<$$<$ 1), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9aed8c2e0481c23a78bf35cb6b76572d54}{tmr\+Sts\+Chnl2}} = (1U $<$$<$ 2), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9a0240836c4e0c16f246436590c8039c59}{tmr\+Sts\+Chnl3}} = (1U $<$$<$ 3), 
+\newline
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ade970899545cc35f15a9876247410217}{tmr\+Sts\+Chnl4}} = (1U $<$$<$ 4), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9a5bbf620c431981322ee28477d4618b45}{tmr\+Sts\+Chnl5}} = (1U $<$$<$ 5), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ab658853b9791f607aeb29bc212c91aba}{tmr\+Sts\+Chnl6}} = (1U $<$$<$ 6), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9adde8b58a79b90386b1ac8e80014a3b5d}{tmr\+Sts\+Chnl7}} = (1U $<$$<$ 7), 
+\newline
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9add11f38c5812b837a54c82aeb2bc7123}{tmr\+Sts\+Time\+Overflow}} = (1U $<$$<$ 8)
+ \}
+\begin{DoxyCompactList}\small\item\em Timer status flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+PM peripheral driver intended for M\+C\+U\+Xpresso S\+DK. 

@@ -1,0 +1,43 @@
+\hypertarget{struct___a_r_m___i2_c___s_t_a_t_u_s}{}\section{\+\_\+\+A\+R\+M\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+US Struct Reference}
+\label{struct___a_r_m___i2_c___s_t_a_t_u_s}\index{\_ARM\_I2C\_STATUS@{\_ARM\_I2C\_STATUS}}
+
+
+I2C Status.  
+
+
+
+
+{\ttfamily \#include $<$Driver\+\_\+\+I2\+C.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct___a_r_m___i2_c___s_t_a_t_u_s_a50c88f3c1d787773e2ac1b59533f034a}\label{struct___a_r_m___i2_c___s_t_a_t_u_s_a50c88f3c1d787773e2ac1b59533f034a}} 
+uint32\+\_\+t \mbox{\hyperlink{struct___a_r_m___i2_c___s_t_a_t_u_s_a50c88f3c1d787773e2ac1b59533f034a}{busy}}\+: 1
+\begin{DoxyCompactList}\small\item\em Busy flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___i2_c___s_t_a_t_u_s_a6b29e4f37f4482274af785ad5ffe96a7}\label{struct___a_r_m___i2_c___s_t_a_t_u_s_a6b29e4f37f4482274af785ad5ffe96a7}} 
+uint32\+\_\+t \mbox{\hyperlink{struct___a_r_m___i2_c___s_t_a_t_u_s_a6b29e4f37f4482274af785ad5ffe96a7}{mode}}\+: 1
+\begin{DoxyCompactList}\small\item\em Mode\+: 0=Slave, 1=Master. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___i2_c___s_t_a_t_u_s_a2148ffb99828aeaced6a5655502434ac}\label{struct___a_r_m___i2_c___s_t_a_t_u_s_a2148ffb99828aeaced6a5655502434ac}} 
+uint32\+\_\+t \mbox{\hyperlink{struct___a_r_m___i2_c___s_t_a_t_u_s_a2148ffb99828aeaced6a5655502434ac}{direction}}\+: 1
+\begin{DoxyCompactList}\small\item\em Direction\+: 0=Transmitter, 1=Receiver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___i2_c___s_t_a_t_u_s_ab65804439f6f5beda8da30381b0ad22d}\label{struct___a_r_m___i2_c___s_t_a_t_u_s_ab65804439f6f5beda8da30381b0ad22d}} 
+uint32\+\_\+t \mbox{\hyperlink{struct___a_r_m___i2_c___s_t_a_t_u_s_ab65804439f6f5beda8da30381b0ad22d}{general\+\_\+call}}\+: 1
+\begin{DoxyCompactList}\small\item\em General Call indication (cleared on start of next Slave operation) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___i2_c___s_t_a_t_u_s_ab3e3c8eeeae7fbe3c51dcb3d4104af24}\label{struct___a_r_m___i2_c___s_t_a_t_u_s_ab3e3c8eeeae7fbe3c51dcb3d4104af24}} 
+uint32\+\_\+t \mbox{\hyperlink{struct___a_r_m___i2_c___s_t_a_t_u_s_ab3e3c8eeeae7fbe3c51dcb3d4104af24}{arbitration\+\_\+lost}}\+: 1
+\begin{DoxyCompactList}\small\item\em Master lost arbitration (cleared on start of next Master operation) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___i2_c___s_t_a_t_u_s_a43b1d210c48f4361c5054ba69bcae702}\label{struct___a_r_m___i2_c___s_t_a_t_u_s_a43b1d210c48f4361c5054ba69bcae702}} 
+uint32\+\_\+t \mbox{\hyperlink{struct___a_r_m___i2_c___s_t_a_t_u_s_a43b1d210c48f4361c5054ba69bcae702}{bus\+\_\+error}}\+: 1
+\begin{DoxyCompactList}\small\item\em Bus error detected (cleared on start of next Master/\+Slave operation) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___i2_c___s_t_a_t_u_s_aa43c4c21b173ada1b6b7568956f0d650}\label{struct___a_r_m___i2_c___s_t_a_t_u_s_aa43c4c21b173ada1b6b7568956f0d650}} 
+uint32\+\_\+t {\bfseries reserved}\+: 26
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2C Status. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+M\+S\+I\+S\+\_\+driver/Driver\+\_\+\+I2\+C.\+h\end{DoxyCompactItemize}

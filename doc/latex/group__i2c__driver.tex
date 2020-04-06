@@ -1,0 +1,1197 @@
+\hypertarget{group__i2c__driver}{}\section{I2c\+\_\+driver}
+\label{group__i2c__driver}\index{I2c\_driver@{I2c\_driver}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__i2c__master__config}{\+\_\+i2c\+\_\+master\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em I2C master user configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__i2c__slave__config}{\+\_\+i2c\+\_\+slave\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em I2C slave user configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__i2c__master__transfer}{\+\_\+i2c\+\_\+master\+\_\+transfer}}
+\begin{DoxyCompactList}\small\item\em I2C master transfer structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__i2c__master__handle}{\+\_\+i2c\+\_\+master\+\_\+handle}}
+\begin{DoxyCompactList}\small\item\em I2C master handle structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__i2c__slave__transfer}{\+\_\+i2c\+\_\+slave\+\_\+transfer}}
+\begin{DoxyCompactList}\small\item\em I2C slave transfer structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__i2c__slave__handle}{\+\_\+i2c\+\_\+slave\+\_\+handle}}
+\begin{DoxyCompactList}\small\item\em I2C slave handle structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__i2c__driver_ga2671b092f0b079174303710fa89f02bd}\label{group__i2c__driver_ga2671b092f0b079174303710fa89f02bd}} 
+\#define \mbox{\hyperlink{group__i2c__driver_ga2671b092f0b079174303710fa89f02bd}{I2\+C\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+M\+E\+O\+UT}}~0\+U /$\ast$ Define to zero means keep waiting until the flag is assert/deassert. $\ast$/
+\begin{DoxyCompactList}\small\item\em Timeout times for waiting flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__i2c__driver_gace639c1e5e7cdcecb1cca2e52c669029}\label{group__i2c__driver_gace639c1e5e7cdcecb1cca2e52c669029}} 
+\#define \mbox{\hyperlink{group__i2c__driver_gace639c1e5e7cdcecb1cca2e52c669029}{I2\+C\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+F\+A\+C\+K\+\_\+\+C\+O\+N\+T\+R\+OL}}~0\+U /$\ast$ Default defines to zero means master will send ack automatically. $\ast$/
+\begin{DoxyCompactList}\small\item\em Mater Fast ack control, control if master needs to manually write ack, this is used to low the speed of transfer for So\+Cs with feature F\+S\+L\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+I2\+C\+\_\+\+H\+A\+S\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+B\+U\+F\+F\+E\+R\+I\+NG. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__i2c__driver_ga4bf954d998f086594eece268c780bec7}\label{group__i2c__driver_ga4bf954d998f086594eece268c780bec7}} 
+typedef enum \mbox{\hyperlink{group__i2c__driver_ga1625497320644ba123718bafdd2c1f39}{\+\_\+i2c\+\_\+direction}} \mbox{\hyperlink{group__i2c__driver_ga4bf954d998f086594eece268c780bec7}{i2c\+\_\+direction\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The direction of master and slave transfers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__i2c__driver_ga70379ff75d2f4591b8dc1ba107a2a606}\label{group__i2c__driver_ga70379ff75d2f4591b8dc1ba107a2a606}} 
+typedef enum \mbox{\hyperlink{group__i2c__driver_gae1e1e45d8491652a249bf48530911ac7}{\+\_\+i2c\+\_\+slave\+\_\+address\+\_\+mode}} \mbox{\hyperlink{group__i2c__driver_ga70379ff75d2f4591b8dc1ba107a2a606}{i2c\+\_\+slave\+\_\+address\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Addressing mode. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{group__i2c__driver_ga87e42e170b60f17f657ef3c06a918133}{\+\_\+i2c\+\_\+slave\+\_\+transfer\+\_\+event}} \mbox{\hyperlink{group__i2c__driver_ga95f120f6a73af41648364538cf9a6eca}{i2c\+\_\+slave\+\_\+transfer\+\_\+event\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Set of events sent to the callback for nonblocking slave transfers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__i2c__driver_gad739710b6b65e12ca5ba9dc2a2a2b463}\label{group__i2c__driver_gad739710b6b65e12ca5ba9dc2a2a2b463}} 
+typedef struct \mbox{\hyperlink{struct__i2c__master__config}{\+\_\+i2c\+\_\+master\+\_\+config}} \mbox{\hyperlink{group__i2c__driver_gad739710b6b65e12ca5ba9dc2a2a2b463}{i2c\+\_\+master\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C master user configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__i2c__driver_gaa70dd0ec9815617269569190efd2de5d}\label{group__i2c__driver_gaa70dd0ec9815617269569190efd2de5d}} 
+typedef struct \mbox{\hyperlink{struct__i2c__slave__config}{\+\_\+i2c\+\_\+slave\+\_\+config}} \mbox{\hyperlink{group__i2c__driver_gaa70dd0ec9815617269569190efd2de5d}{i2c\+\_\+slave\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C slave user configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}\label{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}} 
+typedef struct \mbox{\hyperlink{struct__i2c__master__handle}{\+\_\+i2c\+\_\+master\+\_\+handle}} \mbox{\hyperlink{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}{i2c\+\_\+master\+\_\+handle\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C master handle typedef. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__i2c__driver_gafa39d30cd808d79b774361874f227204}\label{group__i2c__driver_gafa39d30cd808d79b774361874f227204}} 
+typedef void($\ast$ \mbox{\hyperlink{group__i2c__driver_gafa39d30cd808d79b774361874f227204}{i2c\+\_\+master\+\_\+transfer\+\_\+callback\+\_\+t}}) (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}{i2c\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} status, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em I2C master transfer callback typedef. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__i2c__driver_ga394e5278816efe62815de9d25be84752}\label{group__i2c__driver_ga394e5278816efe62815de9d25be84752}} 
+typedef struct \mbox{\hyperlink{struct__i2c__slave__handle}{\+\_\+i2c\+\_\+slave\+\_\+handle}} \mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C slave handle typedef. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}\label{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}} 
+typedef struct \mbox{\hyperlink{struct__i2c__master__transfer}{\+\_\+i2c\+\_\+master\+\_\+transfer}} \mbox{\hyperlink{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}{i2c\+\_\+master\+\_\+transfer\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C master transfer structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__i2c__driver_ga69e696cb21165bc58176475879a471cf}\label{group__i2c__driver_ga69e696cb21165bc58176475879a471cf}} 
+typedef struct \mbox{\hyperlink{struct__i2c__slave__transfer}{\+\_\+i2c\+\_\+slave\+\_\+transfer}} \mbox{\hyperlink{group__i2c__driver_ga69e696cb21165bc58176475879a471cf}{i2c\+\_\+slave\+\_\+transfer\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C slave transfer structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__i2c__driver_ga2583e3d8ebf8d3de410d8b6263238c35}\label{group__i2c__driver_ga2583e3d8ebf8d3de410d8b6263238c35}} 
+typedef void($\ast$ \mbox{\hyperlink{group__i2c__driver_ga2583e3d8ebf8d3de410d8b6263238c35}{i2c\+\_\+slave\+\_\+transfer\+\_\+callback\+\_\+t}}) (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga69e696cb21165bc58176475879a471cf}{i2c\+\_\+slave\+\_\+transfer\+\_\+t}} $\ast$xfer, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em I2C slave transfer callback typedef. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__i2c__driver_ga7cc91c89125c25a88e463a9e8550b284}{\+\_\+i2c\+\_\+status}} \{ \newline
+\mbox{\hyperlink{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a49091894b590d7e479605bf113918952}{k\+Status\+\_\+\+I2\+C\+\_\+\+Busy}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+I2C, 0), 
+\mbox{\hyperlink{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a628d242f7bc0e3d5949c7f73eafaa508}{k\+Status\+\_\+\+I2\+C\+\_\+\+Idle}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+I2C, 1), 
+\mbox{\hyperlink{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a72fd33d0b5263a63766e62f71d16be00}{k\+Status\+\_\+\+I2\+C\+\_\+\+Nak}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+I2C, 2), 
+\mbox{\hyperlink{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a139b52cc3305ec2c06d0ac94313c221f}{k\+Status\+\_\+\+I2\+C\+\_\+\+Arbitration\+Lost}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+I2C, 3), 
+\newline
+\mbox{\hyperlink{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a81ad7cc198436cabbe91ea55c5288747}{k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+I2C, 4), 
+\mbox{\hyperlink{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284adf7437bfedcc0d57338ed33f1be5c805}{k\+Status\+\_\+\+I2\+C\+\_\+\+Addr\+\_\+\+Nak}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+I2C, 5)
+ \}
+\begin{DoxyCompactList}\small\item\em I2C status return codes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__i2c__driver_ga1f1337bbe9d0b184d9dcee31f9ebade2}{\+\_\+i2c\+\_\+flags}} \{ \newline
+\mbox{\hyperlink{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a4c3c2928e17ddbfbc1c346c6b9a8dccd}{k\+I2\+C\+\_\+\+Receive\+Nak\+Flag}} = I2\+C\+\_\+\+S\+\_\+\+R\+X\+A\+K\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a647d0b1d1f9514ad483bef3ea3926c3b}{k\+I2\+C\+\_\+\+Int\+Pending\+Flag}} = I2\+C\+\_\+\+S\+\_\+\+I\+I\+C\+I\+F\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a249f698970909f33b1b96139c05bd969}{k\+I2\+C\+\_\+\+Transfer\+Direction\+Flag}} = I2\+C\+\_\+\+S\+\_\+\+S\+R\+W\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2aac2c3a26d38c01fba1554eddc0c6b8b5}{k\+I2\+C\+\_\+\+Range\+Address\+Match\+Flag}} = I2\+C\+\_\+\+S\+\_\+\+R\+A\+M\+\_\+\+M\+A\+SK, 
+\newline
+\mbox{\hyperlink{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a39fab5ef04e74d00ef4c4574899ab589}{k\+I2\+C\+\_\+\+Arbitration\+Lost\+Flag}} = I2\+C\+\_\+\+S\+\_\+\+A\+R\+B\+L\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a37fb20742a15a63c1bc2551b997cdcff}{k\+I2\+C\+\_\+\+Bus\+Busy\+Flag}} = I2\+C\+\_\+\+S\+\_\+\+B\+U\+S\+Y\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a10cd5797b1b8f809192423486a85d5fe}{k\+I2\+C\+\_\+\+Address\+Match\+Flag}} = I2\+C\+\_\+\+S\+\_\+\+I\+A\+A\+S\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2adb8f10365dfc2a3e849f05173fa4d83e}{k\+I2\+C\+\_\+\+Transfer\+Complete\+Flag}} = I2\+C\+\_\+\+S\+\_\+\+T\+C\+F\+\_\+\+M\+A\+SK
+ \}
+\begin{DoxyCompactList}\small\item\em I2C peripheral flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__i2c__driver_ga87c81dd985dad07dc26cb93125a94ec7}{\+\_\+i2c\+\_\+interrupt\+\_\+enable}} \{ \mbox{\hyperlink{group__i2c__driver_gga87c81dd985dad07dc26cb93125a94ec7a5526e27ef6e8317ba928849da890b3b2}{k\+I2\+C\+\_\+\+Global\+Interrupt\+Enable}} = I2\+C\+\_\+\+C1\+\_\+\+I\+I\+C\+I\+E\+\_\+\+M\+A\+SK
+ \}
+\begin{DoxyCompactList}\small\item\em I2C feature interrupt source. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__i2c__driver_ga1625497320644ba123718bafdd2c1f39}{\+\_\+i2c\+\_\+direction}} \{ \mbox{\hyperlink{group__i2c__driver_gga1625497320644ba123718bafdd2c1f39a93b476b469c2a4bfed5916b458ae9bb0}{k\+I2\+C\+\_\+\+Write}} = 0x0U, 
+\mbox{\hyperlink{group__i2c__driver_gga1625497320644ba123718bafdd2c1f39a3a7bb24dc8d1c1be8925603eeafe9b30}{k\+I2\+C\+\_\+\+Read}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em The direction of master and slave transfers. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__i2c__driver_gae1e1e45d8491652a249bf48530911ac7}{\+\_\+i2c\+\_\+slave\+\_\+address\+\_\+mode}} \{ \mbox{\hyperlink{group__i2c__driver_ggae1e1e45d8491652a249bf48530911ac7a3e2c7f1f917939d0d7595224e3700dd4}{k\+I2\+C\+\_\+\+Address7bit}} = 0x0U, 
+\mbox{\hyperlink{group__i2c__driver_ggae1e1e45d8491652a249bf48530911ac7aa2c312f87691c542c466ff747d21f70a}{k\+I2\+C\+\_\+\+Range\+Match}} = 0X2U
+ \}
+\begin{DoxyCompactList}\small\item\em Addressing mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__i2c__driver_ga87ea07668194cfb46c7c368d2cb42433}{\+\_\+i2c\+\_\+master\+\_\+transfer\+\_\+flags}} \{ \mbox{\hyperlink{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433ae80f7b768b1621e42ac965d3d23de5e2}{k\+I2\+C\+\_\+\+Transfer\+Default\+Flag}} = 0x0U, 
+\mbox{\hyperlink{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433a5cb44bf860c0482c0ca0165cf0d31d8a}{k\+I2\+C\+\_\+\+Transfer\+No\+Start\+Flag}} = 0x1U, 
+\mbox{\hyperlink{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433aadf112471ef12f194985a093cd9b9721}{k\+I2\+C\+\_\+\+Transfer\+Repeated\+Start\+Flag}} = 0x2U, 
+\mbox{\hyperlink{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433afb8aeea71b5b7475e3d3df86220db566}{k\+I2\+C\+\_\+\+Transfer\+No\+Stop\+Flag}} = 0x4U
+ \}
+\begin{DoxyCompactList}\small\item\em I2C transfer control flag. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__i2c__driver_ga87e42e170b60f17f657ef3c06a918133}{\+\_\+i2c\+\_\+slave\+\_\+transfer\+\_\+event}} \{ \newline
+\mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133acb1ae174dd6798a6fd79800a9e39a3c6}{k\+I2\+C\+\_\+\+Slave\+Address\+Match\+Event}} = 0x01U, 
+\mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a2f85039a57379838909876a1d509b7aa}{k\+I2\+C\+\_\+\+Slave\+Transmit\+Event}} = 0x02U, 
+\mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133aac8593e808a8137d1b5d3a51640779de}{k\+I2\+C\+\_\+\+Slave\+Receive\+Event}} = 0x04U, 
+\mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a43c045da27fa60e7a0540c743eca4e79}{k\+I2\+C\+\_\+\+Slave\+Transmit\+Ack\+Event}} = 0x08U, 
+\newline
+\mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a38cca3cd668e73f51b8e574835d419df}{k\+I2\+C\+\_\+\+Slave\+Completion\+Event}} = 0x20U, 
+\mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a5063c09cccc4d8047aa3d33ff979657b}{k\+I2\+C\+\_\+\+Slave\+Genaralcall\+Event}} = 0x40U, 
+\mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a94b030ebdac378a84961893ae567bfbc}{k\+I2\+C\+\_\+\+Slave\+All\+Events}}
+ \}
+\begin{DoxyCompactList}\small\item\em Set of events sent to the callback for nonblocking slave transfers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__i2c__driver_ga60fdaec284298758a650ce1122aef231}\label{group__i2c__driver_ga60fdaec284298758a650ce1122aef231}} 
+\#define \mbox{\hyperlink{group__i2c__driver_ga60fdaec284298758a650ce1122aef231}{F\+S\+L\+\_\+\+I2\+C\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 0, 8))
+\begin{DoxyCompactList}\small\item\em I2C driver version 2.\+0.\+8. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Initialization and deinitialization}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__i2c__driver_ga29f967b3ae8487a36ba2a58deb01ccae}{I2\+C\+\_\+\+Master\+Init}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, const \mbox{\hyperlink{group__i2c__driver_gad739710b6b65e12ca5ba9dc2a2a2b463}{i2c\+\_\+master\+\_\+config\+\_\+t}} $\ast$master\+Config, uint32\+\_\+t src\+Clock\+\_\+\+Hz)
+\begin{DoxyCompactList}\small\item\em Initializes the I2C peripheral. Call this A\+PI to ungate the I2C clock and configure the I2C with master configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__i2c__driver_gaf2397a88554ea896f212dd262f9bc731}{I2\+C\+\_\+\+Slave\+Init}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, const \mbox{\hyperlink{group__i2c__driver_gaa70dd0ec9815617269569190efd2de5d}{i2c\+\_\+slave\+\_\+config\+\_\+t}} $\ast$slave\+Config, uint32\+\_\+t src\+Clock\+\_\+\+Hz)
+\begin{DoxyCompactList}\small\item\em Initializes the I2C peripheral. Call this A\+PI to ungate the I2C clock and initialize the I2C with the slave configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__i2c__driver_gadcf7122f0a38d4d9da0f052fcb167957}{I2\+C\+\_\+\+Master\+Deinit}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em De-\/initializes the I2C master peripheral. Call this A\+PI to gate the I2C clock. The I2C master module can\textquotesingle{}t work unless the I2\+C\+\_\+\+Master\+Init is called. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__i2c__driver_gadb50014db29dd75ea2001fb7bc837e77}{I2\+C\+\_\+\+Slave\+Deinit}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em De-\/initializes the I2C slave peripheral. Calling this A\+PI gates the I2C clock. The I2C slave module can\textquotesingle{}t work unless the I2\+C\+\_\+\+Slave\+Init is called to enable the clock. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__driver_ga07cc6bd20f700249c335893427bf462a}{I2\+C\+\_\+\+Get\+Instance}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Get instance number for I2C module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__i2c__driver_gad69f2d63ea756dda60749ff6b09f587d}{I2\+C\+\_\+\+Master\+Get\+Default\+Config}} (\mbox{\hyperlink{group__i2c__driver_gad739710b6b65e12ca5ba9dc2a2a2b463}{i2c\+\_\+master\+\_\+config\+\_\+t}} $\ast$master\+Config)
+\begin{DoxyCompactList}\small\item\em Sets the I2C master configuration structure to default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__i2c__driver_ga7115f80e28b62bbbd3be1a2a918529ba}{I2\+C\+\_\+\+Slave\+Get\+Default\+Config}} (\mbox{\hyperlink{group__i2c__driver_gaa70dd0ec9815617269569190efd2de5d}{i2c\+\_\+slave\+\_\+config\+\_\+t}} $\ast$slave\+Config)
+\begin{DoxyCompactList}\small\item\em Sets the I2C slave configuration structure to default values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Status}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__driver_ga721e41295dedc83b424e80e53065e625}{I2\+C\+\_\+\+Master\+Get\+Status\+Flags}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Gets the I2C status flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Interrupts}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__i2c__driver_ga577e094cc4d39b88ec5bbe49bc199c77}{I2\+C\+\_\+\+Enable\+Interrupts}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Enables I2C interrupt requests. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__i2c__driver_ga9839c1fd49a0f62f42b0adfa74f62853}{I2\+C\+\_\+\+Disable\+Interrupts}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Disables I2C interrupt requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Bus Operations}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__i2c__driver_gafeab1d5249a8b39c8d9e1a54a85c23f0}{I2\+C\+\_\+\+Master\+Set\+Baud\+Rate}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, uint32\+\_\+t baud\+Rate\+\_\+\+Bps, uint32\+\_\+t src\+Clock\+\_\+\+Hz)
+\begin{DoxyCompactList}\small\item\em Sets the I2C master transfer baud rate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_ga7664234966e4162e952b6d57efcaa8a6}{I2\+C\+\_\+\+Master\+Start}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, uint8\+\_\+t address, \mbox{\hyperlink{group__i2c__driver_ga4bf954d998f086594eece268c780bec7}{i2c\+\_\+direction\+\_\+t}} direction)
+\begin{DoxyCompactList}\small\item\em Sends a S\+T\+A\+RT on the I2C bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_gaf46a8cc094fc18c6cadea8de71448723}{I2\+C\+\_\+\+Master\+Stop}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Sends a S\+T\+OP signal on the I2C bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_ga42ff265d25e713326c7d152adf350147}{I2\+C\+\_\+\+Master\+Repeated\+Start}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, uint8\+\_\+t address, \mbox{\hyperlink{group__i2c__driver_ga4bf954d998f086594eece268c780bec7}{i2c\+\_\+direction\+\_\+t}} direction)
+\begin{DoxyCompactList}\small\item\em Sends a R\+E\+P\+E\+A\+T\+ED S\+T\+A\+RT on the I2C bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_gac4e1a954243aa852cb4d358e90091efd}{I2\+C\+\_\+\+Master\+Write\+Blocking}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, const uint8\+\_\+t $\ast$tx\+Buff, size\+\_\+t tx\+Size, uint32\+\_\+t flags)
+\begin{DoxyCompactList}\small\item\em Performs a polling send transaction on the I2C bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_gaf77526f32a16109abf265dbb022a26ba}{I2\+C\+\_\+\+Master\+Read\+Blocking}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, uint8\+\_\+t $\ast$rx\+Buff, size\+\_\+t rx\+Size, uint32\+\_\+t flags)
+\begin{DoxyCompactList}\small\item\em Performs a polling receive transaction on the I2C bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_ga280404c6b1ede542f2c1c20bd382869c}{I2\+C\+\_\+\+Slave\+Write\+Blocking}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, const uint8\+\_\+t $\ast$tx\+Buff, size\+\_\+t tx\+Size)
+\begin{DoxyCompactList}\small\item\em Performs a polling send transaction on the I2C bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_ga89baaf8bc82b19c837032665e89a1707}{I2\+C\+\_\+\+Slave\+Read\+Blocking}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, uint8\+\_\+t $\ast$rx\+Buff, size\+\_\+t rx\+Size)
+\begin{DoxyCompactList}\small\item\em Performs a polling receive transaction on the I2C bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_ga35cae3a5b4aa50ce8db28e3eb703a027}{I2\+C\+\_\+\+Master\+Transfer\+Blocking}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}{i2c\+\_\+master\+\_\+transfer\+\_\+t}} $\ast$xfer)
+\begin{DoxyCompactList}\small\item\em Performs a master polling transfer on the I2C bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Transactional}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__i2c__driver_ga31e3de02b57801c6896e6045c4a31268}{I2\+C\+\_\+\+Master\+Transfer\+Create\+Handle}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}{i2c\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__i2c__driver_gafa39d30cd808d79b774361874f227204}{i2c\+\_\+master\+\_\+transfer\+\_\+callback\+\_\+t}} callback, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Initializes the I2C handle which is used in transactional functions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_gac7f76a04b6f6873c52ad176d58901fe9}{I2\+C\+\_\+\+Master\+Transfer\+Non\+Blocking}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}{i2c\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}{i2c\+\_\+master\+\_\+transfer\+\_\+t}} $\ast$xfer)
+\begin{DoxyCompactList}\small\item\em Performs a master interrupt non-\/blocking transfer on the I2C bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_ga7d720842e68161d2d52d56d119f20665}{I2\+C\+\_\+\+Master\+Transfer\+Get\+Count}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}{i2c\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle, size\+\_\+t $\ast$count)
+\begin{DoxyCompactList}\small\item\em Gets the master transfer status during a interrupt non-\/blocking transfer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_gabb386e53b2bc64e29b2915bdfac36800}{I2\+C\+\_\+\+Master\+Transfer\+Abort}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}{i2c\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Aborts an interrupt non-\/blocking transfer early. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__i2c__driver_gad091cd1857d2bd8ce64583739b3a35d5}{I2\+C\+\_\+\+Master\+Transfer\+Handle\+I\+RQ}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, void $\ast$i2c\+Handle)
+\begin{DoxyCompactList}\small\item\em Master interrupt handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__i2c__driver_gac9b90f575d92ff8ad3cc350a5c8ad1b9}{I2\+C\+\_\+\+Slave\+Transfer\+Create\+Handle}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__i2c__driver_ga2583e3d8ebf8d3de410d8b6263238c35}{i2c\+\_\+slave\+\_\+transfer\+\_\+callback\+\_\+t}} callback, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Initializes the I2C handle which is used in transactional functions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_gaa387d81ea08a9d4b39cfeb3dfec505f7}{I2\+C\+\_\+\+Slave\+Transfer\+Non\+Blocking}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$handle, uint32\+\_\+t event\+Mask)
+\begin{DoxyCompactList}\small\item\em Starts accepting slave transfers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__i2c__driver_ga5ae9f5e6e854d14d33ba3029128bd6f0}{I2\+C\+\_\+\+Slave\+Transfer\+Abort}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Aborts the slave transfer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__i2c__driver_gabf38a498bd3527ea0b7cc947ae71e17e}{I2\+C\+\_\+\+Slave\+Transfer\+Get\+Count}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$handle, size\+\_\+t $\ast$count)
+\begin{DoxyCompactList}\small\item\em Gets the slave transfer remaining bytes during a interrupt non-\/blocking transfer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__i2c__driver_ga097c0b20503381de44cccba311dcf236}{I2\+C\+\_\+\+Slave\+Transfer\+Handle\+I\+RQ}} (\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$base, void $\ast$i2c\+Handle)
+\begin{DoxyCompactList}\small\item\em Slave interrupt handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__i2c__driver_ga95f120f6a73af41648364538cf9a6eca}\label{group__i2c__driver_ga95f120f6a73af41648364538cf9a6eca}} 
+\index{I2c\_driver@{I2c\_driver}!i2c\_slave\_transfer\_event\_t@{i2c\_slave\_transfer\_event\_t}}
+\index{i2c\_slave\_transfer\_event\_t@{i2c\_slave\_transfer\_event\_t}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{i2c\_slave\_transfer\_event\_t}{i2c\_slave\_transfer\_event\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group__i2c__driver_ga87e42e170b60f17f657ef3c06a918133}{\+\_\+i2c\+\_\+slave\+\_\+transfer\+\_\+event}}  \mbox{\hyperlink{group__i2c__driver_ga95f120f6a73af41648364538cf9a6eca}{i2c\+\_\+slave\+\_\+transfer\+\_\+event\+\_\+t}}}
+
+
+
+Set of events sent to the callback for nonblocking slave transfers. 
+
+These event enumerations are used for two related purposes. First, a bit mask created by OR\textquotesingle{}ing together events is passed to \mbox{\hyperlink{group__i2c__driver_gaa387d81ea08a9d4b39cfeb3dfec505f7}{I2\+C\+\_\+\+Slave\+Transfer\+Non\+Blocking()}} to specify which events to enable. Then, when the slave callback is invoked, it is passed the current event through its {\itshape transfer} parameter.
+
+\begin{DoxyNote}{Note}
+These enumerations are meant to be OR\textquotesingle{}d together to form a bit mask of events. 
+\end{DoxyNote}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__i2c__driver_ga1625497320644ba123718bafdd2c1f39}\label{group__i2c__driver_ga1625497320644ba123718bafdd2c1f39}} 
+\index{I2c\_driver@{I2c\_driver}!\_i2c\_direction@{\_i2c\_direction}}
+\index{\_i2c\_direction@{\_i2c\_direction}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{\_i2c\_direction}{\_i2c\_direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__i2c__driver_ga1625497320644ba123718bafdd2c1f39}{\+\_\+i2c\+\_\+direction}}}
+
+
+
+The direction of master and slave transfers. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_Write@{kI2C\_Write}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_Write@{kI2C\_Write}}}\mbox{\Hypertarget{group__i2c__driver_gga1625497320644ba123718bafdd2c1f39a93b476b469c2a4bfed5916b458ae9bb0}\label{group__i2c__driver_gga1625497320644ba123718bafdd2c1f39a93b476b469c2a4bfed5916b458ae9bb0}} 
+k\+I2\+C\+\_\+\+Write&Master transmits to the slave. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_Read@{kI2C\_Read}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_Read@{kI2C\_Read}}}\mbox{\Hypertarget{group__i2c__driver_gga1625497320644ba123718bafdd2c1f39a3a7bb24dc8d1c1be8925603eeafe9b30}\label{group__i2c__driver_gga1625497320644ba123718bafdd2c1f39a3a7bb24dc8d1c1be8925603eeafe9b30}} 
+k\+I2\+C\+\_\+\+Read&Master receives from the slave. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__i2c__driver_ga1f1337bbe9d0b184d9dcee31f9ebade2}\label{group__i2c__driver_ga1f1337bbe9d0b184d9dcee31f9ebade2}} 
+\index{I2c\_driver@{I2c\_driver}!\_i2c\_flags@{\_i2c\_flags}}
+\index{\_i2c\_flags@{\_i2c\_flags}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{\_i2c\_flags}{\_i2c\_flags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__i2c__driver_ga1f1337bbe9d0b184d9dcee31f9ebade2}{\+\_\+i2c\+\_\+flags}}}
+
+
+
+I2C peripheral flags. 
+
+The following status register flags can be cleared\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a39fab5ef04e74d00ef4c4574899ab589}{k\+I2\+C\+\_\+\+Arbitration\+Lost\+Flag}}
+\item \mbox{\hyperlink{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a647d0b1d1f9514ad483bef3ea3926c3b}{k\+I2\+C\+\_\+\+Int\+Pending\+Flag}}
+\item \#k\+I2\+C\+\_\+\+Start\+Detect\+Flag
+\item \#k\+I2\+C\+\_\+\+Stop\+Detect\+Flag
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+These enumerations are meant to be OR\textquotesingle{}d together to form a bit mask. 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_ReceiveNakFlag@{kI2C\_ReceiveNakFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_ReceiveNakFlag@{kI2C\_ReceiveNakFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a4c3c2928e17ddbfbc1c346c6b9a8dccd}\label{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a4c3c2928e17ddbfbc1c346c6b9a8dccd}} 
+k\+I2\+C\+\_\+\+Receive\+Nak\+Flag&I2C receive N\+AK flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_IntPendingFlag@{kI2C\_IntPendingFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_IntPendingFlag@{kI2C\_IntPendingFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a647d0b1d1f9514ad483bef3ea3926c3b}\label{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a647d0b1d1f9514ad483bef3ea3926c3b}} 
+k\+I2\+C\+\_\+\+Int\+Pending\+Flag&I2C interrupt pending flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_TransferDirectionFlag@{kI2C\_TransferDirectionFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_TransferDirectionFlag@{kI2C\_TransferDirectionFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a249f698970909f33b1b96139c05bd969}\label{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a249f698970909f33b1b96139c05bd969}} 
+k\+I2\+C\+\_\+\+Transfer\+Direction\+Flag&I2C transfer direction flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_RangeAddressMatchFlag@{kI2C\_RangeAddressMatchFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_RangeAddressMatchFlag@{kI2C\_RangeAddressMatchFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2aac2c3a26d38c01fba1554eddc0c6b8b5}\label{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2aac2c3a26d38c01fba1554eddc0c6b8b5}} 
+k\+I2\+C\+\_\+\+Range\+Address\+Match\+Flag&I2C range address match flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_ArbitrationLostFlag@{kI2C\_ArbitrationLostFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_ArbitrationLostFlag@{kI2C\_ArbitrationLostFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a39fab5ef04e74d00ef4c4574899ab589}\label{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a39fab5ef04e74d00ef4c4574899ab589}} 
+k\+I2\+C\+\_\+\+Arbitration\+Lost\+Flag&I2C arbitration lost flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_BusBusyFlag@{kI2C\_BusBusyFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_BusBusyFlag@{kI2C\_BusBusyFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a37fb20742a15a63c1bc2551b997cdcff}\label{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a37fb20742a15a63c1bc2551b997cdcff}} 
+k\+I2\+C\+\_\+\+Bus\+Busy\+Flag&I2C bus busy flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_AddressMatchFlag@{kI2C\_AddressMatchFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_AddressMatchFlag@{kI2C\_AddressMatchFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a10cd5797b1b8f809192423486a85d5fe}\label{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2a10cd5797b1b8f809192423486a85d5fe}} 
+k\+I2\+C\+\_\+\+Address\+Match\+Flag&I2C address match flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_TransferCompleteFlag@{kI2C\_TransferCompleteFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_TransferCompleteFlag@{kI2C\_TransferCompleteFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2adb8f10365dfc2a3e849f05173fa4d83e}\label{group__i2c__driver_gga1f1337bbe9d0b184d9dcee31f9ebade2adb8f10365dfc2a3e849f05173fa4d83e}} 
+k\+I2\+C\+\_\+\+Transfer\+Complete\+Flag&I2C transfer complete flag. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__i2c__driver_ga87c81dd985dad07dc26cb93125a94ec7}\label{group__i2c__driver_ga87c81dd985dad07dc26cb93125a94ec7}} 
+\index{I2c\_driver@{I2c\_driver}!\_i2c\_interrupt\_enable@{\_i2c\_interrupt\_enable}}
+\index{\_i2c\_interrupt\_enable@{\_i2c\_interrupt\_enable}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{\_i2c\_interrupt\_enable}{\_i2c\_interrupt\_enable}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__i2c__driver_ga87c81dd985dad07dc26cb93125a94ec7}{\+\_\+i2c\+\_\+interrupt\+\_\+enable}}}
+
+
+
+I2C feature interrupt source. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_GlobalInterruptEnable@{kI2C\_GlobalInterruptEnable}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_GlobalInterruptEnable@{kI2C\_GlobalInterruptEnable}}}\mbox{\Hypertarget{group__i2c__driver_gga87c81dd985dad07dc26cb93125a94ec7a5526e27ef6e8317ba928849da890b3b2}\label{group__i2c__driver_gga87c81dd985dad07dc26cb93125a94ec7a5526e27ef6e8317ba928849da890b3b2}} 
+k\+I2\+C\+\_\+\+Global\+Interrupt\+Enable&I2C global interrupt. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__i2c__driver_ga87ea07668194cfb46c7c368d2cb42433}\label{group__i2c__driver_ga87ea07668194cfb46c7c368d2cb42433}} 
+\index{I2c\_driver@{I2c\_driver}!\_i2c\_master\_transfer\_flags@{\_i2c\_master\_transfer\_flags}}
+\index{\_i2c\_master\_transfer\_flags@{\_i2c\_master\_transfer\_flags}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{\_i2c\_master\_transfer\_flags}{\_i2c\_master\_transfer\_flags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__i2c__driver_ga87ea07668194cfb46c7c368d2cb42433}{\+\_\+i2c\+\_\+master\+\_\+transfer\+\_\+flags}}}
+
+
+
+I2C transfer control flag. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_TransferDefaultFlag@{kI2C\_TransferDefaultFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_TransferDefaultFlag@{kI2C\_TransferDefaultFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433ae80f7b768b1621e42ac965d3d23de5e2}\label{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433ae80f7b768b1621e42ac965d3d23de5e2}} 
+k\+I2\+C\+\_\+\+Transfer\+Default\+Flag&A transfer starts with a start signal, stops with a stop signal. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_TransferNoStartFlag@{kI2C\_TransferNoStartFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_TransferNoStartFlag@{kI2C\_TransferNoStartFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433a5cb44bf860c0482c0ca0165cf0d31d8a}\label{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433a5cb44bf860c0482c0ca0165cf0d31d8a}} 
+k\+I2\+C\+\_\+\+Transfer\+No\+Start\+Flag&A transfer starts without a start signal, only support write only or write+read with no start flag, do not support read only with no start flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_TransferRepeatedStartFlag@{kI2C\_TransferRepeatedStartFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_TransferRepeatedStartFlag@{kI2C\_TransferRepeatedStartFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433aadf112471ef12f194985a093cd9b9721}\label{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433aadf112471ef12f194985a093cd9b9721}} 
+k\+I2\+C\+\_\+\+Transfer\+Repeated\+Start\+Flag&A transfer starts with a repeated start signal. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_TransferNoStopFlag@{kI2C\_TransferNoStopFlag}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_TransferNoStopFlag@{kI2C\_TransferNoStopFlag}}}\mbox{\Hypertarget{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433afb8aeea71b5b7475e3d3df86220db566}\label{group__i2c__driver_gga87ea07668194cfb46c7c368d2cb42433afb8aeea71b5b7475e3d3df86220db566}} 
+k\+I2\+C\+\_\+\+Transfer\+No\+Stop\+Flag&A transfer ends without a stop signal. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__i2c__driver_gae1e1e45d8491652a249bf48530911ac7}\label{group__i2c__driver_gae1e1e45d8491652a249bf48530911ac7}} 
+\index{I2c\_driver@{I2c\_driver}!\_i2c\_slave\_address\_mode@{\_i2c\_slave\_address\_mode}}
+\index{\_i2c\_slave\_address\_mode@{\_i2c\_slave\_address\_mode}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{\_i2c\_slave\_address\_mode}{\_i2c\_slave\_address\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__i2c__driver_gae1e1e45d8491652a249bf48530911ac7}{\+\_\+i2c\+\_\+slave\+\_\+address\+\_\+mode}}}
+
+
+
+Addressing mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_Address7bit@{kI2C\_Address7bit}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_Address7bit@{kI2C\_Address7bit}}}\mbox{\Hypertarget{group__i2c__driver_ggae1e1e45d8491652a249bf48530911ac7a3e2c7f1f917939d0d7595224e3700dd4}\label{group__i2c__driver_ggae1e1e45d8491652a249bf48530911ac7a3e2c7f1f917939d0d7595224e3700dd4}} 
+k\+I2\+C\+\_\+\+Address7bit&7-\/bit addressing mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_RangeMatch@{kI2C\_RangeMatch}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_RangeMatch@{kI2C\_RangeMatch}}}\mbox{\Hypertarget{group__i2c__driver_ggae1e1e45d8491652a249bf48530911ac7aa2c312f87691c542c466ff747d21f70a}\label{group__i2c__driver_ggae1e1e45d8491652a249bf48530911ac7aa2c312f87691c542c466ff747d21f70a}} 
+k\+I2\+C\+\_\+\+Range\+Match&Range address match addressing mode. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__i2c__driver_ga87e42e170b60f17f657ef3c06a918133}\label{group__i2c__driver_ga87e42e170b60f17f657ef3c06a918133}} 
+\index{I2c\_driver@{I2c\_driver}!\_i2c\_slave\_transfer\_event@{\_i2c\_slave\_transfer\_event}}
+\index{\_i2c\_slave\_transfer\_event@{\_i2c\_slave\_transfer\_event}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{\_i2c\_slave\_transfer\_event}{\_i2c\_slave\_transfer\_event}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__i2c__driver_ga87e42e170b60f17f657ef3c06a918133}{\+\_\+i2c\+\_\+slave\+\_\+transfer\+\_\+event}}}
+
+
+
+Set of events sent to the callback for nonblocking slave transfers. 
+
+These event enumerations are used for two related purposes. First, a bit mask created by OR\textquotesingle{}ing together events is passed to \mbox{\hyperlink{group__i2c__driver_gaa387d81ea08a9d4b39cfeb3dfec505f7}{I2\+C\+\_\+\+Slave\+Transfer\+Non\+Blocking()}} to specify which events to enable. Then, when the slave callback is invoked, it is passed the current event through its {\itshape transfer} parameter.
+
+\begin{DoxyNote}{Note}
+These enumerations are meant to be OR\textquotesingle{}d together to form a bit mask of events. 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_SlaveAddressMatchEvent@{kI2C\_SlaveAddressMatchEvent}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_SlaveAddressMatchEvent@{kI2C\_SlaveAddressMatchEvent}}}\mbox{\Hypertarget{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133acb1ae174dd6798a6fd79800a9e39a3c6}\label{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133acb1ae174dd6798a6fd79800a9e39a3c6}} 
+k\+I2\+C\+\_\+\+Slave\+Address\+Match\+Event&Received the slave address after a start or repeated start. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_SlaveTransmitEvent@{kI2C\_SlaveTransmitEvent}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_SlaveTransmitEvent@{kI2C\_SlaveTransmitEvent}}}\mbox{\Hypertarget{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a2f85039a57379838909876a1d509b7aa}\label{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a2f85039a57379838909876a1d509b7aa}} 
+k\+I2\+C\+\_\+\+Slave\+Transmit\+Event&A callback is requested to provide data to transmit (slave-\/transmitter role). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_SlaveReceiveEvent@{kI2C\_SlaveReceiveEvent}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_SlaveReceiveEvent@{kI2C\_SlaveReceiveEvent}}}\mbox{\Hypertarget{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133aac8593e808a8137d1b5d3a51640779de}\label{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133aac8593e808a8137d1b5d3a51640779de}} 
+k\+I2\+C\+\_\+\+Slave\+Receive\+Event&A callback is requested to provide a buffer in which to place received data (slave-\/receiver role). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_SlaveTransmitAckEvent@{kI2C\_SlaveTransmitAckEvent}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_SlaveTransmitAckEvent@{kI2C\_SlaveTransmitAckEvent}}}\mbox{\Hypertarget{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a43c045da27fa60e7a0540c743eca4e79}\label{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a43c045da27fa60e7a0540c743eca4e79}} 
+k\+I2\+C\+\_\+\+Slave\+Transmit\+Ack\+Event&A callback needs to either transmit an A\+CK or N\+A\+CK. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_SlaveCompletionEvent@{kI2C\_SlaveCompletionEvent}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_SlaveCompletionEvent@{kI2C\_SlaveCompletionEvent}}}\mbox{\Hypertarget{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a38cca3cd668e73f51b8e574835d419df}\label{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a38cca3cd668e73f51b8e574835d419df}} 
+k\+I2\+C\+\_\+\+Slave\+Completion\+Event&A stop was detected or finished transfer, completing the transfer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_SlaveGenaralcallEvent@{kI2C\_SlaveGenaralcallEvent}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_SlaveGenaralcallEvent@{kI2C\_SlaveGenaralcallEvent}}}\mbox{\Hypertarget{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a5063c09cccc4d8047aa3d33ff979657b}\label{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a5063c09cccc4d8047aa3d33ff979657b}} 
+k\+I2\+C\+\_\+\+Slave\+Genaralcall\+Event&Received the general call address after a start or repeated start. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kI2C\_SlaveAllEvents@{kI2C\_SlaveAllEvents}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kI2C\_SlaveAllEvents@{kI2C\_SlaveAllEvents}}}\mbox{\Hypertarget{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a94b030ebdac378a84961893ae567bfbc}\label{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a94b030ebdac378a84961893ae567bfbc}} 
+k\+I2\+C\+\_\+\+Slave\+All\+Events&A bit mask of all available events. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__i2c__driver_ga7cc91c89125c25a88e463a9e8550b284}\label{group__i2c__driver_ga7cc91c89125c25a88e463a9e8550b284}} 
+\index{I2c\_driver@{I2c\_driver}!\_i2c\_status@{\_i2c\_status}}
+\index{\_i2c\_status@{\_i2c\_status}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{\_i2c\_status}{\_i2c\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__i2c__driver_ga7cc91c89125c25a88e463a9e8550b284}{\+\_\+i2c\+\_\+status}}}
+
+
+
+I2C status return codes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_I2C\_Busy@{kStatus\_I2C\_Busy}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kStatus\_I2C\_Busy@{kStatus\_I2C\_Busy}}}\mbox{\Hypertarget{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a49091894b590d7e479605bf113918952}\label{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a49091894b590d7e479605bf113918952}} 
+k\+Status\+\_\+\+I2\+C\+\_\+\+Busy&I2C is busy with current transfer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_I2C\_Idle@{kStatus\_I2C\_Idle}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kStatus\_I2C\_Idle@{kStatus\_I2C\_Idle}}}\mbox{\Hypertarget{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a628d242f7bc0e3d5949c7f73eafaa508}\label{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a628d242f7bc0e3d5949c7f73eafaa508}} 
+k\+Status\+\_\+\+I2\+C\+\_\+\+Idle&Bus is Idle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_I2C\_Nak@{kStatus\_I2C\_Nak}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kStatus\_I2C\_Nak@{kStatus\_I2C\_Nak}}}\mbox{\Hypertarget{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a72fd33d0b5263a63766e62f71d16be00}\label{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a72fd33d0b5263a63766e62f71d16be00}} 
+k\+Status\+\_\+\+I2\+C\+\_\+\+Nak&N\+AK received during transfer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_I2C\_ArbitrationLost@{kStatus\_I2C\_ArbitrationLost}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kStatus\_I2C\_ArbitrationLost@{kStatus\_I2C\_ArbitrationLost}}}\mbox{\Hypertarget{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a139b52cc3305ec2c06d0ac94313c221f}\label{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a139b52cc3305ec2c06d0ac94313c221f}} 
+k\+Status\+\_\+\+I2\+C\+\_\+\+Arbitration\+Lost&Arbitration lost during transfer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_I2C\_Timeout@{kStatus\_I2C\_Timeout}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kStatus\_I2C\_Timeout@{kStatus\_I2C\_Timeout}}}\mbox{\Hypertarget{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a81ad7cc198436cabbe91ea55c5288747}\label{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a81ad7cc198436cabbe91ea55c5288747}} 
+k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout&Timeout poling status flags. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_I2C\_Addr\_Nak@{kStatus\_I2C\_Addr\_Nak}!I2c\_driver@{I2c\_driver}}\index{I2c\_driver@{I2c\_driver}!kStatus\_I2C\_Addr\_Nak@{kStatus\_I2C\_Addr\_Nak}}}\mbox{\Hypertarget{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284adf7437bfedcc0d57338ed33f1be5c805}\label{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284adf7437bfedcc0d57338ed33f1be5c805}} 
+k\+Status\+\_\+\+I2\+C\+\_\+\+Addr\+\_\+\+Nak&N\+AK received during the address probe. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__i2c__driver_ga9839c1fd49a0f62f42b0adfa74f62853}\label{group__i2c__driver_ga9839c1fd49a0f62f42b0adfa74f62853}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_DisableInterrupts@{I2C\_DisableInterrupts}}
+\index{I2C\_DisableInterrupts@{I2C\_DisableInterrupts}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_DisableInterrupts()}{I2C\_DisableInterrupts()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Disable\+Interrupts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Disables I2C interrupt requests. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer \\
+\hline
+{\em mask} & interrupt source The parameter can be combination of the following source if defined\+: \begin{DoxyItemize}
+\item k\+I2\+C\+\_\+\+Global\+Interrupt\+Enable \item k\+I2\+C\+\_\+\+Stop\+Detect\+Interrupt\+Enable/k\+I2\+C\+\_\+\+Start\+Detect\+Interrupt\+Enable \item k\+I2\+C\+\_\+\+Sda\+Timeout\+Interrupt\+Enable\end{DoxyItemize}
+brief Disables I2C interrupt requests.\\
+\hline
+\end{DoxyParams}
+param base I2C base pointer param mask interrupt source The parameter can be combination of the following source if defined\+: arg k\+I2\+C\+\_\+\+Global\+Interrupt\+Enable arg k\+I2\+C\+\_\+\+Stop\+Detect\+Interrupt\+Enable/k\+I2\+C\+\_\+\+Start\+Detect\+Interrupt\+Enable arg k\+I2\+C\+\_\+\+Sda\+Timeout\+Interrupt\+Enable \mbox{\Hypertarget{group__i2c__driver_ga577e094cc4d39b88ec5bbe49bc199c77}\label{group__i2c__driver_ga577e094cc4d39b88ec5bbe49bc199c77}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_EnableInterrupts@{I2C\_EnableInterrupts}}
+\index{I2C\_EnableInterrupts@{I2C\_EnableInterrupts}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_EnableInterrupts()}{I2C\_EnableInterrupts()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Enable\+Interrupts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Enables I2C interrupt requests. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer \\
+\hline
+{\em mask} & interrupt source The parameter can be combination of the following source if defined\+: \begin{DoxyItemize}
+\item k\+I2\+C\+\_\+\+Global\+Interrupt\+Enable \item k\+I2\+C\+\_\+\+Stop\+Detect\+Interrupt\+Enable/k\+I2\+C\+\_\+\+Start\+Detect\+Interrupt\+Enable \item k\+I2\+C\+\_\+\+Sda\+Timeout\+Interrupt\+Enable\end{DoxyItemize}
+brief Enables I2C interrupt requests.\\
+\hline
+\end{DoxyParams}
+param base I2C base pointer param mask interrupt source The parameter can be combination of the following source if defined\+: arg k\+I2\+C\+\_\+\+Global\+Interrupt\+Enable arg k\+I2\+C\+\_\+\+Stop\+Detect\+Interrupt\+Enable/k\+I2\+C\+\_\+\+Start\+Detect\+Interrupt\+Enable arg k\+I2\+C\+\_\+\+Sda\+Timeout\+Interrupt\+Enable \mbox{\Hypertarget{group__i2c__driver_ga07cc6bd20f700249c335893427bf462a}\label{group__i2c__driver_ga07cc6bd20f700249c335893427bf462a}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_GetInstance@{I2C\_GetInstance}}
+\index{I2C\_GetInstance@{I2C\_GetInstance}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_GetInstance()}{I2C\_GetInstance()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+C\+\_\+\+Get\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Get instance number for I2C module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C peripheral base address.\\
+\hline
+\end{DoxyParams}
+brief Get instance number for I2C module.
+
+param base I2C peripheral base address. \mbox{\Hypertarget{group__i2c__driver_gadcf7122f0a38d4d9da0f052fcb167957}\label{group__i2c__driver_gadcf7122f0a38d4d9da0f052fcb167957}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterDeinit@{I2C\_MasterDeinit}}
+\index{I2C\_MasterDeinit@{I2C\_MasterDeinit}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterDeinit()}{I2C\_MasterDeinit()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Master\+Deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+De-\/initializes the I2C master peripheral. Call this A\+PI to gate the I2C clock. The I2C master module can\textquotesingle{}t work unless the I2\+C\+\_\+\+Master\+Init is called. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer\\
+\hline
+\end{DoxyParams}
+brief De-\/initializes the I2C master peripheral. Call this A\+PI to gate the I2C clock. The I2C master module can\textquotesingle{}t work unless the I2\+C\+\_\+\+Master\+Init is called. param base I2C base pointer \mbox{\Hypertarget{group__i2c__driver_gad69f2d63ea756dda60749ff6b09f587d}\label{group__i2c__driver_gad69f2d63ea756dda60749ff6b09f587d}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterGetDefaultConfig@{I2C\_MasterGetDefaultConfig}}
+\index{I2C\_MasterGetDefaultConfig@{I2C\_MasterGetDefaultConfig}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterGetDefaultConfig()}{I2C\_MasterGetDefaultConfig()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Master\+Get\+Default\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__i2c__driver_gad739710b6b65e12ca5ba9dc2a2a2b463}{i2c\+\_\+master\+\_\+config\+\_\+t}} $\ast$}]{master\+Config }\end{DoxyParamCaption})}
+
+
+
+Sets the I2C master configuration structure to default values. 
+
+The purpose of this A\+PI is to get the configuration structure initialized for use in the I2\+C\+\_\+\+Master\+Configure(). Use the initialized structure unchanged in the I2\+C\+\_\+\+Master\+Configure() or modify the structure before calling the I2\+C\+\_\+\+Master\+Configure(). This is an example. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct__i2c__master__config}{i2c\_master\_config\_t}} config;}
+\DoxyCodeLine{\mbox{\hyperlink{group__i2c__driver_gad69f2d63ea756dda60749ff6b09f587d}{I2C\_MasterGetDefaultConfig}}(\&config);}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em master\+Config} & A pointer to the master configuration structure.\\
+\hline
+\end{DoxyParams}
+brief Sets the I2C master configuration structure to default values.
+
+The purpose of this A\+PI is to get the configuration structure initialized for use in the I2\+C\+\_\+\+Master\+Configure(). Use the initialized structure unchanged in the I2\+C\+\_\+\+Master\+Configure() or modify the structure before calling the I2\+C\+\_\+\+Master\+Configure(). This is an example. code i2c\+\_\+master\+\_\+config\+\_\+t config; I2\+C\+\_\+\+Master\+Get\+Default\+Config(\&config); endcode param master\+Config A pointer to the master configuration structure. \mbox{\Hypertarget{group__i2c__driver_ga721e41295dedc83b424e80e53065e625}\label{group__i2c__driver_ga721e41295dedc83b424e80e53065e625}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterGetStatusFlags@{I2C\_MasterGetStatusFlags}}
+\index{I2C\_MasterGetStatusFlags@{I2C\_MasterGetStatusFlags}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterGetStatusFlags()}{I2C\_MasterGetStatusFlags()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+C\+\_\+\+Master\+Get\+Status\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Gets the I2C status flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status flag, use status flag to A\+ND \mbox{\hyperlink{group__i2c__driver_ga1f1337bbe9d0b184d9dcee31f9ebade2}{\+\_\+i2c\+\_\+flags}} to get the related status.
+\end{DoxyReturn}
+brief Gets the I2C status flags.
+
+param base I2C base pointer return status flag, use status flag to A\+ND \mbox{\hyperlink{group__i2c__driver_ga1f1337bbe9d0b184d9dcee31f9ebade2}{\+\_\+i2c\+\_\+flags}} to get the related status. \mbox{\Hypertarget{group__i2c__driver_ga29f967b3ae8487a36ba2a58deb01ccae}\label{group__i2c__driver_ga29f967b3ae8487a36ba2a58deb01ccae}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterInit@{I2C\_MasterInit}}
+\index{I2C\_MasterInit@{I2C\_MasterInit}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterInit()}{I2C\_MasterInit()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Master\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{const \mbox{\hyperlink{group__i2c__driver_gad739710b6b65e12ca5ba9dc2a2a2b463}{i2c\+\_\+master\+\_\+config\+\_\+t}} $\ast$}]{master\+Config,  }\item[{uint32\+\_\+t}]{src\+Clock\+\_\+\+Hz }\end{DoxyParamCaption})}
+
+
+
+Initializes the I2C peripheral. Call this A\+PI to ungate the I2C clock and configure the I2C with master configuration. 
+
+\begin{DoxyNote}{Note}
+This A\+PI should be called at the beginning of the application. Otherwise, any operation to the I2C module can cause a hard fault because the clock is not enabled. The configuration structure can be custom filled or it can be set with default values by using the \mbox{\hyperlink{group__i2c__driver_gad69f2d63ea756dda60749ff6b09f587d}{I2\+C\+\_\+\+Master\+Get\+Default\+Config()}}. After calling this A\+PI, the master is ready to transfer. This is an example. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct__i2c__master__config}{i2c\_master\_config\_t}} config = \{}
+\DoxyCodeLine{.\mbox{\hyperlink{struct__i2c__master__config_ab8b96ba3ced8b280ac1f366f6e76a9e7}{enableMaster}} = \textcolor{keyword}{true},}
+\DoxyCodeLine{.enableStopHold = \textcolor{keyword}{false},}
+\DoxyCodeLine{.highDrive = \textcolor{keyword}{false},}
+\DoxyCodeLine{.baudRate\_Bps = 100000,}
+\DoxyCodeLine{.glitchFilterWidth = 0}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{\mbox{\hyperlink{group__i2c__driver_ga29f967b3ae8487a36ba2a58deb01ccae}{I2C\_MasterInit}}(\mbox{\hyperlink{group___i2_c___peripheral___access___layer_ga86abb2e8858d177c04e60c41e9242045}{I2C0}}, \&config, 12000000U);}
+\end{DoxyCode}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer \\
+\hline
+{\em master\+Config} & A pointer to the master configuration structure \\
+\hline
+{\em src\+Clock\+\_\+\+Hz} & I2C peripheral clock frequency in Hz\\
+\hline
+\end{DoxyParams}
+brief Initializes the I2C peripheral. Call this A\+PI to ungate the I2C clock and configure the I2C with master configuration.
+
+note This A\+PI should be called at the beginning of the application. Otherwise, any operation to the I2C module can cause a hard fault because the clock is not enabled. The configuration structure can be custom filled or it can be set with default values by using the \mbox{\hyperlink{group__i2c__driver_gad69f2d63ea756dda60749ff6b09f587d}{I2\+C\+\_\+\+Master\+Get\+Default\+Config()}}. After calling this A\+PI, the master is ready to transfer. This is an example. code i2c\+\_\+master\+\_\+config\+\_\+t config = \{ .enable\+Master = true, .enable\+Stop\+Hold = false, .high\+Drive = false, .baud\+Rate\+\_\+\+Bps = 100000, .glitch\+Filter\+Width = 0 \}; I2\+C\+\_\+\+Master\+Init(\+I2\+C0, \&config, 12000000\+U); endcode
+
+param base I2C base pointer param master\+Config A pointer to the master configuration structure param src\+Clock\+\_\+\+Hz I2C peripheral clock frequency in Hz \mbox{\Hypertarget{group__i2c__driver_gaf77526f32a16109abf265dbb022a26ba}\label{group__i2c__driver_gaf77526f32a16109abf265dbb022a26ba}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterReadBlocking@{I2C\_MasterReadBlocking}}
+\index{I2C\_MasterReadBlocking@{I2C\_MasterReadBlocking}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterReadBlocking()}{I2C\_MasterReadBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Master\+Read\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint8\+\_\+t $\ast$}]{rx\+Buff,  }\item[{size\+\_\+t}]{rx\+Size,  }\item[{uint32\+\_\+t}]{flags }\end{DoxyParamCaption})}
+
+
+
+Performs a polling receive transaction on the I2C bus. 
+
+\begin{DoxyNote}{Note}
+The I2\+C\+\_\+\+Master\+Read\+Blocking function stops the bus before reading the final byte. Without stopping the bus prior for the final read, the bus issues another read, resulting in garbage data being read into the data register.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C peripheral base pointer. \\
+\hline
+{\em rx\+Buff} & The pointer to the data to store the received data. \\
+\hline
+{\em rx\+Size} & The length in bytes of the data to be received. \\
+\hline
+{\em flags} & Transfer control flag to decide whether need to send a stop, use k\+I2\+C\+\_\+\+Transfer\+Default\+Flag to issue a stop and k\+I2\+C\+\_\+\+Transfer\+No\+Stop to not send a stop. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully complete the data transmission. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout} & Send stop signal failed, timeout.\\
+\hline
+\end{DoxyRetVals}
+brief Performs a polling receive transaction on the I2C bus.
+
+note The I2\+C\+\_\+\+Master\+Read\+Blocking function stops the bus before reading the final byte. Without stopping the bus prior for the final read, the bus issues another read, resulting in garbage data being read into the data register.
+
+param base I2C peripheral base pointer. param rx\+Buff The pointer to the data to store the received data. param rx\+Size The length in bytes of the data to be received. param flags Transfer control flag to decide whether need to send a stop, use k\+I2\+C\+\_\+\+Transfer\+Default\+Flag to issue a stop and k\+I2\+C\+\_\+\+Transfer\+No\+Stop to not send a stop. retval k\+Status\+\_\+\+Success Successfully complete the data transmission. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout Send stop signal failed, timeout. \mbox{\Hypertarget{group__i2c__driver_ga42ff265d25e713326c7d152adf350147}\label{group__i2c__driver_ga42ff265d25e713326c7d152adf350147}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterRepeatedStart@{I2C\_MasterRepeatedStart}}
+\index{I2C\_MasterRepeatedStart@{I2C\_MasterRepeatedStart}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterRepeatedStart()}{I2C\_MasterRepeatedStart()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Master\+Repeated\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint8\+\_\+t}]{address,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga4bf954d998f086594eece268c780bec7}{i2c\+\_\+direction\+\_\+t}}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Sends a R\+E\+P\+E\+A\+T\+ED S\+T\+A\+RT on the I2C bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C peripheral base pointer \\
+\hline
+{\em address} & 7-\/bit slave device address. \\
+\hline
+{\em direction} & Master transfer directions(transmit/receive). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully send the start signal. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Busy} & Current bus is busy but not occupied by current I2C master.\\
+\hline
+\end{DoxyRetVals}
+brief Sends a R\+E\+P\+E\+A\+T\+ED S\+T\+A\+RT on the I2C bus.
+
+param base I2C peripheral base pointer param address 7-\/bit slave device address. param direction Master transfer directions(transmit/receive). retval k\+Status\+\_\+\+Success Successfully send the start signal. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Busy Current bus is busy but not occupied by current I2C master. \mbox{\Hypertarget{group__i2c__driver_gafeab1d5249a8b39c8d9e1a54a85c23f0}\label{group__i2c__driver_gafeab1d5249a8b39c8d9e1a54a85c23f0}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterSetBaudRate@{I2C\_MasterSetBaudRate}}
+\index{I2C\_MasterSetBaudRate@{I2C\_MasterSetBaudRate}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterSetBaudRate()}{I2C\_MasterSetBaudRate()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Master\+Set\+Baud\+Rate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{baud\+Rate\+\_\+\+Bps,  }\item[{uint32\+\_\+t}]{src\+Clock\+\_\+\+Hz }\end{DoxyParamCaption})}
+
+
+
+Sets the I2C master transfer baud rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer \\
+\hline
+{\em baud\+Rate\+\_\+\+Bps} & the baud rate value in bps \\
+\hline
+{\em src\+Clock\+\_\+\+Hz} & Source clock\\
+\hline
+\end{DoxyParams}
+brief Sets the I2C master transfer baud rate.
+
+param base I2C base pointer param baud\+Rate\+\_\+\+Bps the baud rate value in bps param src\+Clock\+\_\+\+Hz Source clock \mbox{\Hypertarget{group__i2c__driver_ga7664234966e4162e952b6d57efcaa8a6}\label{group__i2c__driver_ga7664234966e4162e952b6d57efcaa8a6}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterStart@{I2C\_MasterStart}}
+\index{I2C\_MasterStart@{I2C\_MasterStart}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterStart()}{I2C\_MasterStart()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Master\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint8\+\_\+t}]{address,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga4bf954d998f086594eece268c780bec7}{i2c\+\_\+direction\+\_\+t}}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Sends a S\+T\+A\+RT on the I2C bus. 
+
+This function is used to initiate a new master mode transfer by sending the S\+T\+A\+RT signal. The slave address is sent following the I2C S\+T\+A\+RT signal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C peripheral base pointer \\
+\hline
+{\em address} & 7-\/bit slave device address. \\
+\hline
+{\em direction} & Master transfer directions(transmit/receive). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully send the start signal. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Busy} & Current bus is busy.\\
+\hline
+\end{DoxyRetVals}
+brief Sends a S\+T\+A\+RT on the I2C bus.
+
+This function is used to initiate a new master mode transfer by sending the S\+T\+A\+RT signal. The slave address is sent following the I2C S\+T\+A\+RT signal.
+
+param base I2C peripheral base pointer param address 7-\/bit slave device address. param direction Master transfer directions(transmit/receive). retval k\+Status\+\_\+\+Success Successfully send the start signal. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Busy Current bus is busy. \mbox{\Hypertarget{group__i2c__driver_gaf46a8cc094fc18c6cadea8de71448723}\label{group__i2c__driver_gaf46a8cc094fc18c6cadea8de71448723}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterStop@{I2C\_MasterStop}}
+\index{I2C\_MasterStop@{I2C\_MasterStop}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterStop()}{I2C\_MasterStop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Master\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Sends a S\+T\+OP signal on the I2C bus. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully send the stop signal. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout} & Send stop signal failed, timeout.\\
+\hline
+\end{DoxyRetVals}
+brief Sends a S\+T\+OP signal on the I2C bus.
+
+retval k\+Status\+\_\+\+Success Successfully send the stop signal. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout Send stop signal failed, timeout. \mbox{\Hypertarget{group__i2c__driver_gabb386e53b2bc64e29b2915bdfac36800}\label{group__i2c__driver_gabb386e53b2bc64e29b2915bdfac36800}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterTransferAbort@{I2C\_MasterTransferAbort}}
+\index{I2C\_MasterTransferAbort@{I2C\_MasterTransferAbort}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterTransferAbort()}{I2C\_MasterTransferAbort()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Master\+Transfer\+Abort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}{i2c\+\_\+master\+\_\+handle\+\_\+t}} $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Aborts an interrupt non-\/blocking transfer early. 
+
+\begin{DoxyNote}{Note}
+This A\+PI can be called at any time when an interrupt non-\/blocking transfer initiates to abort the transfer early.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer. \\
+\hline
+{\em handle} & pointer to i2c\+\_\+master\+\_\+handle\+\_\+t structure which stores the transfer state \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout} & Timeout during polling flag. \\
+\hline
+{\em k\+Status\+\_\+\+Success} & Successfully abort the transfer.\\
+\hline
+\end{DoxyRetVals}
+brief Aborts an interrupt non-\/blocking transfer early.
+
+note This A\+PI can be called at any time when an interrupt non-\/blocking transfer initiates to abort the transfer early.
+
+param base I2C base pointer. param handle pointer to i2c\+\_\+master\+\_\+handle\+\_\+t structure which stores the transfer state retval k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout Timeout during polling flag. retval k\+Status\+\_\+\+Success Successfully abort the transfer. \mbox{\Hypertarget{group__i2c__driver_ga35cae3a5b4aa50ce8db28e3eb703a027}\label{group__i2c__driver_ga35cae3a5b4aa50ce8db28e3eb703a027}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterTransferBlocking@{I2C\_MasterTransferBlocking}}
+\index{I2C\_MasterTransferBlocking@{I2C\_MasterTransferBlocking}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterTransferBlocking()}{I2C\_MasterTransferBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Master\+Transfer\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}{i2c\+\_\+master\+\_\+transfer\+\_\+t}} $\ast$}]{xfer }\end{DoxyParamCaption})}
+
+
+
+Performs a master polling transfer on the I2C bus. 
+
+\begin{DoxyNote}{Note}
+The A\+PI does not return until the transfer succeeds or fails due to arbitration lost or receiving a N\+AK.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C peripheral base address. \\
+\hline
+{\em xfer} & Pointer to the transfer structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully complete the data transmission. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Busy} & Previous transmission still not finished. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout} & Transfer error, wait signal timeout. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Arbitration\+Lost} & Transfer error, arbitration lost. \\
+\hline
+{\em k\+Stataus\+\_\+\+I2\+C\+\_\+\+Nak} & Transfer error, receive N\+AK during transfer.\\
+\hline
+\end{DoxyRetVals}
+brief Performs a master polling transfer on the I2C bus.
+
+note The A\+PI does not return until the transfer succeeds or fails due to arbitration lost or receiving a N\+AK.
+
+param base I2C peripheral base address. param xfer Pointer to the transfer structure. retval k\+Status\+\_\+\+Success Successfully complete the data transmission. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Busy Previous transmission still not finished. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout Transfer error, wait signal timeout. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Arbitration\+Lost Transfer error, arbitration lost. retval k\+Stataus\+\_\+\+I2\+C\+\_\+\+Nak Transfer error, receive N\+AK during transfer. \mbox{\Hypertarget{group__i2c__driver_ga31e3de02b57801c6896e6045c4a31268}\label{group__i2c__driver_ga31e3de02b57801c6896e6045c4a31268}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterTransferCreateHandle@{I2C\_MasterTransferCreateHandle}}
+\index{I2C\_MasterTransferCreateHandle@{I2C\_MasterTransferCreateHandle}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterTransferCreateHandle()}{I2C\_MasterTransferCreateHandle()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Master\+Transfer\+Create\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}{i2c\+\_\+master\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{\mbox{\hyperlink{group__i2c__driver_gafa39d30cd808d79b774361874f227204}{i2c\+\_\+master\+\_\+transfer\+\_\+callback\+\_\+t}}}]{callback,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Initializes the I2C handle which is used in transactional functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer. \\
+\hline
+{\em handle} & pointer to i2c\+\_\+master\+\_\+handle\+\_\+t structure to store the transfer state. \\
+\hline
+{\em callback} & pointer to user callback function. \\
+\hline
+{\em user\+Data} & user parameter passed to the callback function.\\
+\hline
+\end{DoxyParams}
+brief Initializes the I2C handle which is used in transactional functions.
+
+param base I2C base pointer. param handle pointer to i2c\+\_\+master\+\_\+handle\+\_\+t structure to store the transfer state. param callback pointer to user callback function. param user\+Data user parameter passed to the callback function. \mbox{\Hypertarget{group__i2c__driver_ga7d720842e68161d2d52d56d119f20665}\label{group__i2c__driver_ga7d720842e68161d2d52d56d119f20665}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterTransferGetCount@{I2C\_MasterTransferGetCount}}
+\index{I2C\_MasterTransferGetCount@{I2C\_MasterTransferGetCount}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterTransferGetCount()}{I2C\_MasterTransferGetCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Master\+Transfer\+Get\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}{i2c\+\_\+master\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{size\+\_\+t $\ast$}]{count }\end{DoxyParamCaption})}
+
+
+
+Gets the master transfer status during a interrupt non-\/blocking transfer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer. \\
+\hline
+{\em handle} & pointer to i2c\+\_\+master\+\_\+handle\+\_\+t structure which stores the transfer state. \\
+\hline
+{\em count} & Number of bytes transferred so far by the non-\/blocking transaction. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Invalid\+Argument} & count is Invalid. \\
+\hline
+{\em k\+Status\+\_\+\+Success} & Successfully return the count.\\
+\hline
+\end{DoxyRetVals}
+brief Gets the master transfer status during a interrupt non-\/blocking transfer.
+
+param base I2C base pointer. param handle pointer to i2c\+\_\+master\+\_\+handle\+\_\+t structure which stores the transfer state. param count Number of bytes transferred so far by the non-\/blocking transaction. retval k\+Status\+\_\+\+Invalid\+Argument count is Invalid. retval k\+Status\+\_\+\+Success Successfully return the count. \mbox{\Hypertarget{group__i2c__driver_gad091cd1857d2bd8ce64583739b3a35d5}\label{group__i2c__driver_gad091cd1857d2bd8ce64583739b3a35d5}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterTransferHandleIRQ@{I2C\_MasterTransferHandleIRQ}}
+\index{I2C\_MasterTransferHandleIRQ@{I2C\_MasterTransferHandleIRQ}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterTransferHandleIRQ()}{I2C\_MasterTransferHandleIRQ()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Master\+Transfer\+Handle\+I\+RQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{void $\ast$}]{i2c\+Handle }\end{DoxyParamCaption})}
+
+
+
+Master interrupt handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer. \\
+\hline
+{\em i2c\+Handle} & pointer to i2c\+\_\+master\+\_\+handle\+\_\+t structure.\\
+\hline
+\end{DoxyParams}
+brief Master interrupt handler.
+
+param base I2C base pointer. param i2c\+Handle pointer to i2c\+\_\+master\+\_\+handle\+\_\+t structure. \mbox{\Hypertarget{group__i2c__driver_gac7f76a04b6f6873c52ad176d58901fe9}\label{group__i2c__driver_gac7f76a04b6f6873c52ad176d58901fe9}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterTransferNonBlocking@{I2C\_MasterTransferNonBlocking}}
+\index{I2C\_MasterTransferNonBlocking@{I2C\_MasterTransferNonBlocking}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterTransferNonBlocking()}{I2C\_MasterTransferNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Master\+Transfer\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga2fd51f58b8cfd309be985bce4b817fdc}{i2c\+\_\+master\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}{i2c\+\_\+master\+\_\+transfer\+\_\+t}} $\ast$}]{xfer }\end{DoxyParamCaption})}
+
+
+
+Performs a master interrupt non-\/blocking transfer on the I2C bus. 
+
+\begin{DoxyNote}{Note}
+Calling the A\+PI returns immediately after transfer initiates. The user needs to call I2\+C\+\_\+\+Master\+Get\+Transfer\+Count to poll the transfer status to check whether the transfer is finished. If the return status is not k\+Status\+\_\+\+I2\+C\+\_\+\+Busy, the transfer is finished.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer. \\
+\hline
+{\em handle} & pointer to i2c\+\_\+master\+\_\+handle\+\_\+t structure which stores the transfer state. \\
+\hline
+{\em xfer} & pointer to i2c\+\_\+master\+\_\+transfer\+\_\+t structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully start the data transmission. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Busy} & Previous transmission still not finished. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout} & Transfer error, wait signal timeout.\\
+\hline
+\end{DoxyRetVals}
+brief Performs a master interrupt non-\/blocking transfer on the I2C bus.
+
+note Calling the A\+PI returns immediately after transfer initiates. The user needs to call I2\+C\+\_\+\+Master\+Get\+Transfer\+Count to poll the transfer status to check whether the transfer is finished. If the return status is not k\+Status\+\_\+\+I2\+C\+\_\+\+Busy, the transfer is finished.
+
+param base I2C base pointer. param handle pointer to i2c\+\_\+master\+\_\+handle\+\_\+t structure which stores the transfer state. param xfer pointer to i2c\+\_\+master\+\_\+transfer\+\_\+t structure. retval k\+Status\+\_\+\+Success Successfully start the data transmission. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Busy Previous transmission still not finished. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout Transfer error, wait signal timeout. \mbox{\Hypertarget{group__i2c__driver_gac4e1a954243aa852cb4d358e90091efd}\label{group__i2c__driver_gac4e1a954243aa852cb4d358e90091efd}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_MasterWriteBlocking@{I2C\_MasterWriteBlocking}}
+\index{I2C\_MasterWriteBlocking@{I2C\_MasterWriteBlocking}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_MasterWriteBlocking()}{I2C\_MasterWriteBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Master\+Write\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{const uint8\+\_\+t $\ast$}]{tx\+Buff,  }\item[{size\+\_\+t}]{tx\+Size,  }\item[{uint32\+\_\+t}]{flags }\end{DoxyParamCaption})}
+
+
+
+Performs a polling send transaction on the I2C bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & The I2C peripheral base pointer. \\
+\hline
+{\em tx\+Buff} & The pointer to the data to be transferred. \\
+\hline
+{\em tx\+Size} & The length in bytes of the data to be transferred. \\
+\hline
+{\em flags} & Transfer control flag to decide whether need to send a stop, use k\+I2\+C\+\_\+\+Transfer\+Default\+Flag to issue a stop and k\+I2\+C\+\_\+\+Transfer\+No\+Stop to not send a stop. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully complete the data transmission. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Arbitration\+Lost} & Transfer error, arbitration lost. \\
+\hline
+{\em k\+Stataus\+\_\+\+I2\+C\+\_\+\+Nak} & Transfer error, receive N\+AK during transfer.\\
+\hline
+\end{DoxyRetVals}
+brief Performs a polling send transaction on the I2C bus.
+
+param base The I2C peripheral base pointer. param tx\+Buff The pointer to the data to be transferred. param tx\+Size The length in bytes of the data to be transferred. param flags Transfer control flag to decide whether need to send a stop, use k\+I2\+C\+\_\+\+Transfer\+Default\+Flag to issue a stop and k\+I2\+C\+\_\+\+Transfer\+No\+Stop to not send a stop. retval k\+Status\+\_\+\+Success Successfully complete the data transmission. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Arbitration\+Lost Transfer error, arbitration lost. retval k\+Stataus\+\_\+\+I2\+C\+\_\+\+Nak Transfer error, receive N\+AK during transfer. \mbox{\Hypertarget{group__i2c__driver_gadb50014db29dd75ea2001fb7bc837e77}\label{group__i2c__driver_gadb50014db29dd75ea2001fb7bc837e77}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_SlaveDeinit@{I2C\_SlaveDeinit}}
+\index{I2C\_SlaveDeinit@{I2C\_SlaveDeinit}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_SlaveDeinit()}{I2C\_SlaveDeinit()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Slave\+Deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+De-\/initializes the I2C slave peripheral. Calling this A\+PI gates the I2C clock. The I2C slave module can\textquotesingle{}t work unless the I2\+C\+\_\+\+Slave\+Init is called to enable the clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer\\
+\hline
+\end{DoxyParams}
+brief De-\/initializes the I2C slave peripheral. Calling this A\+PI gates the I2C clock. The I2C slave module can\textquotesingle{}t work unless the I2\+C\+\_\+\+Slave\+Init is called to enable the clock. param base I2C base pointer \mbox{\Hypertarget{group__i2c__driver_ga7115f80e28b62bbbd3be1a2a918529ba}\label{group__i2c__driver_ga7115f80e28b62bbbd3be1a2a918529ba}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_SlaveGetDefaultConfig@{I2C\_SlaveGetDefaultConfig}}
+\index{I2C\_SlaveGetDefaultConfig@{I2C\_SlaveGetDefaultConfig}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_SlaveGetDefaultConfig()}{I2C\_SlaveGetDefaultConfig()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Slave\+Get\+Default\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__i2c__driver_gaa70dd0ec9815617269569190efd2de5d}{i2c\+\_\+slave\+\_\+config\+\_\+t}} $\ast$}]{slave\+Config }\end{DoxyParamCaption})}
+
+
+
+Sets the I2C slave configuration structure to default values. 
+
+The purpose of this A\+PI is to get the configuration structure initialized for use in the I2\+C\+\_\+\+Slave\+Configure(). Modify fields of the structure before calling the I2\+C\+\_\+\+Slave\+Configure(). This is an example. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct__i2c__slave__config}{i2c\_slave\_config\_t}} config;}
+\DoxyCodeLine{\mbox{\hyperlink{group__i2c__driver_ga7115f80e28b62bbbd3be1a2a918529ba}{I2C\_SlaveGetDefaultConfig}}(\&config);}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em slave\+Config} & A pointer to the slave configuration structure.\\
+\hline
+\end{DoxyParams}
+brief Sets the I2C slave configuration structure to default values.
+
+The purpose of this A\+PI is to get the configuration structure initialized for use in the I2\+C\+\_\+\+Slave\+Configure(). Modify fields of the structure before calling the I2\+C\+\_\+\+Slave\+Configure(). This is an example. code i2c\+\_\+slave\+\_\+config\+\_\+t config; I2\+C\+\_\+\+Slave\+Get\+Default\+Config(\&config); endcode param slave\+Config A pointer to the slave configuration structure. \mbox{\Hypertarget{group__i2c__driver_gaf2397a88554ea896f212dd262f9bc731}\label{group__i2c__driver_gaf2397a88554ea896f212dd262f9bc731}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_SlaveInit@{I2C\_SlaveInit}}
+\index{I2C\_SlaveInit@{I2C\_SlaveInit}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_SlaveInit()}{I2C\_SlaveInit()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Slave\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{const \mbox{\hyperlink{group__i2c__driver_gaa70dd0ec9815617269569190efd2de5d}{i2c\+\_\+slave\+\_\+config\+\_\+t}} $\ast$}]{slave\+Config,  }\item[{uint32\+\_\+t}]{src\+Clock\+\_\+\+Hz }\end{DoxyParamCaption})}
+
+
+
+Initializes the I2C peripheral. Call this A\+PI to ungate the I2C clock and initialize the I2C with the slave configuration. 
+
+\begin{DoxyNote}{Note}
+This A\+PI should be called at the beginning of the application. Otherwise, any operation to the I2C module can cause a hard fault because the clock is not enabled. The configuration structure can partly be set with default values by \mbox{\hyperlink{group__i2c__driver_ga7115f80e28b62bbbd3be1a2a918529ba}{I2\+C\+\_\+\+Slave\+Get\+Default\+Config()}} or it can be custom filled by the user. This is an example. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct__i2c__slave__config}{i2c\_slave\_config\_t}} config = \{}
+\DoxyCodeLine{.\mbox{\hyperlink{struct__i2c__slave__config_a9189d8f6438ba99548837da162213c46}{enableSlave}} = \textcolor{keyword}{true},}
+\DoxyCodeLine{.enableGeneralCall = \textcolor{keyword}{false},}
+\DoxyCodeLine{.addressingMode = \mbox{\hyperlink{group__i2c__driver_ggae1e1e45d8491652a249bf48530911ac7a3e2c7f1f917939d0d7595224e3700dd4}{kI2C\_Address7bit}},}
+\DoxyCodeLine{.slaveAddress = 0x1DU,}
+\DoxyCodeLine{.enableWakeUp = \textcolor{keyword}{false},}
+\DoxyCodeLine{.enablehighDrive = \textcolor{keyword}{false},}
+\DoxyCodeLine{.enableBaudRateCtl = \textcolor{keyword}{false},}
+\DoxyCodeLine{.sclStopHoldTime\_ns = 4000}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{\mbox{\hyperlink{group__i2c__driver_gaf2397a88554ea896f212dd262f9bc731}{I2C\_SlaveInit}}(\mbox{\hyperlink{group___i2_c___peripheral___access___layer_ga86abb2e8858d177c04e60c41e9242045}{I2C0}}, \&config, 12000000U);}
+\end{DoxyCode}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer \\
+\hline
+{\em slave\+Config} & A pointer to the slave configuration structure \\
+\hline
+{\em src\+Clock\+\_\+\+Hz} & I2C peripheral clock frequency in Hz\\
+\hline
+\end{DoxyParams}
+brief Initializes the I2C peripheral. Call this A\+PI to ungate the I2C clock and initialize the I2C with the slave configuration.
+
+note This A\+PI should be called at the beginning of the application. Otherwise, any operation to the I2C module can cause a hard fault because the clock is not enabled. The configuration structure can partly be set with default values by \mbox{\hyperlink{group__i2c__driver_ga7115f80e28b62bbbd3be1a2a918529ba}{I2\+C\+\_\+\+Slave\+Get\+Default\+Config()}} or it can be custom filled by the user. This is an example. code i2c\+\_\+slave\+\_\+config\+\_\+t config = \{ .enable\+Slave = true, .enable\+General\+Call = false, .addressing\+Mode = k\+I2\+C\+\_\+\+Address7bit, .slave\+Address = 0x1\+DU, .enable\+Wake\+Up = false, .enablehigh\+Drive = false, .enable\+Baud\+Rate\+Ctl = false, .scl\+Stop\+Hold\+Time\+\_\+ns = 4000 \}; I2\+C\+\_\+\+Slave\+Init(\+I2\+C0, \&config, 12000000\+U); endcode
+
+param base I2C base pointer param slave\+Config A pointer to the slave configuration structure param src\+Clock\+\_\+\+Hz I2C peripheral clock frequency in Hz \mbox{\Hypertarget{group__i2c__driver_ga89baaf8bc82b19c837032665e89a1707}\label{group__i2c__driver_ga89baaf8bc82b19c837032665e89a1707}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_SlaveReadBlocking@{I2C\_SlaveReadBlocking}}
+\index{I2C\_SlaveReadBlocking@{I2C\_SlaveReadBlocking}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_SlaveReadBlocking()}{I2C\_SlaveReadBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Slave\+Read\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint8\+\_\+t $\ast$}]{rx\+Buff,  }\item[{size\+\_\+t}]{rx\+Size }\end{DoxyParamCaption})}
+
+
+
+Performs a polling receive transaction on the I2C bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C peripheral base pointer. \\
+\hline
+{\em rx\+Buff} & The pointer to the data to store the received data. \\
+\hline
+{\em rx\+Size} & The length in bytes of the data to be received. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully complete data receive. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout} & Wait status flag timeout.\\
+\hline
+\end{DoxyRetVals}
+brief Performs a polling receive transaction on the I2C bus.
+
+param base I2C peripheral base pointer. param rx\+Buff The pointer to the data to store the received data. param rx\+Size The length in bytes of the data to be received. retval k\+Status\+\_\+\+Success Successfully complete data receive. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Timeout Wait status flag timeout. \mbox{\Hypertarget{group__i2c__driver_ga5ae9f5e6e854d14d33ba3029128bd6f0}\label{group__i2c__driver_ga5ae9f5e6e854d14d33ba3029128bd6f0}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_SlaveTransferAbort@{I2C\_SlaveTransferAbort}}
+\index{I2C\_SlaveTransferAbort@{I2C\_SlaveTransferAbort}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_SlaveTransferAbort()}{I2C\_SlaveTransferAbort()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Slave\+Transfer\+Abort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Aborts the slave transfer. 
+
+\begin{DoxyNote}{Note}
+This A\+PI can be called at any time to stop slave for handling the bus events.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer. \\
+\hline
+{\em handle} & pointer to i2c\+\_\+slave\+\_\+handle\+\_\+t structure which stores the transfer state.\\
+\hline
+\end{DoxyParams}
+brief Aborts the slave transfer.
+
+note This A\+PI can be called at any time to stop slave for handling the bus events.
+
+param base I2C base pointer. param handle pointer to i2c\+\_\+slave\+\_\+handle\+\_\+t structure which stores the transfer state. \mbox{\Hypertarget{group__i2c__driver_gac9b90f575d92ff8ad3cc350a5c8ad1b9}\label{group__i2c__driver_gac9b90f575d92ff8ad3cc350a5c8ad1b9}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_SlaveTransferCreateHandle@{I2C\_SlaveTransferCreateHandle}}
+\index{I2C\_SlaveTransferCreateHandle@{I2C\_SlaveTransferCreateHandle}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_SlaveTransferCreateHandle()}{I2C\_SlaveTransferCreateHandle()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Slave\+Transfer\+Create\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga2583e3d8ebf8d3de410d8b6263238c35}{i2c\+\_\+slave\+\_\+transfer\+\_\+callback\+\_\+t}}}]{callback,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Initializes the I2C handle which is used in transactional functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer. \\
+\hline
+{\em handle} & pointer to i2c\+\_\+slave\+\_\+handle\+\_\+t structure to store the transfer state. \\
+\hline
+{\em callback} & pointer to user callback function. \\
+\hline
+{\em user\+Data} & user parameter passed to the callback function.\\
+\hline
+\end{DoxyParams}
+brief Initializes the I2C handle which is used in transactional functions.
+
+param base I2C base pointer. param handle pointer to i2c\+\_\+slave\+\_\+handle\+\_\+t structure to store the transfer state. param callback pointer to user callback function. param user\+Data user parameter passed to the callback function. \mbox{\Hypertarget{group__i2c__driver_gabf38a498bd3527ea0b7cc947ae71e17e}\label{group__i2c__driver_gabf38a498bd3527ea0b7cc947ae71e17e}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_SlaveTransferGetCount@{I2C\_SlaveTransferGetCount}}
+\index{I2C\_SlaveTransferGetCount@{I2C\_SlaveTransferGetCount}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_SlaveTransferGetCount()}{I2C\_SlaveTransferGetCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Slave\+Transfer\+Get\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{size\+\_\+t $\ast$}]{count }\end{DoxyParamCaption})}
+
+
+
+Gets the slave transfer remaining bytes during a interrupt non-\/blocking transfer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer. \\
+\hline
+{\em handle} & pointer to i2c\+\_\+slave\+\_\+handle\+\_\+t structure. \\
+\hline
+{\em count} & Number of bytes transferred so far by the non-\/blocking transaction. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Invalid\+Argument} & count is Invalid. \\
+\hline
+{\em k\+Status\+\_\+\+Success} & Successfully return the count.\\
+\hline
+\end{DoxyRetVals}
+brief Gets the slave transfer remaining bytes during a interrupt non-\/blocking transfer.
+
+param base I2C base pointer. param handle pointer to i2c\+\_\+slave\+\_\+handle\+\_\+t structure. param count Number of bytes transferred so far by the non-\/blocking transaction. retval k\+Status\+\_\+\+Invalid\+Argument count is Invalid. retval k\+Status\+\_\+\+Success Successfully return the count. \mbox{\Hypertarget{group__i2c__driver_ga097c0b20503381de44cccba311dcf236}\label{group__i2c__driver_ga097c0b20503381de44cccba311dcf236}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_SlaveTransferHandleIRQ@{I2C\_SlaveTransferHandleIRQ}}
+\index{I2C\_SlaveTransferHandleIRQ@{I2C\_SlaveTransferHandleIRQ}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_SlaveTransferHandleIRQ()}{I2C\_SlaveTransferHandleIRQ()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Slave\+Transfer\+Handle\+I\+RQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{void $\ast$}]{i2c\+Handle }\end{DoxyParamCaption})}
+
+
+
+Slave interrupt handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & I2C base pointer. \\
+\hline
+{\em i2c\+Handle} & pointer to i2c\+\_\+slave\+\_\+handle\+\_\+t structure which stores the transfer state\\
+\hline
+\end{DoxyParams}
+brief Slave interrupt handler.
+
+param base I2C base pointer. param i2c\+Handle pointer to i2c\+\_\+slave\+\_\+handle\+\_\+t structure which stores the transfer state \mbox{\Hypertarget{group__i2c__driver_gaa387d81ea08a9d4b39cfeb3dfec505f7}\label{group__i2c__driver_gaa387d81ea08a9d4b39cfeb3dfec505f7}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_SlaveTransferNonBlocking@{I2C\_SlaveTransferNonBlocking}}
+\index{I2C\_SlaveTransferNonBlocking@{I2C\_SlaveTransferNonBlocking}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_SlaveTransferNonBlocking()}{I2C\_SlaveTransferNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Slave\+Transfer\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{uint32\+\_\+t}]{event\+Mask }\end{DoxyParamCaption})}
+
+
+
+Starts accepting slave transfers. 
+
+Call this A\+PI after calling the \mbox{\hyperlink{group__i2c__driver_gaf2397a88554ea896f212dd262f9bc731}{I2\+C\+\_\+\+Slave\+Init()}} and \mbox{\hyperlink{group__i2c__driver_gac9b90f575d92ff8ad3cc350a5c8ad1b9}{I2\+C\+\_\+\+Slave\+Transfer\+Create\+Handle()}} to start processing transactions driven by an I2C master. The slave monitors the I2C bus and passes events to the callback that was passed into the call to \mbox{\hyperlink{group__i2c__driver_gac9b90f575d92ff8ad3cc350a5c8ad1b9}{I2\+C\+\_\+\+Slave\+Transfer\+Create\+Handle()}}. The callback is always invoked from the interrupt context.
+
+The set of events received by the callback is customizable. To do so, set the {\itshape event\+Mask} parameter to the OR\textquotesingle{}d combination of \mbox{\hyperlink{group__i2c__driver_ga95f120f6a73af41648364538cf9a6eca}{i2c\+\_\+slave\+\_\+transfer\+\_\+event\+\_\+t}} enumerators for the events you wish to receive. The \mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a2f85039a57379838909876a1d509b7aa}{k\+I2\+C\+\_\+\+Slave\+Transmit\+Event}} and \#k\+L\+P\+I2\+C\+\_\+\+Slave\+Receive\+Event events are always enabled and do not need to be included in the mask. Alternatively, pass 0 to get a default set of only the transmit and receive events that are always enabled. In addition, the \mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a94b030ebdac378a84961893ae567bfbc}{k\+I2\+C\+\_\+\+Slave\+All\+Events}} constant is provided as a convenient way to enable all events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & The I2C peripheral base address. \\
+\hline
+{\em handle} & Pointer to \mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}} structure which stores the transfer state. \\
+\hline
+{\em event\+Mask} & Bit mask formed by OR\textquotesingle{}ing together \mbox{\hyperlink{group__i2c__driver_ga95f120f6a73af41648364538cf9a6eca}{i2c\+\_\+slave\+\_\+transfer\+\_\+event\+\_\+t}} enumerators to specify which events to send to the callback. Other accepted values are 0 to get a default set of only the transmit and receive events, and \mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a94b030ebdac378a84961893ae567bfbc}{k\+I2\+C\+\_\+\+Slave\+All\+Events}} to enable all events.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \#k\+Status\+\_\+\+Success} & Slave transfers were successfully started. \\
+\hline
+{\em \mbox{\hyperlink{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a49091894b590d7e479605bf113918952}{k\+Status\+\_\+\+I2\+C\+\_\+\+Busy}}} & Slave transfers have already been started on this handle.\\
+\hline
+\end{DoxyRetVals}
+brief Starts accepting slave transfers.
+
+Call this A\+PI after calling the \mbox{\hyperlink{group__i2c__driver_gaf2397a88554ea896f212dd262f9bc731}{I2\+C\+\_\+\+Slave\+Init()}} and \mbox{\hyperlink{group__i2c__driver_gac9b90f575d92ff8ad3cc350a5c8ad1b9}{I2\+C\+\_\+\+Slave\+Transfer\+Create\+Handle()}} to start processing transactions driven by an I2C master. The slave monitors the I2C bus and passes events to the callback that was passed into the call to \mbox{\hyperlink{group__i2c__driver_gac9b90f575d92ff8ad3cc350a5c8ad1b9}{I2\+C\+\_\+\+Slave\+Transfer\+Create\+Handle()}}. The callback is always invoked from the interrupt context.
+
+The set of events received by the callback is customizable. To do so, set the a event\+Mask parameter to the OR\textquotesingle{}d combination of \mbox{\hyperlink{group__i2c__driver_ga95f120f6a73af41648364538cf9a6eca}{i2c\+\_\+slave\+\_\+transfer\+\_\+event\+\_\+t}} enumerators for the events you wish to receive. The \mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a2f85039a57379838909876a1d509b7aa}{k\+I2\+C\+\_\+\+Slave\+Transmit\+Event}} and \#k\+L\+P\+I2\+C\+\_\+\+Slave\+Receive\+Event events are always enabled and do not need to be included in the mask. Alternatively, pass 0 to get a default set of only the transmit and receive events that are always enabled. In addition, the \mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a94b030ebdac378a84961893ae567bfbc}{k\+I2\+C\+\_\+\+Slave\+All\+Events}} constant is provided as a convenient way to enable all events.
+
+param base The I2C peripheral base address. param handle Pointer to \mbox{\hyperlink{group__i2c__driver_ga394e5278816efe62815de9d25be84752}{i2c\+\_\+slave\+\_\+handle\+\_\+t}} structure which stores the transfer state. param event\+Mask Bit mask formed by OR\textquotesingle{}ing together \mbox{\hyperlink{group__i2c__driver_ga95f120f6a73af41648364538cf9a6eca}{i2c\+\_\+slave\+\_\+transfer\+\_\+event\+\_\+t}} enumerators to specify which events to send to the callback. Other accepted values are 0 to get a default set of only the transmit and receive events, and \mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a94b030ebdac378a84961893ae567bfbc}{k\+I2\+C\+\_\+\+Slave\+All\+Events}} to enable all events.
+
+retval \#k\+Status\+\_\+\+Success Slave transfers were successfully started. retval \mbox{\hyperlink{group__i2c__driver_gga7cc91c89125c25a88e463a9e8550b284a49091894b590d7e479605bf113918952}{k\+Status\+\_\+\+I2\+C\+\_\+\+Busy}} Slave transfers have already been started on this handle. \mbox{\Hypertarget{group__i2c__driver_ga280404c6b1ede542f2c1c20bd382869c}\label{group__i2c__driver_ga280404c6b1ede542f2c1c20bd382869c}} 
+\index{I2c\_driver@{I2c\_driver}!I2C\_SlaveWriteBlocking@{I2C\_SlaveWriteBlocking}}
+\index{I2C\_SlaveWriteBlocking@{I2C\_SlaveWriteBlocking}!I2c\_driver@{I2c\_driver}}
+\subsubsection{\texorpdfstring{I2C\_SlaveWriteBlocking()}{I2C\_SlaveWriteBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} I2\+C\+\_\+\+Slave\+Write\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___type}{I2\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{const uint8\+\_\+t $\ast$}]{tx\+Buff,  }\item[{size\+\_\+t}]{tx\+Size }\end{DoxyParamCaption})}
+
+
+
+Performs a polling send transaction on the I2C bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & The I2C peripheral base pointer. \\
+\hline
+{\em tx\+Buff} & The pointer to the data to be transferred. \\
+\hline
+{\em tx\+Size} & The length in bytes of the data to be transferred. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully complete the data transmission. \\
+\hline
+{\em k\+Status\+\_\+\+I2\+C\+\_\+\+Arbitration\+Lost} & Transfer error, arbitration lost. \\
+\hline
+{\em k\+Stataus\+\_\+\+I2\+C\+\_\+\+Nak} & Transfer error, receive N\+AK during transfer.\\
+\hline
+\end{DoxyRetVals}
+brief Performs a polling send transaction on the I2C bus.
+
+param base The I2C peripheral base pointer. param tx\+Buff The pointer to the data to be transferred. param tx\+Size The length in bytes of the data to be transferred. retval k\+Status\+\_\+\+Success Successfully complete the data transmission. retval k\+Status\+\_\+\+I2\+C\+\_\+\+Arbitration\+Lost Transfer error, arbitration lost. retval k\+Stataus\+\_\+\+I2\+C\+\_\+\+Nak Transfer error, receive N\+AK during transfer. 

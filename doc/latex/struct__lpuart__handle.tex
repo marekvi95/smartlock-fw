@@ -1,0 +1,137 @@
+\hypertarget{struct__lpuart__handle}{}\section{\+\_\+lpuart\+\_\+handle Struct Reference}
+\label{struct__lpuart__handle}\index{\_lpuart\_handle@{\_lpuart\_handle}}
+
+
+L\+P\+U\+A\+RT handle structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+lpuart.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$volatile \mbox{\hyperlink{struct__lpuart__handle_ab56d8f300582ce9d7f4a79729124739d}{tx\+Data}}
+\item 
+volatile size\+\_\+t \mbox{\hyperlink{struct__lpuart__handle_a1f9d0ac47a5cdabb34988d5d811aceaf}{tx\+Data\+Size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct__lpuart__handle_a733be3042be24bb3eb6f0c6a82d28862}{tx\+Data\+Size\+All}}
+\item 
+uint8\+\_\+t $\ast$volatile \mbox{\hyperlink{struct__lpuart__handle_aa58335de5bfa8923228432b62ea9308a}{rx\+Data}}
+\item 
+volatile size\+\_\+t \mbox{\hyperlink{struct__lpuart__handle_ae1b7c6ae1b7e7ead628afe5410fa3f31}{rx\+Data\+Size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct__lpuart__handle_a180fd12c1a88bb61ac4b817f4e4e6bcd}{rx\+Data\+Size\+All}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{struct__lpuart__handle_a522d206ac2b0dde63cd3e7190853eaf2}{rx\+Ring\+Buffer}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct__lpuart__handle_a3fc25566538e662d74eb1444598a8277}{rx\+Ring\+Buffer\+Size}}
+\item 
+volatile uint16\+\_\+t \mbox{\hyperlink{struct__lpuart__handle_ac4f75206cf9b8009cdf64a30e05b01d8}{rx\+Ring\+Buffer\+Head}}
+\item 
+volatile uint16\+\_\+t \mbox{\hyperlink{struct__lpuart__handle_a89b3f14260503bd82300f27872236474}{rx\+Ring\+Buffer\+Tail}}
+\item 
+\mbox{\hyperlink{group__lpuart__driver_ga558e0c23c05831e446708a3935f36332}{lpuart\+\_\+transfer\+\_\+callback\+\_\+t}} \mbox{\hyperlink{struct__lpuart__handle_a7d5bcc8b0ccdc3f03f12eb8ac65352ad}{callback}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__lpuart__handle_a2e294dd14122c554baa0665072b4ca7a}{user\+Data}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{struct__lpuart__handle_a4e027f3342bad321ec60b56d164eb068}{tx\+State}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{struct__lpuart__handle_a6f289c8f3bd5e967fb808de6da7f1c0c}{rx\+State}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+L\+P\+U\+A\+RT handle structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__lpuart__handle_a7d5bcc8b0ccdc3f03f12eb8ac65352ad}\label{struct__lpuart__handle_a7d5bcc8b0ccdc3f03f12eb8ac65352ad}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!callback@{callback}}
+\index{callback@{callback}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{callback}{callback}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__lpuart__driver_ga558e0c23c05831e446708a3935f36332}{lpuart\+\_\+transfer\+\_\+callback\+\_\+t}} callback}
+
+Callback function. \mbox{\Hypertarget{struct__lpuart__handle_aa58335de5bfa8923228432b62ea9308a}\label{struct__lpuart__handle_aa58335de5bfa8923228432b62ea9308a}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!rxData@{rxData}}
+\index{rxData@{rxData}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{rxData}{rxData}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ volatile rx\+Data}
+
+Address of remaining data to receive. \mbox{\Hypertarget{struct__lpuart__handle_ae1b7c6ae1b7e7ead628afe5410fa3f31}\label{struct__lpuart__handle_ae1b7c6ae1b7e7ead628afe5410fa3f31}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!rxDataSize@{rxDataSize}}
+\index{rxDataSize@{rxDataSize}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{rxDataSize}{rxDataSize}}
+{\footnotesize\ttfamily volatile size\+\_\+t rx\+Data\+Size}
+
+Size of the remaining data to receive. \mbox{\Hypertarget{struct__lpuart__handle_a180fd12c1a88bb61ac4b817f4e4e6bcd}\label{struct__lpuart__handle_a180fd12c1a88bb61ac4b817f4e4e6bcd}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!rxDataSizeAll@{rxDataSizeAll}}
+\index{rxDataSizeAll@{rxDataSizeAll}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{rxDataSizeAll}{rxDataSizeAll}}
+{\footnotesize\ttfamily size\+\_\+t rx\+Data\+Size\+All}
+
+Size of the data to receive. \mbox{\Hypertarget{struct__lpuart__handle_a522d206ac2b0dde63cd3e7190853eaf2}\label{struct__lpuart__handle_a522d206ac2b0dde63cd3e7190853eaf2}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!rxRingBuffer@{rxRingBuffer}}
+\index{rxRingBuffer@{rxRingBuffer}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{rxRingBuffer}{rxRingBuffer}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ rx\+Ring\+Buffer}
+
+Start address of the receiver ring buffer. \mbox{\Hypertarget{struct__lpuart__handle_ac4f75206cf9b8009cdf64a30e05b01d8}\label{struct__lpuart__handle_ac4f75206cf9b8009cdf64a30e05b01d8}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!rxRingBufferHead@{rxRingBufferHead}}
+\index{rxRingBufferHead@{rxRingBufferHead}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{rxRingBufferHead}{rxRingBufferHead}}
+{\footnotesize\ttfamily volatile uint16\+\_\+t rx\+Ring\+Buffer\+Head}
+
+Index for the driver to store received data into ring buffer. \mbox{\Hypertarget{struct__lpuart__handle_a3fc25566538e662d74eb1444598a8277}\label{struct__lpuart__handle_a3fc25566538e662d74eb1444598a8277}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!rxRingBufferSize@{rxRingBufferSize}}
+\index{rxRingBufferSize@{rxRingBufferSize}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{rxRingBufferSize}{rxRingBufferSize}}
+{\footnotesize\ttfamily size\+\_\+t rx\+Ring\+Buffer\+Size}
+
+Size of the ring buffer. \mbox{\Hypertarget{struct__lpuart__handle_a89b3f14260503bd82300f27872236474}\label{struct__lpuart__handle_a89b3f14260503bd82300f27872236474}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!rxRingBufferTail@{rxRingBufferTail}}
+\index{rxRingBufferTail@{rxRingBufferTail}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{rxRingBufferTail}{rxRingBufferTail}}
+{\footnotesize\ttfamily volatile uint16\+\_\+t rx\+Ring\+Buffer\+Tail}
+
+Index for the user to get data from the ring buffer. \mbox{\Hypertarget{struct__lpuart__handle_a6f289c8f3bd5e967fb808de6da7f1c0c}\label{struct__lpuart__handle_a6f289c8f3bd5e967fb808de6da7f1c0c}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!rxState@{rxState}}
+\index{rxState@{rxState}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{rxState}{rxState}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t rx\+State}
+
+RX transfer state. \mbox{\Hypertarget{struct__lpuart__handle_ab56d8f300582ce9d7f4a79729124739d}\label{struct__lpuart__handle_ab56d8f300582ce9d7f4a79729124739d}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!txData@{txData}}
+\index{txData@{txData}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{txData}{txData}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ volatile tx\+Data}
+
+Address of remaining data to send. \mbox{\Hypertarget{struct__lpuart__handle_a1f9d0ac47a5cdabb34988d5d811aceaf}\label{struct__lpuart__handle_a1f9d0ac47a5cdabb34988d5d811aceaf}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!txDataSize@{txDataSize}}
+\index{txDataSize@{txDataSize}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{txDataSize}{txDataSize}}
+{\footnotesize\ttfamily volatile size\+\_\+t tx\+Data\+Size}
+
+Size of the remaining data to send. \mbox{\Hypertarget{struct__lpuart__handle_a733be3042be24bb3eb6f0c6a82d28862}\label{struct__lpuart__handle_a733be3042be24bb3eb6f0c6a82d28862}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!txDataSizeAll@{txDataSizeAll}}
+\index{txDataSizeAll@{txDataSizeAll}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{txDataSizeAll}{txDataSizeAll}}
+{\footnotesize\ttfamily size\+\_\+t tx\+Data\+Size\+All}
+
+Size of the data to send out. \mbox{\Hypertarget{struct__lpuart__handle_a4e027f3342bad321ec60b56d164eb068}\label{struct__lpuart__handle_a4e027f3342bad321ec60b56d164eb068}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!txState@{txState}}
+\index{txState@{txState}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{txState}{txState}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t tx\+State}
+
+TX transfer state. \mbox{\Hypertarget{struct__lpuart__handle_a2e294dd14122c554baa0665072b4ca7a}\label{struct__lpuart__handle_a2e294dd14122c554baa0665072b4ca7a}} 
+\index{\_lpuart\_handle@{\_lpuart\_handle}!userData@{userData}}
+\index{userData@{userData}!\_lpuart\_handle@{\_lpuart\_handle}}
+\subsubsection{\texorpdfstring{userData}{userData}}
+{\footnotesize\ttfamily void$\ast$ user\+Data}
+
+L\+P\+U\+A\+RT callback function parameter. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+lpuart.\+h\end{DoxyCompactItemize}

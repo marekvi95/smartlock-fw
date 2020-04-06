@@ -1,0 +1,147 @@
+\hypertarget{group__rcm}{}\section{Rcm}
+\label{group__rcm}\index{Rcm@{Rcm}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__rcm__reset__pin__filter__config}{\+\_\+rcm\+\_\+reset\+\_\+pin\+\_\+filter\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Reset pin filter configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__rcm_ga3846d327a8556045a76cea7143317ddb}\label{group__rcm_ga3846d327a8556045a76cea7143317ddb}} 
+typedef enum \mbox{\hyperlink{group__rcm_ga089aeb2329dd1c555a9a7493f3efff6a}{\+\_\+rcm\+\_\+reset\+\_\+source}} \mbox{\hyperlink{group__rcm_ga3846d327a8556045a76cea7143317ddb}{rcm\+\_\+reset\+\_\+source\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em System Reset Source Name definitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__rcm_gab04818291759684817621ea4afa2466d}\label{group__rcm_gab04818291759684817621ea4afa2466d}} 
+typedef enum \mbox{\hyperlink{group__rcm_ga1e89ca2ffc3856208be42ca30c191b4d}{\+\_\+rcm\+\_\+run\+\_\+wait\+\_\+filter\+\_\+mode}} \mbox{\hyperlink{group__rcm_gab04818291759684817621ea4afa2466d}{rcm\+\_\+run\+\_\+wait\+\_\+filter\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Reset pin filter select in Run and Wait modes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__rcm_ga1ff478888c7dd7c6ed8ff27f8fb00f59}\label{group__rcm_ga1ff478888c7dd7c6ed8ff27f8fb00f59}} 
+typedef struct \mbox{\hyperlink{struct__rcm__reset__pin__filter__config}{\+\_\+rcm\+\_\+reset\+\_\+pin\+\_\+filter\+\_\+config}} \mbox{\hyperlink{group__rcm_ga1ff478888c7dd7c6ed8ff27f8fb00f59}{rcm\+\_\+reset\+\_\+pin\+\_\+filter\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Reset pin filter configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__rcm_ga089aeb2329dd1c555a9a7493f3efff6a}{\+\_\+rcm\+\_\+reset\+\_\+source}} \{ \newline
+\mbox{\hyperlink{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa54ba70136d9bd9a7c3870c460b62d201}{k\+R\+C\+M\+\_\+\+Source\+Lvd}} = R\+C\+M\+\_\+\+S\+R\+S0\+\_\+\+L\+V\+D\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa00ec8fcdac52298b30207e697b239317}{k\+R\+C\+M\+\_\+\+Source\+Wdog}} = R\+C\+M\+\_\+\+S\+R\+S0\+\_\+\+W\+D\+O\+G\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aaddb5ccbcacdb7d66f2f11d05b1bbbbce}{k\+R\+C\+M\+\_\+\+Source\+Pin}} = R\+C\+M\+\_\+\+S\+R\+S0\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa8e3deb7677a67b66eba21f47e30e38c6}{k\+R\+C\+M\+\_\+\+Source\+Por}} = R\+C\+M\+\_\+\+S\+R\+S0\+\_\+\+P\+O\+R\+\_\+\+M\+A\+SK, 
+\newline
+\mbox{\hyperlink{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa52ce4dfb87219b9844eeff53f3391c84}{k\+R\+C\+M\+\_\+\+Source\+Lockup}} = R\+C\+M\+\_\+\+S\+R\+S1\+\_\+\+L\+O\+C\+K\+U\+P\+\_\+\+M\+A\+SK $<$$<$ 8U, 
+\mbox{\hyperlink{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aac58247e936b5acc7c22d19ccd78b7c01}{k\+R\+C\+M\+\_\+\+Source\+Sw}} = R\+C\+M\+\_\+\+S\+R\+S1\+\_\+\+S\+W\+\_\+\+M\+A\+SK $<$$<$ 8U, 
+\mbox{\hyperlink{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aab7584c0988c7c3d17d50b46aa096d710}{k\+R\+C\+M\+\_\+\+Source\+Sackerr}} = R\+C\+M\+\_\+\+S\+R\+S1\+\_\+\+S\+A\+C\+K\+E\+R\+R\+\_\+\+M\+A\+SK $<$$<$ 8U, 
+{\bfseries k\+R\+C\+M\+\_\+\+Source\+All} = (int)0xffffffffU
+ \}
+\begin{DoxyCompactList}\small\item\em System Reset Source Name definitions. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__rcm_ga1e89ca2ffc3856208be42ca30c191b4d}{\+\_\+rcm\+\_\+run\+\_\+wait\+\_\+filter\+\_\+mode}} \{ \mbox{\hyperlink{group__rcm_gga1e89ca2ffc3856208be42ca30c191b4da4f443269fde273869a3fd58d7abd7146}{k\+R\+C\+M\+\_\+\+Filter\+Disable}} = 0U, 
+\mbox{\hyperlink{group__rcm_gga1e89ca2ffc3856208be42ca30c191b4da9d5a578869f9e64858534023b25ec4c5}{k\+R\+C\+M\+\_\+\+Filter\+Bus\+Clock}} = 1U, 
+\mbox{\hyperlink{group__rcm_gga1e89ca2ffc3856208be42ca30c191b4da81e3616b572cab719d101e8fecc41136}{k\+R\+C\+M\+\_\+\+Filter\+Lpo\+Clock}} = 2U
+ \}
+\begin{DoxyCompactList}\small\item\em Reset pin filter select in Run and Wait modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__rcm_gaefb960efd7436af85a27c02bfd0b701b}\label{group__rcm_gaefb960efd7436af85a27c02bfd0b701b}} 
+\#define \mbox{\hyperlink{group__rcm_gaefb960efd7436af85a27c02bfd0b701b}{F\+S\+L\+\_\+\+R\+C\+M\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 0, 2))
+\begin{DoxyCompactList}\small\item\em R\+CM driver version 2.\+0.\+2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Reset Control Module A\+P\+Is}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__rcm_ga71f36b52ea1c8e70c9e5d8d0cc306898}{R\+C\+M\+\_\+\+Configure\+Reset\+Pin\+Filter}} (\mbox{\hyperlink{struct_r_c_m___type}{R\+C\+M\+\_\+\+Type}} $\ast$base, const \mbox{\hyperlink{group__rcm_ga1ff478888c7dd7c6ed8ff27f8fb00f59}{rcm\+\_\+reset\+\_\+pin\+\_\+filter\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Configures the reset pin filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__rcm_ga089aeb2329dd1c555a9a7493f3efff6a}\label{group__rcm_ga089aeb2329dd1c555a9a7493f3efff6a}} 
+\index{Rcm@{Rcm}!\_rcm\_reset\_source@{\_rcm\_reset\_source}}
+\index{\_rcm\_reset\_source@{\_rcm\_reset\_source}!Rcm@{Rcm}}
+\subsubsection{\texorpdfstring{\_rcm\_reset\_source}{\_rcm\_reset\_source}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__rcm_ga089aeb2329dd1c555a9a7493f3efff6a}{\+\_\+rcm\+\_\+reset\+\_\+source}}}
+
+
+
+System Reset Source Name definitions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRCM\_SourceLvd@{kRCM\_SourceLvd}!Rcm@{Rcm}}\index{Rcm@{Rcm}!kRCM\_SourceLvd@{kRCM\_SourceLvd}}}\mbox{\Hypertarget{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa54ba70136d9bd9a7c3870c460b62d201}\label{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa54ba70136d9bd9a7c3870c460b62d201}} 
+k\+R\+C\+M\+\_\+\+Source\+Lvd&Low-\/voltage detect reset \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRCM\_SourceWdog@{kRCM\_SourceWdog}!Rcm@{Rcm}}\index{Rcm@{Rcm}!kRCM\_SourceWdog@{kRCM\_SourceWdog}}}\mbox{\Hypertarget{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa00ec8fcdac52298b30207e697b239317}\label{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa00ec8fcdac52298b30207e697b239317}} 
+k\+R\+C\+M\+\_\+\+Source\+Wdog&Watchdog reset \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRCM\_SourcePin@{kRCM\_SourcePin}!Rcm@{Rcm}}\index{Rcm@{Rcm}!kRCM\_SourcePin@{kRCM\_SourcePin}}}\mbox{\Hypertarget{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aaddb5ccbcacdb7d66f2f11d05b1bbbbce}\label{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aaddb5ccbcacdb7d66f2f11d05b1bbbbce}} 
+k\+R\+C\+M\+\_\+\+Source\+Pin&External pin reset \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRCM\_SourcePor@{kRCM\_SourcePor}!Rcm@{Rcm}}\index{Rcm@{Rcm}!kRCM\_SourcePor@{kRCM\_SourcePor}}}\mbox{\Hypertarget{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa8e3deb7677a67b66eba21f47e30e38c6}\label{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa8e3deb7677a67b66eba21f47e30e38c6}} 
+k\+R\+C\+M\+\_\+\+Source\+Por&Power on reset \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRCM\_SourceLockup@{kRCM\_SourceLockup}!Rcm@{Rcm}}\index{Rcm@{Rcm}!kRCM\_SourceLockup@{kRCM\_SourceLockup}}}\mbox{\Hypertarget{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa52ce4dfb87219b9844eeff53f3391c84}\label{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aa52ce4dfb87219b9844eeff53f3391c84}} 
+k\+R\+C\+M\+\_\+\+Source\+Lockup&Core lock up reset \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRCM\_SourceSw@{kRCM\_SourceSw}!Rcm@{Rcm}}\index{Rcm@{Rcm}!kRCM\_SourceSw@{kRCM\_SourceSw}}}\mbox{\Hypertarget{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aac58247e936b5acc7c22d19ccd78b7c01}\label{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aac58247e936b5acc7c22d19ccd78b7c01}} 
+k\+R\+C\+M\+\_\+\+Source\+Sw&Software reset \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRCM\_SourceSackerr@{kRCM\_SourceSackerr}!Rcm@{Rcm}}\index{Rcm@{Rcm}!kRCM\_SourceSackerr@{kRCM\_SourceSackerr}}}\mbox{\Hypertarget{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aab7584c0988c7c3d17d50b46aa096d710}\label{group__rcm_gga089aeb2329dd1c555a9a7493f3efff6aab7584c0988c7c3d17d50b46aa096d710}} 
+k\+R\+C\+M\+\_\+\+Source\+Sackerr&Parameter could get all reset flags \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__rcm_ga1e89ca2ffc3856208be42ca30c191b4d}\label{group__rcm_ga1e89ca2ffc3856208be42ca30c191b4d}} 
+\index{Rcm@{Rcm}!\_rcm\_run\_wait\_filter\_mode@{\_rcm\_run\_wait\_filter\_mode}}
+\index{\_rcm\_run\_wait\_filter\_mode@{\_rcm\_run\_wait\_filter\_mode}!Rcm@{Rcm}}
+\subsubsection{\texorpdfstring{\_rcm\_run\_wait\_filter\_mode}{\_rcm\_run\_wait\_filter\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__rcm_ga1e89ca2ffc3856208be42ca30c191b4d}{\+\_\+rcm\+\_\+run\+\_\+wait\+\_\+filter\+\_\+mode}}}
+
+
+
+Reset pin filter select in Run and Wait modes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRCM\_FilterDisable@{kRCM\_FilterDisable}!Rcm@{Rcm}}\index{Rcm@{Rcm}!kRCM\_FilterDisable@{kRCM\_FilterDisable}}}\mbox{\Hypertarget{group__rcm_gga1e89ca2ffc3856208be42ca30c191b4da4f443269fde273869a3fd58d7abd7146}\label{group__rcm_gga1e89ca2ffc3856208be42ca30c191b4da4f443269fde273869a3fd58d7abd7146}} 
+k\+R\+C\+M\+\_\+\+Filter\+Disable&All filtering disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRCM\_FilterBusClock@{kRCM\_FilterBusClock}!Rcm@{Rcm}}\index{Rcm@{Rcm}!kRCM\_FilterBusClock@{kRCM\_FilterBusClock}}}\mbox{\Hypertarget{group__rcm_gga1e89ca2ffc3856208be42ca30c191b4da9d5a578869f9e64858534023b25ec4c5}\label{group__rcm_gga1e89ca2ffc3856208be42ca30c191b4da9d5a578869f9e64858534023b25ec4c5}} 
+k\+R\+C\+M\+\_\+\+Filter\+Bus\+Clock&Bus clock filter enabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRCM\_FilterLpoClock@{kRCM\_FilterLpoClock}!Rcm@{Rcm}}\index{Rcm@{Rcm}!kRCM\_FilterLpoClock@{kRCM\_FilterLpoClock}}}\mbox{\Hypertarget{group__rcm_gga1e89ca2ffc3856208be42ca30c191b4da81e3616b572cab719d101e8fecc41136}\label{group__rcm_gga1e89ca2ffc3856208be42ca30c191b4da81e3616b572cab719d101e8fecc41136}} 
+k\+R\+C\+M\+\_\+\+Filter\+Lpo\+Clock&L\+PO clock filter enabled \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__rcm_ga71f36b52ea1c8e70c9e5d8d0cc306898}\label{group__rcm_ga71f36b52ea1c8e70c9e5d8d0cc306898}} 
+\index{Rcm@{Rcm}!RCM\_ConfigureResetPinFilter@{RCM\_ConfigureResetPinFilter}}
+\index{RCM\_ConfigureResetPinFilter@{RCM\_ConfigureResetPinFilter}!Rcm@{Rcm}}
+\subsubsection{\texorpdfstring{RCM\_ConfigureResetPinFilter()}{RCM\_ConfigureResetPinFilter()}}
+{\footnotesize\ttfamily void R\+C\+M\+\_\+\+Configure\+Reset\+Pin\+Filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_c_m___type}{R\+C\+M\+\_\+\+Type}} $\ast$}]{base,  }\item[{const \mbox{\hyperlink{group__rcm_ga1ff478888c7dd7c6ed8ff27f8fb00f59}{rcm\+\_\+reset\+\_\+pin\+\_\+filter\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Configures the reset pin filter. 
+
+This function sets the reset pin filter including the filter source, filter width, and so on.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & R\+CM peripheral base address. \\
+\hline
+{\em config} & Pointer to the configuration structure.\\
+\hline
+\end{DoxyParams}
+brief Configures the reset pin filter.
+
+This function sets the reset pin filter including the filter source, filter width, and so on.
+
+param base R\+CM peripheral base address. param config Pointer to the configuration structure. 

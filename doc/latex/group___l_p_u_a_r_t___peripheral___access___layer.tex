@@ -1,0 +1,81 @@
+\hypertarget{group___l_p_u_a_r_t___peripheral___access___layer}{}\section{L\+P\+U\+A\+RT Peripheral Access Layer}
+\label{group___l_p_u_a_r_t___peripheral___access___layer}\index{LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___l_p_u_a_r_t___register___masks}{L\+P\+U\+A\+R\+T Register Masks}}
+\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_p_u_a_r_t___type}{L\+P\+U\+A\+R\+T\+\_\+\+Type}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga8d65c662026d150cdf0aa1e586fde2cb}{L\+P\+U\+A\+R\+T0\+\_\+\+B\+A\+SE}}~(0x40054000u)
+\item 
+\#define \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga5b2895bb50a19a21ddb954c28977629b}{L\+P\+U\+A\+R\+T0}}~((\mbox{\hyperlink{struct_l_p_u_a_r_t___type}{L\+P\+U\+A\+R\+T\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga8d65c662026d150cdf0aa1e586fde2cb}{L\+P\+U\+A\+R\+T0\+\_\+\+B\+A\+SE}})
+\item 
+\#define \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga42584c807077cea9525819eaf29c7e34}{L\+P\+U\+A\+R\+T1\+\_\+\+B\+A\+SE}}~(0x40055000u)
+\item 
+\#define \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga73eb37d103f4e4f2d18ec3d3f5208ab9}{L\+P\+U\+A\+R\+T1}}~((\mbox{\hyperlink{struct_l_p_u_a_r_t___type}{L\+P\+U\+A\+R\+T\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga42584c807077cea9525819eaf29c7e34}{L\+P\+U\+A\+R\+T1\+\_\+\+B\+A\+SE}})
+\item 
+\#define \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga5c0c0d1905e4cb91614fe021176e8178}{L\+P\+U\+A\+R\+T\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+RS}}~\{ \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga8d65c662026d150cdf0aa1e586fde2cb}{L\+P\+U\+A\+R\+T0\+\_\+\+B\+A\+SE}}, \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga42584c807077cea9525819eaf29c7e34}{L\+P\+U\+A\+R\+T1\+\_\+\+B\+A\+SE}} \}
+\item 
+\#define \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga23d9c24323d49602ca4e69ed873982de}{L\+P\+U\+A\+R\+T\+\_\+\+B\+A\+S\+E\+\_\+\+P\+T\+RS}}~\{ \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga5b2895bb50a19a21ddb954c28977629b}{L\+P\+U\+A\+R\+T0}}, \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga73eb37d103f4e4f2d18ec3d3f5208ab9}{L\+P\+U\+A\+R\+T1}} \}
+\item 
+\#define \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga5fc5deafd2728edf687f15b780aa116b}{L\+P\+U\+A\+R\+T\+\_\+\+R\+X\+\_\+\+T\+X\+\_\+\+I\+R\+QS}}~\{ \mbox{\hyperlink{group___interrupt__vector__numbers_gga666eb0caeb12ec0e281415592ae89083a4a7d033e6cb46a64b460f9c2383e681e}{L\+P\+U\+A\+R\+T0\+\_\+\+I\+R\+Qn}}, \mbox{\hyperlink{group___interrupt__vector__numbers_gga666eb0caeb12ec0e281415592ae89083af5ac0e39fc168694d2b7d39018c6cc0a}{L\+P\+U\+A\+R\+T1\+\_\+\+I\+R\+Qn}} \}
+\item 
+\mbox{\Hypertarget{group___l_p_u_a_r_t___peripheral___access___layer_ga0b9ebfdd9c22de9f1be5874d60def757}\label{group___l_p_u_a_r_t___peripheral___access___layer_ga0b9ebfdd9c22de9f1be5874d60def757}} 
+\#define {\bfseries L\+P\+U\+A\+R\+T\+\_\+\+E\+R\+R\+\_\+\+I\+R\+QS}~\{ \mbox{\hyperlink{group___interrupt__vector__numbers_gga666eb0caeb12ec0e281415592ae89083a4a7d033e6cb46a64b460f9c2383e681e}{L\+P\+U\+A\+R\+T0\+\_\+\+I\+R\+Qn}}, \mbox{\hyperlink{group___interrupt__vector__numbers_gga666eb0caeb12ec0e281415592ae89083af5ac0e39fc168694d2b7d39018c6cc0a}{L\+P\+U\+A\+R\+T1\+\_\+\+I\+R\+Qn}} \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___l_p_u_a_r_t___peripheral___access___layer_ga5b2895bb50a19a21ddb954c28977629b}\label{group___l_p_u_a_r_t___peripheral___access___layer_ga5b2895bb50a19a21ddb954c28977629b}} 
+\index{LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}!LPUART0@{LPUART0}}
+\index{LPUART0@{LPUART0}!LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{LPUART0}{LPUART0}}
+{\footnotesize\ttfamily \#define L\+P\+U\+A\+R\+T0~((\mbox{\hyperlink{struct_l_p_u_a_r_t___type}{L\+P\+U\+A\+R\+T\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga8d65c662026d150cdf0aa1e586fde2cb}{L\+P\+U\+A\+R\+T0\+\_\+\+B\+A\+SE}})}
+
+Peripheral L\+P\+U\+A\+R\+T0 base pointer \mbox{\Hypertarget{group___l_p_u_a_r_t___peripheral___access___layer_ga8d65c662026d150cdf0aa1e586fde2cb}\label{group___l_p_u_a_r_t___peripheral___access___layer_ga8d65c662026d150cdf0aa1e586fde2cb}} 
+\index{LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}!LPUART0\_BASE@{LPUART0\_BASE}}
+\index{LPUART0\_BASE@{LPUART0\_BASE}!LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{LPUART0\_BASE}{LPUART0\_BASE}}
+{\footnotesize\ttfamily \#define L\+P\+U\+A\+R\+T0\+\_\+\+B\+A\+SE~(0x40054000u)}
+
+Peripheral L\+P\+U\+A\+R\+T0 base address \mbox{\Hypertarget{group___l_p_u_a_r_t___peripheral___access___layer_ga73eb37d103f4e4f2d18ec3d3f5208ab9}\label{group___l_p_u_a_r_t___peripheral___access___layer_ga73eb37d103f4e4f2d18ec3d3f5208ab9}} 
+\index{LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}!LPUART1@{LPUART1}}
+\index{LPUART1@{LPUART1}!LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{LPUART1}{LPUART1}}
+{\footnotesize\ttfamily \#define L\+P\+U\+A\+R\+T1~((\mbox{\hyperlink{struct_l_p_u_a_r_t___type}{L\+P\+U\+A\+R\+T\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga42584c807077cea9525819eaf29c7e34}{L\+P\+U\+A\+R\+T1\+\_\+\+B\+A\+SE}})}
+
+Peripheral L\+P\+U\+A\+R\+T1 base pointer \mbox{\Hypertarget{group___l_p_u_a_r_t___peripheral___access___layer_ga42584c807077cea9525819eaf29c7e34}\label{group___l_p_u_a_r_t___peripheral___access___layer_ga42584c807077cea9525819eaf29c7e34}} 
+\index{LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}!LPUART1\_BASE@{LPUART1\_BASE}}
+\index{LPUART1\_BASE@{LPUART1\_BASE}!LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{LPUART1\_BASE}{LPUART1\_BASE}}
+{\footnotesize\ttfamily \#define L\+P\+U\+A\+R\+T1\+\_\+\+B\+A\+SE~(0x40055000u)}
+
+Peripheral L\+P\+U\+A\+R\+T1 base address \mbox{\Hypertarget{group___l_p_u_a_r_t___peripheral___access___layer_ga5c0c0d1905e4cb91614fe021176e8178}\label{group___l_p_u_a_r_t___peripheral___access___layer_ga5c0c0d1905e4cb91614fe021176e8178}} 
+\index{LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}!LPUART\_BASE\_ADDRS@{LPUART\_BASE\_ADDRS}}
+\index{LPUART\_BASE\_ADDRS@{LPUART\_BASE\_ADDRS}!LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{LPUART\_BASE\_ADDRS}{LPUART\_BASE\_ADDRS}}
+{\footnotesize\ttfamily \#define L\+P\+U\+A\+R\+T\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+RS~\{ \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga8d65c662026d150cdf0aa1e586fde2cb}{L\+P\+U\+A\+R\+T0\+\_\+\+B\+A\+SE}}, \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga42584c807077cea9525819eaf29c7e34}{L\+P\+U\+A\+R\+T1\+\_\+\+B\+A\+SE}} \}}
+
+Array initializer of L\+P\+U\+A\+RT peripheral base addresses \mbox{\Hypertarget{group___l_p_u_a_r_t___peripheral___access___layer_ga23d9c24323d49602ca4e69ed873982de}\label{group___l_p_u_a_r_t___peripheral___access___layer_ga23d9c24323d49602ca4e69ed873982de}} 
+\index{LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}!LPUART\_BASE\_PTRS@{LPUART\_BASE\_PTRS}}
+\index{LPUART\_BASE\_PTRS@{LPUART\_BASE\_PTRS}!LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{LPUART\_BASE\_PTRS}{LPUART\_BASE\_PTRS}}
+{\footnotesize\ttfamily \#define L\+P\+U\+A\+R\+T\+\_\+\+B\+A\+S\+E\+\_\+\+P\+T\+RS~\{ \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga5b2895bb50a19a21ddb954c28977629b}{L\+P\+U\+A\+R\+T0}}, \mbox{\hyperlink{group___l_p_u_a_r_t___peripheral___access___layer_ga73eb37d103f4e4f2d18ec3d3f5208ab9}{L\+P\+U\+A\+R\+T1}} \}}
+
+Array initializer of L\+P\+U\+A\+RT peripheral base pointers \mbox{\Hypertarget{group___l_p_u_a_r_t___peripheral___access___layer_ga5fc5deafd2728edf687f15b780aa116b}\label{group___l_p_u_a_r_t___peripheral___access___layer_ga5fc5deafd2728edf687f15b780aa116b}} 
+\index{LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}!LPUART\_RX\_TX\_IRQS@{LPUART\_RX\_TX\_IRQS}}
+\index{LPUART\_RX\_TX\_IRQS@{LPUART\_RX\_TX\_IRQS}!LPUART Peripheral Access Layer@{LPUART Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{LPUART\_RX\_TX\_IRQS}{LPUART\_RX\_TX\_IRQS}}
+{\footnotesize\ttfamily \#define L\+P\+U\+A\+R\+T\+\_\+\+R\+X\+\_\+\+T\+X\+\_\+\+I\+R\+QS~\{ \mbox{\hyperlink{group___interrupt__vector__numbers_gga666eb0caeb12ec0e281415592ae89083a4a7d033e6cb46a64b460f9c2383e681e}{L\+P\+U\+A\+R\+T0\+\_\+\+I\+R\+Qn}}, \mbox{\hyperlink{group___interrupt__vector__numbers_gga666eb0caeb12ec0e281415592ae89083af5ac0e39fc168694d2b7d39018c6cc0a}{L\+P\+U\+A\+R\+T1\+\_\+\+I\+R\+Qn}} \}}
+
+Interrupt vectors for the L\+P\+U\+A\+RT peripheral type 

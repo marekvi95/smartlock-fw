@@ -1,0 +1,67 @@
+\hypertarget{group__gpio}{}\section{Gpio}
+\label{group__gpio}\index{Gpio@{Gpio}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__gpio__pin__config}{\+\_\+gpio\+\_\+pin\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em The G\+P\+IO pin configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__gpio_gaf7d75755774a0f20385fbdda546f1f1d}\label{group__gpio_gaf7d75755774a0f20385fbdda546f1f1d}} 
+typedef enum \mbox{\hyperlink{group__gpio_ga0df4be96fa56f3bdd7bfa048fdaacd6b}{\+\_\+gpio\+\_\+pin\+\_\+direction}} \mbox{\hyperlink{group__gpio_gaf7d75755774a0f20385fbdda546f1f1d}{gpio\+\_\+pin\+\_\+direction\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em G\+P\+IO direction definition. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct__gpio__pin__config}{\+\_\+gpio\+\_\+pin\+\_\+config}} \mbox{\hyperlink{group__gpio_ga9279df0a87f2432dc3c5d596028223b7}{gpio\+\_\+pin\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The G\+P\+IO pin configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__gpio_ga0df4be96fa56f3bdd7bfa048fdaacd6b}{\+\_\+gpio\+\_\+pin\+\_\+direction}} \{ \mbox{\hyperlink{group__gpio_gga0df4be96fa56f3bdd7bfa048fdaacd6babacf19933be1940ab40c83535e6a46d4}{k\+G\+P\+I\+O\+\_\+\+Digital\+Input}} = 0U, 
+\mbox{\hyperlink{group__gpio_gga0df4be96fa56f3bdd7bfa048fdaacd6ba509ebcd228fc813cf4afcacd258680f9}{k\+G\+P\+I\+O\+\_\+\+Digital\+Output}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em G\+P\+IO direction definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__gpio_ga5aa5229cbd041b11bcf8417ba12896b2}\label{group__gpio_ga5aa5229cbd041b11bcf8417ba12896b2}} 
+\#define \mbox{\hyperlink{group__gpio_ga5aa5229cbd041b11bcf8417ba12896b2}{F\+S\+L\+\_\+\+G\+P\+I\+O\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 4, 0))
+\begin{DoxyCompactList}\small\item\em G\+P\+IO driver version 2.\+4.\+0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__gpio_ga9279df0a87f2432dc3c5d596028223b7}\label{group__gpio_ga9279df0a87f2432dc3c5d596028223b7}} 
+\index{Gpio@{Gpio}!gpio\_pin\_config\_t@{gpio\_pin\_config\_t}}
+\index{gpio\_pin\_config\_t@{gpio\_pin\_config\_t}!Gpio@{Gpio}}
+\subsubsection{\texorpdfstring{gpio\_pin\_config\_t}{gpio\_pin\_config\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__gpio__pin__config}{\+\_\+gpio\+\_\+pin\+\_\+config}}  \mbox{\hyperlink{group__gpio_ga9279df0a87f2432dc3c5d596028223b7}{gpio\+\_\+pin\+\_\+config\+\_\+t}}}
+
+
+
+The G\+P\+IO pin configuration structure. 
+
+Each pin can only be configured as either an output pin or an input pin at a time. If configured as an input pin, leave the output\+Config unused. Note that in some use cases, the corresponding port property should be configured in advance with the P\+O\+R\+T\+\_\+\+Set\+Pin\+Config(). 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__gpio_ga0df4be96fa56f3bdd7bfa048fdaacd6b}\label{group__gpio_ga0df4be96fa56f3bdd7bfa048fdaacd6b}} 
+\index{Gpio@{Gpio}!\_gpio\_pin\_direction@{\_gpio\_pin\_direction}}
+\index{\_gpio\_pin\_direction@{\_gpio\_pin\_direction}!Gpio@{Gpio}}
+\subsubsection{\texorpdfstring{\_gpio\_pin\_direction}{\_gpio\_pin\_direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__gpio_ga0df4be96fa56f3bdd7bfa048fdaacd6b}{\+\_\+gpio\+\_\+pin\+\_\+direction}}}
+
+
+
+G\+P\+IO direction definition. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kGPIO\_DigitalInput@{kGPIO\_DigitalInput}!Gpio@{Gpio}}\index{Gpio@{Gpio}!kGPIO\_DigitalInput@{kGPIO\_DigitalInput}}}\mbox{\Hypertarget{group__gpio_gga0df4be96fa56f3bdd7bfa048fdaacd6babacf19933be1940ab40c83535e6a46d4}\label{group__gpio_gga0df4be96fa56f3bdd7bfa048fdaacd6babacf19933be1940ab40c83535e6a46d4}} 
+k\+G\+P\+I\+O\+\_\+\+Digital\+Input&Set current pin as digital input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kGPIO\_DigitalOutput@{kGPIO\_DigitalOutput}!Gpio@{Gpio}}\index{Gpio@{Gpio}!kGPIO\_DigitalOutput@{kGPIO\_DigitalOutput}}}\mbox{\Hypertarget{group__gpio_gga0df4be96fa56f3bdd7bfa048fdaacd6ba509ebcd228fc813cf4afcacd258680f9}\label{group__gpio_gga0df4be96fa56f3bdd7bfa048fdaacd6ba509ebcd228fc813cf4afcacd258680f9}} 
+k\+G\+P\+I\+O\+\_\+\+Digital\+Output&Set current pin as digital output \\
+\hline
+
+\end{DoxyEnumFields}

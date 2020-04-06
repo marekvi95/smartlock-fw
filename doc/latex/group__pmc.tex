@@ -1,0 +1,96 @@
+\hypertarget{group__pmc}{}\section{Pmc}
+\label{group__pmc}\index{Pmc@{Pmc}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__pmc__low__volt__detect__config}{\+\_\+pmc\+\_\+low\+\_\+volt\+\_\+detect\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Low-\/voltage Detect Configuration Structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__pmc__low__volt__warning__config}{\+\_\+pmc\+\_\+low\+\_\+volt\+\_\+warning\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Low-\/voltage Warning Configuration Structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__pmc_ga6614b7fa35b6399db446c0d0e7304406}\label{group__pmc_ga6614b7fa35b6399db446c0d0e7304406}} 
+typedef struct \mbox{\hyperlink{struct__pmc__low__volt__detect__config}{\+\_\+pmc\+\_\+low\+\_\+volt\+\_\+detect\+\_\+config}} \mbox{\hyperlink{group__pmc_ga6614b7fa35b6399db446c0d0e7304406}{pmc\+\_\+low\+\_\+volt\+\_\+detect\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Low-\/voltage Detect Configuration Structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__pmc_ga8e06305a65f64f60fa3290e2d09123f7}\label{group__pmc_ga8e06305a65f64f60fa3290e2d09123f7}} 
+typedef struct \mbox{\hyperlink{struct__pmc__low__volt__warning__config}{\+\_\+pmc\+\_\+low\+\_\+volt\+\_\+warning\+\_\+config}} \mbox{\hyperlink{group__pmc_ga8e06305a65f64f60fa3290e2d09123f7}{pmc\+\_\+low\+\_\+volt\+\_\+warning\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Low-\/voltage Warning Configuration Structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__pmc_ga73519be5675b92701f27a75deec47471}{F\+S\+L\+\_\+\+P\+M\+C\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 0, 1))
+\begin{DoxyCompactList}\small\item\em P\+MC driver version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Power Management Controller Control A\+P\+Is}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__pmc_ga511f9618f4a4a78c0d18fb1f53ab5256}{P\+M\+C\+\_\+\+Configure\+Low\+Volt\+Detect}} (\mbox{\hyperlink{struct_p_m_c___type}{P\+M\+C\+\_\+\+Type}} $\ast$base, const \mbox{\hyperlink{group__pmc_ga6614b7fa35b6399db446c0d0e7304406}{pmc\+\_\+low\+\_\+volt\+\_\+detect\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Configures the low-\/voltage detect setting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__pmc_ga711999faa5886861327da2dddadd2277}{P\+M\+C\+\_\+\+Configure\+Low\+Volt\+Warning}} (\mbox{\hyperlink{struct_p_m_c___type}{P\+M\+C\+\_\+\+Type}} $\ast$base, const \mbox{\hyperlink{group__pmc_ga8e06305a65f64f60fa3290e2d09123f7}{pmc\+\_\+low\+\_\+volt\+\_\+warning\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Configures the low-\/voltage warning setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__pmc_ga73519be5675b92701f27a75deec47471}\label{group__pmc_ga73519be5675b92701f27a75deec47471}} 
+\index{Pmc@{Pmc}!FSL\_PMC\_DRIVER\_VERSION@{FSL\_PMC\_DRIVER\_VERSION}}
+\index{FSL\_PMC\_DRIVER\_VERSION@{FSL\_PMC\_DRIVER\_VERSION}!Pmc@{Pmc}}
+\subsubsection{\texorpdfstring{FSL\_PMC\_DRIVER\_VERSION}{FSL\_PMC\_DRIVER\_VERSION}}
+{\footnotesize\ttfamily \#define F\+S\+L\+\_\+\+P\+M\+C\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 0, 1))}
+
+
+
+P\+MC driver version. 
+
+Version 2.\+0.\+1. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__pmc_ga511f9618f4a4a78c0d18fb1f53ab5256}\label{group__pmc_ga511f9618f4a4a78c0d18fb1f53ab5256}} 
+\index{Pmc@{Pmc}!PMC\_ConfigureLowVoltDetect@{PMC\_ConfigureLowVoltDetect}}
+\index{PMC\_ConfigureLowVoltDetect@{PMC\_ConfigureLowVoltDetect}!Pmc@{Pmc}}
+\subsubsection{\texorpdfstring{PMC\_ConfigureLowVoltDetect()}{PMC\_ConfigureLowVoltDetect()}}
+{\footnotesize\ttfamily void P\+M\+C\+\_\+\+Configure\+Low\+Volt\+Detect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_p_m_c___type}{P\+M\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{const \mbox{\hyperlink{group__pmc_ga6614b7fa35b6399db446c0d0e7304406}{pmc\+\_\+low\+\_\+volt\+\_\+detect\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Configures the low-\/voltage detect setting. 
+
+This function configures the low-\/voltage detect setting, including the trip point voltage setting, enables or disables the interrupt, enables or disables the system reset.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & P\+MC peripheral base address. \\
+\hline
+{\em config} & Low-\/voltage detect configuration structure.\\
+\hline
+\end{DoxyParams}
+brief Configures the low-\/voltage detect setting.
+
+This function configures the low-\/voltage detect setting, including the trip point voltage setting, enables or disables the interrupt, enables or disables the system reset.
+
+param base P\+MC peripheral base address. param config Low-\/voltage detect configuration structure. \mbox{\Hypertarget{group__pmc_ga711999faa5886861327da2dddadd2277}\label{group__pmc_ga711999faa5886861327da2dddadd2277}} 
+\index{Pmc@{Pmc}!PMC\_ConfigureLowVoltWarning@{PMC\_ConfigureLowVoltWarning}}
+\index{PMC\_ConfigureLowVoltWarning@{PMC\_ConfigureLowVoltWarning}!Pmc@{Pmc}}
+\subsubsection{\texorpdfstring{PMC\_ConfigureLowVoltWarning()}{PMC\_ConfigureLowVoltWarning()}}
+{\footnotesize\ttfamily void P\+M\+C\+\_\+\+Configure\+Low\+Volt\+Warning (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_p_m_c___type}{P\+M\+C\+\_\+\+Type}} $\ast$}]{base,  }\item[{const \mbox{\hyperlink{group__pmc_ga8e06305a65f64f60fa3290e2d09123f7}{pmc\+\_\+low\+\_\+volt\+\_\+warning\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Configures the low-\/voltage warning setting. 
+
+This function configures the low-\/voltage warning setting, including the trip point voltage setting and enabling or disabling the interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & P\+MC peripheral base address. \\
+\hline
+{\em config} & Low-\/voltage warning configuration structure.\\
+\hline
+\end{DoxyParams}
+brief Configures the low-\/voltage warning setting.
+
+This function configures the low-\/voltage warning setting, including the trip point voltage setting and enabling or disabling the interrupt.
+
+param base P\+MC peripheral base address. param config Low-\/voltage warning configuration structure. 

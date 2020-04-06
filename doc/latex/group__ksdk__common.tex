@@ -1,0 +1,786 @@
+\hypertarget{group__ksdk__common}{}\section{Ksdk\+\_\+common}
+\label{group__ksdk__common}\index{Ksdk\_common@{Ksdk\_common}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ksdk__common_gad76dfbb0423d0cd3a7b77cbcd9043146}\label{group__ksdk__common_gad76dfbb0423d0cd3a7b77cbcd9043146}} 
+\#define \mbox{\hyperlink{group__ksdk__common_gad76dfbb0423d0cd3a7b77cbcd9043146}{M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US}}(group,  code)~((((group)$\ast$100) + (code)))
+\begin{DoxyCompactList}\small\item\em Construct a status code value from a group and code number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ksdk__common_ga812138aa3315b0c6953c1a26130bcc37}\label{group__ksdk__common_ga812138aa3315b0c6953c1a26130bcc37}} 
+\#define \mbox{\hyperlink{group__ksdk__common_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(major,  minor,  bugfix)~(((major) $<$$<$ 16) $\vert$ ((minor) $<$$<$ 8) $\vert$ (bugfix))
+\begin{DoxyCompactList}\small\item\em Construct the version number for drivers. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__ksdk__common_gaa7fc9e15d36453236a580b3c8116ee85}{D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE}}~0U
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_ga59764d32e5394455906edbf03cff0b9f}{D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+A\+RT}}~1U
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_ga1a04b7330b5196f73ed4ffe7fa2bae6c}{D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+P\+U\+A\+RT}}~2U
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_ga6b4add5f2d938a89da56f58ac0b4e89b}{D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+P\+S\+CI}}~3U
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_ga262e149f9ce1ef4cf2e539e9494d3cca}{D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+S\+B\+C\+DC}}~4U
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_gad4f7f7e51a84c34f06bbbb34973ae97a}{D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+E\+X\+C\+O\+MM}}~5U
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_ga75a9e86134df04f6a8b66025d11e25c2}{D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+U\+A\+RT}}~6U
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_ga2c85202f838f94e51a0bb7b33856c78d}{D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+U\+S\+A\+RT}}~7U
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_ga5a951951cdb6063d949523052aa5b5e4}{D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+I\+\_\+\+U\+S\+A\+RT}}~8U
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_ga9d142691c3a4d810f8bdabc41e89dfd7}{D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+WO}}~9U
+\item 
+\mbox{\Hypertarget{group__ksdk__common_ga9a10f3f762d9eb7c5db73535db6a9d78}\label{group__ksdk__common_ga9a10f3f762d9eb7c5db73535db6a9d78}} 
+\#define {\bfseries F\+S\+L\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+W\+E\+A\+K\+\_\+\+I\+RQ}~1
+\item 
+\mbox{\Hypertarget{group__ksdk__common_ga6242a25f9d996f0cc4f4cdb911218b75}\label{group__ksdk__common_ga6242a25f9d996f0cc4f4cdb911218b75}} 
+\#define \mbox{\hyperlink{group__ksdk__common_ga6242a25f9d996f0cc4f4cdb911218b75}{A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE}}(x)~(sizeof(x) / sizeof((x)\mbox{[}0\mbox{]}))
+\begin{DoxyCompactList}\small\item\em Computes the number of elements in an array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}\label{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}} 
+typedef int32\+\_\+t \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Type used for all status and error return values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__ksdk__common_ga7ff0b98bb1341c07acefb1473b6eda29}{\+\_\+status\+\_\+groups}} \{ \newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae7c95e11ceb8067c9c2703f96e51aca7}{k\+Status\+Group\+\_\+\+Generic}} = 0, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8db8bea33da992b22cafbae1dcf65bb0}{k\+Status\+Group\+\_\+\+F\+L\+A\+SH}} = 1, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a491dbb2373725b607970c032f4e04ee3}{k\+Status\+Group\+\_\+\+L\+P\+S\+PI}} = 4, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3bc2ecc10af8973a1ecc4f0163fb9b53}{k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+S\+PI}} = 5, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aee549dc5fb5e05a0d8daaa61a089b222}{k\+Status\+Group\+\_\+\+D\+S\+PI}} = 6, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae7514134f14004b1835d27cac48bd991}{k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+U\+A\+RT}} = 7, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a67e5d3d11fb3f47ec11d9ee612b98b94}{k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+I2C}} = 8, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a0d6c6a34fc0b6dbcb323f010556a3be1}{k\+Status\+Group\+\_\+\+L\+P\+I2C}} = 9, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aeeb2ed6ef4ce59c7e1d416466f55bfb7}{k\+Status\+Group\+\_\+\+U\+A\+RT}} = 10, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a5c67a60e98e49151455f565c2834d228}{k\+Status\+Group\+\_\+\+I2C}} = 11, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a9f1b2d0eeee16f209d7eed3bdb1cf533}{k\+Status\+Group\+\_\+\+L\+P\+S\+CI}} = 12, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3bcb0be184f8d5bb76d4be8e99b4e45e}{k\+Status\+Group\+\_\+\+L\+P\+U\+A\+RT}} = 13, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a60c31c70600aff4f290ca2d790622977}{k\+Status\+Group\+\_\+\+S\+PI}} = 14, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29af98b407f4e66e7046a3173031b45253d}{k\+Status\+Group\+\_\+\+X\+R\+DC}} = 15, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a073c6e3ccd0dbcf1b812cb21da5e7df9}{k\+Status\+Group\+\_\+\+S\+E\+M\+A42}} = 16, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aba83e94d1735b695119429a4e55bb3a4}{k\+Status\+Group\+\_\+\+S\+D\+HC}} = 17, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1c5e35d9d03724b7ccadcae8e0451384}{k\+Status\+Group\+\_\+\+S\+D\+M\+MC}} = 18, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae4461a3a085ea13b5fe7908bf1e109f8}{k\+Status\+Group\+\_\+\+S\+AI}} = 19, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8210c55fe061ff24e75a0f928dbfcb39}{k\+Status\+Group\+\_\+\+M\+CG}} = 20, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a9771abafdcf43bf924599a0081e92bf2}{k\+Status\+Group\+\_\+\+S\+CG}} = 21, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a85685b8cde1285d240569b9518c32fc0}{k\+Status\+Group\+\_\+\+S\+D\+S\+PI}} = 22, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae834c896c69c50855c5cf07768a6cba3}{k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+I2S}} = 23, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a055d3788919f48c2d69463819d02d903}{k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+M\+C\+U\+L\+CD}} = 24, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae5b7283daca81a85091e27b80ece629a}{k\+Status\+Group\+\_\+\+F\+L\+A\+S\+H\+I\+AP}} = 25, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aedd1abcbca188de6e16a6f088d59e92e}{k\+Status\+Group\+\_\+\+F\+L\+E\+X\+C\+O\+M\+M\+\_\+\+I2C}} = 26, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a0b66f34ec90c9b6a702e0f00f5ddae43}{k\+Status\+Group\+\_\+\+I2S}} = 27, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a33255aee9de4a1d093770b218f944d0f}{k\+Status\+Group\+\_\+\+I\+U\+A\+RT}} = 28, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1d1d1a595e9f00c6c9f80c19ce1b8ec5}{k\+Status\+Group\+\_\+\+C\+SI}} = 29, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29abdf3fca48a7a13b67d0207aeb59bc581}{k\+Status\+Group\+\_\+\+M\+I\+P\+I\+\_\+\+D\+SI}} = 30, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3b3116c6f4aa1a88e6e7abc45df58938}{k\+Status\+Group\+\_\+\+S\+D\+R\+A\+MC}} = 35, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a94d2a6fe8021fed5487169a46421d47e}{k\+Status\+Group\+\_\+\+P\+O\+W\+ER}} = 39, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7d6b922ab2a42d6ef35cfb2be4f80251}{k\+Status\+Group\+\_\+\+E\+N\+ET}} = 40, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a521a4b8ac1776d0f41af044886a71b3b}{k\+Status\+Group\+\_\+\+P\+HY}} = 41, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29adb8c69c2f8cd344f3e2dc0b0db4a1631}{k\+Status\+Group\+\_\+\+T\+R\+G\+M\+UX}} = 42, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae16d6bba44ae6f24187946960fb826dd}{k\+Status\+Group\+\_\+\+S\+M\+A\+R\+T\+C\+A\+RD}} = 43, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a376f952aee5cd45d903da520a37e4c52}{k\+Status\+Group\+\_\+\+L\+M\+EM}} = 44, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a4a488e0f7cc1d3baa449ab4ca99e7b34}{k\+Status\+Group\+\_\+\+Q\+S\+PI}} = 45, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a210ff4fa30e99618f8d3e978df03a7b6}{k\+Status\+Group\+\_\+\+D\+MA}} = 50, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a0ec7f0302a8f7eb082f449933880a1ad}{k\+Status\+Group\+\_\+\+E\+D\+MA}} = 51, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3091dcef1c0c7cd48658d8b43b52fbaf}{k\+Status\+Group\+\_\+\+D\+M\+A\+M\+GR}} = 52, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1461a28ac2297f07aa34581074cf9923}{k\+Status\+Group\+\_\+\+F\+L\+E\+X\+C\+AN}} = 53, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a64b54e0423e0ad8a227a38cad4ad4eda}{k\+Status\+Group\+\_\+\+L\+TC}} = 54, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a214d1cc4faa574be18fa9d865f2ca36d}{k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+C\+A\+M\+E\+RA}} = 55, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ac4c2c9d32010087f0602dbdf2c389857}{k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+S\+PI}} = 56, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a02f52b9532ae0d4af04f5c054f3fab84}{k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+U\+S\+A\+RT}} = 57, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a679444433f12ae5649cb02c2032ca20e}{k\+Status\+Group\+\_\+\+D\+M\+IC}} = 58, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a25fb824a9ad702e631276a8ea5d03603}{k\+Status\+Group\+\_\+\+S\+D\+IF}} = 59, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ac071c3c3d14ed8afadb2bb6de249c722}{k\+Status\+Group\+\_\+\+S\+P\+I\+FI}} = 60, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1d9b7b66bfaaf53b42aad8462c88ea62}{k\+Status\+Group\+\_\+\+O\+TP}} = 61, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab7f77dd7e0c3d068baf39117ac08a0b9}{k\+Status\+Group\+\_\+\+M\+C\+AN}} = 62, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a298049d9d9c8be1b2e7a42f38a734d87}{k\+Status\+Group\+\_\+\+C\+A\+AM}} = 63, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab99693af818132e3cb4f9198965ad637}{k\+Status\+Group\+\_\+\+E\+C\+S\+PI}} = 64, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae2f54d029f0e74c8fed8812e24000a74}{k\+Status\+Group\+\_\+\+U\+S\+D\+HC}} = 65, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab597c78848ce0e63d2518f14e7bac82b}{k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+I2C}} = 66, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8e7465155c679388316b2f874a284e9e}{k\+Status\+Group\+\_\+\+D\+CP}} = 67, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a858563b1d87d6fa57a8f442025655201}{k\+Status\+Group\+\_\+\+M\+S\+C\+AN}} = 68, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a01101c0342017a7fbe7225a7aa285bad}{k\+Status\+Group\+\_\+\+E\+S\+AI}} = 69, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a22f1bdf5e7abbeb0bdfe18cda0bc5aca}{k\+Status\+Group\+\_\+\+F\+L\+E\+X\+S\+PI}} = 70, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a67a884fec4d6adb5b455d50a0a5617a5}{k\+Status\+Group\+\_\+\+M\+M\+DC}} = 71, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae0b4ea9f05497a624e32811c4f36a3be}{k\+Status\+Group\+\_\+\+P\+DM}} = 72, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab55df75d85633505960f611180054524}{k\+Status\+Group\+\_\+\+S\+D\+MA}} = 73, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a01bf442d671041dcbd1649ec0428c3b6}{k\+Status\+Group\+\_\+\+I\+CS}} = 74, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8bea2b5f8b1458aaa0dc29ddbb972d87}{k\+Status\+Group\+\_\+\+S\+P\+D\+IF}} = 75, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab0104dd99e52fbf948f4ae030de5313d}{k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+M\+I\+N\+I\+S\+PI}} = 76, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1dcb6a7c2605c9ed77388fcb25b01feb}{k\+Status\+Group\+\_\+\+H\+A\+S\+H\+C\+R\+Y\+PT}} = 77, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa2c382624b5763cf24cf9727fbfadde3}{k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+S\+P\+I\+\_\+\+S\+SP}} = 78, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a6dbe13107a9dbb857242cf05e2319f9d}{k\+Status\+Group\+\_\+\+I3C}} = 79, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a749eaf601d6fe3124f054bcb796b348c}{k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+I2\+C\+\_\+1}} = 97, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a56134a73f0cfd393dd7cf7fb2395dd99}{k\+Status\+Group\+\_\+\+N\+O\+T\+I\+F\+I\+ER}} = 98, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a499ec238a1614827065533960716e652}{k\+Status\+Group\+\_\+\+Debug\+Console}} = 99, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a2fef671dda58af09262787022fe321fe}{k\+Status\+Group\+\_\+\+S\+E\+MC}} = 100, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae0c3a94577af5271a1042757d3c8fdc1}{k\+Status\+Group\+\_\+\+Application\+Range\+Start}} = 101, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a097d515214e888371df5c588b839529d}{k\+Status\+Group\+\_\+\+I\+AP}} = 102, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a18ce0675c0cc628b2ff29a1bafce8b58}{k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+G\+P\+IO}} = 121, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a6510cce112fc6ed1e0523b5d7b307ca2}{k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+U\+A\+RT}} = 122, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa44796b25ed6ed37f7fb25f6f4076c2d}{k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+T\+I\+M\+ER}} = 123, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aba70aa1970435b3ccd39ac54f9d7a68c}{k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+S\+PI}} = 124, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aaa30b9e3fdd5e93bae58e66521b3015d}{k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+I2C}} = 125, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa5afa714de4adf37bc00faf6c3dc589e}{k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+F\+L\+A\+SH}} = 126, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa4609e941ad1155a86c40bdfcb20a155}{k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+P\+WM}} = 127, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa0d0535965c8d28434b036961f6a8c20}{k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+R\+NG}} = 128, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a4603f8fedc8ad994788e17baae895013}{k\+Status\+Group\+\_\+\+T\+I\+M\+E\+R\+M\+A\+N\+A\+G\+ER}} = 135, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a39a54cda2a1cac31e1c00be0eb4a7620}{k\+Status\+Group\+\_\+\+S\+E\+R\+I\+A\+L\+M\+A\+N\+A\+G\+ER}} = 136, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a84ab69a4e7f3f1c39f1c3a64d74af08c}{k\+Status\+Group\+\_\+\+L\+ED}} = 137, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7415efb189bfb31491ef0ae45fb24d90}{k\+Status\+Group\+\_\+\+B\+U\+T\+T\+ON}} = 138, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8e4a33b100580c2c1606d66d5ffdfaa3}{k\+Status\+Group\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+E\+E\+P\+R\+OM}} = 139, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a660addd059be8786f2aa3d9a1a196ae1}{k\+Status\+Group\+\_\+\+S\+H\+E\+LL}} = 140, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29acdfe26eb8bbbaaea438470512401e09a}{k\+Status\+Group\+\_\+\+M\+E\+M\+\_\+\+M\+A\+N\+A\+G\+ER}} = 141, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a2e3bc103af2d3db7b628f87174d2bff8}{k\+Status\+Group\+\_\+\+L\+I\+ST}} = 142, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a5b65c75456471a2536a97a30db4b8da3}{k\+Status\+Group\+\_\+\+O\+SA}} = 143, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7771d56430ad7ff2553a1258aba16e02}{k\+Status\+Group\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+T\+A\+SK}} = 144, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a6d0dedbec7ee218b0ae03f23edad02fd}{k\+Status\+Group\+\_\+\+M\+SG}} = 145, 
+\newline
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a539b147c0d1409a0e11c3ae340886fa8}{k\+Status\+Group\+\_\+\+S\+D\+K\+\_\+\+O\+C\+O\+TP}} = 146, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a830e5b42a05424dc026bd36d30f143a5}{k\+Status\+Group\+\_\+\+S\+D\+K\+\_\+\+F\+L\+E\+X\+S\+P\+I\+N\+OR}} = 147, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7c488d28bc9be2e29bd0d133bce7389a}{k\+Status\+Group\+\_\+\+C\+O\+D\+EC}} = 148, 
+\mbox{\hyperlink{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a713723bd8764655328f1e5283a8e6020}{k\+Status\+Group\+\_\+\+A\+S\+RC}} = 149
+ \}
+\begin{DoxyCompactList}\small\item\em Status group numbers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ksdk__common_gab48899087cc647f0f791ed0c459adc53}\label{group__ksdk__common_gab48899087cc647f0f791ed0c459adc53}} 
+enum \{ \newline
+{\bfseries k\+Status\+\_\+\+Success} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+Generic, 0), 
+{\bfseries k\+Status\+\_\+\+Fail} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+Generic, 1), 
+{\bfseries k\+Status\+\_\+\+Read\+Only} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+Generic, 2), 
+{\bfseries k\+Status\+\_\+\+Out\+Of\+Range} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+Generic, 3), 
+\newline
+{\bfseries k\+Status\+\_\+\+Invalid\+Argument} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+Generic, 4), 
+{\bfseries k\+Status\+\_\+\+Timeout} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+Generic, 5), 
+{\bfseries k\+Status\+\_\+\+No\+Transfer\+In\+Progress} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+Generic, 6)
+ \}
+\begin{DoxyCompactList}\small\item\em Generic status return codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{group__ksdk__common_ga4e1420d9e817ebe0e8973420411de015}{S\+D\+K\+\_\+\+Malloc}} (size\+\_\+t size, size\+\_\+t alignbytes)
+\begin{DoxyCompactList}\small\item\em Allocate memory with given alignment and aligned size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ksdk__common_ga0be5caec9b8493d87cc849714bd47865}{S\+D\+K\+\_\+\+Free}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Free memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ksdk__common_gac6e3c4c6fa592fc0da7fab541e7019f7}\label{group__ksdk__common_gac6e3c4c6fa592fc0da7fab541e7019f7}} 
+\#define \mbox{\hyperlink{group__ksdk__common_gac6e3c4c6fa592fc0da7fab541e7019f7}{F\+S\+L\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 1, 3))
+\begin{DoxyCompactList}\small\item\em common driver version 2.\+1.\+3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Min/max macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ksdk__common_ga3acffbd305ee72dcd4593c0d8af64a4f}\label{group__ksdk__common_ga3acffbd305ee72dcd4593c0d8af64a4f}} 
+\#define {\bfseries M\+IN}(a,  b)~(((a) $<$ (b)) ? (a) \+: (b))
+\item 
+\mbox{\Hypertarget{group__ksdk__common_gafa99ec4acc4ecb2dc3c2d05da15d0e3f}\label{group__ksdk__common_gafa99ec4acc4ecb2dc3c2d05da15d0e3f}} 
+\#define {\bfseries M\+AX}(a,  b)~(((a) $>$ (b)) ? (a) \+: (b))
+\end{DoxyCompactItemize}
+\subsection*{U\+I\+N\+T16\+\_\+\+M\+A\+X/\+U\+I\+N\+T32\+\_\+\+M\+AX value}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ksdk__common_ga3ea490c9b3617d4479bd80ef93cd5602}\label{group__ksdk__common_ga3ea490c9b3617d4479bd80ef93cd5602}} 
+\#define {\bfseries U\+I\+N\+T16\+\_\+\+M\+AX}~((uint16\+\_\+t)-\/1)
+\item 
+\mbox{\Hypertarget{group__ksdk__common_gab5eb23180f7cc12b7d6c04a8ec067fdd}\label{group__ksdk__common_gab5eb23180f7cc12b7d6c04a8ec067fdd}} 
+\#define {\bfseries U\+I\+N\+T32\+\_\+\+M\+AX}~((uint32\+\_\+t)-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Timer utilities}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_gad5639aadf668899775fc7506a5e19dc1}{U\+S\+E\+C\+\_\+\+T\+O\+\_\+\+C\+O\+U\+NT}}(us,  clock\+Freq\+In\+Hz)~(uint64\+\_\+t)(((uint64\+\_\+t)(us) $\ast$ (clock\+Freq\+In\+Hz)) / 1000000\+U)
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_ga601b69842ec962d1babd627e5a3541fd}{C\+O\+U\+N\+T\+\_\+\+T\+O\+\_\+\+U\+S\+EC}}(count,  clock\+Freq\+In\+Hz)~(uint64\+\_\+t)((uint64\+\_\+t)count $\ast$ 1000000\+U / clock\+Freq\+In\+Hz)
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_gaa9fb2136029d807bd7c349c30348b52a}{M\+S\+E\+C\+\_\+\+T\+O\+\_\+\+C\+O\+U\+NT}}(ms,  clock\+Freq\+In\+Hz)~(uint64\+\_\+t)((uint64\+\_\+t)ms $\ast$ clock\+Freq\+In\+Hz / 1000\+U)
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_gafa0fe6bd95d5455c99aee949cb285b20}{C\+O\+U\+N\+T\+\_\+\+T\+O\+\_\+\+M\+S\+EC}}(count,  clock\+Freq\+In\+Hz)~(uint64\+\_\+t)((uint64\+\_\+t)count $\ast$ 1000\+U / clock\+Freq\+In\+Hz)
+\end{DoxyCompactItemize}
+\subsection*{Alignment variable definition macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ksdk__common_gade00270528e66e9f091cc49d1ac2212c}\label{group__ksdk__common_gade00270528e66e9f091cc49d1ac2212c}} 
+\#define {\bfseries S\+D\+K\+\_\+\+A\+L\+I\+GN}(var,  alignbytes)~var
+\item 
+\#define \mbox{\hyperlink{group__ksdk__common_ga44d24ac5229dbbd054f046331b58d43b}{S\+D\+K\+\_\+\+S\+I\+Z\+E\+A\+L\+I\+GN}}(var,  alignbytes)~((unsigned int)((var) + ((alignbytes)-\/1)) \& (unsigned int)($\sim$(unsigned int)((alignbytes)-\/1)))
+\end{DoxyCompactItemize}
+\subsection*{Non-\/cacheable region definition macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ksdk__common_gad98e0c70f9195609e3c3d9e635bc207d}\label{group__ksdk__common_gad98e0c70f9195609e3c3d9e635bc207d}} 
+\#define {\bfseries A\+T\+\_\+\+N\+O\+N\+C\+A\+C\+H\+E\+A\+B\+L\+E\+\_\+\+S\+E\+C\+T\+I\+ON}(var)~var
+\item 
+\mbox{\Hypertarget{group__ksdk__common_ga545036768d164aad61b71502371e7165}\label{group__ksdk__common_ga545036768d164aad61b71502371e7165}} 
+\#define {\bfseries A\+T\+\_\+\+N\+O\+N\+C\+A\+C\+H\+E\+A\+B\+L\+E\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+I\+GN}(var,  alignbytes)~var
+\item 
+\mbox{\Hypertarget{group__ksdk__common_ga0e6dbf5a33f2390db8f141f2df5055aa}\label{group__ksdk__common_ga0e6dbf5a33f2390db8f141f2df5055aa}} 
+\#define {\bfseries A\+T\+\_\+\+N\+O\+N\+C\+A\+C\+H\+E\+A\+B\+L\+E\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+I\+N\+IT}(var)~var
+\item 
+\mbox{\Hypertarget{group__ksdk__common_ga5861db7ec245a076dbb525bb75255cf0}\label{group__ksdk__common_ga5861db7ec245a076dbb525bb75255cf0}} 
+\#define {\bfseries A\+T\+\_\+\+N\+O\+N\+C\+A\+C\+H\+E\+A\+B\+L\+E\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+A\+L\+I\+G\+N\+\_\+\+I\+N\+IT}(var,  alignbytes)~var
+\end{DoxyCompactItemize}
+\subsection*{Suppress fallthrough warning macro}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ksdk__common_ga0b47cb52d1ceba88ee3e6cd19820ecfc}\label{group__ksdk__common_ga0b47cb52d1ceba88ee3e6cd19820ecfc}} 
+\#define {\bfseries S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+F\+A\+L\+L\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+W\+A\+R\+N\+I\+NG}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__ksdk__common_gafa0fe6bd95d5455c99aee949cb285b20}\label{group__ksdk__common_gafa0fe6bd95d5455c99aee949cb285b20}} 
+\index{Ksdk\_common@{Ksdk\_common}!COUNT\_TO\_MSEC@{COUNT\_TO\_MSEC}}
+\index{COUNT\_TO\_MSEC@{COUNT\_TO\_MSEC}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{COUNT\_TO\_MSEC}{COUNT\_TO\_MSEC}}
+{\footnotesize\ttfamily \#define C\+O\+U\+N\+T\+\_\+\+T\+O\+\_\+\+M\+S\+EC(\begin{DoxyParamCaption}\item[{}]{count,  }\item[{}]{clock\+Freq\+In\+Hz }\end{DoxyParamCaption})~(uint64\+\_\+t)((uint64\+\_\+t)count $\ast$ 1000\+U / clock\+Freq\+In\+Hz)}
+
+Macro to convert a raw count value to millisecond \mbox{\Hypertarget{group__ksdk__common_ga601b69842ec962d1babd627e5a3541fd}\label{group__ksdk__common_ga601b69842ec962d1babd627e5a3541fd}} 
+\index{Ksdk\_common@{Ksdk\_common}!COUNT\_TO\_USEC@{COUNT\_TO\_USEC}}
+\index{COUNT\_TO\_USEC@{COUNT\_TO\_USEC}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{COUNT\_TO\_USEC}{COUNT\_TO\_USEC}}
+{\footnotesize\ttfamily \#define C\+O\+U\+N\+T\+\_\+\+T\+O\+\_\+\+U\+S\+EC(\begin{DoxyParamCaption}\item[{}]{count,  }\item[{}]{clock\+Freq\+In\+Hz }\end{DoxyParamCaption})~(uint64\+\_\+t)((uint64\+\_\+t)count $\ast$ 1000000\+U / clock\+Freq\+In\+Hz)}
+
+Macro to convert a raw count value to microsecond \mbox{\Hypertarget{group__ksdk__common_gad4f7f7e51a84c34f06bbbb34973ae97a}\label{group__ksdk__common_gad4f7f7e51a84c34f06bbbb34973ae97a}} 
+\index{Ksdk\_common@{Ksdk\_common}!DEBUG\_CONSOLE\_DEVICE\_TYPE\_FLEXCOMM@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_FLEXCOMM}}
+\index{DEBUG\_CONSOLE\_DEVICE\_TYPE\_FLEXCOMM@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_FLEXCOMM}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{DEBUG\_CONSOLE\_DEVICE\_TYPE\_FLEXCOMM}{DEBUG\_CONSOLE\_DEVICE\_TYPE\_FLEXCOMM}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+E\+X\+C\+O\+MM~5U}
+
+Debug console based on F\+L\+E\+X\+C\+O\+MM. \mbox{\Hypertarget{group__ksdk__common_ga75a9e86134df04f6a8b66025d11e25c2}\label{group__ksdk__common_ga75a9e86134df04f6a8b66025d11e25c2}} 
+\index{Ksdk\_common@{Ksdk\_common}!DEBUG\_CONSOLE\_DEVICE\_TYPE\_IUART@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_IUART}}
+\index{DEBUG\_CONSOLE\_DEVICE\_TYPE\_IUART@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_IUART}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{DEBUG\_CONSOLE\_DEVICE\_TYPE\_IUART}{DEBUG\_CONSOLE\_DEVICE\_TYPE\_IUART}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+U\+A\+RT~6U}
+
+Debug console based on i.\+MX U\+A\+RT. \mbox{\Hypertarget{group__ksdk__common_ga6b4add5f2d938a89da56f58ac0b4e89b}\label{group__ksdk__common_ga6b4add5f2d938a89da56f58ac0b4e89b}} 
+\index{Ksdk\_common@{Ksdk\_common}!DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPSCI@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPSCI}}
+\index{DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPSCI@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPSCI}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPSCI}{DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPSCI}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+P\+S\+CI~3U}
+
+Debug console based on L\+P\+S\+CI. \mbox{\Hypertarget{group__ksdk__common_ga1a04b7330b5196f73ed4ffe7fa2bae6c}\label{group__ksdk__common_ga1a04b7330b5196f73ed4ffe7fa2bae6c}} 
+\index{Ksdk\_common@{Ksdk\_common}!DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPUART@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPUART}}
+\index{DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPUART@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPUART}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPUART}{DEBUG\_CONSOLE\_DEVICE\_TYPE\_LPUART}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+P\+U\+A\+RT~2U}
+
+Debug console based on L\+P\+U\+A\+RT. \mbox{\Hypertarget{group__ksdk__common_ga5a951951cdb6063d949523052aa5b5e4}\label{group__ksdk__common_ga5a951951cdb6063d949523052aa5b5e4}} 
+\index{Ksdk\_common@{Ksdk\_common}!DEBUG\_CONSOLE\_DEVICE\_TYPE\_MINI\_USART@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_MINI\_USART}}
+\index{DEBUG\_CONSOLE\_DEVICE\_TYPE\_MINI\_USART@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_MINI\_USART}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{DEBUG\_CONSOLE\_DEVICE\_TYPE\_MINI\_USART}{DEBUG\_CONSOLE\_DEVICE\_TYPE\_MINI\_USART}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+I\+\_\+\+U\+S\+A\+RT~8U}
+
+Debug console based on L\+P\+C\+\_\+\+U\+S\+A\+RT. \mbox{\Hypertarget{group__ksdk__common_gaa7fc9e15d36453236a580b3c8116ee85}\label{group__ksdk__common_gaa7fc9e15d36453236a580b3c8116ee85}} 
+\index{Ksdk\_common@{Ksdk\_common}!DEBUG\_CONSOLE\_DEVICE\_TYPE\_NONE@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_NONE}}
+\index{DEBUG\_CONSOLE\_DEVICE\_TYPE\_NONE@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_NONE}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{DEBUG\_CONSOLE\_DEVICE\_TYPE\_NONE}{DEBUG\_CONSOLE\_DEVICE\_TYPE\_NONE}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE~0U}
+
+No debug console. \mbox{\Hypertarget{group__ksdk__common_ga9d142691c3a4d810f8bdabc41e89dfd7}\label{group__ksdk__common_ga9d142691c3a4d810f8bdabc41e89dfd7}} 
+\index{Ksdk\_common@{Ksdk\_common}!DEBUG\_CONSOLE\_DEVICE\_TYPE\_SWO@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_SWO}}
+\index{DEBUG\_CONSOLE\_DEVICE\_TYPE\_SWO@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_SWO}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{DEBUG\_CONSOLE\_DEVICE\_TYPE\_SWO}{DEBUG\_CONSOLE\_DEVICE\_TYPE\_SWO}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+WO~9U}
+
+Debug console based on S\+WO. \mbox{\Hypertarget{group__ksdk__common_ga59764d32e5394455906edbf03cff0b9f}\label{group__ksdk__common_ga59764d32e5394455906edbf03cff0b9f}} 
+\index{Ksdk\_common@{Ksdk\_common}!DEBUG\_CONSOLE\_DEVICE\_TYPE\_UART@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_UART}}
+\index{DEBUG\_CONSOLE\_DEVICE\_TYPE\_UART@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_UART}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{DEBUG\_CONSOLE\_DEVICE\_TYPE\_UART}{DEBUG\_CONSOLE\_DEVICE\_TYPE\_UART}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+A\+RT~1U}
+
+Debug console based on U\+A\+RT. \mbox{\Hypertarget{group__ksdk__common_ga262e149f9ce1ef4cf2e539e9494d3cca}\label{group__ksdk__common_ga262e149f9ce1ef4cf2e539e9494d3cca}} 
+\index{Ksdk\_common@{Ksdk\_common}!DEBUG\_CONSOLE\_DEVICE\_TYPE\_USBCDC@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_USBCDC}}
+\index{DEBUG\_CONSOLE\_DEVICE\_TYPE\_USBCDC@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_USBCDC}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{DEBUG\_CONSOLE\_DEVICE\_TYPE\_USBCDC}{DEBUG\_CONSOLE\_DEVICE\_TYPE\_USBCDC}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+S\+B\+C\+DC~4U}
+
+Debug console based on U\+S\+B\+C\+DC. \mbox{\Hypertarget{group__ksdk__common_ga2c85202f838f94e51a0bb7b33856c78d}\label{group__ksdk__common_ga2c85202f838f94e51a0bb7b33856c78d}} 
+\index{Ksdk\_common@{Ksdk\_common}!DEBUG\_CONSOLE\_DEVICE\_TYPE\_VUSART@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_VUSART}}
+\index{DEBUG\_CONSOLE\_DEVICE\_TYPE\_VUSART@{DEBUG\_CONSOLE\_DEVICE\_TYPE\_VUSART}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{DEBUG\_CONSOLE\_DEVICE\_TYPE\_VUSART}{DEBUG\_CONSOLE\_DEVICE\_TYPE\_VUSART}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+S\+O\+L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+U\+S\+A\+RT~7U}
+
+Debug console based on L\+P\+C\+\_\+\+V\+U\+S\+A\+RT. \mbox{\Hypertarget{group__ksdk__common_gaa9fb2136029d807bd7c349c30348b52a}\label{group__ksdk__common_gaa9fb2136029d807bd7c349c30348b52a}} 
+\index{Ksdk\_common@{Ksdk\_common}!MSEC\_TO\_COUNT@{MSEC\_TO\_COUNT}}
+\index{MSEC\_TO\_COUNT@{MSEC\_TO\_COUNT}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{MSEC\_TO\_COUNT}{MSEC\_TO\_COUNT}}
+{\footnotesize\ttfamily \#define M\+S\+E\+C\+\_\+\+T\+O\+\_\+\+C\+O\+U\+NT(\begin{DoxyParamCaption}\item[{}]{ms,  }\item[{}]{clock\+Freq\+In\+Hz }\end{DoxyParamCaption})~(uint64\+\_\+t)((uint64\+\_\+t)ms $\ast$ clock\+Freq\+In\+Hz / 1000\+U)}
+
+Macro to convert a millisecond period to raw count value \mbox{\Hypertarget{group__ksdk__common_ga44d24ac5229dbbd054f046331b58d43b}\label{group__ksdk__common_ga44d24ac5229dbbd054f046331b58d43b}} 
+\index{Ksdk\_common@{Ksdk\_common}!SDK\_SIZEALIGN@{SDK\_SIZEALIGN}}
+\index{SDK\_SIZEALIGN@{SDK\_SIZEALIGN}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{SDK\_SIZEALIGN}{SDK\_SIZEALIGN}}
+{\footnotesize\ttfamily \#define S\+D\+K\+\_\+\+S\+I\+Z\+E\+A\+L\+I\+GN(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{alignbytes }\end{DoxyParamCaption})~((unsigned int)((var) + ((alignbytes)-\/1)) \& (unsigned int)($\sim$(unsigned int)((alignbytes)-\/1)))}
+
+Macro to change a value to a given size aligned value \mbox{\Hypertarget{group__ksdk__common_gad5639aadf668899775fc7506a5e19dc1}\label{group__ksdk__common_gad5639aadf668899775fc7506a5e19dc1}} 
+\index{Ksdk\_common@{Ksdk\_common}!USEC\_TO\_COUNT@{USEC\_TO\_COUNT}}
+\index{USEC\_TO\_COUNT@{USEC\_TO\_COUNT}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{USEC\_TO\_COUNT}{USEC\_TO\_COUNT}}
+{\footnotesize\ttfamily \#define U\+S\+E\+C\+\_\+\+T\+O\+\_\+\+C\+O\+U\+NT(\begin{DoxyParamCaption}\item[{}]{us,  }\item[{}]{clock\+Freq\+In\+Hz }\end{DoxyParamCaption})~(uint64\+\_\+t)(((uint64\+\_\+t)(us) $\ast$ (clock\+Freq\+In\+Hz)) / 1000000\+U)}
+
+Macro to convert a microsecond period to raw count value 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__ksdk__common_ga7ff0b98bb1341c07acefb1473b6eda29}\label{group__ksdk__common_ga7ff0b98bb1341c07acefb1473b6eda29}} 
+\index{Ksdk\_common@{Ksdk\_common}!\_status\_groups@{\_status\_groups}}
+\index{\_status\_groups@{\_status\_groups}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{\_status\_groups}{\_status\_groups}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ksdk__common_ga7ff0b98bb1341c07acefb1473b6eda29}{\+\_\+status\+\_\+groups}}}
+
+
+
+Status group numbers. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_Generic@{kStatusGroup\_Generic}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_Generic@{kStatusGroup\_Generic}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae7c95e11ceb8067c9c2703f96e51aca7}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae7c95e11ceb8067c9c2703f96e51aca7}} 
+k\+Status\+Group\+\_\+\+Generic&Group number for generic status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLASH@{kStatusGroup\_FLASH}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLASH@{kStatusGroup\_FLASH}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8db8bea33da992b22cafbae1dcf65bb0}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8db8bea33da992b22cafbae1dcf65bb0}} 
+k\+Status\+Group\+\_\+\+F\+L\+A\+SH&Group number for F\+L\+A\+SH status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LPSPI@{kStatusGroup\_LPSPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LPSPI@{kStatusGroup\_LPSPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a491dbb2373725b607970c032f4e04ee3}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a491dbb2373725b607970c032f4e04ee3}} 
+k\+Status\+Group\+\_\+\+L\+P\+S\+PI&Group number for L\+P\+S\+PI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLEXIO\_SPI@{kStatusGroup\_FLEXIO\_SPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLEXIO\_SPI@{kStatusGroup\_FLEXIO\_SPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3bc2ecc10af8973a1ecc4f0163fb9b53}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3bc2ecc10af8973a1ecc4f0163fb9b53}} 
+k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+S\+PI&Group number for F\+L\+E\+X\+IO S\+PI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_DSPI@{kStatusGroup\_DSPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_DSPI@{kStatusGroup\_DSPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aee549dc5fb5e05a0d8daaa61a089b222}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aee549dc5fb5e05a0d8daaa61a089b222}} 
+k\+Status\+Group\+\_\+\+D\+S\+PI&Group number for D\+S\+PI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLEXIO\_UART@{kStatusGroup\_FLEXIO\_UART}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLEXIO\_UART@{kStatusGroup\_FLEXIO\_UART}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae7514134f14004b1835d27cac48bd991}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae7514134f14004b1835d27cac48bd991}} 
+k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+U\+A\+RT&Group number for F\+L\+E\+X\+IO U\+A\+RT status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLEXIO\_I2C@{kStatusGroup\_FLEXIO\_I2C}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLEXIO\_I2C@{kStatusGroup\_FLEXIO\_I2C}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a67e5d3d11fb3f47ec11d9ee612b98b94}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a67e5d3d11fb3f47ec11d9ee612b98b94}} 
+k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+I2C&Group number for F\+L\+E\+X\+IO I2C status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LPI2C@{kStatusGroup\_LPI2C}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LPI2C@{kStatusGroup\_LPI2C}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a0d6c6a34fc0b6dbcb323f010556a3be1}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a0d6c6a34fc0b6dbcb323f010556a3be1}} 
+k\+Status\+Group\+\_\+\+L\+P\+I2C&Group number for L\+P\+I2C status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_UART@{kStatusGroup\_UART}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_UART@{kStatusGroup\_UART}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aeeb2ed6ef4ce59c7e1d416466f55bfb7}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aeeb2ed6ef4ce59c7e1d416466f55bfb7}} 
+k\+Status\+Group\+\_\+\+U\+A\+RT&Group number for U\+A\+RT status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_I2C@{kStatusGroup\_I2C}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_I2C@{kStatusGroup\_I2C}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a5c67a60e98e49151455f565c2834d228}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a5c67a60e98e49151455f565c2834d228}} 
+k\+Status\+Group\+\_\+\+I2C&Group number for U\+A\+RT status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LPSCI@{kStatusGroup\_LPSCI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LPSCI@{kStatusGroup\_LPSCI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a9f1b2d0eeee16f209d7eed3bdb1cf533}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a9f1b2d0eeee16f209d7eed3bdb1cf533}} 
+k\+Status\+Group\+\_\+\+L\+P\+S\+CI&Group number for L\+P\+S\+CI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LPUART@{kStatusGroup\_LPUART}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LPUART@{kStatusGroup\_LPUART}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3bcb0be184f8d5bb76d4be8e99b4e45e}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3bcb0be184f8d5bb76d4be8e99b4e45e}} 
+k\+Status\+Group\+\_\+\+L\+P\+U\+A\+RT&Group number for L\+P\+U\+A\+RT status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SPI@{kStatusGroup\_SPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SPI@{kStatusGroup\_SPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a60c31c70600aff4f290ca2d790622977}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a60c31c70600aff4f290ca2d790622977}} 
+k\+Status\+Group\+\_\+\+S\+PI&Group number for S\+PI status code. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_XRDC@{kStatusGroup\_XRDC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_XRDC@{kStatusGroup\_XRDC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29af98b407f4e66e7046a3173031b45253d}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29af98b407f4e66e7046a3173031b45253d}} 
+k\+Status\+Group\+\_\+\+X\+R\+DC&Group number for X\+R\+DC status code. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SEMA42@{kStatusGroup\_SEMA42}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SEMA42@{kStatusGroup\_SEMA42}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a073c6e3ccd0dbcf1b812cb21da5e7df9}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a073c6e3ccd0dbcf1b812cb21da5e7df9}} 
+k\+Status\+Group\+\_\+\+S\+E\+M\+A42&Group number for S\+E\+M\+A42 status code. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SDHC@{kStatusGroup\_SDHC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SDHC@{kStatusGroup\_SDHC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aba83e94d1735b695119429a4e55bb3a4}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aba83e94d1735b695119429a4e55bb3a4}} 
+k\+Status\+Group\+\_\+\+S\+D\+HC&Group number for S\+D\+HC status code \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SDMMC@{kStatusGroup\_SDMMC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SDMMC@{kStatusGroup\_SDMMC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1c5e35d9d03724b7ccadcae8e0451384}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1c5e35d9d03724b7ccadcae8e0451384}} 
+k\+Status\+Group\+\_\+\+S\+D\+M\+MC&Group number for S\+D\+M\+MC status code \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SAI@{kStatusGroup\_SAI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SAI@{kStatusGroup\_SAI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae4461a3a085ea13b5fe7908bf1e109f8}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae4461a3a085ea13b5fe7908bf1e109f8}} 
+k\+Status\+Group\+\_\+\+S\+AI&Group number for S\+AI status code \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_MCG@{kStatusGroup\_MCG}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_MCG@{kStatusGroup\_MCG}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8210c55fe061ff24e75a0f928dbfcb39}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8210c55fe061ff24e75a0f928dbfcb39}} 
+k\+Status\+Group\+\_\+\+M\+CG&Group number for M\+CG status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SCG@{kStatusGroup\_SCG}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SCG@{kStatusGroup\_SCG}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a9771abafdcf43bf924599a0081e92bf2}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a9771abafdcf43bf924599a0081e92bf2}} 
+k\+Status\+Group\+\_\+\+S\+CG&Group number for S\+CG status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SDSPI@{kStatusGroup\_SDSPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SDSPI@{kStatusGroup\_SDSPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a85685b8cde1285d240569b9518c32fc0}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a85685b8cde1285d240569b9518c32fc0}} 
+k\+Status\+Group\+\_\+\+S\+D\+S\+PI&Group number for S\+D\+S\+PI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLEXIO\_I2S@{kStatusGroup\_FLEXIO\_I2S}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLEXIO\_I2S@{kStatusGroup\_FLEXIO\_I2S}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae834c896c69c50855c5cf07768a6cba3}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae834c896c69c50855c5cf07768a6cba3}} 
+k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+I2S&Group number for F\+L\+E\+X\+IO I2S status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLEXIO\_MCULCD@{kStatusGroup\_FLEXIO\_MCULCD}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLEXIO\_MCULCD@{kStatusGroup\_FLEXIO\_MCULCD}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a055d3788919f48c2d69463819d02d903}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a055d3788919f48c2d69463819d02d903}} 
+k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+M\+C\+U\+L\+CD&Group number for F\+L\+E\+X\+IO L\+CD status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLASHIAP@{kStatusGroup\_FLASHIAP}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLASHIAP@{kStatusGroup\_FLASHIAP}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae5b7283daca81a85091e27b80ece629a}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae5b7283daca81a85091e27b80ece629a}} 
+k\+Status\+Group\+\_\+\+F\+L\+A\+S\+H\+I\+AP&Group number for F\+L\+A\+S\+H\+I\+AP status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLEXCOMM\_I2C@{kStatusGroup\_FLEXCOMM\_I2C}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLEXCOMM\_I2C@{kStatusGroup\_FLEXCOMM\_I2C}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aedd1abcbca188de6e16a6f088d59e92e}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aedd1abcbca188de6e16a6f088d59e92e}} 
+k\+Status\+Group\+\_\+\+F\+L\+E\+X\+C\+O\+M\+M\+\_\+\+I2C&Group number for F\+L\+E\+X\+C\+O\+MM I2C status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_I2S@{kStatusGroup\_I2S}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_I2S@{kStatusGroup\_I2S}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a0b66f34ec90c9b6a702e0f00f5ddae43}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a0b66f34ec90c9b6a702e0f00f5ddae43}} 
+k\+Status\+Group\+\_\+\+I2S&Group number for I2S status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_IUART@{kStatusGroup\_IUART}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_IUART@{kStatusGroup\_IUART}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a33255aee9de4a1d093770b218f944d0f}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a33255aee9de4a1d093770b218f944d0f}} 
+k\+Status\+Group\+\_\+\+I\+U\+A\+RT&Group number for I\+U\+A\+RT status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_CSI@{kStatusGroup\_CSI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_CSI@{kStatusGroup\_CSI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1d1d1a595e9f00c6c9f80c19ce1b8ec5}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1d1d1a595e9f00c6c9f80c19ce1b8ec5}} 
+k\+Status\+Group\+\_\+\+C\+SI&Group number for C\+SI status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_MIPI\_DSI@{kStatusGroup\_MIPI\_DSI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_MIPI\_DSI@{kStatusGroup\_MIPI\_DSI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29abdf3fca48a7a13b67d0207aeb59bc581}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29abdf3fca48a7a13b67d0207aeb59bc581}} 
+k\+Status\+Group\+\_\+\+M\+I\+P\+I\+\_\+\+D\+SI&Group number for M\+I\+PI D\+SI status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SDRAMC@{kStatusGroup\_SDRAMC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SDRAMC@{kStatusGroup\_SDRAMC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3b3116c6f4aa1a88e6e7abc45df58938}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3b3116c6f4aa1a88e6e7abc45df58938}} 
+k\+Status\+Group\+\_\+\+S\+D\+R\+A\+MC&Group number for S\+D\+R\+A\+MC status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_POWER@{kStatusGroup\_POWER}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_POWER@{kStatusGroup\_POWER}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a94d2a6fe8021fed5487169a46421d47e}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a94d2a6fe8021fed5487169a46421d47e}} 
+k\+Status\+Group\+\_\+\+P\+O\+W\+ER&Group number for P\+O\+W\+ER status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_ENET@{kStatusGroup\_ENET}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_ENET@{kStatusGroup\_ENET}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7d6b922ab2a42d6ef35cfb2be4f80251}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7d6b922ab2a42d6ef35cfb2be4f80251}} 
+k\+Status\+Group\+\_\+\+E\+N\+ET&Group number for E\+N\+ET status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_PHY@{kStatusGroup\_PHY}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_PHY@{kStatusGroup\_PHY}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a521a4b8ac1776d0f41af044886a71b3b}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a521a4b8ac1776d0f41af044886a71b3b}} 
+k\+Status\+Group\+\_\+\+P\+HY&Group number for P\+HY status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_TRGMUX@{kStatusGroup\_TRGMUX}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_TRGMUX@{kStatusGroup\_TRGMUX}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29adb8c69c2f8cd344f3e2dc0b0db4a1631}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29adb8c69c2f8cd344f3e2dc0b0db4a1631}} 
+k\+Status\+Group\+\_\+\+T\+R\+G\+M\+UX&Group number for T\+R\+G\+M\+UX status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SMARTCARD@{kStatusGroup\_SMARTCARD}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SMARTCARD@{kStatusGroup\_SMARTCARD}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae16d6bba44ae6f24187946960fb826dd}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae16d6bba44ae6f24187946960fb826dd}} 
+k\+Status\+Group\+\_\+\+S\+M\+A\+R\+T\+C\+A\+RD&Group number for S\+M\+A\+R\+T\+C\+A\+RD status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LMEM@{kStatusGroup\_LMEM}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LMEM@{kStatusGroup\_LMEM}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a376f952aee5cd45d903da520a37e4c52}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a376f952aee5cd45d903da520a37e4c52}} 
+k\+Status\+Group\+\_\+\+L\+M\+EM&Group number for L\+M\+EM status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_QSPI@{kStatusGroup\_QSPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_QSPI@{kStatusGroup\_QSPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a4a488e0f7cc1d3baa449ab4ca99e7b34}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a4a488e0f7cc1d3baa449ab4ca99e7b34}} 
+k\+Status\+Group\+\_\+\+Q\+S\+PI&Group number for Q\+S\+PI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_DMA@{kStatusGroup\_DMA}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_DMA@{kStatusGroup\_DMA}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a210ff4fa30e99618f8d3e978df03a7b6}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a210ff4fa30e99618f8d3e978df03a7b6}} 
+k\+Status\+Group\+\_\+\+D\+MA&Group number for D\+MA status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_EDMA@{kStatusGroup\_EDMA}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_EDMA@{kStatusGroup\_EDMA}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a0ec7f0302a8f7eb082f449933880a1ad}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a0ec7f0302a8f7eb082f449933880a1ad}} 
+k\+Status\+Group\+\_\+\+E\+D\+MA&Group number for E\+D\+MA status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_DMAMGR@{kStatusGroup\_DMAMGR}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_DMAMGR@{kStatusGroup\_DMAMGR}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3091dcef1c0c7cd48658d8b43b52fbaf}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a3091dcef1c0c7cd48658d8b43b52fbaf}} 
+k\+Status\+Group\+\_\+\+D\+M\+A\+M\+GR&Group number for D\+M\+A\+M\+GR status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLEXCAN@{kStatusGroup\_FLEXCAN}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLEXCAN@{kStatusGroup\_FLEXCAN}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1461a28ac2297f07aa34581074cf9923}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1461a28ac2297f07aa34581074cf9923}} 
+k\+Status\+Group\+\_\+\+F\+L\+E\+X\+C\+AN&Group number for Flex\+C\+AN status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LTC@{kStatusGroup\_LTC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LTC@{kStatusGroup\_LTC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a64b54e0423e0ad8a227a38cad4ad4eda}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a64b54e0423e0ad8a227a38cad4ad4eda}} 
+k\+Status\+Group\+\_\+\+L\+TC&Group number for L\+TC status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLEXIO\_CAMERA@{kStatusGroup\_FLEXIO\_CAMERA}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLEXIO\_CAMERA@{kStatusGroup\_FLEXIO\_CAMERA}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a214d1cc4faa574be18fa9d865f2ca36d}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a214d1cc4faa574be18fa9d865f2ca36d}} 
+k\+Status\+Group\+\_\+\+F\+L\+E\+X\+I\+O\+\_\+\+C\+A\+M\+E\+RA&Group number for F\+L\+E\+X\+IO C\+A\+M\+E\+RA status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LPC\_SPI@{kStatusGroup\_LPC\_SPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LPC\_SPI@{kStatusGroup\_LPC\_SPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ac4c2c9d32010087f0602dbdf2c389857}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ac4c2c9d32010087f0602dbdf2c389857}} 
+k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+S\+PI&Group number for L\+P\+C\+\_\+\+S\+PI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LPC\_USART@{kStatusGroup\_LPC\_USART}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LPC\_USART@{kStatusGroup\_LPC\_USART}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a02f52b9532ae0d4af04f5c054f3fab84}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a02f52b9532ae0d4af04f5c054f3fab84}} 
+k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+U\+S\+A\+RT&Group number for L\+P\+C\+\_\+\+U\+S\+A\+RT status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_DMIC@{kStatusGroup\_DMIC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_DMIC@{kStatusGroup\_DMIC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a679444433f12ae5649cb02c2032ca20e}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a679444433f12ae5649cb02c2032ca20e}} 
+k\+Status\+Group\+\_\+\+D\+M\+IC&Group number for D\+M\+IC status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SDIF@{kStatusGroup\_SDIF}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SDIF@{kStatusGroup\_SDIF}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a25fb824a9ad702e631276a8ea5d03603}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a25fb824a9ad702e631276a8ea5d03603}} 
+k\+Status\+Group\+\_\+\+S\+D\+IF&Group number for S\+D\+IF status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SPIFI@{kStatusGroup\_SPIFI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SPIFI@{kStatusGroup\_SPIFI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ac071c3c3d14ed8afadb2bb6de249c722}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ac071c3c3d14ed8afadb2bb6de249c722}} 
+k\+Status\+Group\+\_\+\+S\+P\+I\+FI&Group number for S\+P\+I\+FI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_OTP@{kStatusGroup\_OTP}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_OTP@{kStatusGroup\_OTP}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1d9b7b66bfaaf53b42aad8462c88ea62}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1d9b7b66bfaaf53b42aad8462c88ea62}} 
+k\+Status\+Group\+\_\+\+O\+TP&Group number for O\+TP status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_MCAN@{kStatusGroup\_MCAN}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_MCAN@{kStatusGroup\_MCAN}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab7f77dd7e0c3d068baf39117ac08a0b9}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab7f77dd7e0c3d068baf39117ac08a0b9}} 
+k\+Status\+Group\+\_\+\+M\+C\+AN&Group number for M\+C\+AN status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_CAAM@{kStatusGroup\_CAAM}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_CAAM@{kStatusGroup\_CAAM}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a298049d9d9c8be1b2e7a42f38a734d87}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a298049d9d9c8be1b2e7a42f38a734d87}} 
+k\+Status\+Group\+\_\+\+C\+A\+AM&Group number for C\+A\+AM status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_ECSPI@{kStatusGroup\_ECSPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_ECSPI@{kStatusGroup\_ECSPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab99693af818132e3cb4f9198965ad637}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab99693af818132e3cb4f9198965ad637}} 
+k\+Status\+Group\+\_\+\+E\+C\+S\+PI&Group number for E\+C\+S\+PI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_USDHC@{kStatusGroup\_USDHC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_USDHC@{kStatusGroup\_USDHC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae2f54d029f0e74c8fed8812e24000a74}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae2f54d029f0e74c8fed8812e24000a74}} 
+k\+Status\+Group\+\_\+\+U\+S\+D\+HC&Group number for U\+S\+D\+HC status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LPC\_I2C@{kStatusGroup\_LPC\_I2C}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LPC\_I2C@{kStatusGroup\_LPC\_I2C}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab597c78848ce0e63d2518f14e7bac82b}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab597c78848ce0e63d2518f14e7bac82b}} 
+k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+I2C&Group number for L\+P\+C\+\_\+\+I2C status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_DCP@{kStatusGroup\_DCP}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_DCP@{kStatusGroup\_DCP}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8e7465155c679388316b2f874a284e9e}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8e7465155c679388316b2f874a284e9e}} 
+k\+Status\+Group\+\_\+\+D\+CP&Group number for D\+CP status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_MSCAN@{kStatusGroup\_MSCAN}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_MSCAN@{kStatusGroup\_MSCAN}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a858563b1d87d6fa57a8f442025655201}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a858563b1d87d6fa57a8f442025655201}} 
+k\+Status\+Group\+\_\+\+M\+S\+C\+AN&Group number for M\+S\+C\+AN status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_ESAI@{kStatusGroup\_ESAI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_ESAI@{kStatusGroup\_ESAI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a01101c0342017a7fbe7225a7aa285bad}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a01101c0342017a7fbe7225a7aa285bad}} 
+k\+Status\+Group\+\_\+\+E\+S\+AI&Group number for E\+S\+AI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_FLEXSPI@{kStatusGroup\_FLEXSPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_FLEXSPI@{kStatusGroup\_FLEXSPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a22f1bdf5e7abbeb0bdfe18cda0bc5aca}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a22f1bdf5e7abbeb0bdfe18cda0bc5aca}} 
+k\+Status\+Group\+\_\+\+F\+L\+E\+X\+S\+PI&Group number for F\+L\+E\+X\+S\+PI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_MMDC@{kStatusGroup\_MMDC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_MMDC@{kStatusGroup\_MMDC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a67a884fec4d6adb5b455d50a0a5617a5}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a67a884fec4d6adb5b455d50a0a5617a5}} 
+k\+Status\+Group\+\_\+\+M\+M\+DC&Group number for M\+M\+DC status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_PDM@{kStatusGroup\_PDM}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_PDM@{kStatusGroup\_PDM}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae0b4ea9f05497a624e32811c4f36a3be}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae0b4ea9f05497a624e32811c4f36a3be}} 
+k\+Status\+Group\+\_\+\+P\+DM&Group number for M\+IC status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SDMA@{kStatusGroup\_SDMA}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SDMA@{kStatusGroup\_SDMA}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab55df75d85633505960f611180054524}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab55df75d85633505960f611180054524}} 
+k\+Status\+Group\+\_\+\+S\+D\+MA&Group number for S\+D\+MA status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_ICS@{kStatusGroup\_ICS}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_ICS@{kStatusGroup\_ICS}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a01bf442d671041dcbd1649ec0428c3b6}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a01bf442d671041dcbd1649ec0428c3b6}} 
+k\+Status\+Group\+\_\+\+I\+CS&Group number for I\+CS status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SPDIF@{kStatusGroup\_SPDIF}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SPDIF@{kStatusGroup\_SPDIF}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8bea2b5f8b1458aaa0dc29ddbb972d87}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8bea2b5f8b1458aaa0dc29ddbb972d87}} 
+k\+Status\+Group\+\_\+\+S\+P\+D\+IF&Group number for S\+P\+D\+IF status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LPC\_MINISPI@{kStatusGroup\_LPC\_MINISPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LPC\_MINISPI@{kStatusGroup\_LPC\_MINISPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab0104dd99e52fbf948f4ae030de5313d}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ab0104dd99e52fbf948f4ae030de5313d}} 
+k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+M\+I\+N\+I\+S\+PI&Group number for L\+P\+C\+\_\+\+M\+I\+N\+I\+S\+PI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_HASHCRYPT@{kStatusGroup\_HASHCRYPT}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_HASHCRYPT@{kStatusGroup\_HASHCRYPT}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1dcb6a7c2605c9ed77388fcb25b01feb}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a1dcb6a7c2605c9ed77388fcb25b01feb}} 
+k\+Status\+Group\+\_\+\+H\+A\+S\+H\+C\+R\+Y\+PT&Group number for Hashcrypt status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LPC\_SPI\_SSP@{kStatusGroup\_LPC\_SPI\_SSP}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LPC\_SPI\_SSP@{kStatusGroup\_LPC\_SPI\_SSP}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa2c382624b5763cf24cf9727fbfadde3}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa2c382624b5763cf24cf9727fbfadde3}} 
+k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+S\+P\+I\+\_\+\+S\+SP&Group number for L\+P\+C\+\_\+\+S\+P\+I\+\_\+\+S\+SP status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_I3C@{kStatusGroup\_I3C}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_I3C@{kStatusGroup\_I3C}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a6dbe13107a9dbb857242cf05e2319f9d}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a6dbe13107a9dbb857242cf05e2319f9d}} 
+k\+Status\+Group\+\_\+\+I3C&Group number for I3C status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LPC\_I2C\_1@{kStatusGroup\_LPC\_I2C\_1}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LPC\_I2C\_1@{kStatusGroup\_LPC\_I2C\_1}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a749eaf601d6fe3124f054bcb796b348c}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a749eaf601d6fe3124f054bcb796b348c}} 
+k\+Status\+Group\+\_\+\+L\+P\+C\+\_\+\+I2\+C\+\_\+1&Group number for L\+P\+C\+\_\+\+I2\+C\+\_\+1 status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_NOTIFIER@{kStatusGroup\_NOTIFIER}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_NOTIFIER@{kStatusGroup\_NOTIFIER}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a56134a73f0cfd393dd7cf7fb2395dd99}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a56134a73f0cfd393dd7cf7fb2395dd99}} 
+k\+Status\+Group\+\_\+\+N\+O\+T\+I\+F\+I\+ER&Group number for N\+O\+T\+I\+F\+I\+ER status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_DebugConsole@{kStatusGroup\_DebugConsole}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_DebugConsole@{kStatusGroup\_DebugConsole}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a499ec238a1614827065533960716e652}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a499ec238a1614827065533960716e652}} 
+k\+Status\+Group\+\_\+\+Debug\+Console&Group number for debug console status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SEMC@{kStatusGroup\_SEMC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SEMC@{kStatusGroup\_SEMC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a2fef671dda58af09262787022fe321fe}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a2fef671dda58af09262787022fe321fe}} 
+k\+Status\+Group\+\_\+\+S\+E\+MC&Group number for S\+E\+MC status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_ApplicationRangeStart@{kStatusGroup\_ApplicationRangeStart}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_ApplicationRangeStart@{kStatusGroup\_ApplicationRangeStart}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae0c3a94577af5271a1042757d3c8fdc1}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29ae0c3a94577af5271a1042757d3c8fdc1}} 
+k\+Status\+Group\+\_\+\+Application\+Range\+Start&Starting number for application groups. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_IAP@{kStatusGroup\_IAP}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_IAP@{kStatusGroup\_IAP}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a097d515214e888371df5c588b839529d}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a097d515214e888371df5c588b839529d}} 
+k\+Status\+Group\+\_\+\+I\+AP&Group number for I\+AP status codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_HAL\_GPIO@{kStatusGroup\_HAL\_GPIO}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_HAL\_GPIO@{kStatusGroup\_HAL\_GPIO}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a18ce0675c0cc628b2ff29a1bafce8b58}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a18ce0675c0cc628b2ff29a1bafce8b58}} 
+k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+G\+P\+IO&Group number for H\+AL G\+P\+IO status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_HAL\_UART@{kStatusGroup\_HAL\_UART}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_HAL\_UART@{kStatusGroup\_HAL\_UART}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a6510cce112fc6ed1e0523b5d7b307ca2}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a6510cce112fc6ed1e0523b5d7b307ca2}} 
+k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+U\+A\+RT&Group number for H\+AL U\+A\+RT status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_HAL\_TIMER@{kStatusGroup\_HAL\_TIMER}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_HAL\_TIMER@{kStatusGroup\_HAL\_TIMER}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa44796b25ed6ed37f7fb25f6f4076c2d}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa44796b25ed6ed37f7fb25f6f4076c2d}} 
+k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+T\+I\+M\+ER&Group number for H\+AL T\+I\+M\+ER status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_HAL\_SPI@{kStatusGroup\_HAL\_SPI}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_HAL\_SPI@{kStatusGroup\_HAL\_SPI}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aba70aa1970435b3ccd39ac54f9d7a68c}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aba70aa1970435b3ccd39ac54f9d7a68c}} 
+k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+S\+PI&Group number for H\+AL S\+PI status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_HAL\_I2C@{kStatusGroup\_HAL\_I2C}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_HAL\_I2C@{kStatusGroup\_HAL\_I2C}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aaa30b9e3fdd5e93bae58e66521b3015d}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aaa30b9e3fdd5e93bae58e66521b3015d}} 
+k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+I2C&Group number for H\+AL I2C status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_HAL\_FLASH@{kStatusGroup\_HAL\_FLASH}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_HAL\_FLASH@{kStatusGroup\_HAL\_FLASH}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa5afa714de4adf37bc00faf6c3dc589e}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa5afa714de4adf37bc00faf6c3dc589e}} 
+k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+F\+L\+A\+SH&Group number for H\+AL F\+L\+A\+SH status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_HAL\_PWM@{kStatusGroup\_HAL\_PWM}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_HAL\_PWM@{kStatusGroup\_HAL\_PWM}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa4609e941ad1155a86c40bdfcb20a155}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa4609e941ad1155a86c40bdfcb20a155}} 
+k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+P\+WM&Group number for H\+AL P\+WM status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_HAL\_RNG@{kStatusGroup\_HAL\_RNG}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_HAL\_RNG@{kStatusGroup\_HAL\_RNG}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa0d0535965c8d28434b036961f6a8c20}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29aa0d0535965c8d28434b036961f6a8c20}} 
+k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+R\+NG&Group number for H\+AL R\+NG status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_TIMERMANAGER@{kStatusGroup\_TIMERMANAGER}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_TIMERMANAGER@{kStatusGroup\_TIMERMANAGER}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a4603f8fedc8ad994788e17baae895013}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a4603f8fedc8ad994788e17baae895013}} 
+k\+Status\+Group\+\_\+\+T\+I\+M\+E\+R\+M\+A\+N\+A\+G\+ER&Group number for Ti\+M\+ER M\+A\+N\+A\+G\+ER status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SERIALMANAGER@{kStatusGroup\_SERIALMANAGER}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SERIALMANAGER@{kStatusGroup\_SERIALMANAGER}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a39a54cda2a1cac31e1c00be0eb4a7620}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a39a54cda2a1cac31e1c00be0eb4a7620}} 
+k\+Status\+Group\+\_\+\+S\+E\+R\+I\+A\+L\+M\+A\+N\+A\+G\+ER&Group number for S\+E\+R\+I\+AL M\+A\+N\+A\+G\+ER status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LED@{kStatusGroup\_LED}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LED@{kStatusGroup\_LED}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a84ab69a4e7f3f1c39f1c3a64d74af08c}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a84ab69a4e7f3f1c39f1c3a64d74af08c}} 
+k\+Status\+Group\+\_\+\+L\+ED&Group number for L\+ED status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_BUTTON@{kStatusGroup\_BUTTON}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_BUTTON@{kStatusGroup\_BUTTON}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7415efb189bfb31491ef0ae45fb24d90}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7415efb189bfb31491ef0ae45fb24d90}} 
+k\+Status\+Group\+\_\+\+B\+U\+T\+T\+ON&Group number for B\+U\+T\+T\+ON status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_EXTERN\_EEPROM@{kStatusGroup\_EXTERN\_EEPROM}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_EXTERN\_EEPROM@{kStatusGroup\_EXTERN\_EEPROM}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8e4a33b100580c2c1606d66d5ffdfaa3}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a8e4a33b100580c2c1606d66d5ffdfaa3}} 
+k\+Status\+Group\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+E\+E\+P\+R\+OM&Group number for E\+X\+T\+E\+RN E\+E\+P\+R\+OM status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SHELL@{kStatusGroup\_SHELL}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SHELL@{kStatusGroup\_SHELL}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a660addd059be8786f2aa3d9a1a196ae1}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a660addd059be8786f2aa3d9a1a196ae1}} 
+k\+Status\+Group\+\_\+\+S\+H\+E\+LL&Group number for S\+H\+E\+LL status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_MEM\_MANAGER@{kStatusGroup\_MEM\_MANAGER}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_MEM\_MANAGER@{kStatusGroup\_MEM\_MANAGER}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29acdfe26eb8bbbaaea438470512401e09a}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29acdfe26eb8bbbaaea438470512401e09a}} 
+k\+Status\+Group\+\_\+\+M\+E\+M\+\_\+\+M\+A\+N\+A\+G\+ER&Group number for M\+EM M\+A\+N\+A\+G\+ER status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_LIST@{kStatusGroup\_LIST}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_LIST@{kStatusGroup\_LIST}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a2e3bc103af2d3db7b628f87174d2bff8}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a2e3bc103af2d3db7b628f87174d2bff8}} 
+k\+Status\+Group\+\_\+\+L\+I\+ST&Group number for List status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_OSA@{kStatusGroup\_OSA}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_OSA@{kStatusGroup\_OSA}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a5b65c75456471a2536a97a30db4b8da3}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a5b65c75456471a2536a97a30db4b8da3}} 
+k\+Status\+Group\+\_\+\+O\+SA&Group number for O\+SA status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_COMMON\_TASK@{kStatusGroup\_COMMON\_TASK}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_COMMON\_TASK@{kStatusGroup\_COMMON\_TASK}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7771d56430ad7ff2553a1258aba16e02}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7771d56430ad7ff2553a1258aba16e02}} 
+k\+Status\+Group\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+T\+A\+SK&Group number for Common task status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_MSG@{kStatusGroup\_MSG}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_MSG@{kStatusGroup\_MSG}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a6d0dedbec7ee218b0ae03f23edad02fd}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a6d0dedbec7ee218b0ae03f23edad02fd}} 
+k\+Status\+Group\+\_\+\+M\+SG&Group number for messaging status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SDK\_OCOTP@{kStatusGroup\_SDK\_OCOTP}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SDK\_OCOTP@{kStatusGroup\_SDK\_OCOTP}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a539b147c0d1409a0e11c3ae340886fa8}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a539b147c0d1409a0e11c3ae340886fa8}} 
+k\+Status\+Group\+\_\+\+S\+D\+K\+\_\+\+O\+C\+O\+TP&Group number for O\+C\+O\+TP status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_SDK\_FLEXSPINOR@{kStatusGroup\_SDK\_FLEXSPINOR}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_SDK\_FLEXSPINOR@{kStatusGroup\_SDK\_FLEXSPINOR}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a830e5b42a05424dc026bd36d30f143a5}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a830e5b42a05424dc026bd36d30f143a5}} 
+k\+Status\+Group\+\_\+\+S\+D\+K\+\_\+\+F\+L\+E\+X\+S\+P\+I\+N\+OR&Group number for F\+L\+E\+X\+S\+P\+I\+N\+OR status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_CODEC@{kStatusGroup\_CODEC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_CODEC@{kStatusGroup\_CODEC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7c488d28bc9be2e29bd0d133bce7389a}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a7c488d28bc9be2e29bd0d133bce7389a}} 
+k\+Status\+Group\+\_\+\+C\+O\+D\+EC&Group number for codec status codes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatusGroup\_ASRC@{kStatusGroup\_ASRC}!Ksdk\_common@{Ksdk\_common}}\index{Ksdk\_common@{Ksdk\_common}!kStatusGroup\_ASRC@{kStatusGroup\_ASRC}}}\mbox{\Hypertarget{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a713723bd8764655328f1e5283a8e6020}\label{group__ksdk__common_gga7ff0b98bb1341c07acefb1473b6eda29a713723bd8764655328f1e5283a8e6020}} 
+k\+Status\+Group\+\_\+\+A\+S\+RC&Group number for codec status A\+S\+RC. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__ksdk__common_ga0be5caec9b8493d87cc849714bd47865}\label{group__ksdk__common_ga0be5caec9b8493d87cc849714bd47865}} 
+\index{Ksdk\_common@{Ksdk\_common}!SDK\_Free@{SDK\_Free}}
+\index{SDK\_Free@{SDK\_Free}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{SDK\_Free()}{SDK\_Free()}}
+{\footnotesize\ttfamily void S\+D\+K\+\_\+\+Free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Free memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The memory to be release. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__ksdk__common_ga4e1420d9e817ebe0e8973420411de015}\label{group__ksdk__common_ga4e1420d9e817ebe0e8973420411de015}} 
+\index{Ksdk\_common@{Ksdk\_common}!SDK\_Malloc@{SDK\_Malloc}}
+\index{SDK\_Malloc@{SDK\_Malloc}!Ksdk\_common@{Ksdk\_common}}
+\subsubsection{\texorpdfstring{SDK\_Malloc()}{SDK\_Malloc()}}
+{\footnotesize\ttfamily void$\ast$ S\+D\+K\+\_\+\+Malloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{alignbytes }\end{DoxyParamCaption})}
+
+
+
+Allocate memory with given alignment and aligned size. 
+
+This is provided to support the dynamically allocated memory used in cache-\/able region. 
+\begin{DoxyParams}{Parameters}
+{\em size} & The length required to malloc. \\
+\hline
+{\em alignbytes} & The alignment size. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & allocated memory. \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,40 @@
+\hypertarget{struct__ftfx__config}{}\section{\+\_\+ftfx\+\_\+config Struct Reference}
+\label{struct__ftfx__config}\index{\_ftfx\_config@{\_ftfx\_config}}
+
+
+Flash driver state information.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+ftfx\+\_\+controller.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ftfx__controller_ga64a01792d0090fb0202473c138e0c2c9}{ftfx\+\_\+mem\+\_\+desc\+\_\+t}} {\bfseries flash\+Desc}
+\item 
+\mbox{\hyperlink{group__ftfx__controller_ga721d5f2f64785b7580862e942e17737e}{ftfx\+\_\+ops\+\_\+config\+\_\+t}} {\bfseries ops\+Config}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_gaf29349209247a3a0420431c52be97f28}{flexram\+Block\+Base}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga29c215db16af5f9ff6c5c759ab1c889b}{flexram\+Total\+Size}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group__ftfx__controller_gaad84e8b697ff1b5fbe263e3730140d79}{eeprom\+Total\+Size}}
+\item 
+uint16\+\_\+t {\bfseries reserved}
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{group__ftfx__controller_ga6ec241fed36ff39637ec3a69f34e5e84}{run\+Cmd\+Func\+Addr}}
+\item 
+\mbox{\hyperlink{group__ftfx__controller_ga25d8176fbbb387ae5e5ba3fa32667d72}{ftfx\+\_\+ifr\+\_\+desc\+\_\+t}} {\bfseries ifr\+Desc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Flash driver state information. 
+
+An instance of this structure is allocated by the user of the flash driver and passed into each of the driver A\+P\+Is. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+ftfx\+\_\+controller.\+h\end{DoxyCompactItemize}

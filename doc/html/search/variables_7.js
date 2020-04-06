@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['g_5fserialhandle',['g_serialHandle',['../group__debugconsole.html#gaad3c4240a1364156a239471ccdb9aa0b',1,'g_serialHandle():&#160;fsl_debug_console.c'],['../group__debugconsole.html#gaad3c4240a1364156a239471ccdb9aa0b',1,'g_serialHandle():&#160;fsl_debug_console.c']]],
+  ['g_5fspidummydata',['g_spiDummyData',['../group__spi__driver.html#ga2789f8e1074f19357daf2d8ece8b86ad',1,'g_spiDummyData():&#160;fsl_spi.c'],['../group__spi__driver.html#ga2789f8e1074f19357daf2d8ece8b86ad',1,'g_spiDummyData():&#160;fsl_spi.c']]],
+  ['g_5fxtal0freq',['g_xtal0Freq',['../group__clock.html#ga70a4a6ffb6c5a7a271aad89fe482bafc',1,'g_xtal0Freq():&#160;fsl_clock.c'],['../group__clock.html#ga70a4a6ffb6c5a7a271aad89fe482bafc',1,'g_xtal0Freq():&#160;fsl_clock.c']]],
+  ['g_5fxtal32freq',['g_xtal32Freq',['../group__clock.html#ga170d2fd7c6b439b72e0f73b4d73443af',1,'g_xtal32Freq():&#160;fsl_clock.c'],['../group__clock.html#ga170d2fd7c6b439b72e0f73b4d73443af',1,'g_xtal32Freq():&#160;fsl_clock.c']]],
+  ['gcr',['GCR',['../struct_l_c_d___type.html#aae092d9d07574afe1fbc79c8bf7f7c19',1,'LCD_Type']]],
+  ['ge',['GE',['../union_a_p_s_r___type.html#aa91800ec6e90e457c7a1acd1f2e17099',1,'APSR_Type::GE()'],['../unionx_p_s_r___type.html#aa91800ec6e90e457c7a1acd1f2e17099',1,'xPSR_Type::GE()']]],
+  ['general_5fcall',['general_call',['../struct___a_r_m___i2_c___s_t_a_t_u_s.html#ab65804439f6f5beda8da30381b0ad22d',1,'_ARM_I2C_STATUS']]],
+  ['getcapabilities',['GetCapabilities',['../struct___a_r_m___d_r_i_v_e_r___i2_c.html#a00ae4a98ad86ab27e1dd1373d6adda44',1,'_ARM_DRIVER_I2C::GetCapabilities()'],['../struct___a_r_m___d_r_i_v_e_r___s_p_i.html#a806a8a77ab11c714b769a754501c6062',1,'_ARM_DRIVER_SPI::GetCapabilities()']]],
+  ['getdatacount',['GetDataCount',['../struct___a_r_m___d_r_i_v_e_r___i2_c.html#a1851018b9ab080689af2d208558f9cea',1,'_ARM_DRIVER_I2C::GetDataCount()'],['../struct___a_r_m___d_r_i_v_e_r___s_p_i.html#af638292f6b64604a4873594a1fec0e9d',1,'_ARM_DRIVER_SPI::GetDataCount()']]],
+  ['getstatus',['GetStatus',['../struct___a_r_m___d_r_i_v_e_r___i2_c.html#a55ee1730ea2897c527b7202dd957e66f',1,'_ARM_DRIVER_I2C::GetStatus()'],['../struct___a_r_m___d_r_i_v_e_r___s_p_i.html#aeac876fc25695e42dc475aeadb7f814e',1,'_ARM_DRIVER_SPI::GetStatus()']]],
+  ['getversion',['GetVersion',['../struct___a_r_m___d_r_i_v_e_r___i2_c.html#a30afd9cb3113c037b5f1926f5ef93b59',1,'_ARM_DRIVER_I2C::GetVersion()'],['../struct___a_r_m___d_r_i_v_e_r___s_p_i.html#a30afd9cb3113c037b5f1926f5ef93b59',1,'_ARM_DRIVER_SPI::GetVersion()']]],
+  ['glitchfilterwidth',['glitchFilterWidth',['../struct__i2c__master__config.html#a0ec674bca5cb7bb8a6c51a44a5fc4314',1,'_i2c_master_config']]],
+  ['gpchr',['GPCHR',['../struct_p_o_r_t___type.html#abc885669f9579a0514a37a62fc070ec7',1,'PORT_Type']]],
+  ['gpclr',['GPCLR',['../struct_p_o_r_t___type.html#a7ca65d71461aa5e76eb2266ab7ccd0cf',1,'PORT_Type']]],
+  ['gpioconfig',['gpioConfig',['../structsf__drv__data__t.html#add32ea9a60dd3cf56bce44e4bb31782d',1,'sf_drv_data_t']]],
+  ['gpioinstance',['gpioInstance',['../structsf__gpio__sel__t.html#a92ec1b839cc60a854da420c83ba78aa1',1,'sf_gpio_sel_t']]],
+  ['gpiopinnumber',['gpioPinNumber',['../structsf__gpio__sel__t.html#a6ab60439fc8e4e0575afdd2cf2bb9670',1,'sf_gpio_sel_t']]],
+  ['gtbenabled',['gtbEnabled',['../group__globals__group.html#gadc7a8cd026c457aa793b22295fef7373',1,'tmr_aml_config_t']]]
+];

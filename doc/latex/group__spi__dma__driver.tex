@@ -1,0 +1,153 @@
+\hypertarget{group__spi__dma__driver}{}\section{Spi\+\_\+dma\+\_\+driver}
+\label{group__spi__dma__driver}\index{Spi\_dma\_driver@{Spi\_dma\_driver}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__spi__dma__handle}{\+\_\+spi\+\_\+dma\+\_\+handle}}
+\begin{DoxyCompactList}\small\item\em S\+PI D\+MA transfer handle, users should not touch the content of the handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__spi__dma__driver_ga82061a780c6c1eba4b269c70d15dcff4}\label{group__spi__dma__driver_ga82061a780c6c1eba4b269c70d15dcff4}} 
+typedef struct \mbox{\hyperlink{struct__spi__dma__handle}{\+\_\+spi\+\_\+dma\+\_\+handle}} {\bfseries spi\+\_\+dma\+\_\+handle\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__spi__dma__driver_gacbd157eee3bc09fe3156002bf242d15f}\label{group__spi__dma__driver_gacbd157eee3bc09fe3156002bf242d15f}} 
+typedef void($\ast$ \mbox{\hyperlink{group__spi__dma__driver_gacbd157eee3bc09fe3156002bf242d15f}{spi\+\_\+dma\+\_\+callback\+\_\+t}}) (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__dma__handle}{spi\+\_\+dma\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} status, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em S\+PI D\+MA callback called at the end of transfer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__spi__dma__driver_gab72873a3a11fc293023558be553de43c}\label{group__spi__dma__driver_gab72873a3a11fc293023558be553de43c}} 
+\#define \mbox{\hyperlink{group__spi__dma__driver_gab72873a3a11fc293023558be553de43c}{F\+S\+L\+\_\+\+S\+P\+I\+\_\+\+D\+M\+A\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 0, 4))
+\begin{DoxyCompactList}\small\item\em S\+PI D\+MA driver version 2.\+0.\+4. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{D\+MA Transactional}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__spi__dma__driver_ga5e1c842943c46c7daf3d6ecd99fe8681}{S\+P\+I\+\_\+\+Master\+Transfer\+Create\+Handle\+D\+MA}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__dma__handle}{spi\+\_\+dma\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__spi__dma__driver_gacbd157eee3bc09fe3156002bf242d15f}{spi\+\_\+dma\+\_\+callback\+\_\+t}} callback, void $\ast$user\+Data, \mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$tx\+Handle, \mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$rx\+Handle)
+\begin{DoxyCompactList}\small\item\em Initialize the S\+PI master D\+MA handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__spi__dma__driver_ga2bcf43f1d6908810b6b41d2d87bda3a9}{S\+P\+I\+\_\+\+Master\+Transfer\+D\+MA}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__dma__handle}{spi\+\_\+dma\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__spi__driver_ga59314d5596f240cfbe8b9466bd99ed3f}{spi\+\_\+transfer\+\_\+t}} $\ast$xfer)
+\begin{DoxyCompactList}\small\item\em Perform a non-\/blocking S\+PI transfer using D\+MA. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__dma__driver_gac5f2aabca472a57709db2ef153e031c8}{S\+P\+I\+\_\+\+Master\+Transfer\+Abort\+D\+MA}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__dma__handle}{spi\+\_\+dma\+\_\+handle\+\_\+t}} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Abort a S\+PI transfer using D\+MA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__spi__dma__driver_ga642d1fe963b7f1c28e5d8f4dd5b92861}{S\+P\+I\+\_\+\+Master\+Transfer\+Get\+Count\+D\+MA}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__dma__handle}{spi\+\_\+dma\+\_\+handle\+\_\+t}} $\ast$handle, size\+\_\+t $\ast$count)
+\begin{DoxyCompactList}\small\item\em Get the transferred bytes for S\+PI slave D\+MA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__spi__dma__driver_gac5f2aabca472a57709db2ef153e031c8}\label{group__spi__dma__driver_gac5f2aabca472a57709db2ef153e031c8}} 
+\index{Spi\_dma\_driver@{Spi\_dma\_driver}!SPI\_MasterTransferAbortDMA@{SPI\_MasterTransferAbortDMA}}
+\index{SPI\_MasterTransferAbortDMA@{SPI\_MasterTransferAbortDMA}!Spi\_dma\_driver@{Spi\_dma\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterTransferAbortDMA()}{SPI\_MasterTransferAbortDMA()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Master\+Transfer\+Abort\+D\+MA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{struct__spi__dma__handle}{spi\+\_\+dma\+\_\+handle\+\_\+t}} $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Abort a S\+PI transfer using D\+MA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & S\+PI D\+MA handle pointer.\\
+\hline
+\end{DoxyParams}
+brief Abort a S\+PI transfer using D\+MA.
+
+param base S\+PI peripheral base address. param handle S\+PI D\+MA handle pointer. \mbox{\Hypertarget{group__spi__dma__driver_ga5e1c842943c46c7daf3d6ecd99fe8681}\label{group__spi__dma__driver_ga5e1c842943c46c7daf3d6ecd99fe8681}} 
+\index{Spi\_dma\_driver@{Spi\_dma\_driver}!SPI\_MasterTransferCreateHandleDMA@{SPI\_MasterTransferCreateHandleDMA}}
+\index{SPI\_MasterTransferCreateHandleDMA@{SPI\_MasterTransferCreateHandleDMA}!Spi\_dma\_driver@{Spi\_dma\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterTransferCreateHandleDMA()}{SPI\_MasterTransferCreateHandleDMA()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Master\+Transfer\+Create\+Handle\+D\+MA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{struct__spi__dma__handle}{spi\+\_\+dma\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{\mbox{\hyperlink{group__spi__dma__driver_gacbd157eee3bc09fe3156002bf242d15f}{spi\+\_\+dma\+\_\+callback\+\_\+t}}}]{callback,  }\item[{void $\ast$}]{user\+Data,  }\item[{\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$}]{tx\+Handle,  }\item[{\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$}]{rx\+Handle }\end{DoxyParamCaption})}
+
+
+
+Initialize the S\+PI master D\+MA handle. 
+
+This function initializes the S\+PI master D\+MA handle which can be used for other S\+PI master transactional A\+P\+Is. Usually, for a specified S\+PI instance, user need only call this A\+PI once to get the initialized handle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & S\+PI handle pointer. \\
+\hline
+{\em callback} & User callback function called at the end of a transfer. \\
+\hline
+{\em user\+Data} & User data for callback. \\
+\hline
+{\em tx\+Handle} & D\+MA handle pointer for S\+PI Tx, the handle shall be static allocated by users. \\
+\hline
+{\em rx\+Handle} & D\+MA handle pointer for S\+PI Rx, the handle shall be static allocated by users.\\
+\hline
+\end{DoxyParams}
+brief Initialize the S\+PI master D\+MA handle.
+
+This function initializes the S\+PI master D\+MA handle which can be used for other S\+PI master transactional A\+P\+Is. Usually, for a specified S\+PI instance, user need only call this A\+PI once to get the initialized handle.
+
+param base S\+PI peripheral base address. param handle S\+PI handle pointer. param callback User callback function called at the end of a transfer. param user\+Data User data for callback. param tx\+Handle D\+MA handle pointer for S\+PI Tx, the handle shall be static allocated by users. param rx\+Handle D\+MA handle pointer for S\+PI Rx, the handle shall be static allocated by users. \mbox{\Hypertarget{group__spi__dma__driver_ga2bcf43f1d6908810b6b41d2d87bda3a9}\label{group__spi__dma__driver_ga2bcf43f1d6908810b6b41d2d87bda3a9}} 
+\index{Spi\_dma\_driver@{Spi\_dma\_driver}!SPI\_MasterTransferDMA@{SPI\_MasterTransferDMA}}
+\index{SPI\_MasterTransferDMA@{SPI\_MasterTransferDMA}!Spi\_dma\_driver@{Spi\_dma\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterTransferDMA()}{SPI\_MasterTransferDMA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+P\+I\+\_\+\+Master\+Transfer\+D\+MA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{struct__spi__dma__handle}{spi\+\_\+dma\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{\mbox{\hyperlink{group__spi__driver_ga59314d5596f240cfbe8b9466bd99ed3f}{spi\+\_\+transfer\+\_\+t}} $\ast$}]{xfer }\end{DoxyParamCaption})}
+
+
+
+Perform a non-\/blocking S\+PI transfer using D\+MA. 
+
+\begin{DoxyNote}{Note}
+This interface returned immediately after transfer initiates, users should call S\+P\+I\+\_\+\+Get\+Transfer\+Status to poll the transfer status to check whether S\+PI transfer finished.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & S\+PI D\+MA handle pointer. \\
+\hline
+{\em xfer} & Pointer to dma transfer structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully start a transfer. \\
+\hline
+{\em k\+Status\+\_\+\+Invalid\+Argument} & Input argument is invalid. \\
+\hline
+{\em k\+Status\+\_\+\+S\+P\+I\+\_\+\+Busy} & S\+PI is not idle, is running another transfer.\\
+\hline
+\end{DoxyRetVals}
+brief Perform a non-\/blocking S\+PI transfer using D\+MA.
+
+note This interface returned immediately after transfer initiates, users should call S\+P\+I\+\_\+\+Get\+Transfer\+Status to poll the transfer status to check whether S\+PI transfer finished.
+
+param base S\+PI peripheral base address. param handle S\+PI D\+MA handle pointer. param xfer Pointer to dma transfer structure. retval k\+Status\+\_\+\+Success Successfully start a transfer. retval k\+Status\+\_\+\+Invalid\+Argument Input argument is invalid. retval k\+Status\+\_\+\+S\+P\+I\+\_\+\+Busy S\+PI is not idle, is running another transfer. \mbox{\Hypertarget{group__spi__dma__driver_ga642d1fe963b7f1c28e5d8f4dd5b92861}\label{group__spi__dma__driver_ga642d1fe963b7f1c28e5d8f4dd5b92861}} 
+\index{Spi\_dma\_driver@{Spi\_dma\_driver}!SPI\_MasterTransferGetCountDMA@{SPI\_MasterTransferGetCountDMA}}
+\index{SPI\_MasterTransferGetCountDMA@{SPI\_MasterTransferGetCountDMA}!Spi\_dma\_driver@{Spi\_dma\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterTransferGetCountDMA()}{SPI\_MasterTransferGetCountDMA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+P\+I\+\_\+\+Master\+Transfer\+Get\+Count\+D\+MA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{struct__spi__dma__handle}{spi\+\_\+dma\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{size\+\_\+t $\ast$}]{count }\end{DoxyParamCaption})}
+
+
+
+Get the transferred bytes for S\+PI slave D\+MA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & S\+PI D\+MA handle pointer. \\
+\hline
+{\em count} & Transferred bytes. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+S\+P\+I\+\_\+\+Success} & Succeed get the transfer count. \\
+\hline
+{\em k\+Status\+\_\+\+No\+Transfer\+In\+Progress} & There is not a non-\/blocking transaction currently in progress.\\
+\hline
+\end{DoxyRetVals}
+brief Get the transferred bytes for S\+PI slave D\+MA.
+
+param base S\+PI peripheral base address. param handle S\+PI D\+MA handle pointer. param count Transferred bytes. retval k\+Status\+\_\+\+S\+P\+I\+\_\+\+Success Succeed get the transfer count. retval k\+Status\+\_\+\+No\+Transfer\+In\+Progress There is not a non-\/blocking transaction currently in progress. 

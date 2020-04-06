@@ -1,0 +1,51 @@
+\hypertarget{struct__ftfx__ifr__descriptor}{}\section{\+\_\+ftfx\+\_\+ifr\+\_\+descriptor Struct Reference}
+\label{struct__ftfx__ifr__descriptor}\index{\_ftfx\_ifr\_descriptor@{\_ftfx\_ifr\_descriptor}}
+
+
+Flash I\+FR memory descriptor.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+ftfx\+\_\+controller.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t {\bfseries has4ByteIdxSupport}: 1\\
+\>uint32\_t {\bfseries has8ByteIdxSupport}: 1\\
+\>uint32\_t {\bfseries \_\_pad0\_\_}: 30\\
+\} {\bfseries feature}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t {\bfseries versionIdStart}\\
+\>uint8\_t {\bfseries versionIdSize}\\
+\>uint16\_t {\bfseries ifrMemSize}\\
+\>uint32\_t {\bfseries pflashIfrStart}\\
+\>uint32\_t {\bfseries dflashIfrStart}\\
+\>uint32\_t {\bfseries pflashSwapIfrStart}\\
+\} {\bfseries resRange}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t {\bfseries mix8byteIdxStart}\\
+\>uint16\_t {\bfseries mix8byteIdxEnd}\\
+\} {\bfseries idxInfo}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Flash I\+FR memory descriptor. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+ftfx\+\_\+controller.\+h\end{DoxyCompactItemize}

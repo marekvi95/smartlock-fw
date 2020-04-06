@@ -1,0 +1,64 @@
+\hypertarget{group__dmamux}{}\section{Dmamux}
+\label{group__dmamux}\index{Dmamux@{Dmamux}}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__dmamux_ga52b927e4f978ddf42faf0acf6de3df57}\label{group__dmamux_ga52b927e4f978ddf42faf0acf6de3df57}} 
+\#define \mbox{\hyperlink{group__dmamux_ga52b927e4f978ddf42faf0acf6de3df57}{F\+S\+L\+\_\+\+D\+M\+A\+M\+U\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 0, 3))
+\begin{DoxyCompactList}\small\item\em D\+M\+A\+M\+UX driver version 2.\+0.\+3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{D\+M\+A\+M\+UX Initialization and de-\/initialization}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__dmamux_ga850545ac61a004df8ca312db2ca9db73}{D\+M\+A\+M\+U\+X\+\_\+\+Init}} (\mbox{\hyperlink{struct_d_m_a_m_u_x___type}{D\+M\+A\+M\+U\+X\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Initializes the D\+M\+A\+M\+UX peripheral. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__dmamux_gab663257d094b9b7b6fa1b894fbf8000b}{D\+M\+A\+M\+U\+X\+\_\+\+Deinit}} (\mbox{\hyperlink{struct_d_m_a_m_u_x___type}{D\+M\+A\+M\+U\+X\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Deinitializes the D\+M\+A\+M\+UX peripheral. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__dmamux_gab663257d094b9b7b6fa1b894fbf8000b}\label{group__dmamux_gab663257d094b9b7b6fa1b894fbf8000b}} 
+\index{Dmamux@{Dmamux}!DMAMUX\_Deinit@{DMAMUX\_Deinit}}
+\index{DMAMUX\_Deinit@{DMAMUX\_Deinit}!Dmamux@{Dmamux}}
+\subsubsection{\texorpdfstring{DMAMUX\_Deinit()}{DMAMUX\_Deinit()}}
+{\footnotesize\ttfamily void D\+M\+A\+M\+U\+X\+\_\+\+Deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_m_a_m_u_x___type}{D\+M\+A\+M\+U\+X\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Deinitializes the D\+M\+A\+M\+UX peripheral. 
+
+This function gates the D\+M\+A\+M\+UX clock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & D\+M\+A\+M\+UX peripheral base address.\\
+\hline
+\end{DoxyParams}
+brief Deinitializes the D\+M\+A\+M\+UX peripheral.
+
+This function gates the D\+M\+A\+M\+UX clock.
+
+param base D\+M\+A\+M\+UX peripheral base address. \mbox{\Hypertarget{group__dmamux_ga850545ac61a004df8ca312db2ca9db73}\label{group__dmamux_ga850545ac61a004df8ca312db2ca9db73}} 
+\index{Dmamux@{Dmamux}!DMAMUX\_Init@{DMAMUX\_Init}}
+\index{DMAMUX\_Init@{DMAMUX\_Init}!Dmamux@{Dmamux}}
+\subsubsection{\texorpdfstring{DMAMUX\_Init()}{DMAMUX\_Init()}}
+{\footnotesize\ttfamily void D\+M\+A\+M\+U\+X\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_m_a_m_u_x___type}{D\+M\+A\+M\+U\+X\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Initializes the D\+M\+A\+M\+UX peripheral. 
+
+This function ungates the D\+M\+A\+M\+UX clock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & D\+M\+A\+M\+UX peripheral base address.\\
+\hline
+\end{DoxyParams}
+brief Initializes the D\+M\+A\+M\+UX peripheral.
+
+This function ungates the D\+M\+A\+M\+UX clock.
+
+param base D\+M\+A\+M\+UX peripheral base address. 

@@ -1,0 +1,89 @@
+\hypertarget{struct__lpuart__config}{}\section{\+\_\+lpuart\+\_\+config Struct Reference}
+\label{struct__lpuart__config}\index{\_lpuart\_config@{\_lpuart\_config}}
+
+
+L\+P\+U\+A\+RT configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+lpuart.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__lpuart__config_aa5df547b4cb95d3c959373cf6fa672b5}{baud\+Rate\+\_\+\+Bps}}
+\item 
+\mbox{\hyperlink{group__lpuart__driver_gab5b7fa64ce57a2f68327e745f4a3e0b2}{lpuart\+\_\+parity\+\_\+mode\+\_\+t}} \mbox{\hyperlink{struct__lpuart__config_a12a3b03bf71728c9d45a5c5c59bdcf94}{parity\+Mode}}
+\item 
+\mbox{\hyperlink{group__lpuart__driver_gad36b5360ffc95732471dab9bd8f74c3b}{lpuart\+\_\+data\+\_\+bits\+\_\+t}} \mbox{\hyperlink{struct__lpuart__config_a510ee8598e5be024a8b74881f3d3ba3d}{data\+Bits\+Count}}
+\item 
+bool \mbox{\hyperlink{struct__lpuart__config_af9f7a36013824eebc7fc6c7d646f42ce}{is\+Msb}}
+\item 
+\mbox{\hyperlink{group__lpuart__driver_gad2f95b94d8a055a75e2099e11df4aece}{lpuart\+\_\+idle\+\_\+type\+\_\+select\+\_\+t}} \mbox{\hyperlink{struct__lpuart__config_a71988980c7d5972f2ff951ef1e37eb78}{rx\+Idle\+Type}}
+\item 
+\mbox{\hyperlink{group__lpuart__driver_ga48780347b56ffcf164d92df6957c8ab4}{lpuart\+\_\+idle\+\_\+config\+\_\+t}} \mbox{\hyperlink{struct__lpuart__config_a953abaccde778e491905c7d37a3e1bed}{rx\+Idle\+Config}}
+\item 
+bool \mbox{\hyperlink{struct__lpuart__config_a221caf5c134ec8fcee82b8505ee75731}{enable\+Tx}}
+\item 
+bool \mbox{\hyperlink{struct__lpuart__config_ac6fe4a8b966fb5611f77358b819671b2}{enable\+Rx}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+L\+P\+U\+A\+RT configuration structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__lpuart__config_aa5df547b4cb95d3c959373cf6fa672b5}\label{struct__lpuart__config_aa5df547b4cb95d3c959373cf6fa672b5}} 
+\index{\_lpuart\_config@{\_lpuart\_config}!baudRate\_Bps@{baudRate\_Bps}}
+\index{baudRate\_Bps@{baudRate\_Bps}!\_lpuart\_config@{\_lpuart\_config}}
+\subsubsection{\texorpdfstring{baudRate\_Bps}{baudRate\_Bps}}
+{\footnotesize\ttfamily uint32\+\_\+t baud\+Rate\+\_\+\+Bps}
+
+L\+P\+U\+A\+RT baud rate \mbox{\Hypertarget{struct__lpuart__config_a510ee8598e5be024a8b74881f3d3ba3d}\label{struct__lpuart__config_a510ee8598e5be024a8b74881f3d3ba3d}} 
+\index{\_lpuart\_config@{\_lpuart\_config}!dataBitsCount@{dataBitsCount}}
+\index{dataBitsCount@{dataBitsCount}!\_lpuart\_config@{\_lpuart\_config}}
+\subsubsection{\texorpdfstring{dataBitsCount}{dataBitsCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__lpuart__driver_gad36b5360ffc95732471dab9bd8f74c3b}{lpuart\+\_\+data\+\_\+bits\+\_\+t}} data\+Bits\+Count}
+
+Data bits count, eight (default), seven \mbox{\Hypertarget{struct__lpuart__config_ac6fe4a8b966fb5611f77358b819671b2}\label{struct__lpuart__config_ac6fe4a8b966fb5611f77358b819671b2}} 
+\index{\_lpuart\_config@{\_lpuart\_config}!enableRx@{enableRx}}
+\index{enableRx@{enableRx}!\_lpuart\_config@{\_lpuart\_config}}
+\subsubsection{\texorpdfstring{enableRx}{enableRx}}
+{\footnotesize\ttfamily bool enable\+Rx}
+
+Enable RX \mbox{\Hypertarget{struct__lpuart__config_a221caf5c134ec8fcee82b8505ee75731}\label{struct__lpuart__config_a221caf5c134ec8fcee82b8505ee75731}} 
+\index{\_lpuart\_config@{\_lpuart\_config}!enableTx@{enableTx}}
+\index{enableTx@{enableTx}!\_lpuart\_config@{\_lpuart\_config}}
+\subsubsection{\texorpdfstring{enableTx}{enableTx}}
+{\footnotesize\ttfamily bool enable\+Tx}
+
+Enable TX \mbox{\Hypertarget{struct__lpuart__config_af9f7a36013824eebc7fc6c7d646f42ce}\label{struct__lpuart__config_af9f7a36013824eebc7fc6c7d646f42ce}} 
+\index{\_lpuart\_config@{\_lpuart\_config}!isMsb@{isMsb}}
+\index{isMsb@{isMsb}!\_lpuart\_config@{\_lpuart\_config}}
+\subsubsection{\texorpdfstring{isMsb}{isMsb}}
+{\footnotesize\ttfamily bool is\+Msb}
+
+Data bits order, L\+SB (default), M\+SB \mbox{\Hypertarget{struct__lpuart__config_a12a3b03bf71728c9d45a5c5c59bdcf94}\label{struct__lpuart__config_a12a3b03bf71728c9d45a5c5c59bdcf94}} 
+\index{\_lpuart\_config@{\_lpuart\_config}!parityMode@{parityMode}}
+\index{parityMode@{parityMode}!\_lpuart\_config@{\_lpuart\_config}}
+\subsubsection{\texorpdfstring{parityMode}{parityMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__lpuart__driver_gab5b7fa64ce57a2f68327e745f4a3e0b2}{lpuart\+\_\+parity\+\_\+mode\+\_\+t}} parity\+Mode}
+
+Parity mode, disabled (default), even, odd \mbox{\Hypertarget{struct__lpuart__config_a953abaccde778e491905c7d37a3e1bed}\label{struct__lpuart__config_a953abaccde778e491905c7d37a3e1bed}} 
+\index{\_lpuart\_config@{\_lpuart\_config}!rxIdleConfig@{rxIdleConfig}}
+\index{rxIdleConfig@{rxIdleConfig}!\_lpuart\_config@{\_lpuart\_config}}
+\subsubsection{\texorpdfstring{rxIdleConfig}{rxIdleConfig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__lpuart__driver_ga48780347b56ffcf164d92df6957c8ab4}{lpuart\+\_\+idle\+\_\+config\+\_\+t}} rx\+Idle\+Config}
+
+RX I\+D\+LE configuration. \mbox{\Hypertarget{struct__lpuart__config_a71988980c7d5972f2ff951ef1e37eb78}\label{struct__lpuart__config_a71988980c7d5972f2ff951ef1e37eb78}} 
+\index{\_lpuart\_config@{\_lpuart\_config}!rxIdleType@{rxIdleType}}
+\index{rxIdleType@{rxIdleType}!\_lpuart\_config@{\_lpuart\_config}}
+\subsubsection{\texorpdfstring{rxIdleType}{rxIdleType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__lpuart__driver_gad2f95b94d8a055a75e2099e11df4aece}{lpuart\+\_\+idle\+\_\+type\+\_\+select\+\_\+t}} rx\+Idle\+Type}
+
+RX I\+D\+LE type. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+lpuart.\+h\end{DoxyCompactItemize}

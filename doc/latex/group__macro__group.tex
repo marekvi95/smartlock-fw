@@ -1,0 +1,82 @@
+\hypertarget{group__macro__group}{}\section{Macro\+\_\+group}
+\label{group__macro__group}\index{Macro\_group@{Macro\_group}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__macro__group_ga5b312ec7a12c5405c055344d00b90440}\label{group__macro__group_ga5b312ec7a12c5405c055344d00b90440}} 
+\#define \mbox{\hyperlink{group__macro__group_ga5b312ec7a12c5405c055344d00b90440}{S\+D\+K\+\_\+\+S32}}~0\+U              /$\ast$! S32 S\+D\+K 0.\+8.\+6 E\+A\+R. $\ast$/
+\begin{DoxyCompactList}\small\item\em S\+DK versions supported by A\+ML layer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__macro__group_gaa450acefc0219b31ab56b4290da03e77}\label{group__macro__group_gaa450acefc0219b31ab56b4290da03e77}} 
+\#define {\bfseries S\+D\+K\+\_\+\+K\+S\+DK}~1\+U              /$\ast$! M\+C\+U\+Xpresso S\+D\+K 2.\+3. $\ast$/
+\item 
+\#define \mbox{\hyperlink{group__macro__group_ga320c0ce8fc9d4967696a15bfe0c17129}{S\+D\+K\+\_\+\+V\+E\+R\+S\+I\+ON}}~S\+D\+K\+\_\+\+K\+S\+DK
+\begin{DoxyCompactList}\small\item\em Selection of S\+DK version you are using (S32 S\+DK or K\+S\+DK). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__macro__group_ga1e7b240858ecd40d070e5db823f56502}\label{group__macro__group_ga1e7b240858ecd40d070e5db823f56502}} 
+\#define \mbox{\hyperlink{group__macro__group_ga1e7b240858ecd40d070e5db823f56502}{A\+M\+L\+\_\+\+U\+N\+U\+S\+ED}}(x)~(void)(x)
+\begin{DoxyCompactList}\small\item\em Unused variable. This macro is used when some variable is not used in S\+DK. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__macro__group_gacf378012c67f22a3ce3f8ca5521dd400}{A\+M\+L\+\_\+\+A\+S\+S\+E\+RT}}(condition)~(assert(condition))
+\begin{DoxyCompactList}\small\item\em Assertion settings. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__macro__group_ga8e71a8b01608ee3dcdca398b049e6fc6}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+T\+I\+M\+E\+O\+UT}}~1000U
+\item 
+\mbox{\Hypertarget{group__macro__group_ga84b004aa110117194411b5c97219f073}\label{group__macro__group_ga84b004aa110117194411b5c97219f073}} 
+\#define {\bfseries W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+R\+EQ}~(\mbox{\hyperlink{group__function__group_gac2d5cb00bd6e585725d5b1e8f7383302}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Get\+System\+Clock\+Freq}}())
+\item 
+\#define \mbox{\hyperlink{group__macro__group_ga16504c90d2a4d3b38e4a1c2e6d7836bf}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+G\+E\+T\+\_\+\+C\+Y\+C\+L\+E\+S\+\_\+\+F\+O\+R\+\_\+\+MS}}(ms,  freq)~(((freq) / 1000\+U) $\ast$ (ms))
+\item 
+\#define \mbox{\hyperlink{group__macro__group_gad49b8fcd743fd4f170294d409a8acdee}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+G\+E\+T\+\_\+\+C\+Y\+C\+L\+E\+S\+\_\+\+F\+O\+R\+\_\+\+US}}(us,  freq)~(((freq) / 1000\+U) $\ast$ (us) / 1000\+U)
+\item 
+\#define \mbox{\hyperlink{group__macro__group_ga316e8d701e2fd6dbd036f635d15ac309}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+G\+E\+T\+\_\+\+C\+Y\+C\+L\+E\+S\+\_\+\+F\+O\+R\+\_\+\+NS}}(ns,  freq)~(((freq) / 1000000\+U) $\ast$ (ns) / 1000\+U)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__macro__group_gacf378012c67f22a3ce3f8ca5521dd400}\label{group__macro__group_gacf378012c67f22a3ce3f8ca5521dd400}} 
+\index{Macro\_group@{Macro\_group}!AML\_ASSERT@{AML\_ASSERT}}
+\index{AML\_ASSERT@{AML\_ASSERT}!Macro\_group@{Macro\_group}}
+\subsubsection{\texorpdfstring{AML\_ASSERT}{AML\_ASSERT}}
+{\footnotesize\ttfamily \#define A\+M\+L\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})~(assert(condition))}
+
+
+
+Assertion settings. 
+
+$<$ Uncomment this macro to disable assertions in K\+S\+DK.
+
+Assert function for K\+S\+DK. \mbox{\Hypertarget{group__macro__group_ga320c0ce8fc9d4967696a15bfe0c17129}\label{group__macro__group_ga320c0ce8fc9d4967696a15bfe0c17129}} 
+\index{Macro\_group@{Macro\_group}!SDK\_VERSION@{SDK\_VERSION}}
+\index{SDK\_VERSION@{SDK\_VERSION}!Macro\_group@{Macro\_group}}
+\subsubsection{\texorpdfstring{SDK\_VERSION}{SDK\_VERSION}}
+{\footnotesize\ttfamily \#define S\+D\+K\+\_\+\+V\+E\+R\+S\+I\+ON~S\+D\+K\+\_\+\+K\+S\+DK}
+
+
+
+Selection of S\+DK version you are using (S32 S\+DK or K\+S\+DK). 
+
+Use macros defined above (S\+D\+K\+\_\+\+S32 or S\+D\+K\+\_\+\+K\+S\+DK). \mbox{\Hypertarget{group__macro__group_ga8e71a8b01608ee3dcdca398b049e6fc6}\label{group__macro__group_ga8e71a8b01608ee3dcdca398b049e6fc6}} 
+\index{Macro\_group@{Macro\_group}!SPI\_AML\_TIMEOUT@{SPI\_AML\_TIMEOUT}}
+\index{SPI\_AML\_TIMEOUT@{SPI\_AML\_TIMEOUT}!Macro\_group@{Macro\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_TIMEOUT}{SPI\_AML\_TIMEOUT}}
+{\footnotesize\ttfamily \#define S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+T\+I\+M\+E\+O\+UT~1000U}
+
+Timeout for blocking transfer. \mbox{\Hypertarget{group__macro__group_ga16504c90d2a4d3b38e4a1c2e6d7836bf}\label{group__macro__group_ga16504c90d2a4d3b38e4a1c2e6d7836bf}} 
+\index{Macro\_group@{Macro\_group}!WAIT\_AML\_GET\_CYCLES\_FOR\_MS@{WAIT\_AML\_GET\_CYCLES\_FOR\_MS}}
+\index{WAIT\_AML\_GET\_CYCLES\_FOR\_MS@{WAIT\_AML\_GET\_CYCLES\_FOR\_MS}!Macro\_group@{Macro\_group}}
+\subsubsection{\texorpdfstring{WAIT\_AML\_GET\_CYCLES\_FOR\_MS}{WAIT\_AML\_GET\_CYCLES\_FOR\_MS}}
+{\footnotesize\ttfamily \#define W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+G\+E\+T\+\_\+\+C\+Y\+C\+L\+E\+S\+\_\+\+F\+O\+R\+\_\+\+MS(\begin{DoxyParamCaption}\item[{}]{ms,  }\item[{}]{freq }\end{DoxyParamCaption})~(((freq) / 1000\+U) $\ast$ (ms))}
+
+Gets needed cycles for specified delay in milliseconds, calculation is based on core clock frequency. \mbox{\Hypertarget{group__macro__group_ga316e8d701e2fd6dbd036f635d15ac309}\label{group__macro__group_ga316e8d701e2fd6dbd036f635d15ac309}} 
+\index{Macro\_group@{Macro\_group}!WAIT\_AML\_GET\_CYCLES\_FOR\_NS@{WAIT\_AML\_GET\_CYCLES\_FOR\_NS}}
+\index{WAIT\_AML\_GET\_CYCLES\_FOR\_NS@{WAIT\_AML\_GET\_CYCLES\_FOR\_NS}!Macro\_group@{Macro\_group}}
+\subsubsection{\texorpdfstring{WAIT\_AML\_GET\_CYCLES\_FOR\_NS}{WAIT\_AML\_GET\_CYCLES\_FOR\_NS}}
+{\footnotesize\ttfamily \#define W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+G\+E\+T\+\_\+\+C\+Y\+C\+L\+E\+S\+\_\+\+F\+O\+R\+\_\+\+NS(\begin{DoxyParamCaption}\item[{}]{ns,  }\item[{}]{freq }\end{DoxyParamCaption})~(((freq) / 1000000\+U) $\ast$ (ns) / 1000\+U)}
+
+Gets needed cycles for specified delay in nanoseconds, calculation is based on core clock frequency. \mbox{\Hypertarget{group__macro__group_gad49b8fcd743fd4f170294d409a8acdee}\label{group__macro__group_gad49b8fcd743fd4f170294d409a8acdee}} 
+\index{Macro\_group@{Macro\_group}!WAIT\_AML\_GET\_CYCLES\_FOR\_US@{WAIT\_AML\_GET\_CYCLES\_FOR\_US}}
+\index{WAIT\_AML\_GET\_CYCLES\_FOR\_US@{WAIT\_AML\_GET\_CYCLES\_FOR\_US}!Macro\_group@{Macro\_group}}
+\subsubsection{\texorpdfstring{WAIT\_AML\_GET\_CYCLES\_FOR\_US}{WAIT\_AML\_GET\_CYCLES\_FOR\_US}}
+{\footnotesize\ttfamily \#define W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+G\+E\+T\+\_\+\+C\+Y\+C\+L\+E\+S\+\_\+\+F\+O\+R\+\_\+\+US(\begin{DoxyParamCaption}\item[{}]{us,  }\item[{}]{freq }\end{DoxyParamCaption})~(((freq) / 1000\+U) $\ast$ (us) / 1000\+U)}
+
+Gets needed cycles for specified delay in microseconds, calculation is based on core clock frequency. 

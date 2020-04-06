@@ -1,0 +1,195 @@
+\hypertarget{sf_8c}{}\section{sf/sf.c File Reference}
+\label{sf_8c}\index{sf/sf.c@{sf/sf.c}}
+{\ttfamily \#include \char`\"{}sf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spi\+\_\+aml/spi\+\_\+aml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gpio\+\_\+aml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wait\+\_\+aml/wait\+\_\+aml.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sf_8c_a6888d3ee749addb38fb1811873a1fd0f}{S\+F\+\_\+\+A\+C\+K\+\_\+\+N\+O\+T\+R\+A\+N\+S\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+US}}~5000000U
+\item 
+\#define \mbox{\hyperlink{sf_8c_ac265907852718477ed35c4abe27b9446}{S\+F\+\_\+\+A\+C\+K\+\_\+\+T\+R\+A\+N\+S\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+US}}~15000000U
+\item 
+\#define \mbox{\hyperlink{sf_8c_ae880bf5c9e1f23b2e38d5c7a68e9a584}{S\+F\+\_\+\+A\+C\+K\+\_\+\+T\+R\+A\+N\+S\+\_\+\+R\+E\+C\+V\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+US}}~60000000U
+\item 
+\#define \mbox{\hyperlink{sf_8c_a37888aca66928f6858a3d4eeb092b742}{S\+F\+\_\+\+A\+C\+K\+\_\+\+I\+N\+I\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+US}}~5000000U
+\item 
+\#define \mbox{\hyperlink{sf_8c_a07ae4dd50db1507cb4bd17da865c8dfd}{S\+F\+\_\+\+A\+C\+K\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+M\+A\+X\+\_\+\+US}}~100000000U
+\item 
+\#define \mbox{\hyperlink{sf_8c_a439103f9ad43e73838d13d339bbf9c8a}{S\+F\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+S\+T\+E\+P\+\_\+\+US}}~100U
+\item 
+\#define \mbox{\hyperlink{sf_8c_a4623312d4c711a155518a0bef4672de8}{S\+F\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+D\+L\+Y\+\_\+\+MS}}~100U
+\item 
+\#define \mbox{\hyperlink{sf_8c_ab3c5eabcda72b90257fd5cc48b500a5a}{S\+F\+\_\+\+E\+C\+H\+O\+\_\+\+P\+L\+D\+\_\+\+A\+R\+R\+AY}}~\{0x01\+U, 0x02\+U, 0x03\+U, 0x04\+U, 0x05\+U\}
+\item 
+\#define \mbox{\hyperlink{sf_8c_ac4a29458c7f99f989fb111f537976ec1}{S\+F\+\_\+\+H\+A\+S\+\_\+\+C\+M\+D\+\_\+\+P\+LD}}(cmd)
+\begin{DoxyCompactList}\small\item\em This macro returns true when an I-\/frame has payload (data except length and command code fields). Otherwise it returns false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gada7c9026ce05c5baaf767bfa10928039}{S\+F\+\_\+\+Init}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const \mbox{\hyperlink{structsf__user__config__t}{sf\+\_\+user\+\_\+config\+\_\+t}} $\ast$user\+Config)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+I\+G\+F\+OX driver based on user configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__sf__functions__group_gaeac5315858b24e339879e28d7578337d}{S\+F\+\_\+\+Get\+Default\+Config}} (\mbox{\hyperlink{structsf__user__config__t}{sf\+\_\+user\+\_\+config\+\_\+t}} $\ast$user\+Config)
+\begin{DoxyCompactList}\small\item\em Fills user configuration structure with default values, i.\+e. E\+T\+SI standard, 55.\+2 M\+Hz X\+T\+AL, 3 TX during Send\+Payload, 14 d\+Bm PA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9c767a31660b3d561fdba39a47903295}{S\+F\+\_\+\+Send\+Command}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}} cmd, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload, \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$recv\+Payload, uint8\+\_\+t recv\+Buffer\+Size)
+\begin{DoxyCompactList}\small\item\em This function sends a command to the device. This function waits for an acknowledgement (if any). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gafcfab93eda54d3831f57470780dae9dd}{S\+F\+\_\+\+Wake\+Up}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Wakeup\char`\"{} command to wake up the device from power down mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga1976f6e21d4d394239d20b241dbb2453}{S\+F\+\_\+\+Sleep}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function puts the device into power off mode with use of the \char`\"{}\+Send To Sleep\char`\"{} command. In this mode the device settings are reset to default values by the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac5651ed6f3c5cb0efc45ed5c15d7697c}{S\+F\+\_\+\+Set\+Ul\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function sets up-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga6652c5c69ff2e8687e5575ea84229c21}{S\+F\+\_\+\+Get\+Ul\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t $\ast$freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function gets up-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga44c782b6ce3a518584e00acb8a8957fd}{S\+F\+\_\+\+Send\+Payload}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Payload\char`\"{} command to the device. It sends user data to S\+I\+G\+F\+OX network. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga2aab15da7a9994b53fe66dfe5c8f85a5}{S\+F\+\_\+\+Send\+Bit}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t bit\+Val)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Bit\char`\"{} command, which transmits just one bit to the S\+I\+G\+F\+OX network. This is the shortest frame that S\+I\+G\+F\+OX library generates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gaf898f1fe312b1d8f9156b18249211b83}{S\+F\+\_\+\+Send\+Out\+Of\+Band}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Out of band\char`\"{} command, which transmits data to the S\+I\+G\+F\+OX network. Data is composed of information about the chip itself (Voltage, Temperature). This function should be called every 24 hours at least or never if an application has some energy critical constraints. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9489fa1c9163a0d028a508d81718274b}{S\+F\+\_\+\+Receive\+Message}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload, \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$recv\+Payload)
+\begin{DoxyCompactList}\small\item\em This function sends and receives a data from S\+I\+G\+F\+OX network with use of the \char`\"{}\+Receive Frame\char`\"{} command. It is available for O\+L2385 device only. Max. size of received data is defined by \mbox{\hyperlink{sf__ol23xx_8h_aca8e44f5d34123c5d83bafdf690358f7}{S\+F\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+R\+\_\+\+A\+C\+K\+\_\+\+P\+L\+D\+\_\+B}} (S\+I\+G\+F\+OX limitation). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gab933b60af5327c7f6289680308f94d5f}{S\+F\+\_\+\+Trigger\+Watchdog}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function resets the S\+I\+G\+F\+OX device with use of the \char`\"{}\+Trigger Watchdog\char`\"{} command. It does not handle watchdog. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac2350dad3fd06accd548ec1e4c761239}{S\+F\+\_\+\+Get\+Device\+Info}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{structsf__device__info__t}{sf\+\_\+device\+\_\+info\+\_\+t}} $\ast$dev\+Info)
+\begin{DoxyCompactList}\small\item\em This function reads device ID, P\+AC, S\+I\+G\+F\+OX library version and device version. It uses \char`\"{}\+Get info\char`\"{} and \char`\"{}\+Get Device Version\char`\"{} commands. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__sf__enum__group_ga9f14f69f90dfff97b98977db7a73ba68}{sf\+\_\+intern\+\_\+error\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga83b0684858db1e51ddd77c542db9570a}{S\+F\+\_\+\+Get\+Error\+Code}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function returns an error code received in a S\+PI frame from the S\+I\+G\+F\+OX device. The error code is updated every time an A\+CK S\+PI frame is received. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga52dd2f875d8870319466379dc564c6ea}{S\+F\+\_\+\+Test\+Spi\+Con}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool $\ast$success)
+\begin{DoxyCompactList}\small\item\em This function tests if the S\+PI bus is working. It uses the \char`\"{}\+Echo\char`\"{} command to send data (see \mbox{\hyperlink{sf_8c_ab3c5eabcda72b90257fd5cc48b500a5a}{S\+F\+\_\+\+E\+C\+H\+O\+\_\+\+P\+L\+D\+\_\+\+A\+R\+R\+AY}} macro in \mbox{\hyperlink{sf_8c}{sf.\+c}}) and checks if the device replies with the inverted payload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gafd1dfd2b45bdd9aea388af2cb4466395}{S\+F\+\_\+\+Test\+Device}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga5c889c0804ec8ccd3741803bd8b12d9c}{sf\+\_\+test\+\_\+mode\+\_\+t}} test\+Mode, uint8\+\_\+t mode\+Config)
+\begin{DoxyCompactList}\small\item\em This function executes a test of up-\/link and down-\/link connectivity using the \char`\"{}\+Send Test Mode\char`\"{} command. Returned status represents result of the test (success or fail), the user can obtain details using the S\+F\+\_\+\+Get\+Error\+Code function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad68e87458650f476db5069272bd80f30}{S\+F\+\_\+\+Generate\+Cont\+Wave}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool enable)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Continuous Wave\char`\"{} command, which can be used for testing. It generates a continuous transmission at last set frequency. The signal can be then checked using spectrum analyzer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga3e532d1631eda3198b1e517be7db5288}{S\+F\+\_\+\+Change\+Network\+Standard}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} standard\+Sel, uint8\+\_\+t tx\+Att\+Steps, \mbox{\hyperlink{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}{sf\+\_\+xtal\+\_\+type\+\_\+t}} xtal, \mbox{\hyperlink{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}{sf\+\_\+tx\+\_\+repeat\+\_\+t}} tx\+Repeat, \mbox{\hyperlink{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}{sf\+\_\+pa\+\_\+type\+\_\+t}} pa\+Type)
+\begin{DoxyCompactList}\small\item\em This function changes Sigfox networking parameters including up-\/link and down-\/link frequency and bit rate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga2901646dfa48cb95c2dca7f7459b64b0}{S\+F\+\_\+\+Switch\+To\+Private\+Key}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Switches to the private key provided by S\+I\+G\+F\+OX, the key is used for normal RF. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gacc6d9bcb60d775ccb2d3739b5d41eb96}{S\+F\+\_\+\+Switch\+To\+Public\+Key}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Switches to the public key provided by S\+I\+G\+F\+OX, it is used for protocol tests. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gaa6162b63ca5d9cc56c054ea2bddac1f2}{S\+F\+\_\+\+Transmit\+Zero\+Seq}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, int16\+\_\+t repetitions)
+\begin{DoxyCompactList}\small\item\em Sends modulated zeros at currently set frequency (P\+SK A\+SK zero sequence command). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga1ba2a22d2c43f1be64c8946e0f8e4d4f}{S\+F\+\_\+\+Transmit\+A\+A\+A\+A\+Seq}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, int16\+\_\+t repetitions)
+\begin{DoxyCompactList}\small\item\em Sends modulated AA at currently set frequency (P\+SK A\+SK A\+A\+AA sequence command). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga74dd3f84beaf121c2004bb457cdc88be}{S\+F\+\_\+\+Set\+Dl\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function sets down-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga63bcdd51a7da55f9e2f204d9d3a56d6b}{S\+F\+\_\+\+Get\+Dl\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t $\ast$freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function gets down-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga94d21504b43b2155491156bff061bf88}{S\+F\+\_\+\+Set\+F\+C\+C\+Macro\+Channel}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const uint32\+\_\+t fh\+Mask\mbox{[}$\,$\mbox{]}, uint8\+\_\+t default\+Ch\+No)
+\begin{DoxyCompactList}\small\item\em Sets the F\+CC Macro Channel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga06e1aa9eda09f899eb5af74991da9bf3}{S\+F\+\_\+\+Get\+F\+C\+C\+Macro\+Ch\+Usage}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t $\ast$channel\+Usage)
+\begin{DoxyCompactList}\small\item\em Gets the F\+CC Macro channel usage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga571dfb5605eba63dd2f275460c26a540}{S\+F\+\_\+\+Reset\+F\+C\+C\+Macro\+Channel}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Restores the default macro channel settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga16f222d9b0c5485b38eae13da3f5f854}{S\+F\+\_\+\+Calibrate\+Freq\+Static}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool sign\+Plus, uint32\+\_\+t drift\+Hz)
+\begin{DoxyCompactList}\small\item\em Calibrates TX frequency. The passed drift offset measured in Hz is added or subtracted to the LO when doing RF TX. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga43ad188a19bc8705116123d0dc16eda0}{S\+F\+\_\+\+Update\+Temp\+Freq\+Cal\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const uint8\+\_\+t drift\+Table\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Updates temperature frequency calibration table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad989de030050a84fb1c9e4e5e29e6173}{S\+F\+\_\+\+Read\+Temp\+Freq\+Cal\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t drift\+Table\+Res\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Reads temperature frequency calibration table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac8894d84b5416dd2c400507acd3553a1}{S\+F\+\_\+\+Set\+Default\+Temp\+Freq\+Cal\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Sets default temperature frequency calibration table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga07eaf722b934e94542d6fd74b6a981d4}{S\+F\+\_\+\+Get\+Last\+Sent\+R\+S\+SI}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t $\ast$rssi\+Res)
+\begin{DoxyCompactList}\small\item\em Gets the recently computed R\+S\+SI measure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga3f0b30bc3200751a313d6a8366048d44}{S\+F\+\_\+\+Get\+Last30\+Sent\+R\+S\+SI}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t $\ast$rssi\+Res)
+\begin{DoxyCompactList}\small\item\em Gets the recently computed R\+S\+SI measure for 30 frames during RX G\+F\+SK test. This is the receiver sensitivity test. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9d1a55dfe0f253669bc615cff200d609}{S\+F\+\_\+\+Reset\+Last\+Sent\+R\+S\+S\+I\+Buffer}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Resets buffer which holds the recently computed R\+S\+SI for 30 frames during RX G\+F\+SK test. This is the receiver sensitivity test. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gabd12f973d453b94074af729e5cb9f1c6}{S\+F\+\_\+\+Read\+Current\+P\+A\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} net\+Std, uint8\+\_\+t $\ast$pa\+Table)
+\begin{DoxyCompactList}\small\item\em Reads current E\+T\+S\+I/\+F\+CC PA table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac338c18f67a2ecbf5f2ce3a266b7292d}{S\+F\+\_\+\+Update\+P\+A\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} net\+Std, uint8\+\_\+t $\ast$pa\+Table)
+\begin{DoxyCompactList}\small\item\em Updates current E\+T\+S\+I/\+F\+CC PA table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad44ab2d70a7132b381104107168ba771}{S\+F\+\_\+\+Set\+Default\+P\+A\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} net\+Std)
+\begin{DoxyCompactList}\small\item\em Sets default E\+T\+S\+I/\+F\+CC PA table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad4d10186e176ecb487ff78e3d5a5cd75}{S\+F\+\_\+\+Calibrate\+Initial\+R\+S\+SI}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool sign\+Plus, uint16\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Sets the initial R\+S\+SI drift offset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9d5eef189c6bc644ca5a1ded155d700b}{S\+F\+\_\+\+Send\+Command\+Non\+Block}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}} cmd, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload)
+\begin{DoxyCompactList}\small\item\em This function sends a command to the device. It does not wait for an acknowledgement. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__sf__functions__group_ga1aa190c9d68ca42596579425130183b2}{S\+F\+\_\+\+Is\+Ack\+Frame\+Ready}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function checks if the S\+I\+G\+F\+OX device is ready to send an acknowledgement. It checks A\+CK pin value, which is active low. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gaea7699d331c28a9e9f708d8d859cacf5}{S\+F\+\_\+\+Read\+Ack\+Frame\+Non\+Block}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$recv\+Payload, uint8\+\_\+t recv\+Buffer\+Size)
+\begin{DoxyCompactList}\small\item\em This function receives an acknowledge frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+I\+G\+F\+OX driver based on A\+ML layer supporting boards based on following N\+XP parts\+: O\+L2361, O\+L2385.
+
+This module is common for all supported models. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sf_8c_a37888aca66928f6858a3d4eeb092b742}\label{sf_8c_a37888aca66928f6858a3d4eeb092b742}} 
+\index{sf.c@{sf.c}!SF\_ACK\_INIT\_TIMEOUT\_US@{SF\_ACK\_INIT\_TIMEOUT\_US}}
+\index{SF\_ACK\_INIT\_TIMEOUT\_US@{SF\_ACK\_INIT\_TIMEOUT\_US}!sf.c@{sf.c}}
+\subsubsection{\texorpdfstring{SF\_ACK\_INIT\_TIMEOUT\_US}{SF\_ACK\_INIT\_TIMEOUT\_US}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+A\+C\+K\+\_\+\+I\+N\+I\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+US~5000000U}
+
+Timeout used to wait for a level of A\+CK pin. It is applied after the reset in the S\+F\+\_\+\+Init function. \mbox{\Hypertarget{sf_8c_a6888d3ee749addb38fb1811873a1fd0f}\label{sf_8c_a6888d3ee749addb38fb1811873a1fd0f}} 
+\index{sf.c@{sf.c}!SF\_ACK\_NOTRANS\_TIMEOUT\_US@{SF\_ACK\_NOTRANS\_TIMEOUT\_US}}
+\index{SF\_ACK\_NOTRANS\_TIMEOUT\_US@{SF\_ACK\_NOTRANS\_TIMEOUT\_US}!sf.c@{sf.c}}
+\subsubsection{\texorpdfstring{SF\_ACK\_NOTRANS\_TIMEOUT\_US}{SF\_ACK\_NOTRANS\_TIMEOUT\_US}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+A\+C\+K\+\_\+\+N\+O\+T\+R\+A\+N\+S\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+US~5000000U}
+
+Timeout used to wait for a level of A\+CK pin. It is intended for S\+PI commands which do not cause transmission to S\+I\+G\+F\+OX network (i.\+e. Send Echo,...). \mbox{\Hypertarget{sf_8c_a07ae4dd50db1507cb4bd17da865c8dfd}\label{sf_8c_a07ae4dd50db1507cb4bd17da865c8dfd}} 
+\index{sf.c@{sf.c}!SF\_ACK\_TIMEOUT\_MAX\_US@{SF\_ACK\_TIMEOUT\_MAX\_US}}
+\index{SF\_ACK\_TIMEOUT\_MAX\_US@{SF\_ACK\_TIMEOUT\_MAX\_US}!sf.c@{sf.c}}
+\subsubsection{\texorpdfstring{SF\_ACK\_TIMEOUT\_MAX\_US}{SF\_ACK\_TIMEOUT\_MAX\_US}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+A\+C\+K\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+M\+A\+X\+\_\+\+US~100000000U}
+
+Max. value of timeout used to wait for a level of A\+CK pin. \mbox{\Hypertarget{sf_8c_ae880bf5c9e1f23b2e38d5c7a68e9a584}\label{sf_8c_ae880bf5c9e1f23b2e38d5c7a68e9a584}} 
+\index{sf.c@{sf.c}!SF\_ACK\_TRANS\_RECV\_TIMEOUT\_US@{SF\_ACK\_TRANS\_RECV\_TIMEOUT\_US}}
+\index{SF\_ACK\_TRANS\_RECV\_TIMEOUT\_US@{SF\_ACK\_TRANS\_RECV\_TIMEOUT\_US}!sf.c@{sf.c}}
+\subsubsection{\texorpdfstring{SF\_ACK\_TRANS\_RECV\_TIMEOUT\_US}{SF\_ACK\_TRANS\_RECV\_TIMEOUT\_US}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+A\+C\+K\+\_\+\+T\+R\+A\+N\+S\+\_\+\+R\+E\+C\+V\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+US~60000000U}
+
+Timeout used to wait for a level of A\+CK pin. It is intended for the Receive Frame S\+PI command. The S\+I\+G\+F\+OX firmware has an internal timeout (60 s). \mbox{\Hypertarget{sf_8c_ac265907852718477ed35c4abe27b9446}\label{sf_8c_ac265907852718477ed35c4abe27b9446}} 
+\index{sf.c@{sf.c}!SF\_ACK\_TRANS\_TIMEOUT\_US@{SF\_ACK\_TRANS\_TIMEOUT\_US}}
+\index{SF\_ACK\_TRANS\_TIMEOUT\_US@{SF\_ACK\_TRANS\_TIMEOUT\_US}!sf.c@{sf.c}}
+\subsubsection{\texorpdfstring{SF\_ACK\_TRANS\_TIMEOUT\_US}{SF\_ACK\_TRANS\_TIMEOUT\_US}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+A\+C\+K\+\_\+\+T\+R\+A\+N\+S\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+US~15000000U}
+
+Timeout used to wait for a level of A\+CK pin. It is intended for S\+PI commands causing transmission to S\+I\+G\+F\+OX network (Send Payload, Send Bit, Send Out of Band, Send Test). The Receive Frame command has higher timeout. Note\+: waiting for an acknowledge frame can take several second. Max. time is needed for Send Test Mode command (test mode number 5, Tx\+Synth). \mbox{\Hypertarget{sf_8c_ab3c5eabcda72b90257fd5cc48b500a5a}\label{sf_8c_ab3c5eabcda72b90257fd5cc48b500a5a}} 
+\index{sf.c@{sf.c}!SF\_ECHO\_PLD\_ARRAY@{SF\_ECHO\_PLD\_ARRAY}}
+\index{SF\_ECHO\_PLD\_ARRAY@{SF\_ECHO\_PLD\_ARRAY}!sf.c@{sf.c}}
+\subsubsection{\texorpdfstring{SF\_ECHO\_PLD\_ARRAY}{SF\_ECHO\_PLD\_ARRAY}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+E\+C\+H\+O\+\_\+\+P\+L\+D\+\_\+\+A\+R\+R\+AY~\{0x01\+U, 0x02\+U, 0x03\+U, 0x04\+U, 0x05\+U\}}
+
+The payload used for the \char`\"{}\+Send Echo\char`\"{} command. \mbox{\Hypertarget{sf_8c_ac4a29458c7f99f989fb111f537976ec1}\label{sf_8c_ac4a29458c7f99f989fb111f537976ec1}} 
+\index{sf.c@{sf.c}!SF\_HAS\_CMD\_PLD@{SF\_HAS\_CMD\_PLD}}
+\index{SF\_HAS\_CMD\_PLD@{SF\_HAS\_CMD\_PLD}!sf.c@{sf.c}}
+\subsubsection{\texorpdfstring{SF\_HAS\_CMD\_PLD}{SF\_HAS\_CMD\_PLD}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+H\+A\+S\+\_\+\+C\+M\+D\+\_\+\+P\+LD(\begin{DoxyParamCaption}\item[{}]{cmd }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a323b9fcd84e1c29fb2bf3bbdc5b485cf}{sfSpiCmdSendEcho}}) || ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3b6772cd4447ad1e61b0991ec6c73b06}{sfSpiCmdSendPayload}}) || \(\backslash\)}
+\DoxyCodeLine{     ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a8269f4e639fcaa1ef63d40ed98a689eb}{sfSpiCmdSendBit}}) || ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4f536b8d125504fe0534b905fda4590c}{sfSpiCmdSetUlFreq}}) || \(\backslash\)}
+\DoxyCodeLine{     ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa10006c82aea0fb6aa0a52ba12cdfac7}{sfSpiCmdContWave}}) || ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aff056e96d6096dc9ae5f7d6e5bc5475d}{sfSpiCmdSendTestMode}}) || \(\backslash\)}
+\DoxyCodeLine{     ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa3fbbb0fbb261f3fef0bfd1979465e42}{sfSpiCmdPskAskZeroSeq}}) || ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a0e6c7302cae22023081fa20c2fecbad3}{sfSpiCmdPskAskAAAASeq}}) || \(\backslash\)}
+\DoxyCodeLine{     ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ab5a13bfe3df59a1ee403e7b1ad2f57fe}{sfSpiCmdSetFCCMacroCh}}) || ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a8623a017ff1ad9f3f2e78e51c1c1c3da}{sfSpiCmdStaticFreqCal}}) || \(\backslash\)}
+\DoxyCodeLine{     ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a6920f892112eb6f26679cac7c36430a1}{sfSpiCmdTempFreqCal}}) || ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a67a249422314b3352a70420adf4971c2}{sfSpiCmdReceive}}) || \(\backslash\)}
+\DoxyCodeLine{     ((cmd) == \mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a267fd5d2f268a0194c58b7e164aa04db}{sfSpiCmdSetDlFreq}}))}
+
+\end{DoxyCode}
+
+
+This macro returns true when an I-\/frame has payload (data except length and command code fields). Otherwise it returns false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & Command number (see sf\+\_\+spi\+\_\+cmd\+\_\+t enumeration). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sf_8c_a439103f9ad43e73838d13d339bbf9c8a}\label{sf_8c_a439103f9ad43e73838d13d339bbf9c8a}} 
+\index{sf.c@{sf.c}!SF\_TIMEOUT\_STEP\_US@{SF\_TIMEOUT\_STEP\_US}}
+\index{SF\_TIMEOUT\_STEP\_US@{SF\_TIMEOUT\_STEP\_US}!sf.c@{sf.c}}
+\subsubsection{\texorpdfstring{SF\_TIMEOUT\_STEP\_US}{SF\_TIMEOUT\_STEP\_US}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+S\+T\+E\+P\+\_\+\+US~100U}
+
+Timeout measurement is split into steps. This macro defines value of the step in us. \mbox{\Hypertarget{sf_8c_a4623312d4c711a155518a0bef4672de8}\label{sf_8c_a4623312d4c711a155518a0bef4672de8}} 
+\index{sf.c@{sf.c}!SF\_WAKEUP\_DLY\_MS@{SF\_WAKEUP\_DLY\_MS}}
+\index{SF\_WAKEUP\_DLY\_MS@{SF\_WAKEUP\_DLY\_MS}!sf.c@{sf.c}}
+\subsubsection{\texorpdfstring{SF\_WAKEUP\_DLY\_MS}{SF\_WAKEUP\_DLY\_MS}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+D\+L\+Y\+\_\+\+MS~100U}
+
+Delay applied after the Send Wake up command. 

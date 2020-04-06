@@ -1,0 +1,46 @@
+\hypertarget{struct__ftfx__cache__config}{}\section{\+\_\+ftfx\+\_\+cache\+\_\+config Struct Reference}
+\label{struct__ftfx__cache__config}\index{\_ftfx\_cache\_config@{\_ftfx\_cache\_config}}
+
+
+F\+T\+Fx cache driver state information.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+ftfx\+\_\+cache.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__ftfx__cache__config_a678cbdcc5f6a13f253734d0ab489aee0}{flash\+Memory\+Index}}
+\item 
+\mbox{\Hypertarget{struct__ftfx__cache__config_a72aca6ea6d8153b28ea8f139b932ec3e}\label{struct__ftfx__cache__config_a72aca6ea6d8153b28ea8f139b932ec3e}} 
+uint8\+\_\+t {\bfseries reserved} \mbox{[}3\mbox{]}
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{struct__ftfx__cache__config_a62b0fcfa77889ff9d140e135a38c2af8}{com\+Bit\+Oper\+Func\+Addr}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+F\+T\+Fx cache driver state information. 
+
+An instance of this structure is allocated by the user of the flash driver and passed into each of the driver A\+P\+Is. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__ftfx__cache__config_a62b0fcfa77889ff9d140e135a38c2af8}\label{struct__ftfx__cache__config_a62b0fcfa77889ff9d140e135a38c2af8}} 
+\index{\_ftfx\_cache\_config@{\_ftfx\_cache\_config}!comBitOperFuncAddr@{comBitOperFuncAddr}}
+\index{comBitOperFuncAddr@{comBitOperFuncAddr}!\_ftfx\_cache\_config@{\_ftfx\_cache\_config}}
+\subsubsection{\texorpdfstring{comBitOperFuncAddr}{comBitOperFuncAddr}}
+{\footnotesize\ttfamily uint32\+\_\+t$\ast$ com\+Bit\+Oper\+Func\+Addr}
+
+An buffer point to the flash execute-\/in-\/\+R\+AM function. \mbox{\Hypertarget{struct__ftfx__cache__config_a678cbdcc5f6a13f253734d0ab489aee0}\label{struct__ftfx__cache__config_a678cbdcc5f6a13f253734d0ab489aee0}} 
+\index{\_ftfx\_cache\_config@{\_ftfx\_cache\_config}!flashMemoryIndex@{flashMemoryIndex}}
+\index{flashMemoryIndex@{flashMemoryIndex}!\_ftfx\_cache\_config@{\_ftfx\_cache\_config}}
+\subsubsection{\texorpdfstring{flashMemoryIndex}{flashMemoryIndex}}
+{\footnotesize\ttfamily uint8\+\_\+t flash\+Memory\+Index}
+
+0 -\/ primary flash; 1 -\/ secondary flash 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+ftfx\+\_\+cache.\+h\end{DoxyCompactItemize}

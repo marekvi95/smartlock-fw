@@ -1,0 +1,81 @@
+\hypertarget{struct__dma__transfer__config}{}\section{\+\_\+dma\+\_\+transfer\+\_\+config Struct Reference}
+\label{struct__dma__transfer__config}\index{\_dma\_transfer\_config@{\_dma\_transfer\_config}}
+
+
+D\+MA transfer configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+dma.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__dma__transfer__config_a0bf5e6a7c94ddbf20e5f713150a87da5}{src\+Addr}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__dma__transfer__config_a85878efbcf880897d05fb1aa24c28a65}{dest\+Addr}}
+\item 
+bool \mbox{\hyperlink{struct__dma__transfer__config_a6c1674abe77cd98be4d299fff7f4c003}{enable\+Src\+Increment}}
+\item 
+\mbox{\hyperlink{group__dma_ga77280b3fae0e8ee447666e14c101dfe0}{dma\+\_\+transfer\+\_\+size\+\_\+t}} \mbox{\hyperlink{struct__dma__transfer__config_a60bfcc72290b71d1cdda387f1a7c2dac}{src\+Size}}
+\item 
+bool \mbox{\hyperlink{struct__dma__transfer__config_a04bbb581a96c3f138251ab5078ba1364}{enable\+Dest\+Increment}}
+\item 
+\mbox{\hyperlink{group__dma_ga77280b3fae0e8ee447666e14c101dfe0}{dma\+\_\+transfer\+\_\+size\+\_\+t}} \mbox{\hyperlink{struct__dma__transfer__config_af8d1279c087851c3058f0981857d0242}{dest\+Size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__dma__transfer__config_a6feb07da81f2cb170eabc3d00565d404}{transfer\+Size}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+MA transfer configuration structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__dma__transfer__config_a85878efbcf880897d05fb1aa24c28a65}\label{struct__dma__transfer__config_a85878efbcf880897d05fb1aa24c28a65}} 
+\index{\_dma\_transfer\_config@{\_dma\_transfer\_config}!destAddr@{destAddr}}
+\index{destAddr@{destAddr}!\_dma\_transfer\_config@{\_dma\_transfer\_config}}
+\subsubsection{\texorpdfstring{destAddr}{destAddr}}
+{\footnotesize\ttfamily uint32\+\_\+t dest\+Addr}
+
+D\+MA destination address. \mbox{\Hypertarget{struct__dma__transfer__config_af8d1279c087851c3058f0981857d0242}\label{struct__dma__transfer__config_af8d1279c087851c3058f0981857d0242}} 
+\index{\_dma\_transfer\_config@{\_dma\_transfer\_config}!destSize@{destSize}}
+\index{destSize@{destSize}!\_dma\_transfer\_config@{\_dma\_transfer\_config}}
+\subsubsection{\texorpdfstring{destSize}{destSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__dma_ga77280b3fae0e8ee447666e14c101dfe0}{dma\+\_\+transfer\+\_\+size\+\_\+t}} dest\+Size}
+
+Destination transfer unit. \mbox{\Hypertarget{struct__dma__transfer__config_a04bbb581a96c3f138251ab5078ba1364}\label{struct__dma__transfer__config_a04bbb581a96c3f138251ab5078ba1364}} 
+\index{\_dma\_transfer\_config@{\_dma\_transfer\_config}!enableDestIncrement@{enableDestIncrement}}
+\index{enableDestIncrement@{enableDestIncrement}!\_dma\_transfer\_config@{\_dma\_transfer\_config}}
+\subsubsection{\texorpdfstring{enableDestIncrement}{enableDestIncrement}}
+{\footnotesize\ttfamily bool enable\+Dest\+Increment}
+
+Destination address increase after each transfer. \mbox{\Hypertarget{struct__dma__transfer__config_a6c1674abe77cd98be4d299fff7f4c003}\label{struct__dma__transfer__config_a6c1674abe77cd98be4d299fff7f4c003}} 
+\index{\_dma\_transfer\_config@{\_dma\_transfer\_config}!enableSrcIncrement@{enableSrcIncrement}}
+\index{enableSrcIncrement@{enableSrcIncrement}!\_dma\_transfer\_config@{\_dma\_transfer\_config}}
+\subsubsection{\texorpdfstring{enableSrcIncrement}{enableSrcIncrement}}
+{\footnotesize\ttfamily bool enable\+Src\+Increment}
+
+Source address increase after each transfer. \mbox{\Hypertarget{struct__dma__transfer__config_a0bf5e6a7c94ddbf20e5f713150a87da5}\label{struct__dma__transfer__config_a0bf5e6a7c94ddbf20e5f713150a87da5}} 
+\index{\_dma\_transfer\_config@{\_dma\_transfer\_config}!srcAddr@{srcAddr}}
+\index{srcAddr@{srcAddr}!\_dma\_transfer\_config@{\_dma\_transfer\_config}}
+\subsubsection{\texorpdfstring{srcAddr}{srcAddr}}
+{\footnotesize\ttfamily uint32\+\_\+t src\+Addr}
+
+D\+MA transfer source address. \mbox{\Hypertarget{struct__dma__transfer__config_a60bfcc72290b71d1cdda387f1a7c2dac}\label{struct__dma__transfer__config_a60bfcc72290b71d1cdda387f1a7c2dac}} 
+\index{\_dma\_transfer\_config@{\_dma\_transfer\_config}!srcSize@{srcSize}}
+\index{srcSize@{srcSize}!\_dma\_transfer\_config@{\_dma\_transfer\_config}}
+\subsubsection{\texorpdfstring{srcSize}{srcSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__dma_ga77280b3fae0e8ee447666e14c101dfe0}{dma\+\_\+transfer\+\_\+size\+\_\+t}} src\+Size}
+
+Source transfer size unit. \mbox{\Hypertarget{struct__dma__transfer__config_a6feb07da81f2cb170eabc3d00565d404}\label{struct__dma__transfer__config_a6feb07da81f2cb170eabc3d00565d404}} 
+\index{\_dma\_transfer\_config@{\_dma\_transfer\_config}!transferSize@{transferSize}}
+\index{transferSize@{transferSize}!\_dma\_transfer\_config@{\_dma\_transfer\_config}}
+\subsubsection{\texorpdfstring{transferSize}{transferSize}}
+{\footnotesize\ttfamily uint32\+\_\+t transfer\+Size}
+
+The number of bytes to be transferred. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+dma.\+h\end{DoxyCompactItemize}

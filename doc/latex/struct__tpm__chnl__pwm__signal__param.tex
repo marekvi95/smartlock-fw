@@ -1,0 +1,49 @@
+\hypertarget{struct__tpm__chnl__pwm__signal__param}{}\section{\+\_\+tpm\+\_\+chnl\+\_\+pwm\+\_\+signal\+\_\+param Struct Reference}
+\label{struct__tpm__chnl__pwm__signal__param}\index{\_tpm\_chnl\_pwm\_signal\_param@{\_tpm\_chnl\_pwm\_signal\_param}}
+
+
+Options to configure a T\+PM channel\textquotesingle{}s P\+WM signal.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+tpm.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__tpm_gacda6962369e014c8ac72d1b58b224deb}{tpm\+\_\+chnl\+\_\+t}} \mbox{\hyperlink{struct__tpm__chnl__pwm__signal__param_addc94dba6576d0b40cd83b493968a2e4}{chnl\+Number}}
+\item 
+\mbox{\hyperlink{group__tpm_gaa50bc4e977e2e6e8abcbfc39d79f0674}{tpm\+\_\+pwm\+\_\+level\+\_\+select\+\_\+t}} \mbox{\hyperlink{struct__tpm__chnl__pwm__signal__param_a6dc96c2d40aecc0f3b18fcca3bc68cb6}{level}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__tpm__chnl__pwm__signal__param_ab45db07ca1a7d947eb8ddd735fc28efb}{duty\+Cycle\+Percent}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Options to configure a T\+PM channel\textquotesingle{}s P\+WM signal. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__tpm__chnl__pwm__signal__param_addc94dba6576d0b40cd83b493968a2e4}\label{struct__tpm__chnl__pwm__signal__param_addc94dba6576d0b40cd83b493968a2e4}} 
+\index{\_tpm\_chnl\_pwm\_signal\_param@{\_tpm\_chnl\_pwm\_signal\_param}!chnlNumber@{chnlNumber}}
+\index{chnlNumber@{chnlNumber}!\_tpm\_chnl\_pwm\_signal\_param@{\_tpm\_chnl\_pwm\_signal\_param}}
+\subsubsection{\texorpdfstring{chnlNumber}{chnlNumber}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__tpm_gacda6962369e014c8ac72d1b58b224deb}{tpm\+\_\+chnl\+\_\+t}} chnl\+Number}
+
+T\+PM channel to configure. In combined mode (available in some SoC\textquotesingle{}s, this represents the channel pair number \mbox{\Hypertarget{struct__tpm__chnl__pwm__signal__param_ab45db07ca1a7d947eb8ddd735fc28efb}\label{struct__tpm__chnl__pwm__signal__param_ab45db07ca1a7d947eb8ddd735fc28efb}} 
+\index{\_tpm\_chnl\_pwm\_signal\_param@{\_tpm\_chnl\_pwm\_signal\_param}!dutyCyclePercent@{dutyCyclePercent}}
+\index{dutyCyclePercent@{dutyCyclePercent}!\_tpm\_chnl\_pwm\_signal\_param@{\_tpm\_chnl\_pwm\_signal\_param}}
+\subsubsection{\texorpdfstring{dutyCyclePercent}{dutyCyclePercent}}
+{\footnotesize\ttfamily uint8\+\_\+t duty\+Cycle\+Percent}
+
+P\+WM pulse width, value should be between 0 to 100 0=inactive signal(0\% duty cycle)... 100=always active signal (100\% duty cycle) \mbox{\Hypertarget{struct__tpm__chnl__pwm__signal__param_a6dc96c2d40aecc0f3b18fcca3bc68cb6}\label{struct__tpm__chnl__pwm__signal__param_a6dc96c2d40aecc0f3b18fcca3bc68cb6}} 
+\index{\_tpm\_chnl\_pwm\_signal\_param@{\_tpm\_chnl\_pwm\_signal\_param}!level@{level}}
+\index{level@{level}!\_tpm\_chnl\_pwm\_signal\_param@{\_tpm\_chnl\_pwm\_signal\_param}}
+\subsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__tpm_gaa50bc4e977e2e6e8abcbfc39d79f0674}{tpm\+\_\+pwm\+\_\+level\+\_\+select\+\_\+t}} level}
+
+P\+WM output active level select 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+tpm.\+h\end{DoxyCompactItemize}

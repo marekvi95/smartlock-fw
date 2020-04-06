@@ -1,0 +1,73 @@
+\hypertarget{struct__mcglite__config}{}\section{\+\_\+mcglite\+\_\+config Struct Reference}
+\label{struct__mcglite__config}\index{\_mcglite\_config@{\_mcglite\_config}}
+
+
+M\+C\+G\+\_\+\+Lite configure structure for mode change.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+clock.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__clock_ga102f26486150540dc286f6811c71d8ec}{mcglite\+\_\+clkout\+\_\+src\+\_\+t}} \mbox{\hyperlink{struct__mcglite__config_aaa8dafb0e23cd51917a168580f17b45a}{out\+Src}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__mcglite__config_ace70be98ba5079e3e1fcd5403ff1e9f1}{irclk\+Enable\+Mode}}
+\item 
+\mbox{\hyperlink{group__clock_gae34f40906c4c49aa0a4fdfb00b1cc260}{mcglite\+\_\+lirc\+\_\+mode\+\_\+t}} \mbox{\hyperlink{struct__mcglite__config_a816ceb227997861614754ea401477d93}{ircs}}
+\item 
+\mbox{\hyperlink{group__clock_gaca07fe4bde2c34163d52f6f8507368ba}{mcglite\+\_\+lirc\+\_\+div\+\_\+t}} \mbox{\hyperlink{struct__mcglite__config_aa8400f67911439a3cd2d4693589635bd}{fcrdiv}}
+\item 
+\mbox{\hyperlink{group__clock_gaca07fe4bde2c34163d52f6f8507368ba}{mcglite\+\_\+lirc\+\_\+div\+\_\+t}} \mbox{\hyperlink{struct__mcglite__config_a06fa15ba0e46951aa5afc1f3b9c19d59}{lirc\+Div2}}
+\item 
+bool \mbox{\hyperlink{struct__mcglite__config_a9ee0c800680dc0eb71514e190f1c7e15}{hirc\+Enable\+In\+Not\+Hirc\+Mode}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+C\+G\+\_\+\+Lite configure structure for mode change. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__mcglite__config_aa8400f67911439a3cd2d4693589635bd}\label{struct__mcglite__config_aa8400f67911439a3cd2d4693589635bd}} 
+\index{\_mcglite\_config@{\_mcglite\_config}!fcrdiv@{fcrdiv}}
+\index{fcrdiv@{fcrdiv}!\_mcglite\_config@{\_mcglite\_config}}
+\subsubsection{\texorpdfstring{fcrdiv}{fcrdiv}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__clock_gaca07fe4bde2c34163d52f6f8507368ba}{mcglite\+\_\+lirc\+\_\+div\+\_\+t}} fcrdiv}
+
+M\+C\+G\+\_\+\+SC\mbox{[}F\+C\+R\+D\+IV\mbox{]}. \mbox{\Hypertarget{struct__mcglite__config_a9ee0c800680dc0eb71514e190f1c7e15}\label{struct__mcglite__config_a9ee0c800680dc0eb71514e190f1c7e15}} 
+\index{\_mcglite\_config@{\_mcglite\_config}!hircEnableInNotHircMode@{hircEnableInNotHircMode}}
+\index{hircEnableInNotHircMode@{hircEnableInNotHircMode}!\_mcglite\_config@{\_mcglite\_config}}
+\subsubsection{\texorpdfstring{hircEnableInNotHircMode}{hircEnableInNotHircMode}}
+{\footnotesize\ttfamily bool hirc\+Enable\+In\+Not\+Hirc\+Mode}
+
+H\+I\+RC enable when not in H\+I\+RC mode. \mbox{\Hypertarget{struct__mcglite__config_ace70be98ba5079e3e1fcd5403ff1e9f1}\label{struct__mcglite__config_ace70be98ba5079e3e1fcd5403ff1e9f1}} 
+\index{\_mcglite\_config@{\_mcglite\_config}!irclkEnableMode@{irclkEnableMode}}
+\index{irclkEnableMode@{irclkEnableMode}!\_mcglite\_config@{\_mcglite\_config}}
+\subsubsection{\texorpdfstring{irclkEnableMode}{irclkEnableMode}}
+{\footnotesize\ttfamily uint8\+\_\+t irclk\+Enable\+Mode}
+
+M\+C\+G\+I\+R\+C\+LK enable mode, OR\textquotesingle{}ed value of \+\_\+mcglite\+\_\+irclk\+\_\+enable\+\_\+mode. \mbox{\Hypertarget{struct__mcglite__config_a816ceb227997861614754ea401477d93}\label{struct__mcglite__config_a816ceb227997861614754ea401477d93}} 
+\index{\_mcglite\_config@{\_mcglite\_config}!ircs@{ircs}}
+\index{ircs@{ircs}!\_mcglite\_config@{\_mcglite\_config}}
+\subsubsection{\texorpdfstring{ircs}{ircs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__clock_gae34f40906c4c49aa0a4fdfb00b1cc260}{mcglite\+\_\+lirc\+\_\+mode\+\_\+t}} ircs}
+
+M\+C\+G\+\_\+\+C2\mbox{[}I\+R\+CS\mbox{]}. \mbox{\Hypertarget{struct__mcglite__config_a06fa15ba0e46951aa5afc1f3b9c19d59}\label{struct__mcglite__config_a06fa15ba0e46951aa5afc1f3b9c19d59}} 
+\index{\_mcglite\_config@{\_mcglite\_config}!lircDiv2@{lircDiv2}}
+\index{lircDiv2@{lircDiv2}!\_mcglite\_config@{\_mcglite\_config}}
+\subsubsection{\texorpdfstring{lircDiv2}{lircDiv2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__clock_gaca07fe4bde2c34163d52f6f8507368ba}{mcglite\+\_\+lirc\+\_\+div\+\_\+t}} lirc\+Div2}
+
+M\+C\+G\+\_\+\+MC\mbox{[}L\+I\+R\+C\+\_\+\+D\+I\+V2\mbox{]}. \mbox{\Hypertarget{struct__mcglite__config_aaa8dafb0e23cd51917a168580f17b45a}\label{struct__mcglite__config_aaa8dafb0e23cd51917a168580f17b45a}} 
+\index{\_mcglite\_config@{\_mcglite\_config}!outSrc@{outSrc}}
+\index{outSrc@{outSrc}!\_mcglite\_config@{\_mcglite\_config}}
+\subsubsection{\texorpdfstring{outSrc}{outSrc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__clock_ga102f26486150540dc286f6811c71d8ec}{mcglite\+\_\+clkout\+\_\+src\+\_\+t}} out\+Src}
+
+M\+C\+G\+O\+UT clock select. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\mbox{\hyperlink{fsl__clock_8h}{fsl\+\_\+clock.\+h}}\end{DoxyCompactItemize}

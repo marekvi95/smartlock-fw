@@ -1,0 +1,43 @@
+\hypertarget{struct__gpio__pin__config}{}\section{\+\_\+gpio\+\_\+pin\+\_\+config Struct Reference}
+\label{struct__gpio__pin__config}\index{\_gpio\_pin\_config@{\_gpio\_pin\_config}}
+
+
+The G\+P\+IO pin configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+gpio.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__gpio_gaf7d75755774a0f20385fbdda546f1f1d}{gpio\+\_\+pin\+\_\+direction\+\_\+t}} \mbox{\hyperlink{struct__gpio__pin__config_ab0b8ce6b7e068de24659c0c382fa481c}{pin\+Direction}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__gpio__pin__config_ae25321cd13f1ed5254f722b0f3c64242}{output\+Logic}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The G\+P\+IO pin configuration structure. 
+
+Each pin can only be configured as either an output pin or an input pin at a time. If configured as an input pin, leave the output\+Config unused. Note that in some use cases, the corresponding port property should be configured in advance with the P\+O\+R\+T\+\_\+\+Set\+Pin\+Config(). 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__gpio__pin__config_ae25321cd13f1ed5254f722b0f3c64242}\label{struct__gpio__pin__config_ae25321cd13f1ed5254f722b0f3c64242}} 
+\index{\_gpio\_pin\_config@{\_gpio\_pin\_config}!outputLogic@{outputLogic}}
+\index{outputLogic@{outputLogic}!\_gpio\_pin\_config@{\_gpio\_pin\_config}}
+\subsubsection{\texorpdfstring{outputLogic}{outputLogic}}
+{\footnotesize\ttfamily uint8\+\_\+t output\+Logic}
+
+Set a default output logic, which has no use in input \mbox{\Hypertarget{struct__gpio__pin__config_ab0b8ce6b7e068de24659c0c382fa481c}\label{struct__gpio__pin__config_ab0b8ce6b7e068de24659c0c382fa481c}} 
+\index{\_gpio\_pin\_config@{\_gpio\_pin\_config}!pinDirection@{pinDirection}}
+\index{pinDirection@{pinDirection}!\_gpio\_pin\_config@{\_gpio\_pin\_config}}
+\subsubsection{\texorpdfstring{pinDirection}{pinDirection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__gpio_gaf7d75755774a0f20385fbdda546f1f1d}{gpio\+\_\+pin\+\_\+direction\+\_\+t}} pin\+Direction}
+
+G\+P\+IO direction, input or output 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+gpio.\+h\end{DoxyCompactItemize}

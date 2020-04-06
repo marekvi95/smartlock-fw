@@ -1,0 +1,76 @@
+\hypertarget{spi__aml_8h}{}\section{aml/spi\+\_\+aml/spi\+\_\+aml.h File Reference}
+\label{spi__aml_8h}\index{aml/spi\_aml/spi\_aml.h@{aml/spi\_aml/spi\_aml.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../common\+\_\+aml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../gpio\+\_\+aml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+device\+\_\+registers.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structspi__aml__master__config__t}{spi\+\_\+aml\+\_\+master\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A\+ML S\+PI master parameters available for superior drivers (pointers). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structspi__aml__slave__config__t}{spi\+\_\+aml\+\_\+slave\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A\+ML S\+PI slave parameters available for superior drivers (pointers). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structspi__aml__transfer__t}{spi\+\_\+aml\+\_\+transfer\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI transfer structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__macro__group_ga8e71a8b01608ee3dcdca398b049e6fc6}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+T\+I\+M\+E\+O\+UT}}~1000U
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__enum__group_ga7eabcde60f10dd4e678bfafb2c66e618}{\+\_\+spi\+\_\+aml\+\_\+status}} \{ \mbox{\hyperlink{group__enum__group_gga7eabcde60f10dd4e678bfafb2c66e618aee97661a5080945d517bb59648de934e}{k\+Status\+\_\+\+A\+M\+L\+\_\+\+S\+P\+I\+\_\+\+Busy}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+S\+PI, 0), 
+\mbox{\hyperlink{group__enum__group_gga7eabcde60f10dd4e678bfafb2c66e618ab50871cf42253a19dd8ccc1de1561dd7}{k\+Status\+\_\+\+A\+M\+L\+\_\+\+S\+P\+I\+\_\+\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+S\+PI, 1)
+ \}
+\begin{DoxyCompactList}\small\item\em Error codes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_gaf2c0a2911c01ceb543ef11a8f6334764}{spi\+\_\+aml\+\_\+bitcount\+\_\+t}} \{ \mbox{\hyperlink{group__enum__group_ggaf2c0a2911c01ceb543ef11a8f6334764a6e867f2c72aa55914803493c972aedf2}{spi\+Bitcount8bit}} = 0x0U, 
+\mbox{\hyperlink{group__enum__group_ggaf2c0a2911c01ceb543ef11a8f6334764a5c2d0efdb0a6d7b3742acc5e0c7b3146}{spi\+Bitcount16bit}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em Number of bits per frame (8 or 16 bits). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_gaa95bcc4aa184cc2df42df55e6d8c2d3a}{spi\+\_\+aml\+\_\+clock\+\_\+phase\+\_\+t}} \{ \mbox{\hyperlink{group__enum__group_ggaa95bcc4aa184cc2df42df55e6d8c2d3aaec1cd61e1e61c864a36166105525dd86}{spi\+Clock\+Phase\+First\+Edge}} = 0x0U, 
+\mbox{\hyperlink{group__enum__group_ggaa95bcc4aa184cc2df42df55e6d8c2d3aaf4fa237620d516ad44263d9573441a6c}{spi\+Clock\+Phase\+Second\+Edge}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em Clock phase. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_ga846bf859b73b0a584889013e680bdc5f}{spi\+\_\+aml\+\_\+clock\+\_\+polarity\+\_\+t}} \{ \mbox{\hyperlink{group__enum__group_gga846bf859b73b0a584889013e680bdc5fa2d992758dc7e1f13b28bf2dbe0feec80}{spi\+Clock\+Polarity\+Active\+High}} = 0x0U, 
+\mbox{\hyperlink{group__enum__group_gga846bf859b73b0a584889013e680bdc5fae4f4430c6e748f6c30c8d26d160fb358}{spi\+Clock\+Polarity\+Active\+Low}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em Clock polarity. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}} \{ \mbox{\hyperlink{group__enum__group_gga376ab165389ceb9a6e3f763263ff7e06aeacea8171fe36165febd7a9d7f38beb8}{spi\+Pcs\+Active\+High}} = 0x0U, 
+\mbox{\hyperlink{group__enum__group_gga376ab165389ceb9a6e3f763263ff7e06ab02bf7ebed3eb20339afa9d14aa81155}{spi\+Pcs\+Active\+Low}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em Active level of chip select pin (P\+CS). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__function__group_gac1f59da071342e3e2f691b121d737115}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Init}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, const spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Master\+Config, uint32\+\_\+t source\+Clock\+Hz)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+PI as master. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga456542ab17179c5e19b712f398c24831}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Init}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, const spi\+\_\+sdk\+\_\+slave\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Slave\+Config)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+PI as slave. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gac0af5f79571c9a899c723c996d37a8b0}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Deinit}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Deinitializes the S\+PI master. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gab92008fdba7eaa3bc22c13e5094d9f78}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Deinit}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Deinitializes the S\+PI slave. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga81b9d9a7249971568d6fb7e589dcc84d}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Get\+Default\+Config}} (spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Master\+Config)
+\begin{DoxyCompactList}\small\item\em Gets and stores default S\+PI master configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga0728c29744ccb400f0b72ce6718f7128}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Get\+Default\+Config}} (spi\+\_\+sdk\+\_\+slave\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Slave\+Config)
+\begin{DoxyCompactList}\small\item\em Gets and stores default S\+PI slave configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gaaccd76ab37574aa23c0ab1e1e33ef7c5}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Fill\+Sdk\+Config}} (const \mbox{\hyperlink{structspi__aml__master__config__t}{spi\+\_\+aml\+\_\+master\+\_\+config\+\_\+t}} $\ast$spi\+Aml\+Master\+Config, spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Master\+Config)
+\begin{DoxyCompactList}\small\item\em Fills S\+DK S\+PI master configuration with A\+ML data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga67d9e4bda5bb5facc322d6eab3bc3482}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Fill\+Sdk\+Config}} (const \mbox{\hyperlink{structspi__aml__slave__config__t}{spi\+\_\+aml\+\_\+slave\+\_\+config\+\_\+t}} $\ast$spi\+Aml\+Slave\+Config, spi\+\_\+sdk\+\_\+slave\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Slave\+Config)
+\begin{DoxyCompactList}\small\item\em Fills S\+DK S\+PI slave configuration with A\+ML data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gab85d45f6cddbaaecd78864d25d1824f1}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Select\+Device}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} port\+Instance, uint8\+\_\+t pin\+Index, \mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}} pcs\+Polarity)
+\begin{DoxyCompactList}\small\item\em Selects the device with software controlled chip-\/select pin (P\+CS). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gacef541f53ec06c7151d8c6f148d4b365}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Unselect\+Device}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} port\+Instance, uint8\+\_\+t pin\+Index, \mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}} pcs\+Polarity)
+\begin{DoxyCompactList}\small\item\em Unselects the device with software controlled chip-\/select pin (P\+CS). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__function__group_ga9f4ba74d2bab05187f915b58d3bece4d}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Transfer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, \mbox{\hyperlink{structspi__aml__transfer__t}{spi\+\_\+aml\+\_\+transfer\+\_\+t}} $\ast$master\+Transfer)
+\begin{DoxyCompactList}\small\item\em Performs blocking master transfer of data. The method returns when all data are sent and received. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__function__group_gaabf878120f5f9da678aeb8885bb5af20}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Transfer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, \mbox{\hyperlink{structspi__aml__transfer__t}{spi\+\_\+aml\+\_\+transfer\+\_\+t}} $\ast$slave\+Transfer, \mbox{\hyperlink{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}{spi\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$slave\+Handle, \mbox{\hyperlink{group__spi__driver_ga13fbc3110c56c1d312e4a5ebed07d679}{spi\+\_\+slave\+\_\+callback\+\_\+t}} slave\+Callback)
+\begin{DoxyCompactList}\small\item\em Performs slave transfer of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+PI, D\+S\+PI and L\+P\+S\+PI driver intended for S32 S\+DK and M\+C\+U\+Xpresso S\+DK. This driver creates abstraction layer for S\+PI, D\+S\+PI and L\+P\+S\+PI peripherals. 

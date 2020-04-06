@@ -1,0 +1,110 @@
+\hypertarget{group__sf__conf__func__group}{}\section{Sf\+\_\+conf\+\_\+func\+\_\+group}
+\label{group__sf__conf__func__group}\index{Sf\_conf\_func\_group@{Sf\_conf\_func\_group}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__sf__conf__func__group_ga68177f0281489ba75661dc8517f4d547}{S\+F\+\_\+\+Setup\+S\+PI}} (\mbox{\hyperlink{structsf__spi__config__t}{sf\+\_\+spi\+\_\+config\+\_\+t}} $\ast$spi\+Config, const spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$user\+Spi\+Sdk\+Config)
+\begin{DoxyCompactList}\small\item\em Configures S\+PI module used by the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__sf__conf__func__group_ga03c809115624f8f392eacf4baf087a55}{S\+F\+\_\+\+Setup\+G\+P\+I\+Os}} (\mbox{\hyperlink{structsf__gpio__config__t}{sf\+\_\+gpio\+\_\+config\+\_\+t}} $\ast$gpio\+Config)
+\begin{DoxyCompactList}\small\item\em Configuration of G\+P\+I\+Os used for the S\+I\+G\+F\+OX device. Note that this function should not be used in S\+DK S32 when using pin\+\_\+mux component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__sf__conf__func__group_ga03c809115624f8f392eacf4baf087a55}\label{group__sf__conf__func__group_ga03c809115624f8f392eacf4baf087a55}} 
+\index{Sf\_conf\_func\_group@{Sf\_conf\_func\_group}!SF\_SetupGPIOs@{SF\_SetupGPIOs}}
+\index{SF\_SetupGPIOs@{SF\_SetupGPIOs}!Sf\_conf\_func\_group@{Sf\_conf\_func\_group}}
+\subsubsection{\texorpdfstring{SF\_SetupGPIOs()}{SF\_SetupGPIOs()}}
+{\footnotesize\ttfamily void S\+F\+\_\+\+Setup\+G\+P\+I\+Os (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__gpio__config__t}{sf\+\_\+gpio\+\_\+config\+\_\+t}} $\ast$}]{gpio\+Config }\end{DoxyParamCaption})}
+
+
+
+Configuration of G\+P\+I\+Os used for the S\+I\+G\+F\+OX device. Note that this function should not be used in S\+DK S32 when using pin\+\_\+mux component. 
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Data used by SIGFOX driver. You should use this structure in all}}
+\DoxyCodeLine{\textcolor{comment}{// driver's functions.}}
+\DoxyCodeLine{\mbox{\hyperlink{structsf__drv__data__t}{sf\_drv\_data\_t}} drvData;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// ACK pin.}}
+\DoxyCodeLine{drvData.\mbox{\hyperlink{structsf__drv__data__t_add32ea9a60dd3cf56bce44e4bb31782d}{gpioConfig}}.\mbox{\hyperlink{structsf__gpio__config__t_a02b33c24794de044e02bf779fe5ec494}{ackPin}}.\mbox{\hyperlink{structsf__gpio__sel__t_a92ec1b839cc60a854da420c83ba78aa1}{gpioInstance}} = \mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa867ccd8588650dbc8d8815973e0462b2}{instanceD}};}
+\DoxyCodeLine{drvData.\mbox{\hyperlink{structsf__drv__data__t_add32ea9a60dd3cf56bce44e4bb31782d}{gpioConfig}}.\mbox{\hyperlink{structsf__gpio__config__t_a02b33c24794de044e02bf779fe5ec494}{ackPin}}.\mbox{\hyperlink{structsf__gpio__sel__t_a6ab60439fc8e4e0575afdd2cf2bb9670}{gpioPinNumber}} = 2U;}
+\DoxyCodeLine{\textcolor{comment}{// SPI chip select pin.}}
+\DoxyCodeLine{drvData.\mbox{\hyperlink{structsf__drv__data__t_add32ea9a60dd3cf56bce44e4bb31782d}{gpioConfig}}.\mbox{\hyperlink{structsf__gpio__config__t_a01e95ad0a9d20140a3d2a73857bb5796}{csPin}}.\mbox{\hyperlink{structsf__gpio__sel__t_a92ec1b839cc60a854da420c83ba78aa1}{gpioInstance}} = \mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa867ccd8588650dbc8d8815973e0462b2}{instanceD}};}
+\DoxyCodeLine{drvData.\mbox{\hyperlink{structsf__drv__data__t_add32ea9a60dd3cf56bce44e4bb31782d}{gpioConfig}}.\mbox{\hyperlink{structsf__gpio__config__t_a01e95ad0a9d20140a3d2a73857bb5796}{csPin}}.\mbox{\hyperlink{structsf__gpio__sel__t_a6ab60439fc8e4e0575afdd2cf2bb9670}{gpioPinNumber}} = 4U;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{group__sf__conf__func__group_ga03c809115624f8f392eacf4baf087a55}{SF\_SetupGPIOs}}(\&(drvData.\mbox{\hyperlink{structsf__drv__data__t_add32ea9a60dd3cf56bce44e4bb31782d}{gpioConfig}}));}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio\+Config} & Structure for G\+P\+IO configuration.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__conf__func__group_ga68177f0281489ba75661dc8517f4d547}\label{group__sf__conf__func__group_ga68177f0281489ba75661dc8517f4d547}} 
+\index{Sf\_conf\_func\_group@{Sf\_conf\_func\_group}!SF\_SetupSPI@{SF\_SetupSPI}}
+\index{SF\_SetupSPI@{SF\_SetupSPI}!Sf\_conf\_func\_group@{Sf\_conf\_func\_group}}
+\subsubsection{\texorpdfstring{SF\_SetupSPI()}{SF\_SetupSPI()}}
+{\footnotesize\ttfamily void S\+F\+\_\+\+Setup\+S\+PI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__spi__config__t}{sf\+\_\+spi\+\_\+config\+\_\+t}} $\ast$}]{spi\+Config,  }\item[{const spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$}]{user\+Spi\+Sdk\+Config }\end{DoxyParamCaption})}
+
+
+
+Configures S\+PI module used by the S\+I\+G\+F\+OX device. 
+
+User can either provide required inputs or pass through S\+DK configuration structure. In former case S\+DK configuration structure is created automatically, filled with provided inputs and the rest of configuration items uses default values. In the latter case it is passed without any changes directly to the initialization function.
+
+Example of automatic creation of the S\+PI S\+DK configuration structure with
+
+use of spi\+Config parameter\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Data used by SIGFOX driver. You should use this structure in all}}
+\DoxyCodeLine{\textcolor{comment}{// driver's functions.}}
+\DoxyCodeLine{\mbox{\hyperlink{structsf__drv__data__t}{sf\_drv\_data\_t}} drvData;}
+\DoxyCodeLine{}
+\DoxyCodeLine{drvData.\mbox{\hyperlink{structsf__drv__data__t_a86cf59ba9cfdafebf74e3cb1a5b2a507}{spiConfig}}.\mbox{\hyperlink{structsf__spi__config__t_abe234e3e56ed07590f4377320714a7d4}{spiInstance}} = 1U;     \textcolor{comment}{// SPI 1 peripheral.}}
+\DoxyCodeLine{drvData.\mbox{\hyperlink{structsf__drv__data__t_a86cf59ba9cfdafebf74e3cb1a5b2a507}{spiConfig}}.\mbox{\hyperlink{structsf__spi__config__t_ab38a80feace530cdca66134f6e3801aa}{baudRate}} = 125000U;}
+\DoxyCodeLine{drvData.\mbox{\hyperlink{structsf__drv__data__t_a86cf59ba9cfdafebf74e3cb1a5b2a507}{spiConfig}}.\mbox{\hyperlink{structsf__spi__config__t_ac83aea11badb20dd2844adf51262c9d0}{sourceClkHz}} = \mbox{\hyperlink{group__clock_ga53acae220d651789bb505c53c73ecf2b}{CLOCK\_GetFreq}}(\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a5d1ee238337b6aa2486a42feabdd5133}{kCLOCK\_BusClk}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{group__sf__conf__func__group_ga68177f0281489ba75661dc8517f4d547}{SF\_SetupSPI}}(\&(drvData.\mbox{\hyperlink{structsf__drv__data__t_a86cf59ba9cfdafebf74e3cb1a5b2a507}{spiConfig}}), NULL);}
+\end{DoxyCode}
+
+
+Example of S\+PI configuration in S\+DK 2.\+3, where user must provide master configuration structure (spi\+Sdk\+Config parameter)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// SDK 2.3 SPI master configuration used by SPI driver.}}
+\DoxyCodeLine{\mbox{\hyperlink{struct__spi__master__config}{spi\_master\_config\_t}} masterConfig = \{0\};}
+\DoxyCodeLine{\textcolor{comment}{// Data used by SIGFOX driver. You should use this structure in all}}
+\DoxyCodeLine{\textcolor{comment}{// driver's functions.}}
+\DoxyCodeLine{\mbox{\hyperlink{structsf__drv__data__t}{sf\_drv\_data\_t}} drvData;}
+\DoxyCodeLine{}
+\DoxyCodeLine{drvData.\mbox{\hyperlink{structsf__drv__data__t_a86cf59ba9cfdafebf74e3cb1a5b2a507}{spiConfig}}.\mbox{\hyperlink{structsf__spi__config__t_abe234e3e56ed07590f4377320714a7d4}{spiInstance}} = 1U;     \textcolor{comment}{// SPI 1 peripheral.}}
+\DoxyCodeLine{drvData.\mbox{\hyperlink{structsf__drv__data__t_a86cf59ba9cfdafebf74e3cb1a5b2a507}{spiConfig}}.\mbox{\hyperlink{structsf__spi__config__t_ab38a80feace530cdca66134f6e3801aa}{baudRate}} = 125000U;}
+\DoxyCodeLine{drvData.\mbox{\hyperlink{structsf__drv__data__t_a86cf59ba9cfdafebf74e3cb1a5b2a507}{spiConfig}}.\mbox{\hyperlink{structsf__spi__config__t_ac83aea11badb20dd2844adf51262c9d0}{sourceClkHz}} = \mbox{\hyperlink{group__clock_ga53acae220d651789bb505c53c73ecf2b}{CLOCK\_GetFreq}}(\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a5d1ee238337b6aa2486a42feabdd5133}{kCLOCK\_BusClk}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Use default configuration and update baudrate and chip select mode }}
+\DoxyCodeLine{\textcolor{comment}{// (CS is handled by GPIO).}}
+\DoxyCodeLine{\mbox{\hyperlink{group__spi__driver_ga45c08fc078ae334b79fb844379140838}{SPI\_MasterGetDefaultConfig}}(\&masterConfig);}
+\DoxyCodeLine{masterConfig.\mbox{\hyperlink{struct__spi__master__config_aa5df547b4cb95d3c959373cf6fa672b5}{baudRate\_Bps}} = 125000U;}
+\DoxyCodeLine{masterConfig.\mbox{\hyperlink{struct__spi__master__config_a285cf929f1817b37a10f2afffc810ac8}{outputMode}} = \mbox{\hyperlink{group__spi__driver_gga2e815689312c22a94fe0519f7bc0a991a3825177650b5d4bfb5dc603f0ce41381}{kSPI\_SlaveSelectAsGpio}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{group__sf__conf__func__group_ga68177f0281489ba75661dc8517f4d547}{SF\_SetupSPI}}(\&(drvData.\mbox{\hyperlink{structsf__drv__data__t_a86cf59ba9cfdafebf74e3cb1a5b2a507}{spiConfig}}), \&masterConfig);}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi\+Config} & Structure for S\+PI configuration. \\
+\hline
+{\em user\+Spi\+Sdk\+Config} & S\+DK configuration structure.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}

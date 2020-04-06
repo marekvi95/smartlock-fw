@@ -1,0 +1,912 @@
+\hypertarget{group__spi__driver}{}\section{Spi\+\_\+driver}
+\label{group__spi__driver}\index{Spi\_driver@{Spi\_driver}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__spi__master__config}{\+\_\+spi\+\_\+master\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em S\+PI master user configure structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__spi__slave__config}{\+\_\+spi\+\_\+slave\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em S\+PI slave user configure structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__spi__transfer}{\+\_\+spi\+\_\+transfer}}
+\begin{DoxyCompactList}\small\item\em S\+PI transfer structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__spi__master__handle}{\+\_\+spi\+\_\+master\+\_\+handle}}
+\begin{DoxyCompactList}\small\item\em S\+PI transfer handle structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__spi__driver_ga1541129ba8262e1649592b5109e2074c}\label{group__spi__driver_ga1541129ba8262e1649592b5109e2074c}} 
+\#define \mbox{\hyperlink{group__spi__driver_ga1541129ba8262e1649592b5109e2074c}{S\+P\+I\+\_\+\+D\+U\+M\+M\+Y\+D\+A\+TA}}~(0x\+F\+F\+U)
+\begin{DoxyCompactList}\small\item\em S\+PI dummy transfer data, the data is sent while tx\+Buff is N\+U\+LL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__spi__driver_ga9de95ac02ae859ac26534c06eb47b5b8}\label{group__spi__driver_ga9de95ac02ae859ac26534c06eb47b5b8}} 
+typedef enum \mbox{\hyperlink{group__spi__driver_ga17f9450af8f63de3fa2b3b105eeec38d}{\+\_\+spi\+\_\+clock\+\_\+polarity}} \mbox{\hyperlink{group__spi__driver_ga9de95ac02ae859ac26534c06eb47b5b8}{spi\+\_\+clock\+\_\+polarity\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI clock polarity configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_ga12e1c73dd72aaabd76ff5ce23c0d3244}\label{group__spi__driver_ga12e1c73dd72aaabd76ff5ce23c0d3244}} 
+typedef enum \mbox{\hyperlink{group__spi__driver_ga76b6ec98408fdaf2e9133952eefa1baa}{\+\_\+spi\+\_\+clock\+\_\+phase}} \mbox{\hyperlink{group__spi__driver_ga12e1c73dd72aaabd76ff5ce23c0d3244}{spi\+\_\+clock\+\_\+phase\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI clock phase configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_gadc24bb931a59fc64ee4cb60ed56addb4}\label{group__spi__driver_gadc24bb931a59fc64ee4cb60ed56addb4}} 
+typedef enum \mbox{\hyperlink{group__spi__driver_ga1737fd82344e0800f66b541342894b85}{\+\_\+spi\+\_\+shift\+\_\+direction}} \mbox{\hyperlink{group__spi__driver_gadc24bb931a59fc64ee4cb60ed56addb4}{spi\+\_\+shift\+\_\+direction\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI data shifter direction options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_gaba865b4b3ce19476407c3013454c8217}\label{group__spi__driver_gaba865b4b3ce19476407c3013454c8217}} 
+typedef enum \mbox{\hyperlink{group__spi__driver_ga2e815689312c22a94fe0519f7bc0a991}{\+\_\+spi\+\_\+ss\+\_\+output\+\_\+mode}} \mbox{\hyperlink{group__spi__driver_gaba865b4b3ce19476407c3013454c8217}{spi\+\_\+ss\+\_\+output\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI slave select output mode options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_ga4d2e20ceaf81868a429938113afe8726}\label{group__spi__driver_ga4d2e20ceaf81868a429938113afe8726}} 
+typedef enum \mbox{\hyperlink{group__spi__driver_ga014ab448d5b79e6cf5b9ffb11c3d0729}{\+\_\+spi\+\_\+pin\+\_\+mode}} \mbox{\hyperlink{group__spi__driver_ga4d2e20ceaf81868a429938113afe8726}{spi\+\_\+pin\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI pin mode options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_gac7eb20f2509999c1daa274c03c4a29b3}\label{group__spi__driver_gac7eb20f2509999c1daa274c03c4a29b3}} 
+typedef enum \mbox{\hyperlink{group__spi__driver_ga1e6f95a831fb9323a32a9676ef049813}{\+\_\+spi\+\_\+data\+\_\+bitcount\+\_\+mode}} \mbox{\hyperlink{group__spi__driver_gac7eb20f2509999c1daa274c03c4a29b3}{spi\+\_\+data\+\_\+bitcount\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI data length mode options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_ga15e5f834f83ba89de1e920bba9d00394}\label{group__spi__driver_ga15e5f834f83ba89de1e920bba9d00394}} 
+typedef struct \mbox{\hyperlink{struct__spi__master__config}{\+\_\+spi\+\_\+master\+\_\+config}} \mbox{\hyperlink{group__spi__driver_ga15e5f834f83ba89de1e920bba9d00394}{spi\+\_\+master\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI master user configure structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_gaa62352a5d0a01f70fe74941809d03ec3}\label{group__spi__driver_gaa62352a5d0a01f70fe74941809d03ec3}} 
+typedef struct \mbox{\hyperlink{struct__spi__slave__config}{\+\_\+spi\+\_\+slave\+\_\+config}} \mbox{\hyperlink{group__spi__driver_gaa62352a5d0a01f70fe74941809d03ec3}{spi\+\_\+slave\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI slave user configure structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_ga59314d5596f240cfbe8b9466bd99ed3f}\label{group__spi__driver_ga59314d5596f240cfbe8b9466bd99ed3f}} 
+typedef struct \mbox{\hyperlink{struct__spi__transfer}{\+\_\+spi\+\_\+transfer}} \mbox{\hyperlink{group__spi__driver_ga59314d5596f240cfbe8b9466bd99ed3f}{spi\+\_\+transfer\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI transfer structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_gafb311d8a8b7de084d82915f5a003a300}\label{group__spi__driver_gafb311d8a8b7de084d82915f5a003a300}} 
+typedef struct \mbox{\hyperlink{struct__spi__master__handle}{\+\_\+spi\+\_\+master\+\_\+handle}} {\bfseries spi\+\_\+master\+\_\+handle\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}\label{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}} 
+typedef \mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} \mbox{\hyperlink{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}{spi\+\_\+slave\+\_\+handle\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Slave handle is the same with master handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_ga75d9df6e4614756d8ff1bd6f86ca2235}\label{group__spi__driver_ga75d9df6e4614756d8ff1bd6f86ca2235}} 
+typedef void($\ast$ \mbox{\hyperlink{group__spi__driver_ga75d9df6e4614756d8ff1bd6f86ca2235}{spi\+\_\+master\+\_\+callback\+\_\+t}}) (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} status, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em S\+PI master callback for finished transmit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__spi__driver_ga13fbc3110c56c1d312e4a5ebed07d679}\label{group__spi__driver_ga13fbc3110c56c1d312e4a5ebed07d679}} 
+typedef void($\ast$ \mbox{\hyperlink{group__spi__driver_ga13fbc3110c56c1d312e4a5ebed07d679}{spi\+\_\+slave\+\_\+callback\+\_\+t}}) (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}{spi\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} status, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em S\+PI master callback for finished transmit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__spi__driver_ga3fa79a6717ea4e1e74de2dadaa468edd}{\+\_\+spi\+\_\+status}} \{ \mbox{\hyperlink{group__spi__driver_gga3fa79a6717ea4e1e74de2dadaa468edda703abdf7900047c4d13536480f3463ab}{k\+Status\+\_\+\+S\+P\+I\+\_\+\+Busy}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+S\+PI, 0), 
+\mbox{\hyperlink{group__spi__driver_gga3fa79a6717ea4e1e74de2dadaa468edda4e32c5b06dccaf4b81e2fd1679e1b560}{k\+Status\+\_\+\+S\+P\+I\+\_\+\+Idle}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+S\+PI, 1), 
+\mbox{\hyperlink{group__spi__driver_gga3fa79a6717ea4e1e74de2dadaa468edda2ff91d774e93aed936b87ffaa18aaf9e}{k\+Status\+\_\+\+S\+P\+I\+\_\+\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+S\+PI, 2)
+ \}
+\begin{DoxyCompactList}\small\item\em Return status for the S\+PI driver. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__spi__driver_ga17f9450af8f63de3fa2b3b105eeec38d}{\+\_\+spi\+\_\+clock\+\_\+polarity}} \{ \mbox{\hyperlink{group__spi__driver_gga17f9450af8f63de3fa2b3b105eeec38da031c0ee2693cf1fd621e8b8cba676629}{k\+S\+P\+I\+\_\+\+Clock\+Polarity\+Active\+High}} = 0x0U, 
+\mbox{\hyperlink{group__spi__driver_gga17f9450af8f63de3fa2b3b105eeec38dacfc8257079c9604086622df6de326aea}{k\+S\+P\+I\+\_\+\+Clock\+Polarity\+Active\+Low}}
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI clock polarity configuration. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__spi__driver_ga76b6ec98408fdaf2e9133952eefa1baa}{\+\_\+spi\+\_\+clock\+\_\+phase}} \{ \mbox{\hyperlink{group__spi__driver_gga76b6ec98408fdaf2e9133952eefa1baaad15d61c6fd642f13101edbf401d0c72e}{k\+S\+P\+I\+\_\+\+Clock\+Phase\+First\+Edge}} = 0x0U, 
+\mbox{\hyperlink{group__spi__driver_gga76b6ec98408fdaf2e9133952eefa1baaa18a98985c1f7dd56175e4a2724db3675}{k\+S\+P\+I\+\_\+\+Clock\+Phase\+Second\+Edge}}
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI clock phase configuration. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__spi__driver_ga1737fd82344e0800f66b541342894b85}{\+\_\+spi\+\_\+shift\+\_\+direction}} \{ \mbox{\hyperlink{group__spi__driver_gga1737fd82344e0800f66b541342894b85ae7b997e8cff761aab865cbd42c4c3989}{k\+S\+P\+I\+\_\+\+Msb\+First}} = 0x0U, 
+\mbox{\hyperlink{group__spi__driver_gga1737fd82344e0800f66b541342894b85a20ac53684c3e1ad338553cecbfab94a9}{k\+S\+P\+I\+\_\+\+Lsb\+First}}
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI data shifter direction options. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__spi__driver_ga2e815689312c22a94fe0519f7bc0a991}{\+\_\+spi\+\_\+ss\+\_\+output\+\_\+mode}} \{ \mbox{\hyperlink{group__spi__driver_gga2e815689312c22a94fe0519f7bc0a991a3825177650b5d4bfb5dc603f0ce41381}{k\+S\+P\+I\+\_\+\+Slave\+Select\+As\+Gpio}} = 0x0U, 
+\mbox{\hyperlink{group__spi__driver_gga2e815689312c22a94fe0519f7bc0a991afdcbdc624d6c2f057147e2aa3cae4635}{k\+S\+P\+I\+\_\+\+Slave\+Select\+Fault\+Input}} = 0x2U, 
+\mbox{\hyperlink{group__spi__driver_gga2e815689312c22a94fe0519f7bc0a991ad724fc04589d03b524ef2dfef6b0f4a1}{k\+S\+P\+I\+\_\+\+Slave\+Select\+Automatic\+Output}} = 0x3U
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI slave select output mode options. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__spi__driver_ga014ab448d5b79e6cf5b9ffb11c3d0729}{\+\_\+spi\+\_\+pin\+\_\+mode}} \{ \mbox{\hyperlink{group__spi__driver_gga014ab448d5b79e6cf5b9ffb11c3d0729a7ba3d5ffce8458f91a9594e7ffe2b32d}{k\+S\+P\+I\+\_\+\+Pin\+Mode\+Normal}} = 0x0U, 
+\mbox{\hyperlink{group__spi__driver_gga014ab448d5b79e6cf5b9ffb11c3d0729ad778c9cc9e3d5a5c4e8061793cf50fdc}{k\+S\+P\+I\+\_\+\+Pin\+Mode\+Input}} = 0x1U, 
+\mbox{\hyperlink{group__spi__driver_gga014ab448d5b79e6cf5b9ffb11c3d0729ad5b79c8eba688dbfb4b9973348521de7}{k\+S\+P\+I\+\_\+\+Pin\+Mode\+Output}} = 0x3U
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI pin mode options. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__spi__driver_ga1e6f95a831fb9323a32a9676ef049813}{\+\_\+spi\+\_\+data\+\_\+bitcount\+\_\+mode}} \{ \mbox{\hyperlink{group__spi__driver_gga1e6f95a831fb9323a32a9676ef049813a1a0723fd8cd73f361ca2770ad74a6324}{k\+S\+P\+I\+\_\+8\+Bit\+Mode}} = 0x0U, 
+\mbox{\hyperlink{group__spi__driver_gga1e6f95a831fb9323a32a9676ef049813a740c43589ebe839f3adc77b8ca484ea4}{k\+S\+P\+I\+\_\+16\+Bit\+Mode}}
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI data length mode options. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__spi__driver_gaedd690a0f91a0a9eb0fd573b57e31f67}{\+\_\+spi\+\_\+interrupt\+\_\+enable}} \{ \mbox{\hyperlink{group__spi__driver_ggaedd690a0f91a0a9eb0fd573b57e31f67aa317b77c827ed1462b766dddd93f7f10}{k\+S\+P\+I\+\_\+\+Rx\+Full\+And\+Modf\+Interrupt\+Enable}} = 0x1U, 
+\mbox{\hyperlink{group__spi__driver_ggaedd690a0f91a0a9eb0fd573b57e31f67abe157750a1660d839a66197c56ac5096}{k\+S\+P\+I\+\_\+\+Tx\+Empty\+Interrupt\+Enable}} = 0x2U, 
+\mbox{\hyperlink{group__spi__driver_ggaedd690a0f91a0a9eb0fd573b57e31f67a95cc9167ada10046534dc22549c6a99e}{k\+S\+P\+I\+\_\+\+Match\+Interrupt\+Enable}} = 0x4U
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI interrupt sources. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__spi__driver_gaea776f478792865a85b7311e6ff5896c}{\+\_\+spi\+\_\+flags}} \{ \mbox{\hyperlink{group__spi__driver_ggaea776f478792865a85b7311e6ff5896cacc0e5c67e296cc20197afaca46f22953}{k\+S\+P\+I\+\_\+\+Rx\+Buffer\+Full\+Flag}} = S\+P\+I\+\_\+\+S\+\_\+\+S\+P\+R\+F\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__spi__driver_ggaea776f478792865a85b7311e6ff5896ca9c24fe83960ed64638f06eeb17643da5}{k\+S\+P\+I\+\_\+\+Match\+Flag}} = S\+P\+I\+\_\+\+S\+\_\+\+S\+P\+M\+F\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__spi__driver_ggaea776f478792865a85b7311e6ff5896ca07934a27954d951831e7cdb96c39afd7}{k\+S\+P\+I\+\_\+\+Tx\+Buffer\+Empty\+Flag}} = S\+P\+I\+\_\+\+S\+\_\+\+S\+P\+T\+E\+F\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__spi__driver_ggaea776f478792865a85b7311e6ff5896ca9eca4e759c879e3b264d052c234a09d1}{k\+S\+P\+I\+\_\+\+Mode\+Fault\+Flag}} = S\+P\+I\+\_\+\+S\+\_\+\+M\+O\+D\+F\+\_\+\+M\+A\+SK
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI status flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__spi__driver_ga2789f8e1074f19357daf2d8ece8b86ad}\label{group__spi__driver_ga2789f8e1074f19357daf2d8ece8b86ad}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{group__spi__driver_ga2789f8e1074f19357daf2d8ece8b86ad}{g\+\_\+spi\+Dummy\+Data}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Global variable for dummy data value setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__spi__driver_gaeb6046de02dffe9248de71332fac246e}\label{group__spi__driver_gaeb6046de02dffe9248de71332fac246e}} 
+\#define \mbox{\hyperlink{group__spi__driver_gaeb6046de02dffe9248de71332fac246e}{F\+S\+L\+\_\+\+S\+P\+I\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 0, 4))
+\begin{DoxyCompactList}\small\item\em S\+PI driver version 2.\+0.\+4. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Initialization and deinitialization}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__spi__driver_ga45c08fc078ae334b79fb844379140838}{S\+P\+I\+\_\+\+Master\+Get\+Default\+Config}} (\mbox{\hyperlink{group__spi__driver_ga15e5f834f83ba89de1e920bba9d00394}{spi\+\_\+master\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Sets the S\+PI master configuration structure to default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}{S\+P\+I\+\_\+\+Master\+Init}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, const \mbox{\hyperlink{group__spi__driver_ga15e5f834f83ba89de1e920bba9d00394}{spi\+\_\+master\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t src\+Clock\+\_\+\+Hz)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+PI with master configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_gac000b63ed033f57a9eee342a8c8e67f2}{S\+P\+I\+\_\+\+Slave\+Get\+Default\+Config}} (\mbox{\hyperlink{group__spi__driver_gaa62352a5d0a01f70fe74941809d03ec3}{spi\+\_\+slave\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Sets the S\+PI slave configuration structure to default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_ga91b214b5392fc8d5b73a5ebadc5ca363}{S\+P\+I\+\_\+\+Slave\+Init}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, const \mbox{\hyperlink{group__spi__driver_gaa62352a5d0a01f70fe74941809d03ec3}{spi\+\_\+slave\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+PI with slave configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_gaac0bc2b87ea2eb7eeba78d9449d4dbbf}{S\+P\+I\+\_\+\+Deinit}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em De-\/initializes the S\+PI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Status}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__spi__driver_gaaa5a317a68b409dfe20397b45e48d1f0}{S\+P\+I\+\_\+\+Get\+Status\+Flags}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Gets the status flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Interrupts}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__spi__driver_gac12d144816080c40ca86d762e31aacc4}{S\+P\+I\+\_\+\+Enable\+Interrupts}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Enables the interrupt for the S\+PI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_ga1c3de83156f45d3f91540a1ec5f92826}{S\+P\+I\+\_\+\+Disable\+Interrupts}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Disables the interrupt for the S\+PI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Bus Operations}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__spi__driver_gad823d00c394f6ca35c391dc178a25334}{S\+P\+I\+\_\+\+Get\+Instance}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Get the instance for S\+PI module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_ga3ebe045018782edb3624026795d6269a}{S\+P\+I\+\_\+\+Master\+Set\+Baud\+Rate}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, uint32\+\_\+t baud\+Rate\+\_\+\+Bps, uint32\+\_\+t src\+Clock\+\_\+\+Hz)
+\begin{DoxyCompactList}\small\item\em Sets the baud rate for S\+PI transfer. This is only used in master. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_gae28a41ba015e3bc92936459f83500cd0}{S\+P\+I\+\_\+\+Write\+Blocking}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, uint8\+\_\+t $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sends a buffer of data bytes using a blocking method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_ga74d8732386a607c263bd16c8294b08d6}{S\+P\+I\+\_\+\+Write\+Data}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, uint16\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Writes a data into the S\+PI data register. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__spi__driver_gaf23d3779b122e78fc07562bf5dbf3ac3}{S\+P\+I\+\_\+\+Read\+Data}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Gets a data from the S\+PI data register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_gaa381d274dba2ce9257cdf4be5ec17662}{S\+P\+I\+\_\+\+Set\+Dummy\+Data}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, uint8\+\_\+t dummy\+Data)
+\begin{DoxyCompactList}\small\item\em Set up the dummy data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Transactional}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__spi__driver_ga6cf3e807307ecb22578cc9088adafcf2}{S\+P\+I\+\_\+\+Master\+Transfer\+Create\+Handle}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__spi__driver_ga75d9df6e4614756d8ff1bd6f86ca2235}{spi\+\_\+master\+\_\+callback\+\_\+t}} callback, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+PI master handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__spi__driver_ga5b05095245ecf01258e64cc0458fb2e9}{S\+P\+I\+\_\+\+Master\+Transfer\+Blocking}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__spi__driver_ga59314d5596f240cfbe8b9466bd99ed3f}{spi\+\_\+transfer\+\_\+t}} $\ast$xfer)
+\begin{DoxyCompactList}\small\item\em Transfers a block of data using a polling method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__spi__driver_ga820c78a32fa29735168d2e517f4881a1}{S\+P\+I\+\_\+\+Master\+Transfer\+Non\+Blocking}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__spi__driver_ga59314d5596f240cfbe8b9466bd99ed3f}{spi\+\_\+transfer\+\_\+t}} $\ast$xfer)
+\begin{DoxyCompactList}\small\item\em Performs a non-\/blocking S\+PI interrupt transfer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__spi__driver_gabde0dccfb0783d103b9cf57e0202582f}{S\+P\+I\+\_\+\+Master\+Transfer\+Get\+Count}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle, size\+\_\+t $\ast$count)
+\begin{DoxyCompactList}\small\item\em Gets the bytes of the S\+PI interrupt transferred. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_gae90962a54978acf05ca7780489301eb4}{S\+P\+I\+\_\+\+Master\+Transfer\+Abort}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Aborts an S\+PI transfer using interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_ga645d041a92bde312d6cf64517c618c41}{S\+P\+I\+\_\+\+Master\+Transfer\+Handle\+I\+RQ}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Interrupts the handler for the S\+PI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_gab7e0ae7d0a88e7e1059b2cb0ed878b2e}{S\+P\+I\+\_\+\+Slave\+Transfer\+Create\+Handle}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}{spi\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__spi__driver_ga13fbc3110c56c1d312e4a5ebed07d679}{spi\+\_\+slave\+\_\+callback\+\_\+t}} callback, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+PI slave handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__spi__driver_gaac1ff8fc728c925d78b1237949ebf7c3}{S\+P\+I\+\_\+\+Slave\+Transfer\+Handle\+I\+RQ}} (\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$base, \mbox{\hyperlink{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}{spi\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Interrupts a handler for the S\+PI slave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__spi__driver_ga76b6ec98408fdaf2e9133952eefa1baa}\label{group__spi__driver_ga76b6ec98408fdaf2e9133952eefa1baa}} 
+\index{Spi\_driver@{Spi\_driver}!\_spi\_clock\_phase@{\_spi\_clock\_phase}}
+\index{\_spi\_clock\_phase@{\_spi\_clock\_phase}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{\_spi\_clock\_phase}{\_spi\_clock\_phase}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__spi__driver_ga76b6ec98408fdaf2e9133952eefa1baa}{\+\_\+spi\+\_\+clock\+\_\+phase}}}
+
+
+
+S\+PI clock phase configuration. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_ClockPhaseFirstEdge@{kSPI\_ClockPhaseFirstEdge}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_ClockPhaseFirstEdge@{kSPI\_ClockPhaseFirstEdge}}}\mbox{\Hypertarget{group__spi__driver_gga76b6ec98408fdaf2e9133952eefa1baaad15d61c6fd642f13101edbf401d0c72e}\label{group__spi__driver_gga76b6ec98408fdaf2e9133952eefa1baaad15d61c6fd642f13101edbf401d0c72e}} 
+k\+S\+P\+I\+\_\+\+Clock\+Phase\+First\+Edge&First edge on S\+P\+S\+CK occurs at the middle of the first cycle of a data transfer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_ClockPhaseSecondEdge@{kSPI\_ClockPhaseSecondEdge}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_ClockPhaseSecondEdge@{kSPI\_ClockPhaseSecondEdge}}}\mbox{\Hypertarget{group__spi__driver_gga76b6ec98408fdaf2e9133952eefa1baaa18a98985c1f7dd56175e4a2724db3675}\label{group__spi__driver_gga76b6ec98408fdaf2e9133952eefa1baaa18a98985c1f7dd56175e4a2724db3675}} 
+k\+S\+P\+I\+\_\+\+Clock\+Phase\+Second\+Edge&First edge on S\+P\+S\+CK occurs at the start of the first cycle of a data transfer. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__spi__driver_ga17f9450af8f63de3fa2b3b105eeec38d}\label{group__spi__driver_ga17f9450af8f63de3fa2b3b105eeec38d}} 
+\index{Spi\_driver@{Spi\_driver}!\_spi\_clock\_polarity@{\_spi\_clock\_polarity}}
+\index{\_spi\_clock\_polarity@{\_spi\_clock\_polarity}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{\_spi\_clock\_polarity}{\_spi\_clock\_polarity}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__spi__driver_ga17f9450af8f63de3fa2b3b105eeec38d}{\+\_\+spi\+\_\+clock\+\_\+polarity}}}
+
+
+
+S\+PI clock polarity configuration. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_ClockPolarityActiveHigh@{kSPI\_ClockPolarityActiveHigh}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_ClockPolarityActiveHigh@{kSPI\_ClockPolarityActiveHigh}}}\mbox{\Hypertarget{group__spi__driver_gga17f9450af8f63de3fa2b3b105eeec38da031c0ee2693cf1fd621e8b8cba676629}\label{group__spi__driver_gga17f9450af8f63de3fa2b3b105eeec38da031c0ee2693cf1fd621e8b8cba676629}} 
+k\+S\+P\+I\+\_\+\+Clock\+Polarity\+Active\+High&Active-\/high S\+PI clock (idles low). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_ClockPolarityActiveLow@{kSPI\_ClockPolarityActiveLow}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_ClockPolarityActiveLow@{kSPI\_ClockPolarityActiveLow}}}\mbox{\Hypertarget{group__spi__driver_gga17f9450af8f63de3fa2b3b105eeec38dacfc8257079c9604086622df6de326aea}\label{group__spi__driver_gga17f9450af8f63de3fa2b3b105eeec38dacfc8257079c9604086622df6de326aea}} 
+k\+S\+P\+I\+\_\+\+Clock\+Polarity\+Active\+Low&Active-\/low S\+PI clock (idles high). \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__spi__driver_ga1e6f95a831fb9323a32a9676ef049813}\label{group__spi__driver_ga1e6f95a831fb9323a32a9676ef049813}} 
+\index{Spi\_driver@{Spi\_driver}!\_spi\_data\_bitcount\_mode@{\_spi\_data\_bitcount\_mode}}
+\index{\_spi\_data\_bitcount\_mode@{\_spi\_data\_bitcount\_mode}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{\_spi\_data\_bitcount\_mode}{\_spi\_data\_bitcount\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__spi__driver_ga1e6f95a831fb9323a32a9676ef049813}{\+\_\+spi\+\_\+data\+\_\+bitcount\+\_\+mode}}}
+
+
+
+S\+PI data length mode options. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_8BitMode@{kSPI\_8BitMode}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_8BitMode@{kSPI\_8BitMode}}}\mbox{\Hypertarget{group__spi__driver_gga1e6f95a831fb9323a32a9676ef049813a1a0723fd8cd73f361ca2770ad74a6324}\label{group__spi__driver_gga1e6f95a831fb9323a32a9676ef049813a1a0723fd8cd73f361ca2770ad74a6324}} 
+k\+S\+P\+I\+\_\+8\+Bit\+Mode&8-\/bit data transmission mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_16BitMode@{kSPI\_16BitMode}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_16BitMode@{kSPI\_16BitMode}}}\mbox{\Hypertarget{group__spi__driver_gga1e6f95a831fb9323a32a9676ef049813a740c43589ebe839f3adc77b8ca484ea4}\label{group__spi__driver_gga1e6f95a831fb9323a32a9676ef049813a740c43589ebe839f3adc77b8ca484ea4}} 
+k\+S\+P\+I\+\_\+16\+Bit\+Mode&16-\/bit data transmission mode \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__spi__driver_gaea776f478792865a85b7311e6ff5896c}\label{group__spi__driver_gaea776f478792865a85b7311e6ff5896c}} 
+\index{Spi\_driver@{Spi\_driver}!\_spi\_flags@{\_spi\_flags}}
+\index{\_spi\_flags@{\_spi\_flags}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{\_spi\_flags}{\_spi\_flags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__spi__driver_gaea776f478792865a85b7311e6ff5896c}{\+\_\+spi\+\_\+flags}}}
+
+
+
+S\+PI status flags. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_RxBufferFullFlag@{kSPI\_RxBufferFullFlag}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_RxBufferFullFlag@{kSPI\_RxBufferFullFlag}}}\mbox{\Hypertarget{group__spi__driver_ggaea776f478792865a85b7311e6ff5896cacc0e5c67e296cc20197afaca46f22953}\label{group__spi__driver_ggaea776f478792865a85b7311e6ff5896cacc0e5c67e296cc20197afaca46f22953}} 
+k\+S\+P\+I\+\_\+\+Rx\+Buffer\+Full\+Flag&Read buffer full flag \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_MatchFlag@{kSPI\_MatchFlag}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_MatchFlag@{kSPI\_MatchFlag}}}\mbox{\Hypertarget{group__spi__driver_ggaea776f478792865a85b7311e6ff5896ca9c24fe83960ed64638f06eeb17643da5}\label{group__spi__driver_ggaea776f478792865a85b7311e6ff5896ca9c24fe83960ed64638f06eeb17643da5}} 
+k\+S\+P\+I\+\_\+\+Match\+Flag&Match flag \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_TxBufferEmptyFlag@{kSPI\_TxBufferEmptyFlag}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_TxBufferEmptyFlag@{kSPI\_TxBufferEmptyFlag}}}\mbox{\Hypertarget{group__spi__driver_ggaea776f478792865a85b7311e6ff5896ca07934a27954d951831e7cdb96c39afd7}\label{group__spi__driver_ggaea776f478792865a85b7311e6ff5896ca07934a27954d951831e7cdb96c39afd7}} 
+k\+S\+P\+I\+\_\+\+Tx\+Buffer\+Empty\+Flag&Transmit buffer empty flag \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_ModeFaultFlag@{kSPI\_ModeFaultFlag}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_ModeFaultFlag@{kSPI\_ModeFaultFlag}}}\mbox{\Hypertarget{group__spi__driver_ggaea776f478792865a85b7311e6ff5896ca9eca4e759c879e3b264d052c234a09d1}\label{group__spi__driver_ggaea776f478792865a85b7311e6ff5896ca9eca4e759c879e3b264d052c234a09d1}} 
+k\+S\+P\+I\+\_\+\+Mode\+Fault\+Flag&Mode fault flag \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__spi__driver_gaedd690a0f91a0a9eb0fd573b57e31f67}\label{group__spi__driver_gaedd690a0f91a0a9eb0fd573b57e31f67}} 
+\index{Spi\_driver@{Spi\_driver}!\_spi\_interrupt\_enable@{\_spi\_interrupt\_enable}}
+\index{\_spi\_interrupt\_enable@{\_spi\_interrupt\_enable}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{\_spi\_interrupt\_enable}{\_spi\_interrupt\_enable}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__spi__driver_gaedd690a0f91a0a9eb0fd573b57e31f67}{\+\_\+spi\+\_\+interrupt\+\_\+enable}}}
+
+
+
+S\+PI interrupt sources. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_RxFullAndModfInterruptEnable@{kSPI\_RxFullAndModfInterruptEnable}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_RxFullAndModfInterruptEnable@{kSPI\_RxFullAndModfInterruptEnable}}}\mbox{\Hypertarget{group__spi__driver_ggaedd690a0f91a0a9eb0fd573b57e31f67aa317b77c827ed1462b766dddd93f7f10}\label{group__spi__driver_ggaedd690a0f91a0a9eb0fd573b57e31f67aa317b77c827ed1462b766dddd93f7f10}} 
+k\+S\+P\+I\+\_\+\+Rx\+Full\+And\+Modf\+Interrupt\+Enable&Receive buffer full (S\+P\+RF) and mode fault (M\+O\+DF) interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_TxEmptyInterruptEnable@{kSPI\_TxEmptyInterruptEnable}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_TxEmptyInterruptEnable@{kSPI\_TxEmptyInterruptEnable}}}\mbox{\Hypertarget{group__spi__driver_ggaedd690a0f91a0a9eb0fd573b57e31f67abe157750a1660d839a66197c56ac5096}\label{group__spi__driver_ggaedd690a0f91a0a9eb0fd573b57e31f67abe157750a1660d839a66197c56ac5096}} 
+k\+S\+P\+I\+\_\+\+Tx\+Empty\+Interrupt\+Enable&Transmit buffer empty interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_MatchInterruptEnable@{kSPI\_MatchInterruptEnable}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_MatchInterruptEnable@{kSPI\_MatchInterruptEnable}}}\mbox{\Hypertarget{group__spi__driver_ggaedd690a0f91a0a9eb0fd573b57e31f67a95cc9167ada10046534dc22549c6a99e}\label{group__spi__driver_ggaedd690a0f91a0a9eb0fd573b57e31f67a95cc9167ada10046534dc22549c6a99e}} 
+k\+S\+P\+I\+\_\+\+Match\+Interrupt\+Enable&Match interrupt \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__spi__driver_ga014ab448d5b79e6cf5b9ffb11c3d0729}\label{group__spi__driver_ga014ab448d5b79e6cf5b9ffb11c3d0729}} 
+\index{Spi\_driver@{Spi\_driver}!\_spi\_pin\_mode@{\_spi\_pin\_mode}}
+\index{\_spi\_pin\_mode@{\_spi\_pin\_mode}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{\_spi\_pin\_mode}{\_spi\_pin\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__spi__driver_ga014ab448d5b79e6cf5b9ffb11c3d0729}{\+\_\+spi\+\_\+pin\+\_\+mode}}}
+
+
+
+S\+PI pin mode options. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_PinModeNormal@{kSPI\_PinModeNormal}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_PinModeNormal@{kSPI\_PinModeNormal}}}\mbox{\Hypertarget{group__spi__driver_gga014ab448d5b79e6cf5b9ffb11c3d0729a7ba3d5ffce8458f91a9594e7ffe2b32d}\label{group__spi__driver_gga014ab448d5b79e6cf5b9ffb11c3d0729a7ba3d5ffce8458f91a9594e7ffe2b32d}} 
+k\+S\+P\+I\+\_\+\+Pin\+Mode\+Normal&Pins operate in normal, single-\/direction mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_PinModeInput@{kSPI\_PinModeInput}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_PinModeInput@{kSPI\_PinModeInput}}}\mbox{\Hypertarget{group__spi__driver_gga014ab448d5b79e6cf5b9ffb11c3d0729ad778c9cc9e3d5a5c4e8061793cf50fdc}\label{group__spi__driver_gga014ab448d5b79e6cf5b9ffb11c3d0729ad778c9cc9e3d5a5c4e8061793cf50fdc}} 
+k\+S\+P\+I\+\_\+\+Pin\+Mode\+Input&Bidirectional mode. Master\+: M\+O\+SI pin is input; Slave\+: M\+I\+SO pin is input. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_PinModeOutput@{kSPI\_PinModeOutput}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_PinModeOutput@{kSPI\_PinModeOutput}}}\mbox{\Hypertarget{group__spi__driver_gga014ab448d5b79e6cf5b9ffb11c3d0729ad5b79c8eba688dbfb4b9973348521de7}\label{group__spi__driver_gga014ab448d5b79e6cf5b9ffb11c3d0729ad5b79c8eba688dbfb4b9973348521de7}} 
+k\+S\+P\+I\+\_\+\+Pin\+Mode\+Output&Bidirectional mode. Master\+: M\+O\+SI pin is output; Slave\+: M\+I\+SO pin is output. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__spi__driver_ga1737fd82344e0800f66b541342894b85}\label{group__spi__driver_ga1737fd82344e0800f66b541342894b85}} 
+\index{Spi\_driver@{Spi\_driver}!\_spi\_shift\_direction@{\_spi\_shift\_direction}}
+\index{\_spi\_shift\_direction@{\_spi\_shift\_direction}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{\_spi\_shift\_direction}{\_spi\_shift\_direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__spi__driver_ga1737fd82344e0800f66b541342894b85}{\+\_\+spi\+\_\+shift\+\_\+direction}}}
+
+
+
+S\+PI data shifter direction options. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_MsbFirst@{kSPI\_MsbFirst}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_MsbFirst@{kSPI\_MsbFirst}}}\mbox{\Hypertarget{group__spi__driver_gga1737fd82344e0800f66b541342894b85ae7b997e8cff761aab865cbd42c4c3989}\label{group__spi__driver_gga1737fd82344e0800f66b541342894b85ae7b997e8cff761aab865cbd42c4c3989}} 
+k\+S\+P\+I\+\_\+\+Msb\+First&Data transfers start with most significant bit. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_LsbFirst@{kSPI\_LsbFirst}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_LsbFirst@{kSPI\_LsbFirst}}}\mbox{\Hypertarget{group__spi__driver_gga1737fd82344e0800f66b541342894b85a20ac53684c3e1ad338553cecbfab94a9}\label{group__spi__driver_gga1737fd82344e0800f66b541342894b85a20ac53684c3e1ad338553cecbfab94a9}} 
+k\+S\+P\+I\+\_\+\+Lsb\+First&Data transfers start with least significant bit. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__spi__driver_ga2e815689312c22a94fe0519f7bc0a991}\label{group__spi__driver_ga2e815689312c22a94fe0519f7bc0a991}} 
+\index{Spi\_driver@{Spi\_driver}!\_spi\_ss\_output\_mode@{\_spi\_ss\_output\_mode}}
+\index{\_spi\_ss\_output\_mode@{\_spi\_ss\_output\_mode}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{\_spi\_ss\_output\_mode}{\_spi\_ss\_output\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__spi__driver_ga2e815689312c22a94fe0519f7bc0a991}{\+\_\+spi\+\_\+ss\+\_\+output\+\_\+mode}}}
+
+
+
+S\+PI slave select output mode options. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_SlaveSelectAsGpio@{kSPI\_SlaveSelectAsGpio}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_SlaveSelectAsGpio@{kSPI\_SlaveSelectAsGpio}}}\mbox{\Hypertarget{group__spi__driver_gga2e815689312c22a94fe0519f7bc0a991a3825177650b5d4bfb5dc603f0ce41381}\label{group__spi__driver_gga2e815689312c22a94fe0519f7bc0a991a3825177650b5d4bfb5dc603f0ce41381}} 
+k\+S\+P\+I\+\_\+\+Slave\+Select\+As\+Gpio&Slave select pin configured as G\+P\+IO. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_SlaveSelectFaultInput@{kSPI\_SlaveSelectFaultInput}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_SlaveSelectFaultInput@{kSPI\_SlaveSelectFaultInput}}}\mbox{\Hypertarget{group__spi__driver_gga2e815689312c22a94fe0519f7bc0a991afdcbdc624d6c2f057147e2aa3cae4635}\label{group__spi__driver_gga2e815689312c22a94fe0519f7bc0a991afdcbdc624d6c2f057147e2aa3cae4635}} 
+k\+S\+P\+I\+\_\+\+Slave\+Select\+Fault\+Input&Slave select pin configured for fault detection. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSPI\_SlaveSelectAutomaticOutput@{kSPI\_SlaveSelectAutomaticOutput}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kSPI\_SlaveSelectAutomaticOutput@{kSPI\_SlaveSelectAutomaticOutput}}}\mbox{\Hypertarget{group__spi__driver_gga2e815689312c22a94fe0519f7bc0a991ad724fc04589d03b524ef2dfef6b0f4a1}\label{group__spi__driver_gga2e815689312c22a94fe0519f7bc0a991ad724fc04589d03b524ef2dfef6b0f4a1}} 
+k\+S\+P\+I\+\_\+\+Slave\+Select\+Automatic\+Output&Slave select pin configured for automatic S\+PI output. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__spi__driver_ga3fa79a6717ea4e1e74de2dadaa468edd}\label{group__spi__driver_ga3fa79a6717ea4e1e74de2dadaa468edd}} 
+\index{Spi\_driver@{Spi\_driver}!\_spi\_status@{\_spi\_status}}
+\index{\_spi\_status@{\_spi\_status}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{\_spi\_status}{\_spi\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__spi__driver_ga3fa79a6717ea4e1e74de2dadaa468edd}{\+\_\+spi\+\_\+status}}}
+
+
+
+Return status for the S\+PI driver. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SPI\_Busy@{kStatus\_SPI\_Busy}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kStatus\_SPI\_Busy@{kStatus\_SPI\_Busy}}}\mbox{\Hypertarget{group__spi__driver_gga3fa79a6717ea4e1e74de2dadaa468edda703abdf7900047c4d13536480f3463ab}\label{group__spi__driver_gga3fa79a6717ea4e1e74de2dadaa468edda703abdf7900047c4d13536480f3463ab}} 
+k\+Status\+\_\+\+S\+P\+I\+\_\+\+Busy&S\+PI bus is busy \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SPI\_Idle@{kStatus\_SPI\_Idle}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kStatus\_SPI\_Idle@{kStatus\_SPI\_Idle}}}\mbox{\Hypertarget{group__spi__driver_gga3fa79a6717ea4e1e74de2dadaa468edda4e32c5b06dccaf4b81e2fd1679e1b560}\label{group__spi__driver_gga3fa79a6717ea4e1e74de2dadaa468edda4e32c5b06dccaf4b81e2fd1679e1b560}} 
+k\+Status\+\_\+\+S\+P\+I\+\_\+\+Idle&S\+PI is idle \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SPI\_Error@{kStatus\_SPI\_Error}!Spi\_driver@{Spi\_driver}}\index{Spi\_driver@{Spi\_driver}!kStatus\_SPI\_Error@{kStatus\_SPI\_Error}}}\mbox{\Hypertarget{group__spi__driver_gga3fa79a6717ea4e1e74de2dadaa468edda2ff91d774e93aed936b87ffaa18aaf9e}\label{group__spi__driver_gga3fa79a6717ea4e1e74de2dadaa468edda2ff91d774e93aed936b87ffaa18aaf9e}} 
+k\+Status\+\_\+\+S\+P\+I\+\_\+\+Error&S\+PI error \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__spi__driver_gaac0bc2b87ea2eb7eeba78d9449d4dbbf}\label{group__spi__driver_gaac0bc2b87ea2eb7eeba78d9449d4dbbf}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_Deinit@{SPI\_Deinit}}
+\index{SPI\_Deinit@{SPI\_Deinit}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_Deinit()}{SPI\_Deinit()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+De-\/initializes the S\+PI. 
+
+Calling this A\+PI resets the S\+PI module, gates the S\+PI clock. The S\+PI module can\textquotesingle{}t work unless calling the S\+P\+I\+\_\+\+Master\+Init/\+S\+P\+I\+\_\+\+Slave\+Init to initialize module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer\\
+\hline
+\end{DoxyParams}
+brief De-\/initializes the S\+PI.
+
+Calling this A\+PI resets the S\+PI module, gates the S\+PI clock. The S\+PI module can\textquotesingle{}t work unless calling the S\+P\+I\+\_\+\+Master\+Init/\+S\+P\+I\+\_\+\+Slave\+Init to initialize module.
+
+param base S\+PI base pointer \mbox{\Hypertarget{group__spi__driver_ga1c3de83156f45d3f91540a1ec5f92826}\label{group__spi__driver_ga1c3de83156f45d3f91540a1ec5f92826}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_DisableInterrupts@{SPI\_DisableInterrupts}}
+\index{SPI\_DisableInterrupts@{SPI\_DisableInterrupts}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_DisableInterrupts()}{SPI\_DisableInterrupts()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Disable\+Interrupts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Disables the interrupt for the S\+PI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer \\
+\hline
+{\em mask} & S\+PI interrupt source. The parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item k\+S\+P\+I\+\_\+\+Rx\+Full\+And\+Modf\+Interrupt\+Enable \item k\+S\+P\+I\+\_\+\+Tx\+Empty\+Interrupt\+Enable \item k\+S\+P\+I\+\_\+\+Match\+Interrupt\+Enable \item k\+S\+P\+I\+\_\+\+Rx\+Fifo\+Near\+Full\+Interrupt\+Enable \item k\+S\+P\+I\+\_\+\+Tx\+Fifo\+Near\+Empty\+Interrupt\+Enable\end{DoxyItemize}
+brief Disables the interrupt for the S\+PI.\\
+\hline
+\end{DoxyParams}
+param base S\+PI base pointer param mask S\+PI interrupt source. The parameter can be any combination of the following values\+: arg k\+S\+P\+I\+\_\+\+Rx\+Full\+And\+Modf\+Interrupt\+Enable arg k\+S\+P\+I\+\_\+\+Tx\+Empty\+Interrupt\+Enable arg k\+S\+P\+I\+\_\+\+Match\+Interrupt\+Enable arg k\+S\+P\+I\+\_\+\+Rx\+Fifo\+Near\+Full\+Interrupt\+Enable arg k\+S\+P\+I\+\_\+\+Tx\+Fifo\+Near\+Empty\+Interrupt\+Enable \mbox{\Hypertarget{group__spi__driver_gac12d144816080c40ca86d762e31aacc4}\label{group__spi__driver_gac12d144816080c40ca86d762e31aacc4}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_EnableInterrupts@{SPI\_EnableInterrupts}}
+\index{SPI\_EnableInterrupts@{SPI\_EnableInterrupts}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_EnableInterrupts()}{SPI\_EnableInterrupts()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Enable\+Interrupts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Enables the interrupt for the S\+PI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer \\
+\hline
+{\em mask} & S\+PI interrupt source. The parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item k\+S\+P\+I\+\_\+\+Rx\+Full\+And\+Modf\+Interrupt\+Enable \item k\+S\+P\+I\+\_\+\+Tx\+Empty\+Interrupt\+Enable \item k\+S\+P\+I\+\_\+\+Match\+Interrupt\+Enable \item k\+S\+P\+I\+\_\+\+Rx\+Fifo\+Near\+Full\+Interrupt\+Enable \item k\+S\+P\+I\+\_\+\+Tx\+Fifo\+Near\+Empty\+Interrupt\+Enable\end{DoxyItemize}
+brief Enables the interrupt for the S\+PI.\\
+\hline
+\end{DoxyParams}
+param base S\+PI base pointer param mask S\+PI interrupt source. The parameter can be any combination of the following values\+: arg k\+S\+P\+I\+\_\+\+Rx\+Full\+And\+Modf\+Interrupt\+Enable arg k\+S\+P\+I\+\_\+\+Tx\+Empty\+Interrupt\+Enable arg k\+S\+P\+I\+\_\+\+Match\+Interrupt\+Enable arg k\+S\+P\+I\+\_\+\+Rx\+Fifo\+Near\+Full\+Interrupt\+Enable arg k\+S\+P\+I\+\_\+\+Tx\+Fifo\+Near\+Empty\+Interrupt\+Enable \mbox{\Hypertarget{group__spi__driver_gad823d00c394f6ca35c391dc178a25334}\label{group__spi__driver_gad823d00c394f6ca35c391dc178a25334}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_GetInstance@{SPI\_GetInstance}}
+\index{SPI\_GetInstance@{SPI\_GetInstance}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_GetInstance()}{SPI\_GetInstance()}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+P\+I\+\_\+\+Get\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Get the instance for S\+PI module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base address\\
+\hline
+\end{DoxyParams}
+brief Get the instance for S\+PI module.
+
+param base S\+PI base address \mbox{\Hypertarget{group__spi__driver_gaaa5a317a68b409dfe20397b45e48d1f0}\label{group__spi__driver_gaaa5a317a68b409dfe20397b45e48d1f0}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_GetStatusFlags@{SPI\_GetStatusFlags}}
+\index{SPI\_GetStatusFlags@{SPI\_GetStatusFlags}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_GetStatusFlags()}{SPI\_GetStatusFlags()}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+P\+I\+\_\+\+Get\+Status\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Gets the status flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+PI Status, use status flag to A\+ND \mbox{\hyperlink{group__spi__driver_gaea776f478792865a85b7311e6ff5896c}{\+\_\+spi\+\_\+flags}} could get the related status.
+\end{DoxyReturn}
+brief Gets the status flag.
+
+param base S\+PI base pointer return S\+PI Status, use status flag to A\+ND \mbox{\hyperlink{group__spi__driver_gaea776f478792865a85b7311e6ff5896c}{\+\_\+spi\+\_\+flags}} could get the related status. \mbox{\Hypertarget{group__spi__driver_ga45c08fc078ae334b79fb844379140838}\label{group__spi__driver_ga45c08fc078ae334b79fb844379140838}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_MasterGetDefaultConfig@{SPI\_MasterGetDefaultConfig}}
+\index{SPI\_MasterGetDefaultConfig@{SPI\_MasterGetDefaultConfig}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterGetDefaultConfig()}{SPI\_MasterGetDefaultConfig()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Master\+Get\+Default\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__spi__driver_ga15e5f834f83ba89de1e920bba9d00394}{spi\+\_\+master\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Sets the S\+PI master configuration structure to default values. 
+
+The purpose of this A\+PI is to get the configuration structure initialized for use in \mbox{\hyperlink{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}{S\+P\+I\+\_\+\+Master\+Init()}}. User may use the initialized structure unchanged in \mbox{\hyperlink{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}{S\+P\+I\+\_\+\+Master\+Init()}}, or modify some fields of the structure before calling \mbox{\hyperlink{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}{S\+P\+I\+\_\+\+Master\+Init()}}. After calling this A\+PI, the master is ready to transfer. Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct__spi__master__config}{spi\_master\_config\_t}} config;}
+\DoxyCodeLine{\mbox{\hyperlink{group__spi__driver_ga45c08fc078ae334b79fb844379140838}{SPI\_MasterGetDefaultConfig}}(\&config);}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & pointer to master config structure\\
+\hline
+\end{DoxyParams}
+brief Sets the S\+PI master configuration structure to default values.
+
+The purpose of this A\+PI is to get the configuration structure initialized for use in \mbox{\hyperlink{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}{S\+P\+I\+\_\+\+Master\+Init()}}. User may use the initialized structure unchanged in \mbox{\hyperlink{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}{S\+P\+I\+\_\+\+Master\+Init()}}, or modify some fields of the structure before calling \mbox{\hyperlink{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}{S\+P\+I\+\_\+\+Master\+Init()}}. After calling this A\+PI, the master is ready to transfer. Example\+: code spi\+\_\+master\+\_\+config\+\_\+t config; S\+P\+I\+\_\+\+Master\+Get\+Default\+Config(\&config); endcode
+
+param config pointer to master config structure \mbox{\Hypertarget{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}\label{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_MasterInit@{SPI\_MasterInit}}
+\index{SPI\_MasterInit@{SPI\_MasterInit}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterInit()}{SPI\_MasterInit()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Master\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{const \mbox{\hyperlink{group__spi__driver_ga15e5f834f83ba89de1e920bba9d00394}{spi\+\_\+master\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{src\+Clock\+\_\+\+Hz }\end{DoxyParamCaption})}
+
+
+
+Initializes the S\+PI with master configuration. 
+
+The configuration structure can be filled by user from scratch, or be set with default values by \mbox{\hyperlink{group__spi__driver_ga45c08fc078ae334b79fb844379140838}{S\+P\+I\+\_\+\+Master\+Get\+Default\+Config()}}. After calling this A\+PI, the slave is ready to transfer. Example 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct__spi__master__config}{spi\_master\_config\_t}} config = \{}
+\DoxyCodeLine{.\mbox{\hyperlink{struct__spi__master__config_aa5df547b4cb95d3c959373cf6fa672b5}{baudRate\_Bps}} = 400000,}
+\DoxyCodeLine{...}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{\mbox{\hyperlink{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}{SPI\_MasterInit}}(\mbox{\hyperlink{group___s_p_i___peripheral___access___layer_gaf26e39c91b262cc480085abcc450d3d5}{SPI0}}, \&config);}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer \\
+\hline
+{\em config} & pointer to master configuration structure \\
+\hline
+{\em src\+Clock\+\_\+\+Hz} & Source clock frequency.\\
+\hline
+\end{DoxyParams}
+brief Initializes the S\+PI with master configuration.
+
+The configuration structure can be filled by user from scratch, or be set with default values by \mbox{\hyperlink{group__spi__driver_ga45c08fc078ae334b79fb844379140838}{S\+P\+I\+\_\+\+Master\+Get\+Default\+Config()}}. After calling this A\+PI, the slave is ready to transfer. Example code spi\+\_\+master\+\_\+config\+\_\+t config = \{ .baud\+Rate\+\_\+\+Bps = 400000, ... \}; S\+P\+I\+\_\+\+Master\+Init(\+S\+P\+I0, \&config); endcode
+
+param base S\+PI base pointer param config pointer to master configuration structure param src\+Clock\+\_\+\+Hz Source clock frequency. \mbox{\Hypertarget{group__spi__driver_ga3ebe045018782edb3624026795d6269a}\label{group__spi__driver_ga3ebe045018782edb3624026795d6269a}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_MasterSetBaudRate@{SPI\_MasterSetBaudRate}}
+\index{SPI\_MasterSetBaudRate@{SPI\_MasterSetBaudRate}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterSetBaudRate()}{SPI\_MasterSetBaudRate()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Master\+Set\+Baud\+Rate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{baud\+Rate\+\_\+\+Bps,  }\item[{uint32\+\_\+t}]{src\+Clock\+\_\+\+Hz }\end{DoxyParamCaption})}
+
+
+
+Sets the baud rate for S\+PI transfer. This is only used in master. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer \\
+\hline
+{\em baud\+Rate\+\_\+\+Bps} & baud rate needed in Hz. \\
+\hline
+{\em src\+Clock\+\_\+\+Hz} & S\+PI source clock frequency in Hz.\\
+\hline
+\end{DoxyParams}
+brief Sets the baud rate for S\+PI transfer. This is only used in master.
+
+param base S\+PI base pointer param baud\+Rate\+\_\+\+Bps baud rate needed in Hz. param src\+Clock\+\_\+\+Hz S\+PI source clock frequency in Hz. \mbox{\Hypertarget{group__spi__driver_gae90962a54978acf05ca7780489301eb4}\label{group__spi__driver_gae90962a54978acf05ca7780489301eb4}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_MasterTransferAbort@{SPI\_MasterTransferAbort}}
+\index{SPI\_MasterTransferAbort@{SPI\_MasterTransferAbort}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterTransferAbort()}{SPI\_MasterTransferAbort()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Master\+Transfer\+Abort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Aborts an S\+PI transfer using interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & Pointer to S\+PI transfer handle, this should be a static variable.\\
+\hline
+\end{DoxyParams}
+brief Aborts an S\+PI transfer using interrupt.
+
+param base S\+PI peripheral base address. param handle Pointer to S\+PI transfer handle, this should be a static variable. \mbox{\Hypertarget{group__spi__driver_ga5b05095245ecf01258e64cc0458fb2e9}\label{group__spi__driver_ga5b05095245ecf01258e64cc0458fb2e9}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_MasterTransferBlocking@{SPI\_MasterTransferBlocking}}
+\index{SPI\_MasterTransferBlocking@{SPI\_MasterTransferBlocking}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterTransferBlocking()}{SPI\_MasterTransferBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+P\+I\+\_\+\+Master\+Transfer\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__spi__driver_ga59314d5596f240cfbe8b9466bd99ed3f}{spi\+\_\+transfer\+\_\+t}} $\ast$}]{xfer }\end{DoxyParamCaption})}
+
+
+
+Transfers a block of data using a polling method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer \\
+\hline
+{\em xfer} & pointer to spi\+\_\+xfer\+\_\+config\+\_\+t structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully start a transfer. \\
+\hline
+{\em k\+Status\+\_\+\+Invalid\+Argument} & Input argument is invalid.\\
+\hline
+\end{DoxyRetVals}
+brief Transfers a block of data using a polling method.
+
+param base S\+PI base pointer param xfer pointer to spi\+\_\+xfer\+\_\+config\+\_\+t structure retval k\+Status\+\_\+\+Success Successfully start a transfer. retval k\+Status\+\_\+\+Invalid\+Argument Input argument is invalid. \mbox{\Hypertarget{group__spi__driver_ga6cf3e807307ecb22578cc9088adafcf2}\label{group__spi__driver_ga6cf3e807307ecb22578cc9088adafcf2}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_MasterTransferCreateHandle@{SPI\_MasterTransferCreateHandle}}
+\index{SPI\_MasterTransferCreateHandle@{SPI\_MasterTransferCreateHandle}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterTransferCreateHandle()}{SPI\_MasterTransferCreateHandle()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Master\+Transfer\+Create\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{\mbox{\hyperlink{group__spi__driver_ga75d9df6e4614756d8ff1bd6f86ca2235}{spi\+\_\+master\+\_\+callback\+\_\+t}}}]{callback,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Initializes the S\+PI master handle. 
+
+This function initializes the S\+PI master handle which can be used for other S\+PI master transactional A\+P\+Is. Usually, for a specified S\+PI instance, call this A\+PI once to get the initialized handle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & S\+PI handle pointer. \\
+\hline
+{\em callback} & Callback function. \\
+\hline
+{\em user\+Data} & User data.\\
+\hline
+\end{DoxyParams}
+brief Initializes the S\+PI master handle.
+
+This function initializes the S\+PI master handle which can be used for other S\+PI master transactional A\+P\+Is. Usually, for a specified S\+PI instance, call this A\+PI once to get the initialized handle.
+
+param base S\+PI peripheral base address. param handle S\+PI handle pointer. param callback Callback function. param user\+Data User data. \mbox{\Hypertarget{group__spi__driver_gabde0dccfb0783d103b9cf57e0202582f}\label{group__spi__driver_gabde0dccfb0783d103b9cf57e0202582f}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_MasterTransferGetCount@{SPI\_MasterTransferGetCount}}
+\index{SPI\_MasterTransferGetCount@{SPI\_MasterTransferGetCount}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterTransferGetCount()}{SPI\_MasterTransferGetCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+P\+I\+\_\+\+Master\+Transfer\+Get\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{size\+\_\+t $\ast$}]{count }\end{DoxyParamCaption})}
+
+
+
+Gets the bytes of the S\+PI interrupt transferred. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & Pointer to S\+PI transfer handle, this should be a static variable. \\
+\hline
+{\em count} & Transferred bytes of S\+PI master. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+S\+P\+I\+\_\+\+Success} & Succeed get the transfer count. \\
+\hline
+{\em k\+Status\+\_\+\+No\+Transfer\+In\+Progress} & There is not a non-\/blocking transaction currently in progress.\\
+\hline
+\end{DoxyRetVals}
+brief Gets the bytes of the S\+PI interrupt transferred.
+
+param base S\+PI peripheral base address. param handle Pointer to S\+PI transfer handle, this should be a static variable. param count Transferred bytes of S\+PI master. retval k\+Status\+\_\+\+S\+P\+I\+\_\+\+Success Succeed get the transfer count. retval k\+Status\+\_\+\+No\+Transfer\+In\+Progress There is not a non-\/blocking transaction currently in progress. \mbox{\Hypertarget{group__spi__driver_ga645d041a92bde312d6cf64517c618c41}\label{group__spi__driver_ga645d041a92bde312d6cf64517c618c41}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_MasterTransferHandleIRQ@{SPI\_MasterTransferHandleIRQ}}
+\index{SPI\_MasterTransferHandleIRQ@{SPI\_MasterTransferHandleIRQ}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterTransferHandleIRQ()}{SPI\_MasterTransferHandleIRQ()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Master\+Transfer\+Handle\+I\+RQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Interrupts the handler for the S\+PI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & pointer to spi\+\_\+master\+\_\+handle\+\_\+t structure which stores the transfer state.\\
+\hline
+\end{DoxyParams}
+brief Interrupts the handler for the S\+PI.
+
+param base S\+PI peripheral base address. param handle pointer to spi\+\_\+master\+\_\+handle\+\_\+t structure which stores the transfer state. \mbox{\Hypertarget{group__spi__driver_ga820c78a32fa29735168d2e517f4881a1}\label{group__spi__driver_ga820c78a32fa29735168d2e517f4881a1}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_MasterTransferNonBlocking@{SPI\_MasterTransferNonBlocking}}
+\index{SPI\_MasterTransferNonBlocking@{SPI\_MasterTransferNonBlocking}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_MasterTransferNonBlocking()}{SPI\_MasterTransferNonBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+P\+I\+\_\+\+Master\+Transfer\+Non\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{struct__spi__master__handle}{spi\+\_\+master\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{\mbox{\hyperlink{group__spi__driver_ga59314d5596f240cfbe8b9466bd99ed3f}{spi\+\_\+transfer\+\_\+t}} $\ast$}]{xfer }\end{DoxyParamCaption})}
+
+
+
+Performs a non-\/blocking S\+PI interrupt transfer. 
+
+\begin{DoxyNote}{Note}
+The A\+PI immediately returns after transfer initialization is finished. Call S\+P\+I\+\_\+\+Get\+Status\+I\+R\+Q() to get the transfer status. 
+
+If S\+PI transfer data frame size is 16 bits, the transfer size cannot be an odd number.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & pointer to spi\+\_\+master\+\_\+handle\+\_\+t structure which stores the transfer state \\
+\hline
+{\em xfer} & pointer to spi\+\_\+xfer\+\_\+config\+\_\+t structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Success} & Successfully start a transfer. \\
+\hline
+{\em k\+Status\+\_\+\+Invalid\+Argument} & Input argument is invalid. \\
+\hline
+{\em k\+Status\+\_\+\+S\+P\+I\+\_\+\+Busy} & S\+PI is not idle, is running another transfer.\\
+\hline
+\end{DoxyRetVals}
+brief Performs a non-\/blocking S\+PI interrupt transfer.
+
+note The A\+PI immediately returns after transfer initialization is finished. Call S\+P\+I\+\_\+\+Get\+Status\+I\+R\+Q() to get the transfer status. note If S\+PI transfer data frame size is 16 bits, the transfer size cannot be an odd number.
+
+param base S\+PI peripheral base address. param handle pointer to spi\+\_\+master\+\_\+handle\+\_\+t structure which stores the transfer state param xfer pointer to spi\+\_\+xfer\+\_\+config\+\_\+t structure retval k\+Status\+\_\+\+Success Successfully start a transfer. retval k\+Status\+\_\+\+Invalid\+Argument Input argument is invalid. retval k\+Status\+\_\+\+S\+P\+I\+\_\+\+Busy S\+PI is not idle, is running another transfer. \mbox{\Hypertarget{group__spi__driver_gaf23d3779b122e78fc07562bf5dbf3ac3}\label{group__spi__driver_gaf23d3779b122e78fc07562bf5dbf3ac3}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_ReadData@{SPI\_ReadData}}
+\index{SPI\_ReadData@{SPI\_ReadData}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_ReadData()}{SPI\_ReadData()}}
+{\footnotesize\ttfamily uint16\+\_\+t S\+P\+I\+\_\+\+Read\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Gets a data from the S\+PI data register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data in the register.
+\end{DoxyReturn}
+brief Gets a data from the S\+PI data register.
+
+param base S\+PI base pointer return Data in the register. \mbox{\Hypertarget{group__spi__driver_gaa381d274dba2ce9257cdf4be5ec17662}\label{group__spi__driver_gaa381d274dba2ce9257cdf4be5ec17662}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_SetDummyData@{SPI\_SetDummyData}}
+\index{SPI\_SetDummyData@{SPI\_SetDummyData}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_SetDummyData()}{SPI\_SetDummyData()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Set\+Dummy\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint8\+\_\+t}]{dummy\+Data }\end{DoxyParamCaption})}
+
+
+
+Set up the dummy data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral address. \\
+\hline
+{\em dummy\+Data} & Data to be transferred when tx buffer is N\+U\+LL.\\
+\hline
+\end{DoxyParams}
+brief Set up the dummy data.
+
+param base S\+PI peripheral address. param dummy\+Data Data to be transferred when tx buffer is N\+U\+LL. \mbox{\Hypertarget{group__spi__driver_gac000b63ed033f57a9eee342a8c8e67f2}\label{group__spi__driver_gac000b63ed033f57a9eee342a8c8e67f2}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_SlaveGetDefaultConfig@{SPI\_SlaveGetDefaultConfig}}
+\index{SPI\_SlaveGetDefaultConfig@{SPI\_SlaveGetDefaultConfig}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_SlaveGetDefaultConfig()}{SPI\_SlaveGetDefaultConfig()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Slave\+Get\+Default\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__spi__driver_gaa62352a5d0a01f70fe74941809d03ec3}{spi\+\_\+slave\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Sets the S\+PI slave configuration structure to default values. 
+
+The purpose of this A\+PI is to get the configuration structure initialized for use in \mbox{\hyperlink{group__spi__driver_ga91b214b5392fc8d5b73a5ebadc5ca363}{S\+P\+I\+\_\+\+Slave\+Init()}}. Modify some fields of the structure before calling \mbox{\hyperlink{group__spi__driver_ga91b214b5392fc8d5b73a5ebadc5ca363}{S\+P\+I\+\_\+\+Slave\+Init()}}. Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct__spi__slave__config}{spi\_slave\_config\_t}} config;}
+\DoxyCodeLine{\mbox{\hyperlink{group__spi__driver_gac000b63ed033f57a9eee342a8c8e67f2}{SPI\_SlaveGetDefaultConfig}}(\&config);}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & pointer to slave configuration structure\\
+\hline
+\end{DoxyParams}
+brief Sets the S\+PI slave configuration structure to default values.
+
+The purpose of this A\+PI is to get the configuration structure initialized for use in \mbox{\hyperlink{group__spi__driver_ga91b214b5392fc8d5b73a5ebadc5ca363}{S\+P\+I\+\_\+\+Slave\+Init()}}. Modify some fields of the structure before calling \mbox{\hyperlink{group__spi__driver_ga91b214b5392fc8d5b73a5ebadc5ca363}{S\+P\+I\+\_\+\+Slave\+Init()}}. Example\+: code spi\+\_\+slave\+\_\+config\+\_\+t config; S\+P\+I\+\_\+\+Slave\+Get\+Default\+Config(\&config); endcode
+
+param config pointer to slave configuration structure \mbox{\Hypertarget{group__spi__driver_ga91b214b5392fc8d5b73a5ebadc5ca363}\label{group__spi__driver_ga91b214b5392fc8d5b73a5ebadc5ca363}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_SlaveInit@{SPI\_SlaveInit}}
+\index{SPI\_SlaveInit@{SPI\_SlaveInit}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_SlaveInit()}{SPI\_SlaveInit()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Slave\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{const \mbox{\hyperlink{group__spi__driver_gaa62352a5d0a01f70fe74941809d03ec3}{spi\+\_\+slave\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Initializes the S\+PI with slave configuration. 
+
+The configuration structure can be filled by user from scratch or be set with default values by \mbox{\hyperlink{group__spi__driver_gac000b63ed033f57a9eee342a8c8e67f2}{S\+P\+I\+\_\+\+Slave\+Get\+Default\+Config()}}. After calling this A\+PI, the slave is ready to transfer. Example 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct__spi__slave__config}{spi\_slave\_config\_t}} config = \{}
+\DoxyCodeLine{.\mbox{\hyperlink{struct__spi__slave__config_ad5743b187f5dda0c1786a192ba11b043}{polarity}} = kSPIClockPolarity\_ActiveHigh;}
+\DoxyCodeLine{.phase = kSPIClockPhase\_FirstEdge;}
+\DoxyCodeLine{.direction = kSPIMsbFirst;}
+\DoxyCodeLine{...}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{\mbox{\hyperlink{group__spi__driver_ga3fe5b421b088cc98222b8a214069574b}{SPI\_MasterInit}}(\mbox{\hyperlink{group___s_p_i___peripheral___access___layer_gaf26e39c91b262cc480085abcc450d3d5}{SPI0}}, \&config);}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer \\
+\hline
+{\em config} & pointer to master configuration structure\\
+\hline
+\end{DoxyParams}
+brief Initializes the S\+PI with slave configuration.
+
+The configuration structure can be filled by user from scratch or be set with default values by \mbox{\hyperlink{group__spi__driver_gac000b63ed033f57a9eee342a8c8e67f2}{S\+P\+I\+\_\+\+Slave\+Get\+Default\+Config()}}. After calling this A\+PI, the slave is ready to transfer. Example code spi\+\_\+slave\+\_\+config\+\_\+t config = \{ .polarity = k\+S\+P\+I\+Clock\+Polarity\+\_\+\+Active\+High; .phase = k\+S\+P\+I\+Clock\+Phase\+\_\+\+First\+Edge; .direction = k\+S\+P\+I\+Msb\+First; ... \}; S\+P\+I\+\_\+\+Master\+Init(\+S\+P\+I0, \&config); endcode
+
+param base S\+PI base pointer param config pointer to master configuration structure \mbox{\Hypertarget{group__spi__driver_gab7e0ae7d0a88e7e1059b2cb0ed878b2e}\label{group__spi__driver_gab7e0ae7d0a88e7e1059b2cb0ed878b2e}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_SlaveTransferCreateHandle@{SPI\_SlaveTransferCreateHandle}}
+\index{SPI\_SlaveTransferCreateHandle@{SPI\_SlaveTransferCreateHandle}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_SlaveTransferCreateHandle()}{SPI\_SlaveTransferCreateHandle()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Slave\+Transfer\+Create\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}{spi\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{\mbox{\hyperlink{group__spi__driver_ga13fbc3110c56c1d312e4a5ebed07d679}{spi\+\_\+slave\+\_\+callback\+\_\+t}}}]{callback,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Initializes the S\+PI slave handle. 
+
+This function initializes the S\+PI slave handle which can be used for other S\+PI slave transactional A\+P\+Is. Usually, for a specified S\+PI instance, call this A\+PI once to get the initialized handle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & S\+PI handle pointer. \\
+\hline
+{\em callback} & Callback function. \\
+\hline
+{\em user\+Data} & User data.\\
+\hline
+\end{DoxyParams}
+brief Initializes the S\+PI slave handle.
+
+This function initializes the S\+PI slave handle which can be used for other S\+PI slave transactional A\+P\+Is. Usually, for a specified S\+PI instance, call this A\+PI once to get the initialized handle.
+
+param base S\+PI peripheral base address. param handle S\+PI handle pointer. param callback Callback function. param user\+Data User data. \mbox{\Hypertarget{group__spi__driver_gaac1ff8fc728c925d78b1237949ebf7c3}\label{group__spi__driver_gaac1ff8fc728c925d78b1237949ebf7c3}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_SlaveTransferHandleIRQ@{SPI\_SlaveTransferHandleIRQ}}
+\index{SPI\_SlaveTransferHandleIRQ@{SPI\_SlaveTransferHandleIRQ}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_SlaveTransferHandleIRQ()}{SPI\_SlaveTransferHandleIRQ()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Slave\+Transfer\+Handle\+I\+RQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{\mbox{\hyperlink{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}{spi\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Interrupts a handler for the S\+PI slave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI peripheral base address. \\
+\hline
+{\em handle} & pointer to spi\+\_\+slave\+\_\+handle\+\_\+t structure which stores the transfer state\\
+\hline
+\end{DoxyParams}
+brief Interrupts a handler for the S\+PI slave.
+
+param base S\+PI peripheral base address. param handle pointer to spi\+\_\+slave\+\_\+handle\+\_\+t structure which stores the transfer state \mbox{\Hypertarget{group__spi__driver_gae28a41ba015e3bc92936459f83500cd0}\label{group__spi__driver_gae28a41ba015e3bc92936459f83500cd0}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_WriteBlocking@{SPI\_WriteBlocking}}
+\index{SPI\_WriteBlocking@{SPI\_WriteBlocking}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_WriteBlocking()}{SPI\_WriteBlocking()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Write\+Blocking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Sends a buffer of data bytes using a blocking method. 
+
+\begin{DoxyNote}{Note}
+This function blocks via polling until all bytes have been sent.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer \\
+\hline
+{\em buffer} & The data bytes to send \\
+\hline
+{\em size} & The number of data bytes to send\\
+\hline
+\end{DoxyParams}
+brief Sends a buffer of data bytes using a blocking method.
+
+note This function blocks via polling until all bytes have been sent.
+
+param base S\+PI base pointer param buffer The data bytes to send param size The number of data bytes to send \mbox{\Hypertarget{group__spi__driver_ga74d8732386a607c263bd16c8294b08d6}\label{group__spi__driver_ga74d8732386a607c263bd16c8294b08d6}} 
+\index{Spi\_driver@{Spi\_driver}!SPI\_WriteData@{SPI\_WriteData}}
+\index{SPI\_WriteData@{SPI\_WriteData}!Spi\_driver@{Spi\_driver}}
+\subsubsection{\texorpdfstring{SPI\_WriteData()}{SPI\_WriteData()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Write\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_p_i___type}{S\+P\+I\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint16\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Writes a data into the S\+PI data register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & S\+PI base pointer \\
+\hline
+{\em data} & needs to be write.\\
+\hline
+\end{DoxyParams}
+brief Writes a data into the S\+PI data register.
+
+param base S\+PI base pointer param data needs to be write. 

@@ -1,0 +1,65 @@
+\hypertarget{struct__i2c__master__handle}{}\section{\+\_\+i2c\+\_\+master\+\_\+handle Struct Reference}
+\label{struct__i2c__master__handle}\index{\_i2c\_master\_handle@{\_i2c\_master\_handle}}
+
+
+I2C master handle structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+i2c.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}{i2c\+\_\+master\+\_\+transfer\+\_\+t}} \mbox{\hyperlink{struct__i2c__master__handle_a9f792796934731101c55954d82000811}{transfer}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct__i2c__master__handle_a10e6d1f095e525fa85ffe957081ed7a7}{transfer\+Size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__i2c__master__handle_a0b57aa10271a66f3dc936bba1d2f3830}{state}}
+\item 
+\mbox{\hyperlink{group__i2c__driver_gafa39d30cd808d79b774361874f227204}{i2c\+\_\+master\+\_\+transfer\+\_\+callback\+\_\+t}} \mbox{\hyperlink{struct__i2c__master__handle_ab886e4f1a8a9cd0953a6dc2b0f33e87c}{completion\+Callback}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__i2c__master__handle_a2e294dd14122c554baa0665072b4ca7a}{user\+Data}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2C master handle structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__i2c__master__handle_ab886e4f1a8a9cd0953a6dc2b0f33e87c}\label{struct__i2c__master__handle_ab886e4f1a8a9cd0953a6dc2b0f33e87c}} 
+\index{\_i2c\_master\_handle@{\_i2c\_master\_handle}!completionCallback@{completionCallback}}
+\index{completionCallback@{completionCallback}!\_i2c\_master\_handle@{\_i2c\_master\_handle}}
+\subsubsection{\texorpdfstring{completionCallback}{completionCallback}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__i2c__driver_gafa39d30cd808d79b774361874f227204}{i2c\+\_\+master\+\_\+transfer\+\_\+callback\+\_\+t}} completion\+Callback}
+
+A callback function called when the transfer is finished. \mbox{\Hypertarget{struct__i2c__master__handle_a0b57aa10271a66f3dc936bba1d2f3830}\label{struct__i2c__master__handle_a0b57aa10271a66f3dc936bba1d2f3830}} 
+\index{\_i2c\_master\_handle@{\_i2c\_master\_handle}!state@{state}}
+\index{state@{state}!\_i2c\_master\_handle@{\_i2c\_master\_handle}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily uint8\+\_\+t state}
+
+A transfer state maintained during transfer. \mbox{\Hypertarget{struct__i2c__master__handle_a9f792796934731101c55954d82000811}\label{struct__i2c__master__handle_a9f792796934731101c55954d82000811}} 
+\index{\_i2c\_master\_handle@{\_i2c\_master\_handle}!transfer@{transfer}}
+\index{transfer@{transfer}!\_i2c\_master\_handle@{\_i2c\_master\_handle}}
+\subsubsection{\texorpdfstring{transfer}{transfer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}{i2c\+\_\+master\+\_\+transfer\+\_\+t}} transfer}
+
+I2C master transfer copy. \mbox{\Hypertarget{struct__i2c__master__handle_a10e6d1f095e525fa85ffe957081ed7a7}\label{struct__i2c__master__handle_a10e6d1f095e525fa85ffe957081ed7a7}} 
+\index{\_i2c\_master\_handle@{\_i2c\_master\_handle}!transferSize@{transferSize}}
+\index{transferSize@{transferSize}!\_i2c\_master\_handle@{\_i2c\_master\_handle}}
+\subsubsection{\texorpdfstring{transferSize}{transferSize}}
+{\footnotesize\ttfamily size\+\_\+t transfer\+Size}
+
+Total bytes to be transferred. \mbox{\Hypertarget{struct__i2c__master__handle_a2e294dd14122c554baa0665072b4ca7a}\label{struct__i2c__master__handle_a2e294dd14122c554baa0665072b4ca7a}} 
+\index{\_i2c\_master\_handle@{\_i2c\_master\_handle}!userData@{userData}}
+\index{userData@{userData}!\_i2c\_master\_handle@{\_i2c\_master\_handle}}
+\subsubsection{\texorpdfstring{userData}{userData}}
+{\footnotesize\ttfamily void$\ast$ user\+Data}
+
+A callback parameter passed to the callback function. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+i2c.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c}{}\section{\+\_\+\+A\+R\+M\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+I2C Struct Reference}
+\label{struct___a_r_m___d_r_i_v_e_r___i2_c}\index{\_ARM\_DRIVER\_I2C@{\_ARM\_DRIVER\_I2C}}
+
+
+Access structure of the I2C Driver.  
+
+
+
+
+{\ttfamily \#include $<$Driver\+\_\+\+I2\+C.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a30afd9cb3113c037b5f1926f5ef93b59}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a30afd9cb3113c037b5f1926f5ef93b59}} 
+\mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___v_e_r_s_i_o_n}{A\+R\+M\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a30afd9cb3113c037b5f1926f5ef93b59}{Get\+Version}} )(void)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Get\+Version \+: Get driver version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a00ae4a98ad86ab27e1dd1373d6adda44}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a00ae4a98ad86ab27e1dd1373d6adda44}} 
+\mbox{\hyperlink{struct___a_r_m___i2_c___c_a_p_a_b_i_l_i_t_i_e_s}{A\+R\+M\+\_\+\+I2\+C\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES}}($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a00ae4a98ad86ab27e1dd1373d6adda44}{Get\+Capabilities}} )(void)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Get\+Capabilities \+: Get driver capabilities. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_aea6628b98ef11038df8d6095aad04f35}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_aea6628b98ef11038df8d6095aad04f35}} 
+int32\+\_\+t($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_aea6628b98ef11038df8d6095aad04f35}{Initialize}} )(A\+R\+M\+\_\+\+I2\+C\+\_\+\+Signal\+Event\+\_\+t cb\+\_\+event)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Initialize \+: Initialize I2C Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a5ce2b3d7a3a07099bf07d1eb253e92e3}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a5ce2b3d7a3a07099bf07d1eb253e92e3}} 
+int32\+\_\+t($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a5ce2b3d7a3a07099bf07d1eb253e92e3}{Uninitialize}} )(void)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Uninitialize \+: De-\/initialize I2C Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a24ebae5c6011631f76027f9a16eaf5ce}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a24ebae5c6011631f76027f9a16eaf5ce}} 
+int32\+\_\+t($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a24ebae5c6011631f76027f9a16eaf5ce}{Power\+Control}} )(A\+R\+M\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+T\+A\+TE state)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Power\+Control \+: Control I2C Interface Power. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a6ffcdd9c71d368c66fe07e553ce8cc23}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a6ffcdd9c71d368c66fe07e553ce8cc23}} 
+int32\+\_\+t($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a6ffcdd9c71d368c66fe07e553ce8cc23}{Master\+Transmit}} )(uint32\+\_\+t addr, const uint8\+\_\+t $\ast$data, uint32\+\_\+t num, bool xfer\+\_\+pending)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Master\+Transmit \+: Start transmitting data as I2C Master. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a14b9319ae4830c98759e46119d7e8d80}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a14b9319ae4830c98759e46119d7e8d80}} 
+int32\+\_\+t($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a14b9319ae4830c98759e46119d7e8d80}{Master\+Receive}} )(uint32\+\_\+t addr, uint8\+\_\+t $\ast$data, uint32\+\_\+t num, bool xfer\+\_\+pending)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Master\+Receive \+: Start receiving data as I2C Master. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a03dc2b086d1ac1ff21f8adeab0082adb}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a03dc2b086d1ac1ff21f8adeab0082adb}} 
+int32\+\_\+t($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a03dc2b086d1ac1ff21f8adeab0082adb}{Slave\+Transmit}} )(const uint8\+\_\+t $\ast$data, uint32\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Slave\+Transmit \+: Start transmitting data as I2C Slave. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a2d0031c687d4b806cef765b8f1196b55}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a2d0031c687d4b806cef765b8f1196b55}} 
+int32\+\_\+t($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a2d0031c687d4b806cef765b8f1196b55}{Slave\+Receive}} )(uint8\+\_\+t $\ast$data, uint32\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Slave\+Receive \+: Start receiving data as I2C Slave. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a1851018b9ab080689af2d208558f9cea}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a1851018b9ab080689af2d208558f9cea}} 
+int32\+\_\+t($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a1851018b9ab080689af2d208558f9cea}{Get\+Data\+Count}} )(void)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Get\+Data\+Count \+: Get transferred data count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a5e96d73d3a3c366aba50bf5304edb029}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a5e96d73d3a3c366aba50bf5304edb029}} 
+int32\+\_\+t($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a5e96d73d3a3c366aba50bf5304edb029}{Control}} )(uint32\+\_\+t control, uint32\+\_\+t arg)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Control \+: Control I2C Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct___a_r_m___d_r_i_v_e_r___i2_c_a55ee1730ea2897c527b7202dd957e66f}\label{struct___a_r_m___d_r_i_v_e_r___i2_c_a55ee1730ea2897c527b7202dd957e66f}} 
+A\+R\+M\+\_\+\+I2\+C\+\_\+\+S\+T\+A\+T\+US($\ast$ \mbox{\hyperlink{struct___a_r_m___d_r_i_v_e_r___i2_c_a55ee1730ea2897c527b7202dd957e66f}{Get\+Status}} )(void)
+\begin{DoxyCompactList}\small\item\em Pointer to A\+R\+M\+\_\+\+I2\+C\+\_\+\+Get\+Status \+: Get I2C status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Access structure of the I2C Driver. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+M\+S\+I\+S\+\_\+driver/Driver\+\_\+\+I2\+C.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\hypertarget{group___g_p_i_o___peripheral___access___layer}{}\section{G\+P\+IO Peripheral Access Layer}
+\label{group___g_p_i_o___peripheral___access___layer}\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___g_p_i_o___register___masks}{G\+P\+I\+O Register Masks}}
+\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gad7723846cc5db8e43a44d78cf21f6efa}{G\+P\+I\+O\+A\+\_\+\+B\+A\+SE}}~(0x400\+F\+F000u)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gac485358099728ddae050db37924dd6b7}{G\+P\+I\+OA}}~((\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gad7723846cc5db8e43a44d78cf21f6efa}{G\+P\+I\+O\+A\+\_\+\+B\+A\+SE}})
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gac944a89eb789000ece920c0f89cb6a68}{G\+P\+I\+O\+B\+\_\+\+B\+A\+SE}}~(0x400\+F\+F040u)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga68b66ac73be4c836db878a42e1fea3cd}{G\+P\+I\+OB}}~((\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gac944a89eb789000ece920c0f89cb6a68}{G\+P\+I\+O\+B\+\_\+\+B\+A\+SE}})
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga26f267dc35338eef219544c51f1e6b3f}{G\+P\+I\+O\+C\+\_\+\+B\+A\+SE}}~(0x400\+F\+F080u)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga2dca03332d620196ba943bc2346eaa08}{G\+P\+I\+OC}}~((\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga26f267dc35338eef219544c51f1e6b3f}{G\+P\+I\+O\+C\+\_\+\+B\+A\+SE}})
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga1a93ab27129f04064089616910c296ec}{G\+P\+I\+O\+D\+\_\+\+B\+A\+SE}}~(0x400\+F\+F0\+C0u)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga7580b1a929ea9df59725ba9c18eba6ac}{G\+P\+I\+OD}}~((\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga1a93ab27129f04064089616910c296ec}{G\+P\+I\+O\+D\+\_\+\+B\+A\+SE}})
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gab487b1983d936c4fee3e9e88b95aad9d}{G\+P\+I\+O\+E\+\_\+\+B\+A\+SE}}~(0x400\+F\+F100u)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gae04bdb5e8acc47cab1d0532e6b0d0763}{G\+P\+I\+OE}}~((\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gab487b1983d936c4fee3e9e88b95aad9d}{G\+P\+I\+O\+E\+\_\+\+B\+A\+SE}})
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga7f97513de5235b3600dc07bf327fe315}{G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+RS}}~\{ \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gad7723846cc5db8e43a44d78cf21f6efa}{G\+P\+I\+O\+A\+\_\+\+B\+A\+SE}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gac944a89eb789000ece920c0f89cb6a68}{G\+P\+I\+O\+B\+\_\+\+B\+A\+SE}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga26f267dc35338eef219544c51f1e6b3f}{G\+P\+I\+O\+C\+\_\+\+B\+A\+SE}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga1a93ab27129f04064089616910c296ec}{G\+P\+I\+O\+D\+\_\+\+B\+A\+SE}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gab487b1983d936c4fee3e9e88b95aad9d}{G\+P\+I\+O\+E\+\_\+\+B\+A\+SE}} \}
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gad0f7206167a584b1e75a81a5c30fa1c2}{G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+T\+RS}}~\{ \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gac485358099728ddae050db37924dd6b7}{G\+P\+I\+OA}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga68b66ac73be4c836db878a42e1fea3cd}{G\+P\+I\+OB}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga2dca03332d620196ba943bc2346eaa08}{G\+P\+I\+OC}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga7580b1a929ea9df59725ba9c18eba6ac}{G\+P\+I\+OD}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gae04bdb5e8acc47cab1d0532e6b0d0763}{G\+P\+I\+OE}} \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_ga7f97513de5235b3600dc07bf327fe315}\label{group___g_p_i_o___peripheral___access___layer_ga7f97513de5235b3600dc07bf327fe315}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIO\_BASE\_ADDRS@{GPIO\_BASE\_ADDRS}}
+\index{GPIO\_BASE\_ADDRS@{GPIO\_BASE\_ADDRS}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIO\_BASE\_ADDRS}{GPIO\_BASE\_ADDRS}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+RS~\{ \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gad7723846cc5db8e43a44d78cf21f6efa}{G\+P\+I\+O\+A\+\_\+\+B\+A\+SE}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gac944a89eb789000ece920c0f89cb6a68}{G\+P\+I\+O\+B\+\_\+\+B\+A\+SE}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga26f267dc35338eef219544c51f1e6b3f}{G\+P\+I\+O\+C\+\_\+\+B\+A\+SE}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga1a93ab27129f04064089616910c296ec}{G\+P\+I\+O\+D\+\_\+\+B\+A\+SE}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gab487b1983d936c4fee3e9e88b95aad9d}{G\+P\+I\+O\+E\+\_\+\+B\+A\+SE}} \}}
+
+Array initializer of G\+P\+IO peripheral base addresses \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_gad0f7206167a584b1e75a81a5c30fa1c2}\label{group___g_p_i_o___peripheral___access___layer_gad0f7206167a584b1e75a81a5c30fa1c2}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIO\_BASE\_PTRS@{GPIO\_BASE\_PTRS}}
+\index{GPIO\_BASE\_PTRS@{GPIO\_BASE\_PTRS}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIO\_BASE\_PTRS}{GPIO\_BASE\_PTRS}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+T\+RS~\{ \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gac485358099728ddae050db37924dd6b7}{G\+P\+I\+OA}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga68b66ac73be4c836db878a42e1fea3cd}{G\+P\+I\+OB}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga2dca03332d620196ba943bc2346eaa08}{G\+P\+I\+OC}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga7580b1a929ea9df59725ba9c18eba6ac}{G\+P\+I\+OD}}, \mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gae04bdb5e8acc47cab1d0532e6b0d0763}{G\+P\+I\+OE}} \}}
+
+Array initializer of G\+P\+IO peripheral base pointers \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_gac485358099728ddae050db37924dd6b7}\label{group___g_p_i_o___peripheral___access___layer_gac485358099728ddae050db37924dd6b7}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIOA@{GPIOA}}
+\index{GPIOA@{GPIOA}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIOA}{GPIOA}}
+{\footnotesize\ttfamily \#define G\+P\+I\+OA~((\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gad7723846cc5db8e43a44d78cf21f6efa}{G\+P\+I\+O\+A\+\_\+\+B\+A\+SE}})}
+
+Peripheral G\+P\+I\+OA base pointer \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_gad7723846cc5db8e43a44d78cf21f6efa}\label{group___g_p_i_o___peripheral___access___layer_gad7723846cc5db8e43a44d78cf21f6efa}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIOA\_BASE@{GPIOA\_BASE}}
+\index{GPIOA\_BASE@{GPIOA\_BASE}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIOA\_BASE}{GPIOA\_BASE}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+A\+\_\+\+B\+A\+SE~(0x400\+F\+F000u)}
+
+Peripheral G\+P\+I\+OA base address \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_ga68b66ac73be4c836db878a42e1fea3cd}\label{group___g_p_i_o___peripheral___access___layer_ga68b66ac73be4c836db878a42e1fea3cd}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIOB@{GPIOB}}
+\index{GPIOB@{GPIOB}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIOB}{GPIOB}}
+{\footnotesize\ttfamily \#define G\+P\+I\+OB~((\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gac944a89eb789000ece920c0f89cb6a68}{G\+P\+I\+O\+B\+\_\+\+B\+A\+SE}})}
+
+Peripheral G\+P\+I\+OB base pointer \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_gac944a89eb789000ece920c0f89cb6a68}\label{group___g_p_i_o___peripheral___access___layer_gac944a89eb789000ece920c0f89cb6a68}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIOB\_BASE@{GPIOB\_BASE}}
+\index{GPIOB\_BASE@{GPIOB\_BASE}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIOB\_BASE}{GPIOB\_BASE}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+B\+\_\+\+B\+A\+SE~(0x400\+F\+F040u)}
+
+Peripheral G\+P\+I\+OB base address \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_ga2dca03332d620196ba943bc2346eaa08}\label{group___g_p_i_o___peripheral___access___layer_ga2dca03332d620196ba943bc2346eaa08}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIOC@{GPIOC}}
+\index{GPIOC@{GPIOC}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIOC}{GPIOC}}
+{\footnotesize\ttfamily \#define G\+P\+I\+OC~((\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga26f267dc35338eef219544c51f1e6b3f}{G\+P\+I\+O\+C\+\_\+\+B\+A\+SE}})}
+
+Peripheral G\+P\+I\+OC base pointer \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_ga26f267dc35338eef219544c51f1e6b3f}\label{group___g_p_i_o___peripheral___access___layer_ga26f267dc35338eef219544c51f1e6b3f}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIOC\_BASE@{GPIOC\_BASE}}
+\index{GPIOC\_BASE@{GPIOC\_BASE}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIOC\_BASE}{GPIOC\_BASE}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+C\+\_\+\+B\+A\+SE~(0x400\+F\+F080u)}
+
+Peripheral G\+P\+I\+OC base address \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_ga7580b1a929ea9df59725ba9c18eba6ac}\label{group___g_p_i_o___peripheral___access___layer_ga7580b1a929ea9df59725ba9c18eba6ac}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIOD@{GPIOD}}
+\index{GPIOD@{GPIOD}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIOD}{GPIOD}}
+{\footnotesize\ttfamily \#define G\+P\+I\+OD~((\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_ga1a93ab27129f04064089616910c296ec}{G\+P\+I\+O\+D\+\_\+\+B\+A\+SE}})}
+
+Peripheral G\+P\+I\+OD base pointer \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_ga1a93ab27129f04064089616910c296ec}\label{group___g_p_i_o___peripheral___access___layer_ga1a93ab27129f04064089616910c296ec}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIOD\_BASE@{GPIOD\_BASE}}
+\index{GPIOD\_BASE@{GPIOD\_BASE}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIOD\_BASE}{GPIOD\_BASE}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+D\+\_\+\+B\+A\+SE~(0x400\+F\+F0\+C0u)}
+
+Peripheral G\+P\+I\+OD base address \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_gae04bdb5e8acc47cab1d0532e6b0d0763}\label{group___g_p_i_o___peripheral___access___layer_gae04bdb5e8acc47cab1d0532e6b0d0763}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIOE@{GPIOE}}
+\index{GPIOE@{GPIOE}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIOE}{GPIOE}}
+{\footnotesize\ttfamily \#define G\+P\+I\+OE~((\mbox{\hyperlink{struct_g_p_i_o___type}{G\+P\+I\+O\+\_\+\+Type}} $\ast$)\mbox{\hyperlink{group___g_p_i_o___peripheral___access___layer_gab487b1983d936c4fee3e9e88b95aad9d}{G\+P\+I\+O\+E\+\_\+\+B\+A\+SE}})}
+
+Peripheral G\+P\+I\+OE base pointer \mbox{\Hypertarget{group___g_p_i_o___peripheral___access___layer_gab487b1983d936c4fee3e9e88b95aad9d}\label{group___g_p_i_o___peripheral___access___layer_gab487b1983d936c4fee3e9e88b95aad9d}} 
+\index{GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}!GPIOE\_BASE@{GPIOE\_BASE}}
+\index{GPIOE\_BASE@{GPIOE\_BASE}!GPIO Peripheral Access Layer@{GPIO Peripheral Access Layer}}
+\subsubsection{\texorpdfstring{GPIOE\_BASE}{GPIOE\_BASE}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+E\+\_\+\+B\+A\+SE~(0x400\+F\+F100u)}
+
+Peripheral G\+P\+I\+OE base address 

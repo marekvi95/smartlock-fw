@@ -1,0 +1,890 @@
+\hypertarget{group__sf__enum__group}{}\section{Sf\+\_\+enum\+\_\+group}
+\label{group__sf__enum__group}\index{Sf\_enum\_group@{Sf\_enum\_group}}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga1b29c7c81b1098654855dd013cb61b56}{\+\_\+sf\+\_\+status\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a74c58258f59ceb3ec13c27709238ddf7}{k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Ack\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+SF, 0U), 
+\mbox{\hyperlink{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a00e81a58055c9f563ea397797ce408f5}{k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Ack\+Length}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+SF, 1U), 
+\mbox{\hyperlink{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a5ae3424a02fc31c3e6482b6245e0dda8}{k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Timeout}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+SF, 2U), 
+\mbox{\hyperlink{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a82b543f202905c06ab2dca7133ec7617}{k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Test\+Fail}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+SF, 3U)
+ \}
+\begin{DoxyCompactList}\small\item\em Specific error codes for this driver. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a323b9fcd84e1c29fb2bf3bbdc5b485cf}{sf\+Spi\+Cmd\+Send\+Echo}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+E\+C\+H\+O\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4135c70bed7a3c56f4e645e7b2c8c709}{sf\+Spi\+Cmd\+Wakeup}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aac58778261544ebfae70c74d75d0a38e}{sf\+Spi\+Cmd\+Sleep}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+T\+O\+\_\+\+S\+L\+E\+E\+P\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3b6772cd4447ad1e61b0991ec6c73b06}{sf\+Spi\+Cmd\+Send\+Payload}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a8269f4e639fcaa1ef63d40ed98a689eb}{sf\+Spi\+Cmd\+Send\+Bit}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+B\+I\+T\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3adb93e94b6dbf0da045c8e562f502ce}{sf\+Spi\+Cmd\+Out\+Of\+Band}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+O\+U\+T\+\_\+\+B\+A\+N\+D\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a67a249422314b3352a70420adf4971c2}{sf\+Spi\+Cmd\+Receive}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+R\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ac11254b636e96580dc48d8610993374c}{sf\+Spi\+Cmd\+Get\+Info}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+I\+N\+F\+O\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4d9607b70af259dd814f8d37ff8cc227}{sf\+Spi\+Cmd\+Get\+Ul\+Freq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+U\+L\+\_\+\+F\+R\+E\+Q\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4f536b8d125504fe0534b905fda4590c}{sf\+Spi\+Cmd\+Set\+Ul\+Freq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+U\+L\+\_\+\+F\+R\+E\+Q\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa10006c82aea0fb6aa0a52ba12cdfac7}{sf\+Spi\+Cmd\+Cont\+Wave}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+T\+\_\+\+W\+A\+V\+E\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545af126d09b7a286dd66b964230bb330cf6}{sf\+Spi\+Cmd\+Get\+Dev\+Ver}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+\_\+\+V\+E\+R\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ab6acd78f6bf6220ac722308ae77323c5}{sf\+Spi\+Cmd\+Trigger\+Wd}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+W\+D\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aff056e96d6096dc9ae5f7d6e5bc5475d}{sf\+Spi\+Cmd\+Send\+Test\+Mode}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+T\+E\+S\+T\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545adf6be6a6d745bf9c660a7bf39434df63}{sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z1}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+T\+O\+\_\+\+R\+C\+Z1\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aff372fd557435fc9c9cd727f8dd38dcf}{sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z2}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+T\+O\+\_\+\+R\+C\+Z2\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aba87749a06f8b0830a487d0cd98475ac}{sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z3}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+T\+O\+\_\+\+R\+C\+Z3\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa000a585d7f734779a89c40d17c04bdb}{sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z4}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+T\+O\+\_\+\+R\+C\+Z4\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545af63d2ea7a4a64e12aaddb40b6f2f08c7}{sf\+Spi\+Cmd\+Switch\+To\+Private\+Key}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+P\+R\+I\+V\+A\+T\+E\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a127a18f45f6af6d7445507acc71673c2}{sf\+Spi\+Cmd\+Switch\+To\+Public\+Key}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa3fbbb0fbb261f3fef0bfd1979465e42}{sf\+Spi\+Cmd\+Psk\+Ask\+Zero\+Seq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+P\+S\+K\+\_\+\+A\+S\+K\+\_\+\+Z\+E\+R\+O\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a0e6c7302cae22023081fa20c2fecbad3}{sf\+Spi\+Cmd\+Psk\+Ask\+A\+A\+A\+A\+Seq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+P\+S\+K\+\_\+\+A\+S\+K\+\_\+\+A\+A\+A\+A\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a267fd5d2f268a0194c58b7e164aa04db}{sf\+Spi\+Cmd\+Set\+Dl\+Freq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+D\+L\+\_\+\+F\+R\+E\+Q\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a755487e4397f3711946ee9f876ae1a03}{sf\+Spi\+Cmd\+Get\+Dl\+Freq}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+D\+L\+\_\+\+F\+R\+E\+Q\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ab5a13bfe3df59a1ee403e7b1ad2f57fe}{sf\+Spi\+Cmd\+Set\+F\+C\+C\+Macro\+Ch}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+F\+C\+C\+\_\+\+C\+H\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a55ce54ac8415b52f7e77ffe3af33c559}{sf\+Spi\+Cmd\+Get\+F\+C\+C\+Macro\+Ch\+Usage}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+F\+C\+C\+\_\+\+C\+H\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3d75dd26ce332b5651fe0b201cea83fc}{sf\+Spi\+Cmd\+Reset\+F\+C\+C\+Macro\+Ch}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+R\+E\+S\+E\+T\+\_\+\+F\+C\+C\+\_\+\+C\+H\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a8623a017ff1ad9f3f2e78e51c1c1c3da}{sf\+Spi\+Cmd\+Static\+Freq\+Cal}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+A\+L\+\_\+\+ID, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a6920f892112eb6f26679cac7c36430a1}{sf\+Spi\+Cmd\+Temp\+Freq\+Cal}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+T\+E\+M\+P\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+A\+L\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a254d063e034b51c5b0907d49596ab223}{sf\+Spi\+Cmd\+Get\+Last\+Sent\+R\+S\+SI}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+S\+E\+N\+T\+\_\+\+R\+S\+S\+I\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a2b3e3582f6c7005c892f3416681ded4a}{sf\+Spi\+Cmd\+Update\+P\+A\+Curve}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+P\+A\+\_\+\+C\+U\+R\+V\+E\+\_\+\+ID, 
+\mbox{\hyperlink{group__sf__enum__group_gga06921e348326a2db772246fef63b2545acf5da768d8852e892acfee759cd026e2}{sf\+Spi\+Cmd\+Init\+R\+S\+S\+I\+Cal}} = S\+F\+\_\+\+C\+M\+D\+\_\+\+I\+N\+I\+T\+\_\+\+R\+S\+S\+I\+\_\+\+C\+A\+L\+I\+B\+\_\+\+ID
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI commands of the device. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_gaedd94907ea20da8e6d1cd3e3e3282c2c}{sf\+\_\+intern\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca42c1bdff1b32704ed68401e8630cc52e}{sf\+State\+Idle}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca366330ad10f04c1d7c5625904bd294a5}{sf\+State\+Init}}, 
+\mbox{\hyperlink{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca2d8b641d6cf5e3284f6a8bbe038733c1}{sf\+State\+Wait\+For\+Cmd}}
+ \}
+\begin{DoxyCompactList}\small\item\em The state of the device in O\+L23xx software state machine. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga9f14f69f90dfff97b98977db7a73ba68}{sf\+\_\+intern\+\_\+error\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a19b412cc5c8e6fbdc572d470e91e8f17}{sf\+Err\+None}} = 0x00U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9d3aa2e6bae681608b12f706c1e56b89}{sf\+Err\+Open\+Malloc}} = 0x10U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a5745af3a0917d42e99b35d143d7c841b}{sf\+Err\+Open\+Id\+Ptr}} = 0x11U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a34c89e7cf0ce9d99cdc59bf13cac7ea9}{sf\+Err\+Open\+Get\+Seq}} = 0x12U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a319c7f5da1e94ac59f36032b89c56842}{sf\+Err\+Open\+Get\+Pn}} = 0x13U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aef931d5ec6bbf1af3ba18085cf2f5774}{sf\+Err\+Open\+State}} = 0x14U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7781f096a60abf16956e5ebc1136578b}{sf\+Err\+Open\+Get\+Fh}} = 0x15U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a94b5bce35c5189935246c1a4b0bae296}{sf\+Err\+Open\+Macro\+Channel\+Width}} = 0x16U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a56ae3ee39054ae629a9344ab04c79837}{sf\+Err\+Open\+Rcz\+Ptr}} = 0x17U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a554b0c6f521b9fb69d42ffb5d883c836}{sf\+Err\+Close\+Free}} = 0x20U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aaabea2b6ec2ea395166e23d4942e1f4c}{sf\+Err\+Close\+Rf\+Stop}} = 0x21U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a019946ece406e5708583c14952a39708}{sf\+Err\+Send\+Frame\+Data\+Length}} = 0x30U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa647caea699108aab7337be84c2be6e3}{sf\+Err\+Send\+Frame\+State}} = 0x31U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a021d42fd258a93cea6d590b0d754c840}{sf\+Err\+Send\+Frame\+Response\+Ptr}} = 0x32U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a8cf788b1949f63cfad110e84b0faabac}{sf\+Err\+Send\+Frame\+Build\+Uplink}} = 0x33U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad128acc26ce64b9f4aa9fba217e89ca1}{sf\+Err\+Send\+Frame\+Send\+Uplink}} = 0x34U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a28c9f697991f419d24a9ac7a11ab2a47}{sf\+Err\+Send\+Frame\+Receive}} = 0x35U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6f56a4b080d9727d3aa7f684301183bd}{sf\+Err\+Send\+Frame\+Delay\+Oob\+Ack}} = 0x36U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af534c64aa0f756556edf7aa712fb469b}{sf\+Err\+Send\+Frame\+Build\+Oob\+Ack}} = 0x37U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a151036f32e66d9b79c53589523f1d47f}{sf\+Err\+Send\+Frame\+Send\+Oob\+Ack}} = 0x38U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9ad1d23174c3efeab91d3ade6cf81313}{sf\+Err\+Send\+Frame\+Data\+Ptr}} = 0x39U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a01c819a7539e8362d685325ba45a1e52}{sf\+Err\+Send\+Frame\+Carrier\+Sense\+Config}} = 0x3\+AU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a15a18dbf53466c7b41a80a47afa4eaed}{sf\+Err\+Send\+Frame\+Carrier\+Sense\+Timeout}} = 0x3\+BU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad21b2f8936a006fb59f7137b9049b464}{sf\+Err\+Send\+Frame\+Wait\+Timeout}} = 0x3\+EU, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa85a7c45fd2276a8cc59da2da57e2e69}{sf\+Err\+Send\+Frame\+Invalid\+Fh\+Chan}} = 0x3\+FU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9667dd72eba8aeeba708761b451b1dfc}{sf\+Err\+Send\+Bit\+State}} = 0x41U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afd02149c575f86e8aab0cf0967482e30}{sf\+Err\+Send\+Bit\+Response\+Ptr}} = 0x42U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a1d58e25e82556a1e5da2b2cbd98dbf19}{sf\+Err\+Send\+Bit\+Build\+Uplink}} = 0x43U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a885c9a43abab532c23ae4f09fb19ac22}{sf\+Err\+Send\+Bit\+Send\+Uplink}} = 0x44U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa810b80eb6175489156bbbb6b6f46cce}{sf\+Err\+Send\+Bit\+Receive}} = 0x45U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a38f8a5f19e393d8c8f56b450b2224685}{sf\+Err\+Send\+Bit\+Delay\+Oob\+Ack}} = 0x46U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6993b5122381b1d1fa9c00824fe20a6e}{sf\+Err\+Send\+Bit\+Build\+Oob\+Ack}} = 0x47U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a45c5dd0d0a2f8d8acf1c924103c8246f}{sf\+Err\+Send\+Bit\+Send\+Oob\+Ack}} = 0x48U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2771f6631af7347143da2a62bcb7d7bc}{sf\+Err\+Send\+Bit\+Data\+Ptr}} = 0x49U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a770e546fd8ffbd3f5826e00909e06b2c}{sf\+Err\+Send\+Bit\+Carrier\+Sense\+Config}} = 0x4\+AU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afa5384ba19318d0c1151df9efb1cc1c6}{sf\+Err\+Send\+Bit\+Carrier\+Sense\+Timeout}} = 0x4\+BU, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a357382e45f540e1dbc20336cfb5d46a9}{sf\+Err\+Send\+Bit\+Wait\+Timeout}} = 0x4\+EU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7155e65e9ae3b204b28dbdf0effe5013}{sf\+Err\+Send\+Bit\+Invalid\+Fh\+Chan}} = 0x4\+FU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a5e5631cb5ffb60efdcf4b9ed50d3ba97}{sf\+Err\+Send\+Oob\+State}} = 0x51U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68abbd8f67cfb56ffae3022ca43d0516081}{sf\+Err\+Send\+Oob\+Build\+Uplink}} = 0x53U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a824e815911f539061cd9a055db741419}{sf\+Err\+Send\+Oob\+Send\+Uplink}} = 0x54U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a36494bce251854559d6c364d38ea05c0}{sf\+Err\+Send\+Oob\+Invalid\+Fh\+Chan}} = 0x5\+FU, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7963c32510a7541dcb6ab20265087202}{sf\+Err\+Set\+Std\+Config\+Sigfox\+Chan}} = 0x90U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad5584b73f9aad85efdec4565a95c7750}{sf\+Err\+Set\+Std\+Config\+Set}} = 0x91U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a0612d5e84c6c921c40c1199619585dc7}{sf\+Err\+Test\+Mode0\+Rf\+Init}} = 0x\+A0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac06aba9023dcda5e1b1e29ced31d7922}{sf\+Err\+Test\+Mode0\+Change\+Freq}} = 0x\+A1U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a1e0cce4ea1ffd2afbb0a26257b727d4b}{sf\+Err\+Test\+Mode0\+Rf\+Send}} = 0x\+A2U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a11aa88fe3d3b8276a9f6499125766359}{sf\+Err\+Test\+Mode0\+Delay}} = 0x\+A3U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a33ea72779964d1756e185a98339bb7ea}{sf\+Err\+Test\+Mode0\+Rf\+Stop}} = 0x\+A4U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9c0bc4cb4b7cba4e971409112b2cdf22}{sf\+Err\+Test\+Mode\+State}} = 0x\+B1U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af7f4e17faad6cce6c13c72afebb7a59e}{sf\+Err\+Test\+Mode2\+Report\+Test}} = 0x\+C0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afaa24b4f4188489cad464072acb58bab}{sf\+Err\+Test\+Mode3\+Rf\+Init}} = 0x\+D0U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a8b23bbbce2a8f47ea0554f37fd453591}{sf\+Err\+Test\+Mode3\+Change\+Freq}} = 0x\+D1U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a61643a8e6b4ac150b591c944b1e89b8f}{sf\+Err\+Test\+Mode3\+Timer\+Start}} = 0x\+D2U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2238a4c9b35c43888d802ff22be51e2a}{sf\+Err\+Test\+Mode3\+Report\+Test}} = 0x\+D3U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a33c98fbc7c9ac9eba79507827140118e}{sf\+Err\+Test\+Mode3\+Timer\+Stop}} = 0x\+D4U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a4f9de992abfb3c006e0cf68fc2bc18ea}{sf\+Err\+Test\+Mode3\+Rf\+Stop}} = 0x\+D5U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aec92d884ac1e866b20e1d34b8ba238d5}{sf\+Err\+Test\+Mode4\+Build\+Uplink}} = 0x\+E0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac79a179a45604e9cc1345fff42b3f6e1}{sf\+Err\+Test\+Mode4\+Send\+Uplink}} = 0x\+E1U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a48f4e88fbe30c5f8dda07991070d7fbd}{sf\+Err\+Test\+Mode4\+Report\+Test}} = 0x\+E2U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ae4442c6b603ac90b63fcf083cddf32b0}{sf\+Err\+Test\+Mode4\+Get\+Rssi}} = 0x\+E3U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2f782386131bf8c4d591ce34ef599a6a}{sf\+Err\+Test\+Mode4\+Delay}} = 0x\+E4U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab6dc2e8944469dc027af3fa4d76c4b16}{sf\+Err\+Test\+Mode5\+Rf\+Init}} = 0x\+F0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af6bb2efc8d9178d86f3ae926e33f87c3}{sf\+Err\+Test\+Mode5\+Change\+Freq}} = 0x\+F1U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7649594d293dbb217229c440164a4431}{sf\+Err\+Test\+Mode5\+Build\+Uplink}} = 0x\+F2U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a55f5dbb9b94425b67f79ba9c753cffe3}{sf\+Err\+Test\+Mode5\+Send\+Uplink}} = 0x\+F3U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a41e514a0f304c45876c4d11c80c21226}{sf\+Err\+Test\+Mode5\+Rf\+Stop}} = 0x\+F4U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6521e372a5fef561b8d00761abf36f0b}{sf\+Err\+Unknown\+Spi\+Command}} = 0x01U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac9cb3b9252274129a71fe21107c00ba7}{sf\+Err\+Manuf\+None}} = 0x00U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab1e2a619a65d561f5e7923682d1d438b}{sf\+Err\+Manuf\+Malloc}} = 0x08U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a513c8c93b0eb30eeecb0a5a2d4a71d72}{sf\+Err\+Manuf\+Init}} = 0x10U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aca1903fffd6d7be9649640653bc4a312}{sf\+Err\+Manuf\+Send}} = 0x18U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68abc2079bb6e0f41f5c33dd759b01b0353}{sf\+Err\+Manuf\+Free}} = 0x20U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a3ab0507faa95b8c251cac1586dfcf7b3}{sf\+Err\+Manuf\+Volt\+Temp}} = 0x28U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a42fa085868067013540bf5b6f9ec609f}{sf\+Err\+Manuf\+Rf\+Stop}} = 0x30U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a73aa352d9e2d3e24cb22be072a4e53a6}{sf\+Err\+Manuf\+Dly}} = 0x38U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a59a9437cb6440abc225c2c04776fb7df}{sf\+Err\+Manuf\+Ch\+Freq}} = 0x40U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a84c86fd0803ca0927c2eab4da81e00c4}{sf\+Err\+Manuf\+Aes}} = 0x48U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a093b59b03e424aafea8bbf25aaa390d3}{sf\+Err\+Manuf\+Getnvmem}} = 0x50U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a35e73affe78f3354a84c52d8af494fcd}{sf\+Err\+Manuf\+Setnvmem}} = 0x58U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab3fa429b09c512abd7cfec910a5589a4}{sf\+Err\+Manuf\+Get\+Rssi}} = 0x60U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a24310e5268335ac67c0b5fdef9adfff4}{sf\+Err\+Manuf\+Wait\+Frame\+Timeout}} = 0x68U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ada8ddc80995c712fce6d6ee7c498a085}{sf\+Err\+Manuf\+Wait\+Cs\+Timeout}} = 0x69U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a784be46a86c18a044932cc16ea58f03d}{sf\+Err\+Manuf\+Timer\+Start}} = 0x70U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a3e197f949fd2edd42ec97bef2dac7672}{sf\+Err\+Manuf\+Timer\+Start\+Cs}} = 0x71U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a25b90510613601164a7de3052f06e65f}{sf\+Err\+Manuf\+Timer\+Stop\+Cs}} = 0x72U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7975593fe2a3cfdcbcdd4d64b11c42c9}{sf\+Err\+Manuf\+Timer\+Stop}} = 0x78U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a0e7ae4e6d54b60a95076b0b1e940deed}{sf\+Err\+Manuf\+Timer\+End}} = 0x80U, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a888ca7f1453eefec77709ce9212e8804}{sf\+Err\+Manuf\+Test\+Report}} = 0x88U
+ \}
+\begin{DoxyCompactList}\small\item\em Error codes of the S\+I\+G\+F\+OX device included in S\+PI acknowledgement frames. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga5c889c0804ec8ccd3741803bd8b12d9c}{sf\+\_\+test\+\_\+mode\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9ca887798a1b768fb56063302b44f5d27d8}{sf\+Test\+Mode\+Tx\+Bpsk}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9caac88812a5a33c5e5012847354396c9a8}{sf\+Test\+Mode\+Tx\+Protocol}}, 
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cae1fbf862817e4e3c1586468660ed2c42}{sf\+Test\+Mode\+Rx\+Protocol}}, 
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9ca7823d41861028f838630e4904644ddec}{sf\+Test\+Mode\+Rx\+Gfsk}}, 
+\newline
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cad4b9133e7909590fabcd894ddcebcbda}{sf\+Test\+Mode\+Rx\+Sensi}}, 
+\mbox{\hyperlink{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cad51d2bdf24e66c8a5059b162fd5b01bc}{sf\+Test\+Mod\+Tx\+Synth}}
+ \}
+\begin{DoxyCompactList}\small\item\em Selection of a test mode used to verify the protocol, RF and sensitivity. Detailed description of the modes is in the device datasheet. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}{sf\+\_\+xtal\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_gga921cd8c6964917cde98f2a132c5548d5aeec2c76936f143f22966c4e0fc3cf417}{sf\+Xtal552}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga921cd8c6964917cde98f2a132c5548d5a5e6adb116a9a9946e482b94bef60f46b}{sf\+Xtal276}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Selection of X\+T\+AL type used in the device. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}{sf\+\_\+tx\+\_\+repeat\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_gga7d2f06984784542a95d02e422a42d9cfa68731d8416f50490cb067b1a5fac8c49}{sf\+Tx\+Repeat1}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga7d2f06984784542a95d02e422a42d9cfa4da7c9c47dc49a65d23bdea3ab13ace1}{sf\+Tx\+Repeat3}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Amount of transmissions that will happen on one time invoking of S\+F\+\_\+\+Send\+Payload function. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}{sf\+\_\+pa\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_ggac746e971077ef8c8dac9d26a8b47a2f9ae374e75084169a023bad0bff5c534a79}{sf\+Pa14}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_ggac746e971077ef8c8dac9d26a8b47a2f9a42cbf4af933c869670f191acfb3ef422}{sf\+Pa0}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Selection of internal PA type used in the device. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} \{ \mbox{\hyperlink{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a8280855764dcf37f8006cc6fa9e3882b}{sf\+Net\+Standard\+E\+T\+SI}} = 0U, 
+\mbox{\hyperlink{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a0ea0f3cba82c21c5ecf607640e1f9d08}{sf\+Net\+Standard\+F\+C\+C\+\_\+\+U\+SA}}, 
+\mbox{\hyperlink{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a602fd419505a63597bf81f351623cb99}{sf\+Net\+Standard\+A\+R\+IB}}, 
+\mbox{\hyperlink{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a628eee35ad8745cb5989b1b8b82089f0}{sf\+Net\+Standard\+F\+C\+C\+\_\+\+South\+America}}
+ \}
+\begin{DoxyCompactList}\small\item\em List of standards defining network communication parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enumerations common for all models. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__sf__enum__group_ga1b29c7c81b1098654855dd013cb61b56}\label{group__sf__enum__group_ga1b29c7c81b1098654855dd013cb61b56}} 
+\index{Sf\_enum\_group@{Sf\_enum\_group}!\_sf\_status\_t@{\_sf\_status\_t}}
+\index{\_sf\_status\_t@{\_sf\_status\_t}!Sf\_enum\_group@{Sf\_enum\_group}}
+\subsubsection{\texorpdfstring{\_sf\_status\_t}{\_sf\_status\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__sf__enum__group_ga1b29c7c81b1098654855dd013cb61b56}{\+\_\+sf\+\_\+status\+\_\+t}}}
+
+
+
+Specific error codes for this driver. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SF\_SpiAckError@{kStatus\_SF\_SpiAckError}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!kStatus\_SF\_SpiAckError@{kStatus\_SF\_SpiAckError}}}\mbox{\Hypertarget{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a74c58258f59ceb3ec13c27709238ddf7}\label{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a74c58258f59ceb3ec13c27709238ddf7}} 
+k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Ack\+Error&Received an error from the O\+L23xx device via S\+PI. Use the S\+F\+\_\+\+Get\+Error\+Code function to obtain the error code from the last A\+CK frame received. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SF\_SpiAckLength@{kStatus\_SF\_SpiAckLength}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!kStatus\_SF\_SpiAckLength@{kStatus\_SF\_SpiAckLength}}}\mbox{\Hypertarget{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a00e81a58055c9f563ea397797ce408f5}\label{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a00e81a58055c9f563ea397797ce408f5}} 
+k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Ack\+Length&Size of the receive buffer is smaller than data to be received (indicated by the first byte of a received acknowledgement). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SF\_SpiTimeout@{kStatus\_SF\_SpiTimeout}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!kStatus\_SF\_SpiTimeout@{kStatus\_SF\_SpiTimeout}}}\mbox{\Hypertarget{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a5ae3424a02fc31c3e6482b6245e0dda8}\label{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a5ae3424a02fc31c3e6482b6245e0dda8}} 
+k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Timeout&S\+PI communication timeout. Note that some commands take extra time to send data to S\+I\+G\+F\+OX network (for example Send Payload command). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SF\_SpiTestFail@{kStatus\_SF\_SpiTestFail}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!kStatus\_SF\_SpiTestFail@{kStatus\_SF\_SpiTestFail}}}\mbox{\Hypertarget{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a82b543f202905c06ab2dca7133ec7617}\label{group__sf__enum__group_gga1b29c7c81b1098654855dd013cb61b56a82b543f202905c06ab2dca7133ec7617}} 
+k\+Status\+\_\+\+S\+F\+\_\+\+Spi\+Test\+Fail&A S\+PI communication check performed in the S\+F\+\_\+\+Init function failed. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__sf__enum__group_ga9f14f69f90dfff97b98977db7a73ba68}\label{group__sf__enum__group_ga9f14f69f90dfff97b98977db7a73ba68}} 
+\index{Sf\_enum\_group@{Sf\_enum\_group}!sf\_intern\_error\_t@{sf\_intern\_error\_t}}
+\index{sf\_intern\_error\_t@{sf\_intern\_error\_t}!Sf\_enum\_group@{Sf\_enum\_group}}
+\subsubsection{\texorpdfstring{sf\_intern\_error\_t}{sf\_intern\_error\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__sf__enum__group_ga9f14f69f90dfff97b98977db7a73ba68}{sf\+\_\+intern\+\_\+error\+\_\+t}}}
+
+
+
+Error codes of the S\+I\+G\+F\+OX device included in S\+PI acknowledgement frames. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrNone@{sfErrNone}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrNone@{sfErrNone}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a19b412cc5c8e6fbdc572d470e91e8f17}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a19b412cc5c8e6fbdc572d470e91e8f17}} 
+sf\+Err\+None&No error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrOpenMalloc@{sfErrOpenMalloc}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrOpenMalloc@{sfErrOpenMalloc}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9d3aa2e6bae681608b12f706c1e56b89}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9d3aa2e6bae681608b12f706c1e56b89}} 
+sf\+Err\+Open\+Malloc&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+malloc or buffer pointer N\+U\+LL \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrOpenIdPtr@{sfErrOpenIdPtr}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrOpenIdPtr@{sfErrOpenIdPtr}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a5745af3a0917d42e99b35d143d7c841b}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a5745af3a0917d42e99b35d143d7c841b}} 
+sf\+Err\+Open\+Id\+Ptr&ID pointer N\+U\+LL \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrOpenGetSeq@{sfErrOpenGetSeq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrOpenGetSeq@{sfErrOpenGetSeq}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a34c89e7cf0ce9d99cdc59bf13cac7ea9}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a34c89e7cf0ce9d99cdc59bf13cac7ea9}} 
+sf\+Err\+Open\+Get\+Seq&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+get\+\_\+nv\+\_\+mem w/ S\+F\+X\+\_\+\+N\+V\+M\+E\+M\+\_\+\+S\+E\+Q\+\_\+\+C\+PT \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrOpenGetPn@{sfErrOpenGetPn}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrOpenGetPn@{sfErrOpenGetPn}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a319c7f5da1e94ac59f36032b89c56842}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a319c7f5da1e94ac59f36032b89c56842}} 
+sf\+Err\+Open\+Get\+Pn&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+get\+\_\+nv\+\_\+mem w/ S\+F\+X\+\_\+\+N\+V\+M\+E\+M\+\_\+\+PN \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrOpenState@{sfErrOpenState}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrOpenState@{sfErrOpenState}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aef931d5ec6bbf1af3ba18085cf2f5774}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aef931d5ec6bbf1af3ba18085cf2f5774}} 
+sf\+Err\+Open\+State&State is not idle, library should be closed before \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrOpenGetFh@{sfErrOpenGetFh}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrOpenGetFh@{sfErrOpenGetFh}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7781f096a60abf16956e5ebc1136578b}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7781f096a60abf16956e5ebc1136578b}} 
+sf\+Err\+Open\+Get\+Fh&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+get\+\_\+nv\+\_\+mem w/ S\+F\+X\+\_\+\+N\+V\+M\+E\+M\+\_\+\+FH \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrOpenMacroChannelWidth@{sfErrOpenMacroChannelWidth}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrOpenMacroChannelWidth@{sfErrOpenMacroChannelWidth}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a94b5bce35c5189935246c1a4b0bae296}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a94b5bce35c5189935246c1a4b0bae296}} 
+sf\+Err\+Open\+Macro\+Channel\+Width&Macro channel width not allowed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrOpenRczPtr@{sfErrOpenRczPtr}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrOpenRczPtr@{sfErrOpenRczPtr}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a56ae3ee39054ae629a9344ab04c79837}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a56ae3ee39054ae629a9344ab04c79837}} 
+sf\+Err\+Open\+Rcz\+Ptr&R\+CZ pointer is N\+U\+LL \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrCloseFree@{sfErrCloseFree}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrCloseFree@{sfErrCloseFree}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a554b0c6f521b9fb69d42ffb5d883c836}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a554b0c6f521b9fb69d42ffb5d883c836}} 
+sf\+Err\+Close\+Free&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+free \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrCloseRfStop@{sfErrCloseRfStop}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrCloseRfStop@{sfErrCloseRfStop}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aaabea2b6ec2ea395166e23d4942e1f4c}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aaabea2b6ec2ea395166e23d4942e1f4c}} 
+sf\+Err\+Close\+Rf\+Stop&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+stop \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameDataLength@{sfErrSendFrameDataLength}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameDataLength@{sfErrSendFrameDataLength}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a019946ece406e5708583c14952a39708}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a019946ece406e5708583c14952a39708}} 
+sf\+Err\+Send\+Frame\+Data\+Length&Customer data length $>$ 12 Bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameState@{sfErrSendFrameState}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameState@{sfErrSendFrameState}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa647caea699108aab7337be84c2be6e3}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa647caea699108aab7337be84c2be6e3}} 
+sf\+Err\+Send\+Frame\+State&State != R\+E\+A\+DY, must close and reopen library \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameResponsePtr@{sfErrSendFrameResponsePtr}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameResponsePtr@{sfErrSendFrameResponsePtr}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a021d42fd258a93cea6d590b0d754c840}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a021d42fd258a93cea6d590b0d754c840}} 
+sf\+Err\+Send\+Frame\+Response\+Ptr&Response data pointer N\+U\+LL in case of downlink \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameBuildUplink@{sfErrSendFrameBuildUplink}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameBuildUplink@{sfErrSendFrameBuildUplink}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a8cf788b1949f63cfad110e84b0faabac}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a8cf788b1949f63cfad110e84b0faabac}} 
+sf\+Err\+Send\+Frame\+Build\+Uplink&Build uplink frame failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameSendUplink@{sfErrSendFrameSendUplink}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameSendUplink@{sfErrSendFrameSendUplink}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad128acc26ce64b9f4aa9fba217e89ca1}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad128acc26ce64b9f4aa9fba217e89ca1}} 
+sf\+Err\+Send\+Frame\+Send\+Uplink&Send uplink frame failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameReceive@{sfErrSendFrameReceive}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameReceive@{sfErrSendFrameReceive}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a28c9f697991f419d24a9ac7a11ab2a47}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a28c9f697991f419d24a9ac7a11ab2a47}} 
+sf\+Err\+Send\+Frame\+Receive&Receive downlink frame failed or timeout \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameDelayOobAck@{sfErrSendFrameDelayOobAck}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameDelayOobAck@{sfErrSendFrameDelayOobAck}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6f56a4b080d9727d3aa7f684301183bd}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6f56a4b080d9727d3aa7f684301183bd}} 
+sf\+Err\+Send\+Frame\+Delay\+Oob\+Ack&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+delay w/ S\+F\+X\+\_\+\+D\+L\+Y\+\_\+\+O\+O\+B\+\_\+\+A\+CK (Downlink) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameBuildOobAck@{sfErrSendFrameBuildOobAck}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameBuildOobAck@{sfErrSendFrameBuildOobAck}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af534c64aa0f756556edf7aa712fb469b}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af534c64aa0f756556edf7aa712fb469b}} 
+sf\+Err\+Send\+Frame\+Build\+Oob\+Ack&Build out of band frame failed (Downlink) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameSendOobAck@{sfErrSendFrameSendOobAck}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameSendOobAck@{sfErrSendFrameSendOobAck}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a151036f32e66d9b79c53589523f1d47f}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a151036f32e66d9b79c53589523f1d47f}} 
+sf\+Err\+Send\+Frame\+Send\+Oob\+Ack&Send out of band frame failed (Downlink) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameDataPtr@{sfErrSendFrameDataPtr}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameDataPtr@{sfErrSendFrameDataPtr}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9ad1d23174c3efeab91d3ade6cf81313}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9ad1d23174c3efeab91d3ade6cf81313}} 
+sf\+Err\+Send\+Frame\+Data\+Ptr&Customer data pointer N\+U\+LL \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameCarrierSenseConfig@{sfErrSendFrameCarrierSenseConfig}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameCarrierSenseConfig@{sfErrSendFrameCarrierSenseConfig}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a01c819a7539e8362d685325ba45a1e52}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a01c819a7539e8362d685325ba45a1e52}} 
+sf\+Err\+Send\+Frame\+Carrier\+Sense\+Config&Carrier Sense configuration need to be initialized \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameCarrierSenseTimeout@{sfErrSendFrameCarrierSenseTimeout}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameCarrierSenseTimeout@{sfErrSendFrameCarrierSenseTimeout}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a15a18dbf53466c7b41a80a47afa4eaed}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a15a18dbf53466c7b41a80a47afa4eaed}} 
+sf\+Err\+Send\+Frame\+Carrier\+Sense\+Timeout&Wait for clear channel has returned time out \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameWaitTimeout@{sfErrSendFrameWaitTimeout}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameWaitTimeout@{sfErrSendFrameWaitTimeout}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad21b2f8936a006fb59f7137b9049b464}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad21b2f8936a006fb59f7137b9049b464}} 
+sf\+Err\+Send\+Frame\+Wait\+Timeout&Wait frame has returned time out \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendFrameInvalidFhChan@{sfErrSendFrameInvalidFhChan}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendFrameInvalidFhChan@{sfErrSendFrameInvalidFhChan}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa85a7c45fd2276a8cc59da2da57e2e69}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa85a7c45fd2276a8cc59da2da57e2e69}} 
+sf\+Err\+Send\+Frame\+Invalid\+Fh\+Chan&FH invalid channel, must call S\+I\+G\+F\+O\+X\+\_\+\+A\+P\+I\+\_\+reset \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitState@{sfErrSendBitState}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitState@{sfErrSendBitState}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9667dd72eba8aeeba708761b451b1dfc}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9667dd72eba8aeeba708761b451b1dfc}} 
+sf\+Err\+Send\+Bit\+State&State != R\+E\+A\+DY, must close and reopen library \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitResponsePtr@{sfErrSendBitResponsePtr}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitResponsePtr@{sfErrSendBitResponsePtr}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afd02149c575f86e8aab0cf0967482e30}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afd02149c575f86e8aab0cf0967482e30}} 
+sf\+Err\+Send\+Bit\+Response\+Ptr&Response data pointer N\+U\+LL in case of downlink \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitBuildUplink@{sfErrSendBitBuildUplink}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitBuildUplink@{sfErrSendBitBuildUplink}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a1d58e25e82556a1e5da2b2cbd98dbf19}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a1d58e25e82556a1e5da2b2cbd98dbf19}} 
+sf\+Err\+Send\+Bit\+Build\+Uplink&Build uplink frame failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitSendUplink@{sfErrSendBitSendUplink}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitSendUplink@{sfErrSendBitSendUplink}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a885c9a43abab532c23ae4f09fb19ac22}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a885c9a43abab532c23ae4f09fb19ac22}} 
+sf\+Err\+Send\+Bit\+Send\+Uplink&Send uplink frame failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitReceive@{sfErrSendBitReceive}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitReceive@{sfErrSendBitReceive}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa810b80eb6175489156bbbb6b6f46cce}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aa810b80eb6175489156bbbb6b6f46cce}} 
+sf\+Err\+Send\+Bit\+Receive&Receive downlink frame failed or timeout \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitDelayOobAck@{sfErrSendBitDelayOobAck}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitDelayOobAck@{sfErrSendBitDelayOobAck}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a38f8a5f19e393d8c8f56b450b2224685}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a38f8a5f19e393d8c8f56b450b2224685}} 
+sf\+Err\+Send\+Bit\+Delay\+Oob\+Ack&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+delay w/ S\+F\+X\+\_\+\+D\+L\+Y\+\_\+\+O\+O\+B\+\_\+\+A\+CK (Downlink) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitBuildOobAck@{sfErrSendBitBuildOobAck}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitBuildOobAck@{sfErrSendBitBuildOobAck}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6993b5122381b1d1fa9c00824fe20a6e}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6993b5122381b1d1fa9c00824fe20a6e}} 
+sf\+Err\+Send\+Bit\+Build\+Oob\+Ack&Build out of band frame failed (Downlink) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitSendOobAck@{sfErrSendBitSendOobAck}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitSendOobAck@{sfErrSendBitSendOobAck}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a45c5dd0d0a2f8d8acf1c924103c8246f}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a45c5dd0d0a2f8d8acf1c924103c8246f}} 
+sf\+Err\+Send\+Bit\+Send\+Oob\+Ack&Send out of band frame failed (Downlink) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitDataPtr@{sfErrSendBitDataPtr}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitDataPtr@{sfErrSendBitDataPtr}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2771f6631af7347143da2a62bcb7d7bc}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2771f6631af7347143da2a62bcb7d7bc}} 
+sf\+Err\+Send\+Bit\+Data\+Ptr&Customer data pointer N\+U\+LL \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitCarrierSenseConfig@{sfErrSendBitCarrierSenseConfig}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitCarrierSenseConfig@{sfErrSendBitCarrierSenseConfig}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a770e546fd8ffbd3f5826e00909e06b2c}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a770e546fd8ffbd3f5826e00909e06b2c}} 
+sf\+Err\+Send\+Bit\+Carrier\+Sense\+Config&Carrier Sense configuration need to be initialized \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitCarrierSenseTimeout@{sfErrSendBitCarrierSenseTimeout}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitCarrierSenseTimeout@{sfErrSendBitCarrierSenseTimeout}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afa5384ba19318d0c1151df9efb1cc1c6}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afa5384ba19318d0c1151df9efb1cc1c6}} 
+sf\+Err\+Send\+Bit\+Carrier\+Sense\+Timeout&Wait for clear channel has returned time out \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitWaitTimeout@{sfErrSendBitWaitTimeout}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitWaitTimeout@{sfErrSendBitWaitTimeout}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a357382e45f540e1dbc20336cfb5d46a9}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a357382e45f540e1dbc20336cfb5d46a9}} 
+sf\+Err\+Send\+Bit\+Wait\+Timeout&Wait frame has returned time out \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendBitInvalidFhChan@{sfErrSendBitInvalidFhChan}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendBitInvalidFhChan@{sfErrSendBitInvalidFhChan}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7155e65e9ae3b204b28dbdf0effe5013}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7155e65e9ae3b204b28dbdf0effe5013}} 
+sf\+Err\+Send\+Bit\+Invalid\+Fh\+Chan&FH invalid channel, must call S\+I\+G\+F\+O\+X\+\_\+\+A\+P\+I\+\_\+reset \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendOobState@{sfErrSendOobState}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendOobState@{sfErrSendOobState}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a5e5631cb5ffb60efdcf4b9ed50d3ba97}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a5e5631cb5ffb60efdcf4b9ed50d3ba97}} 
+sf\+Err\+Send\+Oob\+State&State != R\+E\+A\+DY, must close and reopen library \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendOobBuildUplink@{sfErrSendOobBuildUplink}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendOobBuildUplink@{sfErrSendOobBuildUplink}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68abbd8f67cfb56ffae3022ca43d0516081}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68abbd8f67cfb56ffae3022ca43d0516081}} 
+sf\+Err\+Send\+Oob\+Build\+Uplink&Build uplink frame failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendOobSendUplink@{sfErrSendOobSendUplink}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendOobSendUplink@{sfErrSendOobSendUplink}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a824e815911f539061cd9a055db741419}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a824e815911f539061cd9a055db741419}} 
+sf\+Err\+Send\+Oob\+Send\+Uplink&Send uplink frame failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSendOobInvalidFhChan@{sfErrSendOobInvalidFhChan}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSendOobInvalidFhChan@{sfErrSendOobInvalidFhChan}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a36494bce251854559d6c364d38ea05c0}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a36494bce251854559d6c364d38ea05c0}} 
+sf\+Err\+Send\+Oob\+Invalid\+Fh\+Chan&Send out of band frame failed (Downlink) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSetStdConfigSigfoxChan@{sfErrSetStdConfigSigfoxChan}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSetStdConfigSigfoxChan@{sfErrSetStdConfigSigfoxChan}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7963c32510a7541dcb6ab20265087202}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7963c32510a7541dcb6ab20265087202}} 
+sf\+Err\+Set\+Std\+Config\+Sigfox\+Chan&Default S\+I\+G\+F\+OX channel out of range \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrSetStdConfigSet@{sfErrSetStdConfigSet}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrSetStdConfigSet@{sfErrSetStdConfigSet}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad5584b73f9aad85efdec4565a95c7750}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ad5584b73f9aad85efdec4565a95c7750}} 
+sf\+Err\+Set\+Std\+Config\+Set&Unable to set configuration \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode0RfInit@{sfErrTestMode0RfInit}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode0RfInit@{sfErrTestMode0RfInit}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a0612d5e84c6c921c40c1199619585dc7}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a0612d5e84c6c921c40c1199619585dc7}} 
+sf\+Err\+Test\+Mode0\+Rf\+Init&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+init \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode0ChangeFreq@{sfErrTestMode0ChangeFreq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode0ChangeFreq@{sfErrTestMode0ChangeFreq}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac06aba9023dcda5e1b1e29ced31d7922}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac06aba9023dcda5e1b1e29ced31d7922}} 
+sf\+Err\+Test\+Mode0\+Change\+Freq&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+change\+\_\+frequency \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode0RfSend@{sfErrTestMode0RfSend}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode0RfSend@{sfErrTestMode0RfSend}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a1e0cce4ea1ffd2afbb0a26257b727d4b}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a1e0cce4ea1ffd2afbb0a26257b727d4b}} 
+sf\+Err\+Test\+Mode0\+Rf\+Send&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+send \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode0Delay@{sfErrTestMode0Delay}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode0Delay@{sfErrTestMode0Delay}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a11aa88fe3d3b8276a9f6499125766359}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a11aa88fe3d3b8276a9f6499125766359}} 
+sf\+Err\+Test\+Mode0\+Delay&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+delay \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode0RfStop@{sfErrTestMode0RfStop}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode0RfStop@{sfErrTestMode0RfStop}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a33ea72779964d1756e185a98339bb7ea}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a33ea72779964d1756e185a98339bb7ea}} 
+sf\+Err\+Test\+Mode0\+Rf\+Stop&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+stop \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestModeState@{sfErrTestModeState}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestModeState@{sfErrTestModeState}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9c0bc4cb4b7cba4e971409112b2cdf22}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a9c0bc4cb4b7cba4e971409112b2cdf22}} 
+sf\+Err\+Test\+Mode\+State&State != R\+E\+A\+DY, must close and reopen library \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode2ReportTest@{sfErrTestMode2ReportTest}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode2ReportTest@{sfErrTestMode2ReportTest}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af7f4e17faad6cce6c13c72afebb7a59e}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af7f4e17faad6cce6c13c72afebb7a59e}} 
+sf\+Err\+Test\+Mode2\+Report\+Test&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+report\+\_\+test\+\_\+result \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode3RfInit@{sfErrTestMode3RfInit}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode3RfInit@{sfErrTestMode3RfInit}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afaa24b4f4188489cad464072acb58bab}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68afaa24b4f4188489cad464072acb58bab}} 
+sf\+Err\+Test\+Mode3\+Rf\+Init&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+init \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode3ChangeFreq@{sfErrTestMode3ChangeFreq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode3ChangeFreq@{sfErrTestMode3ChangeFreq}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a8b23bbbce2a8f47ea0554f37fd453591}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a8b23bbbce2a8f47ea0554f37fd453591}} 
+sf\+Err\+Test\+Mode3\+Change\+Freq&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+change\+\_\+frequency \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode3TimerStart@{sfErrTestMode3TimerStart}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode3TimerStart@{sfErrTestMode3TimerStart}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a61643a8e6b4ac150b591c944b1e89b8f}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a61643a8e6b4ac150b591c944b1e89b8f}} 
+sf\+Err\+Test\+Mode3\+Timer\+Start&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+timer\+\_\+start \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode3ReportTest@{sfErrTestMode3ReportTest}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode3ReportTest@{sfErrTestMode3ReportTest}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2238a4c9b35c43888d802ff22be51e2a}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2238a4c9b35c43888d802ff22be51e2a}} 
+sf\+Err\+Test\+Mode3\+Report\+Test&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+report\+\_\+test\+\_\+result \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode3TimerStop@{sfErrTestMode3TimerStop}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode3TimerStop@{sfErrTestMode3TimerStop}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a33c98fbc7c9ac9eba79507827140118e}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a33c98fbc7c9ac9eba79507827140118e}} 
+sf\+Err\+Test\+Mode3\+Timer\+Stop&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+timer\+\_\+stop \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode3RfStop@{sfErrTestMode3RfStop}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode3RfStop@{sfErrTestMode3RfStop}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a4f9de992abfb3c006e0cf68fc2bc18ea}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a4f9de992abfb3c006e0cf68fc2bc18ea}} 
+sf\+Err\+Test\+Mode3\+Rf\+Stop&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+stop \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode4BuildUplink@{sfErrTestMode4BuildUplink}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode4BuildUplink@{sfErrTestMode4BuildUplink}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aec92d884ac1e866b20e1d34b8ba238d5}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aec92d884ac1e866b20e1d34b8ba238d5}} 
+sf\+Err\+Test\+Mode4\+Build\+Uplink&Build uplink frame failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode4SendUplink@{sfErrTestMode4SendUplink}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode4SendUplink@{sfErrTestMode4SendUplink}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac79a179a45604e9cc1345fff42b3f6e1}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac79a179a45604e9cc1345fff42b3f6e1}} 
+sf\+Err\+Test\+Mode4\+Send\+Uplink&Send uplink frame failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode4ReportTest@{sfErrTestMode4ReportTest}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode4ReportTest@{sfErrTestMode4ReportTest}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a48f4e88fbe30c5f8dda07991070d7fbd}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a48f4e88fbe30c5f8dda07991070d7fbd}} 
+sf\+Err\+Test\+Mode4\+Report\+Test&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+report\+\_\+test\+\_\+result \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode4GetRssi@{sfErrTestMode4GetRssi}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode4GetRssi@{sfErrTestMode4GetRssi}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ae4442c6b603ac90b63fcf083cddf32b0}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ae4442c6b603ac90b63fcf083cddf32b0}} 
+sf\+Err\+Test\+Mode4\+Get\+Rssi&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+get\+\_\+rssi \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode4Delay@{sfErrTestMode4Delay}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode4Delay@{sfErrTestMode4Delay}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2f782386131bf8c4d591ce34ef599a6a}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a2f782386131bf8c4d591ce34ef599a6a}} 
+sf\+Err\+Test\+Mode4\+Delay&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+delay \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode5RfInit@{sfErrTestMode5RfInit}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode5RfInit@{sfErrTestMode5RfInit}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab6dc2e8944469dc027af3fa4d76c4b16}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab6dc2e8944469dc027af3fa4d76c4b16}} 
+sf\+Err\+Test\+Mode5\+Rf\+Init&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+init \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode5ChangeFreq@{sfErrTestMode5ChangeFreq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode5ChangeFreq@{sfErrTestMode5ChangeFreq}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af6bb2efc8d9178d86f3ae926e33f87c3}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68af6bb2efc8d9178d86f3ae926e33f87c3}} 
+sf\+Err\+Test\+Mode5\+Change\+Freq&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+change\+\_\+frequency \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode5BuildUplink@{sfErrTestMode5BuildUplink}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode5BuildUplink@{sfErrTestMode5BuildUplink}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7649594d293dbb217229c440164a4431}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7649594d293dbb217229c440164a4431}} 
+sf\+Err\+Test\+Mode5\+Build\+Uplink&Build uplink frame failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode5SendUplink@{sfErrTestMode5SendUplink}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode5SendUplink@{sfErrTestMode5SendUplink}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a55f5dbb9b94425b67f79ba9c753cffe3}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a55f5dbb9b94425b67f79ba9c753cffe3}} 
+sf\+Err\+Test\+Mode5\+Send\+Uplink&Send uplink frame failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrTestMode5RfStop@{sfErrTestMode5RfStop}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrTestMode5RfStop@{sfErrTestMode5RfStop}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a41e514a0f304c45876c4d11c80c21226}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a41e514a0f304c45876c4d11c80c21226}} 
+sf\+Err\+Test\+Mode5\+Rf\+Stop&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+stop \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrUnknownSpiCommand@{sfErrUnknownSpiCommand}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrUnknownSpiCommand@{sfErrUnknownSpiCommand}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6521e372a5fef561b8d00761abf36f0b}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a6521e372a5fef561b8d00761abf36f0b}} 
+sf\+Err\+Unknown\+Spi\+Command&Unknown S\+PI command received. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufNone@{sfErrManufNone}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufNone@{sfErrManufNone}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac9cb3b9252274129a71fe21107c00ba7}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ac9cb3b9252274129a71fe21107c00ba7}} 
+sf\+Err\+Manuf\+None&No error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufMalloc@{sfErrManufMalloc}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufMalloc@{sfErrManufMalloc}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab1e2a619a65d561f5e7923682d1d438b}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab1e2a619a65d561f5e7923682d1d438b}} 
+sf\+Err\+Manuf\+Malloc&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+malloc \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufInit@{sfErrManufInit}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufInit@{sfErrManufInit}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a513c8c93b0eb30eeecb0a5a2d4a71d72}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a513c8c93b0eb30eeecb0a5a2d4a71d72}} 
+sf\+Err\+Manuf\+Init&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+init \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufSend@{sfErrManufSend}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufSend@{sfErrManufSend}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aca1903fffd6d7be9649640653bc4a312}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68aca1903fffd6d7be9649640653bc4a312}} 
+sf\+Err\+Manuf\+Send&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+send \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufFree@{sfErrManufFree}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufFree@{sfErrManufFree}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68abc2079bb6e0f41f5c33dd759b01b0353}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68abc2079bb6e0f41f5c33dd759b01b0353}} 
+sf\+Err\+Manuf\+Free&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+free \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufVoltTemp@{sfErrManufVoltTemp}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufVoltTemp@{sfErrManufVoltTemp}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a3ab0507faa95b8c251cac1586dfcf7b3}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a3ab0507faa95b8c251cac1586dfcf7b3}} 
+sf\+Err\+Manuf\+Volt\+Temp&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+get\+\_\+voltage\+\_\+temperature \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufRfStop@{sfErrManufRfStop}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufRfStop@{sfErrManufRfStop}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a42fa085868067013540bf5b6f9ec609f}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a42fa085868067013540bf5b6f9ec609f}} 
+sf\+Err\+Manuf\+Rf\+Stop&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+rf\+\_\+stop \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufDly@{sfErrManufDly}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufDly@{sfErrManufDly}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a73aa352d9e2d3e24cb22be072a4e53a6}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a73aa352d9e2d3e24cb22be072a4e53a6}} 
+sf\+Err\+Manuf\+Dly&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+delay \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufChFreq@{sfErrManufChFreq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufChFreq@{sfErrManufChFreq}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a59a9437cb6440abc225c2c04776fb7df}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a59a9437cb6440abc225c2c04776fb7df}} 
+sf\+Err\+Manuf\+Ch\+Freq&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+change\+\_\+frequency \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufAes@{sfErrManufAes}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufAes@{sfErrManufAes}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a84c86fd0803ca0927c2eab4da81e00c4}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a84c86fd0803ca0927c2eab4da81e00c4}} 
+sf\+Err\+Manuf\+Aes&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+aes\+\_\+128\+\_\+cbc\+\_\+encrypt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufGetnvmem@{sfErrManufGetnvmem}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufGetnvmem@{sfErrManufGetnvmem}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a093b59b03e424aafea8bbf25aaa390d3}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a093b59b03e424aafea8bbf25aaa390d3}} 
+sf\+Err\+Manuf\+Getnvmem&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+get\+\_\+nv\+\_\+mem \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufSetnvmem@{sfErrManufSetnvmem}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufSetnvmem@{sfErrManufSetnvmem}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a35e73affe78f3354a84c52d8af494fcd}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a35e73affe78f3354a84c52d8af494fcd}} 
+sf\+Err\+Manuf\+Setnvmem&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+set\+\_\+nv\+\_\+mem \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufGetRssi@{sfErrManufGetRssi}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufGetRssi@{sfErrManufGetRssi}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab3fa429b09c512abd7cfec910a5589a4}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ab3fa429b09c512abd7cfec910a5589a4}} 
+sf\+Err\+Manuf\+Get\+Rssi&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+get\+\_\+rssi \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufWaitFrameTimeout@{sfErrManufWaitFrameTimeout}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufWaitFrameTimeout@{sfErrManufWaitFrameTimeout}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a24310e5268335ac67c0b5fdef9adfff4}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a24310e5268335ac67c0b5fdef9adfff4}} 
+sf\+Err\+Manuf\+Wait\+Frame\+Timeout&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+wait\+\_\+frame \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufWaitCsTimeout@{sfErrManufWaitCsTimeout}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufWaitCsTimeout@{sfErrManufWaitCsTimeout}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ada8ddc80995c712fce6d6ee7c498a085}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68ada8ddc80995c712fce6d6ee7c498a085}} 
+sf\+Err\+Manuf\+Wait\+Cs\+Timeout&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+wait\+\_\+for\+\_\+clear\+\_\+channel \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufTimerStart@{sfErrManufTimerStart}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufTimerStart@{sfErrManufTimerStart}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a784be46a86c18a044932cc16ea58f03d}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a784be46a86c18a044932cc16ea58f03d}} 
+sf\+Err\+Manuf\+Timer\+Start&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+timer\+\_\+start \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufTimerStartCs@{sfErrManufTimerStartCs}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufTimerStartCs@{sfErrManufTimerStartCs}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a3e197f949fd2edd42ec97bef2dac7672}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a3e197f949fd2edd42ec97bef2dac7672}} 
+sf\+Err\+Manuf\+Timer\+Start\+Cs&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+timer\+\_\+start\+\_\+carrier\+\_\+sense \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufTimerStopCs@{sfErrManufTimerStopCs}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufTimerStopCs@{sfErrManufTimerStopCs}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a25b90510613601164a7de3052f06e65f}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a25b90510613601164a7de3052f06e65f}} 
+sf\+Err\+Manuf\+Timer\+Stop\+Cs&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+timer\+\_\+stop\+\_\+carrier\+\_\+sense \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufTimerStop@{sfErrManufTimerStop}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufTimerStop@{sfErrManufTimerStop}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7975593fe2a3cfdcbcdd4d64b11c42c9}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a7975593fe2a3cfdcbcdd4d64b11c42c9}} 
+sf\+Err\+Manuf\+Timer\+Stop&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+timer\+\_\+stop \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufTimerEnd@{sfErrManufTimerEnd}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufTimerEnd@{sfErrManufTimerEnd}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a0e7ae4e6d54b60a95076b0b1e940deed}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a0e7ae4e6d54b60a95076b0b1e940deed}} 
+sf\+Err\+Manuf\+Timer\+End&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+timer\+\_\+wait\+\_\+for\+\_\+end \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfErrManufTestReport@{sfErrManufTestReport}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfErrManufTestReport@{sfErrManufTestReport}}}\mbox{\Hypertarget{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a888ca7f1453eefec77709ce9212e8804}\label{group__sf__enum__group_gga9f14f69f90dfff97b98977db7a73ba68a888ca7f1453eefec77709ce9212e8804}} 
+sf\+Err\+Manuf\+Test\+Report&Error on M\+A\+N\+U\+F\+\_\+\+A\+P\+I\+\_\+report\+\_\+test\+\_\+result \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__sf__enum__group_gaedd94907ea20da8e6d1cd3e3e3282c2c}\label{group__sf__enum__group_gaedd94907ea20da8e6d1cd3e3e3282c2c}} 
+\index{Sf\_enum\_group@{Sf\_enum\_group}!sf\_intern\_state\_t@{sf\_intern\_state\_t}}
+\index{sf\_intern\_state\_t@{sf\_intern\_state\_t}!Sf\_enum\_group@{Sf\_enum\_group}}
+\subsubsection{\texorpdfstring{sf\_intern\_state\_t}{sf\_intern\_state\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__sf__enum__group_gaedd94907ea20da8e6d1cd3e3e3282c2c}{sf\+\_\+intern\+\_\+state\+\_\+t}}}
+
+
+
+The state of the device in O\+L23xx software state machine. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfStateIdle@{sfStateIdle}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfStateIdle@{sfStateIdle}}}\mbox{\Hypertarget{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca42c1bdff1b32704ed68401e8630cc52e}\label{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca42c1bdff1b32704ed68401e8630cc52e}} 
+sf\+State\+Idle&Idle state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfStateInit@{sfStateInit}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfStateInit@{sfStateInit}}}\mbox{\Hypertarget{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca366330ad10f04c1d7c5625904bd294a5}\label{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca366330ad10f04c1d7c5625904bd294a5}} 
+sf\+State\+Init&Init state (state after initialization and in sleep mode). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfStateWaitForCmd@{sfStateWaitForCmd}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfStateWaitForCmd@{sfStateWaitForCmd}}}\mbox{\Hypertarget{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca2d8b641d6cf5e3284f6a8bbe038733c1}\label{group__sf__enum__group_ggaedd94907ea20da8e6d1cd3e3e3282c2ca2d8b641d6cf5e3284f6a8bbe038733c1}} 
+sf\+State\+Wait\+For\+Cmd&Wait for command state (state after wake-\/up). \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}\label{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}} 
+\index{Sf\_enum\_group@{Sf\_enum\_group}!sf\_net\_standard\_t@{sf\_net\_standard\_t}}
+\index{sf\_net\_standard\_t@{sf\_net\_standard\_t}!Sf\_enum\_group@{Sf\_enum\_group}}
+\subsubsection{\texorpdfstring{sf\_net\_standard\_t}{sf\_net\_standard\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}}}
+
+
+
+List of standards defining network communication parameters. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfNetStandardETSI@{sfNetStandardETSI}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfNetStandardETSI@{sfNetStandardETSI}}}\mbox{\Hypertarget{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a8280855764dcf37f8006cc6fa9e3882b}\label{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a8280855764dcf37f8006cc6fa9e3882b}} 
+sf\+Net\+Standard\+E\+T\+SI&European standard E\+T\+SI. Up-\/link frequency is 868 130 000 Hz, down-\/link frequency is 869 525 000 Hz, bit rate 100 bps. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfNetStandardFCC\_USA@{sfNetStandardFCC\_USA}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfNetStandardFCC\_USA@{sfNetStandardFCC\_USA}}}\mbox{\Hypertarget{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a0ea0f3cba82c21c5ecf607640e1f9d08}\label{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a0ea0f3cba82c21c5ecf607640e1f9d08}} 
+sf\+Net\+Standard\+F\+C\+C\+\_\+\+U\+SA&U\+SA standard F\+CC. Up-\/link frequency is 902 200 000 Hz, down-\/link frequency is 905 200 000 Hz, bit rate 600 bps. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfNetStandardARIB@{sfNetStandardARIB}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfNetStandardARIB@{sfNetStandardARIB}}}\mbox{\Hypertarget{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a602fd419505a63597bf81f351623cb99}\label{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a602fd419505a63597bf81f351623cb99}} 
+sf\+Net\+Standard\+A\+R\+IB&Japan/\+Korean standard A\+R\+IB. Up-\/link frequency is 923 200 000 Hz, down-\/link frequency is 922 200 000 Hz, bit rate 600 bps with listen before talk. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfNetStandardFCC\_SouthAmerica@{sfNetStandardFCC\_SouthAmerica}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfNetStandardFCC\_SouthAmerica@{sfNetStandardFCC\_SouthAmerica}}}\mbox{\Hypertarget{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a628eee35ad8745cb5989b1b8b82089f0}\label{group__sf__enum__group_gga9ad07e4b666d7d70f7a69614ecb89421a628eee35ad8745cb5989b1b8b82089f0}} 
+sf\+Net\+Standard\+F\+C\+C\+\_\+\+South\+America&South American standard F\+CC. Up-\/link frequency is 902 200 000 Hz, down-\/link frequency is 922 300 000 Hz, bit rate 600 bps. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}\label{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}} 
+\index{Sf\_enum\_group@{Sf\_enum\_group}!sf\_pa\_type\_t@{sf\_pa\_type\_t}}
+\index{sf\_pa\_type\_t@{sf\_pa\_type\_t}!Sf\_enum\_group@{Sf\_enum\_group}}
+\subsubsection{\texorpdfstring{sf\_pa\_type\_t}{sf\_pa\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}{sf\+\_\+pa\+\_\+type\+\_\+t}}}
+
+
+
+Selection of internal PA type used in the device. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfPa14@{sfPa14}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfPa14@{sfPa14}}}\mbox{\Hypertarget{group__sf__enum__group_ggac746e971077ef8c8dac9d26a8b47a2f9ae374e75084169a023bad0bff5c534a79}\label{group__sf__enum__group_ggac746e971077ef8c8dac9d26a8b47a2f9ae374e75084169a023bad0bff5c534a79}} 
+sf\+Pa14&14 d\+Bm PA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfPa0@{sfPa0}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfPa0@{sfPa0}}}\mbox{\Hypertarget{group__sf__enum__group_ggac746e971077ef8c8dac9d26a8b47a2f9a42cbf4af933c869670f191acfb3ef422}\label{group__sf__enum__group_ggac746e971077ef8c8dac9d26a8b47a2f9a42cbf4af933c869670f191acfb3ef422}} 
+sf\+Pa0&0 d\+Bm PA. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}\label{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}} 
+\index{Sf\_enum\_group@{Sf\_enum\_group}!sf\_spi\_cmd\_t@{sf\_spi\_cmd\_t}}
+\index{sf\_spi\_cmd\_t@{sf\_spi\_cmd\_t}!Sf\_enum\_group@{Sf\_enum\_group}}
+\subsubsection{\texorpdfstring{sf\_spi\_cmd\_t}{sf\_spi\_cmd\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}}}
+
+
+
+S\+PI commands of the device. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdSendEcho@{sfSpiCmdSendEcho}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdSendEcho@{sfSpiCmdSendEcho}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a323b9fcd84e1c29fb2bf3bbdc5b485cf}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a323b9fcd84e1c29fb2bf3bbdc5b485cf}} 
+sf\+Spi\+Cmd\+Send\+Echo&Echo command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdWakeup@{sfSpiCmdWakeup}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdWakeup@{sfSpiCmdWakeup}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4135c70bed7a3c56f4e645e7b2c8c709}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4135c70bed7a3c56f4e645e7b2c8c709}} 
+sf\+Spi\+Cmd\+Wakeup&Send Wakeup command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdSleep@{sfSpiCmdSleep}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdSleep@{sfSpiCmdSleep}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aac58778261544ebfae70c74d75d0a38e}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aac58778261544ebfae70c74d75d0a38e}} 
+sf\+Spi\+Cmd\+Sleep&Send to sleep command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdSendPayload@{sfSpiCmdSendPayload}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdSendPayload@{sfSpiCmdSendPayload}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3b6772cd4447ad1e61b0991ec6c73b06}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3b6772cd4447ad1e61b0991ec6c73b06}} 
+sf\+Spi\+Cmd\+Send\+Payload&Send payload command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdSendBit@{sfSpiCmdSendBit}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdSendBit@{sfSpiCmdSendBit}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a8269f4e639fcaa1ef63d40ed98a689eb}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a8269f4e639fcaa1ef63d40ed98a689eb}} 
+sf\+Spi\+Cmd\+Send\+Bit&Send bit command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdOutOfBand@{sfSpiCmdOutOfBand}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdOutOfBand@{sfSpiCmdOutOfBand}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3adb93e94b6dbf0da045c8e562f502ce}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3adb93e94b6dbf0da045c8e562f502ce}} 
+sf\+Spi\+Cmd\+Out\+Of\+Band&Send Out of Band command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdReceive@{sfSpiCmdReceive}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdReceive@{sfSpiCmdReceive}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a67a249422314b3352a70420adf4971c2}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a67a249422314b3352a70420adf4971c2}} 
+sf\+Spi\+Cmd\+Receive&Receive Frame command (available on O\+L2385). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdGetInfo@{sfSpiCmdGetInfo}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdGetInfo@{sfSpiCmdGetInfo}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ac11254b636e96580dc48d8610993374c}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ac11254b636e96580dc48d8610993374c}} 
+sf\+Spi\+Cmd\+Get\+Info&Get Info command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdGetUlFreq@{sfSpiCmdGetUlFreq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdGetUlFreq@{sfSpiCmdGetUlFreq}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4d9607b70af259dd814f8d37ff8cc227}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4d9607b70af259dd814f8d37ff8cc227}} 
+sf\+Spi\+Cmd\+Get\+Ul\+Freq&Set UL frequency command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdSetUlFreq@{sfSpiCmdSetUlFreq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdSetUlFreq@{sfSpiCmdSetUlFreq}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4f536b8d125504fe0534b905fda4590c}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a4f536b8d125504fe0534b905fda4590c}} 
+sf\+Spi\+Cmd\+Set\+Ul\+Freq&Get UL frequency command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdContWave@{sfSpiCmdContWave}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdContWave@{sfSpiCmdContWave}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa10006c82aea0fb6aa0a52ba12cdfac7}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa10006c82aea0fb6aa0a52ba12cdfac7}} 
+sf\+Spi\+Cmd\+Cont\+Wave&Continuous Wave command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdGetDevVer@{sfSpiCmdGetDevVer}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdGetDevVer@{sfSpiCmdGetDevVer}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545af126d09b7a286dd66b964230bb330cf6}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545af126d09b7a286dd66b964230bb330cf6}} 
+sf\+Spi\+Cmd\+Get\+Dev\+Ver&Get Device Version command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdTriggerWd@{sfSpiCmdTriggerWd}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdTriggerWd@{sfSpiCmdTriggerWd}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ab6acd78f6bf6220ac722308ae77323c5}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ab6acd78f6bf6220ac722308ae77323c5}} 
+sf\+Spi\+Cmd\+Trigger\+Wd&Trigger Watchdog command, which resets the device through SW (no WD handling). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdSendTestMode@{sfSpiCmdSendTestMode}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdSendTestMode@{sfSpiCmdSendTestMode}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aff056e96d6096dc9ae5f7d6e5bc5475d}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aff056e96d6096dc9ae5f7d6e5bc5475d}} 
+sf\+Spi\+Cmd\+Send\+Test\+Mode&Send Test Mode command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdChangeToRCZ1@{sfSpiCmdChangeToRCZ1}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdChangeToRCZ1@{sfSpiCmdChangeToRCZ1}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545adf6be6a6d745bf9c660a7bf39434df63}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545adf6be6a6d745bf9c660a7bf39434df63}} 
+sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z1&Change to R\+C\+Z1 command (European E\+T\+SI standard). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdChangeToRCZ2@{sfSpiCmdChangeToRCZ2}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdChangeToRCZ2@{sfSpiCmdChangeToRCZ2}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aff372fd557435fc9c9cd727f8dd38dcf}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aff372fd557435fc9c9cd727f8dd38dcf}} 
+sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z2&Change to R\+C\+Z2 command (U\+SA F\+CC standard). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdChangeToRCZ3@{sfSpiCmdChangeToRCZ3}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdChangeToRCZ3@{sfSpiCmdChangeToRCZ3}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aba87749a06f8b0830a487d0cd98475ac}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aba87749a06f8b0830a487d0cd98475ac}} 
+sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z3&Change to R\+C\+Z3 command (Japan/\+Korean A\+R\+IB standard). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdChangeToRCZ4@{sfSpiCmdChangeToRCZ4}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdChangeToRCZ4@{sfSpiCmdChangeToRCZ4}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa000a585d7f734779a89c40d17c04bdb}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa000a585d7f734779a89c40d17c04bdb}} 
+sf\+Spi\+Cmd\+Change\+To\+R\+C\+Z4&Change to R\+C\+Z4 command (South American F\+CC standard). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdSwitchToPrivateKey@{sfSpiCmdSwitchToPrivateKey}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdSwitchToPrivateKey@{sfSpiCmdSwitchToPrivateKey}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545af63d2ea7a4a64e12aaddb40b6f2f08c7}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545af63d2ea7a4a64e12aaddb40b6f2f08c7}} 
+sf\+Spi\+Cmd\+Switch\+To\+Private\+Key&Switch to private key command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdSwitchToPublicKey@{sfSpiCmdSwitchToPublicKey}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdSwitchToPublicKey@{sfSpiCmdSwitchToPublicKey}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a127a18f45f6af6d7445507acc71673c2}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a127a18f45f6af6d7445507acc71673c2}} 
+sf\+Spi\+Cmd\+Switch\+To\+Public\+Key&Switch to public key command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdPskAskZeroSeq@{sfSpiCmdPskAskZeroSeq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdPskAskZeroSeq@{sfSpiCmdPskAskZeroSeq}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa3fbbb0fbb261f3fef0bfd1979465e42}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545aa3fbbb0fbb261f3fef0bfd1979465e42}} 
+sf\+Spi\+Cmd\+Psk\+Ask\+Zero\+Seq&P\+SK A\+SK zero sequence command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdPskAskAAAASeq@{sfSpiCmdPskAskAAAASeq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdPskAskAAAASeq@{sfSpiCmdPskAskAAAASeq}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a0e6c7302cae22023081fa20c2fecbad3}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a0e6c7302cae22023081fa20c2fecbad3}} 
+sf\+Spi\+Cmd\+Psk\+Ask\+A\+A\+A\+A\+Seq&P\+SK A\+SK A\+A\+AA sequence command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdSetDlFreq@{sfSpiCmdSetDlFreq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdSetDlFreq@{sfSpiCmdSetDlFreq}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a267fd5d2f268a0194c58b7e164aa04db}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a267fd5d2f268a0194c58b7e164aa04db}} 
+sf\+Spi\+Cmd\+Set\+Dl\+Freq&Set DL frequency command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdGetDlFreq@{sfSpiCmdGetDlFreq}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdGetDlFreq@{sfSpiCmdGetDlFreq}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a755487e4397f3711946ee9f876ae1a03}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a755487e4397f3711946ee9f876ae1a03}} 
+sf\+Spi\+Cmd\+Get\+Dl\+Freq&Get DL frequency command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdSetFCCMacroCh@{sfSpiCmdSetFCCMacroCh}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdSetFCCMacroCh@{sfSpiCmdSetFCCMacroCh}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ab5a13bfe3df59a1ee403e7b1ad2f57fe}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545ab5a13bfe3df59a1ee403e7b1ad2f57fe}} 
+sf\+Spi\+Cmd\+Set\+F\+C\+C\+Macro\+Ch&Set F\+CC macro channel command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdGetFCCMacroChUsage@{sfSpiCmdGetFCCMacroChUsage}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdGetFCCMacroChUsage@{sfSpiCmdGetFCCMacroChUsage}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a55ce54ac8415b52f7e77ffe3af33c559}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a55ce54ac8415b52f7e77ffe3af33c559}} 
+sf\+Spi\+Cmd\+Get\+F\+C\+C\+Macro\+Ch\+Usage&Get F\+CC macro channel usage command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdResetFCCMacroCh@{sfSpiCmdResetFCCMacroCh}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdResetFCCMacroCh@{sfSpiCmdResetFCCMacroCh}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3d75dd26ce332b5651fe0b201cea83fc}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a3d75dd26ce332b5651fe0b201cea83fc}} 
+sf\+Spi\+Cmd\+Reset\+F\+C\+C\+Macro\+Ch&Reset F\+CC macro channel command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdStaticFreqCal@{sfSpiCmdStaticFreqCal}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdStaticFreqCal@{sfSpiCmdStaticFreqCal}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a8623a017ff1ad9f3f2e78e51c1c1c3da}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a8623a017ff1ad9f3f2e78e51c1c1c3da}} 
+sf\+Spi\+Cmd\+Static\+Freq\+Cal&Static frequency calibration command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdTempFreqCal@{sfSpiCmdTempFreqCal}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdTempFreqCal@{sfSpiCmdTempFreqCal}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a6920f892112eb6f26679cac7c36430a1}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a6920f892112eb6f26679cac7c36430a1}} 
+sf\+Spi\+Cmd\+Temp\+Freq\+Cal&Temperature frequency calibration command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdGetLastSentRSSI@{sfSpiCmdGetLastSentRSSI}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdGetLastSentRSSI@{sfSpiCmdGetLastSentRSSI}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a254d063e034b51c5b0907d49596ab223}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a254d063e034b51c5b0907d49596ab223}} 
+sf\+Spi\+Cmd\+Get\+Last\+Sent\+R\+S\+SI&Get last sent R\+S\+SI command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdUpdatePACurve@{sfSpiCmdUpdatePACurve}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdUpdatePACurve@{sfSpiCmdUpdatePACurve}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a2b3e3582f6c7005c892f3416681ded4a}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545a2b3e3582f6c7005c892f3416681ded4a}} 
+sf\+Spi\+Cmd\+Update\+P\+A\+Curve&Update PA curve command. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfSpiCmdInitRSSICal@{sfSpiCmdInitRSSICal}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfSpiCmdInitRSSICal@{sfSpiCmdInitRSSICal}}}\mbox{\Hypertarget{group__sf__enum__group_gga06921e348326a2db772246fef63b2545acf5da768d8852e892acfee759cd026e2}\label{group__sf__enum__group_gga06921e348326a2db772246fef63b2545acf5da768d8852e892acfee759cd026e2}} 
+sf\+Spi\+Cmd\+Init\+R\+S\+S\+I\+Cal&Initial R\+S\+SI calibration command. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__sf__enum__group_ga5c889c0804ec8ccd3741803bd8b12d9c}\label{group__sf__enum__group_ga5c889c0804ec8ccd3741803bd8b12d9c}} 
+\index{Sf\_enum\_group@{Sf\_enum\_group}!sf\_test\_mode\_t@{sf\_test\_mode\_t}}
+\index{sf\_test\_mode\_t@{sf\_test\_mode\_t}!Sf\_enum\_group@{Sf\_enum\_group}}
+\subsubsection{\texorpdfstring{sf\_test\_mode\_t}{sf\_test\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__sf__enum__group_ga5c889c0804ec8ccd3741803bd8b12d9c}{sf\+\_\+test\+\_\+mode\+\_\+t}}}
+
+
+
+Selection of a test mode used to verify the protocol, RF and sensitivity. Detailed description of the modes is in the device datasheet. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfTestModeTxBpsk@{sfTestModeTxBpsk}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfTestModeTxBpsk@{sfTestModeTxBpsk}}}\mbox{\Hypertarget{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9ca887798a1b768fb56063302b44f5d27d8}\label{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9ca887798a1b768fb56063302b44f5d27d8}} 
+sf\+Test\+Mode\+Tx\+Bpsk&Sending P\+R\+BS data in a 26 Bytes frame at constant frequency. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfTestModeTxProtocol@{sfTestModeTxProtocol}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfTestModeTxProtocol@{sfTestModeTxProtocol}}}\mbox{\Hypertarget{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9caac88812a5a33c5e5012847354396c9a8}\label{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9caac88812a5a33c5e5012847354396c9a8}} 
+sf\+Test\+Mode\+Tx\+Protocol&Test of the complete protocol in up-\/link. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfTestModeRxProtocol@{sfTestModeRxProtocol}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfTestModeRxProtocol@{sfTestModeRxProtocol}}}\mbox{\Hypertarget{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cae1fbf862817e4e3c1586468660ed2c42}\label{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cae1fbf862817e4e3c1586468660ed2c42}} 
+sf\+Test\+Mode\+Rx\+Protocol&Test of the complete protocol in down-\/link. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfTestModeRxGfsk@{sfTestModeRxGfsk}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfTestModeRxGfsk@{sfTestModeRxGfsk}}}\mbox{\Hypertarget{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9ca7823d41861028f838630e4904644ddec}\label{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9ca7823d41861028f838630e4904644ddec}} 
+sf\+Test\+Mode\+Rx\+Gfsk&Receiving constant G\+F\+SK frames at constant frequency. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfTestModeRxSensi@{sfTestModeRxSensi}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfTestModeRxSensi@{sfTestModeRxSensi}}}\mbox{\Hypertarget{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cad4b9133e7909590fabcd894ddcebcbda}\label{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cad4b9133e7909590fabcd894ddcebcbda}} 
+sf\+Test\+Mode\+Rx\+Sensi&Measurement of the real sensitivity of device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfTestModTxSynth@{sfTestModTxSynth}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfTestModTxSynth@{sfTestModTxSynth}}}\mbox{\Hypertarget{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cad51d2bdf24e66c8a5059b162fd5b01bc}\label{group__sf__enum__group_gga5c889c0804ec8ccd3741803bd8b12d9cad51d2bdf24e66c8a5059b162fd5b01bc}} 
+sf\+Test\+Mod\+Tx\+Synth&Sending S\+I\+G\+F\+OX frames with 4 Bytes payload at forced frequency. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}\label{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}} 
+\index{Sf\_enum\_group@{Sf\_enum\_group}!sf\_tx\_repeat\_t@{sf\_tx\_repeat\_t}}
+\index{sf\_tx\_repeat\_t@{sf\_tx\_repeat\_t}!Sf\_enum\_group@{Sf\_enum\_group}}
+\subsubsection{\texorpdfstring{sf\_tx\_repeat\_t}{sf\_tx\_repeat\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}{sf\+\_\+tx\+\_\+repeat\+\_\+t}}}
+
+
+
+Amount of transmissions that will happen on one time invoking of S\+F\+\_\+\+Send\+Payload function. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfTxRepeat1@{sfTxRepeat1}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfTxRepeat1@{sfTxRepeat1}}}\mbox{\Hypertarget{group__sf__enum__group_gga7d2f06984784542a95d02e422a42d9cfa68731d8416f50490cb067b1a5fac8c49}\label{group__sf__enum__group_gga7d2f06984784542a95d02e422a42d9cfa68731d8416f50490cb067b1a5fac8c49}} 
+sf\+Tx\+Repeat1&One TX transmission. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfTxRepeat3@{sfTxRepeat3}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfTxRepeat3@{sfTxRepeat3}}}\mbox{\Hypertarget{group__sf__enum__group_gga7d2f06984784542a95d02e422a42d9cfa4da7c9c47dc49a65d23bdea3ab13ace1}\label{group__sf__enum__group_gga7d2f06984784542a95d02e422a42d9cfa4da7c9c47dc49a65d23bdea3ab13ace1}} 
+sf\+Tx\+Repeat3&Three TX transmissions. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}\label{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}} 
+\index{Sf\_enum\_group@{Sf\_enum\_group}!sf\_xtal\_type\_t@{sf\_xtal\_type\_t}}
+\index{sf\_xtal\_type\_t@{sf\_xtal\_type\_t}!Sf\_enum\_group@{Sf\_enum\_group}}
+\subsubsection{\texorpdfstring{sf\_xtal\_type\_t}{sf\_xtal\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}{sf\+\_\+xtal\+\_\+type\+\_\+t}}}
+
+
+
+Selection of X\+T\+AL type used in the device. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfXtal552@{sfXtal552}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfXtal552@{sfXtal552}}}\mbox{\Hypertarget{group__sf__enum__group_gga921cd8c6964917cde98f2a132c5548d5aeec2c76936f143f22966c4e0fc3cf417}\label{group__sf__enum__group_gga921cd8c6964917cde98f2a132c5548d5aeec2c76936f143f22966c4e0fc3cf417}} 
+sf\+Xtal552&55.\+2 M\+Hz Normal crystal. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sfXtal276@{sfXtal276}!Sf\_enum\_group@{Sf\_enum\_group}}\index{Sf\_enum\_group@{Sf\_enum\_group}!sfXtal276@{sfXtal276}}}\mbox{\Hypertarget{group__sf__enum__group_gga921cd8c6964917cde98f2a132c5548d5a5e6adb116a9a9946e482b94bef60f46b}\label{group__sf__enum__group_gga921cd8c6964917cde98f2a132c5548d5a5e6adb116a9a9946e482b94bef60f46b}} 
+sf\+Xtal276&27.\+6 M\+Hz External T\+C\+XO. \\
+\hline
+
+\end{DoxyEnumFields}

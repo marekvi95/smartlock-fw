@@ -1,0 +1,69 @@
+\hypertarget{struct_f_p_u___type}{}\section{F\+P\+U\+\_\+\+Type Struct Reference}
+\label{struct_f_p_u___type}\index{FPU\_Type@{FPU\_Type}}
+
+
+Structure type to access the Floating Point Unit (F\+PU).  
+
+
+
+
+{\ttfamily \#include $<$core\+\_\+armv81mml.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_f_p_u___type_affae06cd6df5e9fe9a92994052fd3bec}\label{struct_f_p_u___type_affae06cd6df5e9fe9a92994052fd3bec}} 
+uint32\+\_\+t {\bfseries R\+E\+S\+E\+R\+V\+E\+D0} \mbox{[}1\+U\mbox{]}
+\item 
+\+\_\+\+\_\+\+I\+OM uint32\+\_\+t \mbox{\hyperlink{struct_f_p_u___type_a242040bad11980d6250848a44cc967e3}{F\+P\+C\+CR}}
+\item 
+\+\_\+\+\_\+\+I\+OM uint32\+\_\+t \mbox{\hyperlink{struct_f_p_u___type_a4fa83b560b046f9cec201c68fbe33507}{F\+P\+C\+AR}}
+\item 
+\+\_\+\+\_\+\+I\+OM uint32\+\_\+t \mbox{\hyperlink{struct_f_p_u___type_a05a8c9a999e6ca4ff19f30c93ec50217}{F\+P\+D\+S\+CR}}
+\item 
+\+\_\+\+\_\+\+IM uint32\+\_\+t \mbox{\hyperlink{struct_f_p_u___type_a9b0103b438c8922eaea5624f71afbbc8}{M\+V\+F\+R0}}
+\item 
+\+\_\+\+\_\+\+IM uint32\+\_\+t \mbox{\hyperlink{struct_f_p_u___type_a0a610dc4212de3ce1ad62e9afa76c728}{M\+V\+F\+R1}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure type to access the Floating Point Unit (F\+PU). 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_f_p_u___type_a4fa83b560b046f9cec201c68fbe33507}\label{struct_f_p_u___type_a4fa83b560b046f9cec201c68fbe33507}} 
+\index{FPU\_Type@{FPU\_Type}!FPCAR@{FPCAR}}
+\index{FPCAR@{FPCAR}!FPU\_Type@{FPU\_Type}}
+\subsubsection{\texorpdfstring{FPCAR}{FPCAR}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+I\+OM uint32\+\_\+t F\+P\+C\+AR}
+
+Offset\+: 0x008 (R/W) Floating-\/\+Point Context Address Register \mbox{\Hypertarget{struct_f_p_u___type_a242040bad11980d6250848a44cc967e3}\label{struct_f_p_u___type_a242040bad11980d6250848a44cc967e3}} 
+\index{FPU\_Type@{FPU\_Type}!FPCCR@{FPCCR}}
+\index{FPCCR@{FPCCR}!FPU\_Type@{FPU\_Type}}
+\subsubsection{\texorpdfstring{FPCCR}{FPCCR}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+I\+OM uint32\+\_\+t F\+P\+C\+CR}
+
+Offset\+: 0x004 (R/W) Floating-\/\+Point Context Control Register \mbox{\Hypertarget{struct_f_p_u___type_a05a8c9a999e6ca4ff19f30c93ec50217}\label{struct_f_p_u___type_a05a8c9a999e6ca4ff19f30c93ec50217}} 
+\index{FPU\_Type@{FPU\_Type}!FPDSCR@{FPDSCR}}
+\index{FPDSCR@{FPDSCR}!FPU\_Type@{FPU\_Type}}
+\subsubsection{\texorpdfstring{FPDSCR}{FPDSCR}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+I\+OM uint32\+\_\+t F\+P\+D\+S\+CR}
+
+Offset\+: 0x00C (R/W) Floating-\/\+Point Default Status Control Register \mbox{\Hypertarget{struct_f_p_u___type_a9b0103b438c8922eaea5624f71afbbc8}\label{struct_f_p_u___type_a9b0103b438c8922eaea5624f71afbbc8}} 
+\index{FPU\_Type@{FPU\_Type}!MVFR0@{MVFR0}}
+\index{MVFR0@{MVFR0}!FPU\_Type@{FPU\_Type}}
+\subsubsection{\texorpdfstring{MVFR0}{MVFR0}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IM uint32\+\_\+t M\+V\+F\+R0}
+
+Offset\+: 0x010 (R/ ) Media and FP Feature Register 0 \mbox{\Hypertarget{struct_f_p_u___type_a0a610dc4212de3ce1ad62e9afa76c728}\label{struct_f_p_u___type_a0a610dc4212de3ce1ad62e9afa76c728}} 
+\index{FPU\_Type@{FPU\_Type}!MVFR1@{MVFR1}}
+\index{MVFR1@{MVFR1}!FPU\_Type@{FPU\_Type}}
+\subsubsection{\texorpdfstring{MVFR1}{MVFR1}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IM uint32\+\_\+t M\+V\+F\+R1}
+
+Offset\+: 0x014 (R/ ) Media and FP Feature Register 1 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+M\+S\+I\+S/\mbox{\hyperlink{core__armv81mml_8h}{core\+\_\+armv81mml.\+h}}\item 
+C\+M\+S\+I\+S/\mbox{\hyperlink{core__armv8mml_8h}{core\+\_\+armv8mml.\+h}}\end{DoxyCompactItemize}

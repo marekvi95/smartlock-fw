@@ -1,0 +1,946 @@
+\hypertarget{group__sf__functions__group}{}\section{Sf\+\_\+functions\+\_\+group}
+\label{group__sf__functions__group}\index{Sf\_functions\_group@{Sf\_functions\_group}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gada7c9026ce05c5baaf767bfa10928039}{S\+F\+\_\+\+Init}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const \mbox{\hyperlink{structsf__user__config__t}{sf\+\_\+user\+\_\+config\+\_\+t}} $\ast$user\+Config)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+I\+G\+F\+OX driver based on user configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__sf__functions__group_gaeac5315858b24e339879e28d7578337d}{S\+F\+\_\+\+Get\+Default\+Config}} (\mbox{\hyperlink{structsf__user__config__t}{sf\+\_\+user\+\_\+config\+\_\+t}} $\ast$user\+Config)
+\begin{DoxyCompactList}\small\item\em Fills user configuration structure with default values, i.\+e. E\+T\+SI standard, 55.\+2 M\+Hz X\+T\+AL, 3 TX during Send\+Payload, 14 d\+Bm PA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9c767a31660b3d561fdba39a47903295}{S\+F\+\_\+\+Send\+Command}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}} cmd, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload, \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$recv\+Payload, uint8\+\_\+t recv\+Buffer\+Size)
+\begin{DoxyCompactList}\small\item\em This function sends a command to the device. This function waits for an acknowledgement (if any). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gafcfab93eda54d3831f57470780dae9dd}{S\+F\+\_\+\+Wake\+Up}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Wakeup\char`\"{} command to wake up the device from power down mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga1976f6e21d4d394239d20b241dbb2453}{S\+F\+\_\+\+Sleep}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function puts the device into power off mode with use of the \char`\"{}\+Send To Sleep\char`\"{} command. In this mode the device settings are reset to default values by the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac5651ed6f3c5cb0efc45ed5c15d7697c}{S\+F\+\_\+\+Set\+Ul\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function sets up-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga6652c5c69ff2e8687e5575ea84229c21}{S\+F\+\_\+\+Get\+Ul\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t $\ast$freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function gets up-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga44c782b6ce3a518584e00acb8a8957fd}{S\+F\+\_\+\+Send\+Payload}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Payload\char`\"{} command to the device. It sends user data to S\+I\+G\+F\+OX network. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga2aab15da7a9994b53fe66dfe5c8f85a5}{S\+F\+\_\+\+Send\+Bit}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t bit\+Val)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Bit\char`\"{} command, which transmits just one bit to the S\+I\+G\+F\+OX network. This is the shortest frame that S\+I\+G\+F\+OX library generates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gaf898f1fe312b1d8f9156b18249211b83}{S\+F\+\_\+\+Send\+Out\+Of\+Band}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Send Out of band\char`\"{} command, which transmits data to the S\+I\+G\+F\+OX network. Data is composed of information about the chip itself (Voltage, Temperature). This function should be called every 24 hours at least or never if an application has some energy critical constraints. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9489fa1c9163a0d028a508d81718274b}{S\+F\+\_\+\+Receive\+Message}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload, \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$recv\+Payload)
+\begin{DoxyCompactList}\small\item\em This function sends and receives a data from S\+I\+G\+F\+OX network with use of the \char`\"{}\+Receive Frame\char`\"{} command. It is available for O\+L2385 device only. Max. size of received data is defined by \mbox{\hyperlink{sf__ol23xx_8h_aca8e44f5d34123c5d83bafdf690358f7}{S\+F\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+R\+\_\+\+A\+C\+K\+\_\+\+P\+L\+D\+\_\+B}} (S\+I\+G\+F\+OX limitation). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gab933b60af5327c7f6289680308f94d5f}{S\+F\+\_\+\+Trigger\+Watchdog}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function resets the S\+I\+G\+F\+OX device with use of the \char`\"{}\+Trigger Watchdog\char`\"{} command. It does not handle watchdog. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac2350dad3fd06accd548ec1e4c761239}{S\+F\+\_\+\+Get\+Device\+Info}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{structsf__device__info__t}{sf\+\_\+device\+\_\+info\+\_\+t}} $\ast$dev\+Info)
+\begin{DoxyCompactList}\small\item\em This function reads device ID, P\+AC, S\+I\+G\+F\+OX library version and device version. It uses \char`\"{}\+Get info\char`\"{} and \char`\"{}\+Get Device Version\char`\"{} commands. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__sf__enum__group_ga9f14f69f90dfff97b98977db7a73ba68}{sf\+\_\+intern\+\_\+error\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga83b0684858db1e51ddd77c542db9570a}{S\+F\+\_\+\+Get\+Error\+Code}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function returns an error code received in a S\+PI frame from the S\+I\+G\+F\+OX device. The error code is updated every time an A\+CK S\+PI frame is received. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga52dd2f875d8870319466379dc564c6ea}{S\+F\+\_\+\+Test\+Spi\+Con}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool $\ast$success)
+\begin{DoxyCompactList}\small\item\em This function tests if the S\+PI bus is working. It uses the \char`\"{}\+Echo\char`\"{} command to send data (see \mbox{\hyperlink{sf_8c_ab3c5eabcda72b90257fd5cc48b500a5a}{S\+F\+\_\+\+E\+C\+H\+O\+\_\+\+P\+L\+D\+\_\+\+A\+R\+R\+AY}} macro in \mbox{\hyperlink{sf_8c}{sf.\+c}}) and checks if the device replies with the inverted payload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gafd1dfd2b45bdd9aea388af2cb4466395}{S\+F\+\_\+\+Test\+Device}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga5c889c0804ec8ccd3741803bd8b12d9c}{sf\+\_\+test\+\_\+mode\+\_\+t}} test\+Mode, uint8\+\_\+t mode\+Config)
+\begin{DoxyCompactList}\small\item\em This function executes a test of up-\/link and down-\/link connectivity using the \char`\"{}\+Send Test Mode\char`\"{} command. Returned status represents result of the test (success or fail), the user can obtain details using the S\+F\+\_\+\+Get\+Error\+Code function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad68e87458650f476db5069272bd80f30}{S\+F\+\_\+\+Generate\+Cont\+Wave}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool enable)
+\begin{DoxyCompactList}\small\item\em This function sends the \char`\"{}\+Continuous Wave\char`\"{} command, which can be used for testing. It generates a continuous transmission at last set frequency. The signal can be then checked using spectrum analyzer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga3e532d1631eda3198b1e517be7db5288}{S\+F\+\_\+\+Change\+Network\+Standard}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} standard\+Sel, uint8\+\_\+t tx\+Att\+Steps, \mbox{\hyperlink{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}{sf\+\_\+xtal\+\_\+type\+\_\+t}} xtal, \mbox{\hyperlink{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}{sf\+\_\+tx\+\_\+repeat\+\_\+t}} tx\+Repeat, \mbox{\hyperlink{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}{sf\+\_\+pa\+\_\+type\+\_\+t}} pa\+Type)
+\begin{DoxyCompactList}\small\item\em This function changes Sigfox networking parameters including up-\/link and down-\/link frequency and bit rate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga2901646dfa48cb95c2dca7f7459b64b0}{S\+F\+\_\+\+Switch\+To\+Private\+Key}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Switches to the private key provided by S\+I\+G\+F\+OX, the key is used for normal RF. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gacc6d9bcb60d775ccb2d3739b5d41eb96}{S\+F\+\_\+\+Switch\+To\+Public\+Key}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Switches to the public key provided by S\+I\+G\+F\+OX, it is used for protocol tests. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gaa6162b63ca5d9cc56c054ea2bddac1f2}{S\+F\+\_\+\+Transmit\+Zero\+Seq}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, int16\+\_\+t repetitions)
+\begin{DoxyCompactList}\small\item\em Sends modulated zeros at currently set frequency (P\+SK A\+SK zero sequence command). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga1ba2a22d2c43f1be64c8946e0f8e4d4f}{S\+F\+\_\+\+Transmit\+A\+A\+A\+A\+Seq}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, int16\+\_\+t repetitions)
+\begin{DoxyCompactList}\small\item\em Sends modulated AA at currently set frequency (P\+SK A\+SK A\+A\+AA sequence command). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga74dd3f84beaf121c2004bb457cdc88be}{S\+F\+\_\+\+Set\+Dl\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function sets down-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga63bcdd51a7da55f9e2f204d9d3a56d6b}{S\+F\+\_\+\+Get\+Dl\+Frequency}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint32\+\_\+t $\ast$freq\+Hz)
+\begin{DoxyCompactList}\small\item\em This function gets down-\/link frequency of the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga94d21504b43b2155491156bff061bf88}{S\+F\+\_\+\+Set\+F\+C\+C\+Macro\+Channel}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const uint32\+\_\+t fh\+Mask\mbox{[}$\,$\mbox{]}, uint8\+\_\+t default\+Ch\+No)
+\begin{DoxyCompactList}\small\item\em Sets the F\+CC Macro Channel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga06e1aa9eda09f899eb5af74991da9bf3}{S\+F\+\_\+\+Get\+F\+C\+C\+Macro\+Ch\+Usage}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t $\ast$channel\+Usage)
+\begin{DoxyCompactList}\small\item\em Gets the F\+CC Macro channel usage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga571dfb5605eba63dd2f275460c26a540}{S\+F\+\_\+\+Reset\+F\+C\+C\+Macro\+Channel}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Restores the default macro channel settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga16f222d9b0c5485b38eae13da3f5f854}{S\+F\+\_\+\+Calibrate\+Freq\+Static}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool sign\+Plus, uint32\+\_\+t drift\+Hz)
+\begin{DoxyCompactList}\small\item\em Calibrates TX frequency. The passed drift offset measured in Hz is added or subtracted to the LO when doing RF TX. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga43ad188a19bc8705116123d0dc16eda0}{S\+F\+\_\+\+Update\+Temp\+Freq\+Cal\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, const uint8\+\_\+t drift\+Table\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Updates temperature frequency calibration table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad989de030050a84fb1c9e4e5e29e6173}{S\+F\+\_\+\+Read\+Temp\+Freq\+Cal\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t drift\+Table\+Res\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Reads temperature frequency calibration table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac8894d84b5416dd2c400507acd3553a1}{S\+F\+\_\+\+Set\+Default\+Temp\+Freq\+Cal\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Sets default temperature frequency calibration table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga07eaf722b934e94542d6fd74b6a981d4}{S\+F\+\_\+\+Get\+Last\+Sent\+R\+S\+SI}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t $\ast$rssi\+Res)
+\begin{DoxyCompactList}\small\item\em Gets the recently computed R\+S\+SI measure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga3f0b30bc3200751a313d6a8366048d44}{S\+F\+\_\+\+Get\+Last30\+Sent\+R\+S\+SI}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, uint8\+\_\+t $\ast$rssi\+Res)
+\begin{DoxyCompactList}\small\item\em Gets the recently computed R\+S\+SI measure for 30 frames during RX G\+F\+SK test. This is the receiver sensitivity test. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9d1a55dfe0f253669bc615cff200d609}{S\+F\+\_\+\+Reset\+Last\+Sent\+R\+S\+S\+I\+Buffer}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em Resets buffer which holds the recently computed R\+S\+SI for 30 frames during RX G\+F\+SK test. This is the receiver sensitivity test. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gabd12f973d453b94074af729e5cb9f1c6}{S\+F\+\_\+\+Read\+Current\+P\+A\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} net\+Std, uint8\+\_\+t $\ast$pa\+Table)
+\begin{DoxyCompactList}\small\item\em Reads current E\+T\+S\+I/\+F\+CC PA table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gac338c18f67a2ecbf5f2ce3a266b7292d}{S\+F\+\_\+\+Update\+P\+A\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} net\+Std, uint8\+\_\+t $\ast$pa\+Table)
+\begin{DoxyCompactList}\small\item\em Updates current E\+T\+S\+I/\+F\+CC PA table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad44ab2d70a7132b381104107168ba771}{S\+F\+\_\+\+Set\+Default\+P\+A\+Table}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}} net\+Std)
+\begin{DoxyCompactList}\small\item\em Sets default E\+T\+S\+I/\+F\+CC PA table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gad4d10186e176ecb487ff78e3d5a5cd75}{S\+F\+\_\+\+Calibrate\+Initial\+R\+S\+SI}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, bool sign\+Plus, uint16\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Sets the initial R\+S\+SI drift offset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_ga9d5eef189c6bc644ca5a1ded155d700b}{S\+F\+\_\+\+Send\+Command\+Non\+Block}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}} cmd, const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$send\+Payload)
+\begin{DoxyCompactList}\small\item\em This function sends a command to the device. It does not wait for an acknowledgement. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__sf__functions__group_ga1aa190c9d68ca42596579425130183b2}{S\+F\+\_\+\+Is\+Ack\+Frame\+Ready}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data)
+\begin{DoxyCompactList}\small\item\em This function checks if the S\+I\+G\+F\+OX device is ready to send an acknowledgement. It checks A\+CK pin value, which is active low. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__sf__functions__group_gaea7699d331c28a9e9f708d8d859cacf5}{S\+F\+\_\+\+Read\+Ack\+Frame\+Non\+Block}} (\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$drv\+Data, \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$recv\+Payload, uint8\+\_\+t recv\+Buffer\+Size)
+\begin{DoxyCompactList}\small\item\em This function receives an acknowledge frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__sf__functions__group_ga16f222d9b0c5485b38eae13da3f5f854}\label{group__sf__functions__group_ga16f222d9b0c5485b38eae13da3f5f854}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_CalibrateFreqStatic@{SF\_CalibrateFreqStatic}}
+\index{SF\_CalibrateFreqStatic@{SF\_CalibrateFreqStatic}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_CalibrateFreqStatic()}{SF\_CalibrateFreqStatic()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Calibrate\+Freq\+Static (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{bool}]{sign\+Plus,  }\item[{uint32\+\_\+t}]{drift\+Hz }\end{DoxyParamCaption})}
+
+
+
+Calibrates TX frequency. The passed drift offset measured in Hz is added or subtracted to the LO when doing RF TX. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em sign\+Plus} & Determines whether the offset is added or subtracted from LO (true -\/ add, false -\/ subtract). \\
+\hline
+{\em drift\+Hz} & Drift offset in Hz.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gad4d10186e176ecb487ff78e3d5a5cd75}\label{group__sf__functions__group_gad4d10186e176ecb487ff78e3d5a5cd75}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_CalibrateInitialRSSI@{SF\_CalibrateInitialRSSI}}
+\index{SF\_CalibrateInitialRSSI@{SF\_CalibrateInitialRSSI}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_CalibrateInitialRSSI()}{SF\_CalibrateInitialRSSI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Calibrate\+Initial\+R\+S\+SI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{bool}]{sign\+Plus,  }\item[{uint16\+\_\+t}]{offset }\end{DoxyParamCaption})}
+
+
+
+Sets the initial R\+S\+SI drift offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em sign\+Plus} & Determines whether the offset is added or subtracted (true -\/ add, false -\/ subtract). \\
+\hline
+{\em offset} & R\+S\+SI drift offset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga3e532d1631eda3198b1e517be7db5288}\label{group__sf__functions__group_ga3e532d1631eda3198b1e517be7db5288}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_ChangeNetworkStandard@{SF\_ChangeNetworkStandard}}
+\index{SF\_ChangeNetworkStandard@{SF\_ChangeNetworkStandard}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_ChangeNetworkStandard()}{SF\_ChangeNetworkStandard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Change\+Network\+Standard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{\mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}}}]{standard\+Sel,  }\item[{uint8\+\_\+t}]{tx\+Att\+Steps,  }\item[{\mbox{\hyperlink{group__sf__enum__group_ga921cd8c6964917cde98f2a132c5548d5}{sf\+\_\+xtal\+\_\+type\+\_\+t}}}]{xtal,  }\item[{\mbox{\hyperlink{group__sf__enum__group_ga7d2f06984784542a95d02e422a42d9cf}{sf\+\_\+tx\+\_\+repeat\+\_\+t}}}]{tx\+Repeat,  }\item[{\mbox{\hyperlink{group__sf__enum__group_gac746e971077ef8c8dac9d26a8b47a2f9}{sf\+\_\+pa\+\_\+type\+\_\+t}}}]{pa\+Type }\end{DoxyParamCaption})}
+
+
+
+This function changes Sigfox networking parameters including up-\/link and down-\/link frequency and bit rate. 
+
+It enables to set European E\+T\+SI standard (default setting), U\+SA F\+CC standard, Japanese/\+Korean A\+R\+IB standard and South American F\+CC standard. It uses Change To R\+C\+Z1, Change To R\+C\+Z2, Change To R\+C\+Z3 and Change To R\+C\+Z4 commands to set an appropriate standard.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em standard\+Sel} & Selection of a standard defining network communication parameters. \\
+\hline
+{\em tx\+Att\+Steps} & Amount of 0.\+25dB steps that needs to be subtracted from TX power (default value is 0). \\
+\hline
+{\em xtal} & Type of used X\+T\+AL. \\
+\hline
+{\em tx\+Repeat} & Amount of transmissions that will happen on one time invoking of S\+F\+\_\+\+Send\+Payload function. \\
+\hline
+{\em pa\+Type} & Type of internal used PA.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gad68e87458650f476db5069272bd80f30}\label{group__sf__functions__group_gad68e87458650f476db5069272bd80f30}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_GenerateContWave@{SF\_GenerateContWave}}
+\index{SF\_GenerateContWave@{SF\_GenerateContWave}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_GenerateContWave()}{SF\_GenerateContWave()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Generate\+Cont\+Wave (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+This function sends the \char`\"{}\+Continuous Wave\char`\"{} command, which can be used for testing. It generates a continuous transmission at last set frequency. The signal can be then checked using spectrum analyzer. 
+
+Note that this command does not have an acknowledgement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em enable} & Enables or disables the continuous wave (true -\/ enabled, false -\/ disabled).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gaeac5315858b24e339879e28d7578337d}\label{group__sf__functions__group_gaeac5315858b24e339879e28d7578337d}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_GetDefaultConfig@{SF\_GetDefaultConfig}}
+\index{SF\_GetDefaultConfig@{SF\_GetDefaultConfig}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_GetDefaultConfig()}{SF\_GetDefaultConfig()}}
+{\footnotesize\ttfamily void S\+F\+\_\+\+Get\+Default\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__user__config__t}{sf\+\_\+user\+\_\+config\+\_\+t}} $\ast$}]{user\+Config }\end{DoxyParamCaption})}
+
+
+
+Fills user configuration structure with default values, i.\+e. E\+T\+SI standard, 55.\+2 M\+Hz X\+T\+AL, 3 TX during Send\+Payload, 14 d\+Bm PA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Config} & Pointer to a structure where the default S\+I\+G\+F\+OX configuration is stored. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__sf__functions__group_gac2350dad3fd06accd548ec1e4c761239}\label{group__sf__functions__group_gac2350dad3fd06accd548ec1e4c761239}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_GetDeviceInfo@{SF\_GetDeviceInfo}}
+\index{SF\_GetDeviceInfo@{SF\_GetDeviceInfo}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_GetDeviceInfo()}{SF\_GetDeviceInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Get\+Device\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{\mbox{\hyperlink{structsf__device__info__t}{sf\+\_\+device\+\_\+info\+\_\+t}} $\ast$}]{dev\+Info }\end{DoxyParamCaption})}
+
+
+
+This function reads device ID, P\+AC, S\+I\+G\+F\+OX library version and device version. It uses \char`\"{}\+Get info\char`\"{} and \char`\"{}\+Get Device Version\char`\"{} commands. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em dev\+Info} & Pointer where resulting device information is stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga63bcdd51a7da55f9e2f204d9d3a56d6b}\label{group__sf__functions__group_ga63bcdd51a7da55f9e2f204d9d3a56d6b}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_GetDlFrequency@{SF\_GetDlFrequency}}
+\index{SF\_GetDlFrequency@{SF\_GetDlFrequency}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_GetDlFrequency()}{SF\_GetDlFrequency()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Get\+Dl\+Frequency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{uint32\+\_\+t $\ast$}]{freq\+Hz }\end{DoxyParamCaption})}
+
+
+
+This function gets down-\/link frequency of the S\+I\+G\+F\+OX device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em freq\+Hz} & Pointer where the down-\/link frequency is stored in Hz.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga83b0684858db1e51ddd77c542db9570a}\label{group__sf__functions__group_ga83b0684858db1e51ddd77c542db9570a}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_GetErrorCode@{SF\_GetErrorCode}}
+\index{SF\_GetErrorCode@{SF\_GetErrorCode}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_GetErrorCode()}{SF\_GetErrorCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__sf__enum__group_ga9f14f69f90dfff97b98977db7a73ba68}{sf\+\_\+intern\+\_\+error\+\_\+t}} S\+F\+\_\+\+Get\+Error\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+This function returns an error code received in a S\+PI frame from the S\+I\+G\+F\+OX device. The error code is updated every time an A\+CK S\+PI frame is received. 
+
+It clears the the error code (set to 0).
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code received in the last S\+PI frame. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga06e1aa9eda09f899eb5af74991da9bf3}\label{group__sf__functions__group_ga06e1aa9eda09f899eb5af74991da9bf3}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_GetFCCMacroChUsage@{SF\_GetFCCMacroChUsage}}
+\index{SF\_GetFCCMacroChUsage@{SF\_GetFCCMacroChUsage}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_GetFCCMacroChUsage()}{SF\_GetFCCMacroChUsage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Get\+F\+C\+C\+Macro\+Ch\+Usage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{uint8\+\_\+t $\ast$}]{channel\+Usage }\end{DoxyParamCaption})}
+
+
+
+Gets the F\+CC Macro channel usage. 
+
+Note that the command returns different data based on currently used networking standard (E\+T\+SI,F\+CC,A\+R\+IB,...). Data interpretation is user responsibility, for more information see manual.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em channel\+Usage} & Pointer to resulting data containing channel usage.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga3f0b30bc3200751a313d6a8366048d44}\label{group__sf__functions__group_ga3f0b30bc3200751a313d6a8366048d44}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_GetLast30SentRSSI@{SF\_GetLast30SentRSSI}}
+\index{SF\_GetLast30SentRSSI@{SF\_GetLast30SentRSSI}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_GetLast30SentRSSI()}{SF\_GetLast30SentRSSI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Get\+Last30\+Sent\+R\+S\+SI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{uint8\+\_\+t $\ast$}]{rssi\+Res }\end{DoxyParamCaption})}
+
+
+
+Gets the recently computed R\+S\+SI measure for 30 frames during RX G\+F\+SK test. This is the receiver sensitivity test. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em rssi\+Res} & Pointer where the measured R\+S\+SI are stored. The array must have sufficient size (see \mbox{\hyperlink{sf__ol23xx_8h_a54662d5dbbfed0f5e033947d58038c88}{S\+F\+\_\+\+S\+E\+N\+T\+\_\+\+R\+S\+S\+I\+\_\+\+T\+B\+L\+\_\+\+S\+I\+ZE}}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga07eaf722b934e94542d6fd74b6a981d4}\label{group__sf__functions__group_ga07eaf722b934e94542d6fd74b6a981d4}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_GetLastSentRSSI@{SF\_GetLastSentRSSI}}
+\index{SF\_GetLastSentRSSI@{SF\_GetLastSentRSSI}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_GetLastSentRSSI()}{SF\_GetLastSentRSSI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Get\+Last\+Sent\+R\+S\+SI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{uint8\+\_\+t $\ast$}]{rssi\+Res }\end{DoxyParamCaption})}
+
+
+
+Gets the recently computed R\+S\+SI measure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em rssi\+Res} & Pointer where the measured R\+S\+SI is stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga6652c5c69ff2e8687e5575ea84229c21}\label{group__sf__functions__group_ga6652c5c69ff2e8687e5575ea84229c21}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_GetUlFrequency@{SF\_GetUlFrequency}}
+\index{SF\_GetUlFrequency@{SF\_GetUlFrequency}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_GetUlFrequency()}{SF\_GetUlFrequency()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Get\+Ul\+Frequency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{uint32\+\_\+t $\ast$}]{freq\+Hz }\end{DoxyParamCaption})}
+
+
+
+This function gets up-\/link frequency of the S\+I\+G\+F\+OX device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em freq\+Hz} & Pointer where the up-\/link frequency is stored in Hz.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gada7c9026ce05c5baaf767bfa10928039}\label{group__sf__functions__group_gada7c9026ce05c5baaf767bfa10928039}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_Init@{SF\_Init}}
+\index{SF\_Init@{SF\_Init}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_Init()}{SF\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{const \mbox{\hyperlink{structsf__user__config__t}{sf\+\_\+user\+\_\+config\+\_\+t}} $\ast$}]{user\+Config }\end{DoxyParamCaption})}
+
+
+
+Initializes the S\+I\+G\+F\+OX driver based on user configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em user\+Config} & User-\/provided configuration of the S\+I\+G\+F\+OX driver.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga1aa190c9d68ca42596579425130183b2}\label{group__sf__functions__group_ga1aa190c9d68ca42596579425130183b2}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_IsAckFrameReady@{SF\_IsAckFrameReady}}
+\index{SF\_IsAckFrameReady@{SF\_IsAckFrameReady}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_IsAckFrameReady()}{SF\_IsAckFrameReady()}}
+{\footnotesize\ttfamily bool S\+F\+\_\+\+Is\+Ack\+Frame\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+This function checks if the S\+I\+G\+F\+OX device is ready to send an acknowledgement. It checks A\+CK pin value, which is active low. 
+
+The user can use S\+F\+\_\+\+H\+A\+S\+\_\+\+C\+M\+D\+\_\+\+A\+CK macro to check if a command has an acknowledgement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gaea7699d331c28a9e9f708d8d859cacf5}\label{group__sf__functions__group_gaea7699d331c28a9e9f708d8d859cacf5}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_ReadAckFrameNonBlock@{SF\_ReadAckFrameNonBlock}}
+\index{SF\_ReadAckFrameNonBlock@{SF\_ReadAckFrameNonBlock}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_ReadAckFrameNonBlock()}{SF\_ReadAckFrameNonBlock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Read\+Ack\+Frame\+Non\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{\mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$}]{recv\+Payload,  }\item[{uint8\+\_\+t}]{recv\+Buffer\+Size }\end{DoxyParamCaption})}
+
+
+
+This function receives an acknowledge frame. 
+
+It should be used in conjunction with S\+F\+\_\+\+Send\+Command\+Non\+Block and S\+F\+\_\+\+Is\+Ack\+Frame\+Ready functions. The user can use S\+F\+\_\+\+H\+A\+S\+\_\+\+C\+M\+D\+\_\+\+A\+CK macro to check if a command has an acknowledgement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em recv\+Payload} & Pointer where a resulting payload is stored. Size of the data variable (recv\+Payload-\/$>$payload) must be sufficient (see S\+F\+\_\+\+A\+C\+K\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+M\+A\+X\+\_\+B macro). The size variable (recv\+Payload-\/$>$payload\+Len) will be set by this function and indicates the number of actually received bytes. \\
+\hline
+{\em recv\+Buffer\+Size} & Size of the receive buffer in bytes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gabd12f973d453b94074af729e5cb9f1c6}\label{group__sf__functions__group_gabd12f973d453b94074af729e5cb9f1c6}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_ReadCurrentPATable@{SF\_ReadCurrentPATable}}
+\index{SF\_ReadCurrentPATable@{SF\_ReadCurrentPATable}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_ReadCurrentPATable()}{SF\_ReadCurrentPATable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Read\+Current\+P\+A\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{\mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}}}]{net\+Std,  }\item[{uint8\+\_\+t $\ast$}]{pa\+Table }\end{DoxyParamCaption})}
+
+
+
+Reads current E\+T\+S\+I/\+F\+CC PA table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em net\+Std} & Network standard. \\
+\hline
+{\em pa\+Table} & Pointer where the resulting PA table is stored. The array must have sufficient size (see \mbox{\hyperlink{sf__ol23xx_8h_aaba417dead6cd13d6d23e43de685ca7c}{S\+F\+\_\+\+P\+A\+\_\+\+T\+B\+L\+\_\+\+S\+I\+ZE}}). Note that when using F\+CC, only first 86 values are used in O\+L2385.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gad989de030050a84fb1c9e4e5e29e6173}\label{group__sf__functions__group_gad989de030050a84fb1c9e4e5e29e6173}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_ReadTempFreqCalTable@{SF\_ReadTempFreqCalTable}}
+\index{SF\_ReadTempFreqCalTable@{SF\_ReadTempFreqCalTable}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_ReadTempFreqCalTable()}{SF\_ReadTempFreqCalTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Read\+Temp\+Freq\+Cal\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{uint8\+\_\+t}]{drift\+Table\+Res\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Reads temperature frequency calibration table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em drift\+Table\+Res} & Pointer where the resulting drift table is stored. The array must have sufficient size (see \mbox{\hyperlink{sf__ol23xx_8h_a25a2a94ca89518191082d7c467f75998}{S\+F\+\_\+\+T\+E\+M\+P\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+A\+L\+\_\+\+T\+B\+L\+\_\+\+S\+I\+ZE}}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga9489fa1c9163a0d028a508d81718274b}\label{group__sf__functions__group_ga9489fa1c9163a0d028a508d81718274b}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_ReceiveMessage@{SF\_ReceiveMessage}}
+\index{SF\_ReceiveMessage@{SF\_ReceiveMessage}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_ReceiveMessage()}{SF\_ReceiveMessage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Receive\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$}]{send\+Payload,  }\item[{\mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$}]{recv\+Payload }\end{DoxyParamCaption})}
+
+
+
+This function sends and receives a data from S\+I\+G\+F\+OX network with use of the \char`\"{}\+Receive Frame\char`\"{} command. It is available for O\+L2385 device only. Max. size of received data is defined by \mbox{\hyperlink{sf__ol23xx_8h_aca8e44f5d34123c5d83bafdf690358f7}{S\+F\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+F\+R\+\_\+\+A\+C\+K\+\_\+\+P\+L\+D\+\_\+B}} (S\+I\+G\+F\+OX limitation). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em send\+Payload} & Pointer to a frame payload to be sent. \\
+\hline
+{\em recv\+Payload} & Pointer where the paylaod from a received A\+CK frame is stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga571dfb5605eba63dd2f275460c26a540}\label{group__sf__functions__group_ga571dfb5605eba63dd2f275460c26a540}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_ResetFCCMacroChannel@{SF\_ResetFCCMacroChannel}}
+\index{SF\_ResetFCCMacroChannel@{SF\_ResetFCCMacroChannel}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_ResetFCCMacroChannel()}{SF\_ResetFCCMacroChannel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Reset\+F\+C\+C\+Macro\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+Restores the default macro channel settings. 
+
+Before sending any frame over S\+PI for R\+C\+Z2/4, M\+CU must sent \char`\"{}\+Get\+\_\+\+F\+C\+C\+\_\+macro\+\_\+channel\char`\"{} to check the free macro channels first and then call \char`\"{}\+Reset\+\_\+\+F\+C\+C\+\_\+\+Macro\+\_\+\+Channel\char`\"{}, if required. This command is necessary for R\+C\+Z2 and R\+C\+Z4 devices only, because these regions use frequency hopping.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga9d1a55dfe0f253669bc615cff200d609}\label{group__sf__functions__group_ga9d1a55dfe0f253669bc615cff200d609}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_ResetLastSentRSSIBuffer@{SF\_ResetLastSentRSSIBuffer}}
+\index{SF\_ResetLastSentRSSIBuffer@{SF\_ResetLastSentRSSIBuffer}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_ResetLastSentRSSIBuffer()}{SF\_ResetLastSentRSSIBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Reset\+Last\+Sent\+R\+S\+S\+I\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+Resets buffer which holds the recently computed R\+S\+SI for 30 frames during RX G\+F\+SK test. This is the receiver sensitivity test. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga2aab15da7a9994b53fe66dfe5c8f85a5}\label{group__sf__functions__group_ga2aab15da7a9994b53fe66dfe5c8f85a5}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SendBit@{SF\_SendBit}}
+\index{SF\_SendBit@{SF\_SendBit}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SendBit()}{SF\_SendBit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Send\+Bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{uint8\+\_\+t}]{bit\+Val }\end{DoxyParamCaption})}
+
+
+
+This function sends the \char`\"{}\+Send Bit\char`\"{} command, which transmits just one bit to the S\+I\+G\+F\+OX network. This is the shortest frame that S\+I\+G\+F\+OX library generates. 
+
+Note\+: the Send bit S\+PI command has an additional parameter which initiates receiving from Sigfox network. This parameter is not supported currently (i.\+e. no receiving).
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em bit\+Val} & Value of the bit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga9c767a31660b3d561fdba39a47903295}\label{group__sf__functions__group_ga9c767a31660b3d561fdba39a47903295}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SendCommand@{SF\_SendCommand}}
+\index{SF\_SendCommand@{SF\_SendCommand}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SendCommand()}{SF\_SendCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Send\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{\mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}}}]{cmd,  }\item[{const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$}]{send\+Payload,  }\item[{\mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$}]{recv\+Payload,  }\item[{uint8\+\_\+t}]{recv\+Buffer\+Size }\end{DoxyParamCaption})}
+
+
+
+This function sends a command to the device. This function waits for an acknowledgement (if any). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em cmd} & The frame command number. \\
+\hline
+{\em send\+Payload} & Pointer to a payload to be sent. The user can set payload data (send\+Payload-\/$>$payload) to N\+U\+LL when the size is zero. \\
+\hline
+{\em recv\+Payload} & Pointer where a resulting payload is stored. It can be N\+U\+LL if the payload is not desired or present in the A\+CK frame. The user can use S\+F\+\_\+\+H\+A\+S\+\_\+\+C\+M\+D\+\_\+\+A\+CK to check if a command has an acknowledgement. Size of the data variable (recv\+Payload-\/$>$payload) must be sufficient (see S\+F\+\_\+\+A\+C\+K\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+M\+A\+X\+\_\+B macro). The size variable (recv\+Payload-\/$>$payload\+Len) will be set by this function and indicates the number of actually received bytes. \\
+\hline
+{\em recv\+Buffer\+Size} & Size of the receive buffer in bytes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga9d5eef189c6bc644ca5a1ded155d700b}\label{group__sf__functions__group_ga9d5eef189c6bc644ca5a1ded155d700b}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SendCommandNonBlock@{SF\_SendCommandNonBlock}}
+\index{SF\_SendCommandNonBlock@{SF\_SendCommandNonBlock}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SendCommandNonBlock()}{SF\_SendCommandNonBlock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Send\+Command\+Non\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{\mbox{\hyperlink{group__sf__enum__group_ga06921e348326a2db772246fef63b2545}{sf\+\_\+spi\+\_\+cmd\+\_\+t}}}]{cmd,  }\item[{const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$}]{send\+Payload }\end{DoxyParamCaption})}
+
+
+
+This function sends a command to the device. It does not wait for an acknowledgement. 
+
+The user can use S\+F\+\_\+\+H\+A\+S\+\_\+\+C\+M\+D\+\_\+\+A\+CK macro to figure out if a command has A\+CK. Then he can utilize S\+F\+\_\+\+Is\+Ack\+Frame\+Ready and S\+F\+\_\+\+Read\+Ack\+Frame\+Non\+Block functions to receive the A\+CK.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em cmd} & The frame command number. \\
+\hline
+{\em send\+Payload} & Pointer to a frame payload to be sent. The user can set payload data (send\+Payload-\/$>$payload) to N\+U\+LL when the size is zero.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gaf898f1fe312b1d8f9156b18249211b83}\label{group__sf__functions__group_gaf898f1fe312b1d8f9156b18249211b83}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SendOutOfBand@{SF\_SendOutOfBand}}
+\index{SF\_SendOutOfBand@{SF\_SendOutOfBand}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SendOutOfBand()}{SF\_SendOutOfBand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Send\+Out\+Of\+Band (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+This function sends the \char`\"{}\+Send Out of band\char`\"{} command, which transmits data to the S\+I\+G\+F\+OX network. Data is composed of information about the chip itself (Voltage, Temperature). This function should be called every 24 hours at least or never if an application has some energy critical constraints. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga44c782b6ce3a518584e00acb8a8957fd}\label{group__sf__functions__group_ga44c782b6ce3a518584e00acb8a8957fd}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SendPayload@{SF\_SendPayload}}
+\index{SF\_SendPayload@{SF\_SendPayload}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SendPayload()}{SF\_SendPayload()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Send\+Payload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{const \mbox{\hyperlink{structsf__msg__payload__t}{sf\+\_\+msg\+\_\+payload\+\_\+t}} $\ast$}]{send\+Payload }\end{DoxyParamCaption})}
+
+
+
+This function sends the \char`\"{}\+Send Payload\char`\"{} command to the device. It sends user data to S\+I\+G\+F\+OX network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em send\+Payload} & Pointer to a frame payload to be sent.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gad44ab2d70a7132b381104107168ba771}\label{group__sf__functions__group_gad44ab2d70a7132b381104107168ba771}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SetDefaultPATable@{SF\_SetDefaultPATable}}
+\index{SF\_SetDefaultPATable@{SF\_SetDefaultPATable}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SetDefaultPATable()}{SF\_SetDefaultPATable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Set\+Default\+P\+A\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{\mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}}}]{net\+Std }\end{DoxyParamCaption})}
+
+
+
+Sets default E\+T\+S\+I/\+F\+CC PA table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em net\+Std} & Network standard.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gac8894d84b5416dd2c400507acd3553a1}\label{group__sf__functions__group_gac8894d84b5416dd2c400507acd3553a1}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SetDefaultTempFreqCalTable@{SF\_SetDefaultTempFreqCalTable}}
+\index{SF\_SetDefaultTempFreqCalTable@{SF\_SetDefaultTempFreqCalTable}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SetDefaultTempFreqCalTable()}{SF\_SetDefaultTempFreqCalTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Set\+Default\+Temp\+Freq\+Cal\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+Sets default temperature frequency calibration table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga74dd3f84beaf121c2004bb457cdc88be}\label{group__sf__functions__group_ga74dd3f84beaf121c2004bb457cdc88be}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SetDlFrequency@{SF\_SetDlFrequency}}
+\index{SF\_SetDlFrequency@{SF\_SetDlFrequency}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SetDlFrequency()}{SF\_SetDlFrequency()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Set\+Dl\+Frequency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{uint32\+\_\+t}]{freq\+Hz }\end{DoxyParamCaption})}
+
+
+
+This function sets down-\/link frequency of the S\+I\+G\+F\+OX device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em freq\+Hz} & Down-\/link frequency in Hz.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga94d21504b43b2155491156bff061bf88}\label{group__sf__functions__group_ga94d21504b43b2155491156bff061bf88}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SetFCCMacroChannel@{SF\_SetFCCMacroChannel}}
+\index{SF\_SetFCCMacroChannel@{SF\_SetFCCMacroChannel}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SetFCCMacroChannel()}{SF\_SetFCCMacroChannel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Set\+F\+C\+C\+Macro\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{const uint32\+\_\+t}]{fh\+Mask\mbox{[}$\,$\mbox{]},  }\item[{uint8\+\_\+t}]{default\+Ch\+No }\end{DoxyParamCaption})}
+
+
+
+Sets the F\+CC Macro Channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em fh\+Mask} & Frequency hopping mask. Size of the array is 3 (number of bytes is determined by \mbox{\hyperlink{sf__ol23xx_8h_a4b504bd91cd3f1345746ec15df212abb}{S\+F\+\_\+\+M\+A\+C\+R\+O\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+B}}). \\
+\hline
+{\em default\+Ch\+No} & Default channel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gac5651ed6f3c5cb0efc45ed5c15d7697c}\label{group__sf__functions__group_gac5651ed6f3c5cb0efc45ed5c15d7697c}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SetUlFrequency@{SF\_SetUlFrequency}}
+\index{SF\_SetUlFrequency@{SF\_SetUlFrequency}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SetUlFrequency()}{SF\_SetUlFrequency()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Set\+Ul\+Frequency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{uint32\+\_\+t}]{freq\+Hz }\end{DoxyParamCaption})}
+
+
+
+This function sets up-\/link frequency of the S\+I\+G\+F\+OX device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em freq\+Hz} & Up-\/link frequency in Hz.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga1976f6e21d4d394239d20b241dbb2453}\label{group__sf__functions__group_ga1976f6e21d4d394239d20b241dbb2453}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_Sleep@{SF\_Sleep}}
+\index{SF\_Sleep@{SF\_Sleep}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_Sleep()}{SF\_Sleep()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Sleep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+This function puts the device into power off mode with use of the \char`\"{}\+Send To Sleep\char`\"{} command. In this mode the device settings are reset to default values by the S\+I\+G\+F\+OX device. 
+
+Note\+: to lower power consumption of the S\+I\+G\+F\+OX device the user should set M\+CU pins connected to the device to low except the CS pin which should be asserted high. Note that this command does not have an acknowledgement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga2901646dfa48cb95c2dca7f7459b64b0}\label{group__sf__functions__group_ga2901646dfa48cb95c2dca7f7459b64b0}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SwitchToPrivateKey@{SF\_SwitchToPrivateKey}}
+\index{SF\_SwitchToPrivateKey@{SF\_SwitchToPrivateKey}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SwitchToPrivateKey()}{SF\_SwitchToPrivateKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Switch\+To\+Private\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+Switches to the private key provided by S\+I\+G\+F\+OX, the key is used for normal RF. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gacc6d9bcb60d775ccb2d3739b5d41eb96}\label{group__sf__functions__group_gacc6d9bcb60d775ccb2d3739b5d41eb96}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_SwitchToPublicKey@{SF\_SwitchToPublicKey}}
+\index{SF\_SwitchToPublicKey@{SF\_SwitchToPublicKey}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_SwitchToPublicKey()}{SF\_SwitchToPublicKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Switch\+To\+Public\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+Switches to the public key provided by S\+I\+G\+F\+OX, it is used for protocol tests. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gafd1dfd2b45bdd9aea388af2cb4466395}\label{group__sf__functions__group_gafd1dfd2b45bdd9aea388af2cb4466395}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_TestDevice@{SF\_TestDevice}}
+\index{SF\_TestDevice@{SF\_TestDevice}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_TestDevice()}{SF\_TestDevice()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Test\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{\mbox{\hyperlink{group__sf__enum__group_ga5c889c0804ec8ccd3741803bd8b12d9c}{sf\+\_\+test\+\_\+mode\+\_\+t}}}]{test\+Mode,  }\item[{uint8\+\_\+t}]{mode\+Config }\end{DoxyParamCaption})}
+
+
+
+This function executes a test of up-\/link and down-\/link connectivity using the \char`\"{}\+Send Test Mode\char`\"{} command. Returned status represents result of the test (success or fail), the user can obtain details using the S\+F\+\_\+\+Get\+Error\+Code function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em test\+Mode} & Test mode selection. \\
+\hline
+{\em test\+Config} & Test mode configuration.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga52dd2f875d8870319466379dc564c6ea}\label{group__sf__functions__group_ga52dd2f875d8870319466379dc564c6ea}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_TestSpiCon@{SF\_TestSpiCon}}
+\index{SF\_TestSpiCon@{SF\_TestSpiCon}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_TestSpiCon()}{SF\_TestSpiCon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Test\+Spi\+Con (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{bool $\ast$}]{success }\end{DoxyParamCaption})}
+
+
+
+This function tests if the S\+PI bus is working. It uses the \char`\"{}\+Echo\char`\"{} command to send data (see \mbox{\hyperlink{sf_8c_ab3c5eabcda72b90257fd5cc48b500a5a}{S\+F\+\_\+\+E\+C\+H\+O\+\_\+\+P\+L\+D\+\_\+\+A\+R\+R\+AY}} macro in \mbox{\hyperlink{sf_8c}{sf.\+c}}) and checks if the device replies with the inverted payload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em success} & Pointer to the check result (true -\/ OK, false -\/ error).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga1ba2a22d2c43f1be64c8946e0f8e4d4f}\label{group__sf__functions__group_ga1ba2a22d2c43f1be64c8946e0f8e4d4f}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_TransmitAAAASeq@{SF\_TransmitAAAASeq}}
+\index{SF\_TransmitAAAASeq@{SF\_TransmitAAAASeq}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_TransmitAAAASeq()}{SF\_TransmitAAAASeq()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Transmit\+A\+A\+A\+A\+Seq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{int16\+\_\+t}]{repetitions }\end{DoxyParamCaption})}
+
+
+
+Sends modulated AA at currently set frequency (P\+SK A\+SK A\+A\+AA sequence command). 
+
+Note\+: since this command has no A\+CK, it is not very clear how long will it take to send all frames. The user should wait after execution of this function for a while and then can send other S\+PI commands. Usually, this command is only for RF test.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em repetitions} & Number of transmission repetitions (0 -\/ 255). Transmission infinite loop is enabled when the value is negative.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gaa6162b63ca5d9cc56c054ea2bddac1f2}\label{group__sf__functions__group_gaa6162b63ca5d9cc56c054ea2bddac1f2}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_TransmitZeroSeq@{SF\_TransmitZeroSeq}}
+\index{SF\_TransmitZeroSeq@{SF\_TransmitZeroSeq}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_TransmitZeroSeq()}{SF\_TransmitZeroSeq()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Transmit\+Zero\+Seq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{int16\+\_\+t}]{repetitions }\end{DoxyParamCaption})}
+
+
+
+Sends modulated zeros at currently set frequency (P\+SK A\+SK zero sequence command). 
+
+Note\+: since this command has no A\+CK, it is not very clear how long will it take to send all frames. The user should wait after execution of this function for a while and then can send other S\+PI commands. Usually, this command is only for RF test.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em repetitions} & Number of transmission repetitions (0 -\/ 255). Transmission infinite loop is enabled when the value is negative.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gab933b60af5327c7f6289680308f94d5f}\label{group__sf__functions__group_gab933b60af5327c7f6289680308f94d5f}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_TriggerWatchdog@{SF\_TriggerWatchdog}}
+\index{SF\_TriggerWatchdog@{SF\_TriggerWatchdog}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_TriggerWatchdog()}{SF\_TriggerWatchdog()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Trigger\+Watchdog (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+This function resets the S\+I\+G\+F\+OX device with use of the \char`\"{}\+Trigger Watchdog\char`\"{} command. It does not handle watchdog. 
+
+Note that this command does not have an acknowledgement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gac338c18f67a2ecbf5f2ce3a266b7292d}\label{group__sf__functions__group_gac338c18f67a2ecbf5f2ce3a266b7292d}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_UpdatePATable@{SF\_UpdatePATable}}
+\index{SF\_UpdatePATable@{SF\_UpdatePATable}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_UpdatePATable()}{SF\_UpdatePATable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Update\+P\+A\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{\mbox{\hyperlink{group__sf__enum__group_ga9ad07e4b666d7d70f7a69614ecb89421}{sf\+\_\+net\+\_\+standard\+\_\+t}}}]{net\+Std,  }\item[{uint8\+\_\+t $\ast$}]{pa\+Table }\end{DoxyParamCaption})}
+
+
+
+Updates current E\+T\+S\+I/\+F\+CC PA table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em net\+Std} & Network standard. \\
+\hline
+{\em pa\+Table} & Pointer where the PA table is stored. The array must have sufficient size (see \mbox{\hyperlink{sf__ol23xx_8h_aaba417dead6cd13d6d23e43de685ca7c}{S\+F\+\_\+\+P\+A\+\_\+\+T\+B\+L\+\_\+\+S\+I\+ZE}}). Note that when using F\+CC, only first 86 values are used in O\+L2385.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_ga43ad188a19bc8705116123d0dc16eda0}\label{group__sf__functions__group_ga43ad188a19bc8705116123d0dc16eda0}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_UpdateTempFreqCalTable@{SF\_UpdateTempFreqCalTable}}
+\index{SF\_UpdateTempFreqCalTable@{SF\_UpdateTempFreqCalTable}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_UpdateTempFreqCalTable()}{SF\_UpdateTempFreqCalTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Update\+Temp\+Freq\+Cal\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data,  }\item[{const uint8\+\_\+t}]{drift\+Table\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Updates temperature frequency calibration table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data. \\
+\hline
+{\em drift\+Table} & Drift table containing signed integer values (see \mbox{\hyperlink{sf__ol23xx_8h_a25a2a94ca89518191082d7c467f75998}{S\+F\+\_\+\+T\+E\+M\+P\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+A\+L\+\_\+\+T\+B\+L\+\_\+\+S\+I\+ZE}}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sf__functions__group_gafcfab93eda54d3831f57470780dae9dd}\label{group__sf__functions__group_gafcfab93eda54d3831f57470780dae9dd}} 
+\index{Sf\_functions\_group@{Sf\_functions\_group}!SF\_WakeUp@{SF\_WakeUp}}
+\index{SF\_WakeUp@{SF\_WakeUp}!Sf\_functions\_group@{Sf\_functions\_group}}
+\subsubsection{\texorpdfstring{SF\_WakeUp()}{SF\_WakeUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+F\+\_\+\+Wake\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf__drv__data__t}{sf\+\_\+drv\+\_\+data\+\_\+t}} $\ast$}]{drv\+Data }\end{DoxyParamCaption})}
+
+
+
+This function sends the \char`\"{}\+Send Wakeup\char`\"{} command to wake up the device from power down mode. 
+
+Note that this command does not have an acknowledgement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em drv\+Data} & Driver run-\/time data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status result of the function (k\+Status\+\_\+\+Success on success). 
+\end{DoxyReturn}

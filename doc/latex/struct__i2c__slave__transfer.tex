@@ -1,0 +1,65 @@
+\hypertarget{struct__i2c__slave__transfer}{}\section{\+\_\+i2c\+\_\+slave\+\_\+transfer Struct Reference}
+\label{struct__i2c__slave__transfer}\index{\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}}
+
+
+I2C slave transfer structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+i2c.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__i2c__driver_ga95f120f6a73af41648364538cf9a6eca}{i2c\+\_\+slave\+\_\+transfer\+\_\+event\+\_\+t}} \mbox{\hyperlink{struct__i2c__slave__transfer_ad43dfdc1308f39dd4bff91414c1cce2c}{event}}
+\item 
+uint8\+\_\+t $\ast$volatile \mbox{\hyperlink{struct__i2c__slave__transfer_a6df23c71c49ca7371f41136934d4fad1}{data}}
+\item 
+volatile size\+\_\+t \mbox{\hyperlink{struct__i2c__slave__transfer_aec81567ca73e5b0cb790098785e345c5}{data\+Size}}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{struct__i2c__slave__transfer_aac6aa92f2aef99293ab2f5ad6f734fad}{completion\+Status}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct__i2c__slave__transfer_a97856cb5d71b7981d4ce9813124a5433}{transferred\+Count}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2C slave transfer structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__i2c__slave__transfer_aac6aa92f2aef99293ab2f5ad6f734fad}\label{struct__i2c__slave__transfer_aac6aa92f2aef99293ab2f5ad6f734fad}} 
+\index{\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}!completionStatus@{completionStatus}}
+\index{completionStatus@{completionStatus}!\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}}
+\subsubsection{\texorpdfstring{completionStatus}{completionStatus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} completion\+Status}
+
+Success or error code describing how the transfer completed. Only applies for \mbox{\hyperlink{group__i2c__driver_gga87e42e170b60f17f657ef3c06a918133a38cca3cd668e73f51b8e574835d419df}{k\+I2\+C\+\_\+\+Slave\+Completion\+Event}}. \mbox{\Hypertarget{struct__i2c__slave__transfer_a6df23c71c49ca7371f41136934d4fad1}\label{struct__i2c__slave__transfer_a6df23c71c49ca7371f41136934d4fad1}} 
+\index{\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}!data@{data}}
+\index{data@{data}!\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ volatile data}
+
+A transfer buffer. \mbox{\Hypertarget{struct__i2c__slave__transfer_aec81567ca73e5b0cb790098785e345c5}\label{struct__i2c__slave__transfer_aec81567ca73e5b0cb790098785e345c5}} 
+\index{\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}!dataSize@{dataSize}}
+\index{dataSize@{dataSize}!\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}}
+\subsubsection{\texorpdfstring{dataSize}{dataSize}}
+{\footnotesize\ttfamily volatile size\+\_\+t data\+Size}
+
+A transfer size. \mbox{\Hypertarget{struct__i2c__slave__transfer_ad43dfdc1308f39dd4bff91414c1cce2c}\label{struct__i2c__slave__transfer_ad43dfdc1308f39dd4bff91414c1cce2c}} 
+\index{\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}!event@{event}}
+\index{event@{event}!\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}}
+\subsubsection{\texorpdfstring{event}{event}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__i2c__driver_ga95f120f6a73af41648364538cf9a6eca}{i2c\+\_\+slave\+\_\+transfer\+\_\+event\+\_\+t}} event}
+
+A reason that the callback is invoked. \mbox{\Hypertarget{struct__i2c__slave__transfer_a97856cb5d71b7981d4ce9813124a5433}\label{struct__i2c__slave__transfer_a97856cb5d71b7981d4ce9813124a5433}} 
+\index{\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}!transferredCount@{transferredCount}}
+\index{transferredCount@{transferredCount}!\_i2c\_slave\_transfer@{\_i2c\_slave\_transfer}}
+\subsubsection{\texorpdfstring{transferredCount}{transferredCount}}
+{\footnotesize\ttfamily size\+\_\+t transferred\+Count}
+
+A number of bytes actually transferred since the start or since the last repeated start. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+i2c.\+h\end{DoxyCompactItemize}

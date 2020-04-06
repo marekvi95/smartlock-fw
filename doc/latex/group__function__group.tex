@@ -1,0 +1,684 @@
+\hypertarget{group__function__group}{}\section{Function\+\_\+group}
+\label{group__function__group}\index{Function\_group@{Function\_group}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__function__group_gac1f59da071342e3e2f691b121d737115}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Init}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, const spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Master\+Config, uint32\+\_\+t source\+Clock\+Hz)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+PI as master. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga456542ab17179c5e19b712f398c24831}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Init}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, const spi\+\_\+sdk\+\_\+slave\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Slave\+Config)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+PI as slave. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gac0af5f79571c9a899c723c996d37a8b0}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Deinit}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Deinitializes the S\+PI master. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gab92008fdba7eaa3bc22c13e5094d9f78}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Deinit}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Deinitializes the S\+PI slave. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga81b9d9a7249971568d6fb7e589dcc84d}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Get\+Default\+Config}} (spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Master\+Config)
+\begin{DoxyCompactList}\small\item\em Gets and stores default S\+PI master configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga0728c29744ccb400f0b72ce6718f7128}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Get\+Default\+Config}} (spi\+\_\+sdk\+\_\+slave\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Slave\+Config)
+\begin{DoxyCompactList}\small\item\em Gets and stores default S\+PI slave configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gaaccd76ab37574aa23c0ab1e1e33ef7c5}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Fill\+Sdk\+Config}} (const \mbox{\hyperlink{structspi__aml__master__config__t}{spi\+\_\+aml\+\_\+master\+\_\+config\+\_\+t}} $\ast$spi\+Aml\+Master\+Config, spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Master\+Config)
+\begin{DoxyCompactList}\small\item\em Fills S\+DK S\+PI master configuration with A\+ML data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga67d9e4bda5bb5facc322d6eab3bc3482}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Fill\+Sdk\+Config}} (const \mbox{\hyperlink{structspi__aml__slave__config__t}{spi\+\_\+aml\+\_\+slave\+\_\+config\+\_\+t}} $\ast$spi\+Aml\+Slave\+Config, spi\+\_\+sdk\+\_\+slave\+\_\+config\+\_\+t $\ast$spi\+Sdk\+Slave\+Config)
+\begin{DoxyCompactList}\small\item\em Fills S\+DK S\+PI slave configuration with A\+ML data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gab85d45f6cddbaaecd78864d25d1824f1}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Select\+Device}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} port\+Instance, uint8\+\_\+t pin\+Index, \mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}} pcs\+Polarity)
+\begin{DoxyCompactList}\small\item\em Selects the device with software controlled chip-\/select pin (P\+CS). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gacef541f53ec06c7151d8c6f148d4b365}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Unselect\+Device}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} port\+Instance, uint8\+\_\+t pin\+Index, \mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}} pcs\+Polarity)
+\begin{DoxyCompactList}\small\item\em Unselects the device with software controlled chip-\/select pin (P\+CS). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__function__group_ga9f4ba74d2bab05187f915b58d3bece4d}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Transfer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, \mbox{\hyperlink{structspi__aml__transfer__t}{spi\+\_\+aml\+\_\+transfer\+\_\+t}} $\ast$master\+Transfer)
+\begin{DoxyCompactList}\small\item\em Performs blocking master transfer of data. The method returns when all data are sent and received. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__function__group_gaabf878120f5f9da678aeb8885bb5af20}{S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Transfer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, \mbox{\hyperlink{structspi__aml__transfer__t}{spi\+\_\+aml\+\_\+transfer\+\_\+t}} $\ast$slave\+Transfer, \mbox{\hyperlink{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}{spi\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$slave\+Handle, \mbox{\hyperlink{group__spi__driver_ga13fbc3110c56c1d312e4a5ebed07d679}{spi\+\_\+slave\+\_\+callback\+\_\+t}} slave\+Callback)
+\begin{DoxyCompactList}\small\item\em Performs slave transfer of data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__function__group_gacd35322aa62b00c8389236ab1c28de3b}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Init}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, const \mbox{\hyperlink{structtmr__sdk__config__t}{tmr\+\_\+sdk\+\_\+config\+\_\+t}} $\ast$sdk\+Config)
+\begin{DoxyCompactList}\small\item\em Configures the peripheral for basic operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gadd9f3c64bdb236775e67c2226527f20c}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Deinit}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Disables the timer clock. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__function__group_ga519c237aa1084801bf11b68d5a7478f2}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Fill\+Sdk\+Config}} (const \mbox{\hyperlink{structtmr__aml__config__t}{tmr\+\_\+aml\+\_\+config\+\_\+t}} $\ast$aml\+Config, \mbox{\hyperlink{structtmr__sdk__config__t}{tmr\+\_\+sdk\+\_\+config\+\_\+t}} $\ast$sdk\+Config, \mbox{\hyperlink{group__struct__group_ga2b5f2d9df9d1e36f051fe92e6c6f1905}{tmr\+\_\+sdk\+\_\+pwm\+\_\+ch\+\_\+config\+\_\+t}} $\ast$$\ast$chnl\+Pwm\+Param, \mbox{\hyperlink{structtmr__sdk__outcmp__ch__t}{tmr\+\_\+sdk\+\_\+outcmp\+\_\+ch\+\_\+t}} $\ast$$\ast$chnl\+Cmp\+Param, \mbox{\hyperlink{structtmr__sdk__incpt__ch__t}{tmr\+\_\+sdk\+\_\+incpt\+\_\+ch\+\_\+t}} $\ast$$\ast$chnl\+Incpt\+Param)
+\begin{DoxyCompactList}\small\item\em Fills S\+DK specific configuration structure according to independent A\+ML configuration. This function configures S32 S\+DK or K\+S\+DK configuration structure according S\+D\+K\+\_\+\+V\+E\+R\+S\+I\+ON form independent tmr\+Aml\+Config. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gaa3cc8cb5f7c82ecd755b6f274f6cd39c}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Default\+Config}} (\mbox{\hyperlink{group__struct__group_gaf1f378b0bcc8ef613858b973521fc013}{tmr\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em This function fills the T\+PM configuration structure with the default settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga9ca82949c9aa24058f89d44b6e5ce44f}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Enable\+Interrupts}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint16\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Enables the selected timer interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga068c940f493532d19a7de4bf42264be7}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Disable\+Interrupts}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint16\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Disables the selected timer interrupts. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__function__group_gadbe5aa98c75287b62c5737f0bae6e68b}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Enabled\+Interrupts}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Gets the enabled timer interrupts. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__function__group_gab13a1129d27008d231d4f14ac6b756c6}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Status\+Flags}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Gets the timer status flags. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gabda9f28166544e2fc00f970327204261}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Clear\+Status\+Flags}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint16\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Clears the T\+PM status flags. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga6ada6000f053895016184421976d8b74}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Start\+Timer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Starts the counter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga8ef7bbe3180ad4f34ac8a3a8c7db9bd3}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Stop\+Timer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Stops the counter. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__function__group_gaa5bf50001a224cd4dc43250cdfd6d915}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Read\+Timer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Returns the content of counter register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gaf082ed62ce28809934e491636f66d9d3}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Reset\+Timer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Resets counter (counter is set to zero). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga4c66f25ed170fae0a0bc0341d7a6f58c}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Set\+Period\+Ticks}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint32\+\_\+t ticks)
+\begin{DoxyCompactList}\small\item\em Sets timer period (in timer ticks). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__function__group_ga785236cb13d536bfe7b59bd484de01aa}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Period\+Ticks}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Returns timer period (in timer ticks). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga5931b9421575af77c832c14310375535}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Set\+Offset\+Ticks}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint8\+\_\+t channel, uint32\+\_\+t ticks)
+\begin{DoxyCompactList}\small\item\em Sets timer channel offset (in timer ticks). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__function__group_ga98c1f0d4ed77a3cbf909fafef40f89d3}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Offset\+Ticks}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Sets timer channel offset (in timer ticks). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__function__group_gabedb43ac302eff10bd4877838457a108}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Instance}} (const void $\ast$tmr\+Base)
+\begin{DoxyCompactList}\small\item\em Gets instance for timer module base pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__function__group_gac2d5cb00bd6e585725d5b1e8f7383302}\label{group__function__group_gac2d5cb00bd6e585725d5b1e8f7383302}} 
+uint32\+\_\+t \mbox{\hyperlink{group__function__group_gac2d5cb00bd6e585725d5b1e8f7383302}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Get\+System\+Clock\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Returns system clock frequency. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga1b85420a1a98dd13e15b8b515f2be603}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Cycles}} (uint32\+\_\+t cycles)
+\begin{DoxyCompactList}\small\item\em Waits for specified amount of cycles which is given by 32bit value range. Assumption for this function is that target architecture is using 32bit general purpose registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga2cc4c9ff3ce6add5f7d02798bebb1939}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Sec}} (uint16\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Waits for specified amount of seconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga91059b3fe779d0ca7074c59bacb42f59}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Ms}} (uint16\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Waits for specified amount of milliseconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gac71523b2fdbddc5d35c018502abbd770}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Us}} (uint16\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Waits for specified amount of microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__function__group_gac0af5f79571c9a899c723c996d37a8b0}\label{group__function__group_gac0af5f79571c9a899c723c996d37a8b0}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_MasterDeinit@{SPI\_AML\_MasterDeinit}}
+\index{SPI\_AML\_MasterDeinit@{SPI\_AML\_MasterDeinit}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_MasterDeinit()}{SPI\_AML\_MasterDeinit()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance }\end{DoxyParamCaption})}
+
+
+
+Deinitializes the S\+PI master. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & -\/ Peripheral instance number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_gaaccd76ab37574aa23c0ab1e1e33ef7c5}\label{group__function__group_gaaccd76ab37574aa23c0ab1e1e33ef7c5}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_MasterFillSdkConfig@{SPI\_AML\_MasterFillSdkConfig}}
+\index{SPI\_AML\_MasterFillSdkConfig@{SPI\_AML\_MasterFillSdkConfig}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_MasterFillSdkConfig()}{SPI\_AML\_MasterFillSdkConfig()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Fill\+Sdk\+Config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structspi__aml__master__config__t}{spi\+\_\+aml\+\_\+master\+\_\+config\+\_\+t}} $\ast$}]{spi\+Aml\+Master\+Config,  }\item[{spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$}]{spi\+Sdk\+Master\+Config }\end{DoxyParamCaption})}
+
+
+
+Fills S\+DK S\+PI master configuration with A\+ML data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi\+Aml\+Master\+Config} & -\/ Pointer to A\+ML data. \\
+\hline
+{\em spi\+Sdk\+Master\+Config} & -\/ Pointer where the resulting S\+DK S\+PI master configuration is stored. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga81b9d9a7249971568d6fb7e589dcc84d}\label{group__function__group_ga81b9d9a7249971568d6fb7e589dcc84d}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_MasterGetDefaultConfig@{SPI\_AML\_MasterGetDefaultConfig}}
+\index{SPI\_AML\_MasterGetDefaultConfig@{SPI\_AML\_MasterGetDefaultConfig}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_MasterGetDefaultConfig()}{SPI\_AML\_MasterGetDefaultConfig()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Get\+Default\+Config (\begin{DoxyParamCaption}\item[{spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$}]{spi\+Sdk\+Master\+Config }\end{DoxyParamCaption})}
+
+
+
+Gets and stores default S\+PI master configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi\+Sdk\+Master\+Config} & -\/ Pointer where the default S\+PI master configuration is stored. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_gac1f59da071342e3e2f691b121d737115}\label{group__function__group_gac1f59da071342e3e2f691b121d737115}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_MasterInit@{SPI\_AML\_MasterInit}}
+\index{SPI\_AML\_MasterInit@{SPI\_AML\_MasterInit}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_MasterInit()}{SPI\_AML\_MasterInit()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{const spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$}]{spi\+Sdk\+Master\+Config,  }\item[{uint32\+\_\+t}]{source\+Clock\+Hz }\end{DoxyParamCaption})}
+
+
+
+Initializes the S\+PI as master. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & -\/ Peripheral instance number. \\
+\hline
+{\em spi\+Sdk\+Master\+Config} & -\/ Pointer to S\+DK specific S\+PI master configuration. \\
+\hline
+{\em source\+Clock\+Hz} & -\/ S\+PI source clock in Hz (not used in S32 S\+DK). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_gab85d45f6cddbaaecd78864d25d1824f1}\label{group__function__group_gab85d45f6cddbaaecd78864d25d1824f1}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_MasterSelectDevice@{SPI\_AML\_MasterSelectDevice}}
+\index{SPI\_AML\_MasterSelectDevice@{SPI\_AML\_MasterSelectDevice}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_MasterSelectDevice()}{SPI\_AML\_MasterSelectDevice()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Select\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{port\+Instance,  }\item[{uint8\+\_\+t}]{pin\+Index,  }\item[{\mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}}}]{pcs\+Polarity }\end{DoxyParamCaption})}
+
+
+
+Selects the device with software controlled chip-\/select pin (P\+CS). 
+
+Not applicable for hardware controlled chip-\/select.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Instance} & -\/ Instance number of G\+P\+IO port, e.\+g. P\+T\+A1 -\/ port\+Instance = instanceA. \\
+\hline
+{\em pin\+Index} & -\/ Index of G\+P\+IO pin used as chip-\/select (P\+CS), e.\+g. P\+T\+A1 -\/ pin\+Index = 1. \\
+\hline
+{\em pcs\+Polarity} & -\/ Active level of chip select pin (P\+CS). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga9f4ba74d2bab05187f915b58d3bece4d}\label{group__function__group_ga9f4ba74d2bab05187f915b58d3bece4d}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_MasterTransfer@{SPI\_AML\_MasterTransfer}}
+\index{SPI\_AML\_MasterTransfer@{SPI\_AML\_MasterTransfer}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_MasterTransfer()}{SPI\_AML\_MasterTransfer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{\mbox{\hyperlink{structspi__aml__transfer__t}{spi\+\_\+aml\+\_\+transfer\+\_\+t}} $\ast$}]{master\+Transfer }\end{DoxyParamCaption})}
+
+
+
+Performs blocking master transfer of data. The method returns when all data are sent and received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & -\/ Peripheral instance number. \\
+\hline
+{\em master\+Transfer} & -\/ Pointer to transfer structure containing data and configuration.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+k\+Status\+\_\+\+Success if driver starts to send/receive data successfully. k\+Status\+\_\+\+Invalid\+Argument if wrong parameter is passed. k\+Status\+\_\+\+A\+M\+L\+\_\+\+S\+P\+I\+\_\+\+Busy if driver is receiving/transmitting data and not available. k\+Status\+\_\+\+A\+M\+L\+\_\+\+S\+P\+I\+\_\+\+Error if driver is error and needs to clean error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__function__group_gacef541f53ec06c7151d8c6f148d4b365}\label{group__function__group_gacef541f53ec06c7151d8c6f148d4b365}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_MasterUnselectDevice@{SPI\_AML\_MasterUnselectDevice}}
+\index{SPI\_AML\_MasterUnselectDevice@{SPI\_AML\_MasterUnselectDevice}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_MasterUnselectDevice()}{SPI\_AML\_MasterUnselectDevice()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Master\+Unselect\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{port\+Instance,  }\item[{uint8\+\_\+t}]{pin\+Index,  }\item[{\mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}}}]{pcs\+Polarity }\end{DoxyParamCaption})}
+
+
+
+Unselects the device with software controlled chip-\/select pin (P\+CS). 
+
+Not applicable for hardware controlled chip-\/select.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Instance} & -\/ Instance number of G\+P\+IO port, e.\+g. P\+T\+A1 -\/ port\+Instance = instanceA. \\
+\hline
+{\em pin\+Index} & -\/ Index of G\+P\+IO pin used as chip-\/select (P\+CS), e.\+g. P\+T\+A1 -\/ pin\+Index = 1. \\
+\hline
+{\em pcs\+Polarity} & -\/ Active level of chip select pin (P\+CS). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_gab92008fdba7eaa3bc22c13e5094d9f78}\label{group__function__group_gab92008fdba7eaa3bc22c13e5094d9f78}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_SlaveDeinit@{SPI\_AML\_SlaveDeinit}}
+\index{SPI\_AML\_SlaveDeinit@{SPI\_AML\_SlaveDeinit}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_SlaveDeinit()}{SPI\_AML\_SlaveDeinit()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance }\end{DoxyParamCaption})}
+
+
+
+Deinitializes the S\+PI slave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & -\/ Peripheral instance number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga67d9e4bda5bb5facc322d6eab3bc3482}\label{group__function__group_ga67d9e4bda5bb5facc322d6eab3bc3482}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_SlaveFillSdkConfig@{SPI\_AML\_SlaveFillSdkConfig}}
+\index{SPI\_AML\_SlaveFillSdkConfig@{SPI\_AML\_SlaveFillSdkConfig}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_SlaveFillSdkConfig()}{SPI\_AML\_SlaveFillSdkConfig()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Fill\+Sdk\+Config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structspi__aml__slave__config__t}{spi\+\_\+aml\+\_\+slave\+\_\+config\+\_\+t}} $\ast$}]{spi\+Aml\+Slave\+Config,  }\item[{spi\+\_\+sdk\+\_\+slave\+\_\+config\+\_\+t $\ast$}]{spi\+Sdk\+Slave\+Config }\end{DoxyParamCaption})}
+
+
+
+Fills S\+DK S\+PI slave configuration with A\+ML data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi\+Aml\+Slave\+Config} & -\/ Pointer to A\+ML data. \\
+\hline
+{\em spi\+Sdk\+Slave\+Config} & -\/ Pointer where the resulting S\+DK S\+PI slave configuration is stored. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga0728c29744ccb400f0b72ce6718f7128}\label{group__function__group_ga0728c29744ccb400f0b72ce6718f7128}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_SlaveGetDefaultConfig@{SPI\_AML\_SlaveGetDefaultConfig}}
+\index{SPI\_AML\_SlaveGetDefaultConfig@{SPI\_AML\_SlaveGetDefaultConfig}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_SlaveGetDefaultConfig()}{SPI\_AML\_SlaveGetDefaultConfig()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Get\+Default\+Config (\begin{DoxyParamCaption}\item[{spi\+\_\+sdk\+\_\+slave\+\_\+config\+\_\+t $\ast$}]{spi\+Sdk\+Slave\+Config }\end{DoxyParamCaption})}
+
+
+
+Gets and stores default S\+PI slave configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi\+Sdk\+Slave\+Config} & -\/ Pointer where the default S\+PI slave configuration is stored. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga456542ab17179c5e19b712f398c24831}\label{group__function__group_ga456542ab17179c5e19b712f398c24831}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_SlaveInit@{SPI\_AML\_SlaveInit}}
+\index{SPI\_AML\_SlaveInit@{SPI\_AML\_SlaveInit}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_SlaveInit()}{SPI\_AML\_SlaveInit()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{const spi\+\_\+sdk\+\_\+slave\+\_\+config\+\_\+t $\ast$}]{spi\+Sdk\+Slave\+Config }\end{DoxyParamCaption})}
+
+
+
+Initializes the S\+PI as slave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & -\/ Peripheral instance number. \\
+\hline
+{\em spi\+Sdk\+Slave\+Config} & -\/ Pointer to S\+DK specific S\+PI slave configuration. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_gaabf878120f5f9da678aeb8885bb5af20}\label{group__function__group_gaabf878120f5f9da678aeb8885bb5af20}} 
+\index{Function\_group@{Function\_group}!SPI\_AML\_SlaveTransfer@{SPI\_AML\_SlaveTransfer}}
+\index{SPI\_AML\_SlaveTransfer@{SPI\_AML\_SlaveTransfer}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{SPI\_AML\_SlaveTransfer()}{SPI\_AML\_SlaveTransfer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} S\+P\+I\+\_\+\+A\+M\+L\+\_\+\+Slave\+Transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{\mbox{\hyperlink{structspi__aml__transfer__t}{spi\+\_\+aml\+\_\+transfer\+\_\+t}} $\ast$}]{slave\+Transfer,  }\item[{\mbox{\hyperlink{group__spi__driver_gad267cfee3a876b2860217ff94f03f574}{spi\+\_\+slave\+\_\+handle\+\_\+t}} $\ast$}]{slave\+Handle,  }\item[{\mbox{\hyperlink{group__spi__driver_ga13fbc3110c56c1d312e4a5ebed07d679}{spi\+\_\+slave\+\_\+callback\+\_\+t}}}]{slave\+Callback }\end{DoxyParamCaption})}
+
+
+
+Performs slave transfer of data. 
+
+This method uses non-\/blocking transfer. In S32 S\+DK the slave\+Handle and slave\+Callback parameters should be N\+U\+LL and 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & -\/ Peripheral instance number. \\
+\hline
+{\em slave\+Transfer} & -\/ Pointer to transfer structure containing data and configuration. \\
+\hline
+{\em slave\+Handle} & -\/ Pointer to slave handle structure. \\
+\hline
+{\em slave\+Callback} & -\/ Completion callback function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+k\+Status\+\_\+\+Success if driver starts to send/receive data successfully. k\+Status\+\_\+\+Invalid\+Argument if wrong parameter is passed. k\+Status\+\_\+\+A\+M\+L\+\_\+\+S\+P\+I\+\_\+\+Busy if driver is receiving/transmitting data and not available. k\+Status\+\_\+\+A\+M\+L\+\_\+\+S\+P\+I\+\_\+\+Error if driver is error and needs to clean error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__function__group_gabda9f28166544e2fc00f970327204261}\label{group__function__group_gabda9f28166544e2fc00f970327204261}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_ClearStatusFlags@{TMR\_AML\_ClearStatusFlags}}
+\index{TMR\_AML\_ClearStatusFlags@{TMR\_AML\_ClearStatusFlags}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_ClearStatusFlags()}{TMR\_AML\_ClearStatusFlags()}}
+{\footnotesize\ttfamily void T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Clear\+Status\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{uint16\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Clears the T\+PM status flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+{\em mask} & The status flags to clear. This is a logical OR of members of the enumeration tmr\+\_\+aml\+\_\+status\+\_\+flags\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_gadd9f3c64bdb236775e67c2226527f20c}\label{group__function__group_gadd9f3c64bdb236775e67c2226527f20c}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_Deinit@{TMR\_AML\_Deinit}}
+\index{TMR\_AML\_Deinit@{TMR\_AML\_Deinit}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_Deinit()}{TMR\_AML\_Deinit()}}
+{\footnotesize\ttfamily void T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance }\end{DoxyParamCaption})}
+
+
+
+Disables the timer clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga068c940f493532d19a7de4bf42264be7}\label{group__function__group_ga068c940f493532d19a7de4bf42264be7}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_DisableInterrupts@{TMR\_AML\_DisableInterrupts}}
+\index{TMR\_AML\_DisableInterrupts@{TMR\_AML\_DisableInterrupts}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_DisableInterrupts()}{TMR\_AML\_DisableInterrupts()}}
+{\footnotesize\ttfamily void T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Disable\+Interrupts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{uint16\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Disables the selected timer interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+{\em mask} & The interrupts to disable. This is a logical OR of members of the enumeration tmr\+\_\+aml\+\_\+int\+\_\+flags\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga9ca82949c9aa24058f89d44b6e5ce44f}\label{group__function__group_ga9ca82949c9aa24058f89d44b6e5ce44f}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_EnableInterrupts@{TMR\_AML\_EnableInterrupts}}
+\index{TMR\_AML\_EnableInterrupts@{TMR\_AML\_EnableInterrupts}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_EnableInterrupts()}{TMR\_AML\_EnableInterrupts()}}
+{\footnotesize\ttfamily void T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Enable\+Interrupts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{uint16\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Enables the selected timer interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+{\em mask} & The interrupts to disable. This is a logical OR of members of the enumeration tmr\+\_\+aml\+\_\+int\+\_\+flags\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga519c237aa1084801bf11b68d5a7478f2}\label{group__function__group_ga519c237aa1084801bf11b68d5a7478f2}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_FillSdkConfig@{TMR\_AML\_FillSdkConfig}}
+\index{TMR\_AML\_FillSdkConfig@{TMR\_AML\_FillSdkConfig}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_FillSdkConfig()}{TMR\_AML\_FillSdkConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Fill\+Sdk\+Config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtmr__aml__config__t}{tmr\+\_\+aml\+\_\+config\+\_\+t}} $\ast$}]{aml\+Config,  }\item[{\mbox{\hyperlink{structtmr__sdk__config__t}{tmr\+\_\+sdk\+\_\+config\+\_\+t}} $\ast$}]{sdk\+Config,  }\item[{\mbox{\hyperlink{group__struct__group_ga2b5f2d9df9d1e36f051fe92e6c6f1905}{tmr\+\_\+sdk\+\_\+pwm\+\_\+ch\+\_\+config\+\_\+t}} $\ast$$\ast$}]{chnl\+Pwm\+Param,  }\item[{\mbox{\hyperlink{structtmr__sdk__outcmp__ch__t}{tmr\+\_\+sdk\+\_\+outcmp\+\_\+ch\+\_\+t}} $\ast$$\ast$}]{chnl\+Cmp\+Param,  }\item[{\mbox{\hyperlink{structtmr__sdk__incpt__ch__t}{tmr\+\_\+sdk\+\_\+incpt\+\_\+ch\+\_\+t}} $\ast$$\ast$}]{chnl\+Incpt\+Param }\end{DoxyParamCaption})}
+
+
+
+Fills S\+DK specific configuration structure according to independent A\+ML configuration. This function configures S32 S\+DK or K\+S\+DK configuration structure according S\+D\+K\+\_\+\+V\+E\+R\+S\+I\+ON form independent tmr\+Aml\+Config. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr\+Aml\+Config} & A\+ML configuration structure, which does not depend on S\+DK version. It is compatible with S32 S\+DK and K\+S\+DK. Configuration will be used for configure S\+DK which is currently used. It depends on S\+D\+K\+\_\+\+V\+E\+R\+S\+I\+ON which is define in \mbox{\hyperlink{common__aml_8h}{A\+M\+L/common\+\_\+aml.\+h}} file. \\
+\hline
+{\em trm\+Sdk\+Config} & S\+DK specific configuration, this structure will configure according tmr\+Aml\+Config. \\
+\hline
+{\em tmr\+\_\+sdk\+\_\+pwm\+\_\+ch\+\_\+config\+\_\+t($\ast$)\mbox{[}$\,$\mbox{]}} & pointer to array of tmr\+\_\+sdk\+\_\+pwm\+\_\+ch\+\_\+config\+\_\+t for each P\+WM channel. It is used for generating independent P\+WM signal on output. Use N\+U\+LL pointer if P\+WM is not needed. \\
+\hline
+{\em \mbox{\hyperlink{structtmr__sdk__outcmp__ch__t}{tmr\+\_\+sdk\+\_\+outcmp\+\_\+ch\+\_\+t($\ast$)\mbox{[}$\,$\mbox{]}}}} & pointer to array of \mbox{\hyperlink{structtmr__sdk__outcmp__ch__t}{tmr\+\_\+sdk\+\_\+outcmp\+\_\+ch\+\_\+t}} for each output compare register. It is used for output compare mode. Use N\+U\+LL pointer if output compare mode is not needed. \\
+\hline
+{\em chnl\+Incpt\+Param($\ast$)\mbox{[}$\,$\mbox{]}} & pointer to array of chnl\+Incpt\+Param for each input capture register. It is used for input capture mode. Use N\+U\+LL pointer if output compare mode is not needed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (sta\+E\+R\+R\+\_\+\+OK when no error occurred). 
+\end{DoxyReturn}
+$<$ Error code. \mbox{\Hypertarget{group__function__group_gaa3cc8cb5f7c82ecd755b6f274f6cd39c}\label{group__function__group_gaa3cc8cb5f7c82ecd755b6f274f6cd39c}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_GetDefaultConfig@{TMR\_AML\_GetDefaultConfig}}
+\index{TMR\_AML\_GetDefaultConfig@{TMR\_AML\_GetDefaultConfig}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_GetDefaultConfig()}{TMR\_AML\_GetDefaultConfig()}}
+{\footnotesize\ttfamily void T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Default\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__struct__group_gaf1f378b0bcc8ef613858b973521fc013}{tmr\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+This function fills the T\+PM configuration structure with the default settings. 
+
+Note that the function calls Get\+Default\+Config of used peripheral (T\+PM or F\+TM) for K\+S\+DK.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to user\textquotesingle{}s T\+MR configuration structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_gadbe5aa98c75287b62c5737f0bae6e68b}\label{group__function__group_gadbe5aa98c75287b62c5737f0bae6e68b}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_GetEnabledInterrupts@{TMR\_AML\_GetEnabledInterrupts}}
+\index{TMR\_AML\_GetEnabledInterrupts@{TMR\_AML\_GetEnabledInterrupts}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_GetEnabledInterrupts()}{TMR\_AML\_GetEnabledInterrupts()}}
+{\footnotesize\ttfamily uint16\+\_\+t T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Enabled\+Interrupts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance }\end{DoxyParamCaption})}
+
+
+
+Gets the enabled timer interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The enabled interrupts. This is the logical OR of members of the enumeration tmr\+\_\+aml\+\_\+int\+\_\+flags\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__function__group_gabedb43ac302eff10bd4877838457a108}\label{group__function__group_gabedb43ac302eff10bd4877838457a108}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_GetInstance@{TMR\_AML\_GetInstance}}
+\index{TMR\_AML\_GetInstance@{TMR\_AML\_GetInstance}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_GetInstance()}{TMR\_AML\_GetInstance()}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Instance (\begin{DoxyParamCaption}\item[{const void $\ast$}]{tmr\+Base }\end{DoxyParamCaption})}
+
+
+
+Gets instance for timer module base pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr\+Base} & Base pointer to I2C peripheral module \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+instance number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__function__group_ga98c1f0d4ed77a3cbf909fafef40f89d3}\label{group__function__group_ga98c1f0d4ed77a3cbf909fafef40f89d3}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_GetOffsetTicks@{TMR\_AML\_GetOffsetTicks}}
+\index{TMR\_AML\_GetOffsetTicks@{TMR\_AML\_GetOffsetTicks}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_GetOffsetTicks()}{TMR\_AML\_GetOffsetTicks()}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Offset\+Ticks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+
+
+Sets timer channel offset (in timer ticks). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+{\em channel} & Index of the timer channel (starts with 0).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Channel offset (in timer ticks). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__function__group_ga785236cb13d536bfe7b59bd484de01aa}\label{group__function__group_ga785236cb13d536bfe7b59bd484de01aa}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_GetPeriodTicks@{TMR\_AML\_GetPeriodTicks}}
+\index{TMR\_AML\_GetPeriodTicks@{TMR\_AML\_GetPeriodTicks}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_GetPeriodTicks()}{TMR\_AML\_GetPeriodTicks()}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Period\+Ticks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance }\end{DoxyParamCaption})}
+
+
+
+Returns timer period (in timer ticks). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Period value (number of counter ticks). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__function__group_gab13a1129d27008d231d4f14ac6b756c6}\label{group__function__group_gab13a1129d27008d231d4f14ac6b756c6}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_GetStatusFlags@{TMR\_AML\_GetStatusFlags}}
+\index{TMR\_AML\_GetStatusFlags@{TMR\_AML\_GetStatusFlags}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_GetStatusFlags()}{TMR\_AML\_GetStatusFlags()}}
+{\footnotesize\ttfamily uint16\+\_\+t T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Status\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance }\end{DoxyParamCaption})}
+
+
+
+Gets the timer status flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The status flags. This is the logical OR of members of the enumeration tmr\+\_\+aml\+\_\+status\+\_\+flags\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__function__group_gacd35322aa62b00c8389236ab1c28de3b}\label{group__function__group_gacd35322aa62b00c8389236ab1c28de3b}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_Init@{TMR\_AML\_Init}}
+\index{TMR\_AML\_Init@{TMR\_AML\_Init}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_Init()}{TMR\_AML\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{const \mbox{\hyperlink{structtmr__sdk__config__t}{tmr\+\_\+sdk\+\_\+config\+\_\+t}} $\ast$}]{sdk\+Config }\end{DoxyParamCaption})}
+
+
+
+Configures the peripheral for basic operation. 
+
+General configuration of T\+PM device including prescaler, G\+TB, trigger settings, period, center aligned setting etc. It configures timer channels (mode, output action and offset).
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+{\em sdk\+Config} & S\+DK specific timer configuration.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (sta\+E\+R\+R\+\_\+\+OK when no error occurred). 
+\end{DoxyReturn}
+$<$ Error code. \mbox{\Hypertarget{group__function__group_gaa5bf50001a224cd4dc43250cdfd6d915}\label{group__function__group_gaa5bf50001a224cd4dc43250cdfd6d915}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_ReadTimer@{TMR\_AML\_ReadTimer}}
+\index{TMR\_AML\_ReadTimer@{TMR\_AML\_ReadTimer}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_ReadTimer()}{TMR\_AML\_ReadTimer()}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Read\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance }\end{DoxyParamCaption})}
+
+
+
+Returns the content of counter register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Counter value (number of counter ticks). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__function__group_gaf082ed62ce28809934e491636f66d9d3}\label{group__function__group_gaf082ed62ce28809934e491636f66d9d3}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_ResetTimer@{TMR\_AML\_ResetTimer}}
+\index{TMR\_AML\_ResetTimer@{TMR\_AML\_ResetTimer}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_ResetTimer()}{TMR\_AML\_ResetTimer()}}
+{\footnotesize\ttfamily void T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Reset\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance }\end{DoxyParamCaption})}
+
+
+
+Resets counter (counter is set to zero). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga5931b9421575af77c832c14310375535}\label{group__function__group_ga5931b9421575af77c832c14310375535}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_SetOffsetTicks@{TMR\_AML\_SetOffsetTicks}}
+\index{TMR\_AML\_SetOffsetTicks@{TMR\_AML\_SetOffsetTicks}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_SetOffsetTicks()}{TMR\_AML\_SetOffsetTicks()}}
+{\footnotesize\ttfamily void T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Set\+Offset\+Ticks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{uint8\+\_\+t}]{channel,  }\item[{uint32\+\_\+t}]{ticks }\end{DoxyParamCaption})}
+
+
+
+Sets timer channel offset (in timer ticks). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+{\em channel} & Index of the timer channel (starts with 0). \\
+\hline
+{\em ticks} & Channel offset (in timer ticks). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga4c66f25ed170fae0a0bc0341d7a6f58c}\label{group__function__group_ga4c66f25ed170fae0a0bc0341d7a6f58c}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_SetPeriodTicks@{TMR\_AML\_SetPeriodTicks}}
+\index{TMR\_AML\_SetPeriodTicks@{TMR\_AML\_SetPeriodTicks}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_SetPeriodTicks()}{TMR\_AML\_SetPeriodTicks()}}
+{\footnotesize\ttfamily void T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Set\+Period\+Ticks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance,  }\item[{uint32\+\_\+t}]{ticks }\end{DoxyParamCaption})}
+
+
+
+Sets timer period (in timer ticks). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+{\em ticks} & Timer period (in timer ticks). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga6ada6000f053895016184421976d8b74}\label{group__function__group_ga6ada6000f053895016184421976d8b74}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_StartTimer@{TMR\_AML\_StartTimer}}
+\index{TMR\_AML\_StartTimer@{TMR\_AML\_StartTimer}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_StartTimer()}{TMR\_AML\_StartTimer()}}
+{\footnotesize\ttfamily void T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Start\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance }\end{DoxyParamCaption})}
+
+
+
+Starts the counter. 
+
+It sets the clock source defined in initialization (see \mbox{\hyperlink{structtmr__sdk__config__t}{tmr\+\_\+sdk\+\_\+config\+\_\+t}} structure).
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga8ef7bbe3180ad4f34ac8a3a8c7db9bd3}\label{group__function__group_ga8ef7bbe3180ad4f34ac8a3a8c7db9bd3}} 
+\index{Function\_group@{Function\_group}!TMR\_AML\_StopTimer@{TMR\_AML\_StopTimer}}
+\index{TMR\_AML\_StopTimer@{TMR\_AML\_StopTimer}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{TMR\_AML\_StopTimer()}{TMR\_AML\_StopTimer()}}
+{\footnotesize\ttfamily void T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Stop\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}}]{instance }\end{DoxyParamCaption})}
+
+
+
+Stops the counter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Timer peripheral instance number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga1b85420a1a98dd13e15b8b515f2be603}\label{group__function__group_ga1b85420a1a98dd13e15b8b515f2be603}} 
+\index{Function\_group@{Function\_group}!WAIT\_AML\_WaitCycles@{WAIT\_AML\_WaitCycles}}
+\index{WAIT\_AML\_WaitCycles@{WAIT\_AML\_WaitCycles}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{WAIT\_AML\_WaitCycles()}{WAIT\_AML\_WaitCycles()}}
+{\footnotesize\ttfamily void W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Cycles (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{cycles }\end{DoxyParamCaption})}
+
+
+
+Waits for specified amount of cycles which is given by 32bit value range. Assumption for this function is that target architecture is using 32bit general purpose registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cycles} & -\/ Number of cycles to wait. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga91059b3fe779d0ca7074c59bacb42f59}\label{group__function__group_ga91059b3fe779d0ca7074c59bacb42f59}} 
+\index{Function\_group@{Function\_group}!WAIT\_AML\_WaitMs@{WAIT\_AML\_WaitMs}}
+\index{WAIT\_AML\_WaitMs@{WAIT\_AML\_WaitMs}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{WAIT\_AML\_WaitMs()}{WAIT\_AML\_WaitMs()}}
+{\footnotesize\ttfamily void W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Ms (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{delay }\end{DoxyParamCaption})}
+
+
+
+Waits for specified amount of milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & -\/ Number of milliseconds to wait. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_ga2cc4c9ff3ce6add5f7d02798bebb1939}\label{group__function__group_ga2cc4c9ff3ce6add5f7d02798bebb1939}} 
+\index{Function\_group@{Function\_group}!WAIT\_AML\_WaitSec@{WAIT\_AML\_WaitSec}}
+\index{WAIT\_AML\_WaitSec@{WAIT\_AML\_WaitSec}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{WAIT\_AML\_WaitSec()}{WAIT\_AML\_WaitSec()}}
+{\footnotesize\ttfamily void W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Sec (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{delay }\end{DoxyParamCaption})}
+
+
+
+Waits for specified amount of seconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & -\/ Number of seconds to wait. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__function__group_gac71523b2fdbddc5d35c018502abbd770}\label{group__function__group_gac71523b2fdbddc5d35c018502abbd770}} 
+\index{Function\_group@{Function\_group}!WAIT\_AML\_WaitUs@{WAIT\_AML\_WaitUs}}
+\index{WAIT\_AML\_WaitUs@{WAIT\_AML\_WaitUs}!Function\_group@{Function\_group}}
+\subsubsection{\texorpdfstring{WAIT\_AML\_WaitUs()}{WAIT\_AML\_WaitUs()}}
+{\footnotesize\ttfamily void W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Us (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{delay }\end{DoxyParamCaption})}
+
+
+
+Waits for specified amount of microseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & -\/ Number of microseconds to wait. \\
+\hline
+\end{DoxyParams}

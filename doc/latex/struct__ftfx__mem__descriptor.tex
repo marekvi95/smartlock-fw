@@ -1,0 +1,57 @@
+\hypertarget{struct__ftfx__mem__descriptor}{}\section{\+\_\+ftfx\+\_\+mem\+\_\+descriptor Struct Reference}
+\label{struct__ftfx__mem__descriptor}\index{\_ftfx\_mem\_descriptor@{\_ftfx\_mem\_descriptor}}
+
+
+Flash memory descriptor.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+ftfx\+\_\+controller.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \mbox{\hyperlink{group__ftfx__controller_ga1d127017fb298b889f4ba24752d08b8e}{type}}\\
+\>uint8\_t \mbox{\hyperlink{group__ftfx__controller_gaae5a12e607d0f782506d9e6ec6179c64}{index}}\\
+\>uint8\_t {\bfseries reserved} \mbox{[}2\mbox{]}\\
+\}; \\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t {\bfseries isIndBlock}: 1\\
+\>uint32\_t {\bfseries hasIndPfsizeReg}: 1\\
+\>uint32\_t {\bfseries hasProtControl}: 1\\
+\>uint32\_t {\bfseries hasIndProtReg}: 1\\
+\>uint32\_t {\bfseries hasXaccControl}: 1\\
+\>uint32\_t {\bfseries hasIndXaccReg}: 1\\
+\>uint32\_t {\bfseries \_\_pad0\_\_}: 18\\
+\>uint32\_t {\bfseries ProtRegBits}: 8\\
+\} {\bfseries feature}\\
+
+\end{tabbing}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga1cd6b415d1fb5e98f12125b7863691e2}{block\+Base}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_gafd8a6a01e3b212857df6efb82e06f682}{total\+Size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga0531bf8e2d0ac7dbf0d6af9b74a6ae0f}{sector\+Size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga359235f8ff745acf36826f7859097c4f}{block\+Count}}
+\item 
+\mbox{\hyperlink{group__ftfx__controller_ga6a3bd19cb0ff32d44e464562765a8127}{ftfx\+\_\+spec\+\_\+mem\+\_\+t}} {\bfseries access\+Segment\+Mem}
+\item 
+\mbox{\hyperlink{group__ftfx__controller_ga6a3bd19cb0ff32d44e464562765a8127}{ftfx\+\_\+spec\+\_\+mem\+\_\+t}} {\bfseries protect\+Region\+Mem}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Flash memory descriptor. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+ftfx\+\_\+controller.\+h\end{DoxyCompactItemize}

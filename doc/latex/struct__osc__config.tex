@@ -1,0 +1,63 @@
+\hypertarget{struct__osc__config}{}\section{\+\_\+osc\+\_\+config Struct Reference}
+\label{struct__osc__config}\index{\_osc\_config@{\_osc\_config}}
+
+
+O\+SC Initialization Configuration Structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+clock.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__osc__config_aacfad457f5366fa9265eb0a89e43f23b}{freq}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__osc__config_a363d6209668a452191991267e39ab69d}{cap\+Load}}
+\item 
+\mbox{\hyperlink{group__clock_ga86e25a9d93f6b00c118c7f8eda32d67b}{osc\+\_\+mode\+\_\+t}} \mbox{\hyperlink{struct__osc__config_a5ad1f7dc2a43d53bc15fc8c8d969e605}{work\+Mode}}
+\item 
+\mbox{\hyperlink{group__clock_ga3280fcfc08b1b4b0989197cc56239fb6}{oscer\+\_\+config\+\_\+t}} \mbox{\hyperlink{struct__osc__config_af37407a042780c0e65e57af58393c629}{oscer\+Config}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+O\+SC Initialization Configuration Structure. 
+
+Defines the configuration data structure to initialize the O\+SC. When porting to a new board, set the following members according to the board settings\+:
+\begin{DoxyEnumerate}
+\item freq\+: The external frequency.
+\item work\+Mode\+: The O\+SC module mode. 
+\end{DoxyEnumerate}
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__osc__config_a363d6209668a452191991267e39ab69d}\label{struct__osc__config_a363d6209668a452191991267e39ab69d}} 
+\index{\_osc\_config@{\_osc\_config}!capLoad@{capLoad}}
+\index{capLoad@{capLoad}!\_osc\_config@{\_osc\_config}}
+\subsubsection{\texorpdfstring{capLoad}{capLoad}}
+{\footnotesize\ttfamily uint8\+\_\+t cap\+Load}
+
+Capacitor load setting. \mbox{\Hypertarget{struct__osc__config_aacfad457f5366fa9265eb0a89e43f23b}\label{struct__osc__config_aacfad457f5366fa9265eb0a89e43f23b}} 
+\index{\_osc\_config@{\_osc\_config}!freq@{freq}}
+\index{freq@{freq}!\_osc\_config@{\_osc\_config}}
+\subsubsection{\texorpdfstring{freq}{freq}}
+{\footnotesize\ttfamily uint32\+\_\+t freq}
+
+External clock frequency. \mbox{\Hypertarget{struct__osc__config_af37407a042780c0e65e57af58393c629}\label{struct__osc__config_af37407a042780c0e65e57af58393c629}} 
+\index{\_osc\_config@{\_osc\_config}!oscerConfig@{oscerConfig}}
+\index{oscerConfig@{oscerConfig}!\_osc\_config@{\_osc\_config}}
+\subsubsection{\texorpdfstring{oscerConfig}{oscerConfig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__clock_ga3280fcfc08b1b4b0989197cc56239fb6}{oscer\+\_\+config\+\_\+t}} oscer\+Config}
+
+Configuration for O\+S\+C\+E\+R\+C\+LK. \mbox{\Hypertarget{struct__osc__config_a5ad1f7dc2a43d53bc15fc8c8d969e605}\label{struct__osc__config_a5ad1f7dc2a43d53bc15fc8c8d969e605}} 
+\index{\_osc\_config@{\_osc\_config}!workMode@{workMode}}
+\index{workMode@{workMode}!\_osc\_config@{\_osc\_config}}
+\subsubsection{\texorpdfstring{workMode}{workMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__clock_ga86e25a9d93f6b00c118c7f8eda32d67b}{osc\+\_\+mode\+\_\+t}} work\+Mode}
+
+O\+SC work mode setting. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/\mbox{\hyperlink{fsl__clock_8h}{fsl\+\_\+clock.\+h}}\end{DoxyCompactItemize}

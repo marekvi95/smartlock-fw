@@ -1,0 +1,185 @@
+\hypertarget{group___p_i_t___register___masks}{}\section{P\+IT Register Masks}
+\label{group___p_i_t___register___masks}\index{PIT Register Masks@{PIT Register Masks}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga3d2d70f366f2b214ae060c0cb0abb202}\label{group___p_i_t___register___masks_ga3d2d70f366f2b214ae060c0cb0abb202}} 
+\#define {\bfseries P\+I\+T\+\_\+\+L\+D\+V\+A\+L\+\_\+\+C\+O\+U\+NT}~(2\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga8620fe2fb28dc11a864333f6ef51b9bd}\label{group___p_i_t___register___masks_ga8620fe2fb28dc11a864333f6ef51b9bd}} 
+\#define {\bfseries P\+I\+T\+\_\+\+C\+V\+A\+L\+\_\+\+C\+O\+U\+NT}~(2\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_gaf5d79447f057663c2cf041cb472bd2b3}\label{group___p_i_t___register___masks_gaf5d79447f057663c2cf041cb472bd2b3}} 
+\#define {\bfseries P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+C\+O\+U\+NT}~(2\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga7d2129ae649e32ec8c7e6804ba6b6551}\label{group___p_i_t___register___masks_ga7d2129ae649e32ec8c7e6804ba6b6551}} 
+\#define {\bfseries P\+I\+T\+\_\+\+T\+F\+L\+G\+\_\+\+C\+O\+U\+NT}~(2\+U)
+\end{DoxyCompactItemize}
+\subsection*{M\+CR -\/ P\+IT Module Control Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga8149a0bb21843632dd4528b540480ba7}\label{group___p_i_t___register___masks_ga8149a0bb21843632dd4528b540480ba7}} 
+\#define {\bfseries P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+F\+R\+Z\+\_\+\+M\+A\+SK}~(0x1\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga500ccd29eaebc20aa853e7bbb23e3c0c}\label{group___p_i_t___register___masks_ga500ccd29eaebc20aa853e7bbb23e3c0c}} 
+\#define {\bfseries P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+F\+R\+Z\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___p_i_t___register___masks_gab52ff9f5a1c18eee41b58100aa415dfe}{P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+F\+RZ}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+F\+R\+Z\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+F\+R\+Z\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga024258b2c23ff75f3e161e56adbbe733}\label{group___p_i_t___register___masks_ga024258b2c23ff75f3e161e56adbbe733}} 
+\#define {\bfseries P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+M\+D\+I\+S\+\_\+\+M\+A\+SK}~(0x2\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga7ddcd16550ff71e4ee5ac48022ae6fb6}\label{group___p_i_t___register___masks_ga7ddcd16550ff71e4ee5ac48022ae6fb6}} 
+\#define {\bfseries P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+M\+D\+I\+S\+\_\+\+S\+H\+I\+FT}~(1\+U)
+\item 
+\#define \mbox{\hyperlink{group___p_i_t___register___masks_gafae73f01b87a4e133c1289e0d09f8de2}{P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+M\+D\+IS}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+M\+D\+I\+S\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+M\+D\+I\+S\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\subsection*{L\+T\+M\+R64H -\/ P\+IT Upper Lifetime Timer Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga2f52ce484f53348d406fae4b3cac7fdf}\label{group___p_i_t___register___masks_ga2f52ce484f53348d406fae4b3cac7fdf}} 
+\#define {\bfseries P\+I\+T\+\_\+\+L\+T\+M\+R64\+H\+\_\+\+L\+T\+H\+\_\+\+M\+A\+SK}~(0x\+F\+F\+F\+F\+F\+F\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_gaf355862db7eafd261031477364a6ef8d}\label{group___p_i_t___register___masks_gaf355862db7eafd261031477364a6ef8d}} 
+\#define {\bfseries P\+I\+T\+\_\+\+L\+T\+M\+R64\+H\+\_\+\+L\+T\+H\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___p_i_t___register___masks_gad3b13100c85d855043c5f19494f33c2d}{P\+I\+T\+\_\+\+L\+T\+M\+R64\+H\+\_\+\+L\+TH}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+L\+T\+M\+R64\+H\+\_\+\+L\+T\+H\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+L\+T\+M\+R64\+H\+\_\+\+L\+T\+H\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\subsection*{L\+T\+M\+R64L -\/ P\+IT Lower Lifetime Timer Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_gab7337206a85c605ed0ea16b77df99e1a}\label{group___p_i_t___register___masks_gab7337206a85c605ed0ea16b77df99e1a}} 
+\#define {\bfseries P\+I\+T\+\_\+\+L\+T\+M\+R64\+L\+\_\+\+L\+T\+L\+\_\+\+M\+A\+SK}~(0x\+F\+F\+F\+F\+F\+F\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga773e29842f6f049c17bf141d4cc4fc87}\label{group___p_i_t___register___masks_ga773e29842f6f049c17bf141d4cc4fc87}} 
+\#define {\bfseries P\+I\+T\+\_\+\+L\+T\+M\+R64\+L\+\_\+\+L\+T\+L\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___p_i_t___register___masks_ga42ab7207419fd5b7721cd01ea1d08a79}{P\+I\+T\+\_\+\+L\+T\+M\+R64\+L\+\_\+\+L\+TL}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+L\+T\+M\+R64\+L\+\_\+\+L\+T\+L\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+L\+T\+M\+R64\+L\+\_\+\+L\+T\+L\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\subsection*{L\+D\+V\+AL -\/ Timer Load Value Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_gab7929b3b8a0c170a50f57d97face5365}\label{group___p_i_t___register___masks_gab7929b3b8a0c170a50f57d97face5365}} 
+\#define {\bfseries P\+I\+T\+\_\+\+L\+D\+V\+A\+L\+\_\+\+T\+S\+V\+\_\+\+M\+A\+SK}~(0x\+F\+F\+F\+F\+F\+F\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga463855d2b42de901bad9bea868f4f48b}\label{group___p_i_t___register___masks_ga463855d2b42de901bad9bea868f4f48b}} 
+\#define {\bfseries P\+I\+T\+\_\+\+L\+D\+V\+A\+L\+\_\+\+T\+S\+V\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___p_i_t___register___masks_ga1aa1b498b2c8f1a14d095370a7ddf9a6}{P\+I\+T\+\_\+\+L\+D\+V\+A\+L\+\_\+\+T\+SV}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+L\+D\+V\+A\+L\+\_\+\+T\+S\+V\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+L\+D\+V\+A\+L\+\_\+\+T\+S\+V\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\subsection*{C\+V\+AL -\/ Current Timer Value Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga2810b877338372cb9b9d944b206c08d3}\label{group___p_i_t___register___masks_ga2810b877338372cb9b9d944b206c08d3}} 
+\#define {\bfseries P\+I\+T\+\_\+\+C\+V\+A\+L\+\_\+\+T\+V\+L\+\_\+\+M\+A\+SK}~(0x\+F\+F\+F\+F\+F\+F\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga28753a1a45034ccd34e052faa3e02ff0}\label{group___p_i_t___register___masks_ga28753a1a45034ccd34e052faa3e02ff0}} 
+\#define {\bfseries P\+I\+T\+\_\+\+C\+V\+A\+L\+\_\+\+T\+V\+L\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___p_i_t___register___masks_ga00291ae8d045c0b0f199d8950c7e453a}{P\+I\+T\+\_\+\+C\+V\+A\+L\+\_\+\+T\+VL}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+C\+V\+A\+L\+\_\+\+T\+V\+L\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+C\+V\+A\+L\+\_\+\+T\+V\+L\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\subsection*{T\+C\+T\+RL -\/ Timer Control Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga1099670711f996f5fa84e33bbfe794b2}\label{group___p_i_t___register___masks_ga1099670711f996f5fa84e33bbfe794b2}} 
+\#define {\bfseries P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+E\+N\+\_\+\+M\+A\+SK}~(0x1\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga0080137ff0378087f08cc12fd10b3e1f}\label{group___p_i_t___register___masks_ga0080137ff0378087f08cc12fd10b3e1f}} 
+\#define {\bfseries P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+E\+N\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___p_i_t___register___masks_gaecd36aa22b2758d6c39b6b2df234e3a8}{P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+EN}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+E\+N\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+E\+N\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga99639aabcac1d6042d14e7893d00bf67}\label{group___p_i_t___register___masks_ga99639aabcac1d6042d14e7893d00bf67}} 
+\#define {\bfseries P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK}~(0x2\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_gae21aee9e81741a924c9f2824fbc5775b}\label{group___p_i_t___register___masks_gae21aee9e81741a924c9f2824fbc5775b}} 
+\#define {\bfseries P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+I\+E\+\_\+\+S\+H\+I\+FT}~(1\+U)
+\item 
+\#define \mbox{\hyperlink{group___p_i_t___register___masks_gaa39036db7a5f8baae6f986b5809d054c}{P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+IE}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+I\+E\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga734e2e947c649d50b9ca46405e451c2b}\label{group___p_i_t___register___masks_ga734e2e947c649d50b9ca46405e451c2b}} 
+\#define {\bfseries P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+C\+H\+N\+\_\+\+M\+A\+SK}~(0x4\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga9a1c8aa25a05c9b2c9503a003fa8d24d}\label{group___p_i_t___register___masks_ga9a1c8aa25a05c9b2c9503a003fa8d24d}} 
+\#define {\bfseries P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+C\+H\+N\+\_\+\+S\+H\+I\+FT}~(2\+U)
+\item 
+\#define \mbox{\hyperlink{group___p_i_t___register___masks_gaeab3c9394c0312620a55449b2daeeaf8}{P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+C\+HN}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+C\+H\+N\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+C\+H\+N\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\subsection*{T\+F\+LG -\/ Timer Flag Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga9de8d708b43c9ca35df26c7b43f09769}\label{group___p_i_t___register___masks_ga9de8d708b43c9ca35df26c7b43f09769}} 
+\#define {\bfseries P\+I\+T\+\_\+\+T\+F\+L\+G\+\_\+\+T\+I\+F\+\_\+\+M\+A\+SK}~(0x1\+U)
+\item 
+\mbox{\Hypertarget{group___p_i_t___register___masks_gaf6f5ddca2193ed04bc61bc3e899f5ced}\label{group___p_i_t___register___masks_gaf6f5ddca2193ed04bc61bc3e899f5ced}} 
+\#define {\bfseries P\+I\+T\+\_\+\+T\+F\+L\+G\+\_\+\+T\+I\+F\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___p_i_t___register___masks_gae5a66a0689241a2d1f52b5c989c81b6b}{P\+I\+T\+\_\+\+T\+F\+L\+G\+\_\+\+T\+IF}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+T\+F\+L\+G\+\_\+\+T\+I\+F\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+T\+F\+L\+G\+\_\+\+T\+I\+F\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___p_i_t___register___masks_ga00291ae8d045c0b0f199d8950c7e453a}\label{group___p_i_t___register___masks_ga00291ae8d045c0b0f199d8950c7e453a}} 
+\index{PIT Register Masks@{PIT Register Masks}!PIT\_CVAL\_TVL@{PIT\_CVAL\_TVL}}
+\index{PIT\_CVAL\_TVL@{PIT\_CVAL\_TVL}!PIT Register Masks@{PIT Register Masks}}
+\subsubsection{\texorpdfstring{PIT\_CVAL\_TVL}{PIT\_CVAL\_TVL}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+C\+V\+A\+L\+\_\+\+T\+VL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+C\+V\+A\+L\+\_\+\+T\+V\+L\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+C\+V\+A\+L\+\_\+\+T\+V\+L\+\_\+\+M\+A\+SK)}
+
+T\+VL -\/ Current Timer Value \mbox{\Hypertarget{group___p_i_t___register___masks_ga1aa1b498b2c8f1a14d095370a7ddf9a6}\label{group___p_i_t___register___masks_ga1aa1b498b2c8f1a14d095370a7ddf9a6}} 
+\index{PIT Register Masks@{PIT Register Masks}!PIT\_LDVAL\_TSV@{PIT\_LDVAL\_TSV}}
+\index{PIT\_LDVAL\_TSV@{PIT\_LDVAL\_TSV}!PIT Register Masks@{PIT Register Masks}}
+\subsubsection{\texorpdfstring{PIT\_LDVAL\_TSV}{PIT\_LDVAL\_TSV}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+L\+D\+V\+A\+L\+\_\+\+T\+SV(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+L\+D\+V\+A\+L\+\_\+\+T\+S\+V\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+L\+D\+V\+A\+L\+\_\+\+T\+S\+V\+\_\+\+M\+A\+SK)}
+
+T\+SV -\/ Timer Start Value \mbox{\Hypertarget{group___p_i_t___register___masks_gad3b13100c85d855043c5f19494f33c2d}\label{group___p_i_t___register___masks_gad3b13100c85d855043c5f19494f33c2d}} 
+\index{PIT Register Masks@{PIT Register Masks}!PIT\_LTMR64H\_LTH@{PIT\_LTMR64H\_LTH}}
+\index{PIT\_LTMR64H\_LTH@{PIT\_LTMR64H\_LTH}!PIT Register Masks@{PIT Register Masks}}
+\subsubsection{\texorpdfstring{PIT\_LTMR64H\_LTH}{PIT\_LTMR64H\_LTH}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+L\+T\+M\+R64\+H\+\_\+\+L\+TH(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+L\+T\+M\+R64\+H\+\_\+\+L\+T\+H\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+L\+T\+M\+R64\+H\+\_\+\+L\+T\+H\+\_\+\+M\+A\+SK)}
+
+L\+TH -\/ Life Timer value \mbox{\Hypertarget{group___p_i_t___register___masks_ga42ab7207419fd5b7721cd01ea1d08a79}\label{group___p_i_t___register___masks_ga42ab7207419fd5b7721cd01ea1d08a79}} 
+\index{PIT Register Masks@{PIT Register Masks}!PIT\_LTMR64L\_LTL@{PIT\_LTMR64L\_LTL}}
+\index{PIT\_LTMR64L\_LTL@{PIT\_LTMR64L\_LTL}!PIT Register Masks@{PIT Register Masks}}
+\subsubsection{\texorpdfstring{PIT\_LTMR64L\_LTL}{PIT\_LTMR64L\_LTL}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+L\+T\+M\+R64\+L\+\_\+\+L\+TL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+L\+T\+M\+R64\+L\+\_\+\+L\+T\+L\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+L\+T\+M\+R64\+L\+\_\+\+L\+T\+L\+\_\+\+M\+A\+SK)}
+
+L\+TL -\/ Life Timer value \mbox{\Hypertarget{group___p_i_t___register___masks_gab52ff9f5a1c18eee41b58100aa415dfe}\label{group___p_i_t___register___masks_gab52ff9f5a1c18eee41b58100aa415dfe}} 
+\index{PIT Register Masks@{PIT Register Masks}!PIT\_MCR\_FRZ@{PIT\_MCR\_FRZ}}
+\index{PIT\_MCR\_FRZ@{PIT\_MCR\_FRZ}!PIT Register Masks@{PIT Register Masks}}
+\subsubsection{\texorpdfstring{PIT\_MCR\_FRZ}{PIT\_MCR\_FRZ}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+F\+RZ(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+F\+R\+Z\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+F\+R\+Z\+\_\+\+M\+A\+SK)}
+
+F\+RZ -\/ Freeze 0b0..Timers continue to run in Debug mode. 0b1..Timers are stopped in Debug mode. \mbox{\Hypertarget{group___p_i_t___register___masks_gafae73f01b87a4e133c1289e0d09f8de2}\label{group___p_i_t___register___masks_gafae73f01b87a4e133c1289e0d09f8de2}} 
+\index{PIT Register Masks@{PIT Register Masks}!PIT\_MCR\_MDIS@{PIT\_MCR\_MDIS}}
+\index{PIT\_MCR\_MDIS@{PIT\_MCR\_MDIS}!PIT Register Masks@{PIT Register Masks}}
+\subsubsection{\texorpdfstring{PIT\_MCR\_MDIS}{PIT\_MCR\_MDIS}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+M\+D\+IS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+M\+D\+I\+S\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+M\+C\+R\+\_\+\+M\+D\+I\+S\+\_\+\+M\+A\+SK)}
+
+M\+D\+IS -\/ Module Disable -\/ (P\+IT section) 0b0..Clock for standard P\+IT timers is enabled. 0b1..Clock for standard P\+IT timers is disabled. \mbox{\Hypertarget{group___p_i_t___register___masks_gaeab3c9394c0312620a55449b2daeeaf8}\label{group___p_i_t___register___masks_gaeab3c9394c0312620a55449b2daeeaf8}} 
+\index{PIT Register Masks@{PIT Register Masks}!PIT\_TCTRL\_CHN@{PIT\_TCTRL\_CHN}}
+\index{PIT\_TCTRL\_CHN@{PIT\_TCTRL\_CHN}!PIT Register Masks@{PIT Register Masks}}
+\subsubsection{\texorpdfstring{PIT\_TCTRL\_CHN}{PIT\_TCTRL\_CHN}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+C\+HN(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+C\+H\+N\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+C\+H\+N\+\_\+\+M\+A\+SK)}
+
+C\+HN -\/ Chain Mode 0b0..Timer is not chained. 0b1..Timer is chained to previous timer. For example, for Channel 2, if this field is set, Timer 2 is chained to Timer 1. \mbox{\Hypertarget{group___p_i_t___register___masks_gaecd36aa22b2758d6c39b6b2df234e3a8}\label{group___p_i_t___register___masks_gaecd36aa22b2758d6c39b6b2df234e3a8}} 
+\index{PIT Register Masks@{PIT Register Masks}!PIT\_TCTRL\_TEN@{PIT\_TCTRL\_TEN}}
+\index{PIT\_TCTRL\_TEN@{PIT\_TCTRL\_TEN}!PIT Register Masks@{PIT Register Masks}}
+\subsubsection{\texorpdfstring{PIT\_TCTRL\_TEN}{PIT\_TCTRL\_TEN}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+EN(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+E\+N\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+E\+N\+\_\+\+M\+A\+SK)}
+
+T\+EN -\/ Timer Enable 0b0..Timer n is disabled. 0b1..Timer n is enabled. \mbox{\Hypertarget{group___p_i_t___register___masks_gaa39036db7a5f8baae6f986b5809d054c}\label{group___p_i_t___register___masks_gaa39036db7a5f8baae6f986b5809d054c}} 
+\index{PIT Register Masks@{PIT Register Masks}!PIT\_TCTRL\_TIE@{PIT\_TCTRL\_TIE}}
+\index{PIT\_TCTRL\_TIE@{PIT\_TCTRL\_TIE}!PIT Register Masks@{PIT Register Masks}}
+\subsubsection{\texorpdfstring{PIT\_TCTRL\_TIE}{PIT\_TCTRL\_TIE}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+IE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+I\+E\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK)}
+
+T\+IE -\/ Timer Interrupt Enable 0b0..Interrupt requests from Timer n are disabled. 0b1..Interrupt will be requested whenever T\+IF is set. \mbox{\Hypertarget{group___p_i_t___register___masks_gae5a66a0689241a2d1f52b5c989c81b6b}\label{group___p_i_t___register___masks_gae5a66a0689241a2d1f52b5c989c81b6b}} 
+\index{PIT Register Masks@{PIT Register Masks}!PIT\_TFLG\_TIF@{PIT\_TFLG\_TIF}}
+\index{PIT\_TFLG\_TIF@{PIT\_TFLG\_TIF}!PIT Register Masks@{PIT Register Masks}}
+\subsubsection{\texorpdfstring{PIT\_TFLG\_TIF}{PIT\_TFLG\_TIF}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+T\+F\+L\+G\+\_\+\+T\+IF(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ P\+I\+T\+\_\+\+T\+F\+L\+G\+\_\+\+T\+I\+F\+\_\+\+S\+H\+I\+FT)) \& P\+I\+T\+\_\+\+T\+F\+L\+G\+\_\+\+T\+I\+F\+\_\+\+M\+A\+SK)}
+
+T\+IF -\/ Timer Interrupt Flag 0b0..Timeout has not yet occurred. 0b1..Timeout has occurred. 

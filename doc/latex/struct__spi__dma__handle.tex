@@ -1,0 +1,97 @@
+\hypertarget{struct__spi__dma__handle}{}\section{\+\_\+spi\+\_\+dma\+\_\+handle Struct Reference}
+\label{struct__spi__dma__handle}\index{\_spi\_dma\_handle@{\_spi\_dma\_handle}}
+
+
+S\+PI D\+MA transfer handle, users should not touch the content of the handle.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+spi\+\_\+dma.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct__spi__dma__handle_a2f86d16ba2ed9287aa249d61fdbd8dc5}{tx\+In\+Progress}}
+\item 
+bool \mbox{\hyperlink{struct__spi__dma__handle_a3fd0074ef5f28778f3a3a4b31a095953}{rx\+In\+Progress}}
+\item 
+\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$ \mbox{\hyperlink{struct__spi__dma__handle_ace1f07669b8bb367c0434b8a5e82073e}{tx\+Handle}}
+\item 
+\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$ \mbox{\hyperlink{struct__spi__dma__handle_ac7ec064148024aecf3310655c0eb79a3}{rx\+Handle}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__spi__dma__handle_a34a1eb6e4f11adc3ae8969e5ba57fee0}{bytes\+Per\+Frame}}
+\item 
+\mbox{\hyperlink{group__spi__dma__driver_gacbd157eee3bc09fe3156002bf242d15f}{spi\+\_\+dma\+\_\+callback\+\_\+t}} \mbox{\hyperlink{struct__spi__dma__handle_a13ae89c943e013f5d86912809bf15998}{callback}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__spi__dma__handle_a2e294dd14122c554baa0665072b4ca7a}{user\+Data}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__spi__dma__handle_a1b0c7bd4d79798ef4e0ce23894c9aeb2}{state}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct__spi__dma__handle_a10e6d1f095e525fa85ffe957081ed7a7}{transfer\+Size}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+PI D\+MA transfer handle, users should not touch the content of the handle. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__spi__dma__handle_a34a1eb6e4f11adc3ae8969e5ba57fee0}\label{struct__spi__dma__handle_a34a1eb6e4f11adc3ae8969e5ba57fee0}} 
+\index{\_spi\_dma\_handle@{\_spi\_dma\_handle}!bytesPerFrame@{bytesPerFrame}}
+\index{bytesPerFrame@{bytesPerFrame}!\_spi\_dma\_handle@{\_spi\_dma\_handle}}
+\subsubsection{\texorpdfstring{bytesPerFrame}{bytesPerFrame}}
+{\footnotesize\ttfamily uint8\+\_\+t bytes\+Per\+Frame}
+
+Bytes in a frame for S\+PI transfer \mbox{\Hypertarget{struct__spi__dma__handle_a13ae89c943e013f5d86912809bf15998}\label{struct__spi__dma__handle_a13ae89c943e013f5d86912809bf15998}} 
+\index{\_spi\_dma\_handle@{\_spi\_dma\_handle}!callback@{callback}}
+\index{callback@{callback}!\_spi\_dma\_handle@{\_spi\_dma\_handle}}
+\subsubsection{\texorpdfstring{callback}{callback}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__spi__dma__driver_gacbd157eee3bc09fe3156002bf242d15f}{spi\+\_\+dma\+\_\+callback\+\_\+t}} callback}
+
+Callback for S\+PI D\+MA transfer \mbox{\Hypertarget{struct__spi__dma__handle_ac7ec064148024aecf3310655c0eb79a3}\label{struct__spi__dma__handle_ac7ec064148024aecf3310655c0eb79a3}} 
+\index{\_spi\_dma\_handle@{\_spi\_dma\_handle}!rxHandle@{rxHandle}}
+\index{rxHandle@{rxHandle}!\_spi\_dma\_handle@{\_spi\_dma\_handle}}
+\subsubsection{\texorpdfstring{rxHandle}{rxHandle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}}$\ast$ rx\+Handle}
+
+D\+MA handler for S\+PI receive \mbox{\Hypertarget{struct__spi__dma__handle_a3fd0074ef5f28778f3a3a4b31a095953}\label{struct__spi__dma__handle_a3fd0074ef5f28778f3a3a4b31a095953}} 
+\index{\_spi\_dma\_handle@{\_spi\_dma\_handle}!rxInProgress@{rxInProgress}}
+\index{rxInProgress@{rxInProgress}!\_spi\_dma\_handle@{\_spi\_dma\_handle}}
+\subsubsection{\texorpdfstring{rxInProgress}{rxInProgress}}
+{\footnotesize\ttfamily bool rx\+In\+Progress}
+
+Receive transfer finished \mbox{\Hypertarget{struct__spi__dma__handle_a1b0c7bd4d79798ef4e0ce23894c9aeb2}\label{struct__spi__dma__handle_a1b0c7bd4d79798ef4e0ce23894c9aeb2}} 
+\index{\_spi\_dma\_handle@{\_spi\_dma\_handle}!state@{state}}
+\index{state@{state}!\_spi\_dma\_handle@{\_spi\_dma\_handle}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily uint32\+\_\+t state}
+
+Internal state of S\+PI D\+MA transfer \mbox{\Hypertarget{struct__spi__dma__handle_a10e6d1f095e525fa85ffe957081ed7a7}\label{struct__spi__dma__handle_a10e6d1f095e525fa85ffe957081ed7a7}} 
+\index{\_spi\_dma\_handle@{\_spi\_dma\_handle}!transferSize@{transferSize}}
+\index{transferSize@{transferSize}!\_spi\_dma\_handle@{\_spi\_dma\_handle}}
+\subsubsection{\texorpdfstring{transferSize}{transferSize}}
+{\footnotesize\ttfamily size\+\_\+t transfer\+Size}
+
+Bytes need to be transfer \mbox{\Hypertarget{struct__spi__dma__handle_ace1f07669b8bb367c0434b8a5e82073e}\label{struct__spi__dma__handle_ace1f07669b8bb367c0434b8a5e82073e}} 
+\index{\_spi\_dma\_handle@{\_spi\_dma\_handle}!txHandle@{txHandle}}
+\index{txHandle@{txHandle}!\_spi\_dma\_handle@{\_spi\_dma\_handle}}
+\subsubsection{\texorpdfstring{txHandle}{txHandle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}}$\ast$ tx\+Handle}
+
+D\+MA handler for S\+PI send \mbox{\Hypertarget{struct__spi__dma__handle_a2f86d16ba2ed9287aa249d61fdbd8dc5}\label{struct__spi__dma__handle_a2f86d16ba2ed9287aa249d61fdbd8dc5}} 
+\index{\_spi\_dma\_handle@{\_spi\_dma\_handle}!txInProgress@{txInProgress}}
+\index{txInProgress@{txInProgress}!\_spi\_dma\_handle@{\_spi\_dma\_handle}}
+\subsubsection{\texorpdfstring{txInProgress}{txInProgress}}
+{\footnotesize\ttfamily bool tx\+In\+Progress}
+
+Send transfer finished \mbox{\Hypertarget{struct__spi__dma__handle_a2e294dd14122c554baa0665072b4ca7a}\label{struct__spi__dma__handle_a2e294dd14122c554baa0665072b4ca7a}} 
+\index{\_spi\_dma\_handle@{\_spi\_dma\_handle}!userData@{userData}}
+\index{userData@{userData}!\_spi\_dma\_handle@{\_spi\_dma\_handle}}
+\subsubsection{\texorpdfstring{userData}{userData}}
+{\footnotesize\ttfamily void$\ast$ user\+Data}
+
+User Data for S\+PI D\+MA callback 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+spi\+\_\+dma.\+h\end{DoxyCompactItemize}

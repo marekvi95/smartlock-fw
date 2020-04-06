@@ -1,0 +1,389 @@
+\hypertarget{group___d_m_a___register___masks}{}\section{D\+MA Register Masks}
+\label{group___d_m_a___register___masks}\index{DMA Register Masks@{DMA Register Masks}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gabc06993280d6aa648616aab30d60f98c}\label{group___d_m_a___register___masks_gabc06993280d6aa648616aab30d60f98c}} 
+\#define {\bfseries D\+M\+A\+\_\+\+S\+A\+R\+\_\+\+C\+O\+U\+NT}~(4\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga3609c6bba6a46aa22a3d96a2bc24338a}\label{group___d_m_a___register___masks_ga3609c6bba6a46aa22a3d96a2bc24338a}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+A\+R\+\_\+\+C\+O\+U\+NT}~(4\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga3897ed1e783e35016fe929f0daec2c06}\label{group___d_m_a___register___masks_ga3897ed1e783e35016fe929f0daec2c06}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+C\+O\+U\+NT}~(4\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga53e0ebd6a3892d90b1771598edec2799}\label{group___d_m_a___register___masks_ga53e0ebd6a3892d90b1771598edec2799}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+C\+O\+U\+NT}~(4\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga14084a16e05484453842dac03dec13fd}\label{group___d_m_a___register___masks_ga14084a16e05484453842dac03dec13fd}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+C\+O\+U\+NT}~(4\+U)
+\end{DoxyCompactItemize}
+\subsection*{S\+AR -\/ Source Address Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga990e3ca99cc1d75f5942432959953048}\label{group___d_m_a___register___masks_ga990e3ca99cc1d75f5942432959953048}} 
+\#define {\bfseries D\+M\+A\+\_\+\+S\+A\+R\+\_\+\+S\+A\+R\+\_\+\+M\+A\+SK}~(0x\+F\+F\+F\+F\+F\+F\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga869308e6de564860ede4d607b19bce31}\label{group___d_m_a___register___masks_ga869308e6de564860ede4d607b19bce31}} 
+\#define {\bfseries D\+M\+A\+\_\+\+S\+A\+R\+\_\+\+S\+A\+R\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga68e0d9de2ef332cbd1a302d177a29848}{D\+M\+A\+\_\+\+S\+A\+R\+\_\+\+S\+AR}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+S\+A\+R\+\_\+\+S\+A\+R\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+S\+A\+R\+\_\+\+S\+A\+R\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\subsection*{D\+AR -\/ Destination Address Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gad24e68800bcb03e0d2ffad9b026d5c28}\label{group___d_m_a___register___masks_gad24e68800bcb03e0d2ffad9b026d5c28}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+A\+R\+\_\+\+D\+A\+R\+\_\+\+M\+A\+SK}~(0x\+F\+F\+F\+F\+F\+F\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga6dc575769385f559893116dabe37a002}\label{group___d_m_a___register___masks_ga6dc575769385f559893116dabe37a002}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+A\+R\+\_\+\+D\+A\+R\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga61f5171a3627441884096a69a3f33ca5}{D\+M\+A\+\_\+\+D\+A\+R\+\_\+\+D\+AR}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+A\+R\+\_\+\+D\+A\+R\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+A\+R\+\_\+\+D\+A\+R\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\subsection*{D\+S\+R\+\_\+\+B\+CR -\/ D\+MA Status Register / Byte Count Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga51f1a407dbca889f0b21bb1eeaa1c5d0}\label{group___d_m_a___register___masks_ga51f1a407dbca889f0b21bb1eeaa1c5d0}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+C\+R\+\_\+\+M\+A\+SK}~(0x\+F\+F\+F\+F\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga7eb36602370f4118640f57d51913ff89}\label{group___d_m_a___register___masks_ga7eb36602370f4118640f57d51913ff89}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+C\+R\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gaa1f47d8804ae4a1f26265869b29a3a36}{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+CR}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+C\+R\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+C\+R\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gaaa733d9c65fb074a9e836b8abaa8173f}\label{group___d_m_a___register___masks_gaaa733d9c65fb074a9e836b8abaa8173f}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+N\+E\+\_\+\+M\+A\+SK}~(0x1000000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gaa9063734a56a62385b42210acedc3144}\label{group___d_m_a___register___masks_gaa9063734a56a62385b42210acedc3144}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+N\+E\+\_\+\+S\+H\+I\+FT}~(24\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gabce1208a3f9255c41fa7cbabdd2c4469}{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+NE}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+N\+E\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+N\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga517e206a9b5422e95b875d13973d6888}\label{group___d_m_a___register___masks_ga517e206a9b5422e95b875d13973d6888}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+S\+Y\+\_\+\+M\+A\+SK}~(0x2000000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gaa9f53140b5fb6fbbf7cae9d4190bac47}\label{group___d_m_a___register___masks_gaa9f53140b5fb6fbbf7cae9d4190bac47}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+S\+Y\+\_\+\+S\+H\+I\+FT}~(25\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gaa4547c9bbe3b978b4b7e7154b68b416b}{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+SY}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+S\+Y\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+S\+Y\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga24c6d2ae6aa7b472b69e357ef0729902}\label{group___d_m_a___register___masks_ga24c6d2ae6aa7b472b69e357ef0729902}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+R\+E\+Q\+\_\+\+M\+A\+SK}~(0x4000000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gae04420d59dbb4e54831ac0ddb67d6f74}\label{group___d_m_a___register___masks_gae04420d59dbb4e54831ac0ddb67d6f74}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+R\+E\+Q\+\_\+\+S\+H\+I\+FT}~(26\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga00d940be4f5f290d9dedfe7d68ba9c4c}{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+R\+EQ}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+R\+E\+Q\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+R\+E\+Q\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga958e11f5f7fed3d90bdb94d1c1ff4179}\label{group___d_m_a___register___masks_ga958e11f5f7fed3d90bdb94d1c1ff4179}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+D\+\_\+\+M\+A\+SK}~(0x10000000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga7219c99c1ea8c8a5c029fc998753606b}\label{group___d_m_a___register___masks_ga7219c99c1ea8c8a5c029fc998753606b}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+D\+\_\+\+S\+H\+I\+FT}~(28\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga6ea6e06351bf5e63cd8aa00cc94ad5fe}{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+ED}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+D\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+D\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga64861328d89d08de32a89fb60eee1f78}\label{group___d_m_a___register___masks_ga64861328d89d08de32a89fb60eee1f78}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+S\+\_\+\+M\+A\+SK}~(0x20000000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gab1def5f4a93f7f0ed1d7c5d854471358}\label{group___d_m_a___register___masks_gab1def5f4a93f7f0ed1d7c5d854471358}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+S\+\_\+\+S\+H\+I\+FT}~(29\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga6257b11e599a213bf9ed81660cd56b17}{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+ES}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+S\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+S\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga13eeb687ddb49b15676a60ddfbddee0d}\label{group___d_m_a___register___masks_ga13eeb687ddb49b15676a60ddfbddee0d}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+C\+E\+\_\+\+M\+A\+SK}~(0x40000000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gace7b8188826674cd34c5add3421efa36}\label{group___d_m_a___register___masks_gace7b8188826674cd34c5add3421efa36}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+C\+E\+\_\+\+S\+H\+I\+FT}~(30\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gaf926778a7d3d3a8e31f96037f9ab0d0e}{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+CE}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+C\+E\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+C\+E\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\subsection*{D\+CR -\/ D\+MA Control Register}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga1e5f344c33c6cb40d3c1e0761a18569f}\label{group___d_m_a___register___masks_ga1e5f344c33c6cb40d3c1e0761a18569f}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H2\+\_\+\+M\+A\+SK}~(0x3\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga4fa245f27d90146588583445b590c8da}\label{group___d_m_a___register___masks_ga4fa245f27d90146588583445b590c8da}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H2\+\_\+\+S\+H\+I\+FT}~(0\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga80d528487ff453ad561f9c879a2bc853}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H2}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H2\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H2\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga8d1ad8ec1d2dbb188583222b1a4d0442}\label{group___d_m_a___register___masks_ga8d1ad8ec1d2dbb188583222b1a4d0442}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H1\+\_\+\+M\+A\+SK}~(0x\+C\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga7794ccc91b5f4ebe6e45a26f6dacb13b}\label{group___d_m_a___register___masks_ga7794ccc91b5f4ebe6e45a26f6dacb13b}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H1\+\_\+\+S\+H\+I\+FT}~(2\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gae057fb5ad2e80bffc35fe684e8892661}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H1}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H1\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H1\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga87b016be181c05a161edb3cf1659c85e}\label{group___d_m_a___register___masks_ga87b016be181c05a161edb3cf1659c85e}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+I\+N\+K\+C\+C\+\_\+\+M\+A\+SK}~(0x30\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gac1a09d071e57c1cb8b3a89f102c5bd53}\label{group___d_m_a___register___masks_gac1a09d071e57c1cb8b3a89f102c5bd53}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+I\+N\+K\+C\+C\+\_\+\+S\+H\+I\+FT}~(4\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gad9c5a682d0096224948bdc2e887a4bc3}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+I\+N\+K\+CC}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+I\+N\+K\+C\+C\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+I\+N\+K\+C\+C\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga8ac0ee4daba5e6b55e3dacf8850c6d85}\label{group___d_m_a___register___masks_ga8ac0ee4daba5e6b55e3dacf8850c6d85}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+\_\+\+R\+E\+Q\+\_\+\+M\+A\+SK}~(0x80\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga9d98a83ee41a26845e41b7cd8917479a}\label{group___d_m_a___register___masks_ga9d98a83ee41a26845e41b7cd8917479a}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+\_\+\+R\+E\+Q\+\_\+\+S\+H\+I\+FT}~(7\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga476c8df5ed90b6fcb6a965e58d15c979}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+\_\+\+R\+EQ}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+\_\+\+R\+E\+Q\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+\_\+\+R\+E\+Q\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga0d30381585aa7d7a13a3b5d349187781}\label{group___d_m_a___register___masks_ga0d30381585aa7d7a13a3b5d349187781}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+M\+O\+D\+\_\+\+M\+A\+SK}~(0x\+F00\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga83936f94b10ed7a680004a898274875c}\label{group___d_m_a___register___masks_ga83936f94b10ed7a680004a898274875c}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+M\+O\+D\+\_\+\+S\+H\+I\+FT}~(8\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gabb9c13671b43c6561c6ee77e0158665d}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+M\+OD}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+M\+O\+D\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+M\+O\+D\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gac1240160400703410f467f172117850f}\label{group___d_m_a___register___masks_gac1240160400703410f467f172117850f}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+M\+O\+D\+\_\+\+M\+A\+SK}~(0x\+F000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga72bcd718d03993e1f6faaef56f87c317}\label{group___d_m_a___register___masks_ga72bcd718d03993e1f6faaef56f87c317}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+M\+O\+D\+\_\+\+S\+H\+I\+FT}~(12\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gae478a83c676d7a843fa9e25f029def9c}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+M\+OD}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+M\+O\+D\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+M\+O\+D\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gaaaca42eb6474221a4e91f687194fafd6}\label{group___d_m_a___register___masks_gaaaca42eb6474221a4e91f687194fafd6}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK}~(0x10000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga86b820fe50e65e5c67d14ba4d3d36c6c}\label{group___d_m_a___register___masks_ga86b820fe50e65e5c67d14ba4d3d36c6c}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+H\+I\+FT}~(16\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gac66b6bed7583d0953f62bcf9739f5b48}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+T\+A\+RT}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga2b7bfbe2aea8f1b41a42795ff78c4fd5}\label{group___d_m_a___register___masks_ga2b7bfbe2aea8f1b41a42795ff78c4fd5}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+Z\+E\+\_\+\+M\+A\+SK}~(0x60000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga6b04b13ff50c5d9247f9a12dd582d511}\label{group___d_m_a___register___masks_ga6b04b13ff50c5d9247f9a12dd582d511}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+Z\+E\+\_\+\+S\+H\+I\+FT}~(17\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gaf044df6bf3889f7166fafff5ceab4f67}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+ZE}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+Z\+E\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+Z\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gad93bc8cb86ddeb7a40d9cd80011f8ee7}\label{group___d_m_a___register___masks_gad93bc8cb86ddeb7a40d9cd80011f8ee7}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+I\+N\+C\+\_\+\+M\+A\+SK}~(0x80000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga9a4a7d49cd76a2821e2cf192d3a49fcd}\label{group___d_m_a___register___masks_ga9a4a7d49cd76a2821e2cf192d3a49fcd}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+I\+N\+C\+\_\+\+S\+H\+I\+FT}~(19\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga65b9cb449f4a082b9151c4d2c3bbea8a}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+I\+NC}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+I\+N\+C\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+I\+N\+C\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga5be9c16cc5eddfdd04e7820f698cd401}\label{group___d_m_a___register___masks_ga5be9c16cc5eddfdd04e7820f698cd401}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+M\+A\+SK}~(0x300000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga4229a9ea2db9960308edf51034836083}\label{group___d_m_a___register___masks_ga4229a9ea2db9960308edf51034836083}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+S\+H\+I\+FT}~(20\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gac99e697c8ad0a82435cbf3ccce099886}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+ZE}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga5fff4a843815ef45cffdc31104379644}\label{group___d_m_a___register___masks_ga5fff4a843815ef45cffdc31104379644}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+I\+N\+C\+\_\+\+M\+A\+SK}~(0x400000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gad73f08f2770d56b3d6fd8bf6b9ff1cb9}\label{group___d_m_a___register___masks_gad73f08f2770d56b3d6fd8bf6b9ff1cb9}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+I\+N\+C\+\_\+\+S\+H\+I\+FT}~(22\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga3c4cca7ebdd28fafc626c23e579227c5}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+I\+NC}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+I\+N\+C\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+I\+N\+C\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga69c12559da76c7de9d21298f3a8815f4}\label{group___d_m_a___register___masks_ga69c12559da76c7de9d21298f3a8815f4}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+A\+D\+R\+E\+Q\+\_\+\+M\+A\+SK}~(0x800000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gac11bbaa46006b670a6e2dcd34bd28dde}\label{group___d_m_a___register___masks_gac11bbaa46006b670a6e2dcd34bd28dde}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+A\+D\+R\+E\+Q\+\_\+\+S\+H\+I\+FT}~(23\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga5ca26d27641e4233d06613d520653944}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+A\+D\+R\+EQ}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+A\+D\+R\+E\+Q\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+A\+D\+R\+E\+Q\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gaa6a92e7768984e640413eea5ef5da08b}\label{group___d_m_a___register___masks_gaa6a92e7768984e640413eea5ef5da08b}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+A\+A\+\_\+\+M\+A\+SK}~(0x10000000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gafe71d9df8ce9ecf93c694cd325f50309}\label{group___d_m_a___register___masks_gafe71d9df8ce9ecf93c694cd325f50309}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+A\+A\+\_\+\+S\+H\+I\+FT}~(28\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gad10824b0ee56446dfb75588739985ee7}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+AA}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+A\+A\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+A\+A\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga3c0beb03627ee2982c2fd1d332118d7f}\label{group___d_m_a___register___masks_ga3c0beb03627ee2982c2fd1d332118d7f}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+C\+S\+\_\+\+M\+A\+SK}~(0x20000000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gaa453b5d53f87d5534ca546c4c6bef60f}\label{group___d_m_a___register___masks_gaa453b5d53f87d5534ca546c4c6bef60f}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+C\+S\+\_\+\+S\+H\+I\+FT}~(29\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_gae0abb59f2ee7db3100b218c5e8425918}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+CS}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+C\+S\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+C\+S\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gaf7a7b51a343f7ce8a595f528aae583be}\label{group___d_m_a___register___masks_gaf7a7b51a343f7ce8a595f528aae583be}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+R\+Q\+\_\+\+M\+A\+SK}~(0x40000000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gafc3838d15550b818d421a160ea57a247}\label{group___d_m_a___register___masks_gafc3838d15550b818d421a160ea57a247}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+R\+Q\+\_\+\+S\+H\+I\+FT}~(30\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga5679f508c1d116a1caeac40591e72a19}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+RQ}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+R\+Q\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+R\+Q\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gac5427564104425fdb45a492386cf05e7}\label{group___d_m_a___register___masks_gac5427564104425fdb45a492386cf05e7}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+I\+N\+T\+\_\+\+M\+A\+SK}~(0x80000000\+U)
+\item 
+\mbox{\Hypertarget{group___d_m_a___register___masks_gaee74e1c480eec935c3864d892445db29}\label{group___d_m_a___register___masks_gaee74e1c480eec935c3864d892445db29}} 
+\#define {\bfseries D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+I\+N\+T\+\_\+\+S\+H\+I\+FT}~(31\+U)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___register___masks_ga715e71ce79ff150e5b9be7fc61a7bb8f}{D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+I\+NT}}(x)~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+I\+N\+T\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+I\+N\+T\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___d_m_a___register___masks_ga61f5171a3627441884096a69a3f33ca5}\label{group___d_m_a___register___masks_ga61f5171a3627441884096a69a3f33ca5}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DAR\_DAR@{DMA\_DAR\_DAR}}
+\index{DMA\_DAR\_DAR@{DMA\_DAR\_DAR}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DAR\_DAR}{DMA\_DAR\_DAR}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+A\+R\+\_\+\+D\+AR(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+A\+R\+\_\+\+D\+A\+R\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+A\+R\+\_\+\+D\+A\+R\+\_\+\+M\+A\+SK)}
+
+D\+AR -\/ D\+AR \mbox{\Hypertarget{group___d_m_a___register___masks_gad10824b0ee56446dfb75588739985ee7}\label{group___d_m_a___register___masks_gad10824b0ee56446dfb75588739985ee7}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_AA@{DMA\_DCR\_AA}}
+\index{DMA\_DCR\_AA@{DMA\_DCR\_AA}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_AA}{DMA\_DCR\_AA}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+AA(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+A\+A\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+A\+A\+\_\+\+M\+A\+SK)}
+
+AA -\/ Auto-\/align 0b0..Auto-\/align disabled 0b1..If S\+S\+I\+ZE indicates a transfer no smaller than D\+S\+I\+ZE, source accesses are auto-\/aligned; otherwise, destination accesses are auto-\/aligned. Source alignment takes precedence over destination alignment. If auto-\/alignment is enabled, the appropriate address register increments, regardless of D\+I\+NC or S\+I\+NC. \mbox{\Hypertarget{group___d_m_a___register___masks_gae0abb59f2ee7db3100b218c5e8425918}\label{group___d_m_a___register___masks_gae0abb59f2ee7db3100b218c5e8425918}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_CS@{DMA\_DCR\_CS}}
+\index{DMA\_DCR\_CS@{DMA\_DCR\_CS}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_CS}{DMA\_DCR\_CS}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+CS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+C\+S\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+C\+S\+\_\+\+M\+A\+SK)}
+
+CS -\/ Cycle Steal 0b0..D\+MA continuously makes read/write transfers until the B\+CR decrements to 0. 0b1..Forces a single read/write transfer per request. \mbox{\Hypertarget{group___d_m_a___register___masks_ga476c8df5ed90b6fcb6a965e58d15c979}\label{group___d_m_a___register___masks_ga476c8df5ed90b6fcb6a965e58d15c979}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_D\_REQ@{DMA\_DCR\_D\_REQ}}
+\index{DMA\_DCR\_D\_REQ@{DMA\_DCR\_D\_REQ}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_D\_REQ}{DMA\_DCR\_D\_REQ}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+\_\+\+R\+EQ(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+\_\+\+R\+E\+Q\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+\_\+\+R\+E\+Q\+\_\+\+M\+A\+SK)}
+
+D\+\_\+\+R\+EQ -\/ Disable Request 0b0..E\+RQ bit is not affected. 0b1..E\+RQ bit is cleared when the B\+CR is exhausted. \mbox{\Hypertarget{group___d_m_a___register___masks_ga65b9cb449f4a082b9151c4d2c3bbea8a}\label{group___d_m_a___register___masks_ga65b9cb449f4a082b9151c4d2c3bbea8a}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_DINC@{DMA\_DCR\_DINC}}
+\index{DMA\_DCR\_DINC@{DMA\_DCR\_DINC}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_DINC}{DMA\_DCR\_DINC}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+I\+NC(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+I\+N\+C\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+I\+N\+C\+\_\+\+M\+A\+SK)}
+
+D\+I\+NC -\/ Destination Increment 0b0..No change to the D\+AR after a successful transfer. 0b1..The D\+AR increments by 1, 2, 4 depending upon the size of the transfer. \mbox{\Hypertarget{group___d_m_a___register___masks_gabb9c13671b43c6561c6ee77e0158665d}\label{group___d_m_a___register___masks_gabb9c13671b43c6561c6ee77e0158665d}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_DMOD@{DMA\_DCR\_DMOD}}
+\index{DMA\_DCR\_DMOD@{DMA\_DCR\_DMOD}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_DMOD}{DMA\_DCR\_DMOD}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+M\+OD(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+M\+O\+D\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+M\+O\+D\+\_\+\+M\+A\+SK)}
+
+D\+M\+OD -\/ Destination Address Modulo 0b0000..Buffer disabled 0b0001..Circular buffer size is 16 bytes 0b0010..Circular buffer size is 32 bytes 0b0011..Circular buffer size is 64 bytes 0b0100..Circular buffer size is 128 bytes 0b0101..Circular buffer size is 256 bytes 0b0110..Circular buffer size is 512 bytes 0b0111..Circular buffer size is 1 KB 0b1000..Circular buffer size is 2 KB 0b1001..Circular buffer size is 4 KB 0b1010..Circular buffer size is 8 KB 0b1011..Circular buffer size is 16 KB 0b1100..Circular buffer size is 32 KB 0b1101..Circular buffer size is 64 KB 0b1110..Circular buffer size is 128 KB 0b1111..Circular buffer size is 256 KB \mbox{\Hypertarget{group___d_m_a___register___masks_gaf044df6bf3889f7166fafff5ceab4f67}\label{group___d_m_a___register___masks_gaf044df6bf3889f7166fafff5ceab4f67}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_DSIZE@{DMA\_DCR\_DSIZE}}
+\index{DMA\_DCR\_DSIZE@{DMA\_DCR\_DSIZE}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_DSIZE}{DMA\_DCR\_DSIZE}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+Z\+E\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+Z\+E\+\_\+\+M\+A\+SK)}
+
+D\+S\+I\+ZE -\/ Destination Size 0b00..32-\/bit 0b01..8-\/bit 0b10..16-\/bit 0b11..Reserved (generates a configuration error (D\+S\+Rn\mbox{[}CE\mbox{]}) if incorrectly specified at time of channel activation) \mbox{\Hypertarget{group___d_m_a___register___masks_ga5ca26d27641e4233d06613d520653944}\label{group___d_m_a___register___masks_ga5ca26d27641e4233d06613d520653944}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_EADREQ@{DMA\_DCR\_EADREQ}}
+\index{DMA\_DCR\_EADREQ@{DMA\_DCR\_EADREQ}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_EADREQ}{DMA\_DCR\_EADREQ}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+A\+D\+R\+EQ(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+A\+D\+R\+E\+Q\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+A\+D\+R\+E\+Q\+\_\+\+M\+A\+SK)}
+
+E\+A\+D\+R\+EQ -\/ Enable asynchronous D\+MA requests 0b0..Disabled 0b1..Enabled \mbox{\Hypertarget{group___d_m_a___register___masks_ga715e71ce79ff150e5b9be7fc61a7bb8f}\label{group___d_m_a___register___masks_ga715e71ce79ff150e5b9be7fc61a7bb8f}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_EINT@{DMA\_DCR\_EINT}}
+\index{DMA\_DCR\_EINT@{DMA\_DCR\_EINT}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_EINT}{DMA\_DCR\_EINT}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+I\+NT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+I\+N\+T\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+I\+N\+T\+\_\+\+M\+A\+SK)}
+
+E\+I\+NT -\/ Enable Interrupt on Completion of Transfer 0b0..No interrupt is generated. 0b1..Interrupt signal is enabled. \mbox{\Hypertarget{group___d_m_a___register___masks_ga5679f508c1d116a1caeac40591e72a19}\label{group___d_m_a___register___masks_ga5679f508c1d116a1caeac40591e72a19}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_ERQ@{DMA\_DCR\_ERQ}}
+\index{DMA\_DCR\_ERQ@{DMA\_DCR\_ERQ}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_ERQ}{DMA\_DCR\_ERQ}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+RQ(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+R\+Q\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+R\+Q\+\_\+\+M\+A\+SK)}
+
+E\+RQ -\/ Enable Peripheral Request 0b0..Peripheral request is ignored. 0b1..Enables peripheral request to initiate transfer. A software-\/initiated request (setting S\+T\+A\+RT) is always enabled. \mbox{\Hypertarget{group___d_m_a___register___masks_gae057fb5ad2e80bffc35fe684e8892661}\label{group___d_m_a___register___masks_gae057fb5ad2e80bffc35fe684e8892661}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_LCH1@{DMA\_DCR\_LCH1}}
+\index{DMA\_DCR\_LCH1@{DMA\_DCR\_LCH1}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_LCH1}{DMA\_DCR\_LCH1}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H1(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H1\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H1\+\_\+\+M\+A\+SK)}
+
+L\+C\+H1 -\/ Link Channel 1 0b00..D\+MA Channel 0 0b01..D\+MA Channel 1 0b10..D\+MA Channel 2 0b11..D\+MA Channel 3 \mbox{\Hypertarget{group___d_m_a___register___masks_ga80d528487ff453ad561f9c879a2bc853}\label{group___d_m_a___register___masks_ga80d528487ff453ad561f9c879a2bc853}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_LCH2@{DMA\_DCR\_LCH2}}
+\index{DMA\_DCR\_LCH2@{DMA\_DCR\_LCH2}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_LCH2}{DMA\_DCR\_LCH2}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H2(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H2\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+C\+H2\+\_\+\+M\+A\+SK)}
+
+L\+C\+H2 -\/ Link Channel 2 0b00..D\+MA Channel 0 0b01..D\+MA Channel 1 0b10..D\+MA Channel 2 0b11..D\+MA Channel 3 \mbox{\Hypertarget{group___d_m_a___register___masks_gad9c5a682d0096224948bdc2e887a4bc3}\label{group___d_m_a___register___masks_gad9c5a682d0096224948bdc2e887a4bc3}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_LINKCC@{DMA\_DCR\_LINKCC}}
+\index{DMA\_DCR\_LINKCC@{DMA\_DCR\_LINKCC}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_LINKCC}{DMA\_DCR\_LINKCC}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+I\+N\+K\+CC(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+I\+N\+K\+C\+C\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+L\+I\+N\+K\+C\+C\+\_\+\+M\+A\+SK)}
+
+L\+I\+N\+K\+CC -\/ Link Channel Control 0b00..No channel-\/to-\/channel linking 0b01..Perform a link to channel L\+C\+H1 after each cycle-\/steal transfer followed by a link to L\+C\+H2 after the B\+CR decrements to 0. 0b10..Perform a link to channel L\+C\+H1 after each cycle-\/steal transfer 0b11..Perform a link to channel L\+C\+H1 after the B\+CR decrements to 0. \mbox{\Hypertarget{group___d_m_a___register___masks_ga3c4cca7ebdd28fafc626c23e579227c5}\label{group___d_m_a___register___masks_ga3c4cca7ebdd28fafc626c23e579227c5}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_SINC@{DMA\_DCR\_SINC}}
+\index{DMA\_DCR\_SINC@{DMA\_DCR\_SINC}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_SINC}{DMA\_DCR\_SINC}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+I\+NC(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+I\+N\+C\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+I\+N\+C\+\_\+\+M\+A\+SK)}
+
+S\+I\+NC -\/ Source Increment 0b0..No change to S\+AR after a successful transfer. 0b1..The S\+AR increments by 1, 2, 4 as determined by the transfer size. \mbox{\Hypertarget{group___d_m_a___register___masks_gae478a83c676d7a843fa9e25f029def9c}\label{group___d_m_a___register___masks_gae478a83c676d7a843fa9e25f029def9c}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_SMOD@{DMA\_DCR\_SMOD}}
+\index{DMA\_DCR\_SMOD@{DMA\_DCR\_SMOD}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_SMOD}{DMA\_DCR\_SMOD}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+M\+OD(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+M\+O\+D\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+M\+O\+D\+\_\+\+M\+A\+SK)}
+
+S\+M\+OD -\/ Source Address Modulo 0b0000..Buffer disabled 0b0001..Circular buffer size is 16 bytes. 0b0010..Circular buffer size is 32 bytes. 0b0011..Circular buffer size is 64 bytes. 0b0100..Circular buffer size is 128 bytes. 0b0101..Circular buffer size is 256 bytes. 0b0110..Circular buffer size is 512 bytes. 0b0111..Circular buffer size is 1 KB. 0b1000..Circular buffer size is 2 KB. 0b1001..Circular buffer size is 4 KB. 0b1010..Circular buffer size is 8 KB. 0b1011..Circular buffer size is 16 KB. 0b1100..Circular buffer size is 32 KB. 0b1101..Circular buffer size is 64 KB. 0b1110..Circular buffer size is 128 KB. 0b1111..Circular buffer size is 256 KB. \mbox{\Hypertarget{group___d_m_a___register___masks_gac99e697c8ad0a82435cbf3ccce099886}\label{group___d_m_a___register___masks_gac99e697c8ad0a82435cbf3ccce099886}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_SSIZE@{DMA\_DCR\_SSIZE}}
+\index{DMA\_DCR\_SSIZE@{DMA\_DCR\_SSIZE}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_SSIZE}{DMA\_DCR\_SSIZE}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+M\+A\+SK)}
+
+S\+S\+I\+ZE -\/ Source Size 0b00..32-\/bit 0b01..8-\/bit 0b10..16-\/bit 0b11..Reserved (generates a configuration error (D\+S\+Rn\mbox{[}CE\mbox{]}) if incorrectly specified at time of channel activation) \mbox{\Hypertarget{group___d_m_a___register___masks_gac66b6bed7583d0953f62bcf9739f5b48}\label{group___d_m_a___register___masks_gac66b6bed7583d0953f62bcf9739f5b48}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DCR\_START@{DMA\_DCR\_START}}
+\index{DMA\_DCR\_START@{DMA\_DCR\_START}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DCR\_START}{DMA\_DCR\_START}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+T\+A\+RT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK)}
+
+S\+T\+A\+RT -\/ Start Transfer 0b0..D\+MA inactive 0b1..The D\+MA begins the transfer in accordance to the values in the T\+C\+Dn. S\+T\+A\+RT is cleared automatically after one module clock and always reads as logic 0. \mbox{\Hypertarget{group___d_m_a___register___masks_gaa1f47d8804ae4a1f26265869b29a3a36}\label{group___d_m_a___register___masks_gaa1f47d8804ae4a1f26265869b29a3a36}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DSR\_BCR\_BCR@{DMA\_DSR\_BCR\_BCR}}
+\index{DMA\_DSR\_BCR\_BCR@{DMA\_DSR\_BCR\_BCR}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DSR\_BCR\_BCR}{DMA\_DSR\_BCR\_BCR}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+CR(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+C\+R\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+C\+R\+\_\+\+M\+A\+SK)}
+
+B\+CR -\/ B\+CR \mbox{\Hypertarget{group___d_m_a___register___masks_ga6ea6e06351bf5e63cd8aa00cc94ad5fe}\label{group___d_m_a___register___masks_ga6ea6e06351bf5e63cd8aa00cc94ad5fe}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DSR\_BCR\_BED@{DMA\_DSR\_BCR\_BED}}
+\index{DMA\_DSR\_BCR\_BED@{DMA\_DSR\_BCR\_BED}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DSR\_BCR\_BED}{DMA\_DSR\_BCR\_BED}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+ED(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+D\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+D\+\_\+\+M\+A\+SK)}
+
+B\+ED -\/ Bus Error on Destination 0b0..No bus error occurred. 0b1..The D\+MA channel terminated with a bus error during the write portion of a transfer. \mbox{\Hypertarget{group___d_m_a___register___masks_ga6257b11e599a213bf9ed81660cd56b17}\label{group___d_m_a___register___masks_ga6257b11e599a213bf9ed81660cd56b17}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DSR\_BCR\_BES@{DMA\_DSR\_BCR\_BES}}
+\index{DMA\_DSR\_BCR\_BES@{DMA\_DSR\_BCR\_BES}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DSR\_BCR\_BES}{DMA\_DSR\_BCR\_BES}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+ES(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+S\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+S\+\_\+\+M\+A\+SK)}
+
+B\+ES -\/ Bus Error on Source 0b0..No bus error occurred. 0b1..The D\+MA channel terminated with a bus error during the read portion of a transfer. \mbox{\Hypertarget{group___d_m_a___register___masks_gaa4547c9bbe3b978b4b7e7154b68b416b}\label{group___d_m_a___register___masks_gaa4547c9bbe3b978b4b7e7154b68b416b}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DSR\_BCR\_BSY@{DMA\_DSR\_BCR\_BSY}}
+\index{DMA\_DSR\_BCR\_BSY@{DMA\_DSR\_BCR\_BSY}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DSR\_BCR\_BSY}{DMA\_DSR\_BCR\_BSY}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+SY(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+S\+Y\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+S\+Y\+\_\+\+M\+A\+SK)}
+
+B\+SY -\/ Busy 0b0..D\+MA channel is inactive. Cleared when the D\+MA has finished the last transaction. 0b1..B\+SY is set the first time the channel is enabled after a transfer is initiated. \mbox{\Hypertarget{group___d_m_a___register___masks_gaf926778a7d3d3a8e31f96037f9ab0d0e}\label{group___d_m_a___register___masks_gaf926778a7d3d3a8e31f96037f9ab0d0e}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DSR\_BCR\_CE@{DMA\_DSR\_BCR\_CE}}
+\index{DMA\_DSR\_BCR\_CE@{DMA\_DSR\_BCR\_CE}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DSR\_BCR\_CE}{DMA\_DSR\_BCR\_CE}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+CE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+C\+E\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+C\+E\+\_\+\+M\+A\+SK)}
+
+CE -\/ Configuration Error 0b0..No configuration error exists. 0b1..A configuration error has occurred. \mbox{\Hypertarget{group___d_m_a___register___masks_gabce1208a3f9255c41fa7cbabdd2c4469}\label{group___d_m_a___register___masks_gabce1208a3f9255c41fa7cbabdd2c4469}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DSR\_BCR\_DONE@{DMA\_DSR\_BCR\_DONE}}
+\index{DMA\_DSR\_BCR\_DONE@{DMA\_DSR\_BCR\_DONE}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DSR\_BCR\_DONE}{DMA\_DSR\_BCR\_DONE}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+NE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+N\+E\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+N\+E\+\_\+\+M\+A\+SK)}
+
+D\+O\+NE -\/ Transactions Done 0b0..D\+MA transfer is not yet complete. Writing a 0 has no effect. 0b1..D\+MA transfer completed. Writing a 1 to this bit clears all D\+MA status bits and should be used in an interrupt service routine to clear the D\+MA interrupt and error bits. \mbox{\Hypertarget{group___d_m_a___register___masks_ga00d940be4f5f290d9dedfe7d68ba9c4c}\label{group___d_m_a___register___masks_ga00d940be4f5f290d9dedfe7d68ba9c4c}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_DSR\_BCR\_REQ@{DMA\_DSR\_BCR\_REQ}}
+\index{DMA\_DSR\_BCR\_REQ@{DMA\_DSR\_BCR\_REQ}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_DSR\_BCR\_REQ}{DMA\_DSR\_BCR\_REQ}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+R\+EQ(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+R\+E\+Q\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+R\+E\+Q\+\_\+\+M\+A\+SK)}
+
+R\+EQ -\/ Request 0b0..No request is pending or the channel is currently active. Cleared when the channel is selected. 0b1..The D\+MA channel has a transfer remaining and the channel is not selected. \mbox{\Hypertarget{group___d_m_a___register___masks_ga68e0d9de2ef332cbd1a302d177a29848}\label{group___d_m_a___register___masks_ga68e0d9de2ef332cbd1a302d177a29848}} 
+\index{DMA Register Masks@{DMA Register Masks}!DMA\_SAR\_SAR@{DMA\_SAR\_SAR}}
+\index{DMA\_SAR\_SAR@{DMA\_SAR\_SAR}!DMA Register Masks@{DMA Register Masks}}
+\subsubsection{\texorpdfstring{DMA\_SAR\_SAR}{DMA\_SAR\_SAR}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+S\+A\+R\+\_\+\+S\+AR(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((uint32\+\_\+t)(((uint32\+\_\+t)(x)) $<$$<$ D\+M\+A\+\_\+\+S\+A\+R\+\_\+\+S\+A\+R\+\_\+\+S\+H\+I\+FT)) \& D\+M\+A\+\_\+\+S\+A\+R\+\_\+\+S\+A\+R\+\_\+\+M\+A\+SK)}
+
+S\+AR -\/ S\+AR 

@@ -1,0 +1,307 @@
+\hypertarget{group___u_a_r_t___adapter}{}\section{U\+A\+R\+T\+\_\+\+Adapter}
+\label{group___u_a_r_t___adapter}\index{UART\_Adapter@{UART\_Adapter}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__hal__uart__config}{\+\_\+hal\+\_\+uart\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em U\+A\+RT configuration structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__hal__uart__transfer}{\+\_\+hal\+\_\+uart\+\_\+transfer}}
+\begin{DoxyCompactList}\small\item\em U\+A\+RT transfer structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_ga1e416e28a4597d2c7bb899dd77f03035}\label{group___u_a_r_t___adapter_ga1e416e28a4597d2c7bb899dd77f03035}} 
+\#define \mbox{\hyperlink{group___u_a_r_t___adapter_ga1e416e28a4597d2c7bb899dd77f03035}{U\+A\+R\+T\+\_\+\+A\+D\+A\+P\+T\+E\+R\+\_\+\+N\+O\+N\+\_\+\+B\+L\+O\+C\+K\+I\+N\+G\+\_\+\+M\+O\+DE}}~(0\+U)
+\begin{DoxyCompactList}\small\item\em Enable or disable U\+A\+RT adapter non-\/blocking mode (1 -\/ enable, 0 -\/ disable) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_ga4f2e5a5ca7e360e66a3d03c6f0d57d7b}\label{group___u_a_r_t___adapter_ga4f2e5a5ca7e360e66a3d03c6f0d57d7b}} 
+\#define {\bfseries H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+I\+S\+R\+\_\+\+P\+R\+I\+O\+R\+I\+TY}~(3\+U)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_gaf29d1da1f03c0e201cc643164d6cebd2}\label{group___u_a_r_t___adapter_gaf29d1da1f03c0e201cc643164d6cebd2}} 
+\#define {\bfseries H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE}~(4\+U)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_ga16a70d80d91c156451608862bb0f3d69}\label{group___u_a_r_t___adapter_ga16a70d80d91c156451608862bb0f3d69}} 
+\#define \mbox{\hyperlink{group___u_a_r_t___adapter_ga16a70d80d91c156451608862bb0f3d69}{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+DE}}~(0\+U)
+\begin{DoxyCompactList}\small\item\em Whether enable transactional function of the U\+A\+RT. (0 -\/ disable, 1 -\/ enable) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_gae4e2bad20cdbd350adfa29a03102a2dc}\label{group___u_a_r_t___adapter_gae4e2bad20cdbd350adfa29a03102a2dc}} 
+typedef void $\ast$ {\bfseries hal\+\_\+uart\+\_\+handle\+\_\+t}
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}\label{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}} 
+typedef enum \mbox{\hyperlink{group___u_a_r_t___adapter_gaaaffa428b5b9f79a5e510eb34c74f8f6}{\+\_\+hal\+\_\+uart\+\_\+status}} \mbox{\hyperlink{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}{hal\+\_\+uart\+\_\+status\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em U\+A\+RT status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_ga24029165f252c4fe925cdb8af52b3b8f}\label{group___u_a_r_t___adapter_ga24029165f252c4fe925cdb8af52b3b8f}} 
+typedef enum \mbox{\hyperlink{group___u_a_r_t___adapter_ga4bfc5f54ba1569ae2dfcc1d7ae0be0f3}{\+\_\+hal\+\_\+uart\+\_\+parity\+\_\+mode}} \mbox{\hyperlink{group___u_a_r_t___adapter_ga24029165f252c4fe925cdb8af52b3b8f}{hal\+\_\+uart\+\_\+parity\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em U\+A\+RT parity mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_gad0fc800e49978f5aee5c162009b16bdb}\label{group___u_a_r_t___adapter_gad0fc800e49978f5aee5c162009b16bdb}} 
+typedef enum \mbox{\hyperlink{group___u_a_r_t___adapter_gac8e83321127267d2bed1659d4227f050}{\+\_\+hal\+\_\+uart\+\_\+stop\+\_\+bit\+\_\+count}} \mbox{\hyperlink{group___u_a_r_t___adapter_gad0fc800e49978f5aee5c162009b16bdb}{hal\+\_\+uart\+\_\+stop\+\_\+bit\+\_\+count\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em U\+A\+RT stop bit count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_ga1545cbd3c961cbe725ed2a75ffc5a999}\label{group___u_a_r_t___adapter_ga1545cbd3c961cbe725ed2a75ffc5a999}} 
+typedef struct \mbox{\hyperlink{struct__hal__uart__config}{\+\_\+hal\+\_\+uart\+\_\+config}} \mbox{\hyperlink{group___u_a_r_t___adapter_ga1545cbd3c961cbe725ed2a75ffc5a999}{hal\+\_\+uart\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em U\+A\+RT configuration structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_ga3ec04aac6c3adbcaeec9a593ebf0f9be}\label{group___u_a_r_t___adapter_ga3ec04aac6c3adbcaeec9a593ebf0f9be}} 
+typedef void($\ast$ \mbox{\hyperlink{group___u_a_r_t___adapter_ga3ec04aac6c3adbcaeec9a593ebf0f9be}{hal\+\_\+uart\+\_\+transfer\+\_\+callback\+\_\+t}}) (hal\+\_\+uart\+\_\+handle\+\_\+t handle, \mbox{\hyperlink{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}{hal\+\_\+uart\+\_\+status\+\_\+t}} status, void $\ast$callback\+Param)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT transfer callback function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_a_r_t___adapter_gae828850e160c8cac564844089431e46e}\label{group___u_a_r_t___adapter_gae828850e160c8cac564844089431e46e}} 
+typedef struct \mbox{\hyperlink{struct__hal__uart__transfer}{\+\_\+hal\+\_\+uart\+\_\+transfer}} \mbox{\hyperlink{group___u_a_r_t___adapter_gae828850e160c8cac564844089431e46e}{hal\+\_\+uart\+\_\+transfer\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em U\+A\+RT transfer structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___u_a_r_t___adapter_gaaaffa428b5b9f79a5e510eb34c74f8f6}{\+\_\+hal\+\_\+uart\+\_\+status}} \{ \newline
+\mbox{\hyperlink{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6ace53957d3570fb00454fdd51484e8a4b}{k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Success}} = k\+Status\+\_\+\+Success, 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6aef9c1d027988265c69aef95219493bf6}{k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Tx\+Busy}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+U\+A\+RT, 1), 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a58742a06efe6f0a686c82d1bbf1347e4}{k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Rx\+Busy}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+U\+A\+RT, 2), 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a191f28681f86e8a374711e455949fa3d}{k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Tx\+Idle}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+U\+A\+RT, 3), 
+\newline
+\mbox{\hyperlink{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6acd7b1ae53a0bcb77d67cc66701c3c7f5}{k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Rx\+Idle}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+U\+A\+RT, 4), 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a56abdea917d92b3a62fb1ee09bfc416f}{k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Baudrate\+Not\+Support}}, 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a4dad70c2171b2445de1224d65645164e}{k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Protocol\+Error}}, 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a3e539021cfde4b3468c00de4f834e84e}{k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+H\+A\+L\+\_\+\+U\+A\+RT, 7)
+ \}
+\begin{DoxyCompactList}\small\item\em U\+A\+RT status. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___u_a_r_t___adapter_ga4bfc5f54ba1569ae2dfcc1d7ae0be0f3}{\+\_\+hal\+\_\+uart\+\_\+parity\+\_\+mode}} \{ \mbox{\hyperlink{group___u_a_r_t___adapter_gga4bfc5f54ba1569ae2dfcc1d7ae0be0f3a08fcd92b9342a589174cb30bc87c8536}{k\+H\+A\+L\+\_\+\+Uart\+Parity\+Disabled}} = 0x0U, 
+\mbox{\hyperlink{group___u_a_r_t___adapter_gga4bfc5f54ba1569ae2dfcc1d7ae0be0f3ad5aa4e9333286303c2aacaf0720d0393}{k\+H\+A\+L\+\_\+\+Uart\+Parity\+Even}} = 0x1U, 
+\mbox{\hyperlink{group___u_a_r_t___adapter_gga4bfc5f54ba1569ae2dfcc1d7ae0be0f3abf5f4cdb5e90b0fc1c3e079d305cb90d}{k\+H\+A\+L\+\_\+\+Uart\+Parity\+Odd}} = 0x2U
+ \}
+\begin{DoxyCompactList}\small\item\em U\+A\+RT parity mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___u_a_r_t___adapter_gac8e83321127267d2bed1659d4227f050}{\+\_\+hal\+\_\+uart\+\_\+stop\+\_\+bit\+\_\+count}} \{ \mbox{\hyperlink{group___u_a_r_t___adapter_ggac8e83321127267d2bed1659d4227f050a34f5d0e676eead962173aa956b850476}{k\+H\+A\+L\+\_\+\+Uart\+One\+Stop\+Bit}} = 0U, 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ggac8e83321127267d2bed1659d4227f050ab4bec3351a5a5818347a899989cd65e4}{k\+H\+A\+L\+\_\+\+Uart\+Two\+Stop\+Bit}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em U\+A\+RT stop bit count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Initialization and deinitialization}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}{hal\+\_\+uart\+\_\+status\+\_\+t}} \mbox{\hyperlink{group___u_a_r_t___adapter_gac234c4bcffe995d8aa1b2392162af796}{H\+A\+L\+\_\+\+Uart\+Init}} (hal\+\_\+uart\+\_\+handle\+\_\+t handle, \mbox{\hyperlink{group___u_a_r_t___adapter_ga1545cbd3c961cbe725ed2a75ffc5a999}{hal\+\_\+uart\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Initializes a U\+A\+RT instance with the U\+A\+RT handle and the user configuration structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}{hal\+\_\+uart\+\_\+status\+\_\+t}} \mbox{\hyperlink{group___u_a_r_t___adapter_gab68259998677f787072799042ed0ce34}{H\+A\+L\+\_\+\+Uart\+Deinit}} (hal\+\_\+uart\+\_\+handle\+\_\+t handle)
+\begin{DoxyCompactList}\small\item\em Deinitializes a U\+A\+RT instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Blocking bus Operations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}{hal\+\_\+uart\+\_\+status\+\_\+t}} \mbox{\hyperlink{group___u_a_r_t___adapter_ga652499fca5739b0d61df775e371279bb}{H\+A\+L\+\_\+\+Uart\+Receive\+Blocking}} (hal\+\_\+uart\+\_\+handle\+\_\+t handle, uint8\+\_\+t $\ast$data, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Reads RX data register using a blocking method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}{hal\+\_\+uart\+\_\+status\+\_\+t}} \mbox{\hyperlink{group___u_a_r_t___adapter_gae7104925b7bff899a7631c5ee708dc5c}{H\+A\+L\+\_\+\+Uart\+Send\+Blocking}} (hal\+\_\+uart\+\_\+handle\+\_\+t handle, const uint8\+\_\+t $\ast$data, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Writes to the TX register using a blocking method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___u_a_r_t___adapter_ga4bfc5f54ba1569ae2dfcc1d7ae0be0f3}\label{group___u_a_r_t___adapter_ga4bfc5f54ba1569ae2dfcc1d7ae0be0f3}} 
+\index{UART\_Adapter@{UART\_Adapter}!\_hal\_uart\_parity\_mode@{\_hal\_uart\_parity\_mode}}
+\index{\_hal\_uart\_parity\_mode@{\_hal\_uart\_parity\_mode}!UART\_Adapter@{UART\_Adapter}}
+\subsubsection{\texorpdfstring{\_hal\_uart\_parity\_mode}{\_hal\_uart\_parity\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___u_a_r_t___adapter_ga4bfc5f54ba1569ae2dfcc1d7ae0be0f3}{\+\_\+hal\+\_\+uart\+\_\+parity\+\_\+mode}}}
+
+
+
+U\+A\+RT parity mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kHAL\_UartParityDisabled@{kHAL\_UartParityDisabled}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kHAL\_UartParityDisabled@{kHAL\_UartParityDisabled}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_gga4bfc5f54ba1569ae2dfcc1d7ae0be0f3a08fcd92b9342a589174cb30bc87c8536}\label{group___u_a_r_t___adapter_gga4bfc5f54ba1569ae2dfcc1d7ae0be0f3a08fcd92b9342a589174cb30bc87c8536}} 
+k\+H\+A\+L\+\_\+\+Uart\+Parity\+Disabled&Parity disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kHAL\_UartParityEven@{kHAL\_UartParityEven}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kHAL\_UartParityEven@{kHAL\_UartParityEven}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_gga4bfc5f54ba1569ae2dfcc1d7ae0be0f3ad5aa4e9333286303c2aacaf0720d0393}\label{group___u_a_r_t___adapter_gga4bfc5f54ba1569ae2dfcc1d7ae0be0f3ad5aa4e9333286303c2aacaf0720d0393}} 
+k\+H\+A\+L\+\_\+\+Uart\+Parity\+Even&Parity even enabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kHAL\_UartParityOdd@{kHAL\_UartParityOdd}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kHAL\_UartParityOdd@{kHAL\_UartParityOdd}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_gga4bfc5f54ba1569ae2dfcc1d7ae0be0f3abf5f4cdb5e90b0fc1c3e079d305cb90d}\label{group___u_a_r_t___adapter_gga4bfc5f54ba1569ae2dfcc1d7ae0be0f3abf5f4cdb5e90b0fc1c3e079d305cb90d}} 
+k\+H\+A\+L\+\_\+\+Uart\+Parity\+Odd&Parity odd enabled \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group___u_a_r_t___adapter_gaaaffa428b5b9f79a5e510eb34c74f8f6}\label{group___u_a_r_t___adapter_gaaaffa428b5b9f79a5e510eb34c74f8f6}} 
+\index{UART\_Adapter@{UART\_Adapter}!\_hal\_uart\_status@{\_hal\_uart\_status}}
+\index{\_hal\_uart\_status@{\_hal\_uart\_status}!UART\_Adapter@{UART\_Adapter}}
+\subsubsection{\texorpdfstring{\_hal\_uart\_status}{\_hal\_uart\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___u_a_r_t___adapter_gaaaffa428b5b9f79a5e510eb34c74f8f6}{\+\_\+hal\+\_\+uart\+\_\+status}}}
+
+
+
+U\+A\+RT status. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_HAL\_UartSuccess@{kStatus\_HAL\_UartSuccess}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kStatus\_HAL\_UartSuccess@{kStatus\_HAL\_UartSuccess}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6ace53957d3570fb00454fdd51484e8a4b}\label{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6ace53957d3570fb00454fdd51484e8a4b}} 
+k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Success&Successfully \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_HAL\_UartTxBusy@{kStatus\_HAL\_UartTxBusy}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kStatus\_HAL\_UartTxBusy@{kStatus\_HAL\_UartTxBusy}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6aef9c1d027988265c69aef95219493bf6}\label{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6aef9c1d027988265c69aef95219493bf6}} 
+k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Tx\+Busy&TX busy \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_HAL\_UartRxBusy@{kStatus\_HAL\_UartRxBusy}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kStatus\_HAL\_UartRxBusy@{kStatus\_HAL\_UartRxBusy}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a58742a06efe6f0a686c82d1bbf1347e4}\label{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a58742a06efe6f0a686c82d1bbf1347e4}} 
+k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Rx\+Busy&RX busy \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_HAL\_UartTxIdle@{kStatus\_HAL\_UartTxIdle}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kStatus\_HAL\_UartTxIdle@{kStatus\_HAL\_UartTxIdle}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a191f28681f86e8a374711e455949fa3d}\label{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a191f28681f86e8a374711e455949fa3d}} 
+k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Tx\+Idle&H\+AL U\+A\+RT transmitter is idle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_HAL\_UartRxIdle@{kStatus\_HAL\_UartRxIdle}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kStatus\_HAL\_UartRxIdle@{kStatus\_HAL\_UartRxIdle}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6acd7b1ae53a0bcb77d67cc66701c3c7f5}\label{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6acd7b1ae53a0bcb77d67cc66701c3c7f5}} 
+k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Rx\+Idle&H\+AL U\+A\+RT receiver is idle \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_HAL\_UartBaudrateNotSupport@{kStatus\_HAL\_UartBaudrateNotSupport}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kStatus\_HAL\_UartBaudrateNotSupport@{kStatus\_HAL\_UartBaudrateNotSupport}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a56abdea917d92b3a62fb1ee09bfc416f}\label{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a56abdea917d92b3a62fb1ee09bfc416f}} 
+k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Baudrate\+Not\+Support&Baudrate is not support in current clock source \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_HAL\_UartProtocolError@{kStatus\_HAL\_UartProtocolError}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kStatus\_HAL\_UartProtocolError@{kStatus\_HAL\_UartProtocolError}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a4dad70c2171b2445de1224d65645164e}\label{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a4dad70c2171b2445de1224d65645164e}} 
+k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Protocol\+Error&Error occurs for Noise, Framing, Parity, etc. For transactional transfer, The up layer needs to abort the transfer and then starts again \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_HAL\_UartError@{kStatus\_HAL\_UartError}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kStatus\_HAL\_UartError@{kStatus\_HAL\_UartError}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a3e539021cfde4b3468c00de4f834e84e}\label{group___u_a_r_t___adapter_ggaaaffa428b5b9f79a5e510eb34c74f8f6a3e539021cfde4b3468c00de4f834e84e}} 
+k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Error&Error occurs on H\+AL U\+A\+RT \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group___u_a_r_t___adapter_gac8e83321127267d2bed1659d4227f050}\label{group___u_a_r_t___adapter_gac8e83321127267d2bed1659d4227f050}} 
+\index{UART\_Adapter@{UART\_Adapter}!\_hal\_uart\_stop\_bit\_count@{\_hal\_uart\_stop\_bit\_count}}
+\index{\_hal\_uart\_stop\_bit\_count@{\_hal\_uart\_stop\_bit\_count}!UART\_Adapter@{UART\_Adapter}}
+\subsubsection{\texorpdfstring{\_hal\_uart\_stop\_bit\_count}{\_hal\_uart\_stop\_bit\_count}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___u_a_r_t___adapter_gac8e83321127267d2bed1659d4227f050}{\+\_\+hal\+\_\+uart\+\_\+stop\+\_\+bit\+\_\+count}}}
+
+
+
+U\+A\+RT stop bit count. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kHAL\_UartOneStopBit@{kHAL\_UartOneStopBit}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kHAL\_UartOneStopBit@{kHAL\_UartOneStopBit}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_ggac8e83321127267d2bed1659d4227f050a34f5d0e676eead962173aa956b850476}\label{group___u_a_r_t___adapter_ggac8e83321127267d2bed1659d4227f050a34f5d0e676eead962173aa956b850476}} 
+k\+H\+A\+L\+\_\+\+Uart\+One\+Stop\+Bit&One stop bit \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kHAL\_UartTwoStopBit@{kHAL\_UartTwoStopBit}!UART\_Adapter@{UART\_Adapter}}\index{UART\_Adapter@{UART\_Adapter}!kHAL\_UartTwoStopBit@{kHAL\_UartTwoStopBit}}}\mbox{\Hypertarget{group___u_a_r_t___adapter_ggac8e83321127267d2bed1659d4227f050ab4bec3351a5a5818347a899989cd65e4}\label{group___u_a_r_t___adapter_ggac8e83321127267d2bed1659d4227f050ab4bec3351a5a5818347a899989cd65e4}} 
+k\+H\+A\+L\+\_\+\+Uart\+Two\+Stop\+Bit&Two stop bits \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___u_a_r_t___adapter_gab68259998677f787072799042ed0ce34}\label{group___u_a_r_t___adapter_gab68259998677f787072799042ed0ce34}} 
+\index{UART\_Adapter@{UART\_Adapter}!HAL\_UartDeinit@{HAL\_UartDeinit}}
+\index{HAL\_UartDeinit@{HAL\_UartDeinit}!UART\_Adapter@{UART\_Adapter}}
+\subsubsection{\texorpdfstring{HAL\_UartDeinit()}{HAL\_UartDeinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}{hal\+\_\+uart\+\_\+status\+\_\+t}} H\+A\+L\+\_\+\+Uart\+Deinit (\begin{DoxyParamCaption}\item[{hal\+\_\+uart\+\_\+handle\+\_\+t}]{handle }\end{DoxyParamCaption})}
+
+
+
+Deinitializes a U\+A\+RT instance. 
+
+This function waits for TX complete, disables TX and RX, and disables the U\+A\+RT clock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & U\+A\+RT handle pointer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Success} & U\+A\+RT de-\/initialization succeed \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_a_r_t___adapter_gac234c4bcffe995d8aa1b2392162af796}\label{group___u_a_r_t___adapter_gac234c4bcffe995d8aa1b2392162af796}} 
+\index{UART\_Adapter@{UART\_Adapter}!HAL\_UartInit@{HAL\_UartInit}}
+\index{HAL\_UartInit@{HAL\_UartInit}!UART\_Adapter@{UART\_Adapter}}
+\subsubsection{\texorpdfstring{HAL\_UartInit()}{HAL\_UartInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}{hal\+\_\+uart\+\_\+status\+\_\+t}} H\+A\+L\+\_\+\+Uart\+Init (\begin{DoxyParamCaption}\item[{hal\+\_\+uart\+\_\+handle\+\_\+t}]{handle,  }\item[{\mbox{\hyperlink{group___u_a_r_t___adapter_ga1545cbd3c961cbe725ed2a75ffc5a999}{hal\+\_\+uart\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Initializes a U\+A\+RT instance with the U\+A\+RT handle and the user configuration structure. 
+
+This function configures the U\+A\+RT module with user-\/defined settings. The user can configure the configuration structure. The parameter handle is a pointer to point to a memory space of size \#\+H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE allocated by the caller. Example below shows how to use this A\+PI to configure the U\+A\+RT. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint8\_t g\_UartHandleBuffer[HAL\_UART\_HANDLE\_SIZE];}
+\DoxyCodeLine{hal\_uart\_handle\_t g\_UartHandle = \&g\_UartHandleBuffer[0];}
+\DoxyCodeLine{\mbox{\hyperlink{struct__hal__uart__config}{hal\_uart\_config\_t}} config;}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__hal__uart__config_a91ed494cee19d1629ac4e017ce45ddbb}{srcClock\_Hz}} = 48000000;}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__hal__uart__config_aa5df547b4cb95d3c959373cf6fa672b5}{baudRate\_Bps}} = 115200U;}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__hal__uart__config_acbc3e2332cc7a0602c77932e67db0b6f}{parityMode}} = \mbox{\hyperlink{group___u_a_r_t___adapter_gga4bfc5f54ba1569ae2dfcc1d7ae0be0f3a08fcd92b9342a589174cb30bc87c8536}{kHAL\_UartParityDisabled}};}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__hal__uart__config_a9cd9931237993b857304ad7dc515676f}{stopBitCount}} = \mbox{\hyperlink{group___u_a_r_t___adapter_ggac8e83321127267d2bed1659d4227f050a34f5d0e676eead962173aa956b850476}{kHAL\_UartOneStopBit}};}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__hal__uart__config_aa71c95a745f5bb5f666e55f7c98e4e9f}{enableRx}} = 1;}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__hal__uart__config_a4e1a6dc4f40cf76369024809e1f4163d}{enableTx}} = 1;}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__hal__uart__config_a0247bf27ecd553eeb029a06b1e6ec354}{instance}} = 0;}
+\DoxyCodeLine{\mbox{\hyperlink{group___u_a_r_t___adapter_gac234c4bcffe995d8aa1b2392162af796}{HAL\_UartInit}}(g\_UartHandle, \&config);}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Pointer to point to a memory space of size \#\+H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE allocated by the caller. \\
+\hline
+{\em config} & Pointer to user-\/defined configuration structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Baudrate\+Not\+Support} & Baudrate is not support in current clock source. \\
+\hline
+{\em k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Success} & U\+A\+RT initialization succeed \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_a_r_t___adapter_ga652499fca5739b0d61df775e371279bb}\label{group___u_a_r_t___adapter_ga652499fca5739b0d61df775e371279bb}} 
+\index{UART\_Adapter@{UART\_Adapter}!HAL\_UartReceiveBlocking@{HAL\_UartReceiveBlocking}}
+\index{HAL\_UartReceiveBlocking@{HAL\_UartReceiveBlocking}!UART\_Adapter@{UART\_Adapter}}
+\subsubsection{\texorpdfstring{HAL\_UartReceiveBlocking()}{HAL\_UartReceiveBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}{hal\+\_\+uart\+\_\+status\+\_\+t}} H\+A\+L\+\_\+\+Uart\+Receive\+Blocking (\begin{DoxyParamCaption}\item[{hal\+\_\+uart\+\_\+handle\+\_\+t}]{handle,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Reads RX data register using a blocking method. 
+
+This function polls the RX register, waits for the RX register to be full or for RX F\+I\+FO to have data, and reads data from the RX register.
+
+\begin{DoxyNote}{Note}
+The function \mbox{\hyperlink{group___u_a_r_t___adapter_ga652499fca5739b0d61df775e371279bb}{H\+A\+L\+\_\+\+Uart\+Receive\+Blocking}} and the function \#\+H\+A\+L\+\_\+\+Uart\+Transfer\+Receive\+Non\+Blocking cannot be used at the same time. And, the function \#\+H\+A\+L\+\_\+\+Uart\+Transfer\+Abort\+Receive cannot be used to abort the transmission of this function.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & U\+A\+RT handle pointer. \\
+\hline
+{\em data} & Start address of the buffer to store the received data. \\
+\hline
+{\em length} & Size of the buffer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Error} & An error occurred while receiving data. \\
+\hline
+{\em k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Parity\+Error} & A parity error occurred while receiving data. \\
+\hline
+{\em k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Success} & Successfully received all data. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_a_r_t___adapter_gae7104925b7bff899a7631c5ee708dc5c}\label{group___u_a_r_t___adapter_gae7104925b7bff899a7631c5ee708dc5c}} 
+\index{UART\_Adapter@{UART\_Adapter}!HAL\_UartSendBlocking@{HAL\_UartSendBlocking}}
+\index{HAL\_UartSendBlocking@{HAL\_UartSendBlocking}!UART\_Adapter@{UART\_Adapter}}
+\subsubsection{\texorpdfstring{HAL\_UartSendBlocking()}{HAL\_UartSendBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_a_r_t___adapter_ga352ee9bdc398eba4262ca7656f9c5e50}{hal\+\_\+uart\+\_\+status\+\_\+t}} H\+A\+L\+\_\+\+Uart\+Send\+Blocking (\begin{DoxyParamCaption}\item[{hal\+\_\+uart\+\_\+handle\+\_\+t}]{handle,  }\item[{const uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Writes to the TX register using a blocking method. 
+
+This function polls the TX register, waits for the TX register to be empty or for the TX F\+I\+FO to have room and writes data to the TX buffer.
+
+\begin{DoxyNote}{Note}
+The function \mbox{\hyperlink{group___u_a_r_t___adapter_gae7104925b7bff899a7631c5ee708dc5c}{H\+A\+L\+\_\+\+Uart\+Send\+Blocking}} and the function \#\+H\+A\+L\+\_\+\+Uart\+Transfer\+Send\+Non\+Blocking cannot be used at the same time. And, the function \#\+H\+A\+L\+\_\+\+Uart\+Transfer\+Abort\+Send cannot be used to abort the transmission of this function.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & U\+A\+RT handle pointer. \\
+\hline
+{\em data} & Start address of the data to write. \\
+\hline
+{\em length} & Size of the data to write. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+H\+A\+L\+\_\+\+Uart\+Success} & Successfully sent all data. \\
+\hline
+\end{DoxyRetVals}

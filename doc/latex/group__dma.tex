@@ -1,0 +1,677 @@
+\hypertarget{group__dma}{}\section{Dma}
+\label{group__dma}\index{Dma@{Dma}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__dma__transfer__config}{\+\_\+dma\+\_\+transfer\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer configuration structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__dma__channel__link__config}{\+\_\+dma\+\_\+channel\+\_\+link\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer configuration structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__dma__handle}{\+\_\+dma\+\_\+handle}}
+\begin{DoxyCompactList}\small\item\em D\+MA D\+MA handle structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__dma_ga77280b3fae0e8ee447666e14c101dfe0}\label{group__dma_ga77280b3fae0e8ee447666e14c101dfe0}} 
+typedef enum \mbox{\hyperlink{group__dma_ga0b291003d51dd119595ed7aa7462a693}{\+\_\+dma\+\_\+transfer\+\_\+size}} \mbox{\hyperlink{group__dma_ga77280b3fae0e8ee447666e14c101dfe0}{dma\+\_\+transfer\+\_\+size\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer size type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dma_gabebfc9ea7534e8f71a7ee1b5c13bf2f5}\label{group__dma_gabebfc9ea7534e8f71a7ee1b5c13bf2f5}} 
+typedef enum \mbox{\hyperlink{group__dma_gac84ba3b7ce788dc06afbda949e9a039b}{\+\_\+dma\+\_\+modulo}} \mbox{\hyperlink{group__dma_gabebfc9ea7534e8f71a7ee1b5c13bf2f5}{dma\+\_\+modulo\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Configuration type for the D\+MA modulo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dma_ga3ee1ff3a58659ae3e61603b672b0a2fb}\label{group__dma_ga3ee1ff3a58659ae3e61603b672b0a2fb}} 
+typedef enum \mbox{\hyperlink{group__dma_ga741c3a62f7938bf691a12d6304f0247c}{\+\_\+dma\+\_\+channel\+\_\+link\+\_\+type}} \mbox{\hyperlink{group__dma_ga3ee1ff3a58659ae3e61603b672b0a2fb}{dma\+\_\+channel\+\_\+link\+\_\+type\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em D\+MA channel link type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dma_ga834a242c5bc2fc0fb4cf928616821de0}\label{group__dma_ga834a242c5bc2fc0fb4cf928616821de0}} 
+typedef enum \mbox{\hyperlink{group__dma_ga8eb175ece33c966ea83656c6b38e95cb}{\+\_\+dma\+\_\+transfer\+\_\+type}} \mbox{\hyperlink{group__dma_ga834a242c5bc2fc0fb4cf928616821de0}{dma\+\_\+transfer\+\_\+type\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dma_gaec24ca8cd376da34bb30fc7d8f32853b}\label{group__dma_gaec24ca8cd376da34bb30fc7d8f32853b}} 
+typedef enum \mbox{\hyperlink{group__dma_ga1497caa1db3c7b45b95f6c8658167fe1}{\+\_\+dma\+\_\+transfer\+\_\+options}} \mbox{\hyperlink{group__dma_gaec24ca8cd376da34bb30fc7d8f32853b}{dma\+\_\+transfer\+\_\+options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dma_gadb6e4baf9efcf14a889babc34d6f0d80}\label{group__dma_gadb6e4baf9efcf14a889babc34d6f0d80}} 
+typedef struct \mbox{\hyperlink{struct__dma__transfer__config}{\+\_\+dma\+\_\+transfer\+\_\+config}} \mbox{\hyperlink{group__dma_gadb6e4baf9efcf14a889babc34d6f0d80}{dma\+\_\+transfer\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer configuration structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dma_ga5076c6be0136d122ef46374dc1eadb0d}\label{group__dma_ga5076c6be0136d122ef46374dc1eadb0d}} 
+typedef struct \mbox{\hyperlink{struct__dma__channel__link__config}{\+\_\+dma\+\_\+channel\+\_\+link\+\_\+config}} \mbox{\hyperlink{group__dma_ga5076c6be0136d122ef46374dc1eadb0d}{dma\+\_\+channel\+\_\+link\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer configuration structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dma_gab03f33ad69a5875d025f941419247123}\label{group__dma_gab03f33ad69a5875d025f941419247123}} 
+typedef void($\ast$ \mbox{\hyperlink{group__dma_gab03f33ad69a5875d025f941419247123}{dma\+\_\+callback}}) (struct \mbox{\hyperlink{struct__dma__handle}{\+\_\+dma\+\_\+handle}} $\ast$handle, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Callback function prototype for the D\+MA driver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}\label{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}} 
+typedef struct \mbox{\hyperlink{struct__dma__handle}{\+\_\+dma\+\_\+handle}} \mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em D\+MA D\+MA handle structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__dma_ga36e753dba44ae75ed949766e19cc113d}{\+\_\+dma\+\_\+channel\+\_\+status\+\_\+flags}} \{ \newline
+\mbox{\hyperlink{group__dma_gga36e753dba44ae75ed949766e19cc113da2d781b440cc4a6f79a1aceb6cf06cd07}{k\+D\+M\+A\+\_\+\+Transactions\+B\+C\+R\+Flag}} = D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+C\+R\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__dma_gga36e753dba44ae75ed949766e19cc113dae890ef1d8993fb00d8d95b7f3feb7d39}{k\+D\+M\+A\+\_\+\+Transactions\+Done\+Flag}} = D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+N\+E\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__dma_gga36e753dba44ae75ed949766e19cc113da28dabe9487a26e3cacbce41b50752a70}{k\+D\+M\+A\+\_\+\+Transactions\+Busy\+Flag}} = D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+S\+Y\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__dma_gga36e753dba44ae75ed949766e19cc113da20f859fbcfa07c2a4b4a5b273910fbc6}{k\+D\+M\+A\+\_\+\+Transactions\+Request\+Flag}} = D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+R\+E\+Q\+\_\+\+M\+A\+SK, 
+\newline
+\mbox{\hyperlink{group__dma_gga36e753dba44ae75ed949766e19cc113da38ba4fb9195801c5825242cdef9b582d}{k\+D\+M\+A\+\_\+\+Bus\+Error\+On\+Destination\+Flag}} = D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+D\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__dma_gga36e753dba44ae75ed949766e19cc113da3a89390c5832154e2da5e909f7655922}{k\+D\+M\+A\+\_\+\+Bus\+Error\+On\+Source\+Flag}} = D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+S\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__dma_gga36e753dba44ae75ed949766e19cc113da85f087aebd042b357f46dadda6bbce83}{k\+D\+M\+A\+\_\+\+Configuration\+Error\+Flag}} = D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+C\+E\+\_\+\+M\+A\+SK
+ \}
+\begin{DoxyCompactList}\small\item\em status flag for the D\+MA driver. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__dma_ga0b291003d51dd119595ed7aa7462a693}{\+\_\+dma\+\_\+transfer\+\_\+size}} \{ \mbox{\hyperlink{group__dma_gga0b291003d51dd119595ed7aa7462a693a969ae3a6429e54e8a301b26ecf3ab017}{k\+D\+M\+A\+\_\+\+Transfersize32bits}} = 0x0U, 
+\mbox{\hyperlink{group__dma_gga0b291003d51dd119595ed7aa7462a693a14a03019f98a6f50dc1c4588d995f9d3}{k\+D\+M\+A\+\_\+\+Transfersize8bits}}, 
+\mbox{\hyperlink{group__dma_gga0b291003d51dd119595ed7aa7462a693a02ab56512322e1a677b7ef2911735849}{k\+D\+M\+A\+\_\+\+Transfersize16bits}}
+ \}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer size type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__dma_gac84ba3b7ce788dc06afbda949e9a039b}{\+\_\+dma\+\_\+modulo}} \{ \newline
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba8bd75d139becfb0a58d08a60e3682e87}{k\+D\+M\+A\+\_\+\+Modulo\+Disable}} = 0x0U, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039babef7e8c58588f33dffdbea7876ad4a35}{k\+D\+M\+A\+\_\+\+Modulo16\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba9989156fcb25590c9235239b657ec79f}{k\+D\+M\+A\+\_\+\+Modulo32\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba6b3277aa7b8571ddf1cc7d2b5ee620d1}{k\+D\+M\+A\+\_\+\+Modulo64\+Bytes}}, 
+\newline
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba7bc2227e57ce0ff1dc41b2c71e877207}{k\+D\+M\+A\+\_\+\+Modulo128\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba2c92174d5b350cfddb0a836661bb2625}{k\+D\+M\+A\+\_\+\+Modulo256\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba83473cd4366829f5d23e52d8eeb8b4d5}{k\+D\+M\+A\+\_\+\+Modulo512\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039baf419011a303b2b12dfc9e1151ce7d64e}{k\+D\+M\+A\+\_\+\+Modulo1\+K\+Bytes}}, 
+\newline
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039bac1dfc6c6ffe60f4000cdd465d931e18d}{k\+D\+M\+A\+\_\+\+Modulo2\+K\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba01080cdca6f101fd35b062465823bbdc}{k\+D\+M\+A\+\_\+\+Modulo4\+K\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba11cdc1d729d302ba4f5a198ebd597e6f}{k\+D\+M\+A\+\_\+\+Modulo8\+K\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba02785f9374e866f65bc069e7b3860b7c}{k\+D\+M\+A\+\_\+\+Modulo16\+K\+Bytes}}, 
+\newline
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba0b6b6c652ee4630f01ce068607d5a23e}{k\+D\+M\+A\+\_\+\+Modulo32\+K\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039bafe618f71bddf6f80dcd7e3f3169a34e0}{k\+D\+M\+A\+\_\+\+Modulo64\+K\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039babdb5276d85626400218399229879e050}{k\+D\+M\+A\+\_\+\+Modulo128\+K\+Bytes}}, 
+\mbox{\hyperlink{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba868be515efaf346dc08b08a37a239654}{k\+D\+M\+A\+\_\+\+Modulo256\+K\+Bytes}}
+ \}
+\begin{DoxyCompactList}\small\item\em Configuration type for the D\+MA modulo. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__dma_ga741c3a62f7938bf691a12d6304f0247c}{\+\_\+dma\+\_\+channel\+\_\+link\+\_\+type}} \{ \mbox{\hyperlink{group__dma_gga741c3a62f7938bf691a12d6304f0247caf31c1f53736aa000546413022b8c3280}{k\+D\+M\+A\+\_\+\+Channel\+Link\+Disable}} = 0x0U, 
+\mbox{\hyperlink{group__dma_gga741c3a62f7938bf691a12d6304f0247ca0d5d1186513e85268a131166d042497c}{k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1\+And\+Channel2}}, 
+\mbox{\hyperlink{group__dma_gga741c3a62f7938bf691a12d6304f0247ca580b4a8b49c2d75de4171bcf0d2615b4}{k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1}}, 
+\mbox{\hyperlink{group__dma_gga741c3a62f7938bf691a12d6304f0247ca10fb1aa6120440f198e6e6ccf6100bc1}{k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1\+After\+B\+C\+R0}}
+ \}
+\begin{DoxyCompactList}\small\item\em D\+MA channel link type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__dma_ga8eb175ece33c966ea83656c6b38e95cb}{\+\_\+dma\+\_\+transfer\+\_\+type}} \{ \mbox{\hyperlink{group__dma_gga8eb175ece33c966ea83656c6b38e95cba24392a93deeb55e04559201839343f3c}{k\+D\+M\+A\+\_\+\+Memory\+To\+Memory}} = 0x0U, 
+\mbox{\hyperlink{group__dma_gga8eb175ece33c966ea83656c6b38e95cba7bf1938ae68b1f494aade7a0f4189303}{k\+D\+M\+A\+\_\+\+Peripheral\+To\+Memory}}, 
+\mbox{\hyperlink{group__dma_gga8eb175ece33c966ea83656c6b38e95cbaae1c6bab576d7a25d2fa1249f9cd4ee9}{k\+D\+M\+A\+\_\+\+Memory\+To\+Peripheral}}
+ \}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__dma_ga1497caa1db3c7b45b95f6c8658167fe1}{\+\_\+dma\+\_\+transfer\+\_\+options}} \{ \mbox{\hyperlink{group__dma_gga1497caa1db3c7b45b95f6c8658167fe1addc6103be52651841e795cccc872988b}{k\+D\+M\+A\+\_\+\+No\+Options}} = 0x0U, 
+\mbox{\hyperlink{group__dma_gga1497caa1db3c7b45b95f6c8658167fe1ad289b8b98ee6cf2faa4788404fe809d8}{k\+D\+M\+A\+\_\+\+Enable\+Interrupt}}
+ \}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dma_ga63c0c8f218fd21a01a4996032b1f6ee0}\label{group__dma_ga63c0c8f218fd21a01a4996032b1f6ee0}} 
+enum \mbox{\hyperlink{group__dma_ga63c0c8f218fd21a01a4996032b1f6ee0}{\+\_\+dma\+\_\+transfer\+\_\+status}} \{ {\bfseries k\+Status\+\_\+\+D\+M\+A\+\_\+\+Busy} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+D\+MA, 0)
+ \}
+\begin{DoxyCompactList}\small\item\em D\+MA transfer status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__dma_gac68c8082b53756a7e58ec6d5f25117d2}\label{group__dma_gac68c8082b53756a7e58ec6d5f25117d2}} 
+\#define \mbox{\hyperlink{group__dma_gac68c8082b53756a7e58ec6d5f25117d2}{F\+S\+L\+\_\+\+D\+M\+A\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 0, 1))
+\begin{DoxyCompactList}\small\item\em D\+MA driver version 2.\+0.\+1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{D\+MA Initialization and De-\/initialization}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__dma_gade1b5efa61054ce538b37b181dd075bb}{D\+M\+A\+\_\+\+Init}} (\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Initializes the D\+MA peripheral. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__dma_ga634ced9b86d7dc9543e0b4387123fcac}{D\+M\+A\+\_\+\+Deinit}} (\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Deinitializes the D\+MA peripheral. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{D\+MA Channel Operation}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__dma_ga17a6d7e5f9d3f12777941447ed7659f5}{D\+M\+A\+\_\+\+Reset\+Channel}} (\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$base, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Resets the D\+MA channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__dma_ga3cc33ab27c5c0dc71cff81795522629a}{D\+M\+A\+\_\+\+Set\+Transfer\+Config}} (\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$base, uint32\+\_\+t channel, const \mbox{\hyperlink{group__dma_gadb6e4baf9efcf14a889babc34d6f0d80}{dma\+\_\+transfer\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Configures the D\+MA transfer attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__dma_ga9a0aba2d09ef438d7faf8d4c4d458c11}{D\+M\+A\+\_\+\+Set\+Channel\+Link\+Config}} (\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$base, uint32\+\_\+t channel, const \mbox{\hyperlink{group__dma_ga5076c6be0136d122ef46374dc1eadb0d}{dma\+\_\+channel\+\_\+link\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Configures the D\+MA channel link feature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__dma_ga813a9ddafd11393d8848a946622dd80d}{D\+M\+A\+\_\+\+Set\+Modulo}} (\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$base, uint32\+\_\+t channel, \mbox{\hyperlink{group__dma_gabebfc9ea7534e8f71a7ee1b5c13bf2f5}{dma\+\_\+modulo\+\_\+t}} src\+Modulo, \mbox{\hyperlink{group__dma_gabebfc9ea7534e8f71a7ee1b5c13bf2f5}{dma\+\_\+modulo\+\_\+t}} dest\+Modulo)
+\begin{DoxyCompactList}\small\item\em Sets the D\+MA modulo for the D\+MA transfer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{D\+MA Channel Transactional Operation}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__dma_ga5354ff2c0c1ec53e2cbd712169fc5558}{D\+M\+A\+\_\+\+Create\+Handle}} (\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$base, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Creates the D\+MA handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__dma_ga2eb9a831b9a84c5108097f770dbe90db}{D\+M\+A\+\_\+\+Set\+Callback}} (\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$handle, \mbox{\hyperlink{group__dma_gab03f33ad69a5875d025f941419247123}{dma\+\_\+callback}} callback, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Sets the D\+MA callback function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__dma_gaf6e0b93e92a31e0dd3398bce34decb40}{D\+M\+A\+\_\+\+Prepare\+Transfer}} (\mbox{\hyperlink{group__dma_gadb6e4baf9efcf14a889babc34d6f0d80}{dma\+\_\+transfer\+\_\+config\+\_\+t}} $\ast$config, void $\ast$src\+Addr, uint32\+\_\+t src\+Width, void $\ast$dest\+Addr, uint32\+\_\+t dest\+Width, uint32\+\_\+t transfer\+Bytes, \mbox{\hyperlink{group__dma_ga834a242c5bc2fc0fb4cf928616821de0}{dma\+\_\+transfer\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Prepares the D\+MA transfer configuration structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__dma_gadf9824800405f5b161bae1db1bf7d1f7}{D\+M\+A\+\_\+\+Submit\+Transfer}} (\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$handle, const \mbox{\hyperlink{group__dma_gadb6e4baf9efcf14a889babc34d6f0d80}{dma\+\_\+transfer\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t options)
+\begin{DoxyCompactList}\small\item\em Submits the D\+MA transfer request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__dma_ga3c61d6121d88d2cdf287fc1cd72912fd}{D\+M\+A\+\_\+\+Abort\+Transfer}} (\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em D\+MA aborts a transfer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__dma_ga3484c491bd7943623d1d8fdc013c7e97}{D\+M\+A\+\_\+\+Handle\+I\+RQ}} (\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em D\+MA I\+RQ handler for current transfer complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__dma_ga741c3a62f7938bf691a12d6304f0247c}\label{group__dma_ga741c3a62f7938bf691a12d6304f0247c}} 
+\index{Dma@{Dma}!\_dma\_channel\_link\_type@{\_dma\_channel\_link\_type}}
+\index{\_dma\_channel\_link\_type@{\_dma\_channel\_link\_type}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{\_dma\_channel\_link\_type}{\_dma\_channel\_link\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__dma_ga741c3a62f7938bf691a12d6304f0247c}{\+\_\+dma\+\_\+channel\+\_\+link\+\_\+type}}}
+
+
+
+D\+MA channel link type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_ChannelLinkDisable@{kDMA\_ChannelLinkDisable}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_ChannelLinkDisable@{kDMA\_ChannelLinkDisable}}}\mbox{\Hypertarget{group__dma_gga741c3a62f7938bf691a12d6304f0247caf31c1f53736aa000546413022b8c3280}\label{group__dma_gga741c3a62f7938bf691a12d6304f0247caf31c1f53736aa000546413022b8c3280}} 
+k\+D\+M\+A\+\_\+\+Channel\+Link\+Disable&No channel link. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_ChannelLinkChannel1AndChannel2@{kDMA\_ChannelLinkChannel1AndChannel2}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_ChannelLinkChannel1AndChannel2@{kDMA\_ChannelLinkChannel1AndChannel2}}}\mbox{\Hypertarget{group__dma_gga741c3a62f7938bf691a12d6304f0247ca0d5d1186513e85268a131166d042497c}\label{group__dma_gga741c3a62f7938bf691a12d6304f0247ca0d5d1186513e85268a131166d042497c}} 
+k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1\+And\+Channel2&Perform a link to channel L\+C\+H1 after each cycle-\/steal transfer. followed by a link to L\+C\+H2 after the B\+CR decrements to 0. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_ChannelLinkChannel1@{kDMA\_ChannelLinkChannel1}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_ChannelLinkChannel1@{kDMA\_ChannelLinkChannel1}}}\mbox{\Hypertarget{group__dma_gga741c3a62f7938bf691a12d6304f0247ca580b4a8b49c2d75de4171bcf0d2615b4}\label{group__dma_gga741c3a62f7938bf691a12d6304f0247ca580b4a8b49c2d75de4171bcf0d2615b4}} 
+k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1&Perform a link to L\+C\+H1 after each cycle-\/steal transfer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_ChannelLinkChannel1AfterBCR0@{kDMA\_ChannelLinkChannel1AfterBCR0}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_ChannelLinkChannel1AfterBCR0@{kDMA\_ChannelLinkChannel1AfterBCR0}}}\mbox{\Hypertarget{group__dma_gga741c3a62f7938bf691a12d6304f0247ca10fb1aa6120440f198e6e6ccf6100bc1}\label{group__dma_gga741c3a62f7938bf691a12d6304f0247ca10fb1aa6120440f198e6e6ccf6100bc1}} 
+k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1\+After\+B\+C\+R0&Perform a link to L\+C\+H1 after the B\+CR decrements. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__dma_ga36e753dba44ae75ed949766e19cc113d}\label{group__dma_ga36e753dba44ae75ed949766e19cc113d}} 
+\index{Dma@{Dma}!\_dma\_channel\_status\_flags@{\_dma\_channel\_status\_flags}}
+\index{\_dma\_channel\_status\_flags@{\_dma\_channel\_status\_flags}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{\_dma\_channel\_status\_flags}{\_dma\_channel\_status\_flags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__dma_ga36e753dba44ae75ed949766e19cc113d}{\+\_\+dma\+\_\+channel\+\_\+status\+\_\+flags}}}
+
+
+
+status flag for the D\+MA driver. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_TransactionsBCRFlag@{kDMA\_TransactionsBCRFlag}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_TransactionsBCRFlag@{kDMA\_TransactionsBCRFlag}}}\mbox{\Hypertarget{group__dma_gga36e753dba44ae75ed949766e19cc113da2d781b440cc4a6f79a1aceb6cf06cd07}\label{group__dma_gga36e753dba44ae75ed949766e19cc113da2d781b440cc4a6f79a1aceb6cf06cd07}} 
+k\+D\+M\+A\+\_\+\+Transactions\+B\+C\+R\+Flag&Contains the number of bytes yet to be transferred for a given block \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_TransactionsDoneFlag@{kDMA\_TransactionsDoneFlag}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_TransactionsDoneFlag@{kDMA\_TransactionsDoneFlag}}}\mbox{\Hypertarget{group__dma_gga36e753dba44ae75ed949766e19cc113dae890ef1d8993fb00d8d95b7f3feb7d39}\label{group__dma_gga36e753dba44ae75ed949766e19cc113dae890ef1d8993fb00d8d95b7f3feb7d39}} 
+k\+D\+M\+A\+\_\+\+Transactions\+Done\+Flag&Transactions Done \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_TransactionsBusyFlag@{kDMA\_TransactionsBusyFlag}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_TransactionsBusyFlag@{kDMA\_TransactionsBusyFlag}}}\mbox{\Hypertarget{group__dma_gga36e753dba44ae75ed949766e19cc113da28dabe9487a26e3cacbce41b50752a70}\label{group__dma_gga36e753dba44ae75ed949766e19cc113da28dabe9487a26e3cacbce41b50752a70}} 
+k\+D\+M\+A\+\_\+\+Transactions\+Busy\+Flag&Transactions Busy \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_TransactionsRequestFlag@{kDMA\_TransactionsRequestFlag}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_TransactionsRequestFlag@{kDMA\_TransactionsRequestFlag}}}\mbox{\Hypertarget{group__dma_gga36e753dba44ae75ed949766e19cc113da20f859fbcfa07c2a4b4a5b273910fbc6}\label{group__dma_gga36e753dba44ae75ed949766e19cc113da20f859fbcfa07c2a4b4a5b273910fbc6}} 
+k\+D\+M\+A\+\_\+\+Transactions\+Request\+Flag&Transactions Request \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_BusErrorOnDestinationFlag@{kDMA\_BusErrorOnDestinationFlag}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_BusErrorOnDestinationFlag@{kDMA\_BusErrorOnDestinationFlag}}}\mbox{\Hypertarget{group__dma_gga36e753dba44ae75ed949766e19cc113da38ba4fb9195801c5825242cdef9b582d}\label{group__dma_gga36e753dba44ae75ed949766e19cc113da38ba4fb9195801c5825242cdef9b582d}} 
+k\+D\+M\+A\+\_\+\+Bus\+Error\+On\+Destination\+Flag&Bus Error on Destination \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_BusErrorOnSourceFlag@{kDMA\_BusErrorOnSourceFlag}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_BusErrorOnSourceFlag@{kDMA\_BusErrorOnSourceFlag}}}\mbox{\Hypertarget{group__dma_gga36e753dba44ae75ed949766e19cc113da3a89390c5832154e2da5e909f7655922}\label{group__dma_gga36e753dba44ae75ed949766e19cc113da3a89390c5832154e2da5e909f7655922}} 
+k\+D\+M\+A\+\_\+\+Bus\+Error\+On\+Source\+Flag&Bus Error on Source \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_ConfigurationErrorFlag@{kDMA\_ConfigurationErrorFlag}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_ConfigurationErrorFlag@{kDMA\_ConfigurationErrorFlag}}}\mbox{\Hypertarget{group__dma_gga36e753dba44ae75ed949766e19cc113da85f087aebd042b357f46dadda6bbce83}\label{group__dma_gga36e753dba44ae75ed949766e19cc113da85f087aebd042b357f46dadda6bbce83}} 
+k\+D\+M\+A\+\_\+\+Configuration\+Error\+Flag&Configuration Error \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__dma_gac84ba3b7ce788dc06afbda949e9a039b}\label{group__dma_gac84ba3b7ce788dc06afbda949e9a039b}} 
+\index{Dma@{Dma}!\_dma\_modulo@{\_dma\_modulo}}
+\index{\_dma\_modulo@{\_dma\_modulo}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{\_dma\_modulo}{\_dma\_modulo}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__dma_gac84ba3b7ce788dc06afbda949e9a039b}{\+\_\+dma\+\_\+modulo}}}
+
+
+
+Configuration type for the D\+MA modulo. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_ModuloDisable@{kDMA\_ModuloDisable}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_ModuloDisable@{kDMA\_ModuloDisable}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba8bd75d139becfb0a58d08a60e3682e87}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba8bd75d139becfb0a58d08a60e3682e87}} 
+k\+D\+M\+A\+\_\+\+Modulo\+Disable&Buffer disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo16Bytes@{kDMA\_Modulo16Bytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo16Bytes@{kDMA\_Modulo16Bytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039babef7e8c58588f33dffdbea7876ad4a35}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039babef7e8c58588f33dffdbea7876ad4a35}} 
+k\+D\+M\+A\+\_\+\+Modulo16\+Bytes&Circular buffer size is 16 bytes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo32Bytes@{kDMA\_Modulo32Bytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo32Bytes@{kDMA\_Modulo32Bytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba9989156fcb25590c9235239b657ec79f}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba9989156fcb25590c9235239b657ec79f}} 
+k\+D\+M\+A\+\_\+\+Modulo32\+Bytes&Circular buffer size is 32 bytes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo64Bytes@{kDMA\_Modulo64Bytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo64Bytes@{kDMA\_Modulo64Bytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba6b3277aa7b8571ddf1cc7d2b5ee620d1}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba6b3277aa7b8571ddf1cc7d2b5ee620d1}} 
+k\+D\+M\+A\+\_\+\+Modulo64\+Bytes&Circular buffer size is 64 bytes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo128Bytes@{kDMA\_Modulo128Bytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo128Bytes@{kDMA\_Modulo128Bytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba7bc2227e57ce0ff1dc41b2c71e877207}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba7bc2227e57ce0ff1dc41b2c71e877207}} 
+k\+D\+M\+A\+\_\+\+Modulo128\+Bytes&Circular buffer size is 128 bytes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo256Bytes@{kDMA\_Modulo256Bytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo256Bytes@{kDMA\_Modulo256Bytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba2c92174d5b350cfddb0a836661bb2625}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba2c92174d5b350cfddb0a836661bb2625}} 
+k\+D\+M\+A\+\_\+\+Modulo256\+Bytes&Circular buffer size is 256 bytes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo512Bytes@{kDMA\_Modulo512Bytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo512Bytes@{kDMA\_Modulo512Bytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba83473cd4366829f5d23e52d8eeb8b4d5}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba83473cd4366829f5d23e52d8eeb8b4d5}} 
+k\+D\+M\+A\+\_\+\+Modulo512\+Bytes&Circular buffer size is 512 bytes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo1KBytes@{kDMA\_Modulo1KBytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo1KBytes@{kDMA\_Modulo1KBytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039baf419011a303b2b12dfc9e1151ce7d64e}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039baf419011a303b2b12dfc9e1151ce7d64e}} 
+k\+D\+M\+A\+\_\+\+Modulo1\+K\+Bytes&Circular buffer size is 1 KB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo2KBytes@{kDMA\_Modulo2KBytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo2KBytes@{kDMA\_Modulo2KBytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039bac1dfc6c6ffe60f4000cdd465d931e18d}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039bac1dfc6c6ffe60f4000cdd465d931e18d}} 
+k\+D\+M\+A\+\_\+\+Modulo2\+K\+Bytes&Circular buffer size is 2 KB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo4KBytes@{kDMA\_Modulo4KBytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo4KBytes@{kDMA\_Modulo4KBytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba01080cdca6f101fd35b062465823bbdc}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba01080cdca6f101fd35b062465823bbdc}} 
+k\+D\+M\+A\+\_\+\+Modulo4\+K\+Bytes&Circular buffer size is 4 KB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo8KBytes@{kDMA\_Modulo8KBytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo8KBytes@{kDMA\_Modulo8KBytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba11cdc1d729d302ba4f5a198ebd597e6f}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba11cdc1d729d302ba4f5a198ebd597e6f}} 
+k\+D\+M\+A\+\_\+\+Modulo8\+K\+Bytes&Circular buffer size is 8 KB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo16KBytes@{kDMA\_Modulo16KBytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo16KBytes@{kDMA\_Modulo16KBytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba02785f9374e866f65bc069e7b3860b7c}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba02785f9374e866f65bc069e7b3860b7c}} 
+k\+D\+M\+A\+\_\+\+Modulo16\+K\+Bytes&Circular buffer size is 16 KB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo32KBytes@{kDMA\_Modulo32KBytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo32KBytes@{kDMA\_Modulo32KBytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba0b6b6c652ee4630f01ce068607d5a23e}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba0b6b6c652ee4630f01ce068607d5a23e}} 
+k\+D\+M\+A\+\_\+\+Modulo32\+K\+Bytes&Circular buffer size is 32 KB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo64KBytes@{kDMA\_Modulo64KBytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo64KBytes@{kDMA\_Modulo64KBytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039bafe618f71bddf6f80dcd7e3f3169a34e0}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039bafe618f71bddf6f80dcd7e3f3169a34e0}} 
+k\+D\+M\+A\+\_\+\+Modulo64\+K\+Bytes&Circular buffer size is 64 KB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo128KBytes@{kDMA\_Modulo128KBytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo128KBytes@{kDMA\_Modulo128KBytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039babdb5276d85626400218399229879e050}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039babdb5276d85626400218399229879e050}} 
+k\+D\+M\+A\+\_\+\+Modulo128\+K\+Bytes&Circular buffer size is 128 KB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Modulo256KBytes@{kDMA\_Modulo256KBytes}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Modulo256KBytes@{kDMA\_Modulo256KBytes}}}\mbox{\Hypertarget{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba868be515efaf346dc08b08a37a239654}\label{group__dma_ggac84ba3b7ce788dc06afbda949e9a039ba868be515efaf346dc08b08a37a239654}} 
+k\+D\+M\+A\+\_\+\+Modulo256\+K\+Bytes&Circular buffer size is 256 KB. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__dma_ga1497caa1db3c7b45b95f6c8658167fe1}\label{group__dma_ga1497caa1db3c7b45b95f6c8658167fe1}} 
+\index{Dma@{Dma}!\_dma\_transfer\_options@{\_dma\_transfer\_options}}
+\index{\_dma\_transfer\_options@{\_dma\_transfer\_options}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{\_dma\_transfer\_options}{\_dma\_transfer\_options}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__dma_ga1497caa1db3c7b45b95f6c8658167fe1}{\+\_\+dma\+\_\+transfer\+\_\+options}}}
+
+
+
+D\+MA transfer options. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_NoOptions@{kDMA\_NoOptions}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_NoOptions@{kDMA\_NoOptions}}}\mbox{\Hypertarget{group__dma_gga1497caa1db3c7b45b95f6c8658167fe1addc6103be52651841e795cccc872988b}\label{group__dma_gga1497caa1db3c7b45b95f6c8658167fe1addc6103be52651841e795cccc872988b}} 
+k\+D\+M\+A\+\_\+\+No\+Options&Transfer without options. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_EnableInterrupt@{kDMA\_EnableInterrupt}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_EnableInterrupt@{kDMA\_EnableInterrupt}}}\mbox{\Hypertarget{group__dma_gga1497caa1db3c7b45b95f6c8658167fe1ad289b8b98ee6cf2faa4788404fe809d8}\label{group__dma_gga1497caa1db3c7b45b95f6c8658167fe1ad289b8b98ee6cf2faa4788404fe809d8}} 
+k\+D\+M\+A\+\_\+\+Enable\+Interrupt&Enable interrupt while transfer complete. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__dma_ga0b291003d51dd119595ed7aa7462a693}\label{group__dma_ga0b291003d51dd119595ed7aa7462a693}} 
+\index{Dma@{Dma}!\_dma\_transfer\_size@{\_dma\_transfer\_size}}
+\index{\_dma\_transfer\_size@{\_dma\_transfer\_size}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{\_dma\_transfer\_size}{\_dma\_transfer\_size}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__dma_ga0b291003d51dd119595ed7aa7462a693}{\+\_\+dma\+\_\+transfer\+\_\+size}}}
+
+
+
+D\+MA transfer size type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Transfersize32bits@{kDMA\_Transfersize32bits}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Transfersize32bits@{kDMA\_Transfersize32bits}}}\mbox{\Hypertarget{group__dma_gga0b291003d51dd119595ed7aa7462a693a969ae3a6429e54e8a301b26ecf3ab017}\label{group__dma_gga0b291003d51dd119595ed7aa7462a693a969ae3a6429e54e8a301b26ecf3ab017}} 
+k\+D\+M\+A\+\_\+\+Transfersize32bits&32 bits are transferred for every read/write \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Transfersize8bits@{kDMA\_Transfersize8bits}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Transfersize8bits@{kDMA\_Transfersize8bits}}}\mbox{\Hypertarget{group__dma_gga0b291003d51dd119595ed7aa7462a693a14a03019f98a6f50dc1c4588d995f9d3}\label{group__dma_gga0b291003d51dd119595ed7aa7462a693a14a03019f98a6f50dc1c4588d995f9d3}} 
+k\+D\+M\+A\+\_\+\+Transfersize8bits&8 bits are transferred for every read/write \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_Transfersize16bits@{kDMA\_Transfersize16bits}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_Transfersize16bits@{kDMA\_Transfersize16bits}}}\mbox{\Hypertarget{group__dma_gga0b291003d51dd119595ed7aa7462a693a02ab56512322e1a677b7ef2911735849}\label{group__dma_gga0b291003d51dd119595ed7aa7462a693a02ab56512322e1a677b7ef2911735849}} 
+k\+D\+M\+A\+\_\+\+Transfersize16bits&16b its are transferred for every read/write \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__dma_ga8eb175ece33c966ea83656c6b38e95cb}\label{group__dma_ga8eb175ece33c966ea83656c6b38e95cb}} 
+\index{Dma@{Dma}!\_dma\_transfer\_type@{\_dma\_transfer\_type}}
+\index{\_dma\_transfer\_type@{\_dma\_transfer\_type}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{\_dma\_transfer\_type}{\_dma\_transfer\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__dma_ga8eb175ece33c966ea83656c6b38e95cb}{\+\_\+dma\+\_\+transfer\+\_\+type}}}
+
+
+
+D\+MA transfer type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_MemoryToMemory@{kDMA\_MemoryToMemory}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_MemoryToMemory@{kDMA\_MemoryToMemory}}}\mbox{\Hypertarget{group__dma_gga8eb175ece33c966ea83656c6b38e95cba24392a93deeb55e04559201839343f3c}\label{group__dma_gga8eb175ece33c966ea83656c6b38e95cba24392a93deeb55e04559201839343f3c}} 
+k\+D\+M\+A\+\_\+\+Memory\+To\+Memory&Memory to Memory transfer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_PeripheralToMemory@{kDMA\_PeripheralToMemory}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_PeripheralToMemory@{kDMA\_PeripheralToMemory}}}\mbox{\Hypertarget{group__dma_gga8eb175ece33c966ea83656c6b38e95cba7bf1938ae68b1f494aade7a0f4189303}\label{group__dma_gga8eb175ece33c966ea83656c6b38e95cba7bf1938ae68b1f494aade7a0f4189303}} 
+k\+D\+M\+A\+\_\+\+Peripheral\+To\+Memory&Peripheral to Memory transfer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDMA\_MemoryToPeripheral@{kDMA\_MemoryToPeripheral}!Dma@{Dma}}\index{Dma@{Dma}!kDMA\_MemoryToPeripheral@{kDMA\_MemoryToPeripheral}}}\mbox{\Hypertarget{group__dma_gga8eb175ece33c966ea83656c6b38e95cbaae1c6bab576d7a25d2fa1249f9cd4ee9}\label{group__dma_gga8eb175ece33c966ea83656c6b38e95cbaae1c6bab576d7a25d2fa1249f9cd4ee9}} 
+k\+D\+M\+A\+\_\+\+Memory\+To\+Peripheral&Memory to Peripheral transfer. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__dma_ga3c61d6121d88d2cdf287fc1cd72912fd}\label{group__dma_ga3c61d6121d88d2cdf287fc1cd72912fd}} 
+\index{Dma@{Dma}!DMA\_AbortTransfer@{DMA\_AbortTransfer}}
+\index{DMA\_AbortTransfer@{DMA\_AbortTransfer}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_AbortTransfer()}{DMA\_AbortTransfer()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Abort\+Transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+D\+MA aborts a transfer. 
+
+This function disables the channel request and clears all status bits. Submit another transfer after calling this A\+PI.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & D\+MA handle pointer.\\
+\hline
+\end{DoxyParams}
+brief D\+MA aborts a transfer.
+
+This function disables the channel request and clears all status bits. Submit another transfer after calling this A\+PI.
+
+param handle D\+MA handle pointer. \mbox{\Hypertarget{group__dma_ga5354ff2c0c1ec53e2cbd712169fc5558}\label{group__dma_ga5354ff2c0c1ec53e2cbd712169fc5558}} 
+\index{Dma@{Dma}!DMA\_CreateHandle@{DMA\_CreateHandle}}
+\index{DMA\_CreateHandle@{DMA\_CreateHandle}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_CreateHandle()}{DMA\_CreateHandle()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Create\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+
+
+Creates the D\+MA handle. 
+
+This function is called first if using the transactional A\+PI for the D\+MA. This function initializes the internal state of the D\+MA handle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & D\+MA handle pointer. The D\+MA handle stores callback function and parameters. \\
+\hline
+{\em base} & D\+MA peripheral base address. \\
+\hline
+{\em channel} & D\+MA channel number.\\
+\hline
+\end{DoxyParams}
+brief Creates the D\+MA handle.
+
+This function is called first if using the transactional A\+PI for the D\+MA. This function initializes the internal state of the D\+MA handle.
+
+param handle D\+MA handle pointer. The D\+MA handle stores callback function and parameters. param base D\+MA peripheral base address. param channel D\+MA channel number. \mbox{\Hypertarget{group__dma_ga634ced9b86d7dc9543e0b4387123fcac}\label{group__dma_ga634ced9b86d7dc9543e0b4387123fcac}} 
+\index{Dma@{Dma}!DMA\_Deinit@{DMA\_Deinit}}
+\index{DMA\_Deinit@{DMA\_Deinit}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_Deinit()}{DMA\_Deinit()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Deinitializes the D\+MA peripheral. 
+
+This function gates the D\+MA clock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & D\+MA peripheral base address.\\
+\hline
+\end{DoxyParams}
+brief Deinitializes the D\+MA peripheral.
+
+This function gates the D\+MA clock.
+
+param base D\+MA peripheral base address. \mbox{\Hypertarget{group__dma_ga3484c491bd7943623d1d8fdc013c7e97}\label{group__dma_ga3484c491bd7943623d1d8fdc013c7e97}} 
+\index{Dma@{Dma}!DMA\_HandleIRQ@{DMA\_HandleIRQ}}
+\index{DMA\_HandleIRQ@{DMA\_HandleIRQ}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_HandleIRQ()}{DMA\_HandleIRQ()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Handle\+I\+RQ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+D\+MA I\+RQ handler for current transfer complete. 
+
+This function clears the channel interrupt flag and calls the callback function if it is not N\+U\+LL.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & D\+MA handle pointer.\\
+\hline
+\end{DoxyParams}
+brief D\+MA I\+RQ handler for current transfer complete.
+
+This function clears the channel interrupt flag and calls the callback function if it is not N\+U\+LL.
+
+param handle D\+MA handle pointer. \mbox{\Hypertarget{group__dma_gade1b5efa61054ce538b37b181dd075bb}\label{group__dma_gade1b5efa61054ce538b37b181dd075bb}} 
+\index{Dma@{Dma}!DMA\_Init@{DMA\_Init}}
+\index{DMA\_Init@{DMA\_Init}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_Init()}{DMA\_Init()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+
+
+Initializes the D\+MA peripheral. 
+
+This function ungates the D\+MA clock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & D\+MA peripheral base address.\\
+\hline
+\end{DoxyParams}
+brief Initializes the D\+MA peripheral.
+
+This function ungates the D\+MA clock.
+
+param base D\+MA peripheral base address. \mbox{\Hypertarget{group__dma_gaf6e0b93e92a31e0dd3398bce34decb40}\label{group__dma_gaf6e0b93e92a31e0dd3398bce34decb40}} 
+\index{Dma@{Dma}!DMA\_PrepareTransfer@{DMA\_PrepareTransfer}}
+\index{DMA\_PrepareTransfer@{DMA\_PrepareTransfer}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_PrepareTransfer()}{DMA\_PrepareTransfer()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Prepare\+Transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__dma_gadb6e4baf9efcf14a889babc34d6f0d80}{dma\+\_\+transfer\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{void $\ast$}]{src\+Addr,  }\item[{uint32\+\_\+t}]{src\+Width,  }\item[{void $\ast$}]{dest\+Addr,  }\item[{uint32\+\_\+t}]{dest\+Width,  }\item[{uint32\+\_\+t}]{transfer\+Bytes,  }\item[{\mbox{\hyperlink{group__dma_ga834a242c5bc2fc0fb4cf928616821de0}{dma\+\_\+transfer\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Prepares the D\+MA transfer configuration structure. 
+
+This function prepares the transfer configuration structure according to the user input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the user configuration structure of type dma\+\_\+transfer\+\_\+config\+\_\+t. \\
+\hline
+{\em src\+Addr} & D\+MA transfer source address. \\
+\hline
+{\em src\+Width} & D\+MA transfer source address width (byte). \\
+\hline
+{\em dest\+Addr} & D\+MA transfer destination address. \\
+\hline
+{\em dest\+Width} & D\+MA transfer destination address width (byte). \\
+\hline
+{\em transfer\+Bytes} & D\+MA transfer bytes to be transferred. \\
+\hline
+{\em type} & D\+MA transfer type.\\
+\hline
+\end{DoxyParams}
+brief Prepares the D\+MA transfer configuration structure.
+
+This function prepares the transfer configuration structure according to the user input.
+
+param config Pointer to the user configuration structure of type dma\+\_\+transfer\+\_\+config\+\_\+t. param src\+Addr D\+MA transfer source address. param src\+Width D\+MA transfer source address width (byte). param dest\+Addr D\+MA transfer destination address. param dest\+Width D\+MA transfer destination address width (byte). param transfer\+Bytes D\+MA transfer bytes to be transferred. param type D\+MA transfer type. \mbox{\Hypertarget{group__dma_ga17a6d7e5f9d3f12777941447ed7659f5}\label{group__dma_ga17a6d7e5f9d3f12777941447ed7659f5}} 
+\index{Dma@{Dma}!DMA\_ResetChannel@{DMA\_ResetChannel}}
+\index{DMA\_ResetChannel@{DMA\_ResetChannel}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_ResetChannel()}{DMA\_ResetChannel()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Reset\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+
+
+Resets the D\+MA channel. 
+
+Sets all register values to reset values and enables the cycle steal and auto stop channel request features.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & D\+MA peripheral base address. \\
+\hline
+{\em channel} & D\+MA channel number.\\
+\hline
+\end{DoxyParams}
+brief Resets the D\+MA channel.
+
+Sets all register values to reset values and enables the cycle steal and auto stop channel request features.
+
+param base D\+MA peripheral base address. param channel D\+MA channel number. \mbox{\Hypertarget{group__dma_ga2eb9a831b9a84c5108097f770dbe90db}\label{group__dma_ga2eb9a831b9a84c5108097f770dbe90db}} 
+\index{Dma@{Dma}!DMA\_SetCallback@{DMA\_SetCallback}}
+\index{DMA\_SetCallback@{DMA\_SetCallback}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_SetCallback()}{DMA\_SetCallback()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Set\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{\mbox{\hyperlink{group__dma_gab03f33ad69a5875d025f941419247123}{dma\+\_\+callback}}}]{callback,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Sets the D\+MA callback function. 
+
+This callback is called in the D\+MA I\+RQ handler. Use the callback to do something after the current transfer complete.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & D\+MA handle pointer. \\
+\hline
+{\em callback} & D\+MA callback function pointer. \\
+\hline
+{\em user\+Data} & Parameter for callback function. If it is not needed, just set to N\+U\+LL.\\
+\hline
+\end{DoxyParams}
+brief Sets the D\+MA callback function.
+
+This callback is called in the D\+MA I\+RQ handler. Use the callback to do something after the current transfer complete.
+
+param handle D\+MA handle pointer. param callback D\+MA callback function pointer. param user\+Data Parameter for callback function. If it is not needed, just set to N\+U\+LL. \mbox{\Hypertarget{group__dma_ga9a0aba2d09ef438d7faf8d4c4d458c11}\label{group__dma_ga9a0aba2d09ef438d7faf8d4c4d458c11}} 
+\index{Dma@{Dma}!DMA\_SetChannelLinkConfig@{DMA\_SetChannelLinkConfig}}
+\index{DMA\_SetChannelLinkConfig@{DMA\_SetChannelLinkConfig}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_SetChannelLinkConfig()}{DMA\_SetChannelLinkConfig()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Set\+Channel\+Link\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{channel,  }\item[{const \mbox{\hyperlink{group__dma_ga5076c6be0136d122ef46374dc1eadb0d}{dma\+\_\+channel\+\_\+link\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Configures the D\+MA channel link feature. 
+
+This function allows D\+MA channels to have their transfers linked. The current D\+MA channel triggers a D\+MA request to the linked channels (L\+C\+H1 or L\+C\+H2) depending on the channel link type. Perform a link to channel L\+C\+H1 after each cycle-\/steal transfer followed by a link to L\+C\+H2 after the B\+CR decrements to 0 if the type is k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1\+And\+Channel2. Perform a link to L\+C\+H1 after each cycle-\/steal transfer if the type is k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1. Perform a link to L\+C\+H1 after the B\+CR decrements to 0 if the type is k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1\+After\+B\+C\+R0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & D\+MA peripheral base address. \\
+\hline
+{\em channel} & D\+MA channel number. \\
+\hline
+{\em config} & Pointer to the channel link configuration structure.\\
+\hline
+\end{DoxyParams}
+brief Configures the D\+MA channel link feature.
+
+This function allows D\+MA channels to have their transfers linked. The current D\+MA channel triggers a D\+MA request to the linked channels (L\+C\+H1 or L\+C\+H2) depending on the channel link type. Perform a link to channel L\+C\+H1 after each cycle-\/steal transfer followed by a link to L\+C\+H2 after the B\+CR decrements to 0 if the type is k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1\+And\+Channel2. Perform a link to L\+C\+H1 after each cycle-\/steal transfer if the type is k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1. Perform a link to L\+C\+H1 after the B\+CR decrements to 0 if the type is k\+D\+M\+A\+\_\+\+Channel\+Link\+Channel1\+After\+B\+C\+R0.
+
+param base D\+MA peripheral base address. param channel D\+MA channel number. param config Pointer to the channel link configuration structure. \mbox{\Hypertarget{group__dma_ga813a9ddafd11393d8848a946622dd80d}\label{group__dma_ga813a9ddafd11393d8848a946622dd80d}} 
+\index{Dma@{Dma}!DMA\_SetModulo@{DMA\_SetModulo}}
+\index{DMA\_SetModulo@{DMA\_SetModulo}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_SetModulo()}{DMA\_SetModulo()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Set\+Modulo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{channel,  }\item[{\mbox{\hyperlink{group__dma_gabebfc9ea7534e8f71a7ee1b5c13bf2f5}{dma\+\_\+modulo\+\_\+t}}}]{src\+Modulo,  }\item[{\mbox{\hyperlink{group__dma_gabebfc9ea7534e8f71a7ee1b5c13bf2f5}{dma\+\_\+modulo\+\_\+t}}}]{dest\+Modulo }\end{DoxyParamCaption})}
+
+
+
+Sets the D\+MA modulo for the D\+MA transfer. 
+
+This function defines a specific address range specified to be the value after (S\+AR + S\+S\+I\+ZE)/(D\+AR + D\+S\+I\+ZE) calculation is performed or the original register value. It provides the ability to implement a circular data queue easily.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & D\+MA peripheral base address. \\
+\hline
+{\em channel} & D\+MA channel number. \\
+\hline
+{\em src\+Modulo} & source address modulo. \\
+\hline
+{\em dest\+Modulo} & destination address modulo.\\
+\hline
+\end{DoxyParams}
+brief Sets the D\+MA modulo for the D\+MA transfer.
+
+This function defines a specific address range specified to be the value after (S\+AR + S\+S\+I\+ZE)/(D\+AR + D\+S\+I\+ZE) calculation is performed or the original register value. It provides the ability to implement a circular data queue easily.
+
+param base D\+MA peripheral base address. param channel D\+MA channel number. param src\+Modulo source address modulo. param dest\+Modulo destination address modulo. \mbox{\Hypertarget{group__dma_ga3cc33ab27c5c0dc71cff81795522629a}\label{group__dma_ga3cc33ab27c5c0dc71cff81795522629a}} 
+\index{Dma@{Dma}!DMA\_SetTransferConfig@{DMA\_SetTransferConfig}}
+\index{DMA\_SetTransferConfig@{DMA\_SetTransferConfig}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_SetTransferConfig()}{DMA\_SetTransferConfig()}}
+{\footnotesize\ttfamily void D\+M\+A\+\_\+\+Set\+Transfer\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_m_a___type}{D\+M\+A\+\_\+\+Type}} $\ast$}]{base,  }\item[{uint32\+\_\+t}]{channel,  }\item[{const \mbox{\hyperlink{group__dma_gadb6e4baf9efcf14a889babc34d6f0d80}{dma\+\_\+transfer\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Configures the D\+MA transfer attribute. 
+
+This function configures the transfer attribute including the source address, destination address, transfer size, and so on. This example shows how to set up the dma\+\_\+transfer\+\_\+config\+\_\+t parameters and how to call the D\+M\+A\+\_\+\+Config\+Basic\+Transfer function. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct__dma__transfer__config}{dma\_transfer\_config\_t}} transferConfig;}
+\DoxyCodeLine{memset(\&transferConfig, 0, \textcolor{keyword}{sizeof}(transferConfig));}
+\DoxyCodeLine{transferConfig.\mbox{\hyperlink{struct__dma__transfer__config_a0bf5e6a7c94ddbf20e5f713150a87da5}{srcAddr}} = (uint32\_t)srcAddr;}
+\DoxyCodeLine{transferConfig.\mbox{\hyperlink{struct__dma__transfer__config_a85878efbcf880897d05fb1aa24c28a65}{destAddr}} = (uint32\_t)destAddr;}
+\DoxyCodeLine{transferConfig.enbaleSrcIncrement = \textcolor{keyword}{true};}
+\DoxyCodeLine{transferConfig.\mbox{\hyperlink{struct__dma__transfer__config_a04bbb581a96c3f138251ab5078ba1364}{enableDestIncrement}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{transferConfig.\mbox{\hyperlink{struct__dma__transfer__config_a60bfcc72290b71d1cdda387f1a7c2dac}{srcSize}} = \mbox{\hyperlink{group__dma_gga0b291003d51dd119595ed7aa7462a693a969ae3a6429e54e8a301b26ecf3ab017}{kDMA\_Transfersize32bits}};}
+\DoxyCodeLine{transferConfig.\mbox{\hyperlink{struct__dma__transfer__config_af8d1279c087851c3058f0981857d0242}{destSize}} = \mbox{\hyperlink{group__dma_gga0b291003d51dd119595ed7aa7462a693a969ae3a6429e54e8a301b26ecf3ab017}{kDMA\_Transfersize32bits}};}
+\DoxyCodeLine{transferConfig.\mbox{\hyperlink{struct__dma__transfer__config_a6feb07da81f2cb170eabc3d00565d404}{transferSize}} = \textcolor{keyword}{sizeof}(uint32\_t) * BUFF\_LENGTH;}
+\DoxyCodeLine{\mbox{\hyperlink{group__dma_ga3cc33ab27c5c0dc71cff81795522629a}{DMA\_SetTransferConfig}}(\mbox{\hyperlink{group___d_m_a___peripheral___access___layer_ga4103044f9ca209772f513dc694513ffb}{DMA0}}, 0, \&transferConfig);}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & D\+MA peripheral base address. \\
+\hline
+{\em channel} & D\+MA channel number. \\
+\hline
+{\em config} & Pointer to the D\+MA transfer configuration structure.\\
+\hline
+\end{DoxyParams}
+brief Configures the D\+MA transfer attribute.
+
+This function configures the transfer attribute including the source address, destination address, transfer size, and so on. This example shows how to set up the dma\+\_\+transfer\+\_\+config\+\_\+t parameters and how to call the D\+M\+A\+\_\+\+Config\+Basic\+Transfer function. code dma\+\_\+transfer\+\_\+config\+\_\+t transfer\+Config; memset(\&transfer\+Config, 0, sizeof(transfer\+Config)); transfer\+Config.\+src\+Addr = (uint32\+\_\+t)src\+Addr; transfer\+Config.\+dest\+Addr = (uint32\+\_\+t)dest\+Addr; transfer\+Config.\+enbale\+Src\+Increment = true; transfer\+Config.\+enable\+Dest\+Increment = true; transfer\+Config.\+src\+Size = k\+D\+M\+A\+\_\+\+Transfersize32bits; transfer\+Config.\+dest\+Size = k\+D\+M\+A\+\_\+\+Transfersize32bits; transfer\+Config.\+transfer\+Size = sizeof(uint32\+\_\+t) $\ast$ B\+U\+F\+F\+\_\+\+L\+E\+N\+G\+TH; D\+M\+A\+\_\+\+Set\+Transfer\+Config(\+D\+M\+A0, 0, \&transfer\+Config); endcode
+
+param base D\+MA peripheral base address. param channel D\+MA channel number. param config Pointer to the D\+MA transfer configuration structure. \mbox{\Hypertarget{group__dma_gadf9824800405f5b161bae1db1bf7d1f7}\label{group__dma_gadf9824800405f5b161bae1db1bf7d1f7}} 
+\index{Dma@{Dma}!DMA\_SubmitTransfer@{DMA\_SubmitTransfer}}
+\index{DMA\_SubmitTransfer@{DMA\_SubmitTransfer}!Dma@{Dma}}
+\subsubsection{\texorpdfstring{DMA\_SubmitTransfer()}{DMA\_SubmitTransfer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} D\+M\+A\+\_\+\+Submit\+Transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$}]{handle,  }\item[{const \mbox{\hyperlink{group__dma_gadb6e4baf9efcf14a889babc34d6f0d80}{dma\+\_\+transfer\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{options }\end{DoxyParamCaption})}
+
+
+
+Submits the D\+MA transfer request. 
+
+This function submits the D\+MA transfer request according to the transfer configuration structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & D\+MA handle pointer. \\
+\hline
+{\em config} & Pointer to D\+MA transfer configuration structure. \\
+\hline
+{\em options} & Additional configurations for transfer. Use the defined dma\+\_\+transfer\+\_\+options\+\_\+t type. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+D\+M\+A\+\_\+\+Success} & It indicates that the D\+MA submit transfer request succeeded. \\
+\hline
+{\em k\+Status\+\_\+\+D\+M\+A\+\_\+\+Busy} & It indicates that the D\+MA is busy. Submit transfer request is not allowed. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function can\textquotesingle{}t process multi transfer request.
+\end{DoxyNote}
+brief Submits the D\+MA transfer request.
+
+This function submits the D\+MA transfer request according to the transfer configuration structure.
+
+param handle D\+MA handle pointer. param config Pointer to D\+MA transfer configuration structure. param options Additional configurations for transfer. Use the defined dma\+\_\+transfer\+\_\+options\+\_\+t type. retval k\+Status\+\_\+\+D\+M\+A\+\_\+\+Success It indicates that the D\+MA submit transfer request succeeded. retval k\+Status\+\_\+\+D\+M\+A\+\_\+\+Busy It indicates that the D\+MA is busy. Submit transfer request is not allowed. note This function can\textquotesingle{}t process multi transfer request. 

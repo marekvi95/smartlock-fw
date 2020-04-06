@@ -1,0 +1,65 @@
+\hypertarget{struct__i2c__slave__handle}{}\section{\+\_\+i2c\+\_\+slave\+\_\+handle Struct Reference}
+\label{struct__i2c__slave__handle}\index{\_i2c\_slave\_handle@{\_i2c\_slave\_handle}}
+
+
+I2C slave handle structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+i2c.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+volatile bool \mbox{\hyperlink{struct__i2c__slave__handle_a4db252b6dbdb0dc9cc3d7ddbcb5e9511}{is\+Busy}}
+\item 
+\mbox{\hyperlink{group__i2c__driver_ga69e696cb21165bc58176475879a471cf}{i2c\+\_\+slave\+\_\+transfer\+\_\+t}} \mbox{\hyperlink{struct__i2c__slave__handle_a8cfa005502ce2f110a54f99672380f5f}{transfer}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__i2c__slave__handle_acf2922a79dce3fb9f7c7fe948de1f5a8}{event\+Mask}}
+\item 
+\mbox{\hyperlink{group__i2c__driver_ga2583e3d8ebf8d3de410d8b6263238c35}{i2c\+\_\+slave\+\_\+transfer\+\_\+callback\+\_\+t}} \mbox{\hyperlink{struct__i2c__slave__handle_a8630826ced50476e2c1446747c3b2f03}{callback}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__i2c__slave__handle_a2e294dd14122c554baa0665072b4ca7a}{user\+Data}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2C slave handle structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__i2c__slave__handle_a8630826ced50476e2c1446747c3b2f03}\label{struct__i2c__slave__handle_a8630826ced50476e2c1446747c3b2f03}} 
+\index{\_i2c\_slave\_handle@{\_i2c\_slave\_handle}!callback@{callback}}
+\index{callback@{callback}!\_i2c\_slave\_handle@{\_i2c\_slave\_handle}}
+\subsubsection{\texorpdfstring{callback}{callback}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__i2c__driver_ga2583e3d8ebf8d3de410d8b6263238c35}{i2c\+\_\+slave\+\_\+transfer\+\_\+callback\+\_\+t}} callback}
+
+A callback function called at the transfer event. \mbox{\Hypertarget{struct__i2c__slave__handle_acf2922a79dce3fb9f7c7fe948de1f5a8}\label{struct__i2c__slave__handle_acf2922a79dce3fb9f7c7fe948de1f5a8}} 
+\index{\_i2c\_slave\_handle@{\_i2c\_slave\_handle}!eventMask@{eventMask}}
+\index{eventMask@{eventMask}!\_i2c\_slave\_handle@{\_i2c\_slave\_handle}}
+\subsubsection{\texorpdfstring{eventMask}{eventMask}}
+{\footnotesize\ttfamily uint32\+\_\+t event\+Mask}
+
+A mask of enabled events. \mbox{\Hypertarget{struct__i2c__slave__handle_a4db252b6dbdb0dc9cc3d7ddbcb5e9511}\label{struct__i2c__slave__handle_a4db252b6dbdb0dc9cc3d7ddbcb5e9511}} 
+\index{\_i2c\_slave\_handle@{\_i2c\_slave\_handle}!isBusy@{isBusy}}
+\index{isBusy@{isBusy}!\_i2c\_slave\_handle@{\_i2c\_slave\_handle}}
+\subsubsection{\texorpdfstring{isBusy}{isBusy}}
+{\footnotesize\ttfamily volatile bool is\+Busy}
+
+Indicates whether a transfer is busy. \mbox{\Hypertarget{struct__i2c__slave__handle_a8cfa005502ce2f110a54f99672380f5f}\label{struct__i2c__slave__handle_a8cfa005502ce2f110a54f99672380f5f}} 
+\index{\_i2c\_slave\_handle@{\_i2c\_slave\_handle}!transfer@{transfer}}
+\index{transfer@{transfer}!\_i2c\_slave\_handle@{\_i2c\_slave\_handle}}
+\subsubsection{\texorpdfstring{transfer}{transfer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__i2c__driver_ga69e696cb21165bc58176475879a471cf}{i2c\+\_\+slave\+\_\+transfer\+\_\+t}} transfer}
+
+I2C slave transfer copy. \mbox{\Hypertarget{struct__i2c__slave__handle_a2e294dd14122c554baa0665072b4ca7a}\label{struct__i2c__slave__handle_a2e294dd14122c554baa0665072b4ca7a}} 
+\index{\_i2c\_slave\_handle@{\_i2c\_slave\_handle}!userData@{userData}}
+\index{userData@{userData}!\_i2c\_slave\_handle@{\_i2c\_slave\_handle}}
+\subsubsection{\texorpdfstring{userData}{userData}}
+{\footnotesize\ttfamily void$\ast$ user\+Data}
+
+A callback parameter passed to the callback. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+i2c.\+h\end{DoxyCompactItemize}

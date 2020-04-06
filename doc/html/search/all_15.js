@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['vector_20clarke_20transform',['Vector Clarke Transform',['../group__clarke.html',1,'']]],
+  ['vector_20inverse_20clarke_20transform',['Vector Inverse Clarke Transform',['../group__inv__clarke.html',1,'']]],
+  ['vector_20inverse_20park_20transform',['Vector Inverse Park transform',['../group__inv__park.html',1,'']]],
+  ['vector_20park_20transform',['Vector Park Transform',['../group__park.html',1,'']]],
+  ['v',['V',['../union_a_p_s_r___type.html#acd4a2b64faee91e4a9eef300667fa222',1,'APSR_Type::V()'],['../unionx_p_s_r___type.html#acd4a2b64faee91e4a9eef300667fa222',1,'xPSR_Type::V()']]],
+  ['val',['VAL',['../struct_sys_tick___type.html#ae7a655a853654127f3dfb7fa32c3f457',1,'SysTick_Type']]],
+  ['value',['value',['../struct__lptmr__config.html#a093529e7e6dc5a0d6ed25e66674f9736',1,'_lptmr_config']]],
+  ['verid',['VERID',['../struct_f_l_e_x_i_o___type.html#ab20ff3f0387cbcc2652477ed5d2702df',1,'FLEXIO_Type']]],
+  ['vref',['VREF',['../group___v_r_e_f___peripheral___access___layer.html#ga2c9e85d22a9ba37ea589b1747af46307',1,'K32L2B31A.h']]],
+  ['vref_5fbase',['VREF_BASE',['../group___v_r_e_f___peripheral___access___layer.html#ga4a13ce72546505561e4a780677ec0375',1,'K32L2B31A.h']]],
+  ['vref_5fbase_5faddrs',['VREF_BASE_ADDRS',['../group___v_r_e_f___peripheral___access___layer.html#gac0ccacace16937d7109589180bb2650b',1,'K32L2B31A.h']]],
+  ['vref_5fbase_5fptrs',['VREF_BASE_PTRS',['../group___v_r_e_f___peripheral___access___layer.html#ga3eb17aee5de4a519ee18fe763e43865b',1,'K32L2B31A.h']]],
+  ['vref_5fclocks',['VREF_CLOCKS',['../group__clock.html#gadada275d718274d382e3488eebb46d04',1,'fsl_clock.h']]],
+  ['vref_20peripheral_20access_20layer',['VREF Peripheral Access Layer',['../group___v_r_e_f___peripheral___access___layer.html',1,'']]],
+  ['vref_20register_20masks',['VREF Register Masks',['../group___v_r_e_f___register___masks.html',1,'']]],
+  ['vref_5fsc_5ficompen',['VREF_SC_ICOMPEN',['../group___v_r_e_f___register___masks.html#gab383d7f445ab9bf9266da50107d30f7f',1,'K32L2B31A.h']]],
+  ['vref_5fsc_5fmode_5flv',['VREF_SC_MODE_LV',['../group___v_r_e_f___register___masks.html#ga2bd98e877f61a410c3226d6472365b5e',1,'K32L2B31A.h']]],
+  ['vref_5fsc_5fregen',['VREF_SC_REGEN',['../group___v_r_e_f___register___masks.html#gac93682ccff6c6c12d1929940d197020a',1,'K32L2B31A.h']]],
+  ['vref_5fsc_5fvrefen',['VREF_SC_VREFEN',['../group___v_r_e_f___register___masks.html#ga7a5994dbf9e379f63aea014ab33e4822',1,'K32L2B31A.h']]],
+  ['vref_5fsc_5fvrefst',['VREF_SC_VREFST',['../group___v_r_e_f___register___masks.html#ga30537740fce6d9a373359c63805e11e8',1,'K32L2B31A.h']]],
+  ['vref_5ftrm_5fchopen',['VREF_TRM_CHOPEN',['../group___v_r_e_f___register___masks.html#gaaa2d50a050e401275bb8db441075a60c',1,'K32L2B31A.h']]],
+  ['vref_5ftrm_5ftrim',['VREF_TRM_TRIM',['../group___v_r_e_f___register___masks.html#ga7b200f282af693ea614c6bb380a5bfb8',1,'K32L2B31A.h']]],
+  ['vref_5ftype',['VREF_Type',['../struct_v_r_e_f___type.html',1,'']]],
+  ['vtor',['VTOR',['../struct_s_c_b___type.html#ae457d2615e203c3d5904a43a1bc9df71',1,'SCB_Type']]]
+];

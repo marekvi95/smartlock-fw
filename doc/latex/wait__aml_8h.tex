@@ -1,0 +1,33 @@
+\hypertarget{wait__aml_8h}{}\section{aml/wait\+\_\+aml/wait\+\_\+aml.h File Reference}
+\label{wait__aml_8h}\index{aml/wait\_aml/wait\_aml.h@{aml/wait\_aml/wait\_aml.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../common\+\_\+aml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+clock.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+R\+EQ}~(\mbox{\hyperlink{group__function__group_gac2d5cb00bd6e585725d5b1e8f7383302}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Get\+System\+Clock\+Freq}}())
+\item 
+\#define \mbox{\hyperlink{group__macro__group_ga16504c90d2a4d3b38e4a1c2e6d7836bf}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+G\+E\+T\+\_\+\+C\+Y\+C\+L\+E\+S\+\_\+\+F\+O\+R\+\_\+\+MS}}(ms,  freq)~(((freq) / 1000\+U) $\ast$ (ms))
+\item 
+\#define \mbox{\hyperlink{group__macro__group_gad49b8fcd743fd4f170294d409a8acdee}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+G\+E\+T\+\_\+\+C\+Y\+C\+L\+E\+S\+\_\+\+F\+O\+R\+\_\+\+US}}(us,  freq)~(((freq) / 1000\+U) $\ast$ (us) / 1000\+U)
+\item 
+\#define \mbox{\hyperlink{group__macro__group_ga316e8d701e2fd6dbd036f635d15ac309}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+G\+E\+T\+\_\+\+C\+Y\+C\+L\+E\+S\+\_\+\+F\+O\+R\+\_\+\+NS}}(ns,  freq)~(((freq) / 1000000\+U) $\ast$ (ns) / 1000\+U)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__function__group_gac2d5cb00bd6e585725d5b1e8f7383302}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Get\+System\+Clock\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Returns system clock frequency. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga1b85420a1a98dd13e15b8b515f2be603}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Cycles}} (uint32\+\_\+t cycles)
+\begin{DoxyCompactList}\small\item\em Waits for specified amount of cycles which is given by 32bit value range. Assumption for this function is that target architecture is using 32bit general purpose registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga2cc4c9ff3ce6add5f7d02798bebb1939}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Sec}} (uint16\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Waits for specified amount of seconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga91059b3fe779d0ca7074c59bacb42f59}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Ms}} (uint16\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Waits for specified amount of milliseconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gac71523b2fdbddc5d35c018502abbd770}{W\+A\+I\+T\+\_\+\+A\+M\+L\+\_\+\+Wait\+Us}} (uint16\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Waits for specified amount of microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This driver creates abstraction for W\+A\+IT functions for S32 S\+DK and M\+C\+U\+Xpresso S\+DK. 

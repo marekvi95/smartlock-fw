@@ -1,0 +1,852 @@
+\hypertarget{group__ftfx__flexnvm__driver}{}\section{Ftfx\+\_\+flexnvm\+\_\+driver}
+\label{group__ftfx__flexnvm__driver}\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__flexnvm__config}{\+\_\+flexnvm\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Flexnvm driver state information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga355e24679a7d7d1228641e96806c19d9}\label{group__ftfx__flexnvm__driver_ga355e24679a7d7d1228641e96806c19d9}} 
+typedef enum \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga562d369144a5774490de42bfdd66c17b}{\+\_\+flexnvm\+\_\+property\+\_\+tag}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga355e24679a7d7d1228641e96806c19d9}{flexnvm\+\_\+property\+\_\+tag\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumeration for various flexnvm properties. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct__flexnvm__config}{\+\_\+flexnvm\+\_\+config}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Flexnvm driver state information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga562d369144a5774490de42bfdd66c17b}{\+\_\+flexnvm\+\_\+property\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17babb7c699af9d864cb78d255081ee85e6a}{k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Dflash\+Sector\+Size}} = 0x00U, 
+\mbox{\hyperlink{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17baf5223e949fd2bf0c8dafbe48e1b5642e}{k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Dflash\+Total\+Size}} = 0x01U, 
+\mbox{\hyperlink{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba5aa34fc2a56a4e40db25aae4789874e2}{k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Dflash\+Block\+Size}} = 0x02U, 
+\mbox{\hyperlink{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba5d42a9c0d9bab1ccb4c45b629b978ac0}{k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Dflash\+Block\+Count}} = 0x03U, 
+\newline
+\mbox{\hyperlink{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17baf5f1265033121d17accd8eab6c674443}{k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Dflash\+Block\+Base\+Addr}} = 0x04U, 
+\mbox{\hyperlink{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba4eb997109767c75237c2e1f8c69b0d0a}{k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Alias\+Dflash\+Block\+Base\+Addr}} = 0x05U, 
+\mbox{\hyperlink{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba7ea8684b57d6ecd8da49ac2b7111071b}{k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Flex\+Ram\+Block\+Base\+Addr}} = 0x06U, 
+\mbox{\hyperlink{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17baf21bffab933cd172be155edc6e3d9be8}{k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Flex\+Ram\+Total\+Size}} = 0x07U, 
+\newline
+\mbox{\hyperlink{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba75da70ae8381d84ee581cb7e6b8c77e6}{k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Eeprom\+Total\+Size}} = 0x08U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for various flexnvm properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga38dc1922e79536abd0a3e9745d8da6e1}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Eeprom\+Write}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t start, uint8\+\_\+t $\ast$src, uint32\+\_\+t length\+In\+Bytes)
+\begin{DoxyCompactList}\small\item\em Sets the Flex\+R\+AM function command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga3e5d62da168e379cd9ffdf76d929bb38}\label{group__ftfx__flexnvm__driver_ga3e5d62da168e379cd9ffdf76d929bb38}} 
+\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} {\bfseries ftfx\+Config}
+\end{DoxyCompactItemize}
+\subsection*{Flexnvm version}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga3edd4456238450f55464e5274aa7089b}{F\+S\+L\+\_\+\+F\+L\+E\+X\+N\+V\+M\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(3, 0, 1))
+\begin{DoxyCompactList}\small\item\em Flexnvm driver version for S\+DK. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Initialization}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_gac07ad15ba63f1ec86217eeb8c2df3520}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Init}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Initializes the global flash properties structure members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Erasing}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga5fd0d2df3119387d00af533d11fa79bf}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Erase}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t start, uint32\+\_\+t length\+In\+Bytes, uint32\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Erases the Dflash sectors encompassed by parameters passed into function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga83fb93b84479299ded0b9b2f881dd157}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Erase\+All}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Erases entire flexnvm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Programming}
+\label{_amgrpe6f43c40ab1c07cd29e4e83e4ef6bf85}%
+Erases the entire flexnvm, including protected sectors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the storage for the driver runtime state. \\
+\hline
+{\em key} & A value used to validate all flash erase A\+P\+Is.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a6db9a6a03c0f698988b183effb857c40}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Erase\+Key\+Error}}} & A\+PI erase key is invalid. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during command execution. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609abc388f09a5b298bad7c019b69aa0e6da}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Partition\+Status\+Update\+Failure}}} & Failed to update the partition status. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga7e4d702ae57466443fe255beacdd2769}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Program}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t start, uint8\+\_\+t $\ast$src, uint32\+\_\+t length\+In\+Bytes)
+\begin{DoxyCompactList}\small\item\em Programs flash with data at locations passed in through parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_gaa798a68df63a40895cc807e4e2ccb20f}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Program\+Partition}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, \mbox{\hyperlink{group__ftfx__controller_ga78043d7b5753a2e4f6f61fe8bbae68d0}{ftfx\+\_\+partition\+\_\+flexram\+\_\+load\+\_\+opt\+\_\+t}} option, uint32\+\_\+t eeprom\+Data\+Size\+Code, uint32\+\_\+t flexnvm\+Partition\+Code)
+\begin{DoxyCompactList}\small\item\em Programs flash with data at locations passed in through parameters via the Program Section command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Verification}
+\label{_amgrp52b8ffce119fe77b28034f2fdd35eb5f}%
+Reads the resource with data at locations passed in through parameters.
+
+This function reads the flash memory with the desired location for a given flash area as determined by the start address and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be programmed. Must be word-\/aligned. \\
+\hline
+{\em dst} & A pointer to the destination buffer of data that is used to store data to be read. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be read. Must be word-\/aligned. \\
+\hline
+{\em option} & The resource option which indicates which area should be read back.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & Parameter is not aligned with the specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_gadad21e35f543ca53898e3cb095b7e5cb}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Verify\+Erase}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t start, uint32\+\_\+t length\+In\+Bytes, \mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}} margin)
+\begin{DoxyCompactList}\small\item\em Verifies an erasure of the desired flash area at a specified margin level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga4478096a94795d67d2705adb7a740fe7}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Verify\+Erase\+All}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, \mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}} margin)
+\begin{DoxyCompactList}\small\item\em Verifies erasure of the entire flash at a specified margin level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga37f520d7d2a26108946a3d3d310ba692}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Verify\+Program}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t start, uint32\+\_\+t length\+In\+Bytes, const uint8\+\_\+t $\ast$expected\+Data, \mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}} margin, uint32\+\_\+t $\ast$failed\+Address, uint32\+\_\+t $\ast$failed\+Data)
+\begin{DoxyCompactList}\small\item\em Verifies programming of the desired flash area at a specified margin level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Security}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga5a1320dda499529c35382dd9f84a1a94}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Get\+Security\+State}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, \mbox{\hyperlink{group__ftfx__controller_gae49df85d158f3651e17d1bb660a4f1c2}{ftfx\+\_\+security\+\_\+state\+\_\+t}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Returns the security state via the pointer passed into the function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga16bdc534eb341b53582680955b37d740}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Security\+Bypass}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, const uint8\+\_\+t $\ast$backdoor\+Key)
+\begin{DoxyCompactList}\small\item\em Allows users to bypass security with a backdoor key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Flash Protection Utilities}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga320d0c4cb3cdbfe304402c40e14ad036}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Set\+Protection}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, uint8\+\_\+t protect\+Status)
+\begin{DoxyCompactList}\small\item\em Sets the D\+Flash protection to the intended protection status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_gafcfdce5609c9cabe30bff2c586566f89}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Get\+Protection}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, uint8\+\_\+t $\ast$protect\+Status)
+\begin{DoxyCompactList}\small\item\em Gets the D\+Flash protection status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga6544827e158a04c7cd20c6dbab9588b2}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Eeprom\+Set\+Protection}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, uint8\+\_\+t protect\+Status)
+\begin{DoxyCompactList}\small\item\em Sets the E\+E\+P\+R\+OM protection to the intended protection status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_gaf0b39c76fa3dc2b137e269a1f1d5a9e8}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Eeprom\+Get\+Protection}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, uint8\+\_\+t $\ast$protect\+Status)
+\begin{DoxyCompactList}\small\item\em Gets the E\+E\+P\+R\+OM protection status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__flexnvm__driver_gac77ac9b06704e082d4b1f4bd1ed21fa0}{F\+L\+E\+X\+N\+V\+M\+\_\+\+Get\+Property}} (\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$config, \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga355e24679a7d7d1228641e96806c19d9}{flexnvm\+\_\+property\+\_\+tag\+\_\+t}} which\+Property, uint32\+\_\+t $\ast$value)
+\begin{DoxyCompactList}\small\item\em Returns the desired flexnvm property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga3edd4456238450f55464e5274aa7089b}\label{group__ftfx__flexnvm__driver_ga3edd4456238450f55464e5274aa7089b}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FSL\_FLEXNVM\_DRIVER\_VERSION@{FSL\_FLEXNVM\_DRIVER\_VERSION}}
+\index{FSL\_FLEXNVM\_DRIVER\_VERSION@{FSL\_FLEXNVM\_DRIVER\_VERSION}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FSL\_FLEXNVM\_DRIVER\_VERSION}{FSL\_FLEXNVM\_DRIVER\_VERSION}}
+{\footnotesize\ttfamily \#define F\+S\+L\+\_\+\+F\+L\+E\+X\+N\+V\+M\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(3, 0, 1))}
+
+
+
+Flexnvm driver version for S\+DK. 
+
+Version 3.\+0.\+1. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}\label{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!flexnvm\_config\_t@{flexnvm\_config\_t}}
+\index{flexnvm\_config\_t@{flexnvm\_config\_t}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{flexnvm\_config\_t}{flexnvm\_config\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__flexnvm__config}{\+\_\+flexnvm\+\_\+config}}  \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}}}
+
+
+
+Flexnvm driver state information. 
+
+An instance of this structure is allocated by the user of the Flexnvm driver and passed into each of the driver A\+P\+Is. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga562d369144a5774490de42bfdd66c17b}\label{group__ftfx__flexnvm__driver_ga562d369144a5774490de42bfdd66c17b}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!\_flexnvm\_property\_tag@{\_flexnvm\_property\_tag}}
+\index{\_flexnvm\_property\_tag@{\_flexnvm\_property\_tag}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{\_flexnvm\_property\_tag}{\_flexnvm\_property\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ftfx__flexnvm__driver_ga562d369144a5774490de42bfdd66c17b}{\+\_\+flexnvm\+\_\+property\+\_\+tag}}}
+
+
+
+Enumeration for various flexnvm properties. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFLEXNVM\_PropertyDflashSectorSize@{kFLEXNVM\_PropertyDflashSectorSize}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!kFLEXNVM\_PropertyDflashSectorSize@{kFLEXNVM\_PropertyDflashSectorSize}}}\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17babb7c699af9d864cb78d255081ee85e6a}\label{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17babb7c699af9d864cb78d255081ee85e6a}} 
+k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Dflash\+Sector\+Size&Dflash sector size property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFLEXNVM\_PropertyDflashTotalSize@{kFLEXNVM\_PropertyDflashTotalSize}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!kFLEXNVM\_PropertyDflashTotalSize@{kFLEXNVM\_PropertyDflashTotalSize}}}\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17baf5223e949fd2bf0c8dafbe48e1b5642e}\label{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17baf5223e949fd2bf0c8dafbe48e1b5642e}} 
+k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Dflash\+Total\+Size&Dflash total size property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFLEXNVM\_PropertyDflashBlockSize@{kFLEXNVM\_PropertyDflashBlockSize}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!kFLEXNVM\_PropertyDflashBlockSize@{kFLEXNVM\_PropertyDflashBlockSize}}}\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba5aa34fc2a56a4e40db25aae4789874e2}\label{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba5aa34fc2a56a4e40db25aae4789874e2}} 
+k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Dflash\+Block\+Size&Dflash block size property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFLEXNVM\_PropertyDflashBlockCount@{kFLEXNVM\_PropertyDflashBlockCount}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!kFLEXNVM\_PropertyDflashBlockCount@{kFLEXNVM\_PropertyDflashBlockCount}}}\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba5d42a9c0d9bab1ccb4c45b629b978ac0}\label{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba5d42a9c0d9bab1ccb4c45b629b978ac0}} 
+k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Dflash\+Block\+Count&Dflash block count property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFLEXNVM\_PropertyDflashBlockBaseAddr@{kFLEXNVM\_PropertyDflashBlockBaseAddr}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!kFLEXNVM\_PropertyDflashBlockBaseAddr@{kFLEXNVM\_PropertyDflashBlockBaseAddr}}}\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17baf5f1265033121d17accd8eab6c674443}\label{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17baf5f1265033121d17accd8eab6c674443}} 
+k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Dflash\+Block\+Base\+Addr&Dflash block base address property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFLEXNVM\_PropertyAliasDflashBlockBaseAddr@{kFLEXNVM\_PropertyAliasDflashBlockBaseAddr}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!kFLEXNVM\_PropertyAliasDflashBlockBaseAddr@{kFLEXNVM\_PropertyAliasDflashBlockBaseAddr}}}\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba4eb997109767c75237c2e1f8c69b0d0a}\label{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba4eb997109767c75237c2e1f8c69b0d0a}} 
+k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Alias\+Dflash\+Block\+Base\+Addr&Dflash block base address Alias property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFLEXNVM\_PropertyFlexRamBlockBaseAddr@{kFLEXNVM\_PropertyFlexRamBlockBaseAddr}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!kFLEXNVM\_PropertyFlexRamBlockBaseAddr@{kFLEXNVM\_PropertyFlexRamBlockBaseAddr}}}\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba7ea8684b57d6ecd8da49ac2b7111071b}\label{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba7ea8684b57d6ecd8da49ac2b7111071b}} 
+k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Flex\+Ram\+Block\+Base\+Addr&Flex\+Ram block base address property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFLEXNVM\_PropertyFlexRamTotalSize@{kFLEXNVM\_PropertyFlexRamTotalSize}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!kFLEXNVM\_PropertyFlexRamTotalSize@{kFLEXNVM\_PropertyFlexRamTotalSize}}}\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17baf21bffab933cd172be155edc6e3d9be8}\label{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17baf21bffab933cd172be155edc6e3d9be8}} 
+k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Flex\+Ram\+Total\+Size&Flex\+Ram total size property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFLEXNVM\_PropertyEepromTotalSize@{kFLEXNVM\_PropertyEepromTotalSize}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!kFLEXNVM\_PropertyEepromTotalSize@{kFLEXNVM\_PropertyEepromTotalSize}}}\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba75da70ae8381d84ee581cb7e6b8c77e6}\label{group__ftfx__flexnvm__driver_gga562d369144a5774490de42bfdd66c17ba75da70ae8381d84ee581cb7e6b8c77e6}} 
+k\+F\+L\+E\+X\+N\+V\+M\+\_\+\+Property\+Eeprom\+Total\+Size&E\+E\+P\+R\+OM total size property. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga5fd0d2df3119387d00af533d11fa79bf}\label{group__ftfx__flexnvm__driver_ga5fd0d2df3119387d00af533d11fa79bf}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_DflashErase@{FLEXNVM\_DflashErase}}
+\index{FLEXNVM\_DflashErase@{FLEXNVM\_DflashErase}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_DflashErase()}{FLEXNVM\_DflashErase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{start,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes,  }\item[{uint32\+\_\+t}]{key }\end{DoxyParamCaption})}
+
+
+
+Erases the Dflash sectors encompassed by parameters passed into function. 
+
+This function erases the appropriate number of flash sectors based on the desired start address and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & The pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be erased. The start address does not need to be sector-\/aligned but must be word-\/aligned. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words) to be erased. Must be word-\/aligned. \\
+\hline
+{\em key} & The value used to validate all flash erase A\+P\+Is.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & The parameter is not aligned with the specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & The address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a6db9a6a03c0f698988b183effb857c40}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Erase\+Key\+Error}}} & The A\+PI erase key is invalid. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gafcfdce5609c9cabe30bff2c586566f89}\label{group__ftfx__flexnvm__driver_gafcfdce5609c9cabe30bff2c586566f89}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_DflashGetProtection@{FLEXNVM\_DflashGetProtection}}
+\index{FLEXNVM\_DflashGetProtection@{FLEXNVM\_DflashGetProtection}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_DflashGetProtection()}{FLEXNVM\_DflashGetProtection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Get\+Protection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint8\+\_\+t $\ast$}]{protect\+Status }\end{DoxyParamCaption})}
+
+
+
+Gets the D\+Flash protection status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em protect\+Status} & D\+Flash Protect status returned by the P\+Flash IP. Each bit corresponds to the protection of the 1/8 of the total D\+Flash. The least significant bit corresponds to the lowest address area of the D\+Flash. The most significant bit corresponds to the highest address area of the D\+Flash, and so on. There are two possible cases as below\+: 0\+: this area is protected. 1\+: this area is unprotected.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609acb87ce53590958bf9d32d62ba406f6bf}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Not\+Supported}}} & Flash A\+PI is not supported. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga7e4d702ae57466443fe255beacdd2769}\label{group__ftfx__flexnvm__driver_ga7e4d702ae57466443fe255beacdd2769}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_DflashProgram@{FLEXNVM\_DflashProgram}}
+\index{FLEXNVM\_DflashProgram@{FLEXNVM\_DflashProgram}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_DflashProgram()}{FLEXNVM\_DflashProgram()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Program (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{start,  }\item[{uint8\+\_\+t $\ast$}]{src,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Programs flash with data at locations passed in through parameters. 
+
+This function programs the flash memory with the desired data for a given flash area as determined by the start address and the length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be programmed. Must be word-\/aligned. \\
+\hline
+{\em src} & A pointer to the source buffer of data that is to be programmed into the flash. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be programmed. Must be word-\/aligned.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & Parameter is not aligned with the specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & Address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga320d0c4cb3cdbfe304402c40e14ad036}\label{group__ftfx__flexnvm__driver_ga320d0c4cb3cdbfe304402c40e14ad036}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_DflashSetProtection@{FLEXNVM\_DflashSetProtection}}
+\index{FLEXNVM\_DflashSetProtection@{FLEXNVM\_DflashSetProtection}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_DflashSetProtection()}{FLEXNVM\_DflashSetProtection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Set\+Protection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint8\+\_\+t}]{protect\+Status }\end{DoxyParamCaption})}
+
+
+
+Sets the D\+Flash protection to the intended protection status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em protect\+Status} & The expected protect status to set to the D\+Flash protection register. Each bit corresponds to the protection of the 1/8 of the total D\+Flash. The least significant bit corresponds to the lowest address area of the D\+Flash. The most significant bit corresponds to the highest address area of the D\+Flash. There are two possible cases as shown below\+: 0\+: this area is protected. 1\+: this area is unprotected.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609acb87ce53590958bf9d32d62ba406f6bf}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Not\+Supported}}} & Flash A\+PI is not supported. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gadad21e35f543ca53898e3cb095b7e5cb}\label{group__ftfx__flexnvm__driver_gadad21e35f543ca53898e3cb095b7e5cb}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_DflashVerifyErase@{FLEXNVM\_DflashVerifyErase}}
+\index{FLEXNVM\_DflashVerifyErase@{FLEXNVM\_DflashVerifyErase}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_DflashVerifyErase()}{FLEXNVM\_DflashVerifyErase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Verify\+Erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{start,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes,  }\item[{\mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}}}]{margin }\end{DoxyParamCaption})}
+
+
+
+Verifies an erasure of the desired flash area at a specified margin level. 
+
+This function checks the appropriate number of flash sectors based on the desired start address and length to check whether the flash is erased to the specified read margin level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be verified. The start address does not need to be sector-\/aligned but must be word-\/aligned. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be verified. Must be word-\/aligned. \\
+\hline
+{\em margin} & Read margin choice.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & Parameter is not aligned with specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & Address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga37f520d7d2a26108946a3d3d310ba692}\label{group__ftfx__flexnvm__driver_ga37f520d7d2a26108946a3d3d310ba692}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_DflashVerifyProgram@{FLEXNVM\_DflashVerifyProgram}}
+\index{FLEXNVM\_DflashVerifyProgram@{FLEXNVM\_DflashVerifyProgram}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_DflashVerifyProgram()}{FLEXNVM\_DflashVerifyProgram()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Dflash\+Verify\+Program (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{start,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes,  }\item[{const uint8\+\_\+t $\ast$}]{expected\+Data,  }\item[{\mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}}}]{margin,  }\item[{uint32\+\_\+t $\ast$}]{failed\+Address,  }\item[{uint32\+\_\+t $\ast$}]{failed\+Data }\end{DoxyParamCaption})}
+
+
+
+Verifies programming of the desired flash area at a specified margin level. 
+
+This function verifies the data programmed in the flash memory using the Flash Program Check Command and compares it to the expected data for a given flash area as determined by the start address and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be verified. Must be word-\/aligned. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be verified. Must be word-\/aligned. \\
+\hline
+{\em expected\+Data} & A pointer to the expected data that is to be verified against. \\
+\hline
+{\em margin} & Read margin choice. \\
+\hline
+{\em failed\+Address} & A pointer to the returned failing address. \\
+\hline
+{\em failed\+Data} & A pointer to the returned failing data. Some derivatives do not include failed data as part of the F\+C\+C\+O\+Bx registers. In this case, zeros are returned upon failure.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & Parameter is not aligned with specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & Address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gaf0b39c76fa3dc2b137e269a1f1d5a9e8}\label{group__ftfx__flexnvm__driver_gaf0b39c76fa3dc2b137e269a1f1d5a9e8}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_EepromGetProtection@{FLEXNVM\_EepromGetProtection}}
+\index{FLEXNVM\_EepromGetProtection@{FLEXNVM\_EepromGetProtection}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_EepromGetProtection()}{FLEXNVM\_EepromGetProtection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Eeprom\+Get\+Protection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint8\+\_\+t $\ast$}]{protect\+Status }\end{DoxyParamCaption})}
+
+
+
+Gets the E\+E\+P\+R\+OM protection status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em protect\+Status} & D\+Flash Protect status returned by the P\+Flash IP. Each bit corresponds to the protection of the 1/8 of the total E\+E\+P\+R\+OM. The least significant bit corresponds to the lowest address area of the E\+E\+P\+R\+OM. The most significant bit corresponds to the highest address area of the E\+E\+P\+R\+OM. There are two possible cases as below\+: 0\+: this area is protected. 1\+: this area is unprotected.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609acb87ce53590958bf9d32d62ba406f6bf}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Not\+Supported}}} & Flash A\+PI is not supported. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga6544827e158a04c7cd20c6dbab9588b2}\label{group__ftfx__flexnvm__driver_ga6544827e158a04c7cd20c6dbab9588b2}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_EepromSetProtection@{FLEXNVM\_EepromSetProtection}}
+\index{FLEXNVM\_EepromSetProtection@{FLEXNVM\_EepromSetProtection}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_EepromSetProtection()}{FLEXNVM\_EepromSetProtection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Eeprom\+Set\+Protection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint8\+\_\+t}]{protect\+Status }\end{DoxyParamCaption})}
+
+
+
+Sets the E\+E\+P\+R\+OM protection to the intended protection status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em protect\+Status} & The expected protect status to set to the E\+E\+P\+R\+OM protection register. Each bit corresponds to the protection of the 1/8 of the total E\+E\+P\+R\+OM. The least significant bit corresponds to the lowest address area of the E\+E\+P\+R\+OM. The most significant bit corresponds to the highest address area of E\+E\+P\+R\+OM, and so on. There are two possible cases as shown below\+: 0\+: this area is protected. 1\+: this area is unprotected.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609acb87ce53590958bf9d32d62ba406f6bf}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Not\+Supported}}} & Flash A\+PI is not supported. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga38dc1922e79536abd0a3e9745d8da6e1}\label{group__ftfx__flexnvm__driver_ga38dc1922e79536abd0a3e9745d8da6e1}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_EepromWrite@{FLEXNVM\_EepromWrite}}
+\index{FLEXNVM\_EepromWrite@{FLEXNVM\_EepromWrite}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_EepromWrite()}{FLEXNVM\_EepromWrite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Eeprom\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{start,  }\item[{uint8\+\_\+t $\ast$}]{src,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Sets the Flex\+R\+AM function command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em option} & The option used to set the work mode of Flex\+R\+AM.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution.\\
+\hline
+\end{DoxyRetVals}
+Programs the E\+E\+P\+R\+OM with data at locations passed in through parameters.
+
+This function programs the emulated E\+E\+P\+R\+OM with the desired data for a given flash area as determined by the start address and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be programmed. Must be word-\/aligned. \\
+\hline
+{\em src} & A pointer to the source buffer of data that is to be programmed into the flash. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be programmed. Must be word-\/aligned.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & Address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609af0eda7c88ddc31baed8e52f07181f58e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Set\+Flexram\+As\+Eeprom\+Error}}} & Failed to set flexram as eeprom. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a641f6139bdfb2ce9ea0ce68ba2606df3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Recover\+Flexram\+As\+Ram\+Error}}} & Failed to recover the Flex\+R\+AM as R\+AM. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga83fb93b84479299ded0b9b2f881dd157}\label{group__ftfx__flexnvm__driver_ga83fb93b84479299ded0b9b2f881dd157}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_EraseAll@{FLEXNVM\_EraseAll}}
+\index{FLEXNVM\_EraseAll@{FLEXNVM\_EraseAll}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_EraseAll()}{FLEXNVM\_EraseAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Erase\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{key }\end{DoxyParamCaption})}
+
+
+
+Erases entire flexnvm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the storage for the driver runtime state. \\
+\hline
+{\em key} & A value used to validate all flash erase A\+P\+Is.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a6db9a6a03c0f698988b183effb857c40}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Erase\+Key\+Error}}} & A\+PI erase key is invalid. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during command execution. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609abc388f09a5b298bad7c019b69aa0e6da}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Partition\+Status\+Update\+Failure}}} & Failed to update the partition status. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gac77ac9b06704e082d4b1f4bd1ed21fa0}\label{group__ftfx__flexnvm__driver_gac77ac9b06704e082d4b1f4bd1ed21fa0}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_GetProperty@{FLEXNVM\_GetProperty}}
+\index{FLEXNVM\_GetProperty@{FLEXNVM\_GetProperty}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_GetProperty()}{FLEXNVM\_GetProperty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Get\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga355e24679a7d7d1228641e96806c19d9}{flexnvm\+\_\+property\+\_\+tag\+\_\+t}}}]{which\+Property,  }\item[{uint32\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Returns the desired flexnvm property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em which\+Property} & The desired property from the list of properties in enum flexnvm\+\_\+property\+\_\+tag\+\_\+t \\
+\hline
+{\em value} & A pointer to the value returned for the desired flexnvm property.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a380d2e76caf0ee5493c7a599426ab73c}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Unknown\+Property}}} & An unknown property tag. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga5a1320dda499529c35382dd9f84a1a94}\label{group__ftfx__flexnvm__driver_ga5a1320dda499529c35382dd9f84a1a94}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_GetSecurityState@{FLEXNVM\_GetSecurityState}}
+\index{FLEXNVM\_GetSecurityState@{FLEXNVM\_GetSecurityState}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_GetSecurityState()}{FLEXNVM\_GetSecurityState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Get\+Security\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{\mbox{\hyperlink{group__ftfx__controller_gae49df85d158f3651e17d1bb660a4f1c2}{ftfx\+\_\+security\+\_\+state\+\_\+t}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+Returns the security state via the pointer passed into the function. 
+
+This function retrieves the current flash security status, including the security enabling state and the backdoor key enabling state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to storage for the driver runtime state. \\
+\hline
+{\em state} & A pointer to the value returned for the current security status code\+:\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gac07ad15ba63f1ec86217eeb8c2df3520}\label{group__ftfx__flexnvm__driver_gac07ad15ba63f1ec86217eeb8c2df3520}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_Init@{FLEXNVM\_Init}}
+\index{FLEXNVM\_Init@{FLEXNVM\_Init}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_Init()}{FLEXNVM\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Initializes the global flash properties structure members. 
+
+This function checks and initializes the Flash module for the other Flash A\+P\+Is.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the storage for the driver runtime state.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609abc388f09a5b298bad7c019b69aa0e6da}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Partition\+Status\+Update\+Failure}}} & Failed to update the partition status. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_gaa798a68df63a40895cc807e4e2ccb20f}\label{group__ftfx__flexnvm__driver_gaa798a68df63a40895cc807e4e2ccb20f}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_ProgramPartition@{FLEXNVM\_ProgramPartition}}
+\index{FLEXNVM\_ProgramPartition@{FLEXNVM\_ProgramPartition}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_ProgramPartition()}{FLEXNVM\_ProgramPartition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Program\+Partition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{\mbox{\hyperlink{group__ftfx__controller_ga78043d7b5753a2e4f6f61fe8bbae68d0}{ftfx\+\_\+partition\+\_\+flexram\+\_\+load\+\_\+opt\+\_\+t}}}]{option,  }\item[{uint32\+\_\+t}]{eeprom\+Data\+Size\+Code,  }\item[{uint32\+\_\+t}]{flexnvm\+Partition\+Code }\end{DoxyParamCaption})}
+
+
+
+Programs flash with data at locations passed in through parameters via the Program Section command. 
+
+This function programs the flash memory with the desired data for a given flash area as determined by the start address and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be programmed. Must be word-\/aligned. \\
+\hline
+{\em src} & A pointer to the source buffer of data that is to be programmed into the flash. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be programmed. Must be word-\/aligned.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & Parameter is not aligned with specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & Address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a02f24c8d5201a184285ebd46e0134317}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Set\+Flexram\+As\+Ram\+Error}}} & Failed to set flexram as R\+AM. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during command execution. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a72f8274d1d0c96d997cbf60a961d4baf}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Recover\+Flexram\+As\+Eeprom\+Error}}} & Failed to recover Flex\+R\+AM as E\+E\+P\+R\+OM.\\
+\hline
+\end{DoxyRetVals}
+Prepares the Flex\+N\+VM block for use as data flash, E\+E\+P\+R\+OM backup, or a combination of both and initializes the Flex\+R\+AM.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to storage for the driver runtime state. \\
+\hline
+{\em option} & The option used to set Flex\+R\+AM load behavior during reset. \\
+\hline
+{\em eeprom\+Data\+Size\+Code} & Determines the amount of Flex\+R\+AM used in each of the available E\+E\+P\+R\+OM subsystems. \\
+\hline
+{\em flexnvm\+Partition\+Code} & Specifies how to split the Flex\+N\+VM block between data flash memory and E\+E\+P\+R\+OM backup memory supporting E\+E\+P\+R\+OM functions.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & Invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga16bdc534eb341b53582680955b37d740}\label{group__ftfx__flexnvm__driver_ga16bdc534eb341b53582680955b37d740}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_SecurityBypass@{FLEXNVM\_SecurityBypass}}
+\index{FLEXNVM\_SecurityBypass@{FLEXNVM\_SecurityBypass}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_SecurityBypass()}{FLEXNVM\_SecurityBypass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Security\+Bypass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{const uint8\+\_\+t $\ast$}]{backdoor\+Key }\end{DoxyParamCaption})}
+
+
+
+Allows users to bypass security with a backdoor key. 
+
+If the M\+CU is in secured state, this function unsecures the M\+CU by comparing the provided backdoor key with ones in the flash configuration field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em backdoor\+Key} & A pointer to the user buffer containing the backdoor key.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__flexnvm__driver_ga4478096a94795d67d2705adb7a740fe7}\label{group__ftfx__flexnvm__driver_ga4478096a94795d67d2705adb7a740fe7}} 
+\index{Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}!FLEXNVM\_VerifyEraseAll@{FLEXNVM\_VerifyEraseAll}}
+\index{FLEXNVM\_VerifyEraseAll@{FLEXNVM\_VerifyEraseAll}!Ftfx\_flexnvm\_driver@{Ftfx\_flexnvm\_driver}}
+\subsubsection{\texorpdfstring{FLEXNVM\_VerifyEraseAll()}{FLEXNVM\_VerifyEraseAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+L\+E\+X\+N\+V\+M\+\_\+\+Verify\+Erase\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__flexnvm__driver_ga8fd4d473c0a4b30cac163160fb28a6c1}{flexnvm\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{\mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}}}]{margin }\end{DoxyParamCaption})}
+
+
+
+Verifies erasure of the entire flash at a specified margin level. 
+
+This function checks whether the flash is erased to the specified read margin level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em margin} & Read margin choice.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}

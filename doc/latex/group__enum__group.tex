@@ -1,0 +1,501 @@
+\hypertarget{group__enum__group}{}\section{Enum\+\_\+group}
+\label{group__enum__group}\index{Enum\_group@{Enum\_group}}
+
+
+Selection of the timer type that is present on used M\+CU (T\+PM or F\+TM peripheral).  
+
+
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__enum__group_ga9397b43bce49e439e9086551951eb555}\label{group__enum__group_ga9397b43bce49e439e9086551951eb555}} 
+enum {\bfseries aml\+\_\+groups} \{ \newline
+{\bfseries k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+S\+PI} = 101, 
+{\bfseries k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+T\+MR} = 102, 
+{\bfseries k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+I2C} = 103, 
+{\bfseries k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+G\+P\+IO} = 104, 
+\newline
+{\bfseries k\+Status\+Group\+\_\+\+Reserved} = 110, 
+{\bfseries k\+Status\+Group\+\_\+\+Valve\+Driver} = 111, 
+{\bfseries k\+Status\+Group\+\_\+\+S\+HB} = 112, 
+{\bfseries k\+Status\+Group\+\_\+\+SF} = 113, 
+\newline
+{\bfseries k\+Status\+Group\+\_\+\+LZ} = 114, 
+{\bfseries k\+Status\+Group\+\_\+\+T\+PP} = 115, 
+{\bfseries k\+Status\+Group\+\_\+\+M\+V\+HB} = 116, 
+{\bfseries k\+Status\+Group\+\_\+\+L\+V\+HB} = 117, 
+\newline
+{\bfseries k\+Status\+Group\+\_\+\+B\+CC} = 118, 
+{\bfseries k\+Status\+Group\+\_\+\+A\+SL} = 119, 
+{\bfseries k\+Status\+Group\+\_\+\+F\+S65} = 120
+ \}
+\item 
+enum \mbox{\hyperlink{group__enum__group_ga325a66c5aefcf2c26cd0234c7e4bb0ef}{gpio\+\_\+aml\+\_\+instance\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa94491042822d871e558aa88223273566}{instanceA}} = 0U, 
+\mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa78f5050ddbdfa41568a9e85cd3c732a8}{instanceB}}, 
+\mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efaa48052cc680e9f75e9933f4c782df496}{instanceC}}, 
+\mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa867ccd8588650dbc8d8815973e0462b2}{instanceD}}, 
+\newline
+\mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efac17c5c16669ab8617154c2bd03d83ac9}{instanceE}}, 
+\mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa8d31a623541a846a1231809fd28fedf7}{instanceF}}, 
+\mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa464d561741298e4a1c64a2206ec4eb2e}{instanceG}}, 
+\mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa7706a05384e9902f15608c4c95fc08f4}{instanceH}}, 
+\newline
+\mbox{\hyperlink{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa857bfe4f3ccd89d4acba0823c310a71f}{instanceI}}
+ \}
+\begin{DoxyCompactList}\small\item\em Instance of G\+P\+IO peripheral (G\+P\+IO A = instanceA). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_gabdc751b721ec203728375016e2dabc27}{gpio\+\_\+aml\+\_\+pin\+\_\+direction\+\_\+t}} \{ \mbox{\hyperlink{group__enum__group_ggabdc751b721ec203728375016e2dabc27ac792029fc2da8d986431b95c00052657}{gpio\+Dir\+Digital\+Input}} = 0U, 
+\mbox{\hyperlink{group__enum__group_ggabdc751b721ec203728375016e2dabc27aab3c655a884dbf7316350ac4cf98614a}{gpio\+Dir\+Digital\+Output}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em G\+P\+IO peripheral direction. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_ga7eabcde60f10dd4e678bfafb2c66e618}{\+\_\+spi\+\_\+aml\+\_\+status}} \{ \mbox{\hyperlink{group__enum__group_gga7eabcde60f10dd4e678bfafb2c66e618aee97661a5080945d517bb59648de934e}{k\+Status\+\_\+\+A\+M\+L\+\_\+\+S\+P\+I\+\_\+\+Busy}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+S\+PI, 0), 
+\mbox{\hyperlink{group__enum__group_gga7eabcde60f10dd4e678bfafb2c66e618ab50871cf42253a19dd8ccc1de1561dd7}{k\+Status\+\_\+\+A\+M\+L\+\_\+\+S\+P\+I\+\_\+\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+S\+PI, 1)
+ \}
+\begin{DoxyCompactList}\small\item\em Error codes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_gaf2c0a2911c01ceb543ef11a8f6334764}{spi\+\_\+aml\+\_\+bitcount\+\_\+t}} \{ \mbox{\hyperlink{group__enum__group_ggaf2c0a2911c01ceb543ef11a8f6334764a6e867f2c72aa55914803493c972aedf2}{spi\+Bitcount8bit}} = 0x0U, 
+\mbox{\hyperlink{group__enum__group_ggaf2c0a2911c01ceb543ef11a8f6334764a5c2d0efdb0a6d7b3742acc5e0c7b3146}{spi\+Bitcount16bit}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em Number of bits per frame (8 or 16 bits). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_gaa95bcc4aa184cc2df42df55e6d8c2d3a}{spi\+\_\+aml\+\_\+clock\+\_\+phase\+\_\+t}} \{ \mbox{\hyperlink{group__enum__group_ggaa95bcc4aa184cc2df42df55e6d8c2d3aaec1cd61e1e61c864a36166105525dd86}{spi\+Clock\+Phase\+First\+Edge}} = 0x0U, 
+\mbox{\hyperlink{group__enum__group_ggaa95bcc4aa184cc2df42df55e6d8c2d3aaf4fa237620d516ad44263d9573441a6c}{spi\+Clock\+Phase\+Second\+Edge}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em Clock phase. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_ga846bf859b73b0a584889013e680bdc5f}{spi\+\_\+aml\+\_\+clock\+\_\+polarity\+\_\+t}} \{ \mbox{\hyperlink{group__enum__group_gga846bf859b73b0a584889013e680bdc5fa2d992758dc7e1f13b28bf2dbe0feec80}{spi\+Clock\+Polarity\+Active\+High}} = 0x0U, 
+\mbox{\hyperlink{group__enum__group_gga846bf859b73b0a584889013e680bdc5fae4f4430c6e748f6c30c8d26d160fb358}{spi\+Clock\+Polarity\+Active\+Low}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em Clock polarity. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}} \{ \mbox{\hyperlink{group__enum__group_gga376ab165389ceb9a6e3f763263ff7e06aeacea8171fe36165febd7a9d7f38beb8}{spi\+Pcs\+Active\+High}} = 0x0U, 
+\mbox{\hyperlink{group__enum__group_gga376ab165389ceb9a6e3f763263ff7e06ab02bf7ebed3eb20339afa9d14aa81155}{spi\+Pcs\+Active\+Low}} = 0x1U
+ \}
+\begin{DoxyCompactList}\small\item\em Active level of chip select pin (P\+CS). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_ga6ce2dec1c04ab59872ebaf44bd4f4682}{tmr\+\_\+aml\+\_\+pwm\+\_\+act\+\_\+t}} \{ \mbox{\hyperlink{group__enum__group_gga6ce2dec1c04ab59872ebaf44bd4f4682ab65ff56dc34163aa7481bc542c25643e}{tmr\+Pwm\+Act\+No\+Signal}} = 0U, 
+\mbox{\hyperlink{group__enum__group_gga6ce2dec1c04ab59872ebaf44bd4f4682ac425e1b4da4df82f68817fcf0d54c99f}{tmr\+Pwm\+Act\+Low\+True}}, 
+\mbox{\hyperlink{group__enum__group_gga6ce2dec1c04ab59872ebaf44bd4f4682a1e501bfa74529c8aff6a4ed6b2f776b9}{tmr\+Pwm\+Act\+High\+True}}
+ \}
+\begin{DoxyCompactList}\small\item\em Timer channel operation modes, which defines output action in edge/center aligned mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_ga50dbf45b245f7b30d865189716b25db5}{tmr\+\_\+aml\+\_\+outcmp\+\_\+act\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__enum__group_gga50dbf45b245f7b30d865189716b25db5aaad1b16e240f58c96965f0232424b7f7}{tmr\+Out\+Act\+No\+Signal}} = 0U, 
+\mbox{\hyperlink{group__enum__group_gga50dbf45b245f7b30d865189716b25db5ae4bc308696c2de2854df3e4380a5a65e}{tmr\+Out\+Act\+Toggle\+On\+Match}}, 
+\mbox{\hyperlink{group__enum__group_gga50dbf45b245f7b30d865189716b25db5a700ceb754c248f0431728cc67ac90f98}{tmr\+Out\+Act\+Clear\+On\+Match}}, 
+\mbox{\hyperlink{group__enum__group_gga50dbf45b245f7b30d865189716b25db5a5cb8b356632f5ba0ea011ac829e2c6a6}{tmr\+Out\+Act\+Set\+On\+Match}}, 
+\newline
+\mbox{\hyperlink{group__enum__group_gga50dbf45b245f7b30d865189716b25db5adfca46535f9fb0d1068dd19cd5c86674}{tmr\+Out\+Act\+High\+Pulse\+Output}}, 
+\mbox{\hyperlink{group__enum__group_gga50dbf45b245f7b30d865189716b25db5a414ef18f2393379ce83d339e513e174e}{tmr\+Out\+Act\+Low\+Pulse\+Output}}
+ \}
+\begin{DoxyCompactList}\small\item\em Timer channel operation modes, which defines output action in output compare mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_ga89574487805ce2171aa6f0168a3359a0}{tmr\+\_\+clk\+\_\+prescale\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a72a5cdd91291d6b6cfa9fe634b109d63}{tmr\+Presc\+Div\+\_\+1}} = 0U, 
+\mbox{\hyperlink{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a35bd8ddbba1fea330ec5ec25419464b3}{tmr\+Presc\+Div\+\_\+2}}, 
+\mbox{\hyperlink{group__enum__group_gga89574487805ce2171aa6f0168a3359a0ad2ee9e5f5a0b29381f3a5bae60235243}{tmr\+Presc\+Div\+\_\+4}}, 
+\mbox{\hyperlink{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a733478c2e8bab69b2f181d86055d8348}{tmr\+Presc\+Div\+\_\+8}}, 
+\newline
+\mbox{\hyperlink{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a28d6c29f7e0dac0d01d457438bb24447}{tmr\+Presc\+Div\+\_\+16}}, 
+\mbox{\hyperlink{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a32bcfbfa158de9a42ca1ae238188e625}{tmr\+Presc\+Div\+\_\+32}}, 
+\mbox{\hyperlink{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a11e20b835fa1abc20f0683221513fa56}{tmr\+Presc\+Div\+\_\+64}}, 
+\mbox{\hyperlink{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a097c5fba952aad5a55a4e920c11b4ef8}{tmr\+Presc\+Div\+\_\+128}}
+ \}
+\begin{DoxyCompactList}\small\item\em Timer prescale value selection for the clock source. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_gaa9b50d4e28389b134475b2dbb5846b17}{tmr\+\_\+aml\+\_\+int\+\_\+flags\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a4acd7c09e0a47f0569baee418f9641ea}{tmr\+Int\+Chnl0}} = (1U $<$$<$ 0), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17ab4d6bf48c75c1dfcefcc9b2774a22c62}{tmr\+Int\+Chnl1}} = (1U $<$$<$ 1), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17ae4f49d517742b76708ffb9673c6acc65}{tmr\+Int\+Chnl2}} = (1U $<$$<$ 2), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a95e13854acdc91a76895d8149aa013b4}{tmr\+Int\+Chnl3}} = (1U $<$$<$ 3), 
+\newline
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a8581914354b56e8e31f0d4c289c4d7f4}{tmr\+Int\+Chnl4}} = (1U $<$$<$ 4), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17aecddfbac211b2a93915e85535c9e26e2}{tmr\+Int\+Chnl5}} = (1U $<$$<$ 5), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17aeb8c42f578ea11ae61047e4b59e36d76}{tmr\+Int\+Chnl6}} = (1U $<$$<$ 6), 
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a9bedb729137293a4358f0bd4e25098f1}{tmr\+Int\+Chnl7}} = (1U $<$$<$ 7), 
+\newline
+\mbox{\hyperlink{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a3b05a044c7e411d95eff939a195ac322}{tmr\+Int\+Time\+Overflow}} = (1U $<$$<$ 8)
+ \}
+\begin{DoxyCompactList}\small\item\em Timer interrupt flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__enum__group_gaedc3704bf4a783ff4204528e405541f9}{tmr\+\_\+aml\+\_\+status\+\_\+flags\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ae1c2d7a0c81cfb245fa66df17ef8dcc7}{tmr\+Sts\+Chnl0}} = (1U $<$$<$ 0), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ab91b617f53bd37caf4ee4aef0839cb0b}{tmr\+Sts\+Chnl1}} = (1U $<$$<$ 1), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9aed8c2e0481c23a78bf35cb6b76572d54}{tmr\+Sts\+Chnl2}} = (1U $<$$<$ 2), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9a0240836c4e0c16f246436590c8039c59}{tmr\+Sts\+Chnl3}} = (1U $<$$<$ 3), 
+\newline
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ade970899545cc35f15a9876247410217}{tmr\+Sts\+Chnl4}} = (1U $<$$<$ 4), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9a5bbf620c431981322ee28477d4618b45}{tmr\+Sts\+Chnl5}} = (1U $<$$<$ 5), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ab658853b9791f607aeb29bc212c91aba}{tmr\+Sts\+Chnl6}} = (1U $<$$<$ 6), 
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9adde8b58a79b90386b1ac8e80014a3b5d}{tmr\+Sts\+Chnl7}} = (1U $<$$<$ 7), 
+\newline
+\mbox{\hyperlink{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9add11f38c5812b837a54c82aeb2bc7123}{tmr\+Sts\+Time\+Overflow}} = (1U $<$$<$ 8)
+ \}
+\begin{DoxyCompactList}\small\item\em Timer status flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Selection of the timer type that is present on used M\+CU (T\+PM or F\+TM peripheral). 
+
+This option configures the A\+ML timer driver for desired timer type. Use macros defined above (T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+T\+PM or T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+F\+TM). 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__enum__group_ga7eabcde60f10dd4e678bfafb2c66e618}\label{group__enum__group_ga7eabcde60f10dd4e678bfafb2c66e618}} 
+\index{Enum\_group@{Enum\_group}!\_spi\_aml\_status@{\_spi\_aml\_status}}
+\index{\_spi\_aml\_status@{\_spi\_aml\_status}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{\_spi\_aml\_status}{\_spi\_aml\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_ga7eabcde60f10dd4e678bfafb2c66e618}{\+\_\+spi\+\_\+aml\+\_\+status}}}
+
+
+
+Error codes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_AML\_SPI\_Busy@{kStatus\_AML\_SPI\_Busy}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!kStatus\_AML\_SPI\_Busy@{kStatus\_AML\_SPI\_Busy}}}\mbox{\Hypertarget{group__enum__group_gga7eabcde60f10dd4e678bfafb2c66e618aee97661a5080945d517bb59648de934e}\label{group__enum__group_gga7eabcde60f10dd4e678bfafb2c66e618aee97661a5080945d517bb59648de934e}} 
+k\+Status\+\_\+\+A\+M\+L\+\_\+\+S\+P\+I\+\_\+\+Busy&S\+PI transfer is busy. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_AML\_SPI\_Error@{kStatus\_AML\_SPI\_Error}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!kStatus\_AML\_SPI\_Error@{kStatus\_AML\_SPI\_Error}}}\mbox{\Hypertarget{group__enum__group_gga7eabcde60f10dd4e678bfafb2c66e618ab50871cf42253a19dd8ccc1de1561dd7}\label{group__enum__group_gga7eabcde60f10dd4e678bfafb2c66e618ab50871cf42253a19dd8ccc1de1561dd7}} 
+k\+Status\+\_\+\+A\+M\+L\+\_\+\+S\+P\+I\+\_\+\+Error&Other S\+PI driver error. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_ga325a66c5aefcf2c26cd0234c7e4bb0ef}\label{group__enum__group_ga325a66c5aefcf2c26cd0234c7e4bb0ef}} 
+\index{Enum\_group@{Enum\_group}!gpio\_aml\_instance\_t@{gpio\_aml\_instance\_t}}
+\index{gpio\_aml\_instance\_t@{gpio\_aml\_instance\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{gpio\_aml\_instance\_t}{gpio\_aml\_instance\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_ga325a66c5aefcf2c26cd0234c7e4bb0ef}{gpio\+\_\+aml\+\_\+instance\+\_\+t}}}
+
+
+
+Instance of G\+P\+IO peripheral (G\+P\+IO A = instanceA). 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{instanceA@{instanceA}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!instanceA@{instanceA}}}\mbox{\Hypertarget{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa94491042822d871e558aa88223273566}\label{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa94491042822d871e558aa88223273566}} 
+instanceA&G\+P\+IO A. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{instanceB@{instanceB}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!instanceB@{instanceB}}}\mbox{\Hypertarget{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa78f5050ddbdfa41568a9e85cd3c732a8}\label{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa78f5050ddbdfa41568a9e85cd3c732a8}} 
+instanceB&G\+P\+IO B. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{instanceC@{instanceC}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!instanceC@{instanceC}}}\mbox{\Hypertarget{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efaa48052cc680e9f75e9933f4c782df496}\label{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efaa48052cc680e9f75e9933f4c782df496}} 
+instanceC&G\+P\+IO C. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{instanceD@{instanceD}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!instanceD@{instanceD}}}\mbox{\Hypertarget{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa867ccd8588650dbc8d8815973e0462b2}\label{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa867ccd8588650dbc8d8815973e0462b2}} 
+instanceD&G\+P\+IO D. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{instanceE@{instanceE}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!instanceE@{instanceE}}}\mbox{\Hypertarget{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efac17c5c16669ab8617154c2bd03d83ac9}\label{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efac17c5c16669ab8617154c2bd03d83ac9}} 
+instanceE&G\+P\+IO E. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{instanceF@{instanceF}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!instanceF@{instanceF}}}\mbox{\Hypertarget{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa8d31a623541a846a1231809fd28fedf7}\label{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa8d31a623541a846a1231809fd28fedf7}} 
+instanceF&G\+P\+IO F. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{instanceG@{instanceG}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!instanceG@{instanceG}}}\mbox{\Hypertarget{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa464d561741298e4a1c64a2206ec4eb2e}\label{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa464d561741298e4a1c64a2206ec4eb2e}} 
+instanceG&G\+P\+IO G. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{instanceH@{instanceH}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!instanceH@{instanceH}}}\mbox{\Hypertarget{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa7706a05384e9902f15608c4c95fc08f4}\label{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa7706a05384e9902f15608c4c95fc08f4}} 
+instanceH&G\+P\+IO H. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{instanceI@{instanceI}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!instanceI@{instanceI}}}\mbox{\Hypertarget{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa857bfe4f3ccd89d4acba0823c310a71f}\label{group__enum__group_gga325a66c5aefcf2c26cd0234c7e4bb0efa857bfe4f3ccd89d4acba0823c310a71f}} 
+instanceI&G\+P\+IO I. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_gabdc751b721ec203728375016e2dabc27}\label{group__enum__group_gabdc751b721ec203728375016e2dabc27}} 
+\index{Enum\_group@{Enum\_group}!gpio\_aml\_pin\_direction\_t@{gpio\_aml\_pin\_direction\_t}}
+\index{gpio\_aml\_pin\_direction\_t@{gpio\_aml\_pin\_direction\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{gpio\_aml\_pin\_direction\_t}{gpio\_aml\_pin\_direction\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_gabdc751b721ec203728375016e2dabc27}{gpio\+\_\+aml\+\_\+pin\+\_\+direction\+\_\+t}}}
+
+
+
+G\+P\+IO peripheral direction. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gpioDirDigitalInput@{gpioDirDigitalInput}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!gpioDirDigitalInput@{gpioDirDigitalInput}}}\mbox{\Hypertarget{group__enum__group_ggabdc751b721ec203728375016e2dabc27ac792029fc2da8d986431b95c00052657}\label{group__enum__group_ggabdc751b721ec203728375016e2dabc27ac792029fc2da8d986431b95c00052657}} 
+gpio\+Dir\+Digital\+Input&Set current pin as digital input. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gpioDirDigitalOutput@{gpioDirDigitalOutput}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!gpioDirDigitalOutput@{gpioDirDigitalOutput}}}\mbox{\Hypertarget{group__enum__group_ggabdc751b721ec203728375016e2dabc27aab3c655a884dbf7316350ac4cf98614a}\label{group__enum__group_ggabdc751b721ec203728375016e2dabc27aab3c655a884dbf7316350ac4cf98614a}} 
+gpio\+Dir\+Digital\+Output&Set current pin as digital output. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_gaf2c0a2911c01ceb543ef11a8f6334764}\label{group__enum__group_gaf2c0a2911c01ceb543ef11a8f6334764}} 
+\index{Enum\_group@{Enum\_group}!spi\_aml\_bitcount\_t@{spi\_aml\_bitcount\_t}}
+\index{spi\_aml\_bitcount\_t@{spi\_aml\_bitcount\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{spi\_aml\_bitcount\_t}{spi\_aml\_bitcount\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_gaf2c0a2911c01ceb543ef11a8f6334764}{spi\+\_\+aml\+\_\+bitcount\+\_\+t}}}
+
+
+
+Number of bits per frame (8 or 16 bits). 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiBitcount8bit@{spiBitcount8bit}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!spiBitcount8bit@{spiBitcount8bit}}}\mbox{\Hypertarget{group__enum__group_ggaf2c0a2911c01ceb543ef11a8f6334764a6e867f2c72aa55914803493c972aedf2}\label{group__enum__group_ggaf2c0a2911c01ceb543ef11a8f6334764a6e867f2c72aa55914803493c972aedf2}} 
+spi\+Bitcount8bit&8 bits per frame. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiBitcount16bit@{spiBitcount16bit}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!spiBitcount16bit@{spiBitcount16bit}}}\mbox{\Hypertarget{group__enum__group_ggaf2c0a2911c01ceb543ef11a8f6334764a5c2d0efdb0a6d7b3742acc5e0c7b3146}\label{group__enum__group_ggaf2c0a2911c01ceb543ef11a8f6334764a5c2d0efdb0a6d7b3742acc5e0c7b3146}} 
+spi\+Bitcount16bit&16 bits per frame. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_gaa95bcc4aa184cc2df42df55e6d8c2d3a}\label{group__enum__group_gaa95bcc4aa184cc2df42df55e6d8c2d3a}} 
+\index{Enum\_group@{Enum\_group}!spi\_aml\_clock\_phase\_t@{spi\_aml\_clock\_phase\_t}}
+\index{spi\_aml\_clock\_phase\_t@{spi\_aml\_clock\_phase\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{spi\_aml\_clock\_phase\_t}{spi\_aml\_clock\_phase\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_gaa95bcc4aa184cc2df42df55e6d8c2d3a}{spi\+\_\+aml\+\_\+clock\+\_\+phase\+\_\+t}}}
+
+
+
+Clock phase. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiClockPhaseFirstEdge@{spiClockPhaseFirstEdge}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!spiClockPhaseFirstEdge@{spiClockPhaseFirstEdge}}}\mbox{\Hypertarget{group__enum__group_ggaa95bcc4aa184cc2df42df55e6d8c2d3aaec1cd61e1e61c864a36166105525dd86}\label{group__enum__group_ggaa95bcc4aa184cc2df42df55e6d8c2d3aaec1cd61e1e61c864a36166105525dd86}} 
+spi\+Clock\+Phase\+First\+Edge&Data is captured on the leading edge of the S\+CK and changed on the following edge. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiClockPhaseSecondEdge@{spiClockPhaseSecondEdge}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!spiClockPhaseSecondEdge@{spiClockPhaseSecondEdge}}}\mbox{\Hypertarget{group__enum__group_ggaa95bcc4aa184cc2df42df55e6d8c2d3aaf4fa237620d516ad44263d9573441a6c}\label{group__enum__group_ggaa95bcc4aa184cc2df42df55e6d8c2d3aaf4fa237620d516ad44263d9573441a6c}} 
+spi\+Clock\+Phase\+Second\+Edge&Data is changed on the leading edge of the S\+CK and captured on the following edge. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_ga846bf859b73b0a584889013e680bdc5f}\label{group__enum__group_ga846bf859b73b0a584889013e680bdc5f}} 
+\index{Enum\_group@{Enum\_group}!spi\_aml\_clock\_polarity\_t@{spi\_aml\_clock\_polarity\_t}}
+\index{spi\_aml\_clock\_polarity\_t@{spi\_aml\_clock\_polarity\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{spi\_aml\_clock\_polarity\_t}{spi\_aml\_clock\_polarity\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_ga846bf859b73b0a584889013e680bdc5f}{spi\+\_\+aml\+\_\+clock\+\_\+polarity\+\_\+t}}}
+
+
+
+Clock polarity. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiClockPolarityActiveHigh@{spiClockPolarityActiveHigh}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!spiClockPolarityActiveHigh@{spiClockPolarityActiveHigh}}}\mbox{\Hypertarget{group__enum__group_gga846bf859b73b0a584889013e680bdc5fa2d992758dc7e1f13b28bf2dbe0feec80}\label{group__enum__group_gga846bf859b73b0a584889013e680bdc5fa2d992758dc7e1f13b28bf2dbe0feec80}} 
+spi\+Clock\+Polarity\+Active\+High&Active-\/high S\+PI clock (idles low). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiClockPolarityActiveLow@{spiClockPolarityActiveLow}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!spiClockPolarityActiveLow@{spiClockPolarityActiveLow}}}\mbox{\Hypertarget{group__enum__group_gga846bf859b73b0a584889013e680bdc5fae4f4430c6e748f6c30c8d26d160fb358}\label{group__enum__group_gga846bf859b73b0a584889013e680bdc5fae4f4430c6e748f6c30c8d26d160fb358}} 
+spi\+Clock\+Polarity\+Active\+Low&Active-\/low S\+PI clock (idles high). \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}\label{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}} 
+\index{Enum\_group@{Enum\_group}!spi\_aml\_pcs\_polarity\_t@{spi\_aml\_pcs\_polarity\_t}}
+\index{spi\_aml\_pcs\_polarity\_t@{spi\_aml\_pcs\_polarity\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{spi\_aml\_pcs\_polarity\_t}{spi\_aml\_pcs\_polarity\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}}}
+
+
+
+Active level of chip select pin (P\+CS). 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiPcsActiveHigh@{spiPcsActiveHigh}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!spiPcsActiveHigh@{spiPcsActiveHigh}}}\mbox{\Hypertarget{group__enum__group_gga376ab165389ceb9a6e3f763263ff7e06aeacea8171fe36165febd7a9d7f38beb8}\label{group__enum__group_gga376ab165389ceb9a6e3f763263ff7e06aeacea8171fe36165febd7a9d7f38beb8}} 
+spi\+Pcs\+Active\+High&Pcs Active High (idles low). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiPcsActiveLow@{spiPcsActiveLow}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!spiPcsActiveLow@{spiPcsActiveLow}}}\mbox{\Hypertarget{group__enum__group_gga376ab165389ceb9a6e3f763263ff7e06ab02bf7ebed3eb20339afa9d14aa81155}\label{group__enum__group_gga376ab165389ceb9a6e3f763263ff7e06ab02bf7ebed3eb20339afa9d14aa81155}} 
+spi\+Pcs\+Active\+Low&Pcs Active Low (idles high). \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_gaa9b50d4e28389b134475b2dbb5846b17}\label{group__enum__group_gaa9b50d4e28389b134475b2dbb5846b17}} 
+\index{Enum\_group@{Enum\_group}!tmr\_aml\_int\_flags\_t@{tmr\_aml\_int\_flags\_t}}
+\index{tmr\_aml\_int\_flags\_t@{tmr\_aml\_int\_flags\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{tmr\_aml\_int\_flags\_t}{tmr\_aml\_int\_flags\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_gaa9b50d4e28389b134475b2dbb5846b17}{tmr\+\_\+aml\+\_\+int\+\_\+flags\+\_\+t}}}
+
+
+
+Timer interrupt flags. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrIntChnl0@{tmrIntChnl0}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrIntChnl0@{tmrIntChnl0}}}\mbox{\Hypertarget{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a4acd7c09e0a47f0569baee418f9641ea}\label{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a4acd7c09e0a47f0569baee418f9641ea}} 
+tmr\+Int\+Chnl0&Channel 0 interrupt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrIntChnl1@{tmrIntChnl1}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrIntChnl1@{tmrIntChnl1}}}\mbox{\Hypertarget{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17ab4d6bf48c75c1dfcefcc9b2774a22c62}\label{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17ab4d6bf48c75c1dfcefcc9b2774a22c62}} 
+tmr\+Int\+Chnl1&Channel 1 interrupt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrIntChnl2@{tmrIntChnl2}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrIntChnl2@{tmrIntChnl2}}}\mbox{\Hypertarget{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17ae4f49d517742b76708ffb9673c6acc65}\label{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17ae4f49d517742b76708ffb9673c6acc65}} 
+tmr\+Int\+Chnl2&Channel 2 interrupt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrIntChnl3@{tmrIntChnl3}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrIntChnl3@{tmrIntChnl3}}}\mbox{\Hypertarget{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a95e13854acdc91a76895d8149aa013b4}\label{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a95e13854acdc91a76895d8149aa013b4}} 
+tmr\+Int\+Chnl3&Channel 3 interrupt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrIntChnl4@{tmrIntChnl4}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrIntChnl4@{tmrIntChnl4}}}\mbox{\Hypertarget{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a8581914354b56e8e31f0d4c289c4d7f4}\label{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a8581914354b56e8e31f0d4c289c4d7f4}} 
+tmr\+Int\+Chnl4&Channel 4 interrupt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrIntChnl5@{tmrIntChnl5}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrIntChnl5@{tmrIntChnl5}}}\mbox{\Hypertarget{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17aecddfbac211b2a93915e85535c9e26e2}\label{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17aecddfbac211b2a93915e85535c9e26e2}} 
+tmr\+Int\+Chnl5&Channel 5 interrupt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrIntChnl6@{tmrIntChnl6}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrIntChnl6@{tmrIntChnl6}}}\mbox{\Hypertarget{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17aeb8c42f578ea11ae61047e4b59e36d76}\label{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17aeb8c42f578ea11ae61047e4b59e36d76}} 
+tmr\+Int\+Chnl6&Channel 6 interrupt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrIntChnl7@{tmrIntChnl7}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrIntChnl7@{tmrIntChnl7}}}\mbox{\Hypertarget{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a9bedb729137293a4358f0bd4e25098f1}\label{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a9bedb729137293a4358f0bd4e25098f1}} 
+tmr\+Int\+Chnl7&Channel 7 interrupt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrIntTimeOverflow@{tmrIntTimeOverflow}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrIntTimeOverflow@{tmrIntTimeOverflow}}}\mbox{\Hypertarget{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a3b05a044c7e411d95eff939a195ac322}\label{group__enum__group_ggaa9b50d4e28389b134475b2dbb5846b17a3b05a044c7e411d95eff939a195ac322}} 
+tmr\+Int\+Time\+Overflow&Timer overflow interrupt. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_ga50dbf45b245f7b30d865189716b25db5}\label{group__enum__group_ga50dbf45b245f7b30d865189716b25db5}} 
+\index{Enum\_group@{Enum\_group}!tmr\_aml\_outcmp\_act\_t@{tmr\_aml\_outcmp\_act\_t}}
+\index{tmr\_aml\_outcmp\_act\_t@{tmr\_aml\_outcmp\_act\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{tmr\_aml\_outcmp\_act\_t}{tmr\_aml\_outcmp\_act\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_ga50dbf45b245f7b30d865189716b25db5}{tmr\+\_\+aml\+\_\+outcmp\+\_\+act\+\_\+t}}}
+
+
+
+Timer channel operation modes, which defines output action in output compare mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrOutActNoSignal@{tmrOutActNoSignal}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrOutActNoSignal@{tmrOutActNoSignal}}}\mbox{\Hypertarget{group__enum__group_gga50dbf45b245f7b30d865189716b25db5aaad1b16e240f58c96965f0232424b7f7}\label{group__enum__group_gga50dbf45b245f7b30d865189716b25db5aaad1b16e240f58c96965f0232424b7f7}} 
+tmr\+Out\+Act\+No\+Signal&No channel output when counter reaches CnV \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrOutActToggleOnMatch@{tmrOutActToggleOnMatch}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrOutActToggleOnMatch@{tmrOutActToggleOnMatch}}}\mbox{\Hypertarget{group__enum__group_gga50dbf45b245f7b30d865189716b25db5ae4bc308696c2de2854df3e4380a5a65e}\label{group__enum__group_gga50dbf45b245f7b30d865189716b25db5ae4bc308696c2de2854df3e4380a5a65e}} 
+tmr\+Out\+Act\+Toggle\+On\+Match&Toggle output \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrOutActClearOnMatch@{tmrOutActClearOnMatch}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrOutActClearOnMatch@{tmrOutActClearOnMatch}}}\mbox{\Hypertarget{group__enum__group_gga50dbf45b245f7b30d865189716b25db5a700ceb754c248f0431728cc67ac90f98}\label{group__enum__group_gga50dbf45b245f7b30d865189716b25db5a700ceb754c248f0431728cc67ac90f98}} 
+tmr\+Out\+Act\+Clear\+On\+Match&Clear output \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrOutActSetOnMatch@{tmrOutActSetOnMatch}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrOutActSetOnMatch@{tmrOutActSetOnMatch}}}\mbox{\Hypertarget{group__enum__group_gga50dbf45b245f7b30d865189716b25db5a5cb8b356632f5ba0ea011ac829e2c6a6}\label{group__enum__group_gga50dbf45b245f7b30d865189716b25db5a5cb8b356632f5ba0ea011ac829e2c6a6}} 
+tmr\+Out\+Act\+Set\+On\+Match&Set output \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrOutActHighPulseOutput@{tmrOutActHighPulseOutput}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrOutActHighPulseOutput@{tmrOutActHighPulseOutput}}}\mbox{\Hypertarget{group__enum__group_gga50dbf45b245f7b30d865189716b25db5adfca46535f9fb0d1068dd19cd5c86674}\label{group__enum__group_gga50dbf45b245f7b30d865189716b25db5adfca46535f9fb0d1068dd19cd5c86674}} 
+tmr\+Out\+Act\+High\+Pulse\+Output&Pulse output high \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrOutActLowPulseOutput@{tmrOutActLowPulseOutput}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrOutActLowPulseOutput@{tmrOutActLowPulseOutput}}}\mbox{\Hypertarget{group__enum__group_gga50dbf45b245f7b30d865189716b25db5a414ef18f2393379ce83d339e513e174e}\label{group__enum__group_gga50dbf45b245f7b30d865189716b25db5a414ef18f2393379ce83d339e513e174e}} 
+tmr\+Out\+Act\+Low\+Pulse\+Output&Pulse output low \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_ga6ce2dec1c04ab59872ebaf44bd4f4682}\label{group__enum__group_ga6ce2dec1c04ab59872ebaf44bd4f4682}} 
+\index{Enum\_group@{Enum\_group}!tmr\_aml\_pwm\_act\_t@{tmr\_aml\_pwm\_act\_t}}
+\index{tmr\_aml\_pwm\_act\_t@{tmr\_aml\_pwm\_act\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{tmr\_aml\_pwm\_act\_t}{tmr\_aml\_pwm\_act\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_ga6ce2dec1c04ab59872ebaf44bd4f4682}{tmr\+\_\+aml\+\_\+pwm\+\_\+act\+\_\+t}}}
+
+
+
+Timer channel operation modes, which defines output action in edge/center aligned mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPwmActNoSignal@{tmrPwmActNoSignal}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPwmActNoSignal@{tmrPwmActNoSignal}}}\mbox{\Hypertarget{group__enum__group_gga6ce2dec1c04ab59872ebaf44bd4f4682ab65ff56dc34163aa7481bc542c25643e}\label{group__enum__group_gga6ce2dec1c04ab59872ebaf44bd4f4682ab65ff56dc34163aa7481bc542c25643e}} 
+tmr\+Pwm\+Act\+No\+Signal&No P\+WM output on pin \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPwmActLowTrue@{tmrPwmActLowTrue}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPwmActLowTrue@{tmrPwmActLowTrue}}}\mbox{\Hypertarget{group__enum__group_gga6ce2dec1c04ab59872ebaf44bd4f4682ac425e1b4da4df82f68817fcf0d54c99f}\label{group__enum__group_gga6ce2dec1c04ab59872ebaf44bd4f4682ac425e1b4da4df82f68817fcf0d54c99f}} 
+tmr\+Pwm\+Act\+Low\+True&Low true pulses (set output on match, clear output on reload). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPwmActHighTrue@{tmrPwmActHighTrue}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPwmActHighTrue@{tmrPwmActHighTrue}}}\mbox{\Hypertarget{group__enum__group_gga6ce2dec1c04ab59872ebaf44bd4f4682a1e501bfa74529c8aff6a4ed6b2f776b9}\label{group__enum__group_gga6ce2dec1c04ab59872ebaf44bd4f4682a1e501bfa74529c8aff6a4ed6b2f776b9}} 
+tmr\+Pwm\+Act\+High\+True&High true pulses (clear output on match, set output on reload). \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_gaedc3704bf4a783ff4204528e405541f9}\label{group__enum__group_gaedc3704bf4a783ff4204528e405541f9}} 
+\index{Enum\_group@{Enum\_group}!tmr\_aml\_status\_flags\_t@{tmr\_aml\_status\_flags\_t}}
+\index{tmr\_aml\_status\_flags\_t@{tmr\_aml\_status\_flags\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{tmr\_aml\_status\_flags\_t}{tmr\_aml\_status\_flags\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_gaedc3704bf4a783ff4204528e405541f9}{tmr\+\_\+aml\+\_\+status\+\_\+flags\+\_\+t}}}
+
+
+
+Timer status flags. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrStsChnl0@{tmrStsChnl0}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrStsChnl0@{tmrStsChnl0}}}\mbox{\Hypertarget{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ae1c2d7a0c81cfb245fa66df17ef8dcc7}\label{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ae1c2d7a0c81cfb245fa66df17ef8dcc7}} 
+tmr\+Sts\+Chnl0&Channel 0 flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrStsChnl1@{tmrStsChnl1}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrStsChnl1@{tmrStsChnl1}}}\mbox{\Hypertarget{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ab91b617f53bd37caf4ee4aef0839cb0b}\label{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ab91b617f53bd37caf4ee4aef0839cb0b}} 
+tmr\+Sts\+Chnl1&Channel 1 flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrStsChnl2@{tmrStsChnl2}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrStsChnl2@{tmrStsChnl2}}}\mbox{\Hypertarget{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9aed8c2e0481c23a78bf35cb6b76572d54}\label{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9aed8c2e0481c23a78bf35cb6b76572d54}} 
+tmr\+Sts\+Chnl2&Channel 2 flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrStsChnl3@{tmrStsChnl3}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrStsChnl3@{tmrStsChnl3}}}\mbox{\Hypertarget{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9a0240836c4e0c16f246436590c8039c59}\label{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9a0240836c4e0c16f246436590c8039c59}} 
+tmr\+Sts\+Chnl3&Channel 3 flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrStsChnl4@{tmrStsChnl4}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrStsChnl4@{tmrStsChnl4}}}\mbox{\Hypertarget{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ade970899545cc35f15a9876247410217}\label{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ade970899545cc35f15a9876247410217}} 
+tmr\+Sts\+Chnl4&Channel 4 flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrStsChnl5@{tmrStsChnl5}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrStsChnl5@{tmrStsChnl5}}}\mbox{\Hypertarget{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9a5bbf620c431981322ee28477d4618b45}\label{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9a5bbf620c431981322ee28477d4618b45}} 
+tmr\+Sts\+Chnl5&Channel 5 flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrStsChnl6@{tmrStsChnl6}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrStsChnl6@{tmrStsChnl6}}}\mbox{\Hypertarget{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ab658853b9791f607aeb29bc212c91aba}\label{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9ab658853b9791f607aeb29bc212c91aba}} 
+tmr\+Sts\+Chnl6&Channel 6 flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrStsChnl7@{tmrStsChnl7}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrStsChnl7@{tmrStsChnl7}}}\mbox{\Hypertarget{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9adde8b58a79b90386b1ac8e80014a3b5d}\label{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9adde8b58a79b90386b1ac8e80014a3b5d}} 
+tmr\+Sts\+Chnl7&Channel 7 flag. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrStsTimeOverflow@{tmrStsTimeOverflow}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrStsTimeOverflow@{tmrStsTimeOverflow}}}\mbox{\Hypertarget{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9add11f38c5812b837a54c82aeb2bc7123}\label{group__enum__group_ggaedc3704bf4a783ff4204528e405541f9add11f38c5812b837a54c82aeb2bc7123}} 
+tmr\+Sts\+Time\+Overflow&Time overflow flag. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__enum__group_ga89574487805ce2171aa6f0168a3359a0}\label{group__enum__group_ga89574487805ce2171aa6f0168a3359a0}} 
+\index{Enum\_group@{Enum\_group}!tmr\_clk\_prescale\_t@{tmr\_clk\_prescale\_t}}
+\index{tmr\_clk\_prescale\_t@{tmr\_clk\_prescale\_t}!Enum\_group@{Enum\_group}}
+\subsubsection{\texorpdfstring{tmr\_clk\_prescale\_t}{tmr\_clk\_prescale\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__enum__group_ga89574487805ce2171aa6f0168a3359a0}{tmr\+\_\+clk\+\_\+prescale\+\_\+t}}}
+
+
+
+Timer prescale value selection for the clock source. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPrescDiv\_1@{tmrPrescDiv\_1}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPrescDiv\_1@{tmrPrescDiv\_1}}}\mbox{\Hypertarget{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a72a5cdd91291d6b6cfa9fe634b109d63}\label{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a72a5cdd91291d6b6cfa9fe634b109d63}} 
+tmr\+Presc\+Div\+\_\+1&Divide by 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPrescDiv\_2@{tmrPrescDiv\_2}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPrescDiv\_2@{tmrPrescDiv\_2}}}\mbox{\Hypertarget{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a35bd8ddbba1fea330ec5ec25419464b3}\label{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a35bd8ddbba1fea330ec5ec25419464b3}} 
+tmr\+Presc\+Div\+\_\+2&Divide by 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPrescDiv\_4@{tmrPrescDiv\_4}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPrescDiv\_4@{tmrPrescDiv\_4}}}\mbox{\Hypertarget{group__enum__group_gga89574487805ce2171aa6f0168a3359a0ad2ee9e5f5a0b29381f3a5bae60235243}\label{group__enum__group_gga89574487805ce2171aa6f0168a3359a0ad2ee9e5f5a0b29381f3a5bae60235243}} 
+tmr\+Presc\+Div\+\_\+4&Divide by 4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPrescDiv\_8@{tmrPrescDiv\_8}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPrescDiv\_8@{tmrPrescDiv\_8}}}\mbox{\Hypertarget{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a733478c2e8bab69b2f181d86055d8348}\label{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a733478c2e8bab69b2f181d86055d8348}} 
+tmr\+Presc\+Div\+\_\+8&Divide by 8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPrescDiv\_16@{tmrPrescDiv\_16}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPrescDiv\_16@{tmrPrescDiv\_16}}}\mbox{\Hypertarget{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a28d6c29f7e0dac0d01d457438bb24447}\label{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a28d6c29f7e0dac0d01d457438bb24447}} 
+tmr\+Presc\+Div\+\_\+16&Divide by 16 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPrescDiv\_32@{tmrPrescDiv\_32}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPrescDiv\_32@{tmrPrescDiv\_32}}}\mbox{\Hypertarget{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a32bcfbfa158de9a42ca1ae238188e625}\label{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a32bcfbfa158de9a42ca1ae238188e625}} 
+tmr\+Presc\+Div\+\_\+32&Divide by 32 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPrescDiv\_64@{tmrPrescDiv\_64}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPrescDiv\_64@{tmrPrescDiv\_64}}}\mbox{\Hypertarget{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a11e20b835fa1abc20f0683221513fa56}\label{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a11e20b835fa1abc20f0683221513fa56}} 
+tmr\+Presc\+Div\+\_\+64&Divide by 64 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tmrPrescDiv\_128@{tmrPrescDiv\_128}!Enum\_group@{Enum\_group}}\index{Enum\_group@{Enum\_group}!tmrPrescDiv\_128@{tmrPrescDiv\_128}}}\mbox{\Hypertarget{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a097c5fba952aad5a55a4e920c11b4ef8}\label{group__enum__group_gga89574487805ce2171aa6f0168a3359a0a097c5fba952aad5a55a4e920c11b4ef8}} 
+tmr\+Presc\+Div\+\_\+128&Divide by 128 \\
+\hline
+
+\end{DoxyEnumFields}

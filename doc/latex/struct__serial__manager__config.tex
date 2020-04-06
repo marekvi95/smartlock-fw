@@ -1,0 +1,57 @@
+\hypertarget{struct__serial__manager__config}{}\section{\+\_\+serial\+\_\+manager\+\_\+config Struct Reference}
+\label{struct__serial__manager__config}\index{\_serial\_manager\_config@{\_serial\_manager\_config}}
+
+
+serial manager config structure  
+
+
+
+
+{\ttfamily \#include $<$serial\+\_\+manager.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{struct__serial__manager__config_a5aad89b7fedb6b6bb7b67a2f200517e4}{ring\+Buffer}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__serial__manager__config_a6091a0a1e610e8c014fc4b070392fc08}{ring\+Buffer\+Size}}
+\item 
+\mbox{\hyperlink{group__serialmanager_gaa7dc5f93aacda72d14bb0fa66b0401f3}{serial\+\_\+port\+\_\+type\+\_\+t}} \mbox{\hyperlink{struct__serial__manager__config_a03112637c9c98af9974c331c761283a5}{type}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__serial__manager__config_a63fdd311bd5f937e94beea458e022ec5}{port\+Config}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+serial manager config structure 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__serial__manager__config_a63fdd311bd5f937e94beea458e022ec5}\label{struct__serial__manager__config_a63fdd311bd5f937e94beea458e022ec5}} 
+\index{\_serial\_manager\_config@{\_serial\_manager\_config}!portConfig@{portConfig}}
+\index{portConfig@{portConfig}!\_serial\_manager\_config@{\_serial\_manager\_config}}
+\subsubsection{\texorpdfstring{portConfig}{portConfig}}
+{\footnotesize\ttfamily void$\ast$ port\+Config}
+
+Serial port configuration \mbox{\Hypertarget{struct__serial__manager__config_a5aad89b7fedb6b6bb7b67a2f200517e4}\label{struct__serial__manager__config_a5aad89b7fedb6b6bb7b67a2f200517e4}} 
+\index{\_serial\_manager\_config@{\_serial\_manager\_config}!ringBuffer@{ringBuffer}}
+\index{ringBuffer@{ringBuffer}!\_serial\_manager\_config@{\_serial\_manager\_config}}
+\subsubsection{\texorpdfstring{ringBuffer}{ringBuffer}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ ring\+Buffer}
+
+Ring buffer address, it is used to buffer data received by the hardware. Besides, the memory space cannot be free during the lifetime of the serial manager module. \mbox{\Hypertarget{struct__serial__manager__config_a6091a0a1e610e8c014fc4b070392fc08}\label{struct__serial__manager__config_a6091a0a1e610e8c014fc4b070392fc08}} 
+\index{\_serial\_manager\_config@{\_serial\_manager\_config}!ringBufferSize@{ringBufferSize}}
+\index{ringBufferSize@{ringBufferSize}!\_serial\_manager\_config@{\_serial\_manager\_config}}
+\subsubsection{\texorpdfstring{ringBufferSize}{ringBufferSize}}
+{\footnotesize\ttfamily uint32\+\_\+t ring\+Buffer\+Size}
+
+The size of the ring buffer \mbox{\Hypertarget{struct__serial__manager__config_a03112637c9c98af9974c331c761283a5}\label{struct__serial__manager__config_a03112637c9c98af9974c331c761283a5}} 
+\index{\_serial\_manager\_config@{\_serial\_manager\_config}!type@{type}}
+\index{type@{type}!\_serial\_manager\_config@{\_serial\_manager\_config}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gaa7dc5f93aacda72d14bb0fa66b0401f3}{serial\+\_\+port\+\_\+type\+\_\+t}} type}
+
+Serial port type 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+component/serial\+\_\+manager/serial\+\_\+manager.\+h\end{DoxyCompactItemize}

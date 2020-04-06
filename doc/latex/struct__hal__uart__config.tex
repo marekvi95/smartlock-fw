@@ -1,0 +1,81 @@
+\hypertarget{struct__hal__uart__config}{}\section{\+\_\+hal\+\_\+uart\+\_\+config Struct Reference}
+\label{struct__hal__uart__config}\index{\_hal\_uart\_config@{\_hal\_uart\_config}}
+
+
+U\+A\+RT configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$uart.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__hal__uart__config_a91ed494cee19d1629ac4e017ce45ddbb}{src\+Clock\+\_\+\+Hz}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__hal__uart__config_aa5df547b4cb95d3c959373cf6fa672b5}{baud\+Rate\+\_\+\+Bps}}
+\item 
+\mbox{\hyperlink{group___u_a_r_t___adapter_ga24029165f252c4fe925cdb8af52b3b8f}{hal\+\_\+uart\+\_\+parity\+\_\+mode\+\_\+t}} \mbox{\hyperlink{struct__hal__uart__config_acbc3e2332cc7a0602c77932e67db0b6f}{parity\+Mode}}
+\item 
+\mbox{\hyperlink{group___u_a_r_t___adapter_gad0fc800e49978f5aee5c162009b16bdb}{hal\+\_\+uart\+\_\+stop\+\_\+bit\+\_\+count\+\_\+t}} \mbox{\hyperlink{struct__hal__uart__config_a9cd9931237993b857304ad7dc515676f}{stop\+Bit\+Count}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__hal__uart__config_aa71c95a745f5bb5f666e55f7c98e4e9f}{enable\+Rx}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__hal__uart__config_a4e1a6dc4f40cf76369024809e1f4163d}{enable\+Tx}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__hal__uart__config_a0247bf27ecd553eeb029a06b1e6ec354}{instance}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+A\+RT configuration structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__hal__uart__config_aa5df547b4cb95d3c959373cf6fa672b5}\label{struct__hal__uart__config_aa5df547b4cb95d3c959373cf6fa672b5}} 
+\index{\_hal\_uart\_config@{\_hal\_uart\_config}!baudRate\_Bps@{baudRate\_Bps}}
+\index{baudRate\_Bps@{baudRate\_Bps}!\_hal\_uart\_config@{\_hal\_uart\_config}}
+\subsubsection{\texorpdfstring{baudRate\_Bps}{baudRate\_Bps}}
+{\footnotesize\ttfamily uint32\+\_\+t baud\+Rate\+\_\+\+Bps}
+
+Baud rate \mbox{\Hypertarget{struct__hal__uart__config_aa71c95a745f5bb5f666e55f7c98e4e9f}\label{struct__hal__uart__config_aa71c95a745f5bb5f666e55f7c98e4e9f}} 
+\index{\_hal\_uart\_config@{\_hal\_uart\_config}!enableRx@{enableRx}}
+\index{enableRx@{enableRx}!\_hal\_uart\_config@{\_hal\_uart\_config}}
+\subsubsection{\texorpdfstring{enableRx}{enableRx}}
+{\footnotesize\ttfamily uint8\+\_\+t enable\+Rx}
+
+Enable RX \mbox{\Hypertarget{struct__hal__uart__config_a4e1a6dc4f40cf76369024809e1f4163d}\label{struct__hal__uart__config_a4e1a6dc4f40cf76369024809e1f4163d}} 
+\index{\_hal\_uart\_config@{\_hal\_uart\_config}!enableTx@{enableTx}}
+\index{enableTx@{enableTx}!\_hal\_uart\_config@{\_hal\_uart\_config}}
+\subsubsection{\texorpdfstring{enableTx}{enableTx}}
+{\footnotesize\ttfamily uint8\+\_\+t enable\+Tx}
+
+Enable TX \mbox{\Hypertarget{struct__hal__uart__config_a0247bf27ecd553eeb029a06b1e6ec354}\label{struct__hal__uart__config_a0247bf27ecd553eeb029a06b1e6ec354}} 
+\index{\_hal\_uart\_config@{\_hal\_uart\_config}!instance@{instance}}
+\index{instance@{instance}!\_hal\_uart\_config@{\_hal\_uart\_config}}
+\subsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily uint8\+\_\+t instance}
+
+Instance (0 -\/ U\+A\+R\+T0, 1 -\/ U\+A\+R\+T1, ...), detail information please refer to the S\+OC corresponding RM. Invalid instance value will cause initialization failure. \mbox{\Hypertarget{struct__hal__uart__config_acbc3e2332cc7a0602c77932e67db0b6f}\label{struct__hal__uart__config_acbc3e2332cc7a0602c77932e67db0b6f}} 
+\index{\_hal\_uart\_config@{\_hal\_uart\_config}!parityMode@{parityMode}}
+\index{parityMode@{parityMode}!\_hal\_uart\_config@{\_hal\_uart\_config}}
+\subsubsection{\texorpdfstring{parityMode}{parityMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_a_r_t___adapter_ga24029165f252c4fe925cdb8af52b3b8f}{hal\+\_\+uart\+\_\+parity\+\_\+mode\+\_\+t}} parity\+Mode}
+
+Parity mode, disabled (default), even, odd \mbox{\Hypertarget{struct__hal__uart__config_a91ed494cee19d1629ac4e017ce45ddbb}\label{struct__hal__uart__config_a91ed494cee19d1629ac4e017ce45ddbb}} 
+\index{\_hal\_uart\_config@{\_hal\_uart\_config}!srcClock\_Hz@{srcClock\_Hz}}
+\index{srcClock\_Hz@{srcClock\_Hz}!\_hal\_uart\_config@{\_hal\_uart\_config}}
+\subsubsection{\texorpdfstring{srcClock\_Hz}{srcClock\_Hz}}
+{\footnotesize\ttfamily uint32\+\_\+t src\+Clock\+\_\+\+Hz}
+
+Source clock \mbox{\Hypertarget{struct__hal__uart__config_a9cd9931237993b857304ad7dc515676f}\label{struct__hal__uart__config_a9cd9931237993b857304ad7dc515676f}} 
+\index{\_hal\_uart\_config@{\_hal\_uart\_config}!stopBitCount@{stopBitCount}}
+\index{stopBitCount@{stopBitCount}!\_hal\_uart\_config@{\_hal\_uart\_config}}
+\subsubsection{\texorpdfstring{stopBitCount}{stopBitCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_a_r_t___adapter_gad0fc800e49978f5aee5c162009b16bdb}{hal\+\_\+uart\+\_\+stop\+\_\+bit\+\_\+count\+\_\+t}} stop\+Bit\+Count}
+
+Number of stop bits, 1 stop bit (default) or 2 stop bits 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+component/uart/uart.\+h\end{DoxyCompactItemize}

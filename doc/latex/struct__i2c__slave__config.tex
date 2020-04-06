@@ -1,0 +1,89 @@
+\hypertarget{struct__i2c__slave__config}{}\section{\+\_\+i2c\+\_\+slave\+\_\+config Struct Reference}
+\label{struct__i2c__slave__config}\index{\_i2c\_slave\_config@{\_i2c\_slave\_config}}
+
+
+I2C slave user configuration.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+i2c.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct__i2c__slave__config_a9189d8f6438ba99548837da162213c46}{enable\+Slave}}
+\item 
+bool \mbox{\hyperlink{struct__i2c__slave__config_aedb9cfa838d8a677d9193d5c92298ea4}{enable\+General\+Call}}
+\item 
+bool \mbox{\hyperlink{struct__i2c__slave__config_af1f3df39054da492f1da50ca792676af}{enable\+Wake\+Up}}
+\item 
+bool \mbox{\hyperlink{struct__i2c__slave__config_a788ff5c58438afe177059bf0d3c78d5a}{enable\+Baud\+Rate\+Ctl}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct__i2c__slave__config_a67af74c3fc959654c6dc8bcff3a2ea80}{slave\+Address}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct__i2c__slave__config_a959e9269b2e7e83f1c4aebac870bf822}{upper\+Address}}
+\item 
+\mbox{\hyperlink{group__i2c__driver_ga70379ff75d2f4591b8dc1ba107a2a606}{i2c\+\_\+slave\+\_\+address\+\_\+mode\+\_\+t}} \mbox{\hyperlink{struct__i2c__slave__config_a2e946f1dfdd24a753f4c55a6ff3cc2e5}{addressing\+Mode}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__i2c__slave__config_addd2f572e0c2ccf835347068518752a8}{scl\+Stop\+Hold\+Time\+\_\+ns}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2C slave user configuration. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__i2c__slave__config_a2e946f1dfdd24a753f4c55a6ff3cc2e5}\label{struct__i2c__slave__config_a2e946f1dfdd24a753f4c55a6ff3cc2e5}} 
+\index{\_i2c\_slave\_config@{\_i2c\_slave\_config}!addressingMode@{addressingMode}}
+\index{addressingMode@{addressingMode}!\_i2c\_slave\_config@{\_i2c\_slave\_config}}
+\subsubsection{\texorpdfstring{addressingMode}{addressingMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__i2c__driver_ga70379ff75d2f4591b8dc1ba107a2a606}{i2c\+\_\+slave\+\_\+address\+\_\+mode\+\_\+t}} addressing\+Mode}
+
+An addressing mode configuration of i2c\+\_\+slave\+\_\+address\+\_\+mode\+\_\+config\+\_\+t. \mbox{\Hypertarget{struct__i2c__slave__config_a788ff5c58438afe177059bf0d3c78d5a}\label{struct__i2c__slave__config_a788ff5c58438afe177059bf0d3c78d5a}} 
+\index{\_i2c\_slave\_config@{\_i2c\_slave\_config}!enableBaudRateCtl@{enableBaudRateCtl}}
+\index{enableBaudRateCtl@{enableBaudRateCtl}!\_i2c\_slave\_config@{\_i2c\_slave\_config}}
+\subsubsection{\texorpdfstring{enableBaudRateCtl}{enableBaudRateCtl}}
+{\footnotesize\ttfamily bool enable\+Baud\+Rate\+Ctl}
+
+Enables/disables independent slave baud rate on S\+CL in very fast I2C modes. \mbox{\Hypertarget{struct__i2c__slave__config_aedb9cfa838d8a677d9193d5c92298ea4}\label{struct__i2c__slave__config_aedb9cfa838d8a677d9193d5c92298ea4}} 
+\index{\_i2c\_slave\_config@{\_i2c\_slave\_config}!enableGeneralCall@{enableGeneralCall}}
+\index{enableGeneralCall@{enableGeneralCall}!\_i2c\_slave\_config@{\_i2c\_slave\_config}}
+\subsubsection{\texorpdfstring{enableGeneralCall}{enableGeneralCall}}
+{\footnotesize\ttfamily bool enable\+General\+Call}
+
+Enables the general call addressing mode. \mbox{\Hypertarget{struct__i2c__slave__config_a9189d8f6438ba99548837da162213c46}\label{struct__i2c__slave__config_a9189d8f6438ba99548837da162213c46}} 
+\index{\_i2c\_slave\_config@{\_i2c\_slave\_config}!enableSlave@{enableSlave}}
+\index{enableSlave@{enableSlave}!\_i2c\_slave\_config@{\_i2c\_slave\_config}}
+\subsubsection{\texorpdfstring{enableSlave}{enableSlave}}
+{\footnotesize\ttfamily bool enable\+Slave}
+
+Enables the I2C peripheral at initialization time. \mbox{\Hypertarget{struct__i2c__slave__config_af1f3df39054da492f1da50ca792676af}\label{struct__i2c__slave__config_af1f3df39054da492f1da50ca792676af}} 
+\index{\_i2c\_slave\_config@{\_i2c\_slave\_config}!enableWakeUp@{enableWakeUp}}
+\index{enableWakeUp@{enableWakeUp}!\_i2c\_slave\_config@{\_i2c\_slave\_config}}
+\subsubsection{\texorpdfstring{enableWakeUp}{enableWakeUp}}
+{\footnotesize\ttfamily bool enable\+Wake\+Up}
+
+Enables/disables waking up M\+CU from low-\/power mode. \mbox{\Hypertarget{struct__i2c__slave__config_addd2f572e0c2ccf835347068518752a8}\label{struct__i2c__slave__config_addd2f572e0c2ccf835347068518752a8}} 
+\index{\_i2c\_slave\_config@{\_i2c\_slave\_config}!sclStopHoldTime\_ns@{sclStopHoldTime\_ns}}
+\index{sclStopHoldTime\_ns@{sclStopHoldTime\_ns}!\_i2c\_slave\_config@{\_i2c\_slave\_config}}
+\subsubsection{\texorpdfstring{sclStopHoldTime\_ns}{sclStopHoldTime\_ns}}
+{\footnotesize\ttfamily uint32\+\_\+t scl\+Stop\+Hold\+Time\+\_\+ns}
+
+the delay from the rising edge of S\+CL (I2C clock) to the rising edge of S\+DA (I2C data) while S\+CL is high (stop condition), S\+DA hold time and S\+CL start hold time are also configured according to the S\+CL stop hold time. \mbox{\Hypertarget{struct__i2c__slave__config_a67af74c3fc959654c6dc8bcff3a2ea80}\label{struct__i2c__slave__config_a67af74c3fc959654c6dc8bcff3a2ea80}} 
+\index{\_i2c\_slave\_config@{\_i2c\_slave\_config}!slaveAddress@{slaveAddress}}
+\index{slaveAddress@{slaveAddress}!\_i2c\_slave\_config@{\_i2c\_slave\_config}}
+\subsubsection{\texorpdfstring{slaveAddress}{slaveAddress}}
+{\footnotesize\ttfamily uint16\+\_\+t slave\+Address}
+
+A slave address configuration. \mbox{\Hypertarget{struct__i2c__slave__config_a959e9269b2e7e83f1c4aebac870bf822}\label{struct__i2c__slave__config_a959e9269b2e7e83f1c4aebac870bf822}} 
+\index{\_i2c\_slave\_config@{\_i2c\_slave\_config}!upperAddress@{upperAddress}}
+\index{upperAddress@{upperAddress}!\_i2c\_slave\_config@{\_i2c\_slave\_config}}
+\subsubsection{\texorpdfstring{upperAddress}{upperAddress}}
+{\footnotesize\ttfamily uint16\+\_\+t upper\+Address}
+
+A maximum boundary slave address used in a range matching mode. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+i2c.\+h\end{DoxyCompactItemize}

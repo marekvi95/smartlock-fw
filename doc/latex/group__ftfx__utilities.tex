@@ -1,0 +1,71 @@
+\hypertarget{group__ftfx__utilities}{}\section{Ftfx\+\_\+utilities}
+\label{group__ftfx__utilities}\index{Ftfx\_utilities@{Ftfx\_utilities}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}\label{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}} 
+\#define \mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(major,  minor,  bugfix)~(((major) $<$$<$ 16) $\vert$ ((minor) $<$$<$ 8) $\vert$ (bugfix))
+\begin{DoxyCompactList}\small\item\em Constructs the version number for drivers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__utilities_gad76dfbb0423d0cd3a7b77cbcd9043146}\label{group__ftfx__utilities_gad76dfbb0423d0cd3a7b77cbcd9043146}} 
+\#define \mbox{\hyperlink{group__ftfx__utilities_gad76dfbb0423d0cd3a7b77cbcd9043146}{M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US}}(group,  code)~((((group)$\ast$100) + (code)))
+\begin{DoxyCompactList}\small\item\em Constructs a status code value from a group and a code number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga3caa666e2a56338f45fa9a008473694d}\label{group__ftfx__utilities_ga3caa666e2a56338f45fa9a008473694d}} 
+\#define \mbox{\hyperlink{group__ftfx__utilities_ga3caa666e2a56338f45fa9a008473694d}{F\+O\+U\+R\+\_\+\+C\+H\+A\+R\+\_\+\+C\+O\+DE}}(a,  b,  c,  d)~(((uint32\+\_\+t)(d) $<$$<$ 24u) $\vert$ ((uint32\+\_\+t)(c) $<$$<$ 16u) $\vert$ ((uint32\+\_\+t)(b) $<$$<$ 8u) $\vert$ ((uint32\+\_\+t)(a)))
+\begin{DoxyCompactList}\small\item\em Constructs the four character code for the Flash driver A\+PI key. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga4ed9b60ad7a3c8d6f78c75f9b3613b9c}\label{group__ftfx__utilities_ga4ed9b60ad7a3c8d6f78c75f9b3613b9c}} 
+\#define \mbox{\hyperlink{group__ftfx__utilities_ga4ed9b60ad7a3c8d6f78c75f9b3613b9c}{A\+L\+I\+G\+N\+\_\+\+D\+O\+WN}}(x,  a)~(((uint32\+\_\+t)(x)) \& $\sim$((uint32\+\_\+t)(a)-\/1u))
+\begin{DoxyCompactList}\small\item\em Alignment(down) utility. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__utilities_gafb65d4847594b25424eb2a304e7741c1}\label{group__ftfx__utilities_gafb65d4847594b25424eb2a304e7741c1}} 
+\#define \mbox{\hyperlink{group__ftfx__utilities_gafb65d4847594b25424eb2a304e7741c1}{A\+L\+I\+G\+N\+\_\+\+UP}}(x,  a)~\mbox{\hyperlink{group__ftfx__utilities_ga4ed9b60ad7a3c8d6f78c75f9b3613b9c}{A\+L\+I\+G\+N\+\_\+\+D\+O\+WN}}((uint32\+\_\+t)(x) + (uint32\+\_\+t)(a)-\/1u, a)
+\begin{DoxyCompactList}\small\item\em Alignment(up) utility. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga0ac2dfbb5762f3e8458e350dc97cdc4f}\label{group__ftfx__utilities_ga0ac2dfbb5762f3e8458e350dc97cdc4f}} 
+\#define \mbox{\hyperlink{group__ftfx__utilities_ga0ac2dfbb5762f3e8458e350dc97cdc4f}{B1\+P4}}(b)~(((uint32\+\_\+t)(b)\&0x\+F\+F\+U) $<$$<$ 24\+U)
+\begin{DoxyCompactList}\small\item\em bytes2word utility. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__utilities_gad46838315d0f097f79de1426ce26fbea}\label{group__ftfx__utilities_gad46838315d0f097f79de1426ce26fbea}} 
+\#define {\bfseries B1\+P3}(b)~(((uint32\+\_\+t)(b)\&0x\+F\+F\+U) $<$$<$ 16\+U)
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga04bb41ca2529de84c3113421b6193743}\label{group__ftfx__utilities_ga04bb41ca2529de84c3113421b6193743}} 
+\#define {\bfseries B1\+P2}(b)~(((uint32\+\_\+t)(b)\&0x\+F\+F\+U) $<$$<$ 8\+U)
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga251252d44a97f4c4661666b9064bb595}\label{group__ftfx__utilities_ga251252d44a97f4c4661666b9064bb595}} 
+\#define {\bfseries B1\+P1}(b)~((uint32\+\_\+t)(b)\&0x\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga31422a4d6a72667b0119b8390babc454}\label{group__ftfx__utilities_ga31422a4d6a72667b0119b8390babc454}} 
+\#define {\bfseries B2\+P3}(b)~(((uint32\+\_\+t)(b)\&0x\+F\+F\+F\+F\+U) $<$$<$ 16\+U)
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga8daa05c02d8308f6b777936aea72814d}\label{group__ftfx__utilities_ga8daa05c02d8308f6b777936aea72814d}} 
+\#define {\bfseries B2\+P2}(b)~(((uint32\+\_\+t)(b)\&0x\+F\+F\+F\+F\+U) $<$$<$ 8\+U)
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga6a406ef1f1e7129246e8e89b6b9e5c85}\label{group__ftfx__utilities_ga6a406ef1f1e7129246e8e89b6b9e5c85}} 
+\#define {\bfseries B2\+P1}(b)~((uint32\+\_\+t)(b)\&0x\+F\+F\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga991a50a49090f6659c292a24ddc2107a}\label{group__ftfx__utilities_ga991a50a49090f6659c292a24ddc2107a}} 
+\#define {\bfseries B3\+P2}(b)~(((uint32\+\_\+t)(b)\&0x\+F\+F\+F\+F\+F\+F\+U) $<$$<$ 8\+U)
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga9e6182e29b90916a96c824376cd6f454}\label{group__ftfx__utilities_ga9e6182e29b90916a96c824376cd6f454}} 
+\#define {\bfseries B3\+P1}(b)~((uint32\+\_\+t)(b)\&0x\+F\+F\+F\+F\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga6b0afa682b4fcdbcd2afb43cf9eab83c}\label{group__ftfx__utilities_ga6b0afa682b4fcdbcd2afb43cf9eab83c}} 
+\#define {\bfseries B\+Y\+T\+E2\+W\+O\+R\+D\+\_\+1\+\_\+3}(x,  y)~(\mbox{\hyperlink{group__ftfx__utilities_ga0ac2dfbb5762f3e8458e350dc97cdc4f}{B1\+P4}}(x) $\vert$ B3\+P1(y))
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_ga3b876a4131220720d8891c3f3ffc3813}\label{group__ftfx__utilities_ga3b876a4131220720d8891c3f3ffc3813}} 
+\#define {\bfseries B\+Y\+T\+E2\+W\+O\+R\+D\+\_\+2\+\_\+2}(x,  y)~(B2\+P3(x) $\vert$ B2\+P1(y))
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_gaed36e11a4b02e8d28c7d3ad45a1d2949}\label{group__ftfx__utilities_gaed36e11a4b02e8d28c7d3ad45a1d2949}} 
+\#define {\bfseries B\+Y\+T\+E2\+W\+O\+R\+D\+\_\+3\+\_\+1}(x,  y)~(B3\+P2(x) $\vert$ B1\+P1(y))
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_gae8df758d9b3fcdb3198d4b77499cbcf3}\label{group__ftfx__utilities_gae8df758d9b3fcdb3198d4b77499cbcf3}} 
+\#define {\bfseries B\+Y\+T\+E2\+W\+O\+R\+D\+\_\+1\+\_\+1\+\_\+2}(x,  y,  z)~(\mbox{\hyperlink{group__ftfx__utilities_ga0ac2dfbb5762f3e8458e350dc97cdc4f}{B1\+P4}}(x) $\vert$ B1\+P3(y) $\vert$ B2\+P1(z))
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_gadf38fafa6e077bc9583099470e67d282}\label{group__ftfx__utilities_gadf38fafa6e077bc9583099470e67d282}} 
+\#define {\bfseries B\+Y\+T\+E2\+W\+O\+R\+D\+\_\+1\+\_\+2\+\_\+1}(x,  y,  z)~(\mbox{\hyperlink{group__ftfx__utilities_ga0ac2dfbb5762f3e8458e350dc97cdc4f}{B1\+P4}}(x) $\vert$ B2\+P2(y) $\vert$ B1\+P1(z))
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_gaff3b35acad0d7fff711dd930d789aa78}\label{group__ftfx__utilities_gaff3b35acad0d7fff711dd930d789aa78}} 
+\#define {\bfseries B\+Y\+T\+E2\+W\+O\+R\+D\+\_\+2\+\_\+1\+\_\+1}(x,  y,  z)~(B2\+P3(x) $\vert$ B1\+P2(y) $\vert$ B1\+P1(z))
+\item 
+\mbox{\Hypertarget{group__ftfx__utilities_gad0a14de111331ddb98d4a45f0b546af9}\label{group__ftfx__utilities_gad0a14de111331ddb98d4a45f0b546af9}} 
+\#define {\bfseries B\+Y\+T\+E2\+W\+O\+R\+D\+\_\+1\+\_\+1\+\_\+1\+\_\+1}(x,  y,  z,  w)~(\mbox{\hyperlink{group__ftfx__utilities_ga0ac2dfbb5762f3e8458e350dc97cdc4f}{B1\+P4}}(x) $\vert$ B1\+P3(y) $\vert$ B1\+P2(z) $\vert$ B1\+P1(w))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

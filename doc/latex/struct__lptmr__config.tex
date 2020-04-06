@@ -1,0 +1,85 @@
+\hypertarget{struct__lptmr__config}{}\section{\+\_\+lptmr\+\_\+config Struct Reference}
+\label{struct__lptmr__config}\index{\_lptmr\_config@{\_lptmr\_config}}
+
+
+L\+P\+T\+MR config structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+lptmr.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__lptmr_ga507b12d91dad8bbc571b4d651d3a17c2}{lptmr\+\_\+timer\+\_\+mode\+\_\+t}} \mbox{\hyperlink{struct__lptmr__config_aadb8b183b22fff58a9360a3c2a1c68ff}{timer\+Mode}}
+\item 
+\mbox{\hyperlink{group__lptmr_ga37c4ca922036c3e0e5af194799d3cfad}{lptmr\+\_\+pin\+\_\+select\+\_\+t}} \mbox{\hyperlink{struct__lptmr__config_a7c71a38b1b8ae8b3b1c967907c42bc96}{pin\+Select}}
+\item 
+\mbox{\hyperlink{group__lptmr_gaa2ac38a4cb3ac1cfb704baec44f4174c}{lptmr\+\_\+pin\+\_\+polarity\+\_\+t}} \mbox{\hyperlink{struct__lptmr__config_a81e732928dcad4ce95e1fd4c3c801d1f}{pin\+Polarity}}
+\item 
+bool \mbox{\hyperlink{struct__lptmr__config_a8e4fd702efe3170ad2d4ec0b79cabe3a}{enable\+Free\+Running}}
+\item 
+bool \mbox{\hyperlink{struct__lptmr__config_aec33382dd1c7d9912c9fd022b68d07c5}{bypass\+Prescaler}}
+\item 
+\mbox{\hyperlink{group__lptmr_ga63bfd703c032aeb0820e8131c4720cb8}{lptmr\+\_\+prescaler\+\_\+clock\+\_\+select\+\_\+t}} \mbox{\hyperlink{struct__lptmr__config_aca122d02b13f8e68664957cdcef73ceb}{prescaler\+Clock\+Source}}
+\item 
+\mbox{\hyperlink{group__lptmr_gad3d903364803228c64b5b650c2624ac0}{lptmr\+\_\+prescaler\+\_\+glitch\+\_\+value\+\_\+t}} \mbox{\hyperlink{struct__lptmr__config_a093529e7e6dc5a0d6ed25e66674f9736}{value}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+L\+P\+T\+MR config structure. 
+
+This structure holds the configuration settings for the L\+P\+T\+MR peripheral. To initialize this structure to reasonable defaults, call the \mbox{\hyperlink{group__lptmr_ga11a8100adcd8f9f0cf167b2d84a51d11}{L\+P\+T\+M\+R\+\_\+\+Get\+Default\+Config()}} function and pass a pointer to your configuration structure instance.
+
+The configuration struct can be made constant so it resides in flash. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__lptmr__config_aec33382dd1c7d9912c9fd022b68d07c5}\label{struct__lptmr__config_aec33382dd1c7d9912c9fd022b68d07c5}} 
+\index{\_lptmr\_config@{\_lptmr\_config}!bypassPrescaler@{bypassPrescaler}}
+\index{bypassPrescaler@{bypassPrescaler}!\_lptmr\_config@{\_lptmr\_config}}
+\subsubsection{\texorpdfstring{bypassPrescaler}{bypassPrescaler}}
+{\footnotesize\ttfamily bool bypass\+Prescaler}
+
+True\+: bypass prescaler; false\+: use clock from prescaler \mbox{\Hypertarget{struct__lptmr__config_a8e4fd702efe3170ad2d4ec0b79cabe3a}\label{struct__lptmr__config_a8e4fd702efe3170ad2d4ec0b79cabe3a}} 
+\index{\_lptmr\_config@{\_lptmr\_config}!enableFreeRunning@{enableFreeRunning}}
+\index{enableFreeRunning@{enableFreeRunning}!\_lptmr\_config@{\_lptmr\_config}}
+\subsubsection{\texorpdfstring{enableFreeRunning}{enableFreeRunning}}
+{\footnotesize\ttfamily bool enable\+Free\+Running}
+
+True\+: enable free running, counter is reset on overflow False\+: counter is reset when the compare flag is set \mbox{\Hypertarget{struct__lptmr__config_a81e732928dcad4ce95e1fd4c3c801d1f}\label{struct__lptmr__config_a81e732928dcad4ce95e1fd4c3c801d1f}} 
+\index{\_lptmr\_config@{\_lptmr\_config}!pinPolarity@{pinPolarity}}
+\index{pinPolarity@{pinPolarity}!\_lptmr\_config@{\_lptmr\_config}}
+\subsubsection{\texorpdfstring{pinPolarity}{pinPolarity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__lptmr_gaa2ac38a4cb3ac1cfb704baec44f4174c}{lptmr\+\_\+pin\+\_\+polarity\+\_\+t}} pin\+Polarity}
+
+L\+P\+T\+MR pulse input pin polarity; used only in pulse counter mode \mbox{\Hypertarget{struct__lptmr__config_a7c71a38b1b8ae8b3b1c967907c42bc96}\label{struct__lptmr__config_a7c71a38b1b8ae8b3b1c967907c42bc96}} 
+\index{\_lptmr\_config@{\_lptmr\_config}!pinSelect@{pinSelect}}
+\index{pinSelect@{pinSelect}!\_lptmr\_config@{\_lptmr\_config}}
+\subsubsection{\texorpdfstring{pinSelect}{pinSelect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__lptmr_ga37c4ca922036c3e0e5af194799d3cfad}{lptmr\+\_\+pin\+\_\+select\+\_\+t}} pin\+Select}
+
+L\+P\+T\+MR pulse input pin select; used only in pulse counter mode \mbox{\Hypertarget{struct__lptmr__config_aca122d02b13f8e68664957cdcef73ceb}\label{struct__lptmr__config_aca122d02b13f8e68664957cdcef73ceb}} 
+\index{\_lptmr\_config@{\_lptmr\_config}!prescalerClockSource@{prescalerClockSource}}
+\index{prescalerClockSource@{prescalerClockSource}!\_lptmr\_config@{\_lptmr\_config}}
+\subsubsection{\texorpdfstring{prescalerClockSource}{prescalerClockSource}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__lptmr_ga63bfd703c032aeb0820e8131c4720cb8}{lptmr\+\_\+prescaler\+\_\+clock\+\_\+select\+\_\+t}} prescaler\+Clock\+Source}
+
+L\+P\+T\+MR clock source \mbox{\Hypertarget{struct__lptmr__config_aadb8b183b22fff58a9360a3c2a1c68ff}\label{struct__lptmr__config_aadb8b183b22fff58a9360a3c2a1c68ff}} 
+\index{\_lptmr\_config@{\_lptmr\_config}!timerMode@{timerMode}}
+\index{timerMode@{timerMode}!\_lptmr\_config@{\_lptmr\_config}}
+\subsubsection{\texorpdfstring{timerMode}{timerMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__lptmr_ga507b12d91dad8bbc571b4d651d3a17c2}{lptmr\+\_\+timer\+\_\+mode\+\_\+t}} timer\+Mode}
+
+Time counter mode or pulse counter mode \mbox{\Hypertarget{struct__lptmr__config_a093529e7e6dc5a0d6ed25e66674f9736}\label{struct__lptmr__config_a093529e7e6dc5a0d6ed25e66674f9736}} 
+\index{\_lptmr\_config@{\_lptmr\_config}!value@{value}}
+\index{value@{value}!\_lptmr\_config@{\_lptmr\_config}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__lptmr_gad3d903364803228c64b5b650c2624ac0}{lptmr\+\_\+prescaler\+\_\+glitch\+\_\+value\+\_\+t}} value}
+
+Prescaler or glitch filter value 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+lptmr.\+h\end{DoxyCompactItemize}

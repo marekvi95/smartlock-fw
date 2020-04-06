@@ -1,0 +1,81 @@
+\hypertarget{struct__i2c__master__transfer}{}\section{\+\_\+i2c\+\_\+master\+\_\+transfer Struct Reference}
+\label{struct__i2c__master__transfer}\index{\_i2c\_master\_transfer@{\_i2c\_master\_transfer}}
+
+
+I2C master transfer structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+i2c.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__i2c__master__transfer_a773b39d480759f67926cb18ae2219281}{flags}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__i2c__master__transfer_a7b9ab02d5063e8653f0586395ccd7013}{slave\+Address}}
+\item 
+\mbox{\hyperlink{group__i2c__driver_ga4bf954d998f086594eece268c780bec7}{i2c\+\_\+direction\+\_\+t}} \mbox{\hyperlink{struct__i2c__master__transfer_aec93fd70f8f4f4cf2fafcbe0a4df08c2}{direction}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__i2c__master__transfer_a6fbfb5e5018422a177a9f3ed7269b127}{subaddress}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__i2c__master__transfer_ab690ec66e8cde484f919799fb1118cd6}{subaddress\+Size}}
+\item 
+uint8\+\_\+t $\ast$volatile \mbox{\hyperlink{struct__i2c__master__transfer_a6df23c71c49ca7371f41136934d4fad1}{data}}
+\item 
+volatile size\+\_\+t \mbox{\hyperlink{struct__i2c__master__transfer_aec81567ca73e5b0cb790098785e345c5}{data\+Size}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2C master transfer structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__i2c__master__transfer_a6df23c71c49ca7371f41136934d4fad1}\label{struct__i2c__master__transfer_a6df23c71c49ca7371f41136934d4fad1}} 
+\index{\_i2c\_master\_transfer@{\_i2c\_master\_transfer}!data@{data}}
+\index{data@{data}!\_i2c\_master\_transfer@{\_i2c\_master\_transfer}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ volatile data}
+
+A transfer buffer. \mbox{\Hypertarget{struct__i2c__master__transfer_aec81567ca73e5b0cb790098785e345c5}\label{struct__i2c__master__transfer_aec81567ca73e5b0cb790098785e345c5}} 
+\index{\_i2c\_master\_transfer@{\_i2c\_master\_transfer}!dataSize@{dataSize}}
+\index{dataSize@{dataSize}!\_i2c\_master\_transfer@{\_i2c\_master\_transfer}}
+\subsubsection{\texorpdfstring{dataSize}{dataSize}}
+{\footnotesize\ttfamily volatile size\+\_\+t data\+Size}
+
+A transfer size. \mbox{\Hypertarget{struct__i2c__master__transfer_aec93fd70f8f4f4cf2fafcbe0a4df08c2}\label{struct__i2c__master__transfer_aec93fd70f8f4f4cf2fafcbe0a4df08c2}} 
+\index{\_i2c\_master\_transfer@{\_i2c\_master\_transfer}!direction@{direction}}
+\index{direction@{direction}!\_i2c\_master\_transfer@{\_i2c\_master\_transfer}}
+\subsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__i2c__driver_ga4bf954d998f086594eece268c780bec7}{i2c\+\_\+direction\+\_\+t}} direction}
+
+A transfer direction, read or write. \mbox{\Hypertarget{struct__i2c__master__transfer_a773b39d480759f67926cb18ae2219281}\label{struct__i2c__master__transfer_a773b39d480759f67926cb18ae2219281}} 
+\index{\_i2c\_master\_transfer@{\_i2c\_master\_transfer}!flags@{flags}}
+\index{flags@{flags}!\_i2c\_master\_transfer@{\_i2c\_master\_transfer}}
+\subsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily uint32\+\_\+t flags}
+
+A transfer flag which controls the transfer. \mbox{\Hypertarget{struct__i2c__master__transfer_a7b9ab02d5063e8653f0586395ccd7013}\label{struct__i2c__master__transfer_a7b9ab02d5063e8653f0586395ccd7013}} 
+\index{\_i2c\_master\_transfer@{\_i2c\_master\_transfer}!slaveAddress@{slaveAddress}}
+\index{slaveAddress@{slaveAddress}!\_i2c\_master\_transfer@{\_i2c\_master\_transfer}}
+\subsubsection{\texorpdfstring{slaveAddress}{slaveAddress}}
+{\footnotesize\ttfamily uint8\+\_\+t slave\+Address}
+
+7-\/bit slave address. \mbox{\Hypertarget{struct__i2c__master__transfer_a6fbfb5e5018422a177a9f3ed7269b127}\label{struct__i2c__master__transfer_a6fbfb5e5018422a177a9f3ed7269b127}} 
+\index{\_i2c\_master\_transfer@{\_i2c\_master\_transfer}!subaddress@{subaddress}}
+\index{subaddress@{subaddress}!\_i2c\_master\_transfer@{\_i2c\_master\_transfer}}
+\subsubsection{\texorpdfstring{subaddress}{subaddress}}
+{\footnotesize\ttfamily uint32\+\_\+t subaddress}
+
+A sub address. Transferred M\+SB first. \mbox{\Hypertarget{struct__i2c__master__transfer_ab690ec66e8cde484f919799fb1118cd6}\label{struct__i2c__master__transfer_ab690ec66e8cde484f919799fb1118cd6}} 
+\index{\_i2c\_master\_transfer@{\_i2c\_master\_transfer}!subaddressSize@{subaddressSize}}
+\index{subaddressSize@{subaddressSize}!\_i2c\_master\_transfer@{\_i2c\_master\_transfer}}
+\subsubsection{\texorpdfstring{subaddressSize}{subaddressSize}}
+{\footnotesize\ttfamily uint8\+\_\+t subaddress\+Size}
+
+A size of the command buffer. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+i2c.\+h\end{DoxyCompactItemize}

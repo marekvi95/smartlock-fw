@@ -1,0 +1,525 @@
+\hypertarget{group__serialmanager}{}\section{Serialmanager}
+\label{group__serialmanager}\index{Serialmanager@{Serialmanager}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__serial__manager__config}{\+\_\+serial\+\_\+manager\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em serial manager config structure \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__serial__manager__callback__message}{\+\_\+serial\+\_\+manager\+\_\+callback\+\_\+message}}
+\begin{DoxyCompactList}\small\item\em Callback message structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__serialmanager_gabf238ccb327fd5316f765109d1235ae3}\label{group__serialmanager_gabf238ccb327fd5316f765109d1235ae3}} 
+\#define {\bfseries S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+N\+O\+N\+\_\+\+B\+L\+O\+C\+K\+I\+N\+G\+\_\+\+M\+O\+DE}~(0\+U)
+\item 
+\mbox{\Hypertarget{group__serialmanager_ga58308509c0f8d97f157a3f9eb5d72ce2}\label{group__serialmanager_ga58308509c0f8d97f157a3f9eb5d72ce2}} 
+\#define \mbox{\hyperlink{group__serialmanager_ga58308509c0f8d97f157a3f9eb5d72ce2}{S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+A\+RT}}~(1\+U)
+\begin{DoxyCompactList}\small\item\em Enable or disable uart port (1 -\/ enable, 0 -\/ disable) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serialmanager_gaf2e3166c5915cc3c3669d158da08cd51}\label{group__serialmanager_gaf2e3166c5915cc3c3669d158da08cd51}} 
+\#define \mbox{\hyperlink{group__serialmanager_gaf2e3166c5915cc3c3669d158da08cd51}{S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+S\+B\+C\+DC}}~(0\+U)
+\begin{DoxyCompactList}\small\item\em Enable or disable U\+SB C\+DC port (1 -\/ enable, 0 -\/ disable) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serialmanager_ga7c73031b5ccec048199e131e3b4eaafc}\label{group__serialmanager_ga7c73031b5ccec048199e131e3b4eaafc}} 
+\#define \mbox{\hyperlink{group__serialmanager_ga7c73031b5ccec048199e131e3b4eaafc}{S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+WO}}~(0\+U)
+\begin{DoxyCompactList}\small\item\em Enable or disable S\+WO port (1 -\/ enable, 0 -\/ disable) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serialmanager_ga1e748beb3f0b463fee6acf6b35ae06ac}\label{group__serialmanager_ga1e748beb3f0b463fee6acf6b35ae06ac}} 
+\#define \mbox{\hyperlink{group__serialmanager_ga1e748beb3f0b463fee6acf6b35ae06ac}{S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+S\+B\+C\+D\+C\+\_\+\+V\+I\+R\+T\+U\+AL}}~(0\+U)
+\begin{DoxyCompactList}\small\item\em Enable or disable U\+SB C\+DC virtual port (1 -\/ enable, 0 -\/ disable) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serialmanager_gac278be51c3508495c1be1a4cff566f3f}\label{group__serialmanager_gac278be51c3508495c1be1a4cff566f3f}} 
+\#define \mbox{\hyperlink{group__serialmanager_gac278be51c3508495c1be1a4cff566f3f}{S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE}}~(4\+U)
+\begin{DoxyCompactList}\small\item\em Set serial manager write handle size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serialmanager_ga28b58196f19421f361cea370e9459e77}\label{group__serialmanager_ga28b58196f19421f361cea370e9459e77}} 
+\#define {\bfseries S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+R\+E\+A\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE}~(4\+U)
+\item 
+\mbox{\Hypertarget{group__serialmanager_ga6fea797be8d0d34fc8abea7b916ce48b}\label{group__serialmanager_ga6fea797be8d0d34fc8abea7b916ce48b}} 
+\#define {\bfseries S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+T\+E\+MP}~0U
+\item 
+\mbox{\Hypertarget{group__serialmanager_ga6fea797be8d0d34fc8abea7b916ce48b}\label{group__serialmanager_ga6fea797be8d0d34fc8abea7b916ce48b}} 
+\#define {\bfseries S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+T\+E\+MP}~\mbox{\hyperlink{group__serial__port__uart_ga2109c092d5f72ef7729b0454b40e892f}{S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+U\+A\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE}}
+\item 
+\mbox{\Hypertarget{group__serialmanager_gabc4aa7ae83c31b66e437d7fd264aaebc}\label{group__serialmanager_gabc4aa7ae83c31b66e437d7fd264aaebc}} 
+\#define \mbox{\hyperlink{group__serialmanager_gabc4aa7ae83c31b66e437d7fd264aaebc}{S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE}}~(S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+T\+E\+MP + 12\+U)
+\begin{DoxyCompactList}\small\item\em S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+U\+A\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+Z\+E/\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE + serial manager dedicated size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serialmanager_gaae959bcddd181966d6c8bf4cbf140fea}\label{group__serialmanager_gaae959bcddd181966d6c8bf4cbf140fea}} 
+\#define {\bfseries S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+U\+S\+E\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+T\+A\+SK}~(1\+U)
+\item 
+\mbox{\Hypertarget{group__serialmanager_ga9bffc03255c48dae79cc2702f0980269}\label{group__serialmanager_ga9bffc03255c48dae79cc2702f0980269}} 
+\#define {\bfseries S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}~(2\+U)
+\item 
+\mbox{\Hypertarget{group__serialmanager_ga460c59805f2a8ec37e008b5a285e1760}\label{group__serialmanager_ga460c59805f2a8ec37e008b5a285e1760}} 
+\#define {\bfseries S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+T\+A\+S\+K\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}~(1000\+U)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__serialmanager_gaba1cc3859c4f829ee0bc6091184d4b08}\label{group__serialmanager_gaba1cc3859c4f829ee0bc6091184d4b08}} 
+typedef void $\ast$ {\bfseries serial\+\_\+handle\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__serialmanager_gac8319b6189019680778f230eb319530e}\label{group__serialmanager_gac8319b6189019680778f230eb319530e}} 
+typedef void $\ast$ {\bfseries serial\+\_\+write\+\_\+handle\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__serialmanager_ga8bfec9c49e40728806d775fdb4bbf78e}\label{group__serialmanager_ga8bfec9c49e40728806d775fdb4bbf78e}} 
+typedef void $\ast$ {\bfseries serial\+\_\+read\+\_\+handle\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__serialmanager_gaa7dc5f93aacda72d14bb0fa66b0401f3}\label{group__serialmanager_gaa7dc5f93aacda72d14bb0fa66b0401f3}} 
+typedef enum \mbox{\hyperlink{group__serialmanager_ga37012d03963b0a7aac96cda088362180}{\+\_\+serial\+\_\+port\+\_\+type}} \mbox{\hyperlink{group__serialmanager_gaa7dc5f93aacda72d14bb0fa66b0401f3}{serial\+\_\+port\+\_\+type\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em serial port type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serialmanager_gaae9cb68d4f20901d9884b690d39a257a}\label{group__serialmanager_gaae9cb68d4f20901d9884b690d39a257a}} 
+typedef struct \mbox{\hyperlink{struct__serial__manager__config}{\+\_\+serial\+\_\+manager\+\_\+config}} \mbox{\hyperlink{group__serialmanager_gaae9cb68d4f20901d9884b690d39a257a}{serial\+\_\+manager\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em serial manager config structure \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}\label{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}} 
+typedef enum \mbox{\hyperlink{group__serialmanager_ga936dd06c6718edc81ad0423a2bb04ad8}{\+\_\+serial\+\_\+manager\+\_\+status}} \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em serial manager error code \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serialmanager_gaaf1dca4823669f7e5e243b1e8826eb85}\label{group__serialmanager_gaaf1dca4823669f7e5e243b1e8826eb85}} 
+typedef struct \mbox{\hyperlink{struct__serial__manager__callback__message}{\+\_\+serial\+\_\+manager\+\_\+callback\+\_\+message}} \mbox{\hyperlink{group__serialmanager_gaaf1dca4823669f7e5e243b1e8826eb85}{serial\+\_\+manager\+\_\+callback\+\_\+message\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Callback message structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serialmanager_gac6756c1884babe59f1e78b1cb9552c28}\label{group__serialmanager_gac6756c1884babe59f1e78b1cb9552c28}} 
+typedef void($\ast$ \mbox{\hyperlink{group__serialmanager_gac6756c1884babe59f1e78b1cb9552c28}{serial\+\_\+manager\+\_\+callback\+\_\+t}}) (void $\ast$callback\+Param, \mbox{\hyperlink{group__serialmanager_gaaf1dca4823669f7e5e243b1e8826eb85}{serial\+\_\+manager\+\_\+callback\+\_\+message\+\_\+t}} $\ast$message, \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} status)
+\begin{DoxyCompactList}\small\item\em callback function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__serialmanager_ga37012d03963b0a7aac96cda088362180}{\+\_\+serial\+\_\+port\+\_\+type}} \{ \mbox{\hyperlink{group__serialmanager_gga37012d03963b0a7aac96cda088362180a5b4d039d8c91cb19fca7c5dc196f8d77}{k\+Serial\+Port\+\_\+\+Uart}} = 1U, 
+\mbox{\hyperlink{group__serialmanager_gga37012d03963b0a7aac96cda088362180a3785825f30826c61a4ef13bf983381c2}{k\+Serial\+Port\+\_\+\+Usb\+Cdc}}, 
+\mbox{\hyperlink{group__serialmanager_gga37012d03963b0a7aac96cda088362180af6a37935b2767a9ae22825f0bc49ef77}{k\+Serial\+Port\+\_\+\+Swo}}, 
+\mbox{\hyperlink{group__serialmanager_gga37012d03963b0a7aac96cda088362180a364a995b9a86d7f512d3114d998cbaad}{k\+Serial\+Port\+\_\+\+Usb\+Cdc\+Virtual}}
+ \}
+\begin{DoxyCompactList}\small\item\em serial port type \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__serialmanager_ga936dd06c6718edc81ad0423a2bb04ad8}{\+\_\+serial\+\_\+manager\+\_\+status}} \{ \newline
+\mbox{\hyperlink{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a1e4ed7376c48b94ec9a60f272a629ed4}{k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success}} = k\+Status\+\_\+\+Success, 
+\mbox{\hyperlink{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a61e6a331c5f789fe88fcf2bacf8a5553}{k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+S\+E\+R\+I\+A\+L\+M\+A\+N\+A\+G\+ER, 1), 
+\mbox{\hyperlink{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a67e18fb1e47f4f40dc58988b76a2d876}{k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Busy}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+S\+E\+R\+I\+A\+L\+M\+A\+N\+A\+G\+ER, 2), 
+\mbox{\hyperlink{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8abdcdea0fcd8b4c01592728a4ba041154}{k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Notify}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+S\+E\+R\+I\+A\+L\+M\+A\+N\+A\+G\+ER, 3), 
+\newline
+\mbox{\hyperlink{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8af01c3a38751393325ab9791d8181ef38}{k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Canceled}}, 
+\mbox{\hyperlink{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a9f087536c7a9930159682ed03d8d71ea}{k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Handle\+Conflict}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+\_\+\+S\+E\+R\+I\+A\+L\+M\+A\+N\+A\+G\+ER, 5), 
+\mbox{\hyperlink{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a41631953d2191b631fbe8443bfa856c8}{k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Ring\+Buffer\+Overflow}}
+ \}
+\begin{DoxyCompactList}\small\item\em serial manager error code \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__serialmanager_gaf8afb0df9a0bd264c5abb318cd8f2e44}{Serial\+Manager\+\_\+\+Init}} (serial\+\_\+handle\+\_\+t serial\+Handle, \mbox{\hyperlink{group__serialmanager_gaae9cb68d4f20901d9884b690d39a257a}{serial\+\_\+manager\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Initializes a serial manager module with the serial manager handle and the user configuration structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__serialmanager_ga467c8a817003eacd48f86aaef1ce8306}{Serial\+Manager\+\_\+\+Deinit}} (serial\+\_\+handle\+\_\+t serial\+Handle)
+\begin{DoxyCompactList}\small\item\em De-\/initializes the serial manager module instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__serialmanager_ga3d26249a8331e6ca17e9c60838b56d20}{Serial\+Manager\+\_\+\+Open\+Write\+Handle}} (serial\+\_\+handle\+\_\+t serial\+Handle, serial\+\_\+write\+\_\+handle\+\_\+t write\+Handle)
+\begin{DoxyCompactList}\small\item\em Opens a writing handle for the serial manager module. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__serialmanager_gadb8df1d54da32e6de17680264ca4106a}{Serial\+Manager\+\_\+\+Close\+Write\+Handle}} (serial\+\_\+write\+\_\+handle\+\_\+t write\+Handle)
+\begin{DoxyCompactList}\small\item\em Closes a writing handle for the serial manager module. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__serialmanager_ga66915bf8f50a417620ef94951d1df4b8}{Serial\+Manager\+\_\+\+Open\+Read\+Handle}} (serial\+\_\+handle\+\_\+t serial\+Handle, serial\+\_\+read\+\_\+handle\+\_\+t read\+Handle)
+\begin{DoxyCompactList}\small\item\em Opens a reading handle for the serial manager module. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__serialmanager_ga09c8831eb6ca6e544881dcbf18dcb4a7}{Serial\+Manager\+\_\+\+Close\+Read\+Handle}} (serial\+\_\+read\+\_\+handle\+\_\+t read\+Handle)
+\begin{DoxyCompactList}\small\item\em Closes a reading for the serial manager module. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__serialmanager_ga3fab1d6bffd89459be9f23d40874248e}{Serial\+Manager\+\_\+\+Write\+Blocking}} (serial\+\_\+write\+\_\+handle\+\_\+t write\+Handle, uint8\+\_\+t $\ast$buffer, uint32\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Transmits data with the blocking mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__serialmanager_ga03b1bb5c3dbaa5ea2f0a6e7003f0b4eb}{Serial\+Manager\+\_\+\+Read\+Blocking}} (serial\+\_\+read\+\_\+handle\+\_\+t read\+Handle, uint8\+\_\+t $\ast$buffer, uint32\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Reads data with the blocking mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__serialmanager_ga32cdccd6df5d87f17037f34cf9f1e416}{Serial\+Manager\+\_\+\+Enter\+Lowpower}} (serial\+\_\+handle\+\_\+t serial\+Handle)
+\begin{DoxyCompactList}\small\item\em Prepares to enter low power consumption. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__serialmanager_gaef5c404d43871f6d8f761b27dbf183fa}{Serial\+Manager\+\_\+\+Exit\+Lowpower}} (serial\+\_\+handle\+\_\+t serial\+Handle)
+\begin{DoxyCompactList}\small\item\em Restores from low power consumption. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__serialmanager_ga936dd06c6718edc81ad0423a2bb04ad8}\label{group__serialmanager_ga936dd06c6718edc81ad0423a2bb04ad8}} 
+\index{Serialmanager@{Serialmanager}!\_serial\_manager\_status@{\_serial\_manager\_status}}
+\index{\_serial\_manager\_status@{\_serial\_manager\_status}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{\_serial\_manager\_status}{\_serial\_manager\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__serialmanager_ga936dd06c6718edc81ad0423a2bb04ad8}{\+\_\+serial\+\_\+manager\+\_\+status}}}
+
+
+
+serial manager error code 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SerialManager\_Success@{kStatus\_SerialManager\_Success}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kStatus\_SerialManager\_Success@{kStatus\_SerialManager\_Success}}}\mbox{\Hypertarget{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a1e4ed7376c48b94ec9a60f272a629ed4}\label{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a1e4ed7376c48b94ec9a60f272a629ed4}} 
+k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success&Success \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SerialManager\_Error@{kStatus\_SerialManager\_Error}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kStatus\_SerialManager\_Error@{kStatus\_SerialManager\_Error}}}\mbox{\Hypertarget{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a61e6a331c5f789fe88fcf2bacf8a5553}\label{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a61e6a331c5f789fe88fcf2bacf8a5553}} 
+k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Error&Failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SerialManager\_Busy@{kStatus\_SerialManager\_Busy}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kStatus\_SerialManager\_Busy@{kStatus\_SerialManager\_Busy}}}\mbox{\Hypertarget{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a67e18fb1e47f4f40dc58988b76a2d876}\label{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a67e18fb1e47f4f40dc58988b76a2d876}} 
+k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Busy&Busy \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SerialManager\_Notify@{kStatus\_SerialManager\_Notify}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kStatus\_SerialManager\_Notify@{kStatus\_SerialManager\_Notify}}}\mbox{\Hypertarget{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8abdcdea0fcd8b4c01592728a4ba041154}\label{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8abdcdea0fcd8b4c01592728a4ba041154}} 
+k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Notify&Ring buffer is not empty \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SerialManager\_Canceled@{kStatus\_SerialManager\_Canceled}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kStatus\_SerialManager\_Canceled@{kStatus\_SerialManager\_Canceled}}}\mbox{\Hypertarget{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8af01c3a38751393325ab9791d8181ef38}\label{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8af01c3a38751393325ab9791d8181ef38}} 
+k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Canceled&the non-\/blocking request is canceled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SerialManager\_HandleConflict@{kStatus\_SerialManager\_HandleConflict}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kStatus\_SerialManager\_HandleConflict@{kStatus\_SerialManager\_HandleConflict}}}\mbox{\Hypertarget{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a9f087536c7a9930159682ed03d8d71ea}\label{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a9f087536c7a9930159682ed03d8d71ea}} 
+k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Handle\+Conflict&The handle is opened \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_SerialManager\_RingBufferOverflow@{kStatus\_SerialManager\_RingBufferOverflow}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kStatus\_SerialManager\_RingBufferOverflow@{kStatus\_SerialManager\_RingBufferOverflow}}}\mbox{\Hypertarget{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a41631953d2191b631fbe8443bfa856c8}\label{group__serialmanager_gga936dd06c6718edc81ad0423a2bb04ad8a41631953d2191b631fbe8443bfa856c8}} 
+k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Ring\+Buffer\+Overflow&The ring buffer is overflowed \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__serialmanager_ga37012d03963b0a7aac96cda088362180}\label{group__serialmanager_ga37012d03963b0a7aac96cda088362180}} 
+\index{Serialmanager@{Serialmanager}!\_serial\_port\_type@{\_serial\_port\_type}}
+\index{\_serial\_port\_type@{\_serial\_port\_type}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{\_serial\_port\_type}{\_serial\_port\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__serialmanager_ga37012d03963b0a7aac96cda088362180}{\+\_\+serial\+\_\+port\+\_\+type}}}
+
+
+
+serial port type 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSerialPort\_Uart@{kSerialPort\_Uart}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kSerialPort\_Uart@{kSerialPort\_Uart}}}\mbox{\Hypertarget{group__serialmanager_gga37012d03963b0a7aac96cda088362180a5b4d039d8c91cb19fca7c5dc196f8d77}\label{group__serialmanager_gga37012d03963b0a7aac96cda088362180a5b4d039d8c91cb19fca7c5dc196f8d77}} 
+k\+Serial\+Port\+\_\+\+Uart&Serial port U\+A\+RT \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSerialPort\_UsbCdc@{kSerialPort\_UsbCdc}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kSerialPort\_UsbCdc@{kSerialPort\_UsbCdc}}}\mbox{\Hypertarget{group__serialmanager_gga37012d03963b0a7aac96cda088362180a3785825f30826c61a4ef13bf983381c2}\label{group__serialmanager_gga37012d03963b0a7aac96cda088362180a3785825f30826c61a4ef13bf983381c2}} 
+k\+Serial\+Port\+\_\+\+Usb\+Cdc&Serial port U\+SB C\+DC \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSerialPort\_Swo@{kSerialPort\_Swo}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kSerialPort\_Swo@{kSerialPort\_Swo}}}\mbox{\Hypertarget{group__serialmanager_gga37012d03963b0a7aac96cda088362180af6a37935b2767a9ae22825f0bc49ef77}\label{group__serialmanager_gga37012d03963b0a7aac96cda088362180af6a37935b2767a9ae22825f0bc49ef77}} 
+k\+Serial\+Port\+\_\+\+Swo&Serial port S\+WO \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSerialPort\_UsbCdcVirtual@{kSerialPort\_UsbCdcVirtual}!Serialmanager@{Serialmanager}}\index{Serialmanager@{Serialmanager}!kSerialPort\_UsbCdcVirtual@{kSerialPort\_UsbCdcVirtual}}}\mbox{\Hypertarget{group__serialmanager_gga37012d03963b0a7aac96cda088362180a364a995b9a86d7f512d3114d998cbaad}\label{group__serialmanager_gga37012d03963b0a7aac96cda088362180a364a995b9a86d7f512d3114d998cbaad}} 
+k\+Serial\+Port\+\_\+\+Usb\+Cdc\+Virtual&Serial port U\+SB C\+DC Virtual \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__serialmanager_ga09c8831eb6ca6e544881dcbf18dcb4a7}\label{group__serialmanager_ga09c8831eb6ca6e544881dcbf18dcb4a7}} 
+\index{Serialmanager@{Serialmanager}!SerialManager\_CloseReadHandle@{SerialManager\_CloseReadHandle}}
+\index{SerialManager\_CloseReadHandle@{SerialManager\_CloseReadHandle}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{SerialManager\_CloseReadHandle()}{SerialManager\_CloseReadHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} Serial\+Manager\+\_\+\+Close\+Read\+Handle (\begin{DoxyParamCaption}\item[{serial\+\_\+read\+\_\+handle\+\_\+t}]{read\+Handle }\end{DoxyParamCaption})}
+
+
+
+Closes a reading for the serial manager module. 
+
+This function Closes a reading for the serial manager module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em read\+Handle} & The serial manager module reading handle pointer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success} & The reading handle is closed. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__serialmanager_gadb8df1d54da32e6de17680264ca4106a}\label{group__serialmanager_gadb8df1d54da32e6de17680264ca4106a}} 
+\index{Serialmanager@{Serialmanager}!SerialManager\_CloseWriteHandle@{SerialManager\_CloseWriteHandle}}
+\index{SerialManager\_CloseWriteHandle@{SerialManager\_CloseWriteHandle}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{SerialManager\_CloseWriteHandle()}{SerialManager\_CloseWriteHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} Serial\+Manager\+\_\+\+Close\+Write\+Handle (\begin{DoxyParamCaption}\item[{serial\+\_\+write\+\_\+handle\+\_\+t}]{write\+Handle }\end{DoxyParamCaption})}
+
+
+
+Closes a writing handle for the serial manager module. 
+
+This function Closes a writing handle for the serial manager module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\+Handle} & The serial manager module writing handle pointer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success} & The writing handle is closed. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__serialmanager_ga467c8a817003eacd48f86aaef1ce8306}\label{group__serialmanager_ga467c8a817003eacd48f86aaef1ce8306}} 
+\index{Serialmanager@{Serialmanager}!SerialManager\_Deinit@{SerialManager\_Deinit}}
+\index{SerialManager\_Deinit@{SerialManager\_Deinit}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{SerialManager\_Deinit()}{SerialManager\_Deinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} Serial\+Manager\+\_\+\+Deinit (\begin{DoxyParamCaption}\item[{serial\+\_\+handle\+\_\+t}]{serial\+Handle }\end{DoxyParamCaption})}
+
+
+
+De-\/initializes the serial manager module instance. 
+
+This function de-\/initializes the serial manager module instance. If the opened writing or reading handle is not closed, the function will return k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Busy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial\+Handle} & The serial manager module handle pointer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success} & The serial manager de-\/initialization succeed. \\
+\hline
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Busy} & Opened reading or writing handle is not closed. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__serialmanager_ga32cdccd6df5d87f17037f34cf9f1e416}\label{group__serialmanager_ga32cdccd6df5d87f17037f34cf9f1e416}} 
+\index{Serialmanager@{Serialmanager}!SerialManager\_EnterLowpower@{SerialManager\_EnterLowpower}}
+\index{SerialManager\_EnterLowpower@{SerialManager\_EnterLowpower}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{SerialManager\_EnterLowpower()}{SerialManager\_EnterLowpower()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} Serial\+Manager\+\_\+\+Enter\+Lowpower (\begin{DoxyParamCaption}\item[{serial\+\_\+handle\+\_\+t}]{serial\+Handle }\end{DoxyParamCaption})}
+
+
+
+Prepares to enter low power consumption. 
+
+This function is used to prepare to enter low power consumption.
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial\+Handle} & The serial manager module handle pointer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success} & Successful operation. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__serialmanager_gaef5c404d43871f6d8f761b27dbf183fa}\label{group__serialmanager_gaef5c404d43871f6d8f761b27dbf183fa}} 
+\index{Serialmanager@{Serialmanager}!SerialManager\_ExitLowpower@{SerialManager\_ExitLowpower}}
+\index{SerialManager\_ExitLowpower@{SerialManager\_ExitLowpower}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{SerialManager\_ExitLowpower()}{SerialManager\_ExitLowpower()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} Serial\+Manager\+\_\+\+Exit\+Lowpower (\begin{DoxyParamCaption}\item[{serial\+\_\+handle\+\_\+t}]{serial\+Handle }\end{DoxyParamCaption})}
+
+
+
+Restores from low power consumption. 
+
+This function is used to restore from low power consumption.
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial\+Handle} & The serial manager module handle pointer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success} & Successful operation. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__serialmanager_gaf8afb0df9a0bd264c5abb318cd8f2e44}\label{group__serialmanager_gaf8afb0df9a0bd264c5abb318cd8f2e44}} 
+\index{Serialmanager@{Serialmanager}!SerialManager\_Init@{SerialManager\_Init}}
+\index{SerialManager\_Init@{SerialManager\_Init}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{SerialManager\_Init()}{SerialManager\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} Serial\+Manager\+\_\+\+Init (\begin{DoxyParamCaption}\item[{serial\+\_\+handle\+\_\+t}]{serial\+Handle,  }\item[{\mbox{\hyperlink{group__serialmanager_gaae9cb68d4f20901d9884b690d39a257a}{serial\+\_\+manager\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Initializes a serial manager module with the serial manager handle and the user configuration structure. 
+
+This function configures the Serial Manager module with user-\/defined settings. The user can configure the configuration structure. The parameter serial\+Handle is a pointer to point to a memory space of size \mbox{\hyperlink{group__serialmanager_gabc4aa7ae83c31b66e437d7fd264aaebc}{S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE}} allocated by the caller. The Serial Manager module supports two types of serial port, U\+A\+RT (includes U\+A\+RT, U\+S\+A\+RT, L\+P\+S\+CI, L\+P\+U\+A\+RT, etc) and U\+SB C\+DC. Please refer to \mbox{\hyperlink{group__serialmanager_gaa7dc5f93aacda72d14bb0fa66b0401f3}{serial\+\_\+port\+\_\+type\+\_\+t}} for serial port setting. These two types can be set by using \mbox{\hyperlink{group__serialmanager_gaae9cb68d4f20901d9884b690d39a257a}{serial\+\_\+manager\+\_\+config\+\_\+t}}.
+
+Example below shows how to use this A\+PI to configure the Serial Manager. For U\+A\+RT, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define SERIAL\_MANAGER\_RING\_BUFFER\_SIZE          (256U)}}
+\DoxyCodeLine{\textcolor{keyword}{static} uint8\_t s\_serialHandleBuffer[\mbox{\hyperlink{group__serialmanager_gabc4aa7ae83c31b66e437d7fd264aaebc}{SERIAL\_MANAGER\_HANDLE\_SIZE}}];}
+\DoxyCodeLine{\textcolor{keyword}{static} serial\_handle\_t s\_serialHandle = \&s\_serialHandleBuffer[0];}
+\DoxyCodeLine{\textcolor{keyword}{static} uint8\_t s\_ringBuffer[SERIAL\_MANAGER\_RING\_BUFFER\_SIZE];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{struct__serial__manager__config}{serial\_manager\_config\_t}} config;}
+\DoxyCodeLine{\mbox{\hyperlink{struct__serial__port__uart__config}{serial\_port\_uart\_config\_t}} uartConfig;}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__serial__manager__config_a03112637c9c98af9974c331c761283a5}{type}} = \mbox{\hyperlink{group__serialmanager_gga37012d03963b0a7aac96cda088362180a5b4d039d8c91cb19fca7c5dc196f8d77}{kSerialPort\_Uart}};}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__serial__manager__config_a5aad89b7fedb6b6bb7b67a2f200517e4}{ringBuffer}} = \&s\_ringBuffer[0];}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__serial__manager__config_a6091a0a1e610e8c014fc4b070392fc08}{ringBufferSize}} = SERIAL\_MANAGER\_RING\_BUFFER\_SIZE;}
+\DoxyCodeLine{uartConfig.\mbox{\hyperlink{struct__serial__port__uart__config_a0247bf27ecd553eeb029a06b1e6ec354}{instance}} = 0;}
+\DoxyCodeLine{uartConfig.\mbox{\hyperlink{struct__serial__port__uart__config_abe13cc0e6ef4825ed997d630d9e45c45}{clockRate}} = 24000000;}
+\DoxyCodeLine{uartConfig.\mbox{\hyperlink{struct__serial__port__uart__config_ab38a80feace530cdca66134f6e3801aa}{baudRate}} = 115200;}
+\DoxyCodeLine{uartConfig.\mbox{\hyperlink{struct__serial__port__uart__config_a9c90a7fdfd19cd1c99826dbbebea2d96}{parityMode}} = \mbox{\hyperlink{group__serial__port__uart_gga2d84542a7efc9d896f4e8d7221e1ec98a208958aa923a2c50ac1192a5085ab8b1}{kSerialManager\_UartParityDisabled}};}
+\DoxyCodeLine{uartConfig.\mbox{\hyperlink{struct__serial__port__uart__config_a5f63f60b4ce406506c35be15323ad266}{stopBitCount}} = \mbox{\hyperlink{group__serial__port__uart_gga97aea0fa091f5d31407cd8b94bdc5f35a5caed34146b357a7061aaacfe378e039}{kSerialManager\_UartOneStopBit}};}
+\DoxyCodeLine{uartConfig.\mbox{\hyperlink{struct__serial__port__uart__config_aa71c95a745f5bb5f666e55f7c98e4e9f}{enableRx}} = 1;}
+\DoxyCodeLine{uartConfig.\mbox{\hyperlink{struct__serial__port__uart__config_a4e1a6dc4f40cf76369024809e1f4163d}{enableTx}} = 1;}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__serial__manager__config_a63fdd311bd5f937e94beea458e022ec5}{portConfig}} = \&uartConfig;}
+\DoxyCodeLine{\mbox{\hyperlink{group__serialmanager_gaf8afb0df9a0bd264c5abb318cd8f2e44}{SerialManager\_Init}}(s\_serialHandle, \&config);}
+\end{DoxyCode}
+ For U\+SB C\+DC, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define SERIAL\_MANAGER\_RING\_BUFFER\_SIZE          (256U)}}
+\DoxyCodeLine{\textcolor{keyword}{static} uint8\_t s\_serialHandleBuffer[\mbox{\hyperlink{group__serialmanager_gabc4aa7ae83c31b66e437d7fd264aaebc}{SERIAL\_MANAGER\_HANDLE\_SIZE}}];}
+\DoxyCodeLine{\textcolor{keyword}{static} serial\_handle\_t s\_serialHandle = \&s\_serialHandleBuffer[0];}
+\DoxyCodeLine{\textcolor{keyword}{static} uint8\_t s\_ringBuffer[SERIAL\_MANAGER\_RING\_BUFFER\_SIZE];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{struct__serial__manager__config}{serial\_manager\_config\_t}} config;}
+\DoxyCodeLine{serial\_port\_usb\_cdc\_config\_t usbCdcConfig;}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__serial__manager__config_a03112637c9c98af9974c331c761283a5}{type}} = \mbox{\hyperlink{group__serialmanager_gga37012d03963b0a7aac96cda088362180a3785825f30826c61a4ef13bf983381c2}{kSerialPort\_UsbCdc}};}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__serial__manager__config_a5aad89b7fedb6b6bb7b67a2f200517e4}{ringBuffer}} = \&s\_ringBuffer[0];}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__serial__manager__config_a6091a0a1e610e8c014fc4b070392fc08}{ringBufferSize}} = SERIAL\_MANAGER\_RING\_BUFFER\_SIZE;}
+\DoxyCodeLine{usbCdcConfig.controllerIndex = kSerialManager\_UsbControllerKhci0;}
+\DoxyCodeLine{config.\mbox{\hyperlink{struct__serial__manager__config_a63fdd311bd5f937e94beea458e022ec5}{portConfig}} = \&usbCdcConfig;}
+\DoxyCodeLine{\mbox{\hyperlink{group__serialmanager_gaf8afb0df9a0bd264c5abb318cd8f2e44}{SerialManager\_Init}}(s\_serialHandle, \&config);}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial\+Handle} & Pointer to point to a memory space of size \mbox{\hyperlink{group__serialmanager_gabc4aa7ae83c31b66e437d7fd264aaebc}{S\+E\+R\+I\+A\+L\+\_\+\+M\+A\+N\+A\+G\+E\+R\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE}} allocated by the caller. \\
+\hline
+{\em config} & Pointer to user-\/defined configuration structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Error} & An error occurred. \\
+\hline
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success} & The Serial Manager module initialization succeed. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__serialmanager_ga66915bf8f50a417620ef94951d1df4b8}\label{group__serialmanager_ga66915bf8f50a417620ef94951d1df4b8}} 
+\index{Serialmanager@{Serialmanager}!SerialManager\_OpenReadHandle@{SerialManager\_OpenReadHandle}}
+\index{SerialManager\_OpenReadHandle@{SerialManager\_OpenReadHandle}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{SerialManager\_OpenReadHandle()}{SerialManager\_OpenReadHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} Serial\+Manager\+\_\+\+Open\+Read\+Handle (\begin{DoxyParamCaption}\item[{serial\+\_\+handle\+\_\+t}]{serial\+Handle,  }\item[{serial\+\_\+read\+\_\+handle\+\_\+t}]{read\+Handle }\end{DoxyParamCaption})}
+
+
+
+Opens a reading handle for the serial manager module. 
+
+This function Opens a reading handle for the serial manager module. The reading handle can not be opened multiple at the same time. The error code k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Busy would be returned when the previous reading handle is not closed. And There can only be one buffer for receiving for the reading handle at the same time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial\+Handle} & The serial manager module handle pointer. \\
+\hline
+{\em read\+Handle} & The serial manager module reading handle pointer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Error} & An error occurred. \\
+\hline
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success} & The reading handle is opened. \\
+\hline
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Busy} & Previous reading handle is not closed.\\
+\hline
+\end{DoxyRetVals}
+Example below shows how to use this A\+PI to read data. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static} uint8\_t s\_serialReadHandleBuffer[SERIAL\_MANAGER\_READ\_HANDLE\_SIZE];}
+\DoxyCodeLine{\textcolor{keyword}{static} serial\_read\_handle\_t s\_serialReadHandle = \&s\_serialReadHandleBuffer[0];}
+\DoxyCodeLine{\mbox{\hyperlink{group__serialmanager_ga66915bf8f50a417620ef94951d1df4b8}{SerialManager\_OpenReadHandle}}(serialHandle, s\_serialReadHandle);}
+\DoxyCodeLine{\textcolor{keyword}{static} uint8\_t s\_nonBlockingBuffer[64];}
+\DoxyCodeLine{SerialManager\_InstallRxCallback(s\_serialReadHandle, APP\_SerialManagerRxCallback, s\_serialReadHandle);}
+\DoxyCodeLine{SerialManager\_ReadNonBlocking(s\_serialReadHandle, s\_nonBlockingBuffer, \textcolor{keyword}{sizeof}(s\_nonBlockingBuffer));}
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__serialmanager_ga3d26249a8331e6ca17e9c60838b56d20}\label{group__serialmanager_ga3d26249a8331e6ca17e9c60838b56d20}} 
+\index{Serialmanager@{Serialmanager}!SerialManager\_OpenWriteHandle@{SerialManager\_OpenWriteHandle}}
+\index{SerialManager\_OpenWriteHandle@{SerialManager\_OpenWriteHandle}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{SerialManager\_OpenWriteHandle()}{SerialManager\_OpenWriteHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} Serial\+Manager\+\_\+\+Open\+Write\+Handle (\begin{DoxyParamCaption}\item[{serial\+\_\+handle\+\_\+t}]{serial\+Handle,  }\item[{serial\+\_\+write\+\_\+handle\+\_\+t}]{write\+Handle }\end{DoxyParamCaption})}
+
+
+
+Opens a writing handle for the serial manager module. 
+
+This function Opens a writing handle for the serial manager module. If the serial manager needs to be used in different tasks, the task should open a dedicated write handle for itself by calling \mbox{\hyperlink{group__serialmanager_ga3d26249a8331e6ca17e9c60838b56d20}{Serial\+Manager\+\_\+\+Open\+Write\+Handle}}. Since there can only one buffer for transmission for the writing handle at the same time, multiple writing handles need to be opened when the multiple transmission is needed for a task.
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial\+Handle} & The serial manager module handle pointer. \\
+\hline
+{\em write\+Handle} & The serial manager module writing handle pointer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Error} & An error occurred. \\
+\hline
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Handle\+Conflict} & The writing handle was opened. \\
+\hline
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success} & The writing handle is opened.\\
+\hline
+\end{DoxyRetVals}
+Example below shows how to use this A\+PI to write data. For task 1, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static} uint8\_t s\_serialWriteHandleBuffer1[\mbox{\hyperlink{group__serialmanager_gac278be51c3508495c1be1a4cff566f3f}{SERIAL\_MANAGER\_WRITE\_HANDLE\_SIZE}}];}
+\DoxyCodeLine{\textcolor{keyword}{static} serial\_write\_handle\_t s\_serialWriteHandle1 = \&s\_serialWriteHandleBuffer1[0];}
+\DoxyCodeLine{\textcolor{keyword}{static} uint8\_t s\_nonBlockingWelcome1[] = \textcolor{stringliteral}{"This is non-blocking writing log for task1!\(\backslash\)r\(\backslash\)n"};}
+\DoxyCodeLine{\mbox{\hyperlink{group__serialmanager_ga3d26249a8331e6ca17e9c60838b56d20}{SerialManager\_OpenWriteHandle}}(serialHandle, s\_serialWriteHandle1);}
+\DoxyCodeLine{SerialManager\_InstallTxCallback(s\_serialWriteHandle1, Task1\_SerialManagerTxCallback, s\_serialWriteHandle1);}
+\DoxyCodeLine{SerialManager\_WriteNonBlocking(s\_serialWriteHandle1, s\_nonBlockingWelcome1, \textcolor{keyword}{sizeof}(s\_nonBlockingWelcome1) - 1);}
+\end{DoxyCode}
+ For task 2, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static} uint8\_t s\_serialWriteHandleBuffer2[\mbox{\hyperlink{group__serialmanager_gac278be51c3508495c1be1a4cff566f3f}{SERIAL\_MANAGER\_WRITE\_HANDLE\_SIZE}}];}
+\DoxyCodeLine{\textcolor{keyword}{static} serial\_write\_handle\_t s\_serialWriteHandle2 = \&s\_serialWriteHandleBuffer2[0];}
+\DoxyCodeLine{\textcolor{keyword}{static} uint8\_t s\_nonBlockingWelcome2[] = \textcolor{stringliteral}{"This is non-blocking writing log for task2!\(\backslash\)r\(\backslash\)n"};}
+\DoxyCodeLine{\mbox{\hyperlink{group__serialmanager_ga3d26249a8331e6ca17e9c60838b56d20}{SerialManager\_OpenWriteHandle}}(serialHandle, s\_serialWriteHandle2);}
+\DoxyCodeLine{SerialManager\_InstallTxCallback(s\_serialWriteHandle2, Task2\_SerialManagerTxCallback, s\_serialWriteHandle2);}
+\DoxyCodeLine{SerialManager\_WriteNonBlocking(s\_serialWriteHandle2, s\_nonBlockingWelcome2, \textcolor{keyword}{sizeof}(s\_nonBlockingWelcome2) - 1);}
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__serialmanager_ga03b1bb5c3dbaa5ea2f0a6e7003f0b4eb}\label{group__serialmanager_ga03b1bb5c3dbaa5ea2f0a6e7003f0b4eb}} 
+\index{Serialmanager@{Serialmanager}!SerialManager\_ReadBlocking@{SerialManager\_ReadBlocking}}
+\index{SerialManager\_ReadBlocking@{SerialManager\_ReadBlocking}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{SerialManager\_ReadBlocking()}{SerialManager\_ReadBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} Serial\+Manager\+\_\+\+Read\+Blocking (\begin{DoxyParamCaption}\item[{serial\+\_\+read\+\_\+handle\+\_\+t}]{read\+Handle,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint32\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Reads data with the blocking mode. 
+
+This is a blocking function, which polls the receiving buffer, waits for the receiving buffer to be full. This function receives data using an interrupt method. The interrupt of the hardware could not be disabled. And There can only one buffer for receiving for the reading handle at the same time.
+
+\begin{DoxyNote}{Note}
+The function \mbox{\hyperlink{group__serialmanager_ga03b1bb5c3dbaa5ea2f0a6e7003f0b4eb}{Serial\+Manager\+\_\+\+Read\+Blocking}} and the function \#\+Serial\+Manager\+\_\+\+Read\+Non\+Blocking cannot be used at the same time. And, the function \#\+Serial\+Manager\+\_\+\+Cancel\+Reading cannot be used to abort the transmission of this function.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em read\+Handle} & The serial manager module handle pointer. \\
+\hline
+{\em buffer} & Start address of the data to store the received data. \\
+\hline
+{\em length} & The length of the data to be received. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success} & Successfully received all data. \\
+\hline
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Busy} & Previous transmission still not finished; data not all received yet. \\
+\hline
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Error} & An error occurred. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__serialmanager_ga3fab1d6bffd89459be9f23d40874248e}\label{group__serialmanager_ga3fab1d6bffd89459be9f23d40874248e}} 
+\index{Serialmanager@{Serialmanager}!SerialManager\_WriteBlocking@{SerialManager\_WriteBlocking}}
+\index{SerialManager\_WriteBlocking@{SerialManager\_WriteBlocking}!Serialmanager@{Serialmanager}}
+\subsubsection{\texorpdfstring{SerialManager\_WriteBlocking()}{SerialManager\_WriteBlocking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__serialmanager_gac1d9f848c57ca245ad9da8d049369da9}{serial\+\_\+manager\+\_\+status\+\_\+t}} Serial\+Manager\+\_\+\+Write\+Blocking (\begin{DoxyParamCaption}\item[{serial\+\_\+write\+\_\+handle\+\_\+t}]{write\+Handle,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint32\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Transmits data with the blocking mode. 
+
+This is a blocking function, which polls the sending queue, waits for the sending queue to be empty. This function sends data using an interrupt method. The interrupt of the hardware could not be disabled. And There can only one buffer for transmission for the writing handle at the same time.
+
+\begin{DoxyNote}{Note}
+The function \mbox{\hyperlink{group__serialmanager_ga3fab1d6bffd89459be9f23d40874248e}{Serial\+Manager\+\_\+\+Write\+Blocking}} and the function \#\+Serial\+Manager\+\_\+\+Write\+Non\+Blocking cannot be used at the same time. And, the function \#\+Serial\+Manager\+\_\+\+Cancel\+Writing cannot be used to abort the transmission of this function.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em write\+Handle} & The serial manager module handle pointer. \\
+\hline
+{\em buffer} & Start address of the data to write. \\
+\hline
+{\em length} & Length of the data to write. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Success} & Successfully sent all data. \\
+\hline
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Busy} & Previous transmission still not finished; data not all sent yet. \\
+\hline
+{\em k\+Status\+\_\+\+Serial\+Manager\+\_\+\+Error} & An error occurred. \\
+\hline
+\end{DoxyRetVals}

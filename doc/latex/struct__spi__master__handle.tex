@@ -1,0 +1,105 @@
+\hypertarget{struct__spi__master__handle}{}\section{\+\_\+spi\+\_\+master\+\_\+handle Struct Reference}
+\label{struct__spi__master__handle}\index{\_spi\_master\_handle@{\_spi\_master\_handle}}
+
+
+S\+PI transfer handle structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+spi.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$volatile \mbox{\hyperlink{struct__spi__master__handle_ab56d8f300582ce9d7f4a79729124739d}{tx\+Data}}
+\item 
+uint8\+\_\+t $\ast$volatile \mbox{\hyperlink{struct__spi__master__handle_aa58335de5bfa8923228432b62ea9308a}{rx\+Data}}
+\item 
+volatile size\+\_\+t \mbox{\hyperlink{struct__spi__master__handle_a554cc5b5619072f7256a7f7cc1f2bcdb}{tx\+Remaining\+Bytes}}
+\item 
+volatile size\+\_\+t \mbox{\hyperlink{struct__spi__master__handle_aa7189218ccadddcc71ad7de6b758f01a}{rx\+Remaining\+Bytes}}
+\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{struct__spi__master__handle_a47e491dc6b16e7a86f4396620f4bb704}{state}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct__spi__master__handle_a10e6d1f095e525fa85ffe957081ed7a7}{transfer\+Size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__spi__master__handle_a91e259e32d8fb8a07db35bb933c2b6a4}{byte\+Per\+Frame}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__spi__master__handle_a3585201b190b39d2d702daa9192323a3}{watermark}}
+\item 
+\mbox{\hyperlink{group__spi__driver_ga75d9df6e4614756d8ff1bd6f86ca2235}{spi\+\_\+master\+\_\+callback\+\_\+t}} \mbox{\hyperlink{struct__spi__master__handle_a080452bbb72856f9fc2e834d6537d9ff}{callback}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__spi__master__handle_a2e294dd14122c554baa0665072b4ca7a}{user\+Data}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+PI transfer handle structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__spi__master__handle_a91e259e32d8fb8a07db35bb933c2b6a4}\label{struct__spi__master__handle_a91e259e32d8fb8a07db35bb933c2b6a4}} 
+\index{\_spi\_master\_handle@{\_spi\_master\_handle}!bytePerFrame@{bytePerFrame}}
+\index{bytePerFrame@{bytePerFrame}!\_spi\_master\_handle@{\_spi\_master\_handle}}
+\subsubsection{\texorpdfstring{bytePerFrame}{bytePerFrame}}
+{\footnotesize\ttfamily uint8\+\_\+t byte\+Per\+Frame}
+
+S\+PI mode, 2bytes or 1byte in a frame \mbox{\Hypertarget{struct__spi__master__handle_a080452bbb72856f9fc2e834d6537d9ff}\label{struct__spi__master__handle_a080452bbb72856f9fc2e834d6537d9ff}} 
+\index{\_spi\_master\_handle@{\_spi\_master\_handle}!callback@{callback}}
+\index{callback@{callback}!\_spi\_master\_handle@{\_spi\_master\_handle}}
+\subsubsection{\texorpdfstring{callback}{callback}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__spi__driver_ga75d9df6e4614756d8ff1bd6f86ca2235}{spi\+\_\+master\+\_\+callback\+\_\+t}} callback}
+
+S\+PI callback \mbox{\Hypertarget{struct__spi__master__handle_aa58335de5bfa8923228432b62ea9308a}\label{struct__spi__master__handle_aa58335de5bfa8923228432b62ea9308a}} 
+\index{\_spi\_master\_handle@{\_spi\_master\_handle}!rxData@{rxData}}
+\index{rxData@{rxData}!\_spi\_master\_handle@{\_spi\_master\_handle}}
+\subsubsection{\texorpdfstring{rxData}{rxData}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ volatile rx\+Data}
+
+Receive buffer \mbox{\Hypertarget{struct__spi__master__handle_aa7189218ccadddcc71ad7de6b758f01a}\label{struct__spi__master__handle_aa7189218ccadddcc71ad7de6b758f01a}} 
+\index{\_spi\_master\_handle@{\_spi\_master\_handle}!rxRemainingBytes@{rxRemainingBytes}}
+\index{rxRemainingBytes@{rxRemainingBytes}!\_spi\_master\_handle@{\_spi\_master\_handle}}
+\subsubsection{\texorpdfstring{rxRemainingBytes}{rxRemainingBytes}}
+{\footnotesize\ttfamily volatile size\+\_\+t rx\+Remaining\+Bytes}
+
+Receive data remaining in bytes \mbox{\Hypertarget{struct__spi__master__handle_a47e491dc6b16e7a86f4396620f4bb704}\label{struct__spi__master__handle_a47e491dc6b16e7a86f4396620f4bb704}} 
+\index{\_spi\_master\_handle@{\_spi\_master\_handle}!state@{state}}
+\index{state@{state}!\_spi\_master\_handle@{\_spi\_master\_handle}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t state}
+
+S\+PI internal state \mbox{\Hypertarget{struct__spi__master__handle_a10e6d1f095e525fa85ffe957081ed7a7}\label{struct__spi__master__handle_a10e6d1f095e525fa85ffe957081ed7a7}} 
+\index{\_spi\_master\_handle@{\_spi\_master\_handle}!transferSize@{transferSize}}
+\index{transferSize@{transferSize}!\_spi\_master\_handle@{\_spi\_master\_handle}}
+\subsubsection{\texorpdfstring{transferSize}{transferSize}}
+{\footnotesize\ttfamily size\+\_\+t transfer\+Size}
+
+Bytes to be transferred \mbox{\Hypertarget{struct__spi__master__handle_ab56d8f300582ce9d7f4a79729124739d}\label{struct__spi__master__handle_ab56d8f300582ce9d7f4a79729124739d}} 
+\index{\_spi\_master\_handle@{\_spi\_master\_handle}!txData@{txData}}
+\index{txData@{txData}!\_spi\_master\_handle@{\_spi\_master\_handle}}
+\subsubsection{\texorpdfstring{txData}{txData}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ volatile tx\+Data}
+
+Transfer buffer \mbox{\Hypertarget{struct__spi__master__handle_a554cc5b5619072f7256a7f7cc1f2bcdb}\label{struct__spi__master__handle_a554cc5b5619072f7256a7f7cc1f2bcdb}} 
+\index{\_spi\_master\_handle@{\_spi\_master\_handle}!txRemainingBytes@{txRemainingBytes}}
+\index{txRemainingBytes@{txRemainingBytes}!\_spi\_master\_handle@{\_spi\_master\_handle}}
+\subsubsection{\texorpdfstring{txRemainingBytes}{txRemainingBytes}}
+{\footnotesize\ttfamily volatile size\+\_\+t tx\+Remaining\+Bytes}
+
+Send data remaining in bytes \mbox{\Hypertarget{struct__spi__master__handle_a2e294dd14122c554baa0665072b4ca7a}\label{struct__spi__master__handle_a2e294dd14122c554baa0665072b4ca7a}} 
+\index{\_spi\_master\_handle@{\_spi\_master\_handle}!userData@{userData}}
+\index{userData@{userData}!\_spi\_master\_handle@{\_spi\_master\_handle}}
+\subsubsection{\texorpdfstring{userData}{userData}}
+{\footnotesize\ttfamily void$\ast$ user\+Data}
+
+Callback parameter \mbox{\Hypertarget{struct__spi__master__handle_a3585201b190b39d2d702daa9192323a3}\label{struct__spi__master__handle_a3585201b190b39d2d702daa9192323a3}} 
+\index{\_spi\_master\_handle@{\_spi\_master\_handle}!watermark@{watermark}}
+\index{watermark@{watermark}!\_spi\_master\_handle@{\_spi\_master\_handle}}
+\subsubsection{\texorpdfstring{watermark}{watermark}}
+{\footnotesize\ttfamily uint8\+\_\+t watermark}
+
+Watermark value for S\+PI transfer 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+spi.\+h\end{DoxyCompactItemize}

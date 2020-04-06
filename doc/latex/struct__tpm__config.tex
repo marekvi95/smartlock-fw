@@ -1,0 +1,93 @@
+\hypertarget{struct__tpm__config}{}\section{\+\_\+tpm\+\_\+config Struct Reference}
+\label{struct__tpm__config}\index{\_tpm\_config@{\_tpm\_config}}
+
+
+T\+PM config structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+tpm.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__tpm_gad9e7d333c0c3ad41d6bc740d95004dac}{tpm\+\_\+clock\+\_\+prescale\+\_\+t}} \mbox{\hyperlink{struct__tpm__config_a07aeffac07e1ce1b00be27db7a55f8b4}{prescale}}
+\item 
+bool \mbox{\hyperlink{struct__tpm__config_af416ab48aec0988cb89bfd89ec771062}{use\+Global\+Time\+Base}}
+\item 
+\mbox{\hyperlink{group__tpm_ga7413575956cb565fba0cc99c39c73bc7}{tpm\+\_\+trigger\+\_\+select\+\_\+t}} \mbox{\hyperlink{struct__tpm__config_a6d30d8f871d548b2a9b1533373c5234d}{trigger\+Select}}
+\item 
+bool \mbox{\hyperlink{struct__tpm__config_adc33c54dc06ce1822fe921591e5b4d8a}{enable\+Doze}}
+\item 
+bool \mbox{\hyperlink{struct__tpm__config_a98bdc9160cf6b06bd551081e3eab65ee}{enable\+Debug\+Mode}}
+\item 
+bool \mbox{\hyperlink{struct__tpm__config_a7898ff248982be3ba0c9196891db131e}{enable\+Reload\+On\+Trigger}}
+\item 
+bool \mbox{\hyperlink{struct__tpm__config_a8dc09bef3942120a287e07d6f55a291e}{enable\+Stop\+On\+Overflow}}
+\item 
+bool \mbox{\hyperlink{struct__tpm__config_a6083d820c0646893e6e636a99e5a062f}{enable\+Start\+On\+Trigger}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+PM config structure. 
+
+This structure holds the configuration settings for the T\+PM peripheral. To initialize this structure to reasonable defaults, call the \mbox{\hyperlink{group__tpm_ga53fcb634d4c70d9bcb14c972944d949f}{T\+P\+M\+\_\+\+Get\+Default\+Config()}} function and pass a pointer to your config structure instance.
+
+The config struct can be made const so it resides in flash 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__tpm__config_a98bdc9160cf6b06bd551081e3eab65ee}\label{struct__tpm__config_a98bdc9160cf6b06bd551081e3eab65ee}} 
+\index{\_tpm\_config@{\_tpm\_config}!enableDebugMode@{enableDebugMode}}
+\index{enableDebugMode@{enableDebugMode}!\_tpm\_config@{\_tpm\_config}}
+\subsubsection{\texorpdfstring{enableDebugMode}{enableDebugMode}}
+{\footnotesize\ttfamily bool enable\+Debug\+Mode}
+
+true\+: T\+PM counter continues in debug mode; false\+: T\+PM counter is paused in debug mode \mbox{\Hypertarget{struct__tpm__config_adc33c54dc06ce1822fe921591e5b4d8a}\label{struct__tpm__config_adc33c54dc06ce1822fe921591e5b4d8a}} 
+\index{\_tpm\_config@{\_tpm\_config}!enableDoze@{enableDoze}}
+\index{enableDoze@{enableDoze}!\_tpm\_config@{\_tpm\_config}}
+\subsubsection{\texorpdfstring{enableDoze}{enableDoze}}
+{\footnotesize\ttfamily bool enable\+Doze}
+
+true\+: T\+PM counter is paused in doze mode; false\+: T\+PM counter continues in doze mode \mbox{\Hypertarget{struct__tpm__config_a7898ff248982be3ba0c9196891db131e}\label{struct__tpm__config_a7898ff248982be3ba0c9196891db131e}} 
+\index{\_tpm\_config@{\_tpm\_config}!enableReloadOnTrigger@{enableReloadOnTrigger}}
+\index{enableReloadOnTrigger@{enableReloadOnTrigger}!\_tpm\_config@{\_tpm\_config}}
+\subsubsection{\texorpdfstring{enableReloadOnTrigger}{enableReloadOnTrigger}}
+{\footnotesize\ttfamily bool enable\+Reload\+On\+Trigger}
+
+true\+: T\+PM counter is reloaded on trigger; false\+: T\+PM counter not reloaded \mbox{\Hypertarget{struct__tpm__config_a6083d820c0646893e6e636a99e5a062f}\label{struct__tpm__config_a6083d820c0646893e6e636a99e5a062f}} 
+\index{\_tpm\_config@{\_tpm\_config}!enableStartOnTrigger@{enableStartOnTrigger}}
+\index{enableStartOnTrigger@{enableStartOnTrigger}!\_tpm\_config@{\_tpm\_config}}
+\subsubsection{\texorpdfstring{enableStartOnTrigger}{enableStartOnTrigger}}
+{\footnotesize\ttfamily bool enable\+Start\+On\+Trigger}
+
+true\+: T\+PM counter only starts when a trigger is detected; false\+: T\+PM counter starts immediately \mbox{\Hypertarget{struct__tpm__config_a8dc09bef3942120a287e07d6f55a291e}\label{struct__tpm__config_a8dc09bef3942120a287e07d6f55a291e}} 
+\index{\_tpm\_config@{\_tpm\_config}!enableStopOnOverflow@{enableStopOnOverflow}}
+\index{enableStopOnOverflow@{enableStopOnOverflow}!\_tpm\_config@{\_tpm\_config}}
+\subsubsection{\texorpdfstring{enableStopOnOverflow}{enableStopOnOverflow}}
+{\footnotesize\ttfamily bool enable\+Stop\+On\+Overflow}
+
+true\+: T\+PM counter stops after overflow; false\+: T\+PM counter continues running after overflow \mbox{\Hypertarget{struct__tpm__config_a07aeffac07e1ce1b00be27db7a55f8b4}\label{struct__tpm__config_a07aeffac07e1ce1b00be27db7a55f8b4}} 
+\index{\_tpm\_config@{\_tpm\_config}!prescale@{prescale}}
+\index{prescale@{prescale}!\_tpm\_config@{\_tpm\_config}}
+\subsubsection{\texorpdfstring{prescale}{prescale}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__tpm_gad9e7d333c0c3ad41d6bc740d95004dac}{tpm\+\_\+clock\+\_\+prescale\+\_\+t}} prescale}
+
+Select T\+PM clock prescale value \mbox{\Hypertarget{struct__tpm__config_a6d30d8f871d548b2a9b1533373c5234d}\label{struct__tpm__config_a6d30d8f871d548b2a9b1533373c5234d}} 
+\index{\_tpm\_config@{\_tpm\_config}!triggerSelect@{triggerSelect}}
+\index{triggerSelect@{triggerSelect}!\_tpm\_config@{\_tpm\_config}}
+\subsubsection{\texorpdfstring{triggerSelect}{triggerSelect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__tpm_ga7413575956cb565fba0cc99c39c73bc7}{tpm\+\_\+trigger\+\_\+select\+\_\+t}} trigger\+Select}
+
+Input trigger to use for controlling the counter operation \mbox{\Hypertarget{struct__tpm__config_af416ab48aec0988cb89bfd89ec771062}\label{struct__tpm__config_af416ab48aec0988cb89bfd89ec771062}} 
+\index{\_tpm\_config@{\_tpm\_config}!useGlobalTimeBase@{useGlobalTimeBase}}
+\index{useGlobalTimeBase@{useGlobalTimeBase}!\_tpm\_config@{\_tpm\_config}}
+\subsubsection{\texorpdfstring{useGlobalTimeBase}{useGlobalTimeBase}}
+{\footnotesize\ttfamily bool use\+Global\+Time\+Base}
+
+true\+: Use of an external global time base is enabled; false\+: disabled 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+tpm.\+h\end{DoxyCompactItemize}

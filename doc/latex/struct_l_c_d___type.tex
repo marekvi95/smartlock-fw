@@ -1,0 +1,89 @@
+\hypertarget{struct_l_c_d___type}{}\section{L\+C\+D\+\_\+\+Type Struct Reference}
+\label{struct_l_c_d___type}\index{LCD\_Type@{LCD\_Type}}
+
+
+{\ttfamily \#include $<$K32\+L2\+B31\+A.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct_l_c_d___type_aae092d9d07574afe1fbc79c8bf7f7c19}{G\+CR}}
+\item 
+\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct_l_c_d___type_a2ac50357d1ebac2949d27bfc4855e6a4}{AR}}
+\item 
+\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct_l_c_d___type_aaae4fdf0b16483015bdf37fefd65a3ae}{F\+D\+CR}}
+\item 
+\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct_l_c_d___type_a60e603662731cb78500abe693fa249ee}{F\+D\+SR}}
+\item 
+\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct_l_c_d___type_aad6a2a460a8c1f3dc80dcf4b62535de7}{P\+EN}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct_l_c_d___type_a3027e062c8f29fc0875cebed5d54d586}{B\+P\+EN}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_l_c_d___type_ad85bd7ed8784d28cad12e663f6c4aa93}\label{struct_l_c_d___type_ad85bd7ed8784d28cad12e663f6c4aa93}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint8\_t \mbox{\hyperlink{struct_l_c_d___type_af794dc38bc12d5df18f48d0c1cce9369}{WF8B}} \mbox{[}64\mbox{]}\\
+\>\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{struct_l_c_d___type_a41cb7fd96eed5cdaed3bb04468d3e4dc}{WF}} \mbox{[}16\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+L\+CD -\/ Register Layout Typedef 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_l_c_d___type_a2ac50357d1ebac2949d27bfc4855e6a4}\label{struct_l_c_d___type_a2ac50357d1ebac2949d27bfc4855e6a4}} 
+\index{LCD\_Type@{LCD\_Type}!AR@{AR}}
+\index{AR@{AR}!LCD\_Type@{LCD\_Type}}
+\subsubsection{\texorpdfstring{AR}{AR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t AR}
+
+L\+CD Auxiliary Register, offset\+: 0x4 \mbox{\Hypertarget{struct_l_c_d___type_a3027e062c8f29fc0875cebed5d54d586}\label{struct_l_c_d___type_a3027e062c8f29fc0875cebed5d54d586}} 
+\index{LCD\_Type@{LCD\_Type}!BPEN@{BPEN}}
+\index{BPEN@{BPEN}!LCD\_Type@{LCD\_Type}}
+\subsubsection{\texorpdfstring{BPEN}{BPEN}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t B\+P\+EN\mbox{[}2\mbox{]}}
+
+L\+CD Back Plane Enable register, array offset\+: 0x18, array step\+: 0x4 \mbox{\Hypertarget{struct_l_c_d___type_aaae4fdf0b16483015bdf37fefd65a3ae}\label{struct_l_c_d___type_aaae4fdf0b16483015bdf37fefd65a3ae}} 
+\index{LCD\_Type@{LCD\_Type}!FDCR@{FDCR}}
+\index{FDCR@{FDCR}!LCD\_Type@{LCD\_Type}}
+\subsubsection{\texorpdfstring{FDCR}{FDCR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t F\+D\+CR}
+
+L\+CD Fault Detect Control Register, offset\+: 0x8 \mbox{\Hypertarget{struct_l_c_d___type_a60e603662731cb78500abe693fa249ee}\label{struct_l_c_d___type_a60e603662731cb78500abe693fa249ee}} 
+\index{LCD\_Type@{LCD\_Type}!FDSR@{FDSR}}
+\index{FDSR@{FDSR}!LCD\_Type@{LCD\_Type}}
+\subsubsection{\texorpdfstring{FDSR}{FDSR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t F\+D\+SR}
+
+L\+CD Fault Detect Status Register, offset\+: 0xC \mbox{\Hypertarget{struct_l_c_d___type_aae092d9d07574afe1fbc79c8bf7f7c19}\label{struct_l_c_d___type_aae092d9d07574afe1fbc79c8bf7f7c19}} 
+\index{LCD\_Type@{LCD\_Type}!GCR@{GCR}}
+\index{GCR@{GCR}!LCD\_Type@{LCD\_Type}}
+\subsubsection{\texorpdfstring{GCR}{GCR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t G\+CR}
+
+L\+CD General Control Register, offset\+: 0x0 \mbox{\Hypertarget{struct_l_c_d___type_aad6a2a460a8c1f3dc80dcf4b62535de7}\label{struct_l_c_d___type_aad6a2a460a8c1f3dc80dcf4b62535de7}} 
+\index{LCD\_Type@{LCD\_Type}!PEN@{PEN}}
+\index{PEN@{PEN}!LCD\_Type@{LCD\_Type}}
+\subsubsection{\texorpdfstring{PEN}{PEN}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t P\+EN\mbox{[}2\mbox{]}}
+
+L\+CD Pin Enable register, array offset\+: 0x10, array step\+: 0x4 \mbox{\Hypertarget{struct_l_c_d___type_a41cb7fd96eed5cdaed3bb04468d3e4dc}\label{struct_l_c_d___type_a41cb7fd96eed5cdaed3bb04468d3e4dc}} 
+\index{LCD\_Type@{LCD\_Type}!WF@{WF}}
+\index{WF@{WF}!LCD\_Type@{LCD\_Type}}
+\subsubsection{\texorpdfstring{WF}{WF}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t WF\mbox{[}16\mbox{]}}
+
+L\+CD Waveform register, array offset\+: 0x20, array step\+: 0x4 \mbox{\Hypertarget{struct_l_c_d___type_af794dc38bc12d5df18f48d0c1cce9369}\label{struct_l_c_d___type_af794dc38bc12d5df18f48d0c1cce9369}} 
+\index{LCD\_Type@{LCD\_Type}!WF8B@{WF8B}}
+\index{WF8B@{WF8B}!LCD\_Type@{LCD\_Type}}
+\subsubsection{\texorpdfstring{WF8B}{WF8B}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint8\+\_\+t W\+F8B\mbox{[}64\mbox{]}}
+
+L\+CD Waveform Register 0...L\+CD Waveform Register 63., array offset\+: 0x20, array step\+: 0x1 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+device/\mbox{\hyperlink{_k32_l2_b31_a_8h}{K32\+L2\+B31\+A.\+h}}\end{DoxyCompactItemize}

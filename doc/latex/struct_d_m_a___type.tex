@@ -1,0 +1,71 @@
+\hypertarget{struct_d_m_a___type}{}\section{D\+M\+A\+\_\+\+Type Struct Reference}
+\label{struct_d_m_a___type}\index{DMA\_Type@{DMA\_Type}}
+
+
+{\ttfamily \#include $<$K32\+L2\+B31\+A.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_d_m_a___type_aa8b44414dcc95e749d18ce191f6a5c44}\label{struct_d_m_a___type_aa8b44414dcc95e749d18ce191f6a5c44}} 
+uint8\+\_\+t {\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+0} \mbox{[}256\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_d_m_a___type_a79837a15024418d6ad13621870855ca0}\label{struct_d_m_a___type_a79837a15024418d6ad13621870855ca0}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{struct_d_m_a___type_a03a428b9768794844191fe61a3e27f87}{SAR}}\\
+\>\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{struct_d_m_a___type_a5c5e4c91ad6bcfad9dae85c6c206234d}{DAR}}\\
+\mbox{\Hypertarget{struct_d_m_a___type_1_1_0D21_a4377814f24a87fa1e639d2081dae3d57}\label{struct_d_m_a___type_1_1_0D21_a4377814f24a87fa1e639d2081dae3d57}} 
+\>union \{\\
+\>\>struct \{\\
+\>\>\>uint8\_t {\bfseries RESERVED\_0} \mbox{[}3\mbox{]}\\
+\>\>\>uint8\_t \mbox{\hyperlink{struct_d_m_a___type_af59ac6c373e8107836aab76df475a6cd}{DSR}}\\
+\>\>\} {\bfseries DMA\_DSR\_ACCESS8BIT}\\
+\>\>\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{struct_d_m_a___type_a0e53b71919e79a3b3d41b79397733f49}{DSR\_BCR}}\\
+\>\} \\
+\>\mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{struct_d_m_a___type_af6225cb8f4938f98204d11afaffd41c9}{DCR}}\\
+\} {\bfseries DMA} \mbox{[}4\mbox{]}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+MA -\/ Register Layout Typedef 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_d_m_a___type_a5c5e4c91ad6bcfad9dae85c6c206234d}\label{struct_d_m_a___type_a5c5e4c91ad6bcfad9dae85c6c206234d}} 
+\index{DMA\_Type@{DMA\_Type}!DAR@{DAR}}
+\index{DAR@{DAR}!DMA\_Type@{DMA\_Type}}
+\subsubsection{\texorpdfstring{DAR}{DAR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t D\+AR}
+
+Destination Address Register, array offset\+: 0x104, array step\+: 0x10 \mbox{\Hypertarget{struct_d_m_a___type_af6225cb8f4938f98204d11afaffd41c9}\label{struct_d_m_a___type_af6225cb8f4938f98204d11afaffd41c9}} 
+\index{DMA\_Type@{DMA\_Type}!DCR@{DCR}}
+\index{DCR@{DCR}!DMA\_Type@{DMA\_Type}}
+\subsubsection{\texorpdfstring{DCR}{DCR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t D\+CR}
+
+D\+MA Control Register, array offset\+: 0x10C, array step\+: 0x10 \mbox{\Hypertarget{struct_d_m_a___type_af59ac6c373e8107836aab76df475a6cd}\label{struct_d_m_a___type_af59ac6c373e8107836aab76df475a6cd}} 
+\index{DMA\_Type@{DMA\_Type}!DSR@{DSR}}
+\index{DSR@{DSR}!DMA\_Type@{DMA\_Type}}
+\subsubsection{\texorpdfstring{DSR}{DSR}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+SR}
+
+D\+M\+A\+\_\+\+D\+S\+R0 register...D\+M\+A\+\_\+\+D\+S\+R3 register., array offset\+: 0x10B, array step\+: 0x10 \mbox{\Hypertarget{struct_d_m_a___type_a0e53b71919e79a3b3d41b79397733f49}\label{struct_d_m_a___type_a0e53b71919e79a3b3d41b79397733f49}} 
+\index{DMA\_Type@{DMA\_Type}!DSR\_BCR@{DSR\_BCR}}
+\index{DSR\_BCR@{DSR\_BCR}!DMA\_Type@{DMA\_Type}}
+\subsubsection{\texorpdfstring{DSR\_BCR}{DSR\_BCR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t D\+S\+R\+\_\+\+B\+CR}
+
+D\+MA Status Register / Byte Count Register, array offset\+: 0x108, array step\+: 0x10 \mbox{\Hypertarget{struct_d_m_a___type_a03a428b9768794844191fe61a3e27f87}\label{struct_d_m_a___type_a03a428b9768794844191fe61a3e27f87}} 
+\index{DMA\_Type@{DMA\_Type}!SAR@{SAR}}
+\index{SAR@{SAR}!DMA\_Type@{DMA\_Type}}
+\subsubsection{\texorpdfstring{SAR}{SAR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__cm0plus_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t S\+AR}
+
+Source Address Register, array offset\+: 0x100, array step\+: 0x10 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+device/\mbox{\hyperlink{_k32_l2_b31_a_8h}{K32\+L2\+B31\+A.\+h}}\end{DoxyCompactItemize}

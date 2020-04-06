@@ -1,0 +1,1356 @@
+\hypertarget{group__ftfx__controller}{}\section{Ftfx\+\_\+controller}
+\label{group__ftfx__controller}\index{Ftfx\_controller@{Ftfx\_controller}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__ftfx__special__mem}{\+\_\+ftfx\+\_\+special\+\_\+mem}}
+\begin{DoxyCompactList}\small\item\em ftfx special memory access information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__ftfx__mem__descriptor}{\+\_\+ftfx\+\_\+mem\+\_\+descriptor}}
+\begin{DoxyCompactList}\small\item\em Flash memory descriptor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__ftfx__ops__config}{\+\_\+ftfx\+\_\+ops\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Active F\+T\+Fx information for the current operation. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__ftfx__ifr__descriptor}{\+\_\+ftfx\+\_\+ifr\+\_\+descriptor}}
+\begin{DoxyCompactList}\small\item\em Flash I\+FR memory descriptor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__ftfx__config}{\+\_\+ftfx\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Flash driver state information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga2006f7918566cde9a2653e05380af6dd}\label{group__ftfx__controller_ga2006f7918566cde9a2653e05380af6dd}} 
+\#define {\bfseries F\+S\+L\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+ID}~\char`\"{}platform.\+drivers.\+flash\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga78043d7b5753a2e4f6f61fe8bbae68d0}\label{group__ftfx__controller_ga78043d7b5753a2e4f6f61fe8bbae68d0}} 
+typedef enum \mbox{\hyperlink{group__ftfx__controller_ga59fd3ff5f66c9a21c80a48a95a085648}{\+\_\+ftfx\+\_\+partition\+\_\+flexram\+\_\+load\+\_\+option}} \mbox{\hyperlink{group__ftfx__controller_ga78043d7b5753a2e4f6f61fe8bbae68d0}{ftfx\+\_\+partition\+\_\+flexram\+\_\+load\+\_\+opt\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumeration for the Flex\+R\+AM load during reset option. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga96edaa38d804ca4f1af33352d7ee67be}\label{group__ftfx__controller_ga96edaa38d804ca4f1af33352d7ee67be}} 
+typedef enum \mbox{\hyperlink{group__ftfx__controller_gad6557da8fe12a2fd572ace03395c3fd8}{\+\_\+ftfx\+\_\+read\+\_\+resource\+\_\+opt}} \mbox{\hyperlink{group__ftfx__controller_ga96edaa38d804ca4f1af33352d7ee67be}{ftfx\+\_\+read\+\_\+resource\+\_\+opt\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumeration for the two possible options of flash read resource command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}\label{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}} 
+typedef enum \mbox{\hyperlink{group__ftfx__controller_gaddebf946b93b4027ecf283eb93f08b12}{\+\_\+ftfx\+\_\+margin\+\_\+value}} \mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumeration for supported F\+T\+Fx margin levels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_gae49df85d158f3651e17d1bb660a4f1c2}\label{group__ftfx__controller_gae49df85d158f3651e17d1bb660a4f1c2}} 
+typedef enum \mbox{\hyperlink{group__ftfx__controller_ga0b42dbcfacb9ac0da48c674dd6a35f2f}{\+\_\+ftfx\+\_\+security\+\_\+state}} \mbox{\hyperlink{group__ftfx__controller_gae49df85d158f3651e17d1bb660a4f1c2}{ftfx\+\_\+security\+\_\+state\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumeration for the three possible F\+T\+Fx security states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga953cf8f316acac60d44384e338b790d7}\label{group__ftfx__controller_ga953cf8f316acac60d44384e338b790d7}} 
+typedef enum \mbox{\hyperlink{group__ftfx__controller_ga800c3413ac2380e1d63505c39eeec9b8}{\+\_\+ftfx\+\_\+flexram\+\_\+function\+\_\+option}} \mbox{\hyperlink{group__ftfx__controller_ga953cf8f316acac60d44384e338b790d7}{ftfx\+\_\+flexram\+\_\+func\+\_\+opt\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumeration for the two possilbe options of set Flex\+R\+AM function command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_gad668a89052994dc917b1738f4e96fa72}\label{group__ftfx__controller_gad668a89052994dc917b1738f4e96fa72}} 
+typedef enum \mbox{\hyperlink{group__ftfx__controller_gac6715381632a07d502632b03f8cfb402}{\+\_\+ftfx\+\_\+swap\+\_\+state}} \mbox{\hyperlink{group__ftfx__controller_gad668a89052994dc917b1738f4e96fa72}{ftfx\+\_\+swap\+\_\+state\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enumeration for the possible flash Swap status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga6a3bd19cb0ff32d44e464562765a8127}\label{group__ftfx__controller_ga6a3bd19cb0ff32d44e464562765a8127}} 
+typedef struct \mbox{\hyperlink{struct__ftfx__special__mem}{\+\_\+ftfx\+\_\+special\+\_\+mem}} \mbox{\hyperlink{group__ftfx__controller_ga6a3bd19cb0ff32d44e464562765a8127}{ftfx\+\_\+spec\+\_\+mem\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em ftfx special memory access information. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga64a01792d0090fb0202473c138e0c2c9}\label{group__ftfx__controller_ga64a01792d0090fb0202473c138e0c2c9}} 
+typedef struct \mbox{\hyperlink{struct__ftfx__mem__descriptor}{\+\_\+ftfx\+\_\+mem\+\_\+descriptor}} \mbox{\hyperlink{group__ftfx__controller_ga64a01792d0090fb0202473c138e0c2c9}{ftfx\+\_\+mem\+\_\+desc\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Flash memory descriptor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga721d5f2f64785b7580862e942e17737e}\label{group__ftfx__controller_ga721d5f2f64785b7580862e942e17737e}} 
+typedef struct \mbox{\hyperlink{struct__ftfx__ops__config}{\+\_\+ftfx\+\_\+ops\+\_\+config}} \mbox{\hyperlink{group__ftfx__controller_ga721d5f2f64785b7580862e942e17737e}{ftfx\+\_\+ops\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Active F\+T\+Fx information for the current operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga25d8176fbbb387ae5e5ba3fa32667d72}\label{group__ftfx__controller_ga25d8176fbbb387ae5e5ba3fa32667d72}} 
+typedef struct \mbox{\hyperlink{struct__ftfx__ifr__descriptor}{\+\_\+ftfx\+\_\+ifr\+\_\+descriptor}} \mbox{\hyperlink{group__ftfx__controller_ga25d8176fbbb387ae5e5ba3fa32667d72}{ftfx\+\_\+ifr\+\_\+desc\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Flash I\+FR memory descriptor. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct__ftfx__config}{\+\_\+ftfx\+\_\+config}} \mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Flash driver state information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__ftfx__controller_ga59fd3ff5f66c9a21c80a48a95a085648}{\+\_\+ftfx\+\_\+partition\+\_\+flexram\+\_\+load\+\_\+option}} \{ \mbox{\hyperlink{group__ftfx__controller_gga59fd3ff5f66c9a21c80a48a95a085648aa061968412676de918b5078454eac64f}{k\+F\+T\+Fx\+\_\+\+Partition\+Flexram\+Load\+Opt\+Loaded\+With\+Valid\+Eeprom\+Data}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga59fd3ff5f66c9a21c80a48a95a085648a92aebaf9d5c4b73d88ad90cbd7140636}{k\+F\+T\+Fx\+\_\+\+Partition\+Flexram\+Load\+Opt\+Not\+Loaded}} = 0x01U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for the Flex\+R\+AM load during reset option. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ftfx__controller_gad6557da8fe12a2fd572ace03395c3fd8}{\+\_\+ftfx\+\_\+read\+\_\+resource\+\_\+opt}} \{ \mbox{\hyperlink{group__ftfx__controller_ggad6557da8fe12a2fd572ace03395c3fd8aa11a2c42a2eba3c730c8832296cd450b}{k\+F\+T\+Fx\+\_\+\+Resource\+Option\+Flash\+Ifr}}, 
+\mbox{\hyperlink{group__ftfx__controller_ggad6557da8fe12a2fd572ace03395c3fd8a531ca4c2d12cec0d61b983f4eaae4c8a}{k\+F\+T\+Fx\+\_\+\+Resource\+Option\+Version\+Id}} = 0x01U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for the two possible options of flash read resource command. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ftfx__controller_gaddebf946b93b4027ecf283eb93f08b12}{\+\_\+ftfx\+\_\+margin\+\_\+value}} \{ \mbox{\hyperlink{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12a9f365ba2fce51dd8bfb81ee00011abf4}{k\+F\+T\+Fx\+\_\+\+Margin\+Value\+Normal}}, 
+\mbox{\hyperlink{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12acf0f80b487bff0a512ed0d55ada4f5c5}{k\+F\+T\+Fx\+\_\+\+Margin\+Value\+User}}, 
+\mbox{\hyperlink{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12ac74843020b12561f71c99383ad09920a}{k\+F\+T\+Fx\+\_\+\+Margin\+Value\+Factory}}, 
+\mbox{\hyperlink{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12ac5c68e00dcb9321f8e7394e64d599fb0}{k\+F\+T\+Fx\+\_\+\+Margin\+Value\+Invalid}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for supported F\+T\+Fx margin levels. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ftfx__controller_ga0b42dbcfacb9ac0da48c674dd6a35f2f}{\+\_\+ftfx\+\_\+security\+\_\+state}} \{ \mbox{\hyperlink{group__ftfx__controller_gga0b42dbcfacb9ac0da48c674dd6a35f2faad4b024453fd82cbe1a9d1e88dbf8de6}{k\+F\+T\+Fx\+\_\+\+Security\+State\+Not\+Secure}} = (int)0xc33cc33cu, 
+\mbox{\hyperlink{group__ftfx__controller_gga0b42dbcfacb9ac0da48c674dd6a35f2fa0202890ba1a235ac1ae5778b17fbe17e}{k\+F\+T\+Fx\+\_\+\+Security\+State\+Backdoor\+Enabled}} = (int)0x5aa55aa5u, 
+\mbox{\hyperlink{group__ftfx__controller_gga0b42dbcfacb9ac0da48c674dd6a35f2fac12bd14b05350af1d1591a59d4cb6f38}{k\+F\+T\+Fx\+\_\+\+Security\+State\+Backdoor\+Disabled}} = (int)0x5ac33ca5u
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for the three possible F\+T\+Fx security states. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ftfx__controller_ga800c3413ac2380e1d63505c39eeec9b8}{\+\_\+ftfx\+\_\+flexram\+\_\+function\+\_\+option}} \{ \mbox{\hyperlink{group__ftfx__controller_gga800c3413ac2380e1d63505c39eeec9b8aa38f3e62b70126d0c91f582ec4f1277b}{k\+F\+T\+Fx\+\_\+\+Flexram\+Func\+Opt\+Available\+As\+Ram}} = 0x\+F\+FU, 
+\mbox{\hyperlink{group__ftfx__controller_gga800c3413ac2380e1d63505c39eeec9b8a2fb1cb1b75bb3fb8380a4662bda0a60f}{k\+F\+T\+Fx\+\_\+\+Flexram\+Func\+Opt\+Available\+For\+Eeprom}} = 0x00U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for the two possilbe options of set Flex\+R\+AM function command. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ftfx__controller_gac6715381632a07d502632b03f8cfb402}{\+\_\+ftfx\+\_\+swap\+\_\+state}} \{ \newline
+\mbox{\hyperlink{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402a409faf74ea079fa19377acdea6997fd0}{k\+F\+T\+Fx\+\_\+\+Swap\+State\+Uninitialized}} = 0x00U, 
+\mbox{\hyperlink{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402a2f001450d474547223903a9ffb81408f}{k\+F\+T\+Fx\+\_\+\+Swap\+State\+Ready}} = 0x01U, 
+\mbox{\hyperlink{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402ab1537d0e7a41c61698dd6387424b73da}{k\+F\+T\+Fx\+\_\+\+Swap\+State\+Update}} = 0x02U, 
+\mbox{\hyperlink{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402af7479a28d299cd6e9239f0367ebcb0f6}{k\+F\+T\+Fx\+\_\+\+Swap\+State\+Update\+Erased}} = 0x03U, 
+\newline
+\mbox{\hyperlink{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402ab808523acebe2fad478d2a5136f3d782}{k\+F\+T\+Fx\+\_\+\+Swap\+State\+Complete}} = 0x04U, 
+\mbox{\hyperlink{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402ac59f9257ba267cf49f52ce56aadd2bba}{k\+F\+T\+Fx\+\_\+\+Swap\+State\+Disabled}} = 0x05U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for the possible flash Swap status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_gabc3ca923de8623881d88a193884562bb}\label{group__ftfx__controller_gabc3ca923de8623881d88a193884562bb}} 
+enum \mbox{\hyperlink{group__ftfx__controller_gabc3ca923de8623881d88a193884562bb}{\+\_\+ftfx\+\_\+memory\+\_\+type}} \{ {\bfseries k\+F\+T\+Fx\+\_\+\+Mem\+Type\+Pflash} = 0x00U, 
+{\bfseries k\+F\+T\+Fx\+\_\+\+Mem\+Type\+Flexnvm} = 0x01U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for F\+T\+Fx memory type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga0523cedff47e2441fc198b7770ec5d3f}{base}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_gab2c6b258f02add8fdf4cfc7c371dd772}{size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga86988a65e0d3ece7990c032c159786d6}{count}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga1d127017fb298b889f4ba24752d08b8e}{type}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ftfx__controller_gaae5a12e607d0f782506d9e6ec6179c64}{index}}
+\item 
+uint8\+\_\+t {\bfseries reserved} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga7b15485a641f31f22441d43ff157400d}\label{group__ftfx__controller_ga7b15485a641f31f22441d43ff157400d}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \mbox{\hyperlink{group__ftfx__controller_ga1d127017fb298b889f4ba24752d08b8e}{type}}\\
+\>uint8\_t \mbox{\hyperlink{group__ftfx__controller_gaae5a12e607d0f782506d9e6ec6179c64}{index}}\\
+\>uint8\_t {\bfseries reserved} \mbox{[}2\mbox{]}\\
+\}; \\
+
+\end{tabbing}\item 
+uint32\+\_\+t {\bfseries is\+Ind\+Block}\+: 1
+\item 
+uint32\+\_\+t {\bfseries has\+Ind\+Pfsize\+Reg}\+: 1
+\item 
+uint32\+\_\+t {\bfseries has\+Prot\+Control}\+: 1
+\item 
+uint32\+\_\+t {\bfseries has\+Ind\+Prot\+Reg}\+: 1
+\item 
+uint32\+\_\+t {\bfseries has\+Xacc\+Control}\+: 1
+\item 
+uint32\+\_\+t {\bfseries has\+Ind\+Xacc\+Reg}\+: 1
+\item 
+uint32\+\_\+t {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: 18
+\item 
+uint32\+\_\+t {\bfseries Prot\+Reg\+Bits}\+: 8
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga6a51876ea07035e5f4c10a3003bfdcb1}\label{group__ftfx__controller_ga6a51876ea07035e5f4c10a3003bfdcb1}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t {\bfseries isIndBlock}: 1\\
+\>uint32\_t {\bfseries hasIndPfsizeReg}: 1\\
+\>uint32\_t {\bfseries hasProtControl}: 1\\
+\>uint32\_t {\bfseries hasIndProtReg}: 1\\
+\>uint32\_t {\bfseries hasXaccControl}: 1\\
+\>uint32\_t {\bfseries hasIndXaccReg}: 1\\
+\>uint32\_t {\bfseries \_\_pad0\_\_}: 18\\
+\>uint32\_t {\bfseries ProtRegBits}: 8\\
+\} {\bfseries feature}\\
+
+\end{tabbing}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga1cd6b415d1fb5e98f12125b7863691e2}{block\+Base}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_gafd8a6a01e3b212857df6efb82e06f682}{total\+Size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga0531bf8e2d0ac7dbf0d6af9b74a6ae0f}{sector\+Size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga359235f8ff745acf36826f7859097c4f}{block\+Count}}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_gadda32a4c7d83030a8211defd3fd13f47}\label{group__ftfx__controller_gadda32a4c7d83030a8211defd3fd13f47}} 
+\mbox{\hyperlink{group__ftfx__controller_ga6a3bd19cb0ff32d44e464562765a8127}{ftfx\+\_\+spec\+\_\+mem\+\_\+t}} {\bfseries access\+Segment\+Mem}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_gab81692cc4054093d17ae359a6497165d}\label{group__ftfx__controller_gab81692cc4054093d17ae359a6497165d}} 
+\mbox{\hyperlink{group__ftfx__controller_ga6a3bd19cb0ff32d44e464562765a8127}{ftfx\+\_\+spec\+\_\+mem\+\_\+t}} {\bfseries protect\+Region\+Mem}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga103f050a0770fca8ee73b78a283337a1}{converted\+Address}}
+\item 
+uint8\+\_\+t {\bfseries sector\+Cmd}
+\item 
+uint8\+\_\+t {\bfseries section\+Cmd}
+\item 
+uint8\+\_\+t {\bfseries resource\+Cmd}
+\item 
+uint8\+\_\+t {\bfseries check\+Cmd}
+\item 
+uint8\+\_\+t {\bfseries swap\+Ctrl\+Cmd}
+\item 
+uint8\+\_\+t {\bfseries block\+Write\+Unit\+Size}
+\item 
+uint8\+\_\+t {\bfseries reserved} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga1ee8f7eb605aed2ad8c93d54b6d67ea6}\label{group__ftfx__controller_ga1ee8f7eb605aed2ad8c93d54b6d67ea6}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t {\bfseries sectorCmd}\\
+\>uint8\_t {\bfseries sectionCmd}\\
+\>uint8\_t {\bfseries resourceCmd}\\
+\>uint8\_t {\bfseries checkCmd}\\
+\>uint8\_t {\bfseries swapCtrlCmd}\\
+\>uint8\_t {\bfseries blockWriteUnitSize}\\
+\>uint8\_t {\bfseries reserved} \mbox{[}2\mbox{]}\\
+\} {\bfseries addrAligment}\\
+
+\end{tabbing}\item 
+uint32\+\_\+t {\bfseries has4\+Byte\+Idx\+Support}\+: 1
+\item 
+uint32\+\_\+t {\bfseries has8\+Byte\+Idx\+Support}\+: 1
+\item 
+uint32\+\_\+t {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: 30
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga9dd081c2f02dcf94bedb2f1ba9dc444d}\label{group__ftfx__controller_ga9dd081c2f02dcf94bedb2f1ba9dc444d}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t {\bfseries has4ByteIdxSupport}: 1\\
+\>uint32\_t {\bfseries has8ByteIdxSupport}: 1\\
+\>uint32\_t {\bfseries \_\_pad0\_\_}: 30\\
+\} {\bfseries feature}\\
+
+\end{tabbing}\item 
+uint8\+\_\+t {\bfseries version\+Id\+Start}
+\item 
+uint8\+\_\+t {\bfseries version\+Id\+Size}
+\item 
+uint16\+\_\+t {\bfseries ifr\+Mem\+Size}
+\item 
+uint32\+\_\+t {\bfseries pflash\+Ifr\+Start}
+\item 
+uint32\+\_\+t {\bfseries dflash\+Ifr\+Start}
+\item 
+uint32\+\_\+t {\bfseries pflash\+Swap\+Ifr\+Start}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_gabb9199aca296724ebac88d497cfecfa9}\label{group__ftfx__controller_gabb9199aca296724ebac88d497cfecfa9}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t {\bfseries versionIdStart}\\
+\>uint8\_t {\bfseries versionIdSize}\\
+\>uint16\_t {\bfseries ifrMemSize}\\
+\>uint32\_t {\bfseries pflashIfrStart}\\
+\>uint32\_t {\bfseries dflashIfrStart}\\
+\>uint32\_t {\bfseries pflashSwapIfrStart}\\
+\} {\bfseries resRange}\\
+
+\end{tabbing}\item 
+uint16\+\_\+t {\bfseries mix8byte\+Idx\+Start}
+\item 
+uint16\+\_\+t {\bfseries mix8byte\+Idx\+End}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga8cabe9e319da1d6d9db35aa504f7b274}\label{group__ftfx__controller_ga8cabe9e319da1d6d9db35aa504f7b274}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t {\bfseries mix8byteIdxStart}\\
+\>uint16\_t {\bfseries mix8byteIdxEnd}\\
+\} {\bfseries idxInfo}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga7a9146c4d0769a993ad3686b95072903}\label{group__ftfx__controller_ga7a9146c4d0769a993ad3686b95072903}} 
+\mbox{\hyperlink{group__ftfx__controller_ga64a01792d0090fb0202473c138e0c2c9}{ftfx\+\_\+mem\+\_\+desc\+\_\+t}} {\bfseries flash\+Desc}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_gab84f1e967416f663b3904844b2cabde1}\label{group__ftfx__controller_gab84f1e967416f663b3904844b2cabde1}} 
+\mbox{\hyperlink{group__ftfx__controller_ga721d5f2f64785b7580862e942e17737e}{ftfx\+\_\+ops\+\_\+config\+\_\+t}} {\bfseries ops\+Config}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_gaf29349209247a3a0420431c52be97f28}{flexram\+Block\+Base}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__ftfx__controller_ga29c215db16af5f9ff6c5c759ab1c889b}{flexram\+Total\+Size}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group__ftfx__controller_gaad84e8b697ff1b5fbe263e3730140d79}{eeprom\+Total\+Size}}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga5a6ed8c04a3db86066924b1a1bf4dad3}\label{group__ftfx__controller_ga5a6ed8c04a3db86066924b1a1bf4dad3}} 
+uint16\+\_\+t {\bfseries reserved}
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{group__ftfx__controller_ga6ec241fed36ff39637ec3a69f34e5e84}{run\+Cmd\+Func\+Addr}}
+\item 
+\mbox{\Hypertarget{group__ftfx__controller_ga27198cbb1b3cd5700d028a4962ff4ee3}\label{group__ftfx__controller_ga27198cbb1b3cd5700d028a4962ff4ee3}} 
+\mbox{\hyperlink{group__ftfx__controller_ga25d8176fbbb387ae5e5ba3fa32667d72}{ftfx\+\_\+ifr\+\_\+desc\+\_\+t}} {\bfseries ifr\+Desc}
+\end{DoxyCompactItemize}
+\subsection*{F\+T\+Fx status}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+Generic, 0), 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+Generic, 4), 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a27759c82c0cf2981fe1d4cf05a59e5ff}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Size\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+Ftfx\+Driver, 0), 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}, 
+\newline
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+Ftfx\+Driver, 2), 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}, 
+\newline
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a380d2e76caf0ee5493c7a599426ab73c}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Unknown\+Property}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+Ftfx\+Driver, 6), 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a6db9a6a03c0f698988b183effb857c40}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Erase\+Key\+Error}} = M\+A\+K\+E\+\_\+\+S\+T\+A\+T\+US(k\+Status\+Group\+Ftfx\+Driver, 7), 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a09024f88aa6607c3383a98171857de47}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Region\+Execute\+Only}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}, 
+\newline
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609abc388f09a5b298bad7c019b69aa0e6da}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Partition\+Status\+Update\+Failure}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609af0eda7c88ddc31baed8e52f07181f58e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Set\+Flexram\+As\+Eeprom\+Error}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a641f6139bdfb2ce9ea0ce68ba2606df3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Recover\+Flexram\+As\+Ram\+Error}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a02f24c8d5201a184285ebd46e0134317}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Set\+Flexram\+As\+Ram\+Error}}, 
+\newline
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a72f8274d1d0c96d997cbf60a961d4baf}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Recover\+Flexram\+As\+Eeprom\+Error}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609acb87ce53590958bf9d32d62ba406f6bf}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Not\+Supported}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa4951f794d75244ea7c5d071937bbb59}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Swap\+System\+Not\+In\+Uninitialized}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ad398459bf841cdc4f501a186b36202d9}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Swap\+Indicator\+Address\+Error}}, 
+\newline
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa21faddd21ba86841d2edae9cafe89cb}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Read\+Only\+Property}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aacb14a9b8a01971fac0c94763d7fb027}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Property\+Value}}, 
+\mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ab985d0a6c5a30e7bda837a04ce61dcc7}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Speculation\+Option}}
+ \}
+\begin{DoxyCompactList}\small\item\em F\+T\+Fx driver status codes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_gae148d1f9acb1fee339187aabba151288}\label{group__ftfx__controller_gae148d1f9acb1fee339187aabba151288}} 
+\#define \mbox{\hyperlink{group__ftfx__controller_gae148d1f9acb1fee339187aabba151288}{k\+Status\+Group\+Generic}}~0
+\begin{DoxyCompactList}\small\item\em F\+T\+Fx driver status group. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ftfx__controller_gacf3aa7047fb612a07e3f40984da7d183}\label{group__ftfx__controller_gacf3aa7047fb612a07e3f40984da7d183}} 
+\#define {\bfseries k\+Status\+Group\+Ftfx\+Driver}~1
+\end{DoxyCompactItemize}
+\subsection*{F\+T\+Fx A\+PI key}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__ftfx__controller_gaaed04d931a32adf243a57f5e6d56da2d}{\+\_\+ftfx\+\_\+driver\+\_\+api\+\_\+keys}} \{ \mbox{\hyperlink{group__ftfx__controller_ggaaed04d931a32adf243a57f5e6d56da2da14949b7fee40a9d02fac191828f5f899}{k\+F\+T\+Fx\+\_\+\+Api\+Erase\+Key}} = F\+O\+U\+R\+\_\+\+C\+H\+A\+R\+\_\+\+C\+O\+DE(\textquotesingle{}k\textquotesingle{}, \textquotesingle{}f\textquotesingle{}, \textquotesingle{}e\textquotesingle{}, \textquotesingle{}k\textquotesingle{})
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for F\+T\+Fx driver A\+PI keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Initialization}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_ga40e6294a537acf6f902b01bdf4cafa27}{F\+T\+Fx\+\_\+\+A\+P\+I\+\_\+\+Init}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em Initializes the global flash properties structure members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Erasing}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_ga980b0cb86989aedb55096ebe53036eb3}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Erase}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t start, uint32\+\_\+t length\+In\+Bytes, uint32\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Erases the flash sectors encompassed by parameters passed into function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_ga709bc9b9e66e213dfd00e53f1e90542b}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Erase\+All}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Erases entire flash. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_gaf73f451480c5a91e94de5d65c5206876}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Erase\+All\+Execute\+Only\+Segments}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Erases the entire flash, including protected sectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Programming}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_ga09ac57e19f9510005a11e4cee37c964c}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Program}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t start, const uint8\+\_\+t $\ast$src, uint32\+\_\+t length\+In\+Bytes)
+\begin{DoxyCompactList}\small\item\em Programs flash with data at locations passed in through parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_gaa43f8e9deae4daaf2dd84f29e66b1a80}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Program\+Once}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t index, const uint8\+\_\+t $\ast$src, uint32\+\_\+t length\+In\+Bytes)
+\begin{DoxyCompactList}\small\item\em Programs Program Once Field through parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Reading}
+\label{_amgrp26fccddf2f94b1685b184267996e10f8}%
+Programs flash with data at locations passed in through parameters via the Program Section command.
+
+This function programs the flash memory with the desired data for a given flash area as determined by the start address and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be programmed. Must be word-\/aligned. \\
+\hline
+{\em src} & A pointer to the source buffer of data that is to be programmed into the flash. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be programmed. Must be word-\/aligned.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & Parameter is not aligned with specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & Address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a02f24c8d5201a184285ebd46e0134317}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Set\+Flexram\+As\+Ram\+Error}}} & Failed to set flexram as R\+AM. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during command execution. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a72f8274d1d0c96d997cbf60a961d4baf}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Recover\+Flexram\+As\+Eeprom\+Error}}} & Failed to recover Flex\+R\+AM as E\+E\+P\+R\+OM.\\
+\hline
+\end{DoxyRetVals}
+Prepares the Flex\+N\+VM block for use as data flash, E\+E\+P\+R\+OM backup, or a combination of both and initializes the Flex\+R\+AM.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to storage for the driver runtime state. \\
+\hline
+{\em option} & The option used to set Flex\+R\+AM load behavior during reset. \\
+\hline
+{\em eeprom\+Data\+Size\+Code} & Determines the amount of Flex\+R\+AM used in each of the available E\+E\+P\+R\+OM subsystems. \\
+\hline
+{\em flexnvm\+Partition\+Code} & Specifies how to split the Flex\+N\+VM block between data flash memory and E\+E\+P\+R\+OM backup memory supporting E\+E\+P\+R\+OM functions.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & Invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during command execution. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_gaf17b1610a36c07c5f993bd6a6817a674}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Read\+Once}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t index, uint8\+\_\+t $\ast$dst, uint32\+\_\+t length\+In\+Bytes)
+\begin{DoxyCompactList}\small\item\em Reads the Program Once Field through parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Verification}
+\label{_amgrp52b8ffce119fe77b28034f2fdd35eb5f}%
+Reads the resource with data at locations passed in through parameters.
+
+This function reads the flash memory with the desired location for a given flash area as determined by the start address and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be programmed. Must be word-\/aligned. \\
+\hline
+{\em dst} & A pointer to the destination buffer of data that is used to store data to be read. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be read. Must be word-\/aligned. \\
+\hline
+{\em option} & The resource option which indicates which area should be read back.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & Parameter is not aligned with the specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_gab19822bcb2eafc218a4fd198bf1470da}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Verify\+Erase}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t start, uint32\+\_\+t length\+In\+Bytes, \mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}} margin)
+\begin{DoxyCompactList}\small\item\em Verifies an erasure of the desired flash area at a specified margin level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_ga9432d3fcd2f3222b79e0ea99d7a80043}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Verify\+Erase\+All}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, \mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}} margin)
+\begin{DoxyCompactList}\small\item\em Verifies erasure of the entire flash at a specified margin level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_ga849d873f9ab962160ebc2e72429fd3ea}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Verify\+Erase\+All\+Execute\+Only\+Segments}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, \mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}} margin)
+\begin{DoxyCompactList}\small\item\em Verifies whether the program flash execute-\/only segments have been erased to the specified read margin level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_ga2c7e08713a560fbc4acff9f7d7708cee}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Verify\+Program}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, uint32\+\_\+t start, uint32\+\_\+t length\+In\+Bytes, const uint8\+\_\+t $\ast$expected\+Data, \mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}} margin, uint32\+\_\+t $\ast$failed\+Address, uint32\+\_\+t $\ast$failed\+Data)
+\begin{DoxyCompactList}\small\item\em Verifies programming of the desired flash area at a specified margin level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Security}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_ga219f5ec71c7fed8f684297ef0a693262}{F\+T\+Fx\+\_\+\+R\+E\+G\+\_\+\+Get\+Security\+State}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, \mbox{\hyperlink{group__ftfx__controller_gae49df85d158f3651e17d1bb660a4f1c2}{ftfx\+\_\+security\+\_\+state\+\_\+t}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Returns the security state via the pointer passed into the function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__ftfx__controller_gaa909192c42276b7d70e6a91a5cb93a71}{F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Security\+Bypass}} (\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$config, const uint8\+\_\+t $\ast$backdoor\+Key)
+\begin{DoxyCompactList}\small\item\em Allows users to bypass security with a backdoor key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}\label{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!ftfx\_config\_t@{ftfx\_config\_t}}
+\index{ftfx\_config\_t@{ftfx\_config\_t}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{ftfx\_config\_t}{ftfx\_config\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ftfx__config}{\+\_\+ftfx\+\_\+config}}  \mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}}}
+
+
+
+Flash driver state information. 
+
+An instance of this structure is allocated by the user of the flash driver and passed into each of the driver A\+P\+Is. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__ftfx__controller_ga458e651af6690959efa2afb96be7d609}\label{group__ftfx__controller_ga458e651af6690959efa2afb96be7d609}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+
+
+F\+T\+Fx driver status codes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_Success@{kStatus\_FTFx\_Success}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_Success@{kStatus\_FTFx\_Success}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success&A\+PI is executed successfully \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_InvalidArgument@{kStatus\_FTFx\_InvalidArgument}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_InvalidArgument@{kStatus\_FTFx\_InvalidArgument}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument&Invalid argument \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_SizeError@{kStatus\_FTFx\_SizeError}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_SizeError@{kStatus\_FTFx\_SizeError}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a27759c82c0cf2981fe1d4cf05a59e5ff}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a27759c82c0cf2981fe1d4cf05a59e5ff}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Size\+Error&Error size \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_AlignmentError@{kStatus\_FTFx\_AlignmentError}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_AlignmentError@{kStatus\_FTFx\_AlignmentError}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error&Parameter is not aligned with the specified baseline \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_AddressError@{kStatus\_FTFx\_AddressError}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_AddressError@{kStatus\_FTFx\_AddressError}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error&Address is out of range \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_AccessError@{kStatus\_FTFx\_AccessError}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_AccessError@{kStatus\_FTFx\_AccessError}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error&Invalid instruction codes and out-\/of bound addresses \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_ProtectionViolation@{kStatus\_FTFx\_ProtectionViolation}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_ProtectionViolation@{kStatus\_FTFx\_ProtectionViolation}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation&The program/erase operation is requested to execute on protected areas \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_CommandFailure@{kStatus\_FTFx\_CommandFailure}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_CommandFailure@{kStatus\_FTFx\_CommandFailure}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure&Run-\/time error during command execution. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_UnknownProperty@{kStatus\_FTFx\_UnknownProperty}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_UnknownProperty@{kStatus\_FTFx\_UnknownProperty}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a380d2e76caf0ee5493c7a599426ab73c}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a380d2e76caf0ee5493c7a599426ab73c}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Unknown\+Property&Unknown property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_EraseKeyError@{kStatus\_FTFx\_EraseKeyError}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_EraseKeyError@{kStatus\_FTFx\_EraseKeyError}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a6db9a6a03c0f698988b183effb857c40}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a6db9a6a03c0f698988b183effb857c40}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Erase\+Key\+Error&A\+PI erase key is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_RegionExecuteOnly@{kStatus\_FTFx\_RegionExecuteOnly}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_RegionExecuteOnly@{kStatus\_FTFx\_RegionExecuteOnly}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a09024f88aa6607c3383a98171857de47}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a09024f88aa6607c3383a98171857de47}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Region\+Execute\+Only&The current region is execute-\/only. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_ExecuteInRamFunctionNotReady@{kStatus\_FTFx\_ExecuteInRamFunctionNotReady}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_ExecuteInRamFunctionNotReady@{kStatus\_FTFx\_ExecuteInRamFunctionNotReady}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready&Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_PartitionStatusUpdateFailure@{kStatus\_FTFx\_PartitionStatusUpdateFailure}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_PartitionStatusUpdateFailure@{kStatus\_FTFx\_PartitionStatusUpdateFailure}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609abc388f09a5b298bad7c019b69aa0e6da}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609abc388f09a5b298bad7c019b69aa0e6da}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Partition\+Status\+Update\+Failure&Failed to update partition status. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_SetFlexramAsEepromError@{kStatus\_FTFx\_SetFlexramAsEepromError}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_SetFlexramAsEepromError@{kStatus\_FTFx\_SetFlexramAsEepromError}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609af0eda7c88ddc31baed8e52f07181f58e}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609af0eda7c88ddc31baed8e52f07181f58e}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Set\+Flexram\+As\+Eeprom\+Error&Failed to set Flex\+R\+AM as E\+E\+P\+R\+OM. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_RecoverFlexramAsRamError@{kStatus\_FTFx\_RecoverFlexramAsRamError}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_RecoverFlexramAsRamError@{kStatus\_FTFx\_RecoverFlexramAsRamError}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a641f6139bdfb2ce9ea0ce68ba2606df3}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a641f6139bdfb2ce9ea0ce68ba2606df3}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Recover\+Flexram\+As\+Ram\+Error&Failed to recover Flex\+R\+AM as R\+AM. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_SetFlexramAsRamError@{kStatus\_FTFx\_SetFlexramAsRamError}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_SetFlexramAsRamError@{kStatus\_FTFx\_SetFlexramAsRamError}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a02f24c8d5201a184285ebd46e0134317}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a02f24c8d5201a184285ebd46e0134317}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Set\+Flexram\+As\+Ram\+Error&Failed to set Flex\+R\+AM as R\+AM. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_RecoverFlexramAsEepromError@{kStatus\_FTFx\_RecoverFlexramAsEepromError}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_RecoverFlexramAsEepromError@{kStatus\_FTFx\_RecoverFlexramAsEepromError}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a72f8274d1d0c96d997cbf60a961d4baf}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a72f8274d1d0c96d997cbf60a961d4baf}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Recover\+Flexram\+As\+Eeprom\+Error&Failed to recover Flex\+R\+AM as E\+E\+P\+R\+OM. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_CommandNotSupported@{kStatus\_FTFx\_CommandNotSupported}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_CommandNotSupported@{kStatus\_FTFx\_CommandNotSupported}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609acb87ce53590958bf9d32d62ba406f6bf}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609acb87ce53590958bf9d32d62ba406f6bf}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Not\+Supported&Flash A\+PI is not supported. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_SwapSystemNotInUninitialized@{kStatus\_FTFx\_SwapSystemNotInUninitialized}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_SwapSystemNotInUninitialized@{kStatus\_FTFx\_SwapSystemNotInUninitialized}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa4951f794d75244ea7c5d071937bbb59}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa4951f794d75244ea7c5d071937bbb59}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Swap\+System\+Not\+In\+Uninitialized&Swap system is not in an uninitialzed state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_SwapIndicatorAddressError@{kStatus\_FTFx\_SwapIndicatorAddressError}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_SwapIndicatorAddressError@{kStatus\_FTFx\_SwapIndicatorAddressError}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ad398459bf841cdc4f501a186b36202d9}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ad398459bf841cdc4f501a186b36202d9}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Swap\+Indicator\+Address\+Error&The swap indicator address is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_ReadOnlyProperty@{kStatus\_FTFx\_ReadOnlyProperty}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_ReadOnlyProperty@{kStatus\_FTFx\_ReadOnlyProperty}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa21faddd21ba86841d2edae9cafe89cb}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa21faddd21ba86841d2edae9cafe89cb}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Read\+Only\+Property&The flash property is read-\/only. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_InvalidPropertyValue@{kStatus\_FTFx\_InvalidPropertyValue}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_InvalidPropertyValue@{kStatus\_FTFx\_InvalidPropertyValue}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aacb14a9b8a01971fac0c94763d7fb027}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aacb14a9b8a01971fac0c94763d7fb027}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Property\+Value&The flash property value is out of range. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kStatus\_FTFx\_InvalidSpeculationOption@{kStatus\_FTFx\_InvalidSpeculationOption}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kStatus\_FTFx\_InvalidSpeculationOption@{kStatus\_FTFx\_InvalidSpeculationOption}}}\mbox{\Hypertarget{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ab985d0a6c5a30e7bda837a04ce61dcc7}\label{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ab985d0a6c5a30e7bda837a04ce61dcc7}} 
+k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Speculation\+Option&The option of flash prefetch speculation is invalid. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ftfx__controller_gaaed04d931a32adf243a57f5e6d56da2d}\label{group__ftfx__controller_gaaed04d931a32adf243a57f5e6d56da2d}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!\_ftfx\_driver\_api\_keys@{\_ftfx\_driver\_api\_keys}}
+\index{\_ftfx\_driver\_api\_keys@{\_ftfx\_driver\_api\_keys}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{\_ftfx\_driver\_api\_keys}{\_ftfx\_driver\_api\_keys}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ftfx__controller_gaaed04d931a32adf243a57f5e6d56da2d}{\+\_\+ftfx\+\_\+driver\+\_\+api\+\_\+keys}}}
+
+
+
+Enumeration for F\+T\+Fx driver A\+PI keys. 
+
+\begin{DoxyNote}{Note}
+The resulting value is built with a byte order such that the string being readable in expected order when viewed in a hex editor, if the value is treated as a 32-\/bit little endian value. 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_ApiEraseKey@{kFTFx\_ApiEraseKey}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_ApiEraseKey@{kFTFx\_ApiEraseKey}}}\mbox{\Hypertarget{group__ftfx__controller_ggaaed04d931a32adf243a57f5e6d56da2da14949b7fee40a9d02fac191828f5f899}\label{group__ftfx__controller_ggaaed04d931a32adf243a57f5e6d56da2da14949b7fee40a9d02fac191828f5f899}} 
+k\+F\+T\+Fx\+\_\+\+Api\+Erase\+Key&Key value used to validate all F\+T\+Fx erase A\+P\+Is. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ftfx__controller_ga800c3413ac2380e1d63505c39eeec9b8}\label{group__ftfx__controller_ga800c3413ac2380e1d63505c39eeec9b8}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!\_ftfx\_flexram\_function\_option@{\_ftfx\_flexram\_function\_option}}
+\index{\_ftfx\_flexram\_function\_option@{\_ftfx\_flexram\_function\_option}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{\_ftfx\_flexram\_function\_option}{\_ftfx\_flexram\_function\_option}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ftfx__controller_ga800c3413ac2380e1d63505c39eeec9b8}{\+\_\+ftfx\+\_\+flexram\+\_\+function\+\_\+option}}}
+
+
+
+Enumeration for the two possilbe options of set Flex\+R\+AM function command. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_FlexramFuncOptAvailableAsRam@{kFTFx\_FlexramFuncOptAvailableAsRam}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_FlexramFuncOptAvailableAsRam@{kFTFx\_FlexramFuncOptAvailableAsRam}}}\mbox{\Hypertarget{group__ftfx__controller_gga800c3413ac2380e1d63505c39eeec9b8aa38f3e62b70126d0c91f582ec4f1277b}\label{group__ftfx__controller_gga800c3413ac2380e1d63505c39eeec9b8aa38f3e62b70126d0c91f582ec4f1277b}} 
+k\+F\+T\+Fx\+\_\+\+Flexram\+Func\+Opt\+Available\+As\+Ram&An option used to make Flex\+R\+AM available as R\+AM \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_FlexramFuncOptAvailableForEeprom@{kFTFx\_FlexramFuncOptAvailableForEeprom}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_FlexramFuncOptAvailableForEeprom@{kFTFx\_FlexramFuncOptAvailableForEeprom}}}\mbox{\Hypertarget{group__ftfx__controller_gga800c3413ac2380e1d63505c39eeec9b8a2fb1cb1b75bb3fb8380a4662bda0a60f}\label{group__ftfx__controller_gga800c3413ac2380e1d63505c39eeec9b8a2fb1cb1b75bb3fb8380a4662bda0a60f}} 
+k\+F\+T\+Fx\+\_\+\+Flexram\+Func\+Opt\+Available\+For\+Eeprom&An option used to make Flex\+R\+AM available for E\+E\+P\+R\+OM \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ftfx__controller_gaddebf946b93b4027ecf283eb93f08b12}\label{group__ftfx__controller_gaddebf946b93b4027ecf283eb93f08b12}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!\_ftfx\_margin\_value@{\_ftfx\_margin\_value}}
+\index{\_ftfx\_margin\_value@{\_ftfx\_margin\_value}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{\_ftfx\_margin\_value}{\_ftfx\_margin\_value}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ftfx__controller_gaddebf946b93b4027ecf283eb93f08b12}{\+\_\+ftfx\+\_\+margin\+\_\+value}}}
+
+
+
+Enumeration for supported F\+T\+Fx margin levels. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_MarginValueNormal@{kFTFx\_MarginValueNormal}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_MarginValueNormal@{kFTFx\_MarginValueNormal}}}\mbox{\Hypertarget{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12a9f365ba2fce51dd8bfb81ee00011abf4}\label{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12a9f365ba2fce51dd8bfb81ee00011abf4}} 
+k\+F\+T\+Fx\+\_\+\+Margin\+Value\+Normal&Use the \textquotesingle{}normal\textquotesingle{} read level for 1s. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_MarginValueUser@{kFTFx\_MarginValueUser}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_MarginValueUser@{kFTFx\_MarginValueUser}}}\mbox{\Hypertarget{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12acf0f80b487bff0a512ed0d55ada4f5c5}\label{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12acf0f80b487bff0a512ed0d55ada4f5c5}} 
+k\+F\+T\+Fx\+\_\+\+Margin\+Value\+User&Apply the \textquotesingle{}User\textquotesingle{} margin to the normal read-\/1 level. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_MarginValueFactory@{kFTFx\_MarginValueFactory}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_MarginValueFactory@{kFTFx\_MarginValueFactory}}}\mbox{\Hypertarget{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12ac74843020b12561f71c99383ad09920a}\label{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12ac74843020b12561f71c99383ad09920a}} 
+k\+F\+T\+Fx\+\_\+\+Margin\+Value\+Factory&Apply the \textquotesingle{}Factory\textquotesingle{} margin to the normal read-\/1 level. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_MarginValueInvalid@{kFTFx\_MarginValueInvalid}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_MarginValueInvalid@{kFTFx\_MarginValueInvalid}}}\mbox{\Hypertarget{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12ac5c68e00dcb9321f8e7394e64d599fb0}\label{group__ftfx__controller_ggaddebf946b93b4027ecf283eb93f08b12ac5c68e00dcb9321f8e7394e64d599fb0}} 
+k\+F\+T\+Fx\+\_\+\+Margin\+Value\+Invalid&Not real margin level, Used to determine the range of valid margin level. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ftfx__controller_ga59fd3ff5f66c9a21c80a48a95a085648}\label{group__ftfx__controller_ga59fd3ff5f66c9a21c80a48a95a085648}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!\_ftfx\_partition\_flexram\_load\_option@{\_ftfx\_partition\_flexram\_load\_option}}
+\index{\_ftfx\_partition\_flexram\_load\_option@{\_ftfx\_partition\_flexram\_load\_option}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{\_ftfx\_partition\_flexram\_load\_option}{\_ftfx\_partition\_flexram\_load\_option}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ftfx__controller_ga59fd3ff5f66c9a21c80a48a95a085648}{\+\_\+ftfx\+\_\+partition\+\_\+flexram\+\_\+load\+\_\+option}}}
+
+
+
+Enumeration for the Flex\+R\+AM load during reset option. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_PartitionFlexramLoadOptLoadedWithValidEepromData@{kFTFx\_PartitionFlexramLoadOptLoadedWithValidEepromData}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_PartitionFlexramLoadOptLoadedWithValidEepromData@{kFTFx\_PartitionFlexramLoadOptLoadedWithValidEepromData}}}\mbox{\Hypertarget{group__ftfx__controller_gga59fd3ff5f66c9a21c80a48a95a085648aa061968412676de918b5078454eac64f}\label{group__ftfx__controller_gga59fd3ff5f66c9a21c80a48a95a085648aa061968412676de918b5078454eac64f}} 
+k\+F\+T\+Fx\+\_\+\+Partition\+Flexram\+Load\+Opt\+Loaded\+With\+Valid\+Eeprom\+Data&Flex\+R\+AM is loaded with valid E\+E\+P\+R\+OM data during reset sequence. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_PartitionFlexramLoadOptNotLoaded@{kFTFx\_PartitionFlexramLoadOptNotLoaded}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_PartitionFlexramLoadOptNotLoaded@{kFTFx\_PartitionFlexramLoadOptNotLoaded}}}\mbox{\Hypertarget{group__ftfx__controller_gga59fd3ff5f66c9a21c80a48a95a085648a92aebaf9d5c4b73d88ad90cbd7140636}\label{group__ftfx__controller_gga59fd3ff5f66c9a21c80a48a95a085648a92aebaf9d5c4b73d88ad90cbd7140636}} 
+k\+F\+T\+Fx\+\_\+\+Partition\+Flexram\+Load\+Opt\+Not\+Loaded&Flex\+R\+AM is not loaded during reset sequence. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ftfx__controller_gad6557da8fe12a2fd572ace03395c3fd8}\label{group__ftfx__controller_gad6557da8fe12a2fd572ace03395c3fd8}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!\_ftfx\_read\_resource\_opt@{\_ftfx\_read\_resource\_opt}}
+\index{\_ftfx\_read\_resource\_opt@{\_ftfx\_read\_resource\_opt}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{\_ftfx\_read\_resource\_opt}{\_ftfx\_read\_resource\_opt}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ftfx__controller_gad6557da8fe12a2fd572ace03395c3fd8}{\+\_\+ftfx\+\_\+read\+\_\+resource\+\_\+opt}}}
+
+
+
+Enumeration for the two possible options of flash read resource command. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_ResourceOptionFlashIfr@{kFTFx\_ResourceOptionFlashIfr}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_ResourceOptionFlashIfr@{kFTFx\_ResourceOptionFlashIfr}}}\mbox{\Hypertarget{group__ftfx__controller_ggad6557da8fe12a2fd572ace03395c3fd8aa11a2c42a2eba3c730c8832296cd450b}\label{group__ftfx__controller_ggad6557da8fe12a2fd572ace03395c3fd8aa11a2c42a2eba3c730c8832296cd450b}} 
+k\+F\+T\+Fx\+\_\+\+Resource\+Option\+Flash\+Ifr&Select code for Program flash 0 I\+FR, Program flash swap 0 I\+FR, Data flash 0 I\+FR \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_ResourceOptionVersionId@{kFTFx\_ResourceOptionVersionId}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_ResourceOptionVersionId@{kFTFx\_ResourceOptionVersionId}}}\mbox{\Hypertarget{group__ftfx__controller_ggad6557da8fe12a2fd572ace03395c3fd8a531ca4c2d12cec0d61b983f4eaae4c8a}\label{group__ftfx__controller_ggad6557da8fe12a2fd572ace03395c3fd8a531ca4c2d12cec0d61b983f4eaae4c8a}} 
+k\+F\+T\+Fx\+\_\+\+Resource\+Option\+Version\+Id&Select code for the version ID \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ftfx__controller_ga0b42dbcfacb9ac0da48c674dd6a35f2f}\label{group__ftfx__controller_ga0b42dbcfacb9ac0da48c674dd6a35f2f}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!\_ftfx\_security\_state@{\_ftfx\_security\_state}}
+\index{\_ftfx\_security\_state@{\_ftfx\_security\_state}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{\_ftfx\_security\_state}{\_ftfx\_security\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ftfx__controller_ga0b42dbcfacb9ac0da48c674dd6a35f2f}{\+\_\+ftfx\+\_\+security\+\_\+state}}}
+
+
+
+Enumeration for the three possible F\+T\+Fx security states. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_SecurityStateNotSecure@{kFTFx\_SecurityStateNotSecure}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_SecurityStateNotSecure@{kFTFx\_SecurityStateNotSecure}}}\mbox{\Hypertarget{group__ftfx__controller_gga0b42dbcfacb9ac0da48c674dd6a35f2faad4b024453fd82cbe1a9d1e88dbf8de6}\label{group__ftfx__controller_gga0b42dbcfacb9ac0da48c674dd6a35f2faad4b024453fd82cbe1a9d1e88dbf8de6}} 
+k\+F\+T\+Fx\+\_\+\+Security\+State\+Not\+Secure&Flash is not secure. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_SecurityStateBackdoorEnabled@{kFTFx\_SecurityStateBackdoorEnabled}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_SecurityStateBackdoorEnabled@{kFTFx\_SecurityStateBackdoorEnabled}}}\mbox{\Hypertarget{group__ftfx__controller_gga0b42dbcfacb9ac0da48c674dd6a35f2fa0202890ba1a235ac1ae5778b17fbe17e}\label{group__ftfx__controller_gga0b42dbcfacb9ac0da48c674dd6a35f2fa0202890ba1a235ac1ae5778b17fbe17e}} 
+k\+F\+T\+Fx\+\_\+\+Security\+State\+Backdoor\+Enabled&Flash backdoor is enabled. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_SecurityStateBackdoorDisabled@{kFTFx\_SecurityStateBackdoorDisabled}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_SecurityStateBackdoorDisabled@{kFTFx\_SecurityStateBackdoorDisabled}}}\mbox{\Hypertarget{group__ftfx__controller_gga0b42dbcfacb9ac0da48c674dd6a35f2fac12bd14b05350af1d1591a59d4cb6f38}\label{group__ftfx__controller_gga0b42dbcfacb9ac0da48c674dd6a35f2fac12bd14b05350af1d1591a59d4cb6f38}} 
+k\+F\+T\+Fx\+\_\+\+Security\+State\+Backdoor\+Disabled&Flash backdoor is disabled. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ftfx__controller_gac6715381632a07d502632b03f8cfb402}\label{group__ftfx__controller_gac6715381632a07d502632b03f8cfb402}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!\_ftfx\_swap\_state@{\_ftfx\_swap\_state}}
+\index{\_ftfx\_swap\_state@{\_ftfx\_swap\_state}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{\_ftfx\_swap\_state}{\_ftfx\_swap\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ftfx__controller_gac6715381632a07d502632b03f8cfb402}{\+\_\+ftfx\+\_\+swap\+\_\+state}}}
+
+
+
+Enumeration for the possible flash Swap status. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_SwapStateUninitialized@{kFTFx\_SwapStateUninitialized}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_SwapStateUninitialized@{kFTFx\_SwapStateUninitialized}}}\mbox{\Hypertarget{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402a409faf74ea079fa19377acdea6997fd0}\label{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402a409faf74ea079fa19377acdea6997fd0}} 
+k\+F\+T\+Fx\+\_\+\+Swap\+State\+Uninitialized&Flash Swap system is in an uninitialized state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_SwapStateReady@{kFTFx\_SwapStateReady}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_SwapStateReady@{kFTFx\_SwapStateReady}}}\mbox{\Hypertarget{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402a2f001450d474547223903a9ffb81408f}\label{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402a2f001450d474547223903a9ffb81408f}} 
+k\+F\+T\+Fx\+\_\+\+Swap\+State\+Ready&Flash Swap system is in a ready state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_SwapStateUpdate@{kFTFx\_SwapStateUpdate}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_SwapStateUpdate@{kFTFx\_SwapStateUpdate}}}\mbox{\Hypertarget{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402ab1537d0e7a41c61698dd6387424b73da}\label{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402ab1537d0e7a41c61698dd6387424b73da}} 
+k\+F\+T\+Fx\+\_\+\+Swap\+State\+Update&Flash Swap system is in an update state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_SwapStateUpdateErased@{kFTFx\_SwapStateUpdateErased}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_SwapStateUpdateErased@{kFTFx\_SwapStateUpdateErased}}}\mbox{\Hypertarget{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402af7479a28d299cd6e9239f0367ebcb0f6}\label{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402af7479a28d299cd6e9239f0367ebcb0f6}} 
+k\+F\+T\+Fx\+\_\+\+Swap\+State\+Update\+Erased&Flash Swap system is in an update\+Erased state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_SwapStateComplete@{kFTFx\_SwapStateComplete}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_SwapStateComplete@{kFTFx\_SwapStateComplete}}}\mbox{\Hypertarget{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402ab808523acebe2fad478d2a5136f3d782}\label{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402ab808523acebe2fad478d2a5136f3d782}} 
+k\+F\+T\+Fx\+\_\+\+Swap\+State\+Complete&Flash Swap system is in a complete state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFTFx\_SwapStateDisabled@{kFTFx\_SwapStateDisabled}!Ftfx\_controller@{Ftfx\_controller}}\index{Ftfx\_controller@{Ftfx\_controller}!kFTFx\_SwapStateDisabled@{kFTFx\_SwapStateDisabled}}}\mbox{\Hypertarget{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402ac59f9257ba267cf49f52ce56aadd2bba}\label{group__ftfx__controller_ggac6715381632a07d502632b03f8cfb402ac59f9257ba267cf49f52ce56aadd2bba}} 
+k\+F\+T\+Fx\+\_\+\+Swap\+State\+Disabled&Flash Swap system is in a disabled state. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__ftfx__controller_ga40e6294a537acf6f902b01bdf4cafa27}\label{group__ftfx__controller_ga40e6294a537acf6f902b01bdf4cafa27}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_API\_Init@{FTFx\_API\_Init}}
+\index{FTFx\_API\_Init@{FTFx\_API\_Init}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_API\_Init()}{FTFx\_API\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+A\+P\+I\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Initializes the global flash properties structure members. 
+
+This function checks and initializes the Flash module for the other Flash A\+P\+Is.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the storage for the driver runtime state.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_ga980b0cb86989aedb55096ebe53036eb3}\label{group__ftfx__controller_ga980b0cb86989aedb55096ebe53036eb3}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_Erase@{FTFx\_CMD\_Erase}}
+\index{FTFx\_CMD\_Erase@{FTFx\_CMD\_Erase}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_Erase()}{FTFx\_CMD\_Erase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{start,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes,  }\item[{uint32\+\_\+t}]{key }\end{DoxyParamCaption})}
+
+
+
+Erases the flash sectors encompassed by parameters passed into function. 
+
+This function erases the appropriate number of flash sectors based on the desired start address and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & The pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be erased. The start address does not need to be sector-\/aligned but must be word-\/aligned. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words) to be erased. Must be word-\/aligned. \\
+\hline
+{\em key} & The value used to validate all flash erase A\+P\+Is.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & The parameter is not aligned with the specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & The address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a6db9a6a03c0f698988b183effb857c40}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Erase\+Key\+Error}}} & The A\+PI erase key is invalid. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_ga709bc9b9e66e213dfd00e53f1e90542b}\label{group__ftfx__controller_ga709bc9b9e66e213dfd00e53f1e90542b}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_EraseAll@{FTFx\_CMD\_EraseAll}}
+\index{FTFx\_CMD\_EraseAll@{FTFx\_CMD\_EraseAll}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_EraseAll()}{FTFx\_CMD\_EraseAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Erase\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{key }\end{DoxyParamCaption})}
+
+
+
+Erases entire flash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the storage for the driver runtime state. \\
+\hline
+{\em key} & A value used to validate all flash erase A\+P\+Is.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a6db9a6a03c0f698988b183effb857c40}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Erase\+Key\+Error}}} & A\+PI erase key is invalid. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during command execution. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609abc388f09a5b298bad7c019b69aa0e6da}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Partition\+Status\+Update\+Failure}}} & Failed to update the partition status. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_gaf73f451480c5a91e94de5d65c5206876}\label{group__ftfx__controller_gaf73f451480c5a91e94de5d65c5206876}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_EraseAllExecuteOnlySegments@{FTFx\_CMD\_EraseAllExecuteOnlySegments}}
+\index{FTFx\_CMD\_EraseAllExecuteOnlySegments@{FTFx\_CMD\_EraseAllExecuteOnlySegments}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_EraseAllExecuteOnlySegments()}{FTFx\_CMD\_EraseAllExecuteOnlySegments()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Erase\+All\+Execute\+Only\+Segments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{key }\end{DoxyParamCaption})}
+
+
+
+Erases the entire flash, including protected sectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the storage for the driver runtime state. \\
+\hline
+{\em key} & A value used to validate all flash erase A\+P\+Is.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a6db9a6a03c0f698988b183effb857c40}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Erase\+Key\+Error}}} & A\+PI erase key is invalid. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during command execution. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609abc388f09a5b298bad7c019b69aa0e6da}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Partition\+Status\+Update\+Failure}}} & Failed to update the partition status.\\
+\hline
+\end{DoxyRetVals}
+Erases all program flash execute-\/only segments defined by the F\+X\+A\+CC registers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the storage for the driver runtime state. \\
+\hline
+{\em key} & A value used to validate all flash erase A\+P\+Is.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a6db9a6a03c0f698988b183effb857c40}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Erase\+Key\+Error}}} & A\+PI erase key is invalid. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_ga09ac57e19f9510005a11e4cee37c964c}\label{group__ftfx__controller_ga09ac57e19f9510005a11e4cee37c964c}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_Program@{FTFx\_CMD\_Program}}
+\index{FTFx\_CMD\_Program@{FTFx\_CMD\_Program}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_Program()}{FTFx\_CMD\_Program()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Program (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{start,  }\item[{const uint8\+\_\+t $\ast$}]{src,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Programs flash with data at locations passed in through parameters. 
+
+This function programs the flash memory with the desired data for a given flash area as determined by the start address and the length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be programmed. Must be word-\/aligned. \\
+\hline
+{\em src} & A pointer to the source buffer of data that is to be programmed into the flash. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be programmed. Must be word-\/aligned.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & Parameter is not aligned with the specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & Address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_gaa43f8e9deae4daaf2dd84f29e66b1a80}\label{group__ftfx__controller_gaa43f8e9deae4daaf2dd84f29e66b1a80}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_ProgramOnce@{FTFx\_CMD\_ProgramOnce}}
+\index{FTFx\_CMD\_ProgramOnce@{FTFx\_CMD\_ProgramOnce}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_ProgramOnce()}{FTFx\_CMD\_ProgramOnce()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Program\+Once (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{index,  }\item[{const uint8\+\_\+t $\ast$}]{src,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Programs Program Once Field through parameters. 
+
+This function programs the Program Once Field with the desired data for a given flash area as determined by the index and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em index} & The index indicating which area of the Program Once Field to be programmed. \\
+\hline
+{\em src} & A pointer to the source buffer of data that is to be programmed into the Program Once Field. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be programmed. Must be word-\/aligned.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_gaf17b1610a36c07c5f993bd6a6817a674}\label{group__ftfx__controller_gaf17b1610a36c07c5f993bd6a6817a674}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_ReadOnce@{FTFx\_CMD\_ReadOnce}}
+\index{FTFx\_CMD\_ReadOnce@{FTFx\_CMD\_ReadOnce}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_ReadOnce()}{FTFx\_CMD\_ReadOnce()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Read\+Once (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{index,  }\item[{uint8\+\_\+t $\ast$}]{dst,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Reads the Program Once Field through parameters. 
+
+This function reads the read once feild with given index and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em index} & The index indicating the area of program once field to be read. \\
+\hline
+{\em dst} & A pointer to the destination buffer of data that is used to store data to be read. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be programmed. Must be word-\/aligned.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_gaa909192c42276b7d70e6a91a5cb93a71}\label{group__ftfx__controller_gaa909192c42276b7d70e6a91a5cb93a71}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_SecurityBypass@{FTFx\_CMD\_SecurityBypass}}
+\index{FTFx\_CMD\_SecurityBypass@{FTFx\_CMD\_SecurityBypass}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_SecurityBypass()}{FTFx\_CMD\_SecurityBypass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Security\+Bypass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{const uint8\+\_\+t $\ast$}]{backdoor\+Key }\end{DoxyParamCaption})}
+
+
+
+Allows users to bypass security with a backdoor key. 
+
+If the M\+CU is in secured state, this function unsecures the M\+CU by comparing the provided backdoor key with ones in the flash configuration field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em backdoor\+Key} & A pointer to the user buffer containing the backdoor key.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_gab19822bcb2eafc218a4fd198bf1470da}\label{group__ftfx__controller_gab19822bcb2eafc218a4fd198bf1470da}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_VerifyErase@{FTFx\_CMD\_VerifyErase}}
+\index{FTFx\_CMD\_VerifyErase@{FTFx\_CMD\_VerifyErase}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_VerifyErase()}{FTFx\_CMD\_VerifyErase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Verify\+Erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{start,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes,  }\item[{\mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}}}]{margin }\end{DoxyParamCaption})}
+
+
+
+Verifies an erasure of the desired flash area at a specified margin level. 
+
+This function checks the appropriate number of flash sectors based on the desired start address and length to check whether the flash is erased to the specified read margin level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be verified. The start address does not need to be sector-\/aligned but must be word-\/aligned. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be verified. Must be word-\/aligned. \\
+\hline
+{\em margin} & Read margin choice.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & Parameter is not aligned with specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & Address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_ga9432d3fcd2f3222b79e0ea99d7a80043}\label{group__ftfx__controller_ga9432d3fcd2f3222b79e0ea99d7a80043}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_VerifyEraseAll@{FTFx\_CMD\_VerifyEraseAll}}
+\index{FTFx\_CMD\_VerifyEraseAll@{FTFx\_CMD\_VerifyEraseAll}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_VerifyEraseAll()}{FTFx\_CMD\_VerifyEraseAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Verify\+Erase\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{\mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}}}]{margin }\end{DoxyParamCaption})}
+
+
+
+Verifies erasure of the entire flash at a specified margin level. 
+
+This function checks whether the flash is erased to the specified read margin level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em margin} & Read margin choice.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_ga849d873f9ab962160ebc2e72429fd3ea}\label{group__ftfx__controller_ga849d873f9ab962160ebc2e72429fd3ea}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_VerifyEraseAllExecuteOnlySegments@{FTFx\_CMD\_VerifyEraseAllExecuteOnlySegments}}
+\index{FTFx\_CMD\_VerifyEraseAllExecuteOnlySegments@{FTFx\_CMD\_VerifyEraseAllExecuteOnlySegments}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_VerifyEraseAllExecuteOnlySegments()}{FTFx\_CMD\_VerifyEraseAllExecuteOnlySegments()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Verify\+Erase\+All\+Execute\+Only\+Segments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{\mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}}}]{margin }\end{DoxyParamCaption})}
+
+
+
+Verifies whether the program flash execute-\/only segments have been erased to the specified read margin level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em margin} & Read margin choice.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_ga2c7e08713a560fbc4acff9f7d7708cee}\label{group__ftfx__controller_ga2c7e08713a560fbc4acff9f7d7708cee}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_CMD\_VerifyProgram@{FTFx\_CMD\_VerifyProgram}}
+\index{FTFx\_CMD\_VerifyProgram@{FTFx\_CMD\_VerifyProgram}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_CMD\_VerifyProgram()}{FTFx\_CMD\_VerifyProgram()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+C\+M\+D\+\_\+\+Verify\+Program (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{uint32\+\_\+t}]{start,  }\item[{uint32\+\_\+t}]{length\+In\+Bytes,  }\item[{const uint8\+\_\+t $\ast$}]{expected\+Data,  }\item[{\mbox{\hyperlink{group__ftfx__controller_ga2cef5154a854c303445b4bd5139f6392}{ftfx\+\_\+margin\+\_\+value\+\_\+t}}}]{margin,  }\item[{uint32\+\_\+t $\ast$}]{failed\+Address,  }\item[{uint32\+\_\+t $\ast$}]{failed\+Data }\end{DoxyParamCaption})}
+
+
+
+Verifies programming of the desired flash area at a specified margin level. 
+
+This function verifies the data programed in the flash memory using the Flash Program Check Command and compares it to the expected data for a given flash area as determined by the start address and length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to the storage for the driver runtime state. \\
+\hline
+{\em start} & The start address of the desired flash memory to be verified. Must be word-\/aligned. \\
+\hline
+{\em length\+In\+Bytes} & The length, given in bytes (not words or long-\/words), to be verified. Must be word-\/aligned. \\
+\hline
+{\em expected\+Data} & A pointer to the expected data that is to be verified against. \\
+\hline
+{\em margin} & Read margin choice. \\
+\hline
+{\em failed\+Address} & A pointer to the returned failing address. \\
+\hline
+{\em failed\+Data} & A pointer to the returned failing data. Some derivatives do not include failed data as part of the F\+C\+C\+O\+Bx registers. In this case, zeros are returned upon failure.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a017490a08a81935f519dcba905b137a4}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Alignment\+Error}}} & Parameter is not aligned with specified baseline. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a9297c38b4fd5b80aacc3bc959d8b7b44}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Address\+Error}}} & Address is out of range. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609aa2bbcccec94454861492ef0aa0bf1e02}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Execute\+In\+Ram\+Function\+Not\+Ready}}} & Execute-\/in-\/\+R\+AM function is not available. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609ae26ada87abb4bec029396e7d4054511e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Access\+Error}}} & Invalid instruction codes and out-\/of bounds addresses. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609adcde6ccf0be4b041ca26474cbaa90193}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Protection\+Violation}}} & The program/erase operation is requested to execute on protected areas. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a2da6d194fd8487946c139a4f481cefe2}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Command\+Failure}}} & Run-\/time error during the command execution. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ftfx__controller_ga219f5ec71c7fed8f684297ef0a693262}\label{group__ftfx__controller_ga219f5ec71c7fed8f684297ef0a693262}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!FTFx\_REG\_GetSecurityState@{FTFx\_REG\_GetSecurityState}}
+\index{FTFx\_REG\_GetSecurityState@{FTFx\_REG\_GetSecurityState}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{FTFx\_REG\_GetSecurityState()}{FTFx\_REG\_GetSecurityState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} F\+T\+Fx\+\_\+\+R\+E\+G\+\_\+\+Get\+Security\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ftfx__controller_gab0196063c05bffb4cd2f249699a3378c}{ftfx\+\_\+config\+\_\+t}} $\ast$}]{config,  }\item[{\mbox{\hyperlink{group__ftfx__controller_gae49df85d158f3651e17d1bb660a4f1c2}{ftfx\+\_\+security\+\_\+state\+\_\+t}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+Returns the security state via the pointer passed into the function. 
+
+This function retrieves the current flash security status, including the security enabling state and the backdoor key enabling state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & A pointer to storage for the driver runtime state. \\
+\hline
+{\em state} & A pointer to the value returned for the current security status code\+:\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a8825e5cb3b30edfd6a26897eef4c66a3}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Success}}} & A\+PI was executed successfully. \\
+\hline
+{\em \mbox{\hyperlink{group__ftfx__controller_gga458e651af6690959efa2afb96be7d609a88aadd667559399a26dcb825bf0b8d3e}{k\+Status\+\_\+\+F\+T\+Fx\+\_\+\+Invalid\+Argument}}} & An invalid argument is provided. \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__ftfx__controller_ga0523cedff47e2441fc198b7770ec5d3f}\label{group__ftfx__controller_ga0523cedff47e2441fc198b7770ec5d3f}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!base@{base}}
+\index{base@{base}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily uint32\+\_\+t base}
+
+Base address of flash special memory. \mbox{\Hypertarget{group__ftfx__controller_ga1cd6b415d1fb5e98f12125b7863691e2}\label{group__ftfx__controller_ga1cd6b415d1fb5e98f12125b7863691e2}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!blockBase@{blockBase}}
+\index{blockBase@{blockBase}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{blockBase}{blockBase}}
+{\footnotesize\ttfamily uint32\+\_\+t block\+Base}
+
+A base address of the flash block \mbox{\Hypertarget{group__ftfx__controller_ga359235f8ff745acf36826f7859097c4f}\label{group__ftfx__controller_ga359235f8ff745acf36826f7859097c4f}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!blockCount@{blockCount}}
+\index{blockCount@{blockCount}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{blockCount}{blockCount}}
+{\footnotesize\ttfamily uint32\+\_\+t block\+Count}
+
+A number of flash blocks. \mbox{\Hypertarget{group__ftfx__controller_ga103f050a0770fca8ee73b78a283337a1}\label{group__ftfx__controller_ga103f050a0770fca8ee73b78a283337a1}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!convertedAddress@{convertedAddress}}
+\index{convertedAddress@{convertedAddress}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{convertedAddress}{convertedAddress}}
+{\footnotesize\ttfamily uint32\+\_\+t converted\+Address}
+
+A converted address for the current flash type. \mbox{\Hypertarget{group__ftfx__controller_ga86988a65e0d3ece7990c032c159786d6}\label{group__ftfx__controller_ga86988a65e0d3ece7990c032c159786d6}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!count@{count}}
+\index{count@{count}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily uint32\+\_\+t count}
+
+flash special memory count. \mbox{\Hypertarget{group__ftfx__controller_gaad84e8b697ff1b5fbe263e3730140d79}\label{group__ftfx__controller_gaad84e8b697ff1b5fbe263e3730140d79}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!eepromTotalSize@{eepromTotalSize}}
+\index{eepromTotalSize@{eepromTotalSize}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{eepromTotalSize}{eepromTotalSize}}
+{\footnotesize\ttfamily uint16\+\_\+t eeprom\+Total\+Size}
+
+The size of E\+E\+P\+R\+OM area which was partitioned from Flex\+R\+AM \mbox{\Hypertarget{group__ftfx__controller_gaf29349209247a3a0420431c52be97f28}\label{group__ftfx__controller_gaf29349209247a3a0420431c52be97f28}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!flexramBlockBase@{flexramBlockBase}}
+\index{flexramBlockBase@{flexramBlockBase}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{flexramBlockBase}{flexramBlockBase}}
+{\footnotesize\ttfamily uint32\+\_\+t flexram\+Block\+Base}
+
+The base address of the Flex\+R\+A\+M/acceleration R\+AM \mbox{\Hypertarget{group__ftfx__controller_ga29c215db16af5f9ff6c5c759ab1c889b}\label{group__ftfx__controller_ga29c215db16af5f9ff6c5c759ab1c889b}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!flexramTotalSize@{flexramTotalSize}}
+\index{flexramTotalSize@{flexramTotalSize}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{flexramTotalSize}{flexramTotalSize}}
+{\footnotesize\ttfamily uint32\+\_\+t flexram\+Total\+Size}
+
+The size of the Flex\+R\+A\+M/acceleration R\+AM \mbox{\Hypertarget{group__ftfx__controller_gaae5a12e607d0f782506d9e6ec6179c64}\label{group__ftfx__controller_gaae5a12e607d0f782506d9e6ec6179c64}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!index@{index}}
+\index{index@{index}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{index}{index}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t index}
+
+Index of flash block. \mbox{\Hypertarget{group__ftfx__controller_gaae5a12e607d0f782506d9e6ec6179c64}\label{group__ftfx__controller_gaae5a12e607d0f782506d9e6ec6179c64}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!index@{index}}
+\index{index@{index}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{index}{index}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t index}
+
+Index of flash block. \mbox{\Hypertarget{group__ftfx__controller_ga6ec241fed36ff39637ec3a69f34e5e84}\label{group__ftfx__controller_ga6ec241fed36ff39637ec3a69f34e5e84}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!runCmdFuncAddr@{runCmdFuncAddr}}
+\index{runCmdFuncAddr@{runCmdFuncAddr}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{runCmdFuncAddr}{runCmdFuncAddr}}
+{\footnotesize\ttfamily uint32\+\_\+t$\ast$ run\+Cmd\+Func\+Addr}
+
+An buffer point to the flash execute-\/in-\/\+R\+AM function. \mbox{\Hypertarget{group__ftfx__controller_ga0531bf8e2d0ac7dbf0d6af9b74a6ae0f}\label{group__ftfx__controller_ga0531bf8e2d0ac7dbf0d6af9b74a6ae0f}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!sectorSize@{sectorSize}}
+\index{sectorSize@{sectorSize}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{sectorSize}{sectorSize}}
+{\footnotesize\ttfamily uint32\+\_\+t sector\+Size}
+
+The size in bytes of a sector of flash. \mbox{\Hypertarget{group__ftfx__controller_gab2c6b258f02add8fdf4cfc7c371dd772}\label{group__ftfx__controller_gab2c6b258f02add8fdf4cfc7c371dd772}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!size@{size}}
+\index{size@{size}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily uint32\+\_\+t size}
+
+size of flash special memory. \mbox{\Hypertarget{group__ftfx__controller_gafd8a6a01e3b212857df6efb82e06f682}\label{group__ftfx__controller_gafd8a6a01e3b212857df6efb82e06f682}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!totalSize@{totalSize}}
+\index{totalSize@{totalSize}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{totalSize}{totalSize}}
+{\footnotesize\ttfamily uint32\+\_\+t total\+Size}
+
+The size of the flash block. \mbox{\Hypertarget{group__ftfx__controller_ga1d127017fb298b889f4ba24752d08b8e}\label{group__ftfx__controller_ga1d127017fb298b889f4ba24752d08b8e}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!type@{type}}
+\index{type@{type}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{type}{type}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t type}
+
+Type of flash block. \mbox{\Hypertarget{group__ftfx__controller_ga1d127017fb298b889f4ba24752d08b8e}\label{group__ftfx__controller_ga1d127017fb298b889f4ba24752d08b8e}} 
+\index{Ftfx\_controller@{Ftfx\_controller}!type@{type}}
+\index{type@{type}!Ftfx\_controller@{Ftfx\_controller}}
+\subsubsection{\texorpdfstring{type}{type}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t type}
+
+Type of flash block. 

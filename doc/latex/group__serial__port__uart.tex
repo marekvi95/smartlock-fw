@@ -1,0 +1,87 @@
+\hypertarget{group__serial__port__uart}{}\section{Serial\+\_\+port\+\_\+uart}
+\label{group__serial__port__uart}\index{Serial\_port\_uart@{Serial\_port\_uart}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__serial__port__uart__config}{\+\_\+serial\+\_\+port\+\_\+uart\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em serial port uart config struct \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__serial__port__uart_ga2109c092d5f72ef7729b0454b40e892f}\label{group__serial__port__uart_ga2109c092d5f72ef7729b0454b40e892f}} 
+\#define \mbox{\hyperlink{group__serial__port__uart_ga2109c092d5f72ef7729b0454b40e892f}{S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+U\+A\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+I\+ZE}}~(4\+U)
+\begin{DoxyCompactList}\small\item\em serial port uart handle size \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__serial__port__uart_ga3980002a1791549605701a7822bec4ba}\label{group__serial__port__uart_ga3980002a1791549605701a7822bec4ba}} 
+typedef enum \mbox{\hyperlink{group__serial__port__uart_ga2d84542a7efc9d896f4e8d7221e1ec98}{\+\_\+serial\+\_\+port\+\_\+uart\+\_\+parity\+\_\+mode}} \mbox{\hyperlink{group__serial__port__uart_ga3980002a1791549605701a7822bec4ba}{serial\+\_\+port\+\_\+uart\+\_\+parity\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em serial port uart parity mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serial__port__uart_ga2a0798b3cc6db94c65bf067bcfe73b12}\label{group__serial__port__uart_ga2a0798b3cc6db94c65bf067bcfe73b12}} 
+typedef enum \mbox{\hyperlink{group__serial__port__uart_ga97aea0fa091f5d31407cd8b94bdc5f35}{\+\_\+serial\+\_\+port\+\_\+uart\+\_\+stop\+\_\+bit\+\_\+count}} \mbox{\hyperlink{group__serial__port__uart_ga2a0798b3cc6db94c65bf067bcfe73b12}{serial\+\_\+port\+\_\+uart\+\_\+stop\+\_\+bit\+\_\+count\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em serial port uart stop bit count \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__serial__port__uart_gaeed027996311f4e385ebea09d3430d02}\label{group__serial__port__uart_gaeed027996311f4e385ebea09d3430d02}} 
+typedef struct \mbox{\hyperlink{struct__serial__port__uart__config}{\+\_\+serial\+\_\+port\+\_\+uart\+\_\+config}} \mbox{\hyperlink{group__serial__port__uart_gaeed027996311f4e385ebea09d3430d02}{serial\+\_\+port\+\_\+uart\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em serial port uart config struct \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__serial__port__uart_ga2d84542a7efc9d896f4e8d7221e1ec98}{\+\_\+serial\+\_\+port\+\_\+uart\+\_\+parity\+\_\+mode}} \{ \mbox{\hyperlink{group__serial__port__uart_gga2d84542a7efc9d896f4e8d7221e1ec98a208958aa923a2c50ac1192a5085ab8b1}{k\+Serial\+Manager\+\_\+\+Uart\+Parity\+Disabled}} = 0x0U, 
+\mbox{\hyperlink{group__serial__port__uart_gga2d84542a7efc9d896f4e8d7221e1ec98a7d9d6f05fb6e1099fdfbf1f79a699356}{k\+Serial\+Manager\+\_\+\+Uart\+Parity\+Even}} = 0x1U, 
+\mbox{\hyperlink{group__serial__port__uart_gga2d84542a7efc9d896f4e8d7221e1ec98a15bc11791c1f07fac71c808d083515db}{k\+Serial\+Manager\+\_\+\+Uart\+Parity\+Odd}} = 0x2U
+ \}
+\begin{DoxyCompactList}\small\item\em serial port uart parity mode \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__serial__port__uart_ga97aea0fa091f5d31407cd8b94bdc5f35}{\+\_\+serial\+\_\+port\+\_\+uart\+\_\+stop\+\_\+bit\+\_\+count}} \{ \mbox{\hyperlink{group__serial__port__uart_gga97aea0fa091f5d31407cd8b94bdc5f35a5caed34146b357a7061aaacfe378e039}{k\+Serial\+Manager\+\_\+\+Uart\+One\+Stop\+Bit}} = 0U, 
+\mbox{\hyperlink{group__serial__port__uart_gga97aea0fa091f5d31407cd8b94bdc5f35a83eb7aee91f3fd8964d283c0057880dc}{k\+Serial\+Manager\+\_\+\+Uart\+Two\+Stop\+Bit}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em serial port uart stop bit count \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__serial__port__uart_ga2d84542a7efc9d896f4e8d7221e1ec98}\label{group__serial__port__uart_ga2d84542a7efc9d896f4e8d7221e1ec98}} 
+\index{Serial\_port\_uart@{Serial\_port\_uart}!\_serial\_port\_uart\_parity\_mode@{\_serial\_port\_uart\_parity\_mode}}
+\index{\_serial\_port\_uart\_parity\_mode@{\_serial\_port\_uart\_parity\_mode}!Serial\_port\_uart@{Serial\_port\_uart}}
+\subsubsection{\texorpdfstring{\_serial\_port\_uart\_parity\_mode}{\_serial\_port\_uart\_parity\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__serial__port__uart_ga2d84542a7efc9d896f4e8d7221e1ec98}{\+\_\+serial\+\_\+port\+\_\+uart\+\_\+parity\+\_\+mode}}}
+
+
+
+serial port uart parity mode 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSerialManager\_UartParityDisabled@{kSerialManager\_UartParityDisabled}!Serial\_port\_uart@{Serial\_port\_uart}}\index{Serial\_port\_uart@{Serial\_port\_uart}!kSerialManager\_UartParityDisabled@{kSerialManager\_UartParityDisabled}}}\mbox{\Hypertarget{group__serial__port__uart_gga2d84542a7efc9d896f4e8d7221e1ec98a208958aa923a2c50ac1192a5085ab8b1}\label{group__serial__port__uart_gga2d84542a7efc9d896f4e8d7221e1ec98a208958aa923a2c50ac1192a5085ab8b1}} 
+k\+Serial\+Manager\+\_\+\+Uart\+Parity\+Disabled&Parity disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSerialManager\_UartParityEven@{kSerialManager\_UartParityEven}!Serial\_port\_uart@{Serial\_port\_uart}}\index{Serial\_port\_uart@{Serial\_port\_uart}!kSerialManager\_UartParityEven@{kSerialManager\_UartParityEven}}}\mbox{\Hypertarget{group__serial__port__uart_gga2d84542a7efc9d896f4e8d7221e1ec98a7d9d6f05fb6e1099fdfbf1f79a699356}\label{group__serial__port__uart_gga2d84542a7efc9d896f4e8d7221e1ec98a7d9d6f05fb6e1099fdfbf1f79a699356}} 
+k\+Serial\+Manager\+\_\+\+Uart\+Parity\+Even&Parity even enabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSerialManager\_UartParityOdd@{kSerialManager\_UartParityOdd}!Serial\_port\_uart@{Serial\_port\_uart}}\index{Serial\_port\_uart@{Serial\_port\_uart}!kSerialManager\_UartParityOdd@{kSerialManager\_UartParityOdd}}}\mbox{\Hypertarget{group__serial__port__uart_gga2d84542a7efc9d896f4e8d7221e1ec98a15bc11791c1f07fac71c808d083515db}\label{group__serial__port__uart_gga2d84542a7efc9d896f4e8d7221e1ec98a15bc11791c1f07fac71c808d083515db}} 
+k\+Serial\+Manager\+\_\+\+Uart\+Parity\+Odd&Parity odd enabled \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__serial__port__uart_ga97aea0fa091f5d31407cd8b94bdc5f35}\label{group__serial__port__uart_ga97aea0fa091f5d31407cd8b94bdc5f35}} 
+\index{Serial\_port\_uart@{Serial\_port\_uart}!\_serial\_port\_uart\_stop\_bit\_count@{\_serial\_port\_uart\_stop\_bit\_count}}
+\index{\_serial\_port\_uart\_stop\_bit\_count@{\_serial\_port\_uart\_stop\_bit\_count}!Serial\_port\_uart@{Serial\_port\_uart}}
+\subsubsection{\texorpdfstring{\_serial\_port\_uart\_stop\_bit\_count}{\_serial\_port\_uart\_stop\_bit\_count}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__serial__port__uart_ga97aea0fa091f5d31407cd8b94bdc5f35}{\+\_\+serial\+\_\+port\+\_\+uart\+\_\+stop\+\_\+bit\+\_\+count}}}
+
+
+
+serial port uart stop bit count 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSerialManager\_UartOneStopBit@{kSerialManager\_UartOneStopBit}!Serial\_port\_uart@{Serial\_port\_uart}}\index{Serial\_port\_uart@{Serial\_port\_uart}!kSerialManager\_UartOneStopBit@{kSerialManager\_UartOneStopBit}}}\mbox{\Hypertarget{group__serial__port__uart_gga97aea0fa091f5d31407cd8b94bdc5f35a5caed34146b357a7061aaacfe378e039}\label{group__serial__port__uart_gga97aea0fa091f5d31407cd8b94bdc5f35a5caed34146b357a7061aaacfe378e039}} 
+k\+Serial\+Manager\+\_\+\+Uart\+One\+Stop\+Bit&One stop bit \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSerialManager\_UartTwoStopBit@{kSerialManager\_UartTwoStopBit}!Serial\_port\_uart@{Serial\_port\_uart}}\index{Serial\_port\_uart@{Serial\_port\_uart}!kSerialManager\_UartTwoStopBit@{kSerialManager\_UartTwoStopBit}}}\mbox{\Hypertarget{group__serial__port__uart_gga97aea0fa091f5d31407cd8b94bdc5f35a83eb7aee91f3fd8964d283c0057880dc}\label{group__serial__port__uart_gga97aea0fa091f5d31407cd8b94bdc5f35a83eb7aee91f3fd8964d283c0057880dc}} 
+k\+Serial\+Manager\+\_\+\+Uart\+Two\+Stop\+Bit&Two stop bits \\
+\hline
+
+\end{DoxyEnumFields}

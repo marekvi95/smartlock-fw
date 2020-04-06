@@ -1,0 +1,83 @@
+\hypertarget{structspi__aml__master__config__t}{}\section{spi\+\_\+aml\+\_\+master\+\_\+config\+\_\+t Struct Reference}
+\label{structspi__aml__master__config__t}\index{spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}}
+
+
+A\+ML S\+PI master parameters available for superior drivers (pointers).  
+
+
+
+
+{\ttfamily \#include $<$spi\+\_\+aml.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structspi__aml__master__config__t_a6d3034fecd72dea96793c13f8c6340cd}{baud\+Rate\+Hz}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structspi__aml__master__config__t_afcc9f66e274f7e690549d5d216970d73}{bit\+Count}}
+\item 
+\mbox{\hyperlink{group__enum__group_gaa95bcc4aa184cc2df42df55e6d8c2d3a}{spi\+\_\+aml\+\_\+clock\+\_\+phase\+\_\+t}} \mbox{\hyperlink{structspi__aml__master__config__t_a8369385e8658ba5c7a74897397ce0a85}{clk\+Phase}}
+\item 
+\mbox{\hyperlink{group__enum__group_ga846bf859b73b0a584889013e680bdc5f}{spi\+\_\+aml\+\_\+clock\+\_\+polarity\+\_\+t}} \mbox{\hyperlink{structspi__aml__master__config__t_a732dd1442ee0b3aa8d353fcd9d84a99f}{clk\+Polarity}}
+\item 
+bool \mbox{\hyperlink{structspi__aml__master__config__t_af684ebd7127978006da4f66fd4b1bf9a}{lsb\+First}}
+\item 
+\mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}} \mbox{\hyperlink{structspi__aml__master__config__t_a5ab3ca2262578bfbad4d009e8c12d416}{pcs\+Polarity}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structspi__aml__master__config__t_a47e9c4d5c767c92424f3d50187d3514b}{source\+Clock\+Hz}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+ML S\+PI master parameters available for superior drivers (pointers). 
+
+These parameters are used in superior drivers (user selectable or needed by driver). Values from this structure are written to S\+DK specific configuration structures (original values are overwritten by these values) only if the pointer is not N\+U\+LL. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structspi__aml__master__config__t_a6d3034fecd72dea96793c13f8c6340cd}\label{structspi__aml__master__config__t_a6d3034fecd72dea96793c13f8c6340cd}} 
+\index{spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}!baudRateHz@{baudRateHz}}
+\index{baudRateHz@{baudRateHz}!spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}}
+\subsubsection{\texorpdfstring{baudRateHz}{baudRateHz}}
+{\footnotesize\ttfamily uint32\+\_\+t baud\+Rate\+Hz}
+
+Baudrate in Hz. \mbox{\Hypertarget{structspi__aml__master__config__t_afcc9f66e274f7e690549d5d216970d73}\label{structspi__aml__master__config__t_afcc9f66e274f7e690549d5d216970d73}} 
+\index{spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}!bitCount@{bitCount}}
+\index{bitCount@{bitCount}!spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}}
+\subsubsection{\texorpdfstring{bitCount}{bitCount}}
+{\footnotesize\ttfamily uint16\+\_\+t bit\+Count}
+
+Number of bits/frame, minimum is 8-\/bits. \mbox{\Hypertarget{structspi__aml__master__config__t_a8369385e8658ba5c7a74897397ce0a85}\label{structspi__aml__master__config__t_a8369385e8658ba5c7a74897397ce0a85}} 
+\index{spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}!clkPhase@{clkPhase}}
+\index{clkPhase@{clkPhase}!spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}}
+\subsubsection{\texorpdfstring{clkPhase}{clkPhase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__enum__group_gaa95bcc4aa184cc2df42df55e6d8c2d3a}{spi\+\_\+aml\+\_\+clock\+\_\+phase\+\_\+t}} clk\+Phase}
+
+Clock phase. \mbox{\Hypertarget{structspi__aml__master__config__t_a732dd1442ee0b3aa8d353fcd9d84a99f}\label{structspi__aml__master__config__t_a732dd1442ee0b3aa8d353fcd9d84a99f}} 
+\index{spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}!clkPolarity@{clkPolarity}}
+\index{clkPolarity@{clkPolarity}!spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}}
+\subsubsection{\texorpdfstring{clkPolarity}{clkPolarity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__enum__group_ga846bf859b73b0a584889013e680bdc5f}{spi\+\_\+aml\+\_\+clock\+\_\+polarity\+\_\+t}} clk\+Polarity}
+
+Clock polarity. \mbox{\Hypertarget{structspi__aml__master__config__t_af684ebd7127978006da4f66fd4b1bf9a}\label{structspi__aml__master__config__t_af684ebd7127978006da4f66fd4b1bf9a}} 
+\index{spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}!lsbFirst@{lsbFirst}}
+\index{lsbFirst@{lsbFirst}!spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}}
+\subsubsection{\texorpdfstring{lsbFirst}{lsbFirst}}
+{\footnotesize\ttfamily bool lsb\+First}
+
+true = L\+SB first, false = M\+SB first. \mbox{\Hypertarget{structspi__aml__master__config__t_a5ab3ca2262578bfbad4d009e8c12d416}\label{structspi__aml__master__config__t_a5ab3ca2262578bfbad4d009e8c12d416}} 
+\index{spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}!pcsPolarity@{pcsPolarity}}
+\index{pcsPolarity@{pcsPolarity}!spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}}
+\subsubsection{\texorpdfstring{pcsPolarity}{pcsPolarity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__enum__group_ga376ab165389ceb9a6e3f763263ff7e06}{spi\+\_\+aml\+\_\+pcs\+\_\+polarity\+\_\+t}} pcs\+Polarity}
+
+Active level of chip select pin (P\+CS). \mbox{\Hypertarget{structspi__aml__master__config__t_a47e9c4d5c767c92424f3d50187d3514b}\label{structspi__aml__master__config__t_a47e9c4d5c767c92424f3d50187d3514b}} 
+\index{spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}!sourceClockHz@{sourceClockHz}}
+\index{sourceClockHz@{sourceClockHz}!spi\_aml\_master\_config\_t@{spi\_aml\_master\_config\_t}}
+\subsubsection{\texorpdfstring{sourceClockHz}{sourceClockHz}}
+{\footnotesize\ttfamily uint32\+\_\+t source\+Clock\+Hz}
+
+Peripheral source clock frequency in Hz. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aml/spi\+\_\+aml/\mbox{\hyperlink{spi__aml_8h}{spi\+\_\+aml.\+h}}\end{DoxyCompactItemize}

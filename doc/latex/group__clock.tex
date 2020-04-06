@@ -1,0 +1,1361 @@
+\hypertarget{group__clock}{}\section{Clock}
+\label{group__clock}\index{Clock@{Clock}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{fsl__clock_8h}{fsl\+\_\+clock.\+h}}
+\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__sim__clock__config}{\+\_\+sim\+\_\+clock\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em S\+IM configuration structure for clock setting. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__oscer__config}{\+\_\+oscer\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em The O\+SC configuration for O\+S\+C\+E\+R\+C\+LK. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__osc__config}{\+\_\+osc\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em O\+SC Initialization Configuration Structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__mcglite__config}{\+\_\+mcglite\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em M\+C\+G\+\_\+\+Lite configure structure for mode change. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__clock_ga28b35d2fe49bfffe6e5e41fbdadfc6ed}{D\+M\+A\+M\+U\+X\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for D\+M\+A\+M\+UX. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_ga426bb38a06d4765b5a11c5513a583481}{R\+T\+C\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for R\+TC. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_gab3f24de813a146fd05809f0c969b1b16}{S\+A\+I\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for S\+AI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_ga2323a706e6e7796fa2e352a5b5a70f59}{S\+P\+I\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for S\+PI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_gac73fecf7d904351cc47b66f332299800}{S\+L\+C\+D\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for S\+L\+CD. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_ga59f69fda6fd2733de3bd37cb7c179129}{P\+I\+T\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for P\+IT. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_ga6365ac4acbb9de0497f74ca189595836}{P\+O\+R\+T\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for P\+O\+RT. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_ga730b16f643093a12a48361fd00382eb0}{L\+P\+U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for L\+P\+U\+A\+RT. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_gab3c8a974e25f615fe023579c847fae6c}{D\+A\+C\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for D\+AC. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_gab37faf7ae1a03862fd7e9b501e7e41ef}{L\+P\+T\+M\+R\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for L\+P\+T\+MR. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_ga222774f8b22a83bd1d4bde253be13eba}{A\+D\+C16\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for A\+D\+C16. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_gad3726b58af9ad0aa5b01a28f116957db}{F\+L\+E\+X\+I\+O\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for F\+L\+E\+X\+IO. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_gadada275d718274d382e3488eebb46d04}{V\+R\+E\+F\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for V\+R\+EF. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_ga5a8ba9cbce79bf443b2b1ba97d4c5475}{D\+M\+A\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for D\+MA. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_gae6c5e4d33e80e2bc367249c46377ee95}{U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for U\+A\+RT. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_ga2a494ed25b8cb9bd9c5a14f590ee8cb8}{T\+P\+M\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for T\+PM. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_gac0c74371f4f724c78ef233de79c3cf14}{I2\+C\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for I2C. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_ga7424481c4167462b8b5814485b967280}{F\+T\+F\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for F\+TF. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__clock_ga5f418050b0df19bdee898d90c504b8c7}{C\+M\+P\+\_\+\+C\+L\+O\+C\+KS}}
+\begin{DoxyCompactList}\small\item\em Clock ip name array for C\+MP. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_ga8f4a4e93b0c473d5f1c6bc8dad73acab}\label{group__clock_ga8f4a4e93b0c473d5f1c6bc8dad73acab}} 
+\#define \mbox{\hyperlink{group__clock_ga8f4a4e93b0c473d5f1c6bc8dad73acab}{L\+P\+O\+\_\+\+C\+L\+K\+\_\+\+F\+R\+EQ}}~1000U
+\begin{DoxyCompactList}\small\item\em L\+PO clock frequency. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_gab3a7892b9f9fbb5c3fc2cbdbceb10017}\label{group__clock_gab3a7892b9f9fbb5c3fc2cbdbceb10017}} 
+\#define \mbox{\hyperlink{group__clock_gab3a7892b9f9fbb5c3fc2cbdbceb10017}{S\+Y\+S\+\_\+\+C\+LK}}~\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a1de4a40f5399eb025d5faefda7491918}{k\+C\+L\+O\+C\+K\+\_\+\+Core\+Sys\+Clk}}
+\begin{DoxyCompactList}\small\item\em Peripherals clock source definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_ga9af5ea037cd73739ffb3f55f7dc54bfb}\label{group__clock_ga9af5ea037cd73739ffb3f55f7dc54bfb}} 
+\#define {\bfseries B\+U\+S\+\_\+\+C\+LK}~\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a5d1ee238337b6aa2486a42feabdd5133}{k\+C\+L\+O\+C\+K\+\_\+\+Bus\+Clk}}
+\item 
+\mbox{\Hypertarget{group__clock_gaaa74e814196658bc8204825c46d906a0}\label{group__clock_gaaa74e814196658bc8204825c46d906a0}} 
+\#define {\bfseries I2\+C0\+\_\+\+C\+L\+K\+\_\+\+S\+RC}~\mbox{\hyperlink{group__clock_gab3a7892b9f9fbb5c3fc2cbdbceb10017}{S\+Y\+S\+\_\+\+C\+LK}}
+\item 
+\mbox{\Hypertarget{group__clock_gab5d520b62b19008b7c26739d65cc43ff}\label{group__clock_gab5d520b62b19008b7c26739d65cc43ff}} 
+\#define {\bfseries I2\+C1\+\_\+\+C\+L\+K\+\_\+\+S\+RC}~\mbox{\hyperlink{group__clock_gab3a7892b9f9fbb5c3fc2cbdbceb10017}{S\+Y\+S\+\_\+\+C\+LK}}
+\item 
+\mbox{\Hypertarget{group__clock_gaf5de280813a7420b908c4bacfdc55e50}\label{group__clock_gaf5de280813a7420b908c4bacfdc55e50}} 
+\#define {\bfseries S\+P\+I0\+\_\+\+C\+L\+K\+\_\+\+S\+RC}~B\+U\+S\+\_\+\+C\+LK
+\item 
+\mbox{\Hypertarget{group__clock_gae3b89023fcca6f02502ff9f7f71b0481}\label{group__clock_gae3b89023fcca6f02502ff9f7f71b0481}} 
+\#define {\bfseries S\+P\+I1\+\_\+\+C\+L\+K\+\_\+\+S\+RC}~\mbox{\hyperlink{group__clock_gab3a7892b9f9fbb5c3fc2cbdbceb10017}{S\+Y\+S\+\_\+\+C\+LK}}
+\item 
+\mbox{\Hypertarget{group__clock_gad7256719ac13cc68aa8214817e5efd86}\label{group__clock_gad7256719ac13cc68aa8214817e5efd86}} 
+\#define {\bfseries U\+A\+R\+T2\+\_\+\+C\+L\+K\+\_\+\+S\+RC}~B\+U\+S\+\_\+\+C\+LK
+\item 
+\mbox{\Hypertarget{group__clock_ga652701d3273c1a73ba30aa5a0ed6358a}\label{group__clock_ga652701d3273c1a73ba30aa5a0ed6358a}} 
+\#define {\bfseries C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+R\+E\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+S\+H\+I\+FT}~16U
+\item 
+\mbox{\Hypertarget{group__clock_ga624081745b0bd1f5c3ec31b542a32aae}\label{group__clock_ga624081745b0bd1f5c3ec31b542a32aae}} 
+\#define {\bfseries C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+R\+E\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+M\+A\+SK}~0x\+F\+F\+F\+F0000U
+\item 
+\mbox{\Hypertarget{group__clock_gaf4e6bc96a2cb37ce4fdb4693b98c11bd}\label{group__clock_gaf4e6bc96a2cb37ce4fdb4693b98c11bd}} 
+\#define {\bfseries C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+B\+I\+T\+\_\+\+S\+H\+I\+F\+T\+\_\+\+S\+H\+I\+FT}~0U
+\item 
+\mbox{\Hypertarget{group__clock_ga4eac9e49fd14c82edbf420e980337a43}\label{group__clock_ga4eac9e49fd14c82edbf420e980337a43}} 
+\#define {\bfseries C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+B\+I\+T\+\_\+\+S\+H\+I\+F\+T\+\_\+\+M\+A\+SK}~0x0000\+F\+F\+F\+FU
+\item 
+\#define {\bfseries C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE}(reg\+\_\+offset,  bit\+\_\+shift)
+\item 
+\mbox{\Hypertarget{group__clock_ga373b3474ba7bd923f9846ff9260e4269}\label{group__clock_ga373b3474ba7bd923f9846ff9260e4269}} 
+\#define {\bfseries C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+R\+E\+G\+\_\+\+O\+F\+F\+S\+ET}(x)~(((x)\&C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+R\+E\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+M\+A\+SK) $>$$>$ C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+R\+E\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+S\+H\+I\+FT)
+\item 
+\mbox{\Hypertarget{group__clock_ga169a30aff4ee0cd13f09b71e7c46b538}\label{group__clock_ga169a30aff4ee0cd13f09b71e7c46b538}} 
+\#define {\bfseries C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+B\+I\+T\+S\+\_\+\+S\+H\+I\+FT}(x)~(((x)\&C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+B\+I\+T\+\_\+\+S\+H\+I\+F\+T\+\_\+\+M\+A\+SK) $>$$>$ C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+B\+I\+T\+\_\+\+S\+H\+I\+F\+T\+\_\+\+S\+H\+I\+FT)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__clock_gacb9ec0a8b3aa569692b550ebdcac7b3c}\label{group__clock_gacb9ec0a8b3aa569692b550ebdcac7b3c}} 
+typedef enum \mbox{\hyperlink{group__clock_ga10eb499a97d1bd20020841220bb5de74}{\+\_\+clock\+\_\+name}} \mbox{\hyperlink{group__clock_gacb9ec0a8b3aa569692b550ebdcac7b3c}{clock\+\_\+name\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Clock name used to get clock frequency. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_ga014128d824509a661c917ed0ed21149f}\label{group__clock_ga014128d824509a661c917ed0ed21149f}} 
+typedef enum \mbox{\hyperlink{group__clock_ga9ebbef69e6c5fd52879fa79b3e607cf2}{\+\_\+clock\+\_\+usb\+\_\+src}} \mbox{\hyperlink{group__clock_ga014128d824509a661c917ed0ed21149f}{clock\+\_\+usb\+\_\+src\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em U\+SB clock source definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_gaf3dd76fcb181c1abd9eff8ddfc4f1c13}\label{group__clock_gaf3dd76fcb181c1abd9eff8ddfc4f1c13}} 
+typedef enum \mbox{\hyperlink{group__clock_ga0d01cff2c331cdc2703b798930b1c9cd}{\+\_\+clock\+\_\+ip\+\_\+name}} \mbox{\hyperlink{group__clock_gaf3dd76fcb181c1abd9eff8ddfc4f1c13}{clock\+\_\+ip\+\_\+name\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Clock gate name used for C\+L\+O\+C\+K\+\_\+\+Enable\+Clock/\+C\+L\+O\+C\+K\+\_\+\+Disable\+Clock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_gad8383426c7f9ff4119a0b6c10de5281d}\label{group__clock_gad8383426c7f9ff4119a0b6c10de5281d}} 
+typedef struct \mbox{\hyperlink{struct__sim__clock__config}{\+\_\+sim\+\_\+clock\+\_\+config}} \mbox{\hyperlink{group__clock_gad8383426c7f9ff4119a0b6c10de5281d}{sim\+\_\+clock\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+IM configuration structure for clock setting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_ga3280fcfc08b1b4b0989197cc56239fb6}\label{group__clock_ga3280fcfc08b1b4b0989197cc56239fb6}} 
+typedef struct \mbox{\hyperlink{struct__oscer__config}{\+\_\+oscer\+\_\+config}} \mbox{\hyperlink{group__clock_ga3280fcfc08b1b4b0989197cc56239fb6}{oscer\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The O\+SC configuration for O\+S\+C\+E\+R\+C\+LK. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_ga86e25a9d93f6b00c118c7f8eda32d67b}\label{group__clock_ga86e25a9d93f6b00c118c7f8eda32d67b}} 
+typedef enum \mbox{\hyperlink{group__clock_ga12cda0e98e38fafaa3ebc980ce32605f}{\+\_\+osc\+\_\+mode}} \mbox{\hyperlink{group__clock_ga86e25a9d93f6b00c118c7f8eda32d67b}{osc\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The O\+SC work mode. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct__osc__config}{\+\_\+osc\+\_\+config}} \mbox{\hyperlink{group__clock_ga7b42afca82c7234da7c1ccd5fc4d984b}{osc\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em O\+SC Initialization Configuration Structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_ga102f26486150540dc286f6811c71d8ec}\label{group__clock_ga102f26486150540dc286f6811c71d8ec}} 
+typedef enum \mbox{\hyperlink{group__clock_ga368b350a921470dc046d2403ea2fedf3}{\+\_\+mcglite\+\_\+clkout\+\_\+src}} \mbox{\hyperlink{group__clock_ga102f26486150540dc286f6811c71d8ec}{mcglite\+\_\+clkout\+\_\+src\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em M\+C\+G\+\_\+\+Lite clock source selection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_gae34f40906c4c49aa0a4fdfb00b1cc260}\label{group__clock_gae34f40906c4c49aa0a4fdfb00b1cc260}} 
+typedef enum \mbox{\hyperlink{group__clock_gab91799aa690e0aca9897dbc4887c3945}{\+\_\+mcglite\+\_\+lirc\+\_\+mode}} \mbox{\hyperlink{group__clock_gae34f40906c4c49aa0a4fdfb00b1cc260}{mcglite\+\_\+lirc\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em M\+C\+G\+\_\+\+Lite L\+I\+RC select. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_gaca07fe4bde2c34163d52f6f8507368ba}\label{group__clock_gaca07fe4bde2c34163d52f6f8507368ba}} 
+typedef enum \mbox{\hyperlink{group__clock_ga55ed975b54e118a84549accb908bc08e}{\+\_\+mcglite\+\_\+lirc\+\_\+div}} \mbox{\hyperlink{group__clock_gaca07fe4bde2c34163d52f6f8507368ba}{mcglite\+\_\+lirc\+\_\+div\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em M\+C\+G\+\_\+\+Lite divider factor selection for clock source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_ga7ba2816f49b1b008daa37a55e34dc4a1}\label{group__clock_ga7ba2816f49b1b008daa37a55e34dc4a1}} 
+typedef enum \mbox{\hyperlink{group__clock_ga11d70560b1f08560bba4d6fbb649c6da}{\+\_\+mcglite\+\_\+mode}} \mbox{\hyperlink{group__clock_ga7ba2816f49b1b008daa37a55e34dc4a1}{mcglite\+\_\+mode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em M\+C\+G\+\_\+\+Lite clock mode definitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_gaabff5dfd46b7233a64d3f3e4b47d908d}\label{group__clock_gaabff5dfd46b7233a64d3f3e4b47d908d}} 
+typedef struct \mbox{\hyperlink{struct__mcglite__config}{\+\_\+mcglite\+\_\+config}} \mbox{\hyperlink{group__clock_gaabff5dfd46b7233a64d3f3e4b47d908d}{mcglite\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em M\+C\+G\+\_\+\+Lite configure structure for mode change. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__clock_ga10eb499a97d1bd20020841220bb5de74}{\+\_\+clock\+\_\+name}} \{ \newline
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a1de4a40f5399eb025d5faefda7491918}{k\+C\+L\+O\+C\+K\+\_\+\+Core\+Sys\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74aec41b6f35c7b4b85043cb2c37e3ca448}{k\+C\+L\+O\+C\+K\+\_\+\+Plat\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a5d1ee238337b6aa2486a42feabdd5133}{k\+C\+L\+O\+C\+K\+\_\+\+Bus\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a76c632e65460f08f3eaf913cf6e77d5b}{k\+C\+L\+O\+C\+K\+\_\+\+Flex\+Bus\+Clk}}, 
+\newline
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74ab57d3685ed48c8edcccf30940bcd4221}{k\+C\+L\+O\+C\+K\+\_\+\+Flash\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a85555fc9f4154336af66111e7b0f5fae}{k\+C\+L\+O\+C\+K\+\_\+\+Fast\+Periph\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74adaf2ccb0f121ff519833091139902c53}{k\+C\+L\+O\+C\+K\+\_\+\+Pll\+Fll\+Sel\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a94400aca9f0f0e9d3a43b906e3a17918}{k\+C\+L\+O\+C\+K\+\_\+\+Er32k\+Clk}}, 
+\newline
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a8e2da5897653f8a36ecc88a122bef6ec}{k\+C\+L\+O\+C\+K\+\_\+\+Osc0\+Er\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74afdb9e84512fe33b0f8199340a170abb8}{k\+C\+L\+O\+C\+K\+\_\+\+Osc1\+Er\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74adb36f3b651e2d40e9e034a5ff775bf9f}{k\+C\+L\+O\+C\+K\+\_\+\+Osc0\+Er\+Clk\+Undiv}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a1e58f36569a0cc12ba13ddc105a69ad9}{k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Fixed\+Freq\+Clk}}, 
+\newline
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74aeceae12afcfc026d314e9af175a0ef31}{k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Internal\+Ref\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74ad27cb3cdcf7cf3d1bfcd1580960ee9a4}{k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Fll\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a8125faf928b40f13dee71966dd0a77c2}{k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Pll0\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74aea90da9bfe47b3f46aed5662e8f34e93}{k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Pll1\+Clk}}, 
+\newline
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74aff9fe6cca9e80cfdab21efda80da8e8b}{k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Ext\+Pll\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74ad94ea13d2b1d9036d7d9e6303fc89c3a}{k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Periph\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a50c90dfd05fba07cff701a11c095f02a}{k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Irc48\+M\+Clk}}, 
+\mbox{\hyperlink{group__clock_gga10eb499a97d1bd20020841220bb5de74a6a5c0cc2424bbbf2b73d76f51c16d438}{k\+C\+L\+O\+C\+K\+\_\+\+Lpo\+Clk}}
+ \}
+\begin{DoxyCompactList}\small\item\em Clock name used to get clock frequency. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__clock_ga9ebbef69e6c5fd52879fa79b3e607cf2}{\+\_\+clock\+\_\+usb\+\_\+src}} \{ \mbox{\hyperlink{group__clock_gga9ebbef69e6c5fd52879fa79b3e607cf2a042fc9c8cd8072258e23166ed0353ae9}{k\+C\+L\+O\+C\+K\+\_\+\+Usb\+Src\+Irc48M}} = S\+I\+M\+\_\+\+S\+O\+P\+T2\+\_\+\+U\+S\+B\+S\+RC(1U), 
+\mbox{\hyperlink{group__clock_gga9ebbef69e6c5fd52879fa79b3e607cf2a4d65f0b3d0e477f16a84eecb6ad0d909}{k\+C\+L\+O\+C\+K\+\_\+\+Usb\+Src\+Ext}} = S\+I\+M\+\_\+\+S\+O\+P\+T2\+\_\+\+U\+S\+B\+S\+RC(0U)
+ \}
+\begin{DoxyCompactList}\small\item\em U\+SB clock source definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__clock_ga0d01cff2c331cdc2703b798930b1c9cd}\label{group__clock_ga0d01cff2c331cdc2703b798930b1c9cd}} 
+enum \mbox{\hyperlink{group__clock_ga0d01cff2c331cdc2703b798930b1c9cd}{\+\_\+clock\+\_\+ip\+\_\+name}} \{ \newline
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Ip\+Invalid} = 0U, 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+I2c0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1034U, 6U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+I2c1} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1034U, 7U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Uart2} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1034U, 12U), 
+\newline
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Usbfs0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1034U, 18U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Cmp0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1034U, 19U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Vref0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1034U, 20U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Spi0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1034U, 22U), 
+\newline
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Spi1} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1034U, 23U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Lptmr0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1038U, 0U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+PortA} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1038U, 9U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+PortB} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1038U, 10U), 
+\newline
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+PortC} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1038U, 11U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+PortD} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1038U, 12U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+PortE} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1038U, 13U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Slcd0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1038U, 19U), 
+\newline
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Lpuart0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1038U, 20U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Lpuart1} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1038U, 21U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Flexio0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1038U, 31U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Ftf0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x103\+CU, 0U), 
+\newline
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Dmamux0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x103\+CU, 1U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Sai0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x103\+CU, 15U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Pit0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x103\+CU, 23U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Tpm0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x103\+CU, 24U), 
+\newline
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Tpm1} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x103\+CU, 25U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Tpm2} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x103\+CU, 26U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Adc0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x103\+CU, 27U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Rtc0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x103\+CU, 29U), 
+\newline
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Dac0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x103\+CU, 31U), 
+{\bfseries k\+C\+L\+O\+C\+K\+\_\+\+Dma0} = C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(0x1040U, 8U)
+ \}
+\begin{DoxyCompactList}\small\item\em Clock gate name used for C\+L\+O\+C\+K\+\_\+\+Enable\+Clock/\+C\+L\+O\+C\+K\+\_\+\+Disable\+Clock. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__clock_gac4d0d3c8c2e6469cde54645a5b66a5b8}{\+\_\+osc\+\_\+cap\+\_\+load}} \{ \mbox{\hyperlink{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8a77a5d0f7cafaccf2f40945bc0980780d}{k\+O\+S\+C\+\_\+\+Cap2P}} = O\+S\+C\+\_\+\+C\+R\+\_\+\+S\+C2\+P\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8a34f7cc6a958e0cd30cd2296393206e2e}{k\+O\+S\+C\+\_\+\+Cap4P}} = O\+S\+C\+\_\+\+C\+R\+\_\+\+S\+C4\+P\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8af2ef9a39bf5174098c60f141c7173d63}{k\+O\+S\+C\+\_\+\+Cap8P}} = O\+S\+C\+\_\+\+C\+R\+\_\+\+S\+C8\+P\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8adfec06bedd2598e3a2dcc5ba43ea23a9}{k\+O\+S\+C\+\_\+\+Cap16P}} = O\+S\+C\+\_\+\+C\+R\+\_\+\+S\+C16\+P\+\_\+\+M\+A\+SK
+ \}
+\begin{DoxyCompactList}\small\item\em Oscillator capacitor load setting. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__clock_ga4d273c4ee3cf6ad651bc9aacc48bc87f}{\+\_\+oscer\+\_\+enable\+\_\+mode}} \{ \mbox{\hyperlink{group__clock_gga4d273c4ee3cf6ad651bc9aacc48bc87fa3a8d4dec0d80100e2f69db38357970da}{k\+O\+S\+C\+\_\+\+Er\+Clk\+Enable}} = O\+S\+C\+\_\+\+C\+R\+\_\+\+E\+R\+C\+L\+K\+E\+N\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__clock_gga4d273c4ee3cf6ad651bc9aacc48bc87fabc175ffcf6cbcade0f10376b168d4fd9}{k\+O\+S\+C\+\_\+\+Er\+Clk\+Enable\+In\+Stop}} = O\+S\+C\+\_\+\+C\+R\+\_\+\+E\+R\+E\+F\+S\+T\+E\+N\+\_\+\+M\+A\+SK
+ \}
+\begin{DoxyCompactList}\small\item\em O\+S\+C\+E\+R\+C\+LK enable mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__clock_ga12cda0e98e38fafaa3ebc980ce32605f}{\+\_\+osc\+\_\+mode}} \{ \mbox{\hyperlink{group__clock_gga12cda0e98e38fafaa3ebc980ce32605fa40da5141b08af28fd3ed71d0c061a664}{k\+O\+S\+C\+\_\+\+Mode\+Ext}} = 0U, 
+\mbox{\hyperlink{group__clock_gga12cda0e98e38fafaa3ebc980ce32605fa4412c07d6d2fd83dfa4c788f5bd72f18}{k\+O\+S\+C\+\_\+\+Mode\+Osc\+Low\+Power}} = M\+C\+G\+\_\+\+C2\+\_\+\+E\+R\+E\+F\+S0\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__clock_gga12cda0e98e38fafaa3ebc980ce32605fa44206e2acfed4fd6f9764047d9f469ae}{k\+O\+S\+C\+\_\+\+Mode\+Osc\+High\+Gain}} = M\+C\+G\+\_\+\+C2\+\_\+\+E\+R\+E\+F\+S0\+\_\+\+M\+A\+SK $\vert$ M\+C\+G\+\_\+\+C2\+\_\+\+H\+G\+O0\+\_\+\+M\+A\+SK
+ \}
+\begin{DoxyCompactList}\small\item\em The O\+SC work mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__clock_ga368b350a921470dc046d2403ea2fedf3}{\+\_\+mcglite\+\_\+clkout\+\_\+src}} \{ \mbox{\hyperlink{group__clock_gga368b350a921470dc046d2403ea2fedf3a79240e49c2ea1826752b6777c06f707c}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Clk\+Src\+Hirc}}, 
+\mbox{\hyperlink{group__clock_gga368b350a921470dc046d2403ea2fedf3affff7325f43a6a775263204658c02f0a}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Clk\+Src\+Lirc}}, 
+\mbox{\hyperlink{group__clock_gga368b350a921470dc046d2403ea2fedf3af2a61e2318656501eb9921d625a3fc68}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Clk\+Src\+Ext}}, 
+{\bfseries k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Clk\+Src\+Reserved}
+ \}
+\begin{DoxyCompactList}\small\item\em M\+C\+G\+\_\+\+Lite clock source selection. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__clock_gab91799aa690e0aca9897dbc4887c3945}{\+\_\+mcglite\+\_\+lirc\+\_\+mode}} \{ \mbox{\hyperlink{group__clock_ggab91799aa690e0aca9897dbc4887c3945aecc45f9cd9d72b7cb5372bc28d59d813}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc2M}}, 
+\mbox{\hyperlink{group__clock_ggab91799aa690e0aca9897dbc4887c3945a1db861733d215202c2759ca36c2d9a1d}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc8M}}
+ \}
+\begin{DoxyCompactList}\small\item\em M\+C\+G\+\_\+\+Lite L\+I\+RC select. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__clock_ga55ed975b54e118a84549accb908bc08e}{\+\_\+mcglite\+\_\+lirc\+\_\+div}} \{ \newline
+\mbox{\hyperlink{group__clock_gga55ed975b54e118a84549accb908bc08eacef53cb12c657462c3b5d7ac4db679cb}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By1}} = 0U, 
+\mbox{\hyperlink{group__clock_gga55ed975b54e118a84549accb908bc08ea01448b91468483d8e0ccf808eb7ccb3b}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By2}}, 
+\mbox{\hyperlink{group__clock_gga55ed975b54e118a84549accb908bc08ea9d2d255a16e8f829f95285bb45ed8058}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By4}}, 
+\mbox{\hyperlink{group__clock_gga55ed975b54e118a84549accb908bc08ea5fc42cf14af45a7adb18119157ddb489}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By8}}, 
+\newline
+\mbox{\hyperlink{group__clock_gga55ed975b54e118a84549accb908bc08eabc76e43c4cc07f81dc2e4f0a389f09ad}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By16}}, 
+\mbox{\hyperlink{group__clock_gga55ed975b54e118a84549accb908bc08ea42fd852fde6cce2171fad31bd5c4cbe0}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By32}}, 
+\mbox{\hyperlink{group__clock_gga55ed975b54e118a84549accb908bc08ea473606a0da1b7cb3999c477a0cddf6cf}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By64}}, 
+\mbox{\hyperlink{group__clock_gga55ed975b54e118a84549accb908bc08ea4faa9293eda252f70c4cfc09f7b882a0}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By128}}
+ \}
+\begin{DoxyCompactList}\small\item\em M\+C\+G\+\_\+\+Lite divider factor selection for clock source. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__clock_ga11d70560b1f08560bba4d6fbb649c6da}{\+\_\+mcglite\+\_\+mode}} \{ \newline
+\mbox{\hyperlink{group__clock_gga11d70560b1f08560bba4d6fbb649c6daa348c98876dd990d815e1ba7eae0899ef}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Mode\+Hirc48M}}, 
+\mbox{\hyperlink{group__clock_gga11d70560b1f08560bba4d6fbb649c6daa9594c4d0c6f3229e5e22fecc83c0f941}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Mode\+Lirc8M}}, 
+\mbox{\hyperlink{group__clock_gga11d70560b1f08560bba4d6fbb649c6daac9733e0b48d213c86db6aa62bf6ee66d}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Mode\+Lirc2M}}, 
+\mbox{\hyperlink{group__clock_gga11d70560b1f08560bba4d6fbb649c6daadec2939b0e99ad5c0a1ff038549fcf03}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Mode\+Ext}}, 
+\newline
+\mbox{\hyperlink{group__clock_gga11d70560b1f08560bba4d6fbb649c6daa012013c127624ed025eccaae2f5d5017}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Mode\+Error}}
+ \}
+\begin{DoxyCompactList}\small\item\em M\+C\+G\+\_\+\+Lite clock mode definitions. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__clock_ga817219a8cfca42e5c97527e31c2bbb8e}{\+\_\+mcglite\+\_\+irclk\+\_\+enable\+\_\+mode}} \{ \mbox{\hyperlink{group__clock_gga817219a8cfca42e5c97527e31c2bbb8ea89bdc2434853e5cd63668ab75ed39ce6}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Irclk\+Enable}} = M\+C\+G\+\_\+\+C1\+\_\+\+I\+R\+C\+L\+K\+E\+N\+\_\+\+M\+A\+SK, 
+\mbox{\hyperlink{group__clock_gga817219a8cfca42e5c97527e31c2bbb8eadd9065cb71f08eacdd5153f95360af55}{k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Irclk\+Enable\+In\+Stop}} = M\+C\+G\+\_\+\+C1\+\_\+\+I\+R\+E\+F\+S\+T\+E\+N\+\_\+\+M\+A\+SK
+ \}
+\begin{DoxyCompactList}\small\item\em M\+CG internal reference clock (M\+C\+G\+I\+R\+C\+LK) enable mode definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__clock_ga2539fd76663a0ae15aec84b23489a070}{C\+L\+O\+C\+K\+\_\+\+Enable\+Usbfs0\+Clock}} (\mbox{\hyperlink{group__clock_ga014128d824509a661c917ed0ed21149f}{clock\+\_\+usb\+\_\+src\+\_\+t}} src, uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em Enable U\+SB FS clock. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__clock_ga53acae220d651789bb505c53c73ecf2b}{C\+L\+O\+C\+K\+\_\+\+Get\+Freq}} (\mbox{\hyperlink{group__clock_gacb9ec0a8b3aa569692b550ebdcac7b3c}{clock\+\_\+name\+\_\+t}} clock\+Name)
+\begin{DoxyCompactList}\small\item\em Gets the clock frequency for a specific clock name. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__clock_ga3360f4c91fde2fed784359caf34aefd2}{C\+L\+O\+C\+K\+\_\+\+Get\+Core\+Sys\+Clk\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Get the core clock or system clock frequency. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__clock_gad6813b4059e476de162947021939d8dc}{C\+L\+O\+C\+K\+\_\+\+Get\+Plat\+Clk\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Get the platform clock frequency. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__clock_ga9da592c7723873abbfa51a62cbbff03d}{C\+L\+O\+C\+K\+\_\+\+Get\+Bus\+Clk\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Get the bus clock frequency. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__clock_gaa64c5e2ea6e2be57582e9868b67ce7ee}{C\+L\+O\+C\+K\+\_\+\+Get\+Flash\+Clk\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Get the flash clock frequency. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__clock_ga37466efe335f7268cee76c7d01fd52f5}{C\+L\+O\+C\+K\+\_\+\+Get\+Er32k\+Clk\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Get the external reference 32K clock frequency (E\+R\+C\+L\+K32K). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__clock_gaebc45953dc5ae83b02ced8a14e8857b9}{C\+L\+O\+C\+K\+\_\+\+Get\+Osc0\+Er\+Clk\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Get the O\+S\+C0 external reference clock frequency (O\+S\+C0\+E\+R\+C\+LK). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__clock_gaf72980630bd050338cffd07f7d3b4944}{C\+L\+O\+C\+K\+\_\+\+Set\+Sim\+Config}} (\mbox{\hyperlink{group__clock_gad8383426c7f9ff4119a0b6c10de5281d}{sim\+\_\+clock\+\_\+config\+\_\+t}} const $\ast$config)
+\begin{DoxyCompactList}\small\item\em Set the clock configure in S\+IM module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__clock_gaf9804be766685e8ffd3221461bf00d1b}{S\+D\+K\+\_\+\+Delay\+At\+Least\+Us}} (uint32\+\_\+t delay\+\_\+us)
+\begin{DoxyCompactList}\small\item\em Delay at least for several microseconds. Please note that, this A\+PI will calculate the microsecond period with the maximum supported C\+PU frequency, so this A\+PI will only delay for at least the given microseconds, if precise delay count was needed, please implement a new timer count to achieve this function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{group__clock_ga70a4a6ffb6c5a7a271aad89fe482bafc}{g\+\_\+xtal0\+Freq}}
+\begin{DoxyCompactList}\small\item\em External X\+T\+A\+L0 (O\+S\+C0) clock frequency. \end{DoxyCompactList}\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{group__clock_ga170d2fd7c6b439b72e0f73b4d73443af}{g\+\_\+xtal32\+Freq}}
+\begin{DoxyCompactList}\small\item\em The external X\+T\+A\+L32/\+E\+X\+T\+A\+L32/\+R\+T\+C\+\_\+\+C\+L\+K\+IN clock frequency. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Driver version}
+\label{_amgrp4997ed747fd8b1394cd55bb561638330}%
+Configure whether driver controls clock
+
+When set to 0, peripheral drivers will enable clock in initialize function and disable clock in de-\/initialize function. When set to 1, peripheral driver will not control the clock, application could control the clock out of the driver.
+
+\begin{DoxyNote}{Note}
+All drivers share this feature switcher. If it is set to 1, application should handle clock enable and disable for all drivers. 
+\end{DoxyNote}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__clock_ga0c0cf401613f31feb4a9eb723ad51154}\label{group__clock_ga0c0cf401613f31feb4a9eb723ad51154}} 
+\#define \mbox{\hyperlink{group__clock_ga0c0cf401613f31feb4a9eb723ad51154}{F\+S\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(\mbox{\hyperlink{group__ftfx__utilities_ga812138aa3315b0c6953c1a26130bcc37}{M\+A\+K\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}(2, 2, 0))
+\begin{DoxyCompactList}\small\item\em C\+L\+O\+CK driver version 2.\+2.\+0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{M\+C\+G\+\_\+\+Lite clock frequency}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__clock_gad9df7f4196258f0a9037088784a19380}{C\+L\+O\+C\+K\+\_\+\+Get\+Out\+Clk\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the M\+C\+G\+\_\+\+Lite output clock (M\+C\+G\+O\+U\+T\+C\+LK) frequency. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__clock_ga352c4e1fcb54bc5656df3299e154a736}{C\+L\+O\+C\+K\+\_\+\+Get\+Internal\+Ref\+Clk\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the M\+CG internal reference clock (M\+C\+G\+I\+R\+C\+LK) frequency. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__clock_gacee790e56c954e537658600aca0b9481}{C\+L\+O\+C\+K\+\_\+\+Get\+Periph\+Clk\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the current M\+C\+G\+P\+C\+LK frequency. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{M\+C\+G\+\_\+\+Lite mode.}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__clock_ga7ba2816f49b1b008daa37a55e34dc4a1}{mcglite\+\_\+mode\+\_\+t}} \mbox{\hyperlink{group__clock_gac486df712cf93a890c084c14956dd750}{C\+L\+O\+C\+K\+\_\+\+Get\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the current M\+C\+G\+\_\+\+Lite mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__clock_ga5e63d4acf979a66bf5b332ca27b9d1cc}{C\+L\+O\+C\+K\+\_\+\+Set\+Mcglite\+Config}} (\mbox{\hyperlink{group__clock_gaabff5dfd46b7233a64d3f3e4b47d908d}{mcglite\+\_\+config\+\_\+t}} const $\ast$target\+Config)
+\begin{DoxyCompactList}\small\item\em Sets the M\+C\+G\+\_\+\+Lite configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{O\+SC configuration}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__clock_ga7fd566b301526150b4e2be076006029f}{C\+L\+O\+C\+K\+\_\+\+Init\+Osc0}} (\mbox{\hyperlink{group__clock_ga7b42afca82c7234da7c1ccd5fc4d984b}{osc\+\_\+config\+\_\+t}} const $\ast$config)
+\begin{DoxyCompactList}\small\item\em Initializes the O\+S\+C0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__clock_ga559f868eef1e9d1e37450a57ce4902af}{C\+L\+O\+C\+K\+\_\+\+Deinit\+Osc0}} (void)
+\begin{DoxyCompactList}\small\item\em Deinitializes the O\+S\+C0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__clock_ga222774f8b22a83bd1d4bde253be13eba}\label{group__clock_ga222774f8b22a83bd1d4bde253be13eba}} 
+\index{Clock@{Clock}!ADC16\_CLOCKS@{ADC16\_CLOCKS}}
+\index{ADC16\_CLOCKS@{ADC16\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{ADC16\_CLOCKS}{ADC16\_CLOCKS}}
+{\footnotesize\ttfamily \#define A\+D\+C16\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Adc0  \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for A\+D\+C16. 
+
+\mbox{\Hypertarget{group__clock_gac108b230c92fbd7f943cd02d31e908bc}\label{group__clock_gac108b230c92fbd7f943cd02d31e908bc}} 
+\index{Clock@{Clock}!CLK\_GATE\_DEFINE@{CLK\_GATE\_DEFINE}}
+\index{CLK\_GATE\_DEFINE@{CLK\_GATE\_DEFINE}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLK\_GATE\_DEFINE}{CLK\_GATE\_DEFINE}}
+{\footnotesize\ttfamily \#define C\+L\+K\+\_\+\+G\+A\+T\+E\+\_\+\+D\+E\+F\+I\+NE(\begin{DoxyParamCaption}\item[{}]{reg\+\_\+offset,  }\item[{}]{bit\+\_\+shift }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((((reg\_offset) << CLK\_GATE\_REG\_OFFSET\_SHIFT) \& CLK\_GATE\_REG\_OFFSET\_MASK) | \(\backslash\)}
+\DoxyCodeLine{     (((bit\_shift) << CLK\_GATE\_BIT\_SHIFT\_SHIFT) \& CLK\_GATE\_BIT\_SHIFT\_MASK))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__clock_ga5f418050b0df19bdee898d90c504b8c7}\label{group__clock_ga5f418050b0df19bdee898d90c504b8c7}} 
+\index{Clock@{Clock}!CMP\_CLOCKS@{CMP\_CLOCKS}}
+\index{CMP\_CLOCKS@{CMP\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CMP\_CLOCKS}{CMP\_CLOCKS}}
+{\footnotesize\ttfamily \#define C\+M\+P\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{               \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Cmp0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for C\+MP. 
+
+\mbox{\Hypertarget{group__clock_gab3c8a974e25f615fe023579c847fae6c}\label{group__clock_gab3c8a974e25f615fe023579c847fae6c}} 
+\index{Clock@{Clock}!DAC\_CLOCKS@{DAC\_CLOCKS}}
+\index{DAC\_CLOCKS@{DAC\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{DAC\_CLOCKS}{DAC\_CLOCKS}}
+{\footnotesize\ttfamily \#define D\+A\+C\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{               \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Dac0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for D\+AC. 
+
+\mbox{\Hypertarget{group__clock_ga5a8ba9cbce79bf443b2b1ba97d4c5475}\label{group__clock_ga5a8ba9cbce79bf443b2b1ba97d4c5475}} 
+\index{Clock@{Clock}!DMA\_CLOCKS@{DMA\_CLOCKS}}
+\index{DMA\_CLOCKS@{DMA\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{DMA\_CLOCKS}{DMA\_CLOCKS}}
+{\footnotesize\ttfamily \#define D\+M\+A\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{               \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Dma0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for D\+MA. 
+
+\mbox{\Hypertarget{group__clock_ga28b35d2fe49bfffe6e5e41fbdadfc6ed}\label{group__clock_ga28b35d2fe49bfffe6e5e41fbdadfc6ed}} 
+\index{Clock@{Clock}!DMAMUX\_CLOCKS@{DMAMUX\_CLOCKS}}
+\index{DMAMUX\_CLOCKS@{DMAMUX\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{DMAMUX\_CLOCKS}{DMAMUX\_CLOCKS}}
+{\footnotesize\ttfamily \#define D\+M\+A\+M\+U\+X\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                  \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Dmamux0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for D\+M\+A\+M\+UX. 
+
+\mbox{\Hypertarget{group__clock_gad3726b58af9ad0aa5b01a28f116957db}\label{group__clock_gad3726b58af9ad0aa5b01a28f116957db}} 
+\index{Clock@{Clock}!FLEXIO\_CLOCKS@{FLEXIO\_CLOCKS}}
+\index{FLEXIO\_CLOCKS@{FLEXIO\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{FLEXIO\_CLOCKS}{FLEXIO\_CLOCKS}}
+{\footnotesize\ttfamily \#define F\+L\+E\+X\+I\+O\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                  \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Flexio0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for F\+L\+E\+X\+IO. 
+
+\mbox{\Hypertarget{group__clock_ga7424481c4167462b8b5814485b967280}\label{group__clock_ga7424481c4167462b8b5814485b967280}} 
+\index{Clock@{Clock}!FTF\_CLOCKS@{FTF\_CLOCKS}}
+\index{FTF\_CLOCKS@{FTF\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{FTF\_CLOCKS}{FTF\_CLOCKS}}
+{\footnotesize\ttfamily \#define F\+T\+F\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{               \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Ftf0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for F\+TF. 
+
+\mbox{\Hypertarget{group__clock_gac0c74371f4f724c78ef233de79c3cf14}\label{group__clock_gac0c74371f4f724c78ef233de79c3cf14}} 
+\index{Clock@{Clock}!I2C\_CLOCKS@{I2C\_CLOCKS}}
+\index{I2C\_CLOCKS@{I2C\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{I2C\_CLOCKS}{I2C\_CLOCKS}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                            \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_I2c0, kCLOCK\_I2c1 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for I2C. 
+
+\mbox{\Hypertarget{group__clock_gab37faf7ae1a03862fd7e9b501e7e41ef}\label{group__clock_gab37faf7ae1a03862fd7e9b501e7e41ef}} 
+\index{Clock@{Clock}!LPTMR\_CLOCKS@{LPTMR\_CLOCKS}}
+\index{LPTMR\_CLOCKS@{LPTMR\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{LPTMR\_CLOCKS}{LPTMR\_CLOCKS}}
+{\footnotesize\ttfamily \#define L\+P\+T\+M\+R\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                 \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Lptmr0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for L\+P\+T\+MR. 
+
+\mbox{\Hypertarget{group__clock_ga730b16f643093a12a48361fd00382eb0}\label{group__clock_ga730b16f643093a12a48361fd00382eb0}} 
+\index{Clock@{Clock}!LPUART\_CLOCKS@{LPUART\_CLOCKS}}
+\index{LPUART\_CLOCKS@{LPUART\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{LPUART\_CLOCKS}{LPUART\_CLOCKS}}
+{\footnotesize\ttfamily \#define L\+P\+U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                                  \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Lpuart0, kCLOCK\_Lpuart1 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for L\+P\+U\+A\+RT. 
+
+\mbox{\Hypertarget{group__clock_ga59f69fda6fd2733de3bd37cb7c179129}\label{group__clock_ga59f69fda6fd2733de3bd37cb7c179129}} 
+\index{Clock@{Clock}!PIT\_CLOCKS@{PIT\_CLOCKS}}
+\index{PIT\_CLOCKS@{PIT\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{PIT\_CLOCKS}{PIT\_CLOCKS}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{               \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Pit0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for P\+IT. 
+
+\mbox{\Hypertarget{group__clock_ga6365ac4acbb9de0497f74ca189595836}\label{group__clock_ga6365ac4acbb9de0497f74ca189595836}} 
+\index{Clock@{Clock}!PORT\_CLOCKS@{PORT\_CLOCKS}}
+\index{PORT\_CLOCKS@{PORT\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{PORT\_CLOCKS}{PORT\_CLOCKS}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                                                                        \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_PortA, kCLOCK\_PortB, kCLOCK\_PortC, kCLOCK\_PortD, kCLOCK\_PortE \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for P\+O\+RT. 
+
+\mbox{\Hypertarget{group__clock_ga426bb38a06d4765b5a11c5513a583481}\label{group__clock_ga426bb38a06d4765b5a11c5513a583481}} 
+\index{Clock@{Clock}!RTC\_CLOCKS@{RTC\_CLOCKS}}
+\index{RTC\_CLOCKS@{RTC\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{RTC\_CLOCKS}{RTC\_CLOCKS}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{               \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Rtc0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for R\+TC. 
+
+\mbox{\Hypertarget{group__clock_gab3f24de813a146fd05809f0c969b1b16}\label{group__clock_gab3f24de813a146fd05809f0c969b1b16}} 
+\index{Clock@{Clock}!SAI\_CLOCKS@{SAI\_CLOCKS}}
+\index{SAI\_CLOCKS@{SAI\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{SAI\_CLOCKS}{SAI\_CLOCKS}}
+{\footnotesize\ttfamily \#define S\+A\+I\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{               \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Sai0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for S\+AI. 
+
+\mbox{\Hypertarget{group__clock_gac73fecf7d904351cc47b66f332299800}\label{group__clock_gac73fecf7d904351cc47b66f332299800}} 
+\index{Clock@{Clock}!SLCD\_CLOCKS@{SLCD\_CLOCKS}}
+\index{SLCD\_CLOCKS@{SLCD\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{SLCD\_CLOCKS}{SLCD\_CLOCKS}}
+{\footnotesize\ttfamily \#define S\+L\+C\+D\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Slcd0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for S\+L\+CD. 
+
+\mbox{\Hypertarget{group__clock_ga2323a706e6e7796fa2e352a5b5a70f59}\label{group__clock_ga2323a706e6e7796fa2e352a5b5a70f59}} 
+\index{Clock@{Clock}!SPI\_CLOCKS@{SPI\_CLOCKS}}
+\index{SPI\_CLOCKS@{SPI\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{SPI\_CLOCKS}{SPI\_CLOCKS}}
+{\footnotesize\ttfamily \#define S\+P\+I\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                            \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Spi0, kCLOCK\_Spi1 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for S\+PI. 
+
+\mbox{\Hypertarget{group__clock_ga2a494ed25b8cb9bd9c5a14f590ee8cb8}\label{group__clock_ga2a494ed25b8cb9bd9c5a14f590ee8cb8}} 
+\index{Clock@{Clock}!TPM\_CLOCKS@{TPM\_CLOCKS}}
+\index{TPM\_CLOCKS@{TPM\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{TPM\_CLOCKS}{TPM\_CLOCKS}}
+{\footnotesize\ttfamily \#define T\+P\+M\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                                         \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Tpm0, kCLOCK\_Tpm1, kCLOCK\_Tpm2 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for T\+PM. 
+
+\mbox{\Hypertarget{group__clock_gae6c5e4d33e80e2bc367249c46377ee95}\label{group__clock_gae6c5e4d33e80e2bc367249c46377ee95}} 
+\index{Clock@{Clock}!UART\_CLOCKS@{UART\_CLOCKS}}
+\index{UART\_CLOCKS@{UART\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{UART\_CLOCKS}{UART\_CLOCKS}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                                                    \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_IpInvalid, kCLOCK\_IpInvalid, kCLOCK\_Uart2 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for U\+A\+RT. 
+
+\mbox{\Hypertarget{group__clock_gadada275d718274d382e3488eebb46d04}\label{group__clock_gadada275d718274d382e3488eebb46d04}} 
+\index{Clock@{Clock}!VREF\_CLOCKS@{VREF\_CLOCKS}}
+\index{VREF\_CLOCKS@{VREF\_CLOCKS}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{VREF\_CLOCKS}{VREF\_CLOCKS}}
+{\footnotesize\ttfamily \#define V\+R\+E\+F\+\_\+\+C\+L\+O\+C\+KS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                \(\backslash\)}
+\DoxyCodeLine{        kCLOCK\_Vref0 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Clock ip name array for V\+R\+EF. 
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__clock_ga7b42afca82c7234da7c1ccd5fc4d984b}\label{group__clock_ga7b42afca82c7234da7c1ccd5fc4d984b}} 
+\index{Clock@{Clock}!osc\_config\_t@{osc\_config\_t}}
+\index{osc\_config\_t@{osc\_config\_t}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{osc\_config\_t}{osc\_config\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__osc__config}{\+\_\+osc\+\_\+config}}  \mbox{\hyperlink{group__clock_ga7b42afca82c7234da7c1ccd5fc4d984b}{osc\+\_\+config\+\_\+t}}}
+
+
+
+O\+SC Initialization Configuration Structure. 
+
+Defines the configuration data structure to initialize the O\+SC. When porting to a new board, set the following members according to the board settings\+:
+\begin{DoxyEnumerate}
+\item freq\+: The external frequency.
+\item work\+Mode\+: The O\+SC module mode. 
+\end{DoxyEnumerate}
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__clock_ga10eb499a97d1bd20020841220bb5de74}\label{group__clock_ga10eb499a97d1bd20020841220bb5de74}} 
+\index{Clock@{Clock}!\_clock\_name@{\_clock\_name}}
+\index{\_clock\_name@{\_clock\_name}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{\_clock\_name}{\_clock\_name}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__clock_ga10eb499a97d1bd20020841220bb5de74}{\+\_\+clock\+\_\+name}}}
+
+
+
+Clock name used to get clock frequency. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_CoreSysClk@{kCLOCK\_CoreSysClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_CoreSysClk@{kCLOCK\_CoreSysClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74a1de4a40f5399eb025d5faefda7491918}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74a1de4a40f5399eb025d5faefda7491918}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Core\+Sys\+Clk&Core/system clock \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_PlatClk@{kCLOCK\_PlatClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_PlatClk@{kCLOCK\_PlatClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74aec41b6f35c7b4b85043cb2c37e3ca448}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74aec41b6f35c7b4b85043cb2c37e3ca448}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Plat\+Clk&Platform clock \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_BusClk@{kCLOCK\_BusClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_BusClk@{kCLOCK\_BusClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74a5d1ee238337b6aa2486a42feabdd5133}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74a5d1ee238337b6aa2486a42feabdd5133}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Bus\+Clk&Bus clock \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_FlexBusClk@{kCLOCK\_FlexBusClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_FlexBusClk@{kCLOCK\_FlexBusClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74a76c632e65460f08f3eaf913cf6e77d5b}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74a76c632e65460f08f3eaf913cf6e77d5b}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Flex\+Bus\+Clk&Flex\+Bus clock \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_FlashClk@{kCLOCK\_FlashClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_FlashClk@{kCLOCK\_FlashClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74ab57d3685ed48c8edcccf30940bcd4221}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74ab57d3685ed48c8edcccf30940bcd4221}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Flash\+Clk&Flash clock \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_FastPeriphClk@{kCLOCK\_FastPeriphClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_FastPeriphClk@{kCLOCK\_FastPeriphClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74a85555fc9f4154336af66111e7b0f5fae}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74a85555fc9f4154336af66111e7b0f5fae}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Fast\+Periph\+Clk&Fast peripheral clock \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_PllFllSelClk@{kCLOCK\_PllFllSelClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_PllFllSelClk@{kCLOCK\_PllFllSelClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74adaf2ccb0f121ff519833091139902c53}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74adaf2ccb0f121ff519833091139902c53}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Pll\+Fll\+Sel\+Clk&The clock after S\+IM\mbox{[}P\+L\+L\+F\+L\+L\+S\+EL\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_Er32kClk@{kCLOCK\_Er32kClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_Er32kClk@{kCLOCK\_Er32kClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74a94400aca9f0f0e9d3a43b906e3a17918}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74a94400aca9f0f0e9d3a43b906e3a17918}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Er32k\+Clk&External reference 32K clock (E\+R\+C\+L\+K32K) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_Osc0ErClk@{kCLOCK\_Osc0ErClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_Osc0ErClk@{kCLOCK\_Osc0ErClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74a8e2da5897653f8a36ecc88a122bef6ec}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74a8e2da5897653f8a36ecc88a122bef6ec}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Osc0\+Er\+Clk&O\+S\+C0 external reference clock (O\+S\+C0\+E\+R\+C\+LK) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_Osc1ErClk@{kCLOCK\_Osc1ErClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_Osc1ErClk@{kCLOCK\_Osc1ErClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74afdb9e84512fe33b0f8199340a170abb8}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74afdb9e84512fe33b0f8199340a170abb8}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Osc1\+Er\+Clk&O\+S\+C1 external reference clock (O\+S\+C1\+E\+R\+C\+LK) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_Osc0ErClkUndiv@{kCLOCK\_Osc0ErClkUndiv}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_Osc0ErClkUndiv@{kCLOCK\_Osc0ErClkUndiv}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74adb36f3b651e2d40e9e034a5ff775bf9f}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74adb36f3b651e2d40e9e034a5ff775bf9f}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Osc0\+Er\+Clk\+Undiv&O\+S\+C0 external reference undivided clock(\+O\+S\+C0\+E\+R\+C\+L\+K\+\_\+\+U\+N\+D\+I\+V). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_McgFixedFreqClk@{kCLOCK\_McgFixedFreqClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_McgFixedFreqClk@{kCLOCK\_McgFixedFreqClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74a1e58f36569a0cc12ba13ddc105a69ad9}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74a1e58f36569a0cc12ba13ddc105a69ad9}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Fixed\+Freq\+Clk&M\+CG fixed frequency clock (M\+C\+G\+F\+F\+C\+LK) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_McgInternalRefClk@{kCLOCK\_McgInternalRefClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_McgInternalRefClk@{kCLOCK\_McgInternalRefClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74aeceae12afcfc026d314e9af175a0ef31}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74aeceae12afcfc026d314e9af175a0ef31}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Internal\+Ref\+Clk&M\+CG internal reference clock (M\+C\+G\+I\+R\+C\+LK) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_McgFllClk@{kCLOCK\_McgFllClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_McgFllClk@{kCLOCK\_McgFllClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74ad27cb3cdcf7cf3d1bfcd1580960ee9a4}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74ad27cb3cdcf7cf3d1bfcd1580960ee9a4}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Fll\+Clk&M\+C\+G\+F\+L\+L\+C\+LK \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_McgPll0Clk@{kCLOCK\_McgPll0Clk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_McgPll0Clk@{kCLOCK\_McgPll0Clk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74a8125faf928b40f13dee71966dd0a77c2}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74a8125faf928b40f13dee71966dd0a77c2}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Pll0\+Clk&M\+C\+G\+P\+L\+L0\+C\+LK \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_McgPll1Clk@{kCLOCK\_McgPll1Clk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_McgPll1Clk@{kCLOCK\_McgPll1Clk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74aea90da9bfe47b3f46aed5662e8f34e93}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74aea90da9bfe47b3f46aed5662e8f34e93}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Pll1\+Clk&M\+C\+G\+P\+L\+L1\+C\+LK \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_McgExtPllClk@{kCLOCK\_McgExtPllClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_McgExtPllClk@{kCLOCK\_McgExtPllClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74aff9fe6cca9e80cfdab21efda80da8e8b}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74aff9fe6cca9e80cfdab21efda80da8e8b}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Ext\+Pll\+Clk&E\+X\+T\+\_\+\+P\+L\+L\+C\+LK \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_McgPeriphClk@{kCLOCK\_McgPeriphClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_McgPeriphClk@{kCLOCK\_McgPeriphClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74ad94ea13d2b1d9036d7d9e6303fc89c3a}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74ad94ea13d2b1d9036d7d9e6303fc89c3a}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Periph\+Clk&M\+CG peripheral clock (M\+C\+G\+P\+C\+LK) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_McgIrc48MClk@{kCLOCK\_McgIrc48MClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_McgIrc48MClk@{kCLOCK\_McgIrc48MClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74a50c90dfd05fba07cff701a11c095f02a}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74a50c90dfd05fba07cff701a11c095f02a}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Mcg\+Irc48\+M\+Clk&M\+CG I\+R\+C48M clock \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_LpoClk@{kCLOCK\_LpoClk}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_LpoClk@{kCLOCK\_LpoClk}}}\mbox{\Hypertarget{group__clock_gga10eb499a97d1bd20020841220bb5de74a6a5c0cc2424bbbf2b73d76f51c16d438}\label{group__clock_gga10eb499a97d1bd20020841220bb5de74a6a5c0cc2424bbbf2b73d76f51c16d438}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Lpo\+Clk&L\+PO clock \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__clock_ga9ebbef69e6c5fd52879fa79b3e607cf2}\label{group__clock_ga9ebbef69e6c5fd52879fa79b3e607cf2}} 
+\index{Clock@{Clock}!\_clock\_usb\_src@{\_clock\_usb\_src}}
+\index{\_clock\_usb\_src@{\_clock\_usb\_src}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{\_clock\_usb\_src}{\_clock\_usb\_src}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__clock_ga9ebbef69e6c5fd52879fa79b3e607cf2}{\+\_\+clock\+\_\+usb\+\_\+src}}}
+
+
+
+U\+SB clock source definition. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_UsbSrcIrc48M@{kCLOCK\_UsbSrcIrc48M}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_UsbSrcIrc48M@{kCLOCK\_UsbSrcIrc48M}}}\mbox{\Hypertarget{group__clock_gga9ebbef69e6c5fd52879fa79b3e607cf2a042fc9c8cd8072258e23166ed0353ae9}\label{group__clock_gga9ebbef69e6c5fd52879fa79b3e607cf2a042fc9c8cd8072258e23166ed0353ae9}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Usb\+Src\+Irc48M&Use I\+R\+C48M. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCLOCK\_UsbSrcExt@{kCLOCK\_UsbSrcExt}!Clock@{Clock}}\index{Clock@{Clock}!kCLOCK\_UsbSrcExt@{kCLOCK\_UsbSrcExt}}}\mbox{\Hypertarget{group__clock_gga9ebbef69e6c5fd52879fa79b3e607cf2a4d65f0b3d0e477f16a84eecb6ad0d909}\label{group__clock_gga9ebbef69e6c5fd52879fa79b3e607cf2a4d65f0b3d0e477f16a84eecb6ad0d909}} 
+k\+C\+L\+O\+C\+K\+\_\+\+Usb\+Src\+Ext&Use U\+S\+B\+\_\+\+C\+L\+K\+IN. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__clock_ga368b350a921470dc046d2403ea2fedf3}\label{group__clock_ga368b350a921470dc046d2403ea2fedf3}} 
+\index{Clock@{Clock}!\_mcglite\_clkout\_src@{\_mcglite\_clkout\_src}}
+\index{\_mcglite\_clkout\_src@{\_mcglite\_clkout\_src}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{\_mcglite\_clkout\_src}{\_mcglite\_clkout\_src}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__clock_ga368b350a921470dc046d2403ea2fedf3}{\+\_\+mcglite\+\_\+clkout\+\_\+src}}}
+
+
+
+M\+C\+G\+\_\+\+Lite clock source selection. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_ClkSrcHirc@{kMCGLITE\_ClkSrcHirc}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_ClkSrcHirc@{kMCGLITE\_ClkSrcHirc}}}\mbox{\Hypertarget{group__clock_gga368b350a921470dc046d2403ea2fedf3a79240e49c2ea1826752b6777c06f707c}\label{group__clock_gga368b350a921470dc046d2403ea2fedf3a79240e49c2ea1826752b6777c06f707c}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Clk\+Src\+Hirc&M\+C\+G\+O\+U\+T\+C\+LK source is H\+I\+RC \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_ClkSrcLirc@{kMCGLITE\_ClkSrcLirc}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_ClkSrcLirc@{kMCGLITE\_ClkSrcLirc}}}\mbox{\Hypertarget{group__clock_gga368b350a921470dc046d2403ea2fedf3affff7325f43a6a775263204658c02f0a}\label{group__clock_gga368b350a921470dc046d2403ea2fedf3affff7325f43a6a775263204658c02f0a}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Clk\+Src\+Lirc&M\+C\+G\+O\+U\+T\+C\+LK source is L\+I\+RC \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_ClkSrcExt@{kMCGLITE\_ClkSrcExt}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_ClkSrcExt@{kMCGLITE\_ClkSrcExt}}}\mbox{\Hypertarget{group__clock_gga368b350a921470dc046d2403ea2fedf3af2a61e2318656501eb9921d625a3fc68}\label{group__clock_gga368b350a921470dc046d2403ea2fedf3af2a61e2318656501eb9921d625a3fc68}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Clk\+Src\+Ext&M\+C\+G\+O\+U\+T\+C\+LK source is external clock source \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__clock_ga817219a8cfca42e5c97527e31c2bbb8e}\label{group__clock_ga817219a8cfca42e5c97527e31c2bbb8e}} 
+\index{Clock@{Clock}!\_mcglite\_irclk\_enable\_mode@{\_mcglite\_irclk\_enable\_mode}}
+\index{\_mcglite\_irclk\_enable\_mode@{\_mcglite\_irclk\_enable\_mode}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{\_mcglite\_irclk\_enable\_mode}{\_mcglite\_irclk\_enable\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__clock_ga817219a8cfca42e5c97527e31c2bbb8e}{\+\_\+mcglite\+\_\+irclk\+\_\+enable\+\_\+mode}}}
+
+
+
+M\+CG internal reference clock (M\+C\+G\+I\+R\+C\+LK) enable mode definition. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_IrclkEnable@{kMCGLITE\_IrclkEnable}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_IrclkEnable@{kMCGLITE\_IrclkEnable}}}\mbox{\Hypertarget{group__clock_gga817219a8cfca42e5c97527e31c2bbb8ea89bdc2434853e5cd63668ab75ed39ce6}\label{group__clock_gga817219a8cfca42e5c97527e31c2bbb8ea89bdc2434853e5cd63668ab75ed39ce6}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Irclk\+Enable&M\+C\+G\+I\+R\+C\+LK enable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_IrclkEnableInStop@{kMCGLITE\_IrclkEnableInStop}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_IrclkEnableInStop@{kMCGLITE\_IrclkEnableInStop}}}\mbox{\Hypertarget{group__clock_gga817219a8cfca42e5c97527e31c2bbb8eadd9065cb71f08eacdd5153f95360af55}\label{group__clock_gga817219a8cfca42e5c97527e31c2bbb8eadd9065cb71f08eacdd5153f95360af55}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Irclk\+Enable\+In\+Stop&M\+C\+G\+I\+R\+C\+LK enable in stop mode. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__clock_ga55ed975b54e118a84549accb908bc08e}\label{group__clock_ga55ed975b54e118a84549accb908bc08e}} 
+\index{Clock@{Clock}!\_mcglite\_lirc\_div@{\_mcglite\_lirc\_div}}
+\index{\_mcglite\_lirc\_div@{\_mcglite\_lirc\_div}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{\_mcglite\_lirc\_div}{\_mcglite\_lirc\_div}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__clock_ga55ed975b54e118a84549accb908bc08e}{\+\_\+mcglite\+\_\+lirc\+\_\+div}}}
+
+
+
+M\+C\+G\+\_\+\+Lite divider factor selection for clock source. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_LircDivBy1@{kMCGLITE\_LircDivBy1}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_LircDivBy1@{kMCGLITE\_LircDivBy1}}}\mbox{\Hypertarget{group__clock_gga55ed975b54e118a84549accb908bc08eacef53cb12c657462c3b5d7ac4db679cb}\label{group__clock_gga55ed975b54e118a84549accb908bc08eacef53cb12c657462c3b5d7ac4db679cb}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By1&Divider is 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_LircDivBy2@{kMCGLITE\_LircDivBy2}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_LircDivBy2@{kMCGLITE\_LircDivBy2}}}\mbox{\Hypertarget{group__clock_gga55ed975b54e118a84549accb908bc08ea01448b91468483d8e0ccf808eb7ccb3b}\label{group__clock_gga55ed975b54e118a84549accb908bc08ea01448b91468483d8e0ccf808eb7ccb3b}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By2&Divider is 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_LircDivBy4@{kMCGLITE\_LircDivBy4}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_LircDivBy4@{kMCGLITE\_LircDivBy4}}}\mbox{\Hypertarget{group__clock_gga55ed975b54e118a84549accb908bc08ea9d2d255a16e8f829f95285bb45ed8058}\label{group__clock_gga55ed975b54e118a84549accb908bc08ea9d2d255a16e8f829f95285bb45ed8058}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By4&Divider is 4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_LircDivBy8@{kMCGLITE\_LircDivBy8}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_LircDivBy8@{kMCGLITE\_LircDivBy8}}}\mbox{\Hypertarget{group__clock_gga55ed975b54e118a84549accb908bc08ea5fc42cf14af45a7adb18119157ddb489}\label{group__clock_gga55ed975b54e118a84549accb908bc08ea5fc42cf14af45a7adb18119157ddb489}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By8&Divider is 8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_LircDivBy16@{kMCGLITE\_LircDivBy16}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_LircDivBy16@{kMCGLITE\_LircDivBy16}}}\mbox{\Hypertarget{group__clock_gga55ed975b54e118a84549accb908bc08eabc76e43c4cc07f81dc2e4f0a389f09ad}\label{group__clock_gga55ed975b54e118a84549accb908bc08eabc76e43c4cc07f81dc2e4f0a389f09ad}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By16&Divider is 16 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_LircDivBy32@{kMCGLITE\_LircDivBy32}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_LircDivBy32@{kMCGLITE\_LircDivBy32}}}\mbox{\Hypertarget{group__clock_gga55ed975b54e118a84549accb908bc08ea42fd852fde6cce2171fad31bd5c4cbe0}\label{group__clock_gga55ed975b54e118a84549accb908bc08ea42fd852fde6cce2171fad31bd5c4cbe0}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By32&Divider is 32 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_LircDivBy64@{kMCGLITE\_LircDivBy64}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_LircDivBy64@{kMCGLITE\_LircDivBy64}}}\mbox{\Hypertarget{group__clock_gga55ed975b54e118a84549accb908bc08ea473606a0da1b7cb3999c477a0cddf6cf}\label{group__clock_gga55ed975b54e118a84549accb908bc08ea473606a0da1b7cb3999c477a0cddf6cf}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By64&Divider is 64 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_LircDivBy128@{kMCGLITE\_LircDivBy128}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_LircDivBy128@{kMCGLITE\_LircDivBy128}}}\mbox{\Hypertarget{group__clock_gga55ed975b54e118a84549accb908bc08ea4faa9293eda252f70c4cfc09f7b882a0}\label{group__clock_gga55ed975b54e118a84549accb908bc08ea4faa9293eda252f70c4cfc09f7b882a0}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc\+Div\+By128&Divider is 128 \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__clock_gab91799aa690e0aca9897dbc4887c3945}\label{group__clock_gab91799aa690e0aca9897dbc4887c3945}} 
+\index{Clock@{Clock}!\_mcglite\_lirc\_mode@{\_mcglite\_lirc\_mode}}
+\index{\_mcglite\_lirc\_mode@{\_mcglite\_lirc\_mode}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{\_mcglite\_lirc\_mode}{\_mcglite\_lirc\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__clock_gab91799aa690e0aca9897dbc4887c3945}{\+\_\+mcglite\+\_\+lirc\+\_\+mode}}}
+
+
+
+M\+C\+G\+\_\+\+Lite L\+I\+RC select. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_Lirc2M@{kMCGLITE\_Lirc2M}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_Lirc2M@{kMCGLITE\_Lirc2M}}}\mbox{\Hypertarget{group__clock_ggab91799aa690e0aca9897dbc4887c3945aecc45f9cd9d72b7cb5372bc28d59d813}\label{group__clock_ggab91799aa690e0aca9897dbc4887c3945aecc45f9cd9d72b7cb5372bc28d59d813}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc2M&Slow internal reference(\+L\+I\+R\+C) 2 M\+Hz clock selected \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_Lirc8M@{kMCGLITE\_Lirc8M}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_Lirc8M@{kMCGLITE\_Lirc8M}}}\mbox{\Hypertarget{group__clock_ggab91799aa690e0aca9897dbc4887c3945a1db861733d215202c2759ca36c2d9a1d}\label{group__clock_ggab91799aa690e0aca9897dbc4887c3945a1db861733d215202c2759ca36c2d9a1d}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Lirc8M&Slow internal reference(\+L\+I\+R\+C) 8 M\+Hz clock selected \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__clock_ga11d70560b1f08560bba4d6fbb649c6da}\label{group__clock_ga11d70560b1f08560bba4d6fbb649c6da}} 
+\index{Clock@{Clock}!\_mcglite\_mode@{\_mcglite\_mode}}
+\index{\_mcglite\_mode@{\_mcglite\_mode}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{\_mcglite\_mode}{\_mcglite\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__clock_ga11d70560b1f08560bba4d6fbb649c6da}{\+\_\+mcglite\+\_\+mode}}}
+
+
+
+M\+C\+G\+\_\+\+Lite clock mode definitions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_ModeHirc48M@{kMCGLITE\_ModeHirc48M}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_ModeHirc48M@{kMCGLITE\_ModeHirc48M}}}\mbox{\Hypertarget{group__clock_gga11d70560b1f08560bba4d6fbb649c6daa348c98876dd990d815e1ba7eae0899ef}\label{group__clock_gga11d70560b1f08560bba4d6fbb649c6daa348c98876dd990d815e1ba7eae0899ef}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Mode\+Hirc48M&Clock mode is H\+I\+RC 48 M \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_ModeLirc8M@{kMCGLITE\_ModeLirc8M}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_ModeLirc8M@{kMCGLITE\_ModeLirc8M}}}\mbox{\Hypertarget{group__clock_gga11d70560b1f08560bba4d6fbb649c6daa9594c4d0c6f3229e5e22fecc83c0f941}\label{group__clock_gga11d70560b1f08560bba4d6fbb649c6daa9594c4d0c6f3229e5e22fecc83c0f941}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Mode\+Lirc8M&Clock mode is L\+I\+RC 8 M \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_ModeLirc2M@{kMCGLITE\_ModeLirc2M}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_ModeLirc2M@{kMCGLITE\_ModeLirc2M}}}\mbox{\Hypertarget{group__clock_gga11d70560b1f08560bba4d6fbb649c6daac9733e0b48d213c86db6aa62bf6ee66d}\label{group__clock_gga11d70560b1f08560bba4d6fbb649c6daac9733e0b48d213c86db6aa62bf6ee66d}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Mode\+Lirc2M&Clock mode is L\+I\+RC 2 M \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_ModeExt@{kMCGLITE\_ModeExt}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_ModeExt@{kMCGLITE\_ModeExt}}}\mbox{\Hypertarget{group__clock_gga11d70560b1f08560bba4d6fbb649c6daadec2939b0e99ad5c0a1ff038549fcf03}\label{group__clock_gga11d70560b1f08560bba4d6fbb649c6daadec2939b0e99ad5c0a1ff038549fcf03}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Mode\+Ext&Clock mode is E\+XT \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMCGLITE\_ModeError@{kMCGLITE\_ModeError}!Clock@{Clock}}\index{Clock@{Clock}!kMCGLITE\_ModeError@{kMCGLITE\_ModeError}}}\mbox{\Hypertarget{group__clock_gga11d70560b1f08560bba4d6fbb649c6daa012013c127624ed025eccaae2f5d5017}\label{group__clock_gga11d70560b1f08560bba4d6fbb649c6daa012013c127624ed025eccaae2f5d5017}} 
+k\+M\+C\+G\+L\+I\+T\+E\+\_\+\+Mode\+Error&Unknown mode \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__clock_gac4d0d3c8c2e6469cde54645a5b66a5b8}\label{group__clock_gac4d0d3c8c2e6469cde54645a5b66a5b8}} 
+\index{Clock@{Clock}!\_osc\_cap\_load@{\_osc\_cap\_load}}
+\index{\_osc\_cap\_load@{\_osc\_cap\_load}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{\_osc\_cap\_load}{\_osc\_cap\_load}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__clock_gac4d0d3c8c2e6469cde54645a5b66a5b8}{\+\_\+osc\+\_\+cap\+\_\+load}}}
+
+
+
+Oscillator capacitor load setting. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kOSC\_Cap2P@{kOSC\_Cap2P}!Clock@{Clock}}\index{Clock@{Clock}!kOSC\_Cap2P@{kOSC\_Cap2P}}}\mbox{\Hypertarget{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8a77a5d0f7cafaccf2f40945bc0980780d}\label{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8a77a5d0f7cafaccf2f40945bc0980780d}} 
+k\+O\+S\+C\+\_\+\+Cap2P&2 pF capacitor load \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kOSC\_Cap4P@{kOSC\_Cap4P}!Clock@{Clock}}\index{Clock@{Clock}!kOSC\_Cap4P@{kOSC\_Cap4P}}}\mbox{\Hypertarget{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8a34f7cc6a958e0cd30cd2296393206e2e}\label{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8a34f7cc6a958e0cd30cd2296393206e2e}} 
+k\+O\+S\+C\+\_\+\+Cap4P&4 pF capacitor load \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kOSC\_Cap8P@{kOSC\_Cap8P}!Clock@{Clock}}\index{Clock@{Clock}!kOSC\_Cap8P@{kOSC\_Cap8P}}}\mbox{\Hypertarget{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8af2ef9a39bf5174098c60f141c7173d63}\label{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8af2ef9a39bf5174098c60f141c7173d63}} 
+k\+O\+S\+C\+\_\+\+Cap8P&8 pF capacitor load \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kOSC\_Cap16P@{kOSC\_Cap16P}!Clock@{Clock}}\index{Clock@{Clock}!kOSC\_Cap16P@{kOSC\_Cap16P}}}\mbox{\Hypertarget{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8adfec06bedd2598e3a2dcc5ba43ea23a9}\label{group__clock_ggac4d0d3c8c2e6469cde54645a5b66a5b8adfec06bedd2598e3a2dcc5ba43ea23a9}} 
+k\+O\+S\+C\+\_\+\+Cap16P&16 pF capacitor load \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__clock_ga12cda0e98e38fafaa3ebc980ce32605f}\label{group__clock_ga12cda0e98e38fafaa3ebc980ce32605f}} 
+\index{Clock@{Clock}!\_osc\_mode@{\_osc\_mode}}
+\index{\_osc\_mode@{\_osc\_mode}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{\_osc\_mode}{\_osc\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__clock_ga12cda0e98e38fafaa3ebc980ce32605f}{\+\_\+osc\+\_\+mode}}}
+
+
+
+The O\+SC work mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kOSC\_ModeExt@{kOSC\_ModeExt}!Clock@{Clock}}\index{Clock@{Clock}!kOSC\_ModeExt@{kOSC\_ModeExt}}}\mbox{\Hypertarget{group__clock_gga12cda0e98e38fafaa3ebc980ce32605fa40da5141b08af28fd3ed71d0c061a664}\label{group__clock_gga12cda0e98e38fafaa3ebc980ce32605fa40da5141b08af28fd3ed71d0c061a664}} 
+k\+O\+S\+C\+\_\+\+Mode\+Ext&Use external clock. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kOSC\_ModeOscLowPower@{kOSC\_ModeOscLowPower}!Clock@{Clock}}\index{Clock@{Clock}!kOSC\_ModeOscLowPower@{kOSC\_ModeOscLowPower}}}\mbox{\Hypertarget{group__clock_gga12cda0e98e38fafaa3ebc980ce32605fa4412c07d6d2fd83dfa4c788f5bd72f18}\label{group__clock_gga12cda0e98e38fafaa3ebc980ce32605fa4412c07d6d2fd83dfa4c788f5bd72f18}} 
+k\+O\+S\+C\+\_\+\+Mode\+Osc\+Low\+Power&Oscillator low power. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kOSC\_ModeOscHighGain@{kOSC\_ModeOscHighGain}!Clock@{Clock}}\index{Clock@{Clock}!kOSC\_ModeOscHighGain@{kOSC\_ModeOscHighGain}}}\mbox{\Hypertarget{group__clock_gga12cda0e98e38fafaa3ebc980ce32605fa44206e2acfed4fd6f9764047d9f469ae}\label{group__clock_gga12cda0e98e38fafaa3ebc980ce32605fa44206e2acfed4fd6f9764047d9f469ae}} 
+k\+O\+S\+C\+\_\+\+Mode\+Osc\+High\+Gain&Oscillator high gain. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__clock_ga4d273c4ee3cf6ad651bc9aacc48bc87f}\label{group__clock_ga4d273c4ee3cf6ad651bc9aacc48bc87f}} 
+\index{Clock@{Clock}!\_oscer\_enable\_mode@{\_oscer\_enable\_mode}}
+\index{\_oscer\_enable\_mode@{\_oscer\_enable\_mode}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{\_oscer\_enable\_mode}{\_oscer\_enable\_mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__clock_ga4d273c4ee3cf6ad651bc9aacc48bc87f}{\+\_\+oscer\+\_\+enable\+\_\+mode}}}
+
+
+
+O\+S\+C\+E\+R\+C\+LK enable mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kOSC\_ErClkEnable@{kOSC\_ErClkEnable}!Clock@{Clock}}\index{Clock@{Clock}!kOSC\_ErClkEnable@{kOSC\_ErClkEnable}}}\mbox{\Hypertarget{group__clock_gga4d273c4ee3cf6ad651bc9aacc48bc87fa3a8d4dec0d80100e2f69db38357970da}\label{group__clock_gga4d273c4ee3cf6ad651bc9aacc48bc87fa3a8d4dec0d80100e2f69db38357970da}} 
+k\+O\+S\+C\+\_\+\+Er\+Clk\+Enable&Enable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kOSC\_ErClkEnableInStop@{kOSC\_ErClkEnableInStop}!Clock@{Clock}}\index{Clock@{Clock}!kOSC\_ErClkEnableInStop@{kOSC\_ErClkEnableInStop}}}\mbox{\Hypertarget{group__clock_gga4d273c4ee3cf6ad651bc9aacc48bc87fabc175ffcf6cbcade0f10376b168d4fd9}\label{group__clock_gga4d273c4ee3cf6ad651bc9aacc48bc87fabc175ffcf6cbcade0f10376b168d4fd9}} 
+k\+O\+S\+C\+\_\+\+Er\+Clk\+Enable\+In\+Stop&Enable in stop mode. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__clock_ga559f868eef1e9d1e37450a57ce4902af}\label{group__clock_ga559f868eef1e9d1e37450a57ce4902af}} 
+\index{Clock@{Clock}!CLOCK\_DeinitOsc0@{CLOCK\_DeinitOsc0}}
+\index{CLOCK\_DeinitOsc0@{CLOCK\_DeinitOsc0}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_DeinitOsc0()}{CLOCK\_DeinitOsc0()}}
+{\footnotesize\ttfamily void C\+L\+O\+C\+K\+\_\+\+Deinit\+Osc0 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Deinitializes the O\+S\+C0. 
+
+This function deinitializes the O\+S\+C0.
+
+brief Deinitializes the O\+S\+C0.
+
+This function deinitializes the O\+S\+C0. \mbox{\Hypertarget{group__clock_ga2539fd76663a0ae15aec84b23489a070}\label{group__clock_ga2539fd76663a0ae15aec84b23489a070}} 
+\index{Clock@{Clock}!CLOCK\_EnableUsbfs0Clock@{CLOCK\_EnableUsbfs0Clock}}
+\index{CLOCK\_EnableUsbfs0Clock@{CLOCK\_EnableUsbfs0Clock}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_EnableUsbfs0Clock()}{CLOCK\_EnableUsbfs0Clock()}}
+{\footnotesize\ttfamily bool C\+L\+O\+C\+K\+\_\+\+Enable\+Usbfs0\+Clock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__clock_ga014128d824509a661c917ed0ed21149f}{clock\+\_\+usb\+\_\+src\+\_\+t}}}]{src,  }\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+
+
+
+Enable U\+SB FS clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & U\+SB FS clock source. \\
+\hline
+{\em freq} & The frequency specified by src. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & The clock is set successfully. \\
+\hline
+{\em false} & The clock source is invalid to get proper U\+SB FS clock.\\
+\hline
+\end{DoxyRetVals}
+brief Enable U\+SB FS clock.
+
+param src U\+SB FS clock source. param freq The frequency specified by src. retval true The clock is set successfully. retval false The clock source is invalid to get proper U\+SB FS clock. \mbox{\Hypertarget{group__clock_ga9da592c7723873abbfa51a62cbbff03d}\label{group__clock_ga9da592c7723873abbfa51a62cbbff03d}} 
+\index{Clock@{Clock}!CLOCK\_GetBusClkFreq@{CLOCK\_GetBusClkFreq}}
+\index{CLOCK\_GetBusClkFreq@{CLOCK\_GetBusClkFreq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetBusClkFreq()}{CLOCK\_GetBusClkFreq()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+O\+C\+K\+\_\+\+Get\+Bus\+Clk\+Freq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the bus clock frequency. 
+
+\begin{DoxyReturn}{Returns}
+Clock frequency in Hz.
+\end{DoxyReturn}
+brief Get the bus clock frequency.
+
+return Clock frequency in Hz. \mbox{\Hypertarget{group__clock_ga3360f4c91fde2fed784359caf34aefd2}\label{group__clock_ga3360f4c91fde2fed784359caf34aefd2}} 
+\index{Clock@{Clock}!CLOCK\_GetCoreSysClkFreq@{CLOCK\_GetCoreSysClkFreq}}
+\index{CLOCK\_GetCoreSysClkFreq@{CLOCK\_GetCoreSysClkFreq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetCoreSysClkFreq()}{CLOCK\_GetCoreSysClkFreq()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+O\+C\+K\+\_\+\+Get\+Core\+Sys\+Clk\+Freq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the core clock or system clock frequency. 
+
+\begin{DoxyReturn}{Returns}
+Clock frequency in Hz.
+\end{DoxyReturn}
+brief Get the core clock or system clock frequency.
+
+return Clock frequency in Hz. \mbox{\Hypertarget{group__clock_ga37466efe335f7268cee76c7d01fd52f5}\label{group__clock_ga37466efe335f7268cee76c7d01fd52f5}} 
+\index{Clock@{Clock}!CLOCK\_GetEr32kClkFreq@{CLOCK\_GetEr32kClkFreq}}
+\index{CLOCK\_GetEr32kClkFreq@{CLOCK\_GetEr32kClkFreq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetEr32kClkFreq()}{CLOCK\_GetEr32kClkFreq()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+O\+C\+K\+\_\+\+Get\+Er32k\+Clk\+Freq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the external reference 32K clock frequency (E\+R\+C\+L\+K32K). 
+
+\begin{DoxyReturn}{Returns}
+Clock frequency in Hz.
+\end{DoxyReturn}
+brief Get the external reference 32K clock frequency (E\+R\+C\+L\+K32K).
+
+return Clock frequency in Hz. \mbox{\Hypertarget{group__clock_gaa64c5e2ea6e2be57582e9868b67ce7ee}\label{group__clock_gaa64c5e2ea6e2be57582e9868b67ce7ee}} 
+\index{Clock@{Clock}!CLOCK\_GetFlashClkFreq@{CLOCK\_GetFlashClkFreq}}
+\index{CLOCK\_GetFlashClkFreq@{CLOCK\_GetFlashClkFreq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetFlashClkFreq()}{CLOCK\_GetFlashClkFreq()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+O\+C\+K\+\_\+\+Get\+Flash\+Clk\+Freq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the flash clock frequency. 
+
+\begin{DoxyReturn}{Returns}
+Clock frequency in Hz.
+\end{DoxyReturn}
+brief Get the flash clock frequency.
+
+return Clock frequency in Hz. \mbox{\Hypertarget{group__clock_ga53acae220d651789bb505c53c73ecf2b}\label{group__clock_ga53acae220d651789bb505c53c73ecf2b}} 
+\index{Clock@{Clock}!CLOCK\_GetFreq@{CLOCK\_GetFreq}}
+\index{CLOCK\_GetFreq@{CLOCK\_GetFreq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetFreq()}{CLOCK\_GetFreq()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+O\+C\+K\+\_\+\+Get\+Freq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__clock_gacb9ec0a8b3aa569692b550ebdcac7b3c}{clock\+\_\+name\+\_\+t}}}]{clock\+Name }\end{DoxyParamCaption})}
+
+
+
+Gets the clock frequency for a specific clock name. 
+
+This function checks the current clock configurations and then calculates the clock frequency for a specific clock name defined in clock\+\_\+name\+\_\+t. The M\+CG must be properly configured before using this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em clock\+Name} & Clock names defined in clock\+\_\+name\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Clock frequency value in Hertz
+\end{DoxyReturn}
+brief Gets the clock frequency for a specific clock name.
+
+This function checks the current clock configurations and then calculates the clock frequency for a specific clock name defined in clock\+\_\+name\+\_\+t. The M\+CG must be properly configured before using this function.
+
+param clock\+Name Clock names defined in clock\+\_\+name\+\_\+t return Clock frequency value in Hertz \mbox{\Hypertarget{group__clock_ga352c4e1fcb54bc5656df3299e154a736}\label{group__clock_ga352c4e1fcb54bc5656df3299e154a736}} 
+\index{Clock@{Clock}!CLOCK\_GetInternalRefClkFreq@{CLOCK\_GetInternalRefClkFreq}}
+\index{CLOCK\_GetInternalRefClkFreq@{CLOCK\_GetInternalRefClkFreq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetInternalRefClkFreq()}{CLOCK\_GetInternalRefClkFreq()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+O\+C\+K\+\_\+\+Get\+Internal\+Ref\+Clk\+Freq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the M\+CG internal reference clock (M\+C\+G\+I\+R\+C\+LK) frequency. 
+
+This function gets the M\+C\+G\+\_\+\+Lite internal reference clock frequency in Hz based on the current M\+CG register value.
+
+\begin{DoxyReturn}{Returns}
+The frequency of M\+C\+G\+I\+R\+C\+LK.
+\end{DoxyReturn}
+brief Gets the M\+CG internal reference clock (M\+C\+G\+I\+R\+C\+LK) frequency.
+
+This function gets the M\+C\+G\+\_\+\+Lite internal reference clock frequency in Hz based on the current M\+CG register value.
+
+return The frequency of M\+C\+G\+I\+R\+C\+LK. \mbox{\Hypertarget{group__clock_gac486df712cf93a890c084c14956dd750}\label{group__clock_gac486df712cf93a890c084c14956dd750}} 
+\index{Clock@{Clock}!CLOCK\_GetMode@{CLOCK\_GetMode}}
+\index{CLOCK\_GetMode@{CLOCK\_GetMode}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetMode()}{CLOCK\_GetMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__clock_ga7ba2816f49b1b008daa37a55e34dc4a1}{mcglite\+\_\+mode\+\_\+t}} C\+L\+O\+C\+K\+\_\+\+Get\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current M\+C\+G\+\_\+\+Lite mode. 
+
+This function checks the M\+C\+G\+\_\+\+Lite registers and determines the current M\+C\+G\+\_\+\+Lite mode.
+
+\begin{DoxyReturn}{Returns}
+The current M\+C\+G\+\_\+\+Lite mode or error code.
+\end{DoxyReturn}
+brief Gets the current M\+C\+G\+\_\+\+Lite mode.
+
+This function checks the M\+C\+G\+\_\+\+Lite registers and determines the current M\+C\+G\+\_\+\+Lite mode.
+
+return The current M\+C\+G\+\_\+\+Lite mode or error code. \mbox{\Hypertarget{group__clock_gaebc45953dc5ae83b02ced8a14e8857b9}\label{group__clock_gaebc45953dc5ae83b02ced8a14e8857b9}} 
+\index{Clock@{Clock}!CLOCK\_GetOsc0ErClkFreq@{CLOCK\_GetOsc0ErClkFreq}}
+\index{CLOCK\_GetOsc0ErClkFreq@{CLOCK\_GetOsc0ErClkFreq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetOsc0ErClkFreq()}{CLOCK\_GetOsc0ErClkFreq()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+O\+C\+K\+\_\+\+Get\+Osc0\+Er\+Clk\+Freq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the O\+S\+C0 external reference clock frequency (O\+S\+C0\+E\+R\+C\+LK). 
+
+\begin{DoxyReturn}{Returns}
+Clock frequency in Hz.
+\end{DoxyReturn}
+brief Get the O\+S\+C0 external reference clock frequency (O\+S\+C0\+E\+R\+C\+LK).
+
+return Clock frequency in Hz. \mbox{\Hypertarget{group__clock_gad9df7f4196258f0a9037088784a19380}\label{group__clock_gad9df7f4196258f0a9037088784a19380}} 
+\index{Clock@{Clock}!CLOCK\_GetOutClkFreq@{CLOCK\_GetOutClkFreq}}
+\index{CLOCK\_GetOutClkFreq@{CLOCK\_GetOutClkFreq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetOutClkFreq()}{CLOCK\_GetOutClkFreq()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+O\+C\+K\+\_\+\+Get\+Out\+Clk\+Freq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the M\+C\+G\+\_\+\+Lite output clock (M\+C\+G\+O\+U\+T\+C\+LK) frequency. 
+
+This function gets the M\+C\+G\+\_\+\+Lite output clock frequency in Hz based on the current M\+C\+G\+\_\+\+Lite register value.
+
+\begin{DoxyReturn}{Returns}
+The frequency of M\+C\+G\+O\+U\+T\+C\+LK.
+\end{DoxyReturn}
+brief Gets the M\+C\+G\+\_\+\+Lite output clock (M\+C\+G\+O\+U\+T\+C\+LK) frequency.
+
+This function gets the M\+C\+G\+\_\+\+Lite output clock frequency in Hz based on the current M\+C\+G\+\_\+\+Lite register value.
+
+return The frequency of M\+C\+G\+O\+U\+T\+C\+LK. \mbox{\Hypertarget{group__clock_gacee790e56c954e537658600aca0b9481}\label{group__clock_gacee790e56c954e537658600aca0b9481}} 
+\index{Clock@{Clock}!CLOCK\_GetPeriphClkFreq@{CLOCK\_GetPeriphClkFreq}}
+\index{CLOCK\_GetPeriphClkFreq@{CLOCK\_GetPeriphClkFreq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetPeriphClkFreq()}{CLOCK\_GetPeriphClkFreq()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+O\+C\+K\+\_\+\+Get\+Periph\+Clk\+Freq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current M\+C\+G\+P\+C\+LK frequency. 
+
+This function gets the M\+C\+G\+P\+C\+LK frequency in Hz based on the current M\+C\+G\+\_\+\+Lite register settings.
+
+\begin{DoxyReturn}{Returns}
+The frequency of M\+C\+G\+P\+C\+LK. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__clock_gad6813b4059e476de162947021939d8dc}\label{group__clock_gad6813b4059e476de162947021939d8dc}} 
+\index{Clock@{Clock}!CLOCK\_GetPlatClkFreq@{CLOCK\_GetPlatClkFreq}}
+\index{CLOCK\_GetPlatClkFreq@{CLOCK\_GetPlatClkFreq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_GetPlatClkFreq()}{CLOCK\_GetPlatClkFreq()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+O\+C\+K\+\_\+\+Get\+Plat\+Clk\+Freq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the platform clock frequency. 
+
+\begin{DoxyReturn}{Returns}
+Clock frequency in Hz.
+\end{DoxyReturn}
+brief Get the platform clock frequency.
+
+return Clock frequency in Hz. \mbox{\Hypertarget{group__clock_ga7fd566b301526150b4e2be076006029f}\label{group__clock_ga7fd566b301526150b4e2be076006029f}} 
+\index{Clock@{Clock}!CLOCK\_InitOsc0@{CLOCK\_InitOsc0}}
+\index{CLOCK\_InitOsc0@{CLOCK\_InitOsc0}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_InitOsc0()}{CLOCK\_InitOsc0()}}
+{\footnotesize\ttfamily void C\+L\+O\+C\+K\+\_\+\+Init\+Osc0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__clock_ga7b42afca82c7234da7c1ccd5fc4d984b}{osc\+\_\+config\+\_\+t}} const $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Initializes the O\+S\+C0. 
+
+This function initializes the O\+S\+C0 according to the board configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the O\+S\+C0 configuration structure.\\
+\hline
+\end{DoxyParams}
+brief Initializes the O\+S\+C0.
+
+This function initializes the O\+S\+C0 according to the board configuration.
+
+param config Pointer to the O\+S\+C0 configuration structure. \mbox{\Hypertarget{group__clock_ga5e63d4acf979a66bf5b332ca27b9d1cc}\label{group__clock_ga5e63d4acf979a66bf5b332ca27b9d1cc}} 
+\index{Clock@{Clock}!CLOCK\_SetMcgliteConfig@{CLOCK\_SetMcgliteConfig}}
+\index{CLOCK\_SetMcgliteConfig@{CLOCK\_SetMcgliteConfig}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_SetMcgliteConfig()}{CLOCK\_SetMcgliteConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} C\+L\+O\+C\+K\+\_\+\+Set\+Mcglite\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__clock_gaabff5dfd46b7233a64d3f3e4b47d908d}{mcglite\+\_\+config\+\_\+t}} const $\ast$}]{target\+Config }\end{DoxyParamCaption})}
+
+
+
+Sets the M\+C\+G\+\_\+\+Lite configuration. 
+
+This function configures the M\+C\+G\+\_\+\+Lite, includes the output clock source, M\+C\+G\+I\+R\+C\+LK settings, H\+I\+RC settings, and so on. See \mbox{\hyperlink{group__clock_gaabff5dfd46b7233a64d3f3e4b47d908d}{mcglite\+\_\+config\+\_\+t}} for details.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Config} & Pointer to the target M\+C\+G\+\_\+\+Lite mode configuration structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code.
+\end{DoxyReturn}
+brief Sets the M\+C\+G\+\_\+\+Lite configuration.
+
+This function configures the M\+C\+G\+\_\+\+Lite, includes the output clock source, M\+C\+G\+I\+R\+C\+LK settings, H\+I\+RC settings, and so on. See ref mcglite\+\_\+config\+\_\+t for details.
+
+param target\+Config Pointer to the target M\+C\+G\+\_\+\+Lite mode configuration structure. return Error code. \mbox{\Hypertarget{group__clock_gaf72980630bd050338cffd07f7d3b4944}\label{group__clock_gaf72980630bd050338cffd07f7d3b4944}} 
+\index{Clock@{Clock}!CLOCK\_SetSimConfig@{CLOCK\_SetSimConfig}}
+\index{CLOCK\_SetSimConfig@{CLOCK\_SetSimConfig}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{CLOCK\_SetSimConfig()}{CLOCK\_SetSimConfig()}}
+{\footnotesize\ttfamily void C\+L\+O\+C\+K\+\_\+\+Set\+Sim\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__clock_gad8383426c7f9ff4119a0b6c10de5281d}{sim\+\_\+clock\+\_\+config\+\_\+t}} const $\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Set the clock configure in S\+IM module. 
+
+This function sets system layer clock settings in S\+IM module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to the configure structure.\\
+\hline
+\end{DoxyParams}
+brief Set the clock configure in S\+IM module.
+
+This function sets system layer clock settings in S\+IM module.
+
+param config Pointer to the configure structure. \mbox{\Hypertarget{group__clock_gaf9804be766685e8ffd3221461bf00d1b}\label{group__clock_gaf9804be766685e8ffd3221461bf00d1b}} 
+\index{Clock@{Clock}!SDK\_DelayAtLeastUs@{SDK\_DelayAtLeastUs}}
+\index{SDK\_DelayAtLeastUs@{SDK\_DelayAtLeastUs}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{SDK\_DelayAtLeastUs()}{SDK\_DelayAtLeastUs()}}
+{\footnotesize\ttfamily void S\+D\+K\+\_\+\+Delay\+At\+Least\+Us (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{delay\+\_\+us }\end{DoxyParamCaption})}
+
+
+
+Delay at least for several microseconds. Please note that, this A\+PI will calculate the microsecond period with the maximum supported C\+PU frequency, so this A\+PI will only delay for at least the given microseconds, if precise delay count was needed, please implement a new timer count to achieve this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay\+\_\+us} & Delay time in unit of microsecond. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__clock_ga70a4a6ffb6c5a7a271aad89fe482bafc}\label{group__clock_ga70a4a6ffb6c5a7a271aad89fe482bafc}} 
+\index{Clock@{Clock}!g\_xtal0Freq@{g\_xtal0Freq}}
+\index{g\_xtal0Freq@{g\_xtal0Freq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{g\_xtal0Freq}{g\_xtal0Freq}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t g\+\_\+xtal0\+Freq}
+
+
+
+External X\+T\+A\+L0 (O\+S\+C0) clock frequency. 
+
+The X\+T\+A\+L0/\+E\+X\+T\+A\+L0 (O\+S\+C0) clock frequency in Hz. When the clock is set up, use the function C\+L\+O\+C\+K\+\_\+\+Set\+Xtal0\+Freq to set the value in the clock driver. For example, if X\+T\+A\+L0 is 8 M\+Hz\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group__clock_ga7fd566b301526150b4e2be076006029f}{CLOCK\_InitOsc0}}(...); \textcolor{comment}{// Set up the OSC0}}
+\DoxyCodeLine{CLOCK\_SetXtal0Freq(80000000); \textcolor{comment}{// Set the XTAL0 value to clock driver.}}
+\end{DoxyCode}
+
+
+This is important for the multicore platforms where one core needs to set up the O\+S\+C0 using the C\+L\+O\+C\+K\+\_\+\+Init\+Osc0. All other cores need to call the C\+L\+O\+C\+K\+\_\+\+Set\+Xtal0\+Freq to get a valid clock frequency. \mbox{\Hypertarget{group__clock_ga170d2fd7c6b439b72e0f73b4d73443af}\label{group__clock_ga170d2fd7c6b439b72e0f73b4d73443af}} 
+\index{Clock@{Clock}!g\_xtal32Freq@{g\_xtal32Freq}}
+\index{g\_xtal32Freq@{g\_xtal32Freq}!Clock@{Clock}}
+\subsubsection{\texorpdfstring{g\_xtal32Freq}{g\_xtal32Freq}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t g\+\_\+xtal32\+Freq}
+
+
+
+The external X\+T\+A\+L32/\+E\+X\+T\+A\+L32/\+R\+T\+C\+\_\+\+C\+L\+K\+IN clock frequency. 
+
+The X\+T\+A\+L32/\+E\+X\+T\+A\+L32/\+R\+T\+C\+\_\+\+C\+L\+K\+IN clock frequency in Hz. When the clock is set up, use the function C\+L\+O\+C\+K\+\_\+\+Set\+Xtal32\+Freq to set the value in the clock driver.
+
+This is important for the multicore platforms where one core needs to set up the clock. All other cores need to call the C\+L\+O\+C\+K\+\_\+\+Set\+Xtal32\+Freq to get a valid clock frequency. 

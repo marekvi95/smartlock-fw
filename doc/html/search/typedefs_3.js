@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['flash_5fconfig_5ft',['flash_config_t',['../group__ftfx__flash__driver.html#ga0dfc969e6f9e17c17e60d823565141a5',1,'fsl_ftfx_flash.h']]],
+  ['flash_5fproperty_5ftag_5ft',['flash_property_tag_t',['../group__ftfx__flash__driver.html#gaded074dd3bc89c29d97e51089902698a',1,'fsl_ftfx_flash.h']]],
+  ['flash_5fprot_5fstate_5ft',['flash_prot_state_t',['../group__ftfx__flash__driver.html#ga803f9a1815977c4e0a9a9e3f37e069c4',1,'fsl_ftfx_flash.h']]],
+  ['flexnvm_5fconfig_5ft',['flexnvm_config_t',['../group__ftfx__flexnvm__driver.html#ga8fd4d473c0a4b30cac163160fb28a6c1',1,'fsl_ftfx_flexnvm.h']]],
+  ['flexnvm_5fproperty_5ftag_5ft',['flexnvm_property_tag_t',['../group__ftfx__flexnvm__driver.html#ga355e24679a7d7d1228641e96806c19d9',1,'fsl_ftfx_flexnvm.h']]],
+  ['ftfx_5fcache_5fconfig_5ft',['ftfx_cache_config_t',['../group__ftfx__cache__driver.html#ga8ddae8f98cec13ff7c33bc515d01c487',1,'fsl_ftfx_cache.h']]],
+  ['ftfx_5fconfig_5ft',['ftfx_config_t',['../group__ftfx__controller.html#gab0196063c05bffb4cd2f249699a3378c',1,'fsl_ftfx_controller.h']]],
+  ['ftfx_5fflexram_5ffunc_5fopt_5ft',['ftfx_flexram_func_opt_t',['../group__ftfx__controller.html#ga953cf8f316acac60d44384e338b790d7',1,'fsl_ftfx_controller.h']]],
+  ['ftfx_5fifr_5fdesc_5ft',['ftfx_ifr_desc_t',['../group__ftfx__controller.html#ga25d8176fbbb387ae5e5ba3fa32667d72',1,'fsl_ftfx_controller.h']]],
+  ['ftfx_5fmargin_5fvalue_5ft',['ftfx_margin_value_t',['../group__ftfx__controller.html#ga2cef5154a854c303445b4bd5139f6392',1,'fsl_ftfx_controller.h']]],
+  ['ftfx_5fmem_5fdesc_5ft',['ftfx_mem_desc_t',['../group__ftfx__controller.html#ga64a01792d0090fb0202473c138e0c2c9',1,'fsl_ftfx_controller.h']]],
+  ['ftfx_5fops_5fconfig_5ft',['ftfx_ops_config_t',['../group__ftfx__controller.html#ga721d5f2f64785b7580862e942e17737e',1,'fsl_ftfx_controller.h']]],
+  ['ftfx_5fpartition_5fflexram_5fload_5fopt_5ft',['ftfx_partition_flexram_load_opt_t',['../group__ftfx__controller.html#ga78043d7b5753a2e4f6f61fe8bbae68d0',1,'fsl_ftfx_controller.h']]],
+  ['ftfx_5fprefetch_5fspeculation_5fstatus_5ft',['ftfx_prefetch_speculation_status_t',['../group__ftfx__cache__driver.html#ga4ee23b743843fdca0f97dfbb91c105b7',1,'fsl_ftfx_cache.h']]],
+  ['ftfx_5fread_5fresource_5fopt_5ft',['ftfx_read_resource_opt_t',['../group__ftfx__controller.html#ga96edaa38d804ca4f1af33352d7ee67be',1,'fsl_ftfx_controller.h']]],
+  ['ftfx_5fsecurity_5fstate_5ft',['ftfx_security_state_t',['../group__ftfx__controller.html#gae49df85d158f3651e17d1bb660a4f1c2',1,'fsl_ftfx_controller.h']]],
+  ['ftfx_5fspec_5fmem_5ft',['ftfx_spec_mem_t',['../group__ftfx__controller.html#ga6a3bd19cb0ff32d44e464562765a8127',1,'fsl_ftfx_controller.h']]],
+  ['ftfx_5fswap_5fstate_5ft',['ftfx_swap_state_t',['../group__ftfx__controller.html#gad668a89052994dc917b1738f4e96fa72',1,'fsl_ftfx_controller.h']]]
+];

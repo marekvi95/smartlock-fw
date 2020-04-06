@@ -1,0 +1,73 @@
+\hypertarget{struct__spi__slave__config}{}\section{\+\_\+spi\+\_\+slave\+\_\+config Struct Reference}
+\label{struct__spi__slave__config}\index{\_spi\_slave\_config@{\_spi\_slave\_config}}
+
+
+S\+PI slave user configure structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+spi.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct__spi__slave__config_a9189d8f6438ba99548837da162213c46}{enable\+Slave}}
+\item 
+bool \mbox{\hyperlink{struct__spi__slave__config_a9b8027e0bd0a21915f56155fdc08c5fc}{enable\+Stop\+In\+Wait\+Mode}}
+\item 
+\mbox{\hyperlink{group__spi__driver_ga9de95ac02ae859ac26534c06eb47b5b8}{spi\+\_\+clock\+\_\+polarity\+\_\+t}} \mbox{\hyperlink{struct__spi__slave__config_ad5743b187f5dda0c1786a192ba11b043}{polarity}}
+\item 
+\mbox{\hyperlink{group__spi__driver_ga12e1c73dd72aaabd76ff5ce23c0d3244}{spi\+\_\+clock\+\_\+phase\+\_\+t}} \mbox{\hyperlink{struct__spi__slave__config_af7cf10baeb58ef18f8d18ef7022d43d8}{phase}}
+\item 
+\mbox{\hyperlink{group__spi__driver_gadc24bb931a59fc64ee4cb60ed56addb4}{spi\+\_\+shift\+\_\+direction\+\_\+t}} \mbox{\hyperlink{struct__spi__slave__config_ae8f40fc982ba997f08e6a1fe1fe8fd8c}{direction}}
+\item 
+\mbox{\hyperlink{group__spi__driver_ga4d2e20ceaf81868a429938113afe8726}{spi\+\_\+pin\+\_\+mode\+\_\+t}} \mbox{\hyperlink{struct__spi__slave__config_ab929baca49507045ca23069da9bbe3ba}{pin\+Mode}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+PI slave user configure structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__spi__slave__config_ae8f40fc982ba997f08e6a1fe1fe8fd8c}\label{struct__spi__slave__config_ae8f40fc982ba997f08e6a1fe1fe8fd8c}} 
+\index{\_spi\_slave\_config@{\_spi\_slave\_config}!direction@{direction}}
+\index{direction@{direction}!\_spi\_slave\_config@{\_spi\_slave\_config}}
+\subsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__spi__driver_gadc24bb931a59fc64ee4cb60ed56addb4}{spi\+\_\+shift\+\_\+direction\+\_\+t}} direction}
+
+M\+SB or L\+SB \mbox{\Hypertarget{struct__spi__slave__config_a9189d8f6438ba99548837da162213c46}\label{struct__spi__slave__config_a9189d8f6438ba99548837da162213c46}} 
+\index{\_spi\_slave\_config@{\_spi\_slave\_config}!enableSlave@{enableSlave}}
+\index{enableSlave@{enableSlave}!\_spi\_slave\_config@{\_spi\_slave\_config}}
+\subsubsection{\texorpdfstring{enableSlave}{enableSlave}}
+{\footnotesize\ttfamily bool enable\+Slave}
+
+Enable S\+PI at initialization time \mbox{\Hypertarget{struct__spi__slave__config_a9b8027e0bd0a21915f56155fdc08c5fc}\label{struct__spi__slave__config_a9b8027e0bd0a21915f56155fdc08c5fc}} 
+\index{\_spi\_slave\_config@{\_spi\_slave\_config}!enableStopInWaitMode@{enableStopInWaitMode}}
+\index{enableStopInWaitMode@{enableStopInWaitMode}!\_spi\_slave\_config@{\_spi\_slave\_config}}
+\subsubsection{\texorpdfstring{enableStopInWaitMode}{enableStopInWaitMode}}
+{\footnotesize\ttfamily bool enable\+Stop\+In\+Wait\+Mode}
+
+S\+PI stop in wait mode \mbox{\Hypertarget{struct__spi__slave__config_af7cf10baeb58ef18f8d18ef7022d43d8}\label{struct__spi__slave__config_af7cf10baeb58ef18f8d18ef7022d43d8}} 
+\index{\_spi\_slave\_config@{\_spi\_slave\_config}!phase@{phase}}
+\index{phase@{phase}!\_spi\_slave\_config@{\_spi\_slave\_config}}
+\subsubsection{\texorpdfstring{phase}{phase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__spi__driver_ga12e1c73dd72aaabd76ff5ce23c0d3244}{spi\+\_\+clock\+\_\+phase\+\_\+t}} phase}
+
+Clock phase \mbox{\Hypertarget{struct__spi__slave__config_ab929baca49507045ca23069da9bbe3ba}\label{struct__spi__slave__config_ab929baca49507045ca23069da9bbe3ba}} 
+\index{\_spi\_slave\_config@{\_spi\_slave\_config}!pinMode@{pinMode}}
+\index{pinMode@{pinMode}!\_spi\_slave\_config@{\_spi\_slave\_config}}
+\subsubsection{\texorpdfstring{pinMode}{pinMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__spi__driver_ga4d2e20ceaf81868a429938113afe8726}{spi\+\_\+pin\+\_\+mode\+\_\+t}} pin\+Mode}
+
+S\+PI pin mode select \mbox{\Hypertarget{struct__spi__slave__config_ad5743b187f5dda0c1786a192ba11b043}\label{struct__spi__slave__config_ad5743b187f5dda0c1786a192ba11b043}} 
+\index{\_spi\_slave\_config@{\_spi\_slave\_config}!polarity@{polarity}}
+\index{polarity@{polarity}!\_spi\_slave\_config@{\_spi\_slave\_config}}
+\subsubsection{\texorpdfstring{polarity}{polarity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__spi__driver_ga9de95ac02ae859ac26534c06eb47b5b8}{spi\+\_\+clock\+\_\+polarity\+\_\+t}} polarity}
+
+Clock polarity 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+spi.\+h\end{DoxyCompactItemize}

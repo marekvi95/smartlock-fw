@@ -1,0 +1,27 @@
+\hypertarget{sf__setup_8h}{}\section{sf/sf\+\_\+setup.h File Reference}
+\label{sf__setup_8h}\index{sf/sf\_setup.h@{sf/sf\_setup.h}}
+{\ttfamily \#include \char`\"{}common\+\_\+aml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gpio\+\_\+aml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spi\+\_\+aml/spi\+\_\+aml.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsf__spi__config__t}{sf\+\_\+spi\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure for S\+PI configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf__gpio__sel__t}{sf\+\_\+gpio\+\_\+sel\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure for G\+P\+IO selection. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsf__gpio__config__t}{sf\+\_\+gpio\+\_\+config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure for G\+P\+IO configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__sf__conf__func__group_ga68177f0281489ba75661dc8517f4d547}{S\+F\+\_\+\+Setup\+S\+PI}} (\mbox{\hyperlink{structsf__spi__config__t}{sf\+\_\+spi\+\_\+config\+\_\+t}} $\ast$spi\+Config, const spi\+\_\+sdk\+\_\+master\+\_\+config\+\_\+t $\ast$user\+Spi\+Sdk\+Config)
+\begin{DoxyCompactList}\small\item\em Configures S\+PI module used by the S\+I\+G\+F\+OX device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__sf__conf__func__group_ga03c809115624f8f392eacf4baf087a55}{S\+F\+\_\+\+Setup\+G\+P\+I\+Os}} (\mbox{\hyperlink{structsf__gpio__config__t}{sf\+\_\+gpio\+\_\+config\+\_\+t}} $\ast$gpio\+Config)
+\begin{DoxyCompactList}\small\item\em Configuration of G\+P\+I\+Os used for the S\+I\+G\+F\+OX device. Note that this function should not be used in S\+DK S32 when using pin\+\_\+mux component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module contains configuration of M\+CU peripherals used by the O\+L2361/\+O\+L2385.
+
+User can either use prepared functions to setup M\+CU peripherals for the needs of this driver or take responsibility for this setup by doing it himself. 

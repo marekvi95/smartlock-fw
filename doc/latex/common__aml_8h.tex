@@ -1,0 +1,53 @@
+\hypertarget{common__aml_8h}{}\section{aml/common\+\_\+aml.h File Reference}
+\label{common__aml_8h}\index{aml/common\_aml.h@{aml/common\_aml.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}assert.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__macro__group_ga5b312ec7a12c5405c055344d00b90440}{S\+D\+K\+\_\+\+S32}}~0\+U              /$\ast$! S32 S\+D\+K 0.\+8.\+6 E\+A\+R. $\ast$/
+\begin{DoxyCompactList}\small\item\em S\+DK versions supported by A\+ML layer. \end{DoxyCompactList}\item 
+\#define {\bfseries S\+D\+K\+\_\+\+K\+S\+DK}~1\+U              /$\ast$! M\+C\+U\+Xpresso S\+D\+K 2.\+3. $\ast$/
+\item 
+\#define \mbox{\hyperlink{group__macro__group_ga320c0ce8fc9d4967696a15bfe0c17129}{S\+D\+K\+\_\+\+V\+E\+R\+S\+I\+ON}}~S\+D\+K\+\_\+\+K\+S\+DK
+\begin{DoxyCompactList}\small\item\em Selection of S\+DK version you are using (S32 S\+DK or K\+S\+DK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__macro__group_ga1e7b240858ecd40d070e5db823f56502}{A\+M\+L\+\_\+\+U\+N\+U\+S\+ED}}(x)~(void)(x)
+\begin{DoxyCompactList}\small\item\em Unused variable. This macro is used when some variable is not used in S\+DK. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__macro__group_gacf378012c67f22a3ce3f8ca5521dd400}{A\+M\+L\+\_\+\+A\+S\+S\+E\+RT}}(condition)~(assert(condition))
+\begin{DoxyCompactList}\small\item\em Assertion settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}\label{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}} 
+typedef uint32\+\_\+t \mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Type for peripheral instance number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__enum__group_ga9397b43bce49e439e9086551951eb555}\label{group__enum__group_ga9397b43bce49e439e9086551951eb555}} 
+enum {\bfseries aml\+\_\+groups} \{ \newline
+{\bfseries k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+S\+PI} = 101, 
+{\bfseries k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+T\+MR} = 102, 
+{\bfseries k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+I2C} = 103, 
+{\bfseries k\+Status\+Group\+\_\+\+A\+M\+L\+\_\+\+G\+P\+IO} = 104, 
+\newline
+{\bfseries k\+Status\+Group\+\_\+\+Reserved} = 110, 
+{\bfseries k\+Status\+Group\+\_\+\+Valve\+Driver} = 111, 
+{\bfseries k\+Status\+Group\+\_\+\+S\+HB} = 112, 
+{\bfseries k\+Status\+Group\+\_\+\+SF} = 113, 
+\newline
+{\bfseries k\+Status\+Group\+\_\+\+LZ} = 114, 
+{\bfseries k\+Status\+Group\+\_\+\+T\+PP} = 115, 
+{\bfseries k\+Status\+Group\+\_\+\+M\+V\+HB} = 116, 
+{\bfseries k\+Status\+Group\+\_\+\+L\+V\+HB} = 117, 
+\newline
+{\bfseries k\+Status\+Group\+\_\+\+B\+CC} = 118, 
+{\bfseries k\+Status\+Group\+\_\+\+A\+SL} = 119, 
+{\bfseries k\+Status\+Group\+\_\+\+F\+S65} = 120
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Constants and types definition common for A\+ML drivers. 

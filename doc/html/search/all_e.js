@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['observe',['OBSERVE',['../struct_u_s_b___type.html#a25809d192dc2d1e4b676d5b6c935973f',1,'USB_Type']]],
+  ['offset',['offset',['../struct__mem__align__control__block.html#ac681806181c80437cfab37335f62ff39',1,'_mem_align_control_block']]],
+  ['ofs',['OFS',['../struct_a_d_c___type.html#a9c229965c5de3a76f0f694f7f008bd27',1,'ADC_Type']]],
+  ['onebyfftlen',['onebyfftLen',['../structarm__cfft__radix2__instance__f32.html#acf295a7b97b7d48a9cae4d1ab5ed00f6',1,'arm_cfft_radix2_instance_f32::onebyfftLen()'],['../structarm__cfft__radix4__instance__f32.html#acf295a7b97b7d48a9cae4d1ab5ed00f6',1,'arm_cfft_radix4_instance_f32::onebyfftLen()']]],
+  ['osc0',['OSC0',['../group___o_s_c___peripheral___access___layer.html#gafcf06a8b76107b94e802b4db254e8bbc',1,'K32L2B31A.h']]],
+  ['osc0_5fbase',['OSC0_BASE',['../group___o_s_c___peripheral___access___layer.html#ga66f87e82bb3e71235bf89df7149e7be7',1,'K32L2B31A.h']]],
+  ['osc_5fbase_5faddrs',['OSC_BASE_ADDRS',['../group___o_s_c___peripheral___access___layer.html#ga31b4aa65d54d63cd13bdf2915e86f31a',1,'K32L2B31A.h']]],
+  ['osc_5fbase_5fptrs',['OSC_BASE_PTRS',['../group___o_s_c___peripheral___access___layer.html#ga46f69fcb9d660e18b5cbf51adbbcec78',1,'K32L2B31A.h']]],
+  ['osc_5fconfig_5ft',['osc_config_t',['../group__clock.html#ga7b42afca82c7234da7c1ccd5fc4d984b',1,'fsl_clock.h']]],
+  ['osc_5fcr_5ferclken',['OSC_CR_ERCLKEN',['../group___o_s_c___register___masks.html#gae1cba570f6b27f65bde9ad80457387ed',1,'K32L2B31A.h']]],
+  ['osc_5fcr_5ferefsten',['OSC_CR_EREFSTEN',['../group___o_s_c___register___masks.html#ga7475d176c4bae67579b611847b67c53c',1,'K32L2B31A.h']]],
+  ['osc_5fcr_5fsc16p',['OSC_CR_SC16P',['../group___o_s_c___register___masks.html#ga312c9e0891936e3b1a5e0f8f0caca4e9',1,'K32L2B31A.h']]],
+  ['osc_5fcr_5fsc2p',['OSC_CR_SC2P',['../group___o_s_c___register___masks.html#gadac6841e6bd13c6bc6e6d4caecf86a16',1,'K32L2B31A.h']]],
+  ['osc_5fcr_5fsc4p',['OSC_CR_SC4P',['../group___o_s_c___register___masks.html#gac2ce9a5b1c516b1416ee3709d405e4e2',1,'K32L2B31A.h']]],
+  ['osc_5fcr_5fsc8p',['OSC_CR_SC8P',['../group___o_s_c___register___masks.html#ga7b761b8bfa5dd396029c880348a7f81f',1,'K32L2B31A.h']]],
+  ['osc_5fmode_5ft',['osc_mode_t',['../group__clock.html#ga86e25a9d93f6b00c118c7f8eda32d67b',1,'fsl_clock.h']]],
+  ['osc_20peripheral_20access_20layer',['OSC Peripheral Access Layer',['../group___o_s_c___peripheral___access___layer.html',1,'']]],
+  ['osc_20register_20masks',['OSC Register Masks',['../group___o_s_c___register___masks.html',1,'']]],
+  ['osc_5ftype',['OSC_Type',['../struct_o_s_c___type.html',1,'']]],
+  ['oscer_5fconfig_5ft',['oscer_config_t',['../group__clock.html#ga3280fcfc08b1b4b0989197cc56239fb6',1,'fsl_clock.h']]],
+  ['oscerconfig',['oscerConfig',['../struct__osc__config.html#af37407a042780c0e65e57af58393c629',1,'_osc_config']]],
+  ['outputlogic',['outputLogic',['../struct__gpio__pin__config.html#ae25321cd13f1ed5254f722b0f3c64242',1,'_gpio_pin_config']]],
+  ['outputmode',['outputMode',['../struct__spi__master__config.html#a285cf929f1817b37a10f2afffc810ac8',1,'_spi_master_config']]],
+  ['outsrc',['outSrc',['../struct__mcglite__config.html#aaa8dafb0e23cd51917a168580f17b45a',1,'_mcglite_config']]]
+];

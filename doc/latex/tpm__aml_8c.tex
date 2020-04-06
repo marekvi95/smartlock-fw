@@ -1,0 +1,56 @@
+\hypertarget{tpm__aml_8c}{}\section{aml/tmr\+\_\+aml/tpm\+\_\+aml.c File Reference}
+\label{tpm__aml_8c}\index{aml/tmr\_aml/tpm\_aml.c@{aml/tmr\_aml/tpm\_aml.c}}
+{\ttfamily \#include \char`\"{}tmr\+\_\+aml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{tpm__aml_8c_a480e3e98ae6afd914aa5916228fa64fc}\label{tpm__aml_8c_a480e3e98ae6afd914aa5916228fa64fc}} 
+\#define \mbox{\hyperlink{tpm__aml_8c_a480e3e98ae6afd914aa5916228fa64fc}{T\+M\+R\+\_\+\+C\+N\+T\+\_\+\+M\+AX}}~65535U
+\begin{DoxyCompactList}\small\item\em Max. value of the counter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tpm__aml_8c_aa2688a7d6da563bf73cd2862053f6ae0}\label{tpm__aml_8c_aa2688a7d6da563bf73cd2862053f6ae0}} 
+\#define \mbox{\hyperlink{tpm__aml_8c_aa2688a7d6da563bf73cd2862053f6ae0}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+D\+E\+V\+\_\+\+C\+NT}}~F\+S\+L\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+S\+O\+C\+\_\+\+T\+P\+M\+\_\+\+C\+O\+U\+NT
+\begin{DoxyCompactList}\small\item\em Number of timer devices present on the M\+CU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__function__group_gacd35322aa62b00c8389236ab1c28de3b}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Init}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, const \mbox{\hyperlink{structtmr__sdk__config__t}{tmr\+\_\+sdk\+\_\+config\+\_\+t}} $\ast$sdk\+Config)
+\begin{DoxyCompactList}\small\item\em Configures the peripheral for basic operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gadd9f3c64bdb236775e67c2226527f20c}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Deinit}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Disables the timer clock. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__ksdk__common_gaaabdaf7ee58ca7269bd4bf24efcde092}{status\+\_\+t}} \mbox{\hyperlink{group__function__group_ga519c237aa1084801bf11b68d5a7478f2}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Fill\+Sdk\+Config}} (const \mbox{\hyperlink{structtmr__aml__config__t}{tmr\+\_\+aml\+\_\+config\+\_\+t}} $\ast$aml\+Config, \mbox{\hyperlink{structtmr__sdk__config__t}{tmr\+\_\+sdk\+\_\+config\+\_\+t}} $\ast$sdk\+Config, \mbox{\hyperlink{group__struct__group_ga2b5f2d9df9d1e36f051fe92e6c6f1905}{tmr\+\_\+sdk\+\_\+pwm\+\_\+ch\+\_\+config\+\_\+t}} $\ast$$\ast$chnl\+Pwm\+Param, \mbox{\hyperlink{structtmr__sdk__outcmp__ch__t}{tmr\+\_\+sdk\+\_\+outcmp\+\_\+ch\+\_\+t}} $\ast$$\ast$chnl\+Cmp\+Param, \mbox{\hyperlink{structtmr__sdk__incpt__ch__t}{tmr\+\_\+sdk\+\_\+incpt\+\_\+ch\+\_\+t}} $\ast$$\ast$chnl\+Incpt\+Param)
+\begin{DoxyCompactList}\small\item\em Fills S\+DK specific configuration structure according to independent A\+ML configuration. This function configures S32 S\+DK or K\+S\+DK configuration structure according S\+D\+K\+\_\+\+V\+E\+R\+S\+I\+ON form independent tmr\+Aml\+Config. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gaa3cc8cb5f7c82ecd755b6f274f6cd39c}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Default\+Config}} (\mbox{\hyperlink{group__struct__group_gaf1f378b0bcc8ef613858b973521fc013}{tmr\+\_\+config\+\_\+t}} $\ast$config)
+\begin{DoxyCompactList}\small\item\em This function fills the T\+PM configuration structure with the default settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga9ca82949c9aa24058f89d44b6e5ce44f}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Enable\+Interrupts}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint16\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Enables the selected timer interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga068c940f493532d19a7de4bf42264be7}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Disable\+Interrupts}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint16\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Disables the selected timer interrupts. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__function__group_gadbe5aa98c75287b62c5737f0bae6e68b}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Enabled\+Interrupts}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Gets the enabled timer interrupts. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__function__group_gab13a1129d27008d231d4f14ac6b756c6}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Status\+Flags}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Gets the timer status flags. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gabda9f28166544e2fc00f970327204261}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Clear\+Status\+Flags}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint16\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Clears the T\+PM status flags. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga6ada6000f053895016184421976d8b74}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Start\+Timer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Starts the counter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga8ef7bbe3180ad4f34ac8a3a8c7db9bd3}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Stop\+Timer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Stops the counter. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__function__group_gaa5bf50001a224cd4dc43250cdfd6d915}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Read\+Timer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Returns the content of counter register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_gaf082ed62ce28809934e491636f66d9d3}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Reset\+Timer}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Resets counter (counter is set to zero). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga4c66f25ed170fae0a0bc0341d7a6f58c}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Set\+Period\+Ticks}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint32\+\_\+t ticks)
+\begin{DoxyCompactList}\small\item\em Sets timer period (in timer ticks). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__function__group_ga785236cb13d536bfe7b59bd484de01aa}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Period\+Ticks}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance)
+\begin{DoxyCompactList}\small\item\em Returns timer period (in timer ticks). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__function__group_ga5931b9421575af77c832c14310375535}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Set\+Offset\+Ticks}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint8\+\_\+t channel, uint32\+\_\+t ticks)
+\begin{DoxyCompactList}\small\item\em Sets timer channel offset (in timer ticks). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__function__group_ga98c1f0d4ed77a3cbf909fafef40f89d3}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Offset\+Ticks}} (\mbox{\hyperlink{common__aml_8h_a562bd37c7d07adcedec5993bc0cd96e5}{aml\+\_\+instance\+\_\+t}} instance, uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Sets timer channel offset (in timer ticks). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__function__group_gabedb43ac302eff10bd4877838457a108}{T\+M\+R\+\_\+\+A\+M\+L\+\_\+\+Get\+Instance}} (const void $\ast$tmr\+Base)
+\begin{DoxyCompactList}\small\item\em Gets instance for timer module base pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+PM peripheral driver intended for M\+C\+U\+Xpresso S\+DK. 

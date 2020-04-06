@@ -1,0 +1,73 @@
+\hypertarget{struct__i2c__master__dma__handle}{}\section{\+\_\+i2c\+\_\+master\+\_\+dma\+\_\+handle Struct Reference}
+\label{struct__i2c__master__dma__handle}\index{\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}}
+
+
+I2C master D\+MA transfer structure.  
+
+
+
+
+{\ttfamily \#include $<$fsl\+\_\+i2c\+\_\+dma.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}{i2c\+\_\+master\+\_\+transfer\+\_\+t}} \mbox{\hyperlink{struct__i2c__master__dma__handle_a9f792796934731101c55954d82000811}{transfer}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct__i2c__master__dma__handle_a10e6d1f095e525fa85ffe957081ed7a7}{transfer\+Size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct__i2c__master__dma__handle_a0b57aa10271a66f3dc936bba1d2f3830}{state}}
+\item 
+\mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}} $\ast$ \mbox{\hyperlink{struct__i2c__master__dma__handle_a199347e0ec28f8597c9be48b5d0b8fec}{dma\+Handle}}
+\item 
+\mbox{\hyperlink{group__i2c__dma__driver_gaa04081e50be4d84531d2653c2db6c0f9}{i2c\+\_\+master\+\_\+dma\+\_\+transfer\+\_\+callback\+\_\+t}} \mbox{\hyperlink{struct__i2c__master__dma__handle_a03583428ccdcdc0747543ef2a09fddfe}{completion\+Callback}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__i2c__master__dma__handle_a2e294dd14122c554baa0665072b4ca7a}{user\+Data}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2C master D\+MA transfer structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__i2c__master__dma__handle_a03583428ccdcdc0747543ef2a09fddfe}\label{struct__i2c__master__dma__handle_a03583428ccdcdc0747543ef2a09fddfe}} 
+\index{\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}!completionCallback@{completionCallback}}
+\index{completionCallback@{completionCallback}!\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}}
+\subsubsection{\texorpdfstring{completionCallback}{completionCallback}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__i2c__dma__driver_gaa04081e50be4d84531d2653c2db6c0f9}{i2c\+\_\+master\+\_\+dma\+\_\+transfer\+\_\+callback\+\_\+t}} completion\+Callback}
+
+A callback function called after the D\+MA transfer finished. \mbox{\Hypertarget{struct__i2c__master__dma__handle_a199347e0ec28f8597c9be48b5d0b8fec}\label{struct__i2c__master__dma__handle_a199347e0ec28f8597c9be48b5d0b8fec}} 
+\index{\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}!dmaHandle@{dmaHandle}}
+\index{dmaHandle@{dmaHandle}!\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}}
+\subsubsection{\texorpdfstring{dmaHandle}{dmaHandle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__dma_gac4a65788d7e5762d16a41a50b2cd7956}{dma\+\_\+handle\+\_\+t}}$\ast$ dma\+Handle}
+
+The D\+MA handler used. \mbox{\Hypertarget{struct__i2c__master__dma__handle_a0b57aa10271a66f3dc936bba1d2f3830}\label{struct__i2c__master__dma__handle_a0b57aa10271a66f3dc936bba1d2f3830}} 
+\index{\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}!state@{state}}
+\index{state@{state}!\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily uint8\+\_\+t state}
+
+I2C master transfer status. \mbox{\Hypertarget{struct__i2c__master__dma__handle_a9f792796934731101c55954d82000811}\label{struct__i2c__master__dma__handle_a9f792796934731101c55954d82000811}} 
+\index{\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}!transfer@{transfer}}
+\index{transfer@{transfer}!\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}}
+\subsubsection{\texorpdfstring{transfer}{transfer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__i2c__driver_ga0e25c3c153992361c8d359a86b70d3c6}{i2c\+\_\+master\+\_\+transfer\+\_\+t}} transfer}
+
+I2C master transfer struct. \mbox{\Hypertarget{struct__i2c__master__dma__handle_a10e6d1f095e525fa85ffe957081ed7a7}\label{struct__i2c__master__dma__handle_a10e6d1f095e525fa85ffe957081ed7a7}} 
+\index{\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}!transferSize@{transferSize}}
+\index{transferSize@{transferSize}!\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}}
+\subsubsection{\texorpdfstring{transferSize}{transferSize}}
+{\footnotesize\ttfamily size\+\_\+t transfer\+Size}
+
+Total bytes to be transferred. \mbox{\Hypertarget{struct__i2c__master__dma__handle_a2e294dd14122c554baa0665072b4ca7a}\label{struct__i2c__master__dma__handle_a2e294dd14122c554baa0665072b4ca7a}} 
+\index{\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}!userData@{userData}}
+\index{userData@{userData}!\_i2c\_master\_dma\_handle@{\_i2c\_master\_dma\_handle}}
+\subsubsection{\texorpdfstring{userData}{userData}}
+{\footnotesize\ttfamily void$\ast$ user\+Data}
+
+A callback parameter passed to the callback function. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+drivers/fsl\+\_\+i2c\+\_\+dma.\+h\end{DoxyCompactItemize}

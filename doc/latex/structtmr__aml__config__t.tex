@@ -1,0 +1,40 @@
+\hypertarget{structtmr__aml__config__t}{}\section{tmr\+\_\+aml\+\_\+config\+\_\+t Struct Reference}
+\label{structtmr__aml__config__t}\index{tmr\_aml\_config\_t@{tmr\_aml\_config\_t}}
+
+
+A\+ML timer parameters available for superior drivers (pointers).  
+
+
+
+
+{\ttfamily \#include $<$tmr\+\_\+aml.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__globals__group_gad93992caaee2a5d6d2e0d2df4313a07f}{freq\+Hz}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__globals__group_ga4386243efbc69e706d1811c2e66da6fc}{src\+Clck\+\_\+\+Hz}}
+\item 
+\mbox{\hyperlink{group__enum__group_ga89574487805ce2171aa6f0168a3359a0}{tmr\+\_\+clk\+\_\+prescale\+\_\+t}} \mbox{\hyperlink{group__globals__group_gad3bdd8ae4e264dd89622660e550b16fc}{prescale}}
+\item 
+bool \mbox{\hyperlink{group__globals__group_gadc7a8cd026c457aa793b22295fef7373}{gtb\+Enabled}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__globals__group_ga3958cb513ef18a35e622c66e94fc99ea}{ch\+Pwm\+Cnt}}
+\item 
+\mbox{\hyperlink{structtmr__aml__pwm__ch__t}{tmr\+\_\+aml\+\_\+pwm\+\_\+ch\+\_\+t}} $\ast$ \mbox{\hyperlink{group__globals__group_ga4adfc517ee2b4d31e619344efd325f0e}{ch\+Pwm}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__globals__group_gaf1d6b2bc4b34fa572c7d75c01b9ee9a7}{ch\+Out\+Cmp\+Cnt}}
+\item 
+\mbox{\hyperlink{structtmr__aml__outcmp__ch__t}{tmr\+\_\+aml\+\_\+outcmp\+\_\+ch\+\_\+t}} $\ast$ \mbox{\hyperlink{group__globals__group_ga520708f7473b24225c209d85ad776794}{ch\+Out\+Cmp}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+ML timer parameters available for superior drivers (pointers). 
+
+These parameters are used in superior drivers (user selectable or needed by driver). Values from this structure are written to S\+DK specific configuration structures (original values are overwritten by these values) only if the pointer is not N\+U\+LL. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+aml/tmr\+\_\+aml/\mbox{\hyperlink{tmr__aml_8h}{tmr\+\_\+aml.\+h}}\end{DoxyCompactItemize}
