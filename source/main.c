@@ -84,6 +84,7 @@ int main(void) {
 	{
 		/* Error in Sigfox initialization. */
 		printf("An error occurred in SetupSigfoxDriver (%ld)\r\n", status);
+		displayText(1, "Sigfox NOK", "An error occurred in SetupSigfoxDriver");
 
 	}
 	else
@@ -96,6 +97,7 @@ int main(void) {
 		else
 		{
 			printf("Reading of Sigfox device info failed!");
+			displayText(1, "Sigfox NNOK", "Reading of Sigfox device info failed!");
 		}
 		if (status == kStatus_Success)
 		{
