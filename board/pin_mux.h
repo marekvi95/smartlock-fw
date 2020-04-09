@@ -25,9 +25,6 @@ extern "C" {
  */
 void BOARD_InitBootPins(void);
 
-#define SOPT4_TPM1CH0SRC_TPM1_CH0 0x00u /*!<@brief TPM1 channel 0 input capture source select: TPM1_CH0 signal */
-#define SOPT4_TPM2CH0SRC_TPM2_CH0 0x00u /*!<@brief TPM2 Channel 0 Input Capture Source Select: TPM2_CH0 signal */
-
 /*! @name PORTE24 (number 20), U2[7]/U10[4]/I2C0_SCL/I2C_NFC_SCL
   @{ */
 #define BOARD_INITPINS_I2C0_SCL_PORT PORTE /*!<@brief PORT device name: PORTE */
@@ -101,12 +98,6 @@ void BOARD_InitBootPins(void);
   @{ */
 /* @} */
 
-/*! @name PORTE31 (number 19), LED2/IN1A
-  @{ */
-#define BOARD_INITPINS_IN1A_PORT PORTE /*!<@brief PORT device name: PORTE */
-#define BOARD_INITPINS_IN1A_PIN 31U    /*!<@brief PORTE pin index: 31 */
-                                       /* @} */
-
 /*! @name PORTC5 (number 54), J1[15]/INT1_ACCEL/LCD_P25/BUTTON_1
   @{ */
 #define BOARD_INITPINS_INT1_ACCEL_PORT PORTC /*!<@brief PORT device name: PORTC */
@@ -119,20 +110,16 @@ void BOARD_InitBootPins(void);
 #define BOARD_INITPINS_BUTTON_2_PIN 6U     /*!<@brief PORTC pin index: 6 */
                                            /* @} */
 
-/*! @name PORTA12 (number 28), J1[8]/D3/IN1B
-  @{ */
-#define BOARD_INITPINS_IN1B_PORT PORTA /*!<@brief PORT device name: PORTA */
-#define BOARD_INITPINS_IN1B_PIN 12U    /*!<@brief PORTA pin index: 12 */
-                                       /* @} */
-
 /*! @name PORTA13 (number 29), J2[2]/D8/IN2A
   @{ */
+#define BOARD_INITPINS_IN2A_GPIO GPIOA /*!<@brief GPIO device name: GPIOA */
 #define BOARD_INITPINS_IN2A_PORT PORTA /*!<@brief PORT device name: PORTA */
 #define BOARD_INITPINS_IN2A_PIN 13U    /*!<@brief PORTA pin index: 13 */
                                        /* @} */
 
 /*! @name PORTB2 (number 37), J4[6]/A2/LCD_P2/IN2B
   @{ */
+#define BOARD_INITPINS_IN2B_GPIO GPIOB /*!<@brief GPIO device name: GPIOB */
 #define BOARD_INITPINS_IN2B_PORT PORTB /*!<@brief PORT device name: PORTB */
 #define BOARD_INITPINS_IN2B_PIN 2U     /*!<@brief PORTB pin index: 2 */
                                        /* @} */
@@ -185,6 +172,27 @@ void BOARD_InitBootPins(void);
 #define BOARD_INITPINS_POWER_STAT_PORT PORTC /*!<@brief PORT device name: PORTC */
 #define BOARD_INITPINS_POWER_STAT_PIN 4U     /*!<@brief PORTC pin index: 4 */
                                              /* @} */
+
+/*! @name PORTA12 (number 28), J1[8]/D3/IN1B
+  @{ */
+#define BOARD_INITPINS_IN1B_GPIO GPIOA /*!<@brief GPIO device name: GPIOA */
+#define BOARD_INITPINS_IN1B_PORT PORTA /*!<@brief PORT device name: PORTA */
+#define BOARD_INITPINS_IN1B_PIN 12U    /*!<@brief PORTA pin index: 12 */
+                                       /* @} */
+
+/*! @name PORTE31 (number 19), LED2/IN1A
+  @{ */
+#define BOARD_INITPINS_IN1A_GPIO GPIOE /*!<@brief GPIO device name: GPIOE */
+#define BOARD_INITPINS_IN1A_PORT PORTE /*!<@brief PORT device name: PORTE */
+#define BOARD_INITPINS_IN1A_PIN 31U    /*!<@brief PORTE pin index: 31 */
+                                       /* @} */
+
+/*! @name PORTA18 (number 32), EXTAL_32KHZ/PSAVE
+  @{ */
+#define BOARD_INITPINS_PSAVE_GPIO GPIOA /*!<@brief GPIO device name: GPIOA */
+#define BOARD_INITPINS_PSAVE_PORT PORTA /*!<@brief PORT device name: PORTA */
+#define BOARD_INITPINS_PSAVE_PIN 18U    /*!<@brief PORTA pin index: 18 */
+                                        /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.

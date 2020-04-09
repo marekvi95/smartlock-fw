@@ -63,10 +63,10 @@
                <pin_label pin_num="6" pin_signal="USB0_DM" label="J10[2]/USB_DM" identifier="USB0_DM"/>
                <pin_label pin_num="22" pin_signal="PTA0/TPM0_CH5/SWD_CLK" label="J11[4]/K32L2_SWD_CLK"/>
                <pin_label pin_num="25" pin_signal="PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO" label="J11[2]/SWD_DIO_TGTMCU"/>
-               <pin_label pin_num="32" pin_signal="EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0" label="EXTAL_32KHZ/PSAVE" identifier="EXTAL_32KHZ"/>
+               <pin_label pin_num="32" pin_signal="EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0" label="EXTAL_32KHZ/PSAVE" identifier="EXTAL_32KHZ;PSAVE"/>
                <pin_label pin_num="33" pin_signal="XTAL0/PTA19/LPUART1_TX/TPM_CLKIN1/LPTMR0_ALT1" label="XTAL_32KHZ" identifier="XTAL_32KHZ"/>
                <pin_label pin_num="34" pin_signal="PTA20/RESET_b" label="J11[10]/J3[6]/RESET/SW2"/>
-               <pin_label pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT" label="SW3/LLWU_P7/LCD_P23/BATT_C" identifier="SW3;BATT_C"/>
+               <pin_label pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT" label="SW3/LLWU_P7/LCD_P23/BATT_C" identifier="BATT_C"/>
                <pin_label pin_num="58" pin_signal="LCD_P41/ADC0_SE5b/PTD1/SPI0_SCK/TPM0_CH1/FXIO0_D1" label="U2[9]/U10[9]/INT2_ACCEL/INT1_MAG/LCD_P41/SPI_RF_SCK" identifier="INT2_ACCEL;INT1_MAG;SIGFOX_SCK"/>
                <pin_label pin_num="21" pin_signal="PTE25/TPM0_CH1/I2C0_SDA" label="U2[6]/U10[6]/I2C0_SDA/I2C_NFC_SDA" identifier="I2C0_SDA"/>
                <pin_label pin_num="20" pin_signal="PTE24/TPM0_CH0/I2C0_SCL" label="U2[7]/U10[4]/I2C0_SCL/I2C_NFC_SCL" identifier="I2C0_SCL"/>
@@ -81,7 +81,7 @@
                <pin_label pin_num="8" pin_signal="VREGIN" label="USB_REGIN" identifier="USB0_VREGIN"/>
                <pin_label pin_num="15" pin_signal="VREFL" label="GND"/>
                <pin_label pin_num="14" pin_signal="VREFH" label="J19[2]/P3V3_K32L2B"/>
-               <pin_label pin_num="19" pin_signal="PTE31/TPM0_CH4" label="LED2/IN1A" identifier="LED2;IN1A"/>
+               <pin_label pin_num="19" pin_signal="PTE31/TPM0_CH4" label="LED2/IN1A" identifier="IN1A"/>
                <pin_label pin_num="48" pin_signal="VLL3" label="J12[1]/P3V3_K32L2B"/>
                <pin_label pin_num="49" pin_signal="VLL2/LCD_P4/PTC20" label="TP12/LCD_P4/DP_DC" identifier="DP_DC"/>
                <pin_label pin_num="50" pin_signal="VLL1/LCD_P5/PTC21" label="TP10/LCD_P5/DP_LED" identifier="DP_BUSY"/>
@@ -140,21 +140,6 @@
                      </feature>
                   </dependency>
                   <dependency resourceType="Peripheral" resourceId="I2C1" description="Peripheral I2C1 is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
-                     <feature name="initialized" evaluation="equal">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="Peripheral" resourceId="TPM0" description="Peripheral TPM0 is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
-                     <feature name="initialized" evaluation="equal">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="Peripheral" resourceId="TPM1" description="Peripheral TPM1 is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
-                     <feature name="initialized" evaluation="equal">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="Peripheral" resourceId="TPM2" description="Peripheral TPM2 is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
                      <feature name="initialized" evaluation="equal">
                         <data>true</data>
                      </feature>
@@ -246,11 +231,9 @@
                   <pin peripheral="SWD" signal="DIO" pin_num="25" pin_signal="PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO"/>
                   <pin peripheral="I2C1" signal="SCL" pin_num="44" pin_signal="LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0"/>
                   <pin peripheral="I2C1" signal="SDA" pin_num="45" pin_signal="LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1"/>
-                  <pin peripheral="LLWU" signal="P, 7" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT"/>
-                  <pin peripheral="TPM0" signal="CH, 4" pin_num="19" pin_signal="PTE31/TPM0_CH4">
+                  <pin peripheral="LLWU" signal="P, 7" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT">
                      <pin_features>
-                        <pin_feature name="identifier" value="IN1A"/>
-                        <pin_feature name="direction" value="OUTPUT"/>
+                        <pin_feature name="identifier" value=""/>
                      </pin_features>
                   </pin>
                   <pin peripheral="LLWU" signal="P, 8" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3"/>
@@ -260,17 +243,12 @@
                         <pin_feature name="identifier" value="BUTTON_2"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="TPM1" signal="CH, 0" pin_num="28" pin_signal="PTA12/TPM1_CH0">
+                  <pin peripheral="GPIOA" signal="GPIO, 13" pin_num="29" pin_signal="PTA13/TPM1_CH1">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="TPM1" signal="CH, 1" pin_num="29" pin_signal="PTA13/TPM1_CH1">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="TPM2" signal="CH, 0" pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0">
+                  <pin peripheral="GPIOB" signal="GPIO, 2" pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                      </pin_features>
@@ -307,7 +285,6 @@
                   </pin>
                   <pin peripheral="GPIOC" signal="GPIO, 3" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT">
                      <pin_features>
-                        <pin_feature name="identifier" value="BATT_C"/>
                         <pin_feature name="direction" value="INPUT"/>
                         <pin_feature name="pull_enable" value="enable"/>
                      </pin_features>
@@ -317,6 +294,22 @@
                         <pin_feature name="identifier" value="POWER_STAT"/>
                         <pin_feature name="direction" value="INPUT"/>
                         <pin_feature name="pull_enable" value="enable"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOA" signal="GPIO, 12" pin_num="28" pin_signal="PTA12/TPM1_CH0">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOE" signal="GPIO, 31" pin_num="19" pin_signal="PTE31/TPM0_CH4">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOA" signal="GPIO, 18" pin_num="32" pin_signal="EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0">
+                     <pin_features>
+                        <pin_feature name="identifier" value="PSAVE"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
                      </pin_features>
                   </pin>
                </pins>
@@ -407,11 +400,7 @@
                   <pin peripheral="SUPPLY" signal="VSS, 2" pin_num="47" pin_signal="VSS136"/>
                   <pin peripheral="RCM" signal="RESET" pin_num="34" pin_signal="PTA20/RESET_b"/>
                   <pin peripheral="SWD" signal="DIO" pin_num="25" pin_signal="PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO"/>
-                  <pin peripheral="LLWU" signal="P, 7" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT">
-                     <pin_features>
-                        <pin_feature name="identifier" value="BATT_C"/>
-                     </pin_features>
-                  </pin>
+                  <pin peripheral="LLWU" signal="P, 7" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT"/>
                   <pin peripheral="LLWU" signal="P, 8" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3">
                      <pin_features>
                         <pin_feature name="identifier" value="POWER_STAT"/>
@@ -430,9 +419,17 @@
                         <pin_feature name="gpio_interrupt" value="kPORT_InterruptRisingEdge"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="GPIOC" signal="GPIO, 3" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT"/>
+                  <pin peripheral="GPIOC" signal="GPIO, 3" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
                   <pin peripheral="GPIOC" signal="GPIO, 4" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3"/>
-                  <pin peripheral="n/a" signal="disabled" pin_num="19" pin_signal="PTE31/TPM0_CH4"/>
+                  <pin peripheral="n/a" signal="disabled" pin_num="19" pin_signal="PTE31/TPM0_CH4">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
                   <pin peripheral="n/a" signal="disabled" pin_num="20" pin_signal="PTE24/TPM0_CH0/I2C0_SCL">
                      <pin_features>
                         <pin_feature name="identifier" value=""/>
@@ -801,7 +798,7 @@
             <component name="system" uuid="3030c1c4-1a7a-45b4-9742-a7429aff803c" type_id="system_54b53072540eeeb8f8e9343e71f28176">
                <config_set_global name="global_system_definitions"/>
             </component>
-            <component name="msg" uuid="3c0f22e7-8a04-47ef-bba3-a81e76da0e9e" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+            <component name="msg" uuid="b559f931-1f23-487a-8ec9-7ff6f36610f9" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
                <config_set_global name="global_messages"/>
             </component>
          </components>

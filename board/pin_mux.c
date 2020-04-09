@@ -54,10 +54,10 @@ pin_labels:
 - {pin_num: '6', pin_signal: USB0_DM, label: 'J10[2]/USB_DM', identifier: USB0_DM}
 - {pin_num: '22', pin_signal: PTA0/TPM0_CH5/SWD_CLK, label: 'J11[4]/K32L2_SWD_CLK'}
 - {pin_num: '25', pin_signal: PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO, label: 'J11[2]/SWD_DIO_TGTMCU'}
-- {pin_num: '32', pin_signal: EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0, label: EXTAL_32KHZ/PSAVE, identifier: EXTAL_32KHZ}
+- {pin_num: '32', pin_signal: EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0, label: EXTAL_32KHZ/PSAVE, identifier: EXTAL_32KHZ;PSAVE}
 - {pin_num: '33', pin_signal: XTAL0/PTA19/LPUART1_TX/TPM_CLKIN1/LPTMR0_ALT1, label: XTAL_32KHZ, identifier: XTAL_32KHZ}
 - {pin_num: '34', pin_signal: PTA20/RESET_b, label: 'J11[10]/J3[6]/RESET/SW2'}
-- {pin_num: '46', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, label: SW3/LLWU_P7/LCD_P23/BATT_C, identifier: SW3;BATT_C}
+- {pin_num: '46', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, label: SW3/LLWU_P7/LCD_P23/BATT_C, identifier: BATT_C}
 - {pin_num: '58', pin_signal: LCD_P41/ADC0_SE5b/PTD1/SPI0_SCK/TPM0_CH1/FXIO0_D1, label: 'U2[9]/U10[9]/INT2_ACCEL/INT1_MAG/LCD_P41/SPI_RF_SCK', identifier: INT2_ACCEL;INT1_MAG;SIGFOX_SCK}
 - {pin_num: '21', pin_signal: PTE25/TPM0_CH1/I2C0_SDA, label: 'U2[6]/U10[6]/I2C0_SDA/I2C_NFC_SDA', identifier: I2C0_SDA}
 - {pin_num: '20', pin_signal: PTE24/TPM0_CH0/I2C0_SCL, label: 'U2[7]/U10[4]/I2C0_SCL/I2C_NFC_SCL', identifier: I2C0_SCL}
@@ -72,7 +72,7 @@ pin_labels:
 - {pin_num: '8', pin_signal: VREGIN, label: USB_REGIN, identifier: USB0_VREGIN}
 - {pin_num: '15', pin_signal: VREFL, label: GND}
 - {pin_num: '14', pin_signal: VREFH, label: 'J19[2]/P3V3_K32L2B'}
-- {pin_num: '19', pin_signal: PTE31/TPM0_CH4, label: LED2/IN1A, identifier: LED2;IN1A}
+- {pin_num: '19', pin_signal: PTE31/TPM0_CH4, label: LED2/IN1A, identifier: IN1A}
 - {pin_num: '48', pin_signal: VLL3, label: 'J12[1]/P3V3_K32L2B'}
 - {pin_num: '49', pin_signal: VLL2/LCD_P4/PTC20, label: TP12/LCD_P4/DP_DC, identifier: DP_DC}
 - {pin_num: '50', pin_signal: VLL1/LCD_P5/PTC21, label: TP10/LCD_P5/DP_LED, identifier: DP_BUSY}
@@ -133,14 +133,12 @@ BOARD_InitPins:
   - {pin_num: '25', peripheral: SWD, signal: DIO, pin_signal: PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO}
   - {pin_num: '44', peripheral: I2C1, signal: SCL, pin_signal: LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0}
   - {pin_num: '45', peripheral: I2C1, signal: SDA, pin_signal: LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1}
-  - {pin_num: '46', peripheral: LLWU, signal: 'P, 7', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT}
-  - {pin_num: '19', peripheral: TPM0, signal: 'CH, 4', pin_signal: PTE31/TPM0_CH4, identifier: IN1A, direction: OUTPUT}
+  - {pin_num: '46', peripheral: LLWU, signal: 'P, 7', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, identifier: ''}
   - {pin_num: '53', peripheral: LLWU, signal: 'P, 8', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3}
   - {pin_num: '54', peripheral: LLWU, signal: 'P, 9', pin_signal: LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT}
   - {pin_num: '55', peripheral: LLWU, signal: 'P, 10', pin_signal: LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO, identifier: BUTTON_2}
-  - {pin_num: '28', peripheral: TPM1, signal: 'CH, 0', pin_signal: PTA12/TPM1_CH0, direction: OUTPUT}
-  - {pin_num: '29', peripheral: TPM1, signal: 'CH, 1', pin_signal: PTA13/TPM1_CH1, direction: OUTPUT}
-  - {pin_num: '37', peripheral: TPM2, signal: 'CH, 0', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0, direction: OUTPUT}
+  - {pin_num: '29', peripheral: GPIOA, signal: 'GPIO, 13', pin_signal: PTA13/TPM1_CH1, direction: OUTPUT}
+  - {pin_num: '37', peripheral: GPIOB, signal: 'GPIO, 2', pin_signal: LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0, direction: OUTPUT}
   - {pin_num: '22', peripheral: SWD, signal: CLK, pin_signal: PTA0/TPM0_CH5/SWD_CLK}
   - {pin_num: '52', peripheral: GPIOC, signal: 'GPIO, 23', pin_signal: VCAP1/LCD_P39/PTC23, identifier: SIGFOX_AK, direction: INPUT, pull_enable: enable}
   - {pin_num: '51', peripheral: GPIOC, signal: 'GPIO, 22', pin_signal: VCAP2/LCD_P6/PTC22, direction: OUTPUT}
@@ -148,10 +146,12 @@ BOARD_InitPins:
   - {pin_num: '49', peripheral: GPIOC, signal: 'GPIO, 20', pin_signal: VLL2/LCD_P4/PTC20, direction: OUTPUT}
   - {pin_num: '35', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, direction: INPUT, gpio_interrupt: kPORT_InterruptRisingEdge,
     pull_enable: enable}
-  - {pin_num: '46', peripheral: GPIOC, signal: 'GPIO, 3', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, identifier: BATT_C, direction: INPUT,
-    pull_enable: enable}
+  - {pin_num: '46', peripheral: GPIOC, signal: 'GPIO, 3', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, direction: INPUT, pull_enable: enable}
   - {pin_num: '53', peripheral: GPIOC, signal: 'GPIO, 4', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3, identifier: POWER_STAT, direction: INPUT,
     pull_enable: enable}
+  - {pin_num: '28', peripheral: GPIOA, signal: 'GPIO, 12', pin_signal: PTA12/TPM1_CH0, direction: OUTPUT}
+  - {pin_num: '19', peripheral: GPIOE, signal: 'GPIO, 31', pin_signal: PTE31/TPM0_CH4, direction: OUTPUT}
+  - {pin_num: '32', peripheral: GPIOA, signal: 'GPIO, 18', pin_signal: EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0, identifier: PSAVE, direction: OUTPUT}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -175,12 +175,40 @@ void BOARD_InitPins(void)
     /* Port E Clock Gate Control: Clock enabled */
     CLOCK_EnableClock(kCLOCK_PortE);
 
+    gpio_pin_config_t IN1B_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTA12 (pin 28)  */
+    GPIO_PinInit(BOARD_INITPINS_IN1B_GPIO, BOARD_INITPINS_IN1B_PIN, &IN1B_config);
+
+    gpio_pin_config_t IN2A_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTA13 (pin 29)  */
+    GPIO_PinInit(BOARD_INITPINS_IN2A_GPIO, BOARD_INITPINS_IN2A_PIN, &IN2A_config);
+
+    gpio_pin_config_t PSAVE_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTA18 (pin 32)  */
+    GPIO_PinInit(BOARD_INITPINS_PSAVE_GPIO, BOARD_INITPINS_PSAVE_PIN, &PSAVE_config);
+
     gpio_pin_config_t NFC_INT_config = {
         .pinDirection = kGPIO_DigitalInput,
         .outputLogic = 0U
     };
     /* Initialize GPIO functionality on pin PTB0 (pin 35)  */
     GPIO_PinInit(BOARD_INITPINS_NFC_INT_GPIO, BOARD_INITPINS_NFC_INT_PIN, &NFC_INT_config);
+
+    gpio_pin_config_t IN2B_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTB2 (pin 37)  */
+    GPIO_PinInit(BOARD_INITPINS_IN2B_GPIO, BOARD_INITPINS_IN2B_PIN, &IN2B_config);
 
     gpio_pin_config_t BATT_C_config = {
         .pinDirection = kGPIO_DigitalInput,
@@ -238,14 +266,24 @@ void BOARD_InitPins(void)
     /* Initialize GPIO functionality on pin PTE1 (pin 2)  */
     GPIO_PinInit(BOARD_INITPINS_SIGFOX_RST_GPIO, BOARD_INITPINS_SIGFOX_RST_PIN, &SIGFOX_RST_config);
 
+    gpio_pin_config_t IN1A_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTE31 (pin 19)  */
+    GPIO_PinInit(BOARD_INITPINS_IN1A_GPIO, BOARD_INITPINS_IN1A_PIN, &IN1A_config);
+
     /* PORTA0 (pin 22) is configured as SWD_CLK */
     PORT_SetPinMux(PORTA, 0U, kPORT_MuxAlt7);
 
-    /* PORTA12 (pin 28) is configured as TPM1_CH0 */
-    PORT_SetPinMux(BOARD_INITPINS_IN1B_PORT, BOARD_INITPINS_IN1B_PIN, kPORT_MuxAlt3);
+    /* PORTA12 (pin 28) is configured as PTA12 */
+    PORT_SetPinMux(BOARD_INITPINS_IN1B_PORT, BOARD_INITPINS_IN1B_PIN, kPORT_MuxAsGpio);
 
-    /* PORTA13 (pin 29) is configured as TPM1_CH1 */
-    PORT_SetPinMux(BOARD_INITPINS_IN2A_PORT, BOARD_INITPINS_IN2A_PIN, kPORT_MuxAlt3);
+    /* PORTA13 (pin 29) is configured as PTA13 */
+    PORT_SetPinMux(BOARD_INITPINS_IN2A_PORT, BOARD_INITPINS_IN2A_PIN, kPORT_MuxAsGpio);
+
+    /* PORTA18 (pin 32) is configured as PTA18 */
+    PORT_SetPinMux(BOARD_INITPINS_PSAVE_PORT, BOARD_INITPINS_PSAVE_PIN, kPORT_MuxAsGpio);
 
     /* PORTA20 (pin 34) is configured as RESET_b */
     PORT_SetPinMux(PORTA, 20U, kPORT_MuxAlt7);
@@ -266,8 +304,8 @@ void BOARD_InitPins(void)
                      /* Pull Enable: Internal pullup or pulldown resistor is enabled on the corresponding pin. */
                      | (uint32_t)(PORT_PCR_PE_MASK));
 
-    /* PORTB2 (pin 37) is configured as TPM2_CH0 */
-    PORT_SetPinMux(BOARD_INITPINS_IN2B_PORT, BOARD_INITPINS_IN2B_PIN, kPORT_MuxAlt3);
+    /* PORTB2 (pin 37) is configured as PTB2 */
+    PORT_SetPinMux(BOARD_INITPINS_IN2B_PORT, BOARD_INITPINS_IN2B_PIN, kPORT_MuxAsGpio);
 
     /* PORTC1 (pin 44) is configured as I2C1_SCL */
     PORT_SetPinMux(PORTC, 1U, kPORT_MuxAlt2);
@@ -356,18 +394,8 @@ void BOARD_InitPins(void)
     /* PORTE25 (pin 21) is configured as I2C0_SDA */
     PORT_SetPinMux(BOARD_INITPINS_I2C0_SDA_PORT, BOARD_INITPINS_I2C0_SDA_PIN, kPORT_MuxAlt5);
 
-    /* PORTE31 (pin 19) is configured as TPM0_CH4 */
-    PORT_SetPinMux(BOARD_INITPINS_IN1A_PORT, BOARD_INITPINS_IN1A_PIN, kPORT_MuxAlt3);
-
-    SIM->SOPT4 = ((SIM->SOPT4 &
-                   /* Mask bits to zero which are setting */
-                   (~(SIM_SOPT4_TPM1CH0SRC_MASK | SIM_SOPT4_TPM2CH0SRC_MASK)))
-
-                  /* TPM1 channel 0 input capture source select: TPM1_CH0 signal. */
-                  | SIM_SOPT4_TPM1CH0SRC(SOPT4_TPM1CH0SRC_TPM1_CH0)
-
-                  /* TPM2 Channel 0 Input Capture Source Select: TPM2_CH0 signal. */
-                  | SIM_SOPT4_TPM2CH0SRC(SOPT4_TPM2CH0SRC_TPM2_CH0));
+    /* PORTE31 (pin 19) is configured as PTE31 */
+    PORT_SetPinMux(BOARD_INITPINS_IN1A_PORT, BOARD_INITPINS_IN1A_PIN, kPORT_MuxAsGpio);
 }
 
 /* clang-format off */
@@ -388,15 +416,15 @@ BOARD_DisablePins:
   - {pin_num: '47', peripheral: SUPPLY, signal: 'VSS, 2', pin_signal: VSS136}
   - {pin_num: '34', peripheral: RCM, signal: RESET, pin_signal: PTA20/RESET_b}
   - {pin_num: '25', peripheral: SWD, signal: DIO, pin_signal: PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO}
-  - {pin_num: '46', peripheral: LLWU, signal: 'P, 7', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, identifier: BATT_C}
+  - {pin_num: '46', peripheral: LLWU, signal: 'P, 7', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT}
   - {pin_num: '53', peripheral: LLWU, signal: 'P, 8', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3, identifier: POWER_STAT}
   - {pin_num: '54', peripheral: LLWU, signal: 'P, 9', pin_signal: LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/CMP0_OUT}
   - {pin_num: '55', peripheral: LLWU, signal: 'P, 10', pin_signal: LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/SPI0_MISO, identifier: BUTTON_2}
   - {pin_num: '22', peripheral: SWD, signal: CLK, pin_signal: PTA0/TPM0_CH5/SWD_CLK}
   - {pin_num: '35', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0, direction: INPUT, gpio_interrupt: kPORT_InterruptRisingEdge}
-  - {pin_num: '46', peripheral: GPIOC, signal: 'GPIO, 3', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT}
+  - {pin_num: '46', peripheral: GPIOC, signal: 'GPIO, 3', pin_signal: LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT, identifier: ''}
   - {pin_num: '53', peripheral: GPIOC, signal: 'GPIO, 4', pin_signal: LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3}
-  - {pin_num: '19', peripheral: n/a, signal: disabled, pin_signal: PTE31/TPM0_CH4}
+  - {pin_num: '19', peripheral: n/a, signal: disabled, pin_signal: PTE31/TPM0_CH4, identifier: ''}
   - {pin_num: '20', peripheral: n/a, signal: disabled, pin_signal: PTE24/TPM0_CH0/I2C0_SCL, identifier: ''}
   - {pin_num: '21', peripheral: n/a, signal: disabled, pin_signal: PTE25/TPM0_CH1/I2C0_SDA}
   - {pin_num: '28', peripheral: n/a, signal: disabled, pin_signal: PTA12/TPM1_CH0, identifier: ''}
