@@ -9,7 +9,7 @@
 #define USER_H_
 
 #define USERS 2
-#define NAME_SIZE 10
+#define NAME_SIZE 12
 #define UID_SIZE 4
 #define KEY_SIZE 16
 
