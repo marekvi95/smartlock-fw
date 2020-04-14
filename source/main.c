@@ -56,10 +56,9 @@ int main(void) {
 	sf_device_info_t devInfo;
 	status_t status = kStatus_Success;
 
-	/* NFC record to be send via Sigfox (ended by '\0'). */
+	/* Sigfox initialization message */
 	unsigned char msg[] = "SigfoxInit";
-	/* Length of text record in "msg". Negative value if the record is not valid. */
-	uint32_t msgLen = sizeof(msg);
+	uint32_t msgLen = strlen((char*)msg);
 
 	/* Init board hardware. */
 	BOARD_InitBootPins(); /* Must configure pins before PMC_ClearPeriphIOIsolationFlag */
@@ -104,6 +103,7 @@ int main(void) {
 			SIGFOX_SendRecords(&sfDrvData, msg, msgLen);
 			/* Run the NFC task. */
 			displayText(1, "Sigfox OK", "initialization of NFC...");
+			setSigfox();
 			printf("\nRunning the NFC task.\n");
 			task_nfc(&sfDrvData);
 		}

@@ -33,7 +33,7 @@ struct User arr_user[USERS] = {
 		},
 };
 
-uint8_t getAuth(unsigned char* uid, unsigned char* authKey, char * name)
+uint8_t getAuth(unsigned char* uid, unsigned char* authKey, char* name)
 {
 	for(int i=0; i<USERS; i++)
 	{
