@@ -17,7 +17,7 @@
 #define SF_XTAL                     sfXtal276
 
 /* Runtime of the motor while locking/unlocking in milliseconds. */
-#define SF_MOTOR_RUNTIME_MS         25
+#define SF_MOTOR_RUNTIME_MS         2500
 
 /* Duty cycle of H-Bridge PWM (0-100). */
 #define SF_MOTOR_DUTY               90
