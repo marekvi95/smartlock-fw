@@ -76,15 +76,14 @@ int main(void) {
 	BOARD_InitBootPeripherals();
 
 	initDisplay();
-	displayText(1, "Init...", "please wait");
+	displayText("Init...", "please wait");
 
 	status = SIGFOX_SetupDriver(&sfDrvData);
 	if (status != kStatus_Success)
 	{
 		/* Error in Sigfox initialization. */
 		printf("An error occurred in SetupSigfoxDriver (%ld)\r\n", status);
-		displayText(1, "Sigfox NOK", "An error occurred in SetupSigfoxDriver");
-
+		displayText("Sigfox NOK", "An error occurred in SetupSigfoxDriver");
 	}
 	else
 	{
@@ -96,14 +95,14 @@ int main(void) {
 		else
 		{
 			printf("Reading of Sigfox device info failed!");
-			displayText(1, "Sigfox NOK", "Reading of Sigfox device info failed!");
+			displayText("Sigfox NOK", "Reading of Sigfox device info failed!");
 		}
 		if (status == kStatus_Success)
 		{
 			SIGFOX_SendRecords(&sfDrvData, msg, msgLen);
 			/* Run the NFC task. */
-			displayText(1, "Sigfox OK", "initialization of NFC...");
 			setSigfox();
+			displayText("Sigfox OK", "initialization of NFC...");
 			printf("\nRunning the NFC task.\n");
 			task_nfc(&sfDrvData);
 		}

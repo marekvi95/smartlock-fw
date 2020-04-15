@@ -121,9 +121,6 @@ static Status tml_Rx(uint8_t *pBuff, uint16_t buffLen, uint16_t *pBytesRead) {
 static Status tml_WaitForRx(uint32_t timeout) {
 	if (timeout == 0) {
 	//	put the MCU to sleep here
-	// 	NVIC_EnableIRQ(LLWU_IRQn);
-    // 	NVIC_EnableIRQ(LPTMR0_IRQn);
-    // 	NVIC_EnableIRQ(APP_WAKEUP_BUTTON_IRQ);
 	targetPowerMode = kAPP_PowerModeLls; /* Set up target power mode */
 	curPowerState = SMC_GetPowerModeState(SMC);
 	// APP_GetWakeupConfig(targetPowerMode);

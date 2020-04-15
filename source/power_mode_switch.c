@@ -16,6 +16,7 @@
 #include "pin_mux.h"
 #include "fsl_pmc.h"
 #include "fsl_debug_console.h"
+#include "display.h"
 
 /*******************************************************************************
  * Definitions
@@ -86,6 +87,7 @@ void LLWU_IRQHandler(void)
         PORT_ClearPinsInterruptFlags(BOARD_INITPINS_POWER_STAT_PORT, (1U << BOARD_INITPINS_POWER_STAT_PIN));
         LLWU_ClearExternalWakeupPinFlag(LLWU, LLWU_WAKEUP_POWERSTAT_PIN);
         PRINTF("LLWU Wakeup by Power stat Pin.\r\n");
+        triggerCharging();
     }
     /* If wakeup by battery pin. */
     if (LLWU_GetExternalWakeupPinFlag(LLWU, LLWU_WAKEUP_BATTERY_PIN))
@@ -94,22 +96,26 @@ void LLWU_IRQHandler(void)
         PORT_ClearPinsInterruptFlags(BOARD_INITPINS_BATT_C_PORT, (1U << BOARD_INITPINS_BATT_C_PIN));
         LLWU_ClearExternalWakeupPinFlag(LLWU, LLWU_WAKEUP_BATTERY_PIN);
         PRINTF("LLWU Wakeup by battery Pin.\r\n");
+        displayText("BATTERY LOW", "Please charge the battery, voltage below 2.7V");
     }
 }
 
 void PORTC_IRQHandler(void)
 {
-    if ((1U << BOARD_INITPINS_POWER_STAT_PIN) & PORT_GetPinsInterruptFlags(BOARD_INITPINS_POWER_STAT_PORT))
+    /* Charging interrupt */
+	if ((1U << BOARD_INITPINS_POWER_STAT_PIN) & PORT_GetPinsInterruptFlags(BOARD_INITPINS_POWER_STAT_PORT))
     {
-        /* Disable interrupt. */
-        PORT_SetPinInterruptConfig(BOARD_INITPINS_POWER_STAT_PORT, BOARD_INITPINS_POWER_STAT_PIN, kPORT_InterruptOrDMADisabled);
-        PORT_ClearPinsInterruptFlags(BOARD_INITPINS_POWER_STAT_PORT, (1U << BOARD_INITPINS_POWER_STAT_PIN));
+//        /* Disable interrupt. */
+//        PORT_SetPinInterruptConfig(BOARD_INITPINS_POWER_STAT_PORT, BOARD_INITPINS_POWER_STAT_PIN, kPORT_InterruptOrDMADisabled);
+        triggerCharging();
+		PORT_ClearPinsInterruptFlags(BOARD_INITPINS_POWER_STAT_PORT, (1U << BOARD_INITPINS_POWER_STAT_PIN));
     }
     /* IRQ battery low voltage */
     if ((1U << BOARD_INITPINS_BATT_C_PIN) & PORT_GetPinsInterruptFlags(BOARD_INITPINS_BATT_C_PORT))
     {
-        /* Disable interrupt. */
-        PORT_SetPinInterruptConfig(BOARD_INITPINS_BATT_C_PORT, BOARD_INITPINS_BATT_C_PIN, kPORT_InterruptOrDMADisabled);
+//        /* Disable interrupt. */
+//        PORT_SetPinInterruptConfig(BOARD_INITPINS_BATT_C_PORT, BOARD_INITPINS_BATT_C_PIN, kPORT_InterruptOrDMADisabled);
+    	displayText("BATTERY LOW", "Please charge the battery, voltage below 2.7V");
         PORT_ClearPinsInterruptFlags(BOARD_INITPINS_BATT_C_PORT, (1U << BOARD_INITPINS_BATT_C_PIN));
     }
 }

@@ -49,7 +49,7 @@ void initDisplay(void)
 	EPD_Clear();
 }
 
-void displayText(uint8_t locked, const char * main_text, const char * second_text)
+void displayText(const char * main_text, const char * second_text)
 {
 	static unsigned char BlackImage[IMAGE_SIZE];
 	static char textBuff[6];
@@ -74,16 +74,6 @@ void displayText(uint8_t locked, const char * main_text, const char * second_tex
 	textBuff[4] = status.charging ? BATT_CHARGING : EMPTY_CHAR;
 
 	Paint_DrawString_EN(2, 2, textBuff, &Font24, WHITE, BLACK);
-
-//	if(status.locked)
-//	{
-//		Paint_DrawString_EN(2, 2, LOCKED_STRING, &Font24, WHITE, BLACK);
-//	}
-//	else
-//	{
-//		Paint_DrawString_EN(2,2, UNLOCKED_STRING ,&Font24, WHITE, BLACK);
-//	}
-
 	Paint_DrawString_EN(30,30, main_text, &Font24, WHITE, BLACK);
 
 	if (second_text != NULL)
@@ -122,5 +112,18 @@ void setBattery(uint8_t battery)
 	status.battery = battery;
 }
 
+void triggerCharging()
+{
+	status.charging = !status.charging;
+
+	if (status.charging)
+	{
+		displayText("Charging", "Charging started");
+	}
+	else
+	{
+		displayText("Charging stop", "Charging aborted");
+	}
+}
 
 

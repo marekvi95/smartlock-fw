@@ -26,7 +26,7 @@ unsigned mode = 0 | NXPNCI_MODE_RW;
 /* Turns the motor for a while in order to unlock the mechanical lock. */
 inline static void unlock(void)
 {
-	displayText(0, "Unlocking", "Driving motor");
+	displayText("Unlocking", "Driving motor");
 	PRINTF("UNLOCKING \n");
 	__disable_irq();
 	GPIO_PinWrite(BOARD_INITPINS_PSAVE_GPIO, BOARD_INITPINS_PSAVE_PIN, 0);
@@ -45,7 +45,7 @@ inline static void unlock(void)
 /* Turns the motor for a while in order to lock the mechanical lock. */
 inline static void lock(void)
 {
-	displayText(0, "Locking", "Driving motor");
+	displayText("Locking", "Driving motor");
 	PRINTF("LOCKING \n");
 	__disable_irq();
 	GPIO_PinWrite(BOARD_INITPINS_PSAVE_GPIO, BOARD_INITPINS_PSAVE_PIN, 0);
@@ -102,7 +102,7 @@ uint8_t lockApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
     timeoutMs -= 2000;
 
     /* Send data via Sigfox */
-    displayText(1, "Sending...", (char*)nfcMsg);
+    displayText("Sending...", (char*)nfcMsg);
     PRINTF("   Sending \"%s\" via Sigfox\n\n", nfcMsg);
 
 
@@ -135,7 +135,7 @@ uint8_t lockApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
     }
     else
     {
-    	displayText(1, "TX Failed", "Waiting 2s");
+    	displayText("TX Failed", "Waiting 2s");
     	PRINTF("Transmission failed\n\n");
     	WAIT_AML_WaitMs(2000);
 
@@ -167,7 +167,7 @@ status_t readKey(unsigned char * key)
     status |= NxpNci_ReaderTagCmd(Auth, sizeof(Auth), Resp, &RespSize);
     if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
     {
-    	displayText(0, "Auth. Error", "Try it again, authentication failed");
+    	displayText("Auth. Error", "Try it again, authentication failed");
     	PRINTF(" Authenticate sector %d failed with error 0x%02x\n", Auth[1], Resp[RespSize-1]);
         return status;
     }
@@ -178,7 +178,7 @@ status_t readKey(unsigned char * key)
     status |= NxpNci_ReaderTagCmd(Read, sizeof(Read), Resp, &RespSize);
     if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
     {
-    	displayText(0, "Key read NOK", "Key could not be read, try it again");
+    	displayText("Key read NOK", "Key could not be read, try it again");
     	PRINTF(" Read block %d failed with error 0x%02x\n", Read[2], Resp[RespSize-1]);
         return status;
     }
@@ -239,13 +239,13 @@ void readTag(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 		    }
 		    else
 		    {
-		    	displayText(0, "REFUSED", "Try it again");
+		    	displayText("REFUSED", "Try it again");
 		    }
 		}
 		else
 		{
 			PRINTF(" - UID is not approved\n");
-			displayText(0, "UID NOK", "Trespassers will be prosecuted");
+			displayText("UID NOK", "Trespassers will be prosecuted");
 		}
 	}
 	else
@@ -289,7 +289,6 @@ void task_nfc_reader(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 void task_nfc(sf_drv_data_t* sfDriverConfig)
 {
     NxpNci_RfIntf_t RfInterface;
-    bool doorClosed = false;
 
     /* Open connection to NXPNCI device */
     if (NxpNci_Connect() == NFC_ERROR) {
@@ -321,7 +320,7 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
 
     while(1)
     {
-        displayText(doorClosed, default_text, "waiting for the tag discovery");
+        displayText(default_text, "waiting for the tag discovery");
     	PRINTF("\nWAITING FOR DEVICE DISCOVERY\n");
 
         /* Wait until a peer is discovered */
