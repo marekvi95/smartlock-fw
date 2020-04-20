@@ -490,7 +490,7 @@ static void NxpNci_PresenceCheck(NxpNci_RfIntf_t RfIntf)
     case PROT_MIFARE:
         do
         {
-            Sleep(500);
+            Sleep(50); // change sleep 500 to 50
             /* Deactivate target */
             NxpNci_HostTransceive(NCIDeactivate, sizeof(NCIDeactivate), Answer, sizeof(Answer), &AnswerSize);
             NxpNci_WaitForReception(Answer, sizeof(Answer), &AnswerSize, TIMEOUT_100MS);
