@@ -124,13 +124,13 @@ static Status tml_WaitForRx(uint32_t timeout) {
 	targetPowerMode = kAPP_PowerModeLls; /* Set up target power mode */
 	curPowerState = SMC_GetPowerModeState(SMC);
 	// APP_GetWakeupConfig(targetPowerMode);
-	APP_PowerPreSwitchHook(curPowerState, targetPowerMode);
-	APP_SetWakeupConfig(targetPowerMode);
-	APP_PowerModeSwitch(curPowerState, targetPowerMode); /* Go sleep */
-	APP_PowerPostSwitchHook(curPowerState, targetPowerMode); /* After wakeup hook */
+//	APP_PowerPreSwitchHook(curPowerState, targetPowerMode);
+//	APP_SetWakeupConfig(targetPowerMode);
+//	APP_PowerModeSwitch(curPowerState, targetPowerMode); /* Go sleep */
+//	APP_PowerPostSwitchHook(curPowerState, targetPowerMode); /* After wakeup hook */
 
-//	 while ((GPIO_PinRead(BOARD_INITPINS_NFC_INT_GPIO, BOARD_INITPINS_NFC_INT_PIN) == 0))
-//	 	;
+	 while ((GPIO_PinRead(BOARD_INITPINS_NFC_INT_GPIO, BOARD_INITPINS_NFC_INT_PIN) == 0))
+	 	;
 	} else {
 		int16_t to = timeout;
 		while ((GPIO_PinRead(BOARD_INITPINS_NFC_INT_GPIO, BOARD_INITPINS_NFC_INT_PIN) == 0)) {
