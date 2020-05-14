@@ -12,6 +12,8 @@
 #include <stdint.h>
 #include <string.h>
 
+#include "fsl_flash.h"
+
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
@@ -25,6 +27,16 @@
 /*******************************************************************************
  * Variables
  ******************************************************************************/
+
+/*! @brief Flash driver Structure */
+static flash_config_t s_flashDriver;
+/*! @brief Flash cache driver Structure */
+static ftfx_cache_config_t s_cacheDriver;
+/*! @brief Buffer for program */
+static uint32_t s_buffer[BUFFER_LEN];
+/*! @brief Buffer for readback */
+static uint32_t s_buffer_rbc[BUFFER_LEN];
+
 typedef struct {
 	unsigned char mifareKey[MIFARE_SIZE];
 	unsigned char authKey[KEY_SIZE];
@@ -202,6 +214,75 @@ uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifar
 	return -1;
 }
 
+uint8_t initFlash()
+{	
+	ftfx_security_state_t securityStatus = kFTFx_SecurityStateNotSecure; /* Return protection status */
+    status_t result;    /* Return code from each flash driver function */
+    uint32_t destAdrss; /* Address of the target location */
+    uint32_t i, failAddr, failDat;
+
+    uint32_t pflashBlockBase  = 0;
+    uint32_t pflashTotalSize  = 0;
+    uint32_t pflashSectorSize = 0;
+
+    /* Clean up Flash, Cache driver Structure*/
+    memset(&s_flashDriver, 0, sizeof(flash_config_t));
+    memset(&s_cacheDriver, 0, sizeof(ftfx_cache_config_t));
+
+    /* Setup flash driver structure for device and initialize variables. */
+    result = FLASH_Init(&s_flashDriver);
+    if (kStatus_FTFx_Success != result)
+    {
+        printf("Error during flash initialization\n");
+		return -1;
+    }
+    /* Setup flash cache driver structure for device and initialize variables. */
+    result = FTFx_CACHE_Init(&s_cacheDriver);
+    if (kStatus_FTFx_Success != result)
+    {
+        printf("Error during cache initialization\n");
+		return -1;
+    }
+    /* Get flash properties*/
+    FLASH_GetProperty(&s_flashDriver, kFLASH_PropertyPflash0BlockBaseAddr, &pflashBlockBase);
+    FLASH_GetProperty(&s_flashDriver, kFLASH_PropertyPflash0TotalSize, &pflashTotalSize);
+    FLASH_GetProperty(&s_flashDriver, kFLASH_PropertyPflash0SectorSize, &pflashSectorSize);
+
+    /* Print flash information - PFlash. */
+    PRINTF("\r\n PFlash Information: ");
+    PRINTF("\r\n Total Program Flash Size:\t%d KB, Hex: (0x%x)", (pflashTotalSize / 1024), pflashTotalSize);
+    PRINTF("\r\n Program Flash Sector Size:\t%d KB, Hex: (0x%x) ", (pflashSectorSize / 1024), pflashSectorSize);
+
+    /* Check security status. */
+    result = FLASH_GetSecurityState(&s_flashDriver, &securityStatus);
+    if (kStatus_FTFx_Success != result)
+    {
+    	printf("Cannot get flash security status\n");
+		return -1;
+    }
+    /* Print security status. */
+    switch (securityStatus)
+    {
+        case kFTFx_SecurityStateNotSecure:
+            PRINTF("\r\n Flash is UNSECURE!");
+            break;
+        case kFTFx_SecurityStateBackdoorEnabled:
+            PRINTF("\r\n Flash is SECURE, BACKDOOR is ENABLED!");
+            break;
+        case kFTFx_SecurityStateBackdoorDisabled:
+            PRINTF("\r\n Flash is SECURE, BACKDOOR is DISABLED!");
+            break;
+        default:
+            break;
+    }
+    PRINTF("\r\n");
+
+    /* Test pflash basic opeation only if flash is unsecure. */
+    if (kFTFx_SecurityStateNotSecure == securityStatus)
+    {
+        /* Pre-preparation work about flash Cache/Prefetch/Speculation. */
+        FTFx_CACHE_ClearCachePrefetchSpeculation(&s_cacheDriver, true);
+}
 
 int main()
 {
