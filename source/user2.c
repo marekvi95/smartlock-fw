@@ -22,20 +22,21 @@ typedef struct {
 	unsigned char uid[UID_SIZE];
 } user_t;
 
-user_t arr_user[USERS];
-unsigned char i = 0;
-user_t (*user_array_ptr)[];
+static user_t arr_user[USERS];
+static uint8_t i;
+static user_t (*user_array_ptr)[];
 
-const unsigned char default_mifare[MIFARE_SIZE] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
-const unsigned char default_uid[UID_SIZE] = {0x00, 0x00, 0x00, 0x00};
-const unsigned char master_uid[UID_SIZE] = {0x45, 0x75, 0x65, 0x2a};
-const unsigned char master_key[KEY_SIZE] = {
+static const unsigned char default_mifare[MIFARE_SIZE] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
+static const unsigned char default_uid[UID_SIZE] = {0x00, 0x00, 0x00, 0x00};
+static const unsigned char master_uid[UID_SIZE] = {0x45, 0x75, 0x65, 0x2a};
+static const unsigned char master_key[KEY_SIZE] = {
 		0x42, 0x54, 0x69, 0x63,
 		0x69, 0x6e, 0x6f, 0x43,
 		0x41, 0x00, 0x00, 0x00,
 		0x00, 0x00, 0x00, 0x00};
 
-const unsigned char default_keys[USERS][KEY_SIZE] = {
+/** Array with pre-generated random keys (passwords) */
+static const unsigned char default_keys[USERS][KEY_SIZE] = {
 		{0x3e, 0x83, 0x7a, 0xee, 0x93, 0x14, 0xdf, 0xb, 0x12, 0xe, 0xd4, 0x12, 0x56, 0xcf, 0x9a, 0x51},
 		{0x43, 0x58, 0x69, 0x4d, 0xe6, 0x97, 0x21, 0xbb, 0xd2, 0x78, 0x83, 0xf4, 0x98, 0xc3, 0xfa, 0xc9},
 		{0xd9, 0xce, 0x18, 0x3a, 0x94, 0xf3, 0x25, 0xe5, 0xec, 0xfd, 0x2a, 0x70, 0xc5, 0xe8, 0x5d, 0x9f},
@@ -70,6 +71,14 @@ const unsigned char default_keys[USERS][KEY_SIZE] = {
 		{0xd3, 0x4, 0xec, 0x5a, 0xde, 0xc4, 0xb7, 0x36, 0xd, 0xa9, 0xc3, 0x69, 0x97, 0x53, 0x58, 0x14},
 };
 
+/**
+ * @brief Initialize database of users, first user in the database is Master
+ * 
+ * Master user has index 0 and ability to add other users to the DB
+ * mifareKey - key for mifare authentication
+ * authKey - key/password saved on tag for user authentication
+ * uid - unique identification of Mifare tag
+ */
 void initDB()
 {
 	memcpy(arr_user[0].mifareKey, default_mifare, MIFARE_SIZE);
@@ -84,6 +93,10 @@ void initDB()
 	}
 }
 
+/**
+ * @brief Prints database of users
+ * 
+ */
 void printDB()
 {
 	for (i=0; i<USERS; i++)
@@ -97,6 +110,12 @@ void printDB()
 	}
 }
 
+/**
+ * @brief Insert user to the first free position in the DB
+ * 
+ * @param uid pointer to array with UID
+ * @return uint8_t 0 if user was inserted successfuly or -1 if the user is already there
+ */
 uint8_t insertUser(const unsigned char * uid)
 {
 	for (i=1; i<USERS; i++)
@@ -115,9 +134,17 @@ uint8_t insertUser(const unsigned char * uid)
   return -1;
 }
 
+/**
+ * @brief Get auth key and mifare key of the user
+ * 
+ * @param uid unique identification of the user (tag)
+ * @param authKey authoritzation key saved on a card
+ * @param mifareKey mifare key
+ * @return uint8_t returns True if uid is in the DB
+ */
 uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifareKey)
 {
-	for(int i=0; i<USERS; i++)
+	for(i=0; i<USERS; i++)
 	{
 		if (memcmp(arr_user[i].uid, uid, UID_SIZE) == 0)
 		{
@@ -126,7 +153,7 @@ uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifar
 			return 1;
 		}
 	}
-	return 0;
+	return -1;
 }
 
 
