@@ -70,57 +70,58 @@ const unsigned char default_keys[USERS][KEY_SIZE] = {
 		{0xd3, 0x4, 0xec, 0x5a, 0xde, 0xc4, 0xb7, 0x36, 0xd, 0xa9, 0xc3, 0x69, 0x97, 0x53, 0x58, 0x14},
 };
 
-void initDB(user_t (*user_array_ptr)[])
+void initDB()
 {
-	memcpy((*user_array_ptr)[0].mifareKey, default_mifare, MIFARE_SIZE);
-	memcpy((*user_array_ptr)[0].authKey, master_key, KEY_SIZE);
-	memcpy((*user_array_ptr)[0].uid, master_uid, UID_SIZE);
+	memcpy(arr_user[0].mifareKey, default_mifare, MIFARE_SIZE);
+	memcpy(arr_user[0].authKey, master_key, KEY_SIZE);
+	memcpy(arr_user[0].uid, master_uid, UID_SIZE);
 
 	for (i=1; i<USERS; i++)
 	{
-		memcpy((*user_array_ptr)[i].mifareKey, default_mifare, MIFARE_SIZE);
-		memcpy((*user_array_ptr)[i].authKey, default_keys[i], KEY_SIZE);
-		memcpy((*user_array_ptr)[i].uid, default_uid, UID_SIZE);
+		memcpy(arr_user[i].mifareKey, default_mifare, MIFARE_SIZE);
+		memcpy(arr_user[i].authKey, default_keys[i], KEY_SIZE);
+		memcpy(arr_user[i].uid, default_uid, UID_SIZE);
 	}
 }
 
-void printDB(user_t (*user_array_ptr)[])
+void printDB()
 {
 	for (i=0; i<USERS; i++)
 	{
 		printf("Mifare Key: ");
-		print_buf(" ", (*user_array_ptr)[i].mifareKey, MIFARE_SIZE);
+		print_buf(" ", arr_user[i].mifareKey, MIFARE_SIZE);
 		printf("authKey: ");
-		print_buf(" ", (*user_array_ptr)[i].authKey, KEY_SIZE);
+		print_buf(" ", arr_user[i].authKey, KEY_SIZE);
 		printf("UID: ");
-		print_buf(" ", (*user_array_ptr)[i].uid, UID_SIZE);
+		print_buf(" ", arr_user[i].uid, UID_SIZE);
 	}
 }
 
-uint8_t insertUser(user_t (*user_array_ptr)[], const unsigned char * uid)
+uint8_t insertUser(const unsigned char * uid)
 {
 	for (i=1; i<USERS; i++)
 	{
-		if (memcmp((*user_array_ptr)[i].uid, uid, UID_SIZE) == 0)
+		if (memcmp(arr_user[i].uid, uid, UID_SIZE) == 0)
 		{
 			printf("UID already in DB\n");
 			return -1;
 		}
-		else if(memcmp((*user_array_ptr)[i].uid, default_uid, UID_SIZE) == 0)
+		else if(memcmp(arr_user[i].uid, default_uid, UID_SIZE) == 0)
 		{
-			memcpy((*user_array_ptr)[i].uid, uid, UID_SIZE);
+			memcpy(arr_user[i].uid, uid, UID_SIZE);
 			return 0;
 		}
 	}
+  return -1;
 }
 
-uint8_t getAuth(unsigned char* uid, unsigned char* authKey, char* name)
+uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifareKey)
 {
 	for(int i=0; i<USERS; i++)
 	{
 		if (memcmp(arr_user[i].uid, uid, UID_SIZE) == 0)
 		{
-            memcpy(name, arr_user[i].name, NAME_SIZE);
+            memcpy(mifareKey, arr_user[i].mifareKey, MIFARE_SIZE);
             memcpy(authKey, arr_user[i].authKey, KEY_SIZE);
 			return 1;
 		}
@@ -135,10 +136,10 @@ int main()
 	const unsigned char uid1[UID_SIZE] = {0x10, 0x20, 0x30, 0x40};
 	printf("size of arr_user: %lu\n", sizeof(arr_user));
 
-	initDB(&arr_user);
-	insertUser(&arr_user, uid1);
-	insertUser(&arr_user, uid1);
-	printDB(&arr_user);
+	initDB();
+	insertUser(uid1);
+	insertUser(uid1);
+	printDB();
 
 	return 0;
 }
