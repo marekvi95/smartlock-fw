@@ -5,10 +5,16 @@
  *      Author: nxf46245
  */
 
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
 
+/*******************************************************************************
+ * Definitions
+ ******************************************************************************/
 #define USERS 32
 #define MIFARE_SIZE 6
 #define UID_SIZE 4
@@ -16,6 +22,9 @@
 
 #define print_buf(x,y,z)  {int loop; printf(x); for(loop=0;loop<z;loop++) printf("%.2x ", y[loop]); printf("\n");}
 
+/*******************************************************************************
+ * Variables
+ ******************************************************************************/
 typedef struct {
 	unsigned char mifareKey[MIFARE_SIZE];
 	unsigned char authKey[KEY_SIZE];
@@ -70,6 +79,10 @@ static const unsigned char default_keys[USERS][KEY_SIZE] = {
 		{0xd9, 0xce, 0x18, 0x3a, 0x94, 0xf3, 0x25, 0xe5, 0xec, 0xfd, 0x2a, 0x70, 0xc5, 0xe8, 0x5d, 0x9f},
 		{0xd3, 0x4, 0xec, 0x5a, 0xde, 0xc4, 0xb7, 0x36, 0xd, 0xa9, 0xc3, 0x69, 0x97, 0x53, 0x58, 0x14},
 };
+
+/*******************************************************************************
+ * Code
+ ******************************************************************************/
 
 /**
  * @brief Initialize database of users, first user in the database is Master
@@ -135,6 +148,32 @@ uint8_t insertUser(const unsigned char * uid)
 }
 
 /**
+ * @brief delete UID from the DB (replace it with default UID)
+ * 
+ * @param uid pointer to array with UID
+ * @return uint8_t 0 if user was deleted successfuly
+ */
+uint8_t deleteUser(const unsigned char * uid)
+{
+	if (memcmp(uid, default_uid, UID_SIZE) == 0)
+	{
+		printf("Error: cannot delete default UID\n");
+		return -1;
+	}
+	for (i=1; i<USERS; i++)
+	{
+		if (memcmp(arr_user[i].uid, uid, UID_SIZE) == 0)
+		{
+			memcpy(arr_user[i].uid, default_uid, UID_SIZE);
+			printf("UID deleted\n");
+			return 1;
+		}
+	}
+  return -1;
+}
+
+
+/**
  * @brief Get auth key and mifare key of the user
  * 
  * @param uid unique identification of the user (tag)
@@ -144,8 +183,15 @@ uint8_t insertUser(const unsigned char * uid)
  */
 uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifareKey)
 {
+	if (memcmp(uid, default_uid, UID_SIZE) == 0)
+	{
+			printf("Error: cannot get authentication for default UID\n");
+			return -1;
+	}
+
 	for(i=0; i<USERS; i++)
 	{
+
 		if (memcmp(arr_user[i].uid, uid, UID_SIZE) == 0)
 		{
             memcpy(mifareKey, arr_user[i].mifareKey, MIFARE_SIZE);
