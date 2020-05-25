@@ -52,6 +52,8 @@ static user_t (*user_array_ptr)[];
 
 static const unsigned char default_mifare[MIFARE_SIZE] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
 static const unsigned char default_uid[UID_SIZE] = {0x00, 0x00, 0x00, 0x00};
+
+static const unsigned char master_mifare[MIFARE_SIZE] = {0x02, 0x12, 0x09, 0x19, 0x75, 0x91};
 static const unsigned char master_uid[UID_SIZE] = {0x45, 0x75, 0x65, 0x2a};
 static const unsigned char master_key[KEY_SIZE] = {
 		0x42, 0x54, 0x69, 0x63,
