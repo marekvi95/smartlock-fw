@@ -2,17 +2,20 @@
  * user.h
  *
  *  Created on: Apr 6, 2020
- *      Author: nxf46245
+ *      Author: Marek Vitula
  */
 
 #ifndef USER_H_
 #define USER_H_
 
-#define USERS 2
-#define NAME_SIZE 12
-#define UID_SIZE 4
-#define KEY_SIZE 16
-
-uint8_t getAuth(unsigned char* uid, unsigned char* authKey, char * name);
+void initDB();
+void printDB();
+uint8_t insertUser(const unsigned char * uid);
+uint8_t deleteUser(const unsigned char * uid);
+uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifareKey);
+status_t initFlash();
+void copyFlash();
+status_t eraseFlash();
+status_t writeFlash();
 
 #endif /* USER_H_ */

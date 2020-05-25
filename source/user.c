@@ -24,7 +24,7 @@
 
 #define SECTOR_INDEX_FROM_END 1U
 
-#define print_buf(x,y,z)  {int loop; PRINTF(x); for(loop=0;loop<z;loop++) PRINTF("%.2x ", y[loop]); PRINTF("\n");}
+#define print_buf(x,y,z)  {int loop; printf(x); for(loop=0;loop<z;loop++) printf("%.2x ", y[loop]); printf("\n");}
 
 /*******************************************************************************
  * Variables
@@ -109,7 +109,8 @@ static const unsigned char default_keys[USERS][KEY_SIZE] = {
  */
 void initDB()
 {
-	user_array_ptr = &arr_user
+	user_array_ptr = &arr_user;
+
 	memcpy((*user_array_ptr)[0].mifareKey, default_mifare, MIFARE_SIZE);
 	memcpy((*user_array_ptr)[0].authKey, master_key, KEY_SIZE);
 	memcpy((*user_array_ptr)[0].uid, master_uid, UID_SIZE);
@@ -128,15 +129,15 @@ void initDB()
  */
 void printDB()
 {
-	PRINTF("Address: 0x%x\n", user_array_ptr);
+	printf("Address: 0x%x\n", user_array_ptr);
 
 	for (i=0; i<USERS; i++)
 	{
-		PRINTF("Mifare Key: ");
+		printf("Mifare Key: ");
 		print_buf(" ", (*user_array_ptr)[i].mifareKey, MIFARE_SIZE);
-		PRINTF("authKey: ");
+		printf("authKey: ");
 		print_buf(" ", (*user_array_ptr)[i].authKey, KEY_SIZE);
-		PRINTF("UID: ");
+		printf("UID: ");
 		print_buf(" ", (*user_array_ptr)[i].uid, UID_SIZE);
 	}
 }
@@ -155,7 +156,7 @@ uint8_t insertUser(const unsigned char * uid)
 	{
 		if (memcmp((*user_array_ptr)[i].uid, uid, UID_SIZE) == 0)
 		{
-			PRINTF("UID already in DB\n");
+			printf("UID already in DB\n");
 			return -1;
 		}
 		else if(memcmp((*user_array_ptr)[i].uid, default_uid, UID_SIZE) == 0)
@@ -179,7 +180,7 @@ uint8_t deleteUser(const unsigned char * uid)
 
 	if (memcmp(uid, default_uid, UID_SIZE) == 0)
 	{
-		PRINTF("Error: cannot delete default UID\n");
+		printf("Error: cannot delete default UID\n");
 		return -1;
 	}
 	for (i=1; i<USERS; i++)
@@ -187,7 +188,7 @@ uint8_t deleteUser(const unsigned char * uid)
 		if (memcmp((*user_array_ptr)[i].uid, uid, UID_SIZE) == 0)
 		{
 			memcpy((*user_array_ptr)[i].uid, default_uid, UID_SIZE);
-			PRINTF("UID deleted\n");
+			printf("UID deleted\n");
 			return 1;
 		}
 	}
@@ -209,7 +210,7 @@ uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifar
 	
 	if (memcmp(uid, default_uid, UID_SIZE) == 0)
 	{
-		PRINTF("Error: cannot get authentication for default UID\n");
+		printf("Error: cannot get authentication for default UID\n");
 		return -1;
 	}
 
@@ -244,14 +245,14 @@ status_t initFlash()
 	result = FLASH_Init(&s_flashDriver);
 	if (kStatus_FTFx_Success != result)
 	{
-		PRINTF("Error during flash initialization\n");
+		printf("Error during flash initialization\n");
 		return result;
 	}
 	/* Setup flash cache driver structure for device and initialize variables. */
 	result |= FTFx_CACHE_Init(&s_cacheDriver);
 	if (kStatus_FTFx_Success != result)
 	{
-		PRINTF("Error during cache initialization\n");
+		printf("Error during cache initialization\n");
 		return result;
 	}
 	/* Get flash properties*/
@@ -260,33 +261,33 @@ status_t initFlash()
 	FLASH_GetProperty(&s_flashDriver, kFLASH_PropertyPflash0SectorSize, &pflashSectorSize);
 
 	/* Print flash information - PFlash. */
-	PRINTF("\r\n PFlash Information: ");
-	PRINTF("\r\n Total Program Flash Size:\t%d KB, Hex: (0x%x)", (pflashTotalSize / 1024), pflashTotalSize);
-	PRINTF("\r\n Program Flash Sector Size:\t%d KB, Hex: (0x%x) ", (pflashSectorSize / 1024), pflashSectorSize);
+	printf("\r\n PFlash Information: ");
+	printf("\r\n Total Program Flash Size:\t%d KB, Hex: (0x%x)", (pflashTotalSize / 1024), pflashTotalSize);
+	printf("\r\n Program Flash Sector Size:\t%d KB, Hex: (0x%x) ", (pflashSectorSize / 1024), pflashSectorSize);
 
 	/* Check security status. */
 	result |= FLASH_GetSecurityState(&s_flashDriver, &securityStatus);
 	if (kStatus_FTFx_Success != result)
 	{
-		PRINTF("Cannot get flash security status\n");
+		printf("Cannot get flash security status\n");
 		return result;
 	}
 	/* Print security status. */
 	switch (securityStatus)
 	{
 	case kFTFx_SecurityStateNotSecure:
-		PRINTF("\r\n Flash is UNSECURE!");
+		printf("\r\n Flash is UNSECURE!");
 		break;
 	case kFTFx_SecurityStateBackdoorEnabled:
-		PRINTF("\r\n Flash is SECURE, BACKDOOR is ENABLED!");
+		printf("\r\n Flash is SECURE, BACKDOOR is ENABLED!");
 		break;
 	case kFTFx_SecurityStateBackdoorDisabled:
-		PRINTF("\r\n Flash is SECURE, BACKDOOR is DISABLED!");
+		printf("\r\n Flash is SECURE, BACKDOOR is DISABLED!");
 		break;
 	default:
 		break;
 	}
-	PRINTF("\r\n");
+	printf("\r\n");
 
 	/* Test pflash basic opeation only if flash is unsecure. */
 	if (kFTFx_SecurityStateNotSecure == securityStatus)
@@ -320,7 +321,7 @@ status_t eraseFlash()
 	result = FLASH_Erase(&s_flashDriver, destAdrss, pflashSectorSize, kFTFx_ApiEraseKey);
 	if (kStatus_FTFx_Success != result)
 	{
-		PRINTF("Error during flash erase\n");
+		printf("Error during flash erase\n");
 		return result;
 	}
 
@@ -328,12 +329,12 @@ status_t eraseFlash()
 	result |= FLASH_VerifyErase(&s_flashDriver, destAdrss, pflashSectorSize, kFTFx_MarginValueUser);
 	if (kStatus_FTFx_Success != result)
 	{
-		PRINTF("Error during flash erase verification\n");
+		printf("Error during flash erase verification\n");
 		return result;
 	}
 
 	/* Print message for user. */
-	PRINTF("\r\n Successfully Erased Sector 0x%x -> 0x%x\r\n", destAdrss, (destAdrss + pflashSectorSize));
+	printf("\r\n Successfully Erased Sector 0x%x -> 0x%x\r\n", destAdrss, (destAdrss + pflashSectorSize));
 	return result;
 }
 
@@ -342,13 +343,13 @@ status_t writeFlash()
 	status_t result;    /* Return code from each flash driver function */
 	uint32_t failAddr, failDat;
 
-	PRINTF("\r\n Size %d B, Hex: (0x%x) ", sizeof(arr_user), (uint8_t *)&arr_user);
+	printf("\r\n Size %d B, Hex: (0x%x) ", sizeof(arr_user), (uint8_t *)&arr_user);
 
 	/* Program user array into flash*/
 	result = FLASH_Program(&s_flashDriver, destAdrss, (uint8_t *)&arr_user, sizeof(arr_user));
 	if (kStatus_FTFx_Success != result)
 	{
-		PRINTF("Error during flash programming\n");
+		printf("Error during flash programming\n");
 		return result;
 	}
 
@@ -358,11 +359,11 @@ status_t writeFlash()
 
 	if (kStatus_FTFx_Success != result)
 	{
-		PRINTF("Error during flash verification\n");
+		printf("Error during flash verification\n");
 		return result;
 	}
 
-	PRINTF("\r\n Successfully Written Sector 0x%x -> 0x%x\r\n", destAdrss, (destAdrss + pflashSectorSize));
+	printf("\r\n Successfully Written Sector 0x%x -> 0x%x\r\n", destAdrss, (destAdrss + pflashSectorSize));
 	/* Post-preparation work about flash Cache/Prefetch/Speculation. */
 	FTFx_CACHE_ClearCachePrefetchSpeculation(&s_cacheDriver, false);
 
