@@ -1,5 +1,5 @@
 /*
- * user2.c
+ * user.c
  *
  *  Created on: May 14, 2020
  *      Author: Marek Vitula
@@ -17,11 +17,6 @@
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
-#define USERS 32
-#define MIFARE_SIZE 6
-#define UID_SIZE 4
-#define KEY_SIZE 16
-
 #define SECTOR_INDEX_FROM_END 1U
 
 #define print_buf(x,y,z)  {int loop; printf(x); for(loop=0;loop<z;loop++) printf("%.2x ", y[loop]); printf("\n");}
