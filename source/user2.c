@@ -128,6 +128,8 @@ void initDB()
  */
 void printDB()
 {
+	PRINTF("Address: 0x%x\n", user_array_ptr);
+
 	for (i=0; i<USERS; i++)
 	{
 		PRINTF("Mifare Key: ");
@@ -147,6 +149,8 @@ void printDB()
  */
 uint8_t insertUser(const unsigned char * uid)
 {
+	user_array_ptr = &arr_user;
+
 	for (i=1; i<USERS; i++)
 	{
 		if (memcmp((*user_array_ptr)[i].uid, uid, UID_SIZE) == 0)
@@ -171,6 +175,8 @@ uint8_t insertUser(const unsigned char * uid)
  */
 uint8_t deleteUser(const unsigned char * uid)
 {
+	user_array_ptr = &arr_user;
+
 	if (memcmp(uid, default_uid, UID_SIZE) == 0)
 	{
 		PRINTF("Error: cannot delete default UID\n");
@@ -210,10 +216,10 @@ uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifar
 	for(i=0; i<USERS; i++)
 	{
 
-		if (memcmp(arr_user[i].uid, uid, UID_SIZE) == 0)
+		if (memcmp((*user_array_ptr)[i].uid, uid, UID_SIZE) == 0)
 		{
-			memcpy(mifareKey, arr_user[i].mifareKey, MIFARE_SIZE);
-			memcpy(authKey, arr_user[i].authKey, KEY_SIZE);
+			memcpy(mifareKey, (*user_array_ptr)[i].mifareKey, MIFARE_SIZE);
+			memcpy(authKey, (*user_array_ptr)[i].authKey, KEY_SIZE);
 			return 1;
 		}
 	}
@@ -289,7 +295,16 @@ status_t initFlash()
 		FTFx_CACHE_ClearCachePrefetchSpeculation(&s_cacheDriver, true);
 	}
 
+	destAdrss = pflashBlockBase + (pflashTotalSize - (SECTOR_INDEX_FROM_END * pflashSectorSize));
+
 	return result;
+}
+
+void copyFlash()
+{
+	user_array_ptr = (user_t(*)[])destAdrss;
+	memcpy(&arr_user, user_array_ptr, sizeof(arr_user));
+	return;
 }
 
 /**
@@ -301,7 +316,6 @@ status_t eraseFlash()
 {
 	status_t result;    /* Return code from each flash driver function */
 	/* Erase a sector from destAdrss. */
-	destAdrss = pflashBlockBase + (pflashTotalSize - (SECTOR_INDEX_FROM_END * pflashSectorSize));
 
 	result = FLASH_Erase(&s_flashDriver, destAdrss, pflashSectorSize, kFTFx_ApiEraseKey);
 	if (kStatus_FTFx_Success != result)
