@@ -61,7 +61,36 @@ inline static void lock(void)
 	setLock();
 }
 
+/**
+ * @brief Compose Sigfox message
+ * 
+ * @return char 
+ */
+char composeMsg()
+{
 
+}
+
+/**
+ * @brief This function is called when the NFC tag is not approved
+ * 
+ * @param nfcMsg 
+ * @param sfDriverConfig 
+ * @return uint8_t 
+ */
+uint8_t lockNotApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
+{
+
+}
+
+/**
+ * @brief This function is called when the NFC tag is approved
+ * Send the message and open the door
+ * 
+ * @param nfcMsg 
+ * @param sfDriverConfig 
+ * @return uint8_t 
+ */
 uint8_t lockApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
 {
 	PRINTF("sending records \n");
@@ -71,10 +100,7 @@ uint8_t lockApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
     uint8_t i;
 
     /* Create a Sigfox message. */
-    for (i = 0; i <= 10; i++)
-    {
-    	nfcMsg[12 - i] = nfcMsg[10 - i];
-    }
+
     if (isLocked())
     {
     	unlock();
@@ -93,13 +119,9 @@ uint8_t lockApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
     /* Send sigfox message non-blocking. */
     if (sfNonBlockUsed)
     {
-    	status = SIGFOX_SendRecords_NonBlock(sfDriverConfig, (unsigned char *)nfcMsg, strlen(nfcMsg));
+    	status = SIGFOX_SendRecords_NonBlock(sfDriverConfig, (unsigned char *)nfcMsg, SF_MSG_SIZE);
     	timeoutMs = 20000;
     }
-
-    /* Wait until user reads message on LCD. */
-    // App_WaitMsec(2000);
-    timeoutMs -= 2000;
 
     /* Send data via Sigfox */
     displayText("Sending...", (char*)nfcMsg);
@@ -108,7 +130,7 @@ uint8_t lockApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
 
     if (!sfNonBlockUsed)
     {
-    	status = SIGFOX_SendRecords(sfDriverConfig, (unsigned char *)nfcMsg, strlen(nfcMsg));
+    	status = SIGFOX_SendRecords(sfDriverConfig, (unsigned char *)nfcMsg, SF_MSG_SIZE);
     }
     else if (status == kStatus_Success)
     {
@@ -149,19 +171,23 @@ uint8_t lockApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
  * 
  * @return status_t 
  */
-status_t readKey(unsigned char * key)
+status_t readKey(unsigned char * authKey, unsigned char * mifareKey)
 {
-    #define BLK_NB_MFC      4
-//    #define KEY_MFC         0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
-	#define KEY_MFC 		  0x02, 0x12, 0x09, 0x19, 0x75, 0x91
+    #define AUTH_SIZE 3 + MIFARE_SIZE
 
     status_t status = 0;
     unsigned char Resp[256];
     unsigned char RespSize;
-    /* Authenticate sector 1 with generic keys */
-    unsigned char Auth[] = {0x40, BLK_NB_MFC/4, 0x10, KEY_MFC};
-    /* Read block 4 */
+    unsigned char Auth[AUTH_SIZE];
+
+    /* Read block */
     unsigned char Read[] = {0x10, 0x30, BLK_NB_MFC};
+    
+    Auth[0] = 0x40; // authentication command
+    Auth[1] = BLK_NB_MFC/4; // sector number
+    Auth[2] = 0x10;
+
+    memcpy(Auth + 3, mifareKey, MIFARE_SIZE); // Copy mifare key to auth from index 3
 
     /* Authenticate */
     status |= NxpNci_ReaderTagCmd(Auth, sizeof(Auth), Resp, &RespSize);
@@ -171,7 +197,7 @@ status_t readKey(unsigned char * key)
     	PRINTF(" Authenticate sector %d failed with error 0x%02x\n", Auth[1], Resp[RespSize-1]);
         return status;
     }
-//    displayText(0, "Auth OK", "Reading key");
+
     PRINTF(" Authenticate sector %d succeed\n", Auth[1]);
 
     /* Read block */
@@ -182,12 +208,11 @@ status_t readKey(unsigned char * key)
     	PRINTF(" Read block %d failed with error 0x%02x\n", Read[2], Resp[RespSize-1]);
         return status;
     }
-//    displayText(0, "Key read OK", "Finding user in the database...");
+
     PRINTF(" Read block %d:", Read[2]); print_buf(" ", (Resp+1), RespSize-2);
 
-    //TODO: hash keys
-    /* Copy key to nfcRec variable */
-    memcpy(key, (Resp+1), KEY_SIZE);
+    /* Copy key to authKey */
+    memcpy(authKey, (Resp+1), KEY_SIZE);
 
     return status;
 }
@@ -214,27 +239,30 @@ void readTag(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 	{
 		unsigned char keyDB[KEY_SIZE] = {0};
 		unsigned char keyRead[KEY_SIZE] = {0};
-		char msg[NAME_SIZE] = {0};
+		unsigned char mifareKey[MIFARE_SIZE] = {0};
+        char msg[SF_MSG_SIZE] = {0};
 
 		PRINTF("\tSENS_RES = 0x%.2x 0x%.2x\n", RfIntf.Info.NFC_APP.SensRes[0], RfIntf.Info.NFC_APP.SensRes[1]);
 		print_buf("\tNFCID = ", RfIntf.Info.NFC_APP.NfcId, RfIntf.Info.NFC_APP.NfcIdLen);
 		if(RfIntf.Info.NFC_APP.SelResLen != 0) PRINTF("\tSEL_RES = 0x%.2x\n", RfIntf.Info.NFC_APP.SelRes[0]);
 
-		if(getAuth(RfIntf.Info.NFC_APP.NfcId, keyDB, msg))
+        memcpy(msg + 1, RfIntf.Info.NFC_APP.NfcId, UID_SIZE); // Copy UID to the first index of sigfox msg
+
+		if(getAuth(RfIntf.Info.NFC_APP.NfcId, keyDB, mifareKey))
 		{
 			PRINTF(" - UID approved\n");
-			PRINTF("KEY: %s\n", keyDB);
-			PRINTF("MSG: %s\n", msg);
+			PRINTF("Authentication KEY: %s\n", keyDB);
+			PRINTF("Mifare KEY: %s\n", mifareKey);
 
-			readKey(keyRead);
+			readKey(keyRead, mifareKey); // Read key from the NFC tag
 
-		    if (memcmp(keyDB, keyRead, KEY_SIZE) == 0)
+		    if (memcmp(keyDB, keyRead, KEY_SIZE) == 0) // Compare key with the DB
 		    {
 		        // null array
 		    	memset(keyRead, 0, KEY_SIZE);
 		    	memset(keyDB, 0, KEY_SIZE);
-//		    	displayText(0, "Approved", "Ready to unlock");
-		    	lockApproved(msg, sfDriverConfig);
+		    	
+                lockApproved(msg, sfDriverConfig); // Send message and open the door
 
 		    }
 		    else
@@ -246,6 +274,7 @@ void readTag(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 		{
 			PRINTF(" - UID is not approved\n");
 			displayText("UID NOK", "Trespassers will be prosecuted");
+            lockNotApproved(msg, sfDriverConfig); // Send message that UID cannot be authenticated
 		}
 	}
 	else
@@ -286,6 +315,11 @@ void task_nfc_reader(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
     NxpNci_StartDiscovery(DiscoveryTechnologies,sizeof(DiscoveryTechnologies));
 }
 
+/**
+ * @brief NFC polling loop initialization
+ * 
+ * @param sfDriverConfig 
+ */
 void task_nfc(sf_drv_data_t* sfDriverConfig)
 {
     NxpNci_RfIntf_t RfInterface;
@@ -316,7 +350,7 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
 
 
     PRINTF("App initialized for RCZ%d.", ((uint8_t)SF_STANDARD)+1);
-    setNFC();
+    setNFC(); // set flag that NFC is initialized
 
     while(1)
     {
