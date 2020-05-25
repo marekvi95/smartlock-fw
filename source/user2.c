@@ -2,7 +2,7 @@
  * user2.c
  *
  *  Created on: May 14, 2020
- *      Author: nxf46245
+ *      Author: Marek Vitula
  */
 
 /*******************************************************************************
@@ -34,10 +34,6 @@
 static flash_config_t s_flashDriver;
 /*! @brief Flash cache driver Structure */
 static ftfx_cache_config_t s_cacheDriver;
-///*! @brief Buffer for program */
-//static uint32_t s_buffer[BUFFER_LEN];
-///*! @brief Buffer for readback */
-//static uint32_t s_buffer_rbc[BUFFER_LEN];
 
 static uint32_t destAdrss; /* Address of the target location */
 static uint32_t pflashBlockBase  = 0;
@@ -113,6 +109,7 @@ static const unsigned char default_keys[USERS][KEY_SIZE] = {
  */
 void initDB()
 {
+	user_array_ptr = &arr_user
 	memcpy((*user_array_ptr)[0].mifareKey, default_mifare, MIFARE_SIZE);
 	memcpy((*user_array_ptr)[0].authKey, master_key, KEY_SIZE);
 	memcpy((*user_array_ptr)[0].uid, master_uid, UID_SIZE);
@@ -202,6 +199,8 @@ uint8_t deleteUser(const unsigned char * uid)
  */
 uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifareKey)
 {
+	user_array_ptr = (user_t(*)[])destAdrss;
+	
 	if (memcmp(uid, default_uid, UID_SIZE) == 0)
 	{
 		PRINTF("Error: cannot get authentication for default UID\n");
