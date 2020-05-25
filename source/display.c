@@ -2,7 +2,7 @@
  * display.c
  *
  *  Created on: Apr 1, 2020
- *      Author: nxf46245
+ *      Author: Marek Vitula
  */
 
 #include <stddef.h>
