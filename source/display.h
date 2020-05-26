@@ -19,6 +19,7 @@ void setSigfox(void);
 void setNFC(void);
 void setBattery(uint8_t battery);
 uint8_t getBatteryMsg(void);
+uint8_t getBatteryFull(void);
 void triggerCharging();
 
 

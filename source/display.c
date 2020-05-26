@@ -165,3 +165,7 @@ uint8_t getBatteryMsg()
 	return batt;
 }
 
+uint8_t getBatteryFull()
+{
+	return status.battery;
+}
