@@ -58,7 +58,7 @@ int main(void) {
 	sf_device_info_t devInfo;
 	status_t status = kStatus_Success;
 
-	/* Sigfox initialization message -- batteru status */
+	/* Sigfox initialization message -- battery status */
 	unsigned char msg = getBatteryFull();
 
 	/* Init board hardware. */
