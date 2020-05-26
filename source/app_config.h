@@ -1,6 +1,6 @@
 /*
  * app_config.h
- *
+ * App configuration
  *  Created on: 7 May 2019
  *      Author: Marek Vitula
  */
@@ -11,7 +11,7 @@
 /* Set to 1 for the first time flash initialization
  *  DB of users will be initialized and saved to flash
  */
-#define INIT_FLASH 1
+#define INIT_FLASH 0
 
 /* Set to 1 if you want to use sleep modes  */
 #define SLEEP_MODE 0
