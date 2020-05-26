@@ -101,8 +101,6 @@ status_t SIGFOX_SetupDriver(sf_drv_data_t *drvData)
  */
 void SIGFOX_PrintDeviceInfo(const sf_device_info_t *devInfo)
 {
-//    char m[100];
-
     AML_ASSERT(devInfo != NULL);
 
     /* Send to UART. */
@@ -127,12 +125,6 @@ void SIGFOX_PrintDeviceInfo(const sf_device_info_t *devInfo)
     printf("%02x%02x ", devInfo->libVersion[4], devInfo->libVersion[3]);
     printf("%02x%02x ", devInfo->libVersion[2], devInfo->libVersion[1]);
     printf("%02x\r\n", devInfo->libVersion[0]);
-
-//    /* Show on LCD. */
-//    sprintf(m, "ID:\n%08lx\n\nPAC:\n%02x%02x%02x%02x%02x%02x%02x%02x", devInfo->devId,
-//			devInfo->devPac[0], devInfo->devPac[1], devInfo->devPac[2], devInfo->devPac[3],
-//			devInfo->devPac[4], devInfo->devPac[5], devInfo->devPac[6], devInfo->devPac[7]);
-//    DEMO_ShowMessage(m, GUI_BLACK);
 }
 
 /*

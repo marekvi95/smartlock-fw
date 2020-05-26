@@ -114,18 +114,6 @@ void composeMsg(char *nfcMsg, bool auth, bool lock)
 }
 
 /**
- * @brief This function is called when the NFC tag is not approved
- * 
- * @param nfcMsg 
- * @param sfDriverConfig 
- * @return uint8_t 
- */
-uint8_t lockNotApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
-{
-
-}
-
-/**
  * @brief This function is called when the NFC tag is approved
  * Send the message and open the door
  * 
@@ -133,24 +121,33 @@ uint8_t lockNotApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
  * @param sfDriverConfig 
  * @return uint8_t 
  */
-uint8_t lockApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
+uint8_t lockApproved(bool approved, char * nfcMsg, sf_drv_data_t* sfDriverConfig)
 {
 	PRINTF("sending records \n");
     status_t status = kStatus_Success;
     bool sfNonBlockUsed = false;
     int32_t timeoutMs;
 
-    /* Create a Sigfox message. */
-
-    if (isLocked())
+    /* If Tag is approved send the message and open */
+    if (approved)
     {
-    	unlock();
-        composeMsg(nfcMsg, true, false);
+        if (isLocked())
+        {
+    	    unlock();
+            /* Create a Sigfox message. */
+            composeMsg(nfcMsg, true, false); 
+        }
+        else
+        {
+    	    lock();
+            /* Create a Sigfox message. */
+            composeMsg(nfcMsg, true, true);
+        }
     }
     else
     {
-    	lock();
-        composeMsg(nfcMsg, true, true);
+        /* Create a Sigfox message. */
+        composeMsg(nfcMsg, false, isLocked());
     }
 
     /* sfNonBlockUsed is set when ACK pin is high. */
@@ -302,7 +299,7 @@ void readTag(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 		    	memset(keyRead, 0, KEY_SIZE);
 		    	memset(keyDB, 0, KEY_SIZE);
 		    	
-                lockApproved(msg, sfDriverConfig); // Send message and open the door
+                lockApproved(true, msg, sfDriverConfig); // Send message and open the door
 
 		    }
 		    else
@@ -314,7 +311,7 @@ void readTag(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 		{
 			PRINTF(" - UID is not approved\n");
 			displayText("UID NOK", "Trespassers will be prosecuted");
-            lockNotApproved(msg, sfDriverConfig); // Send message that UID cannot be authenticated
+            lockApproved(false, msg, sfDriverConfig); // Send message that UID cannot be authenticated
 		}
 	}
 	else
