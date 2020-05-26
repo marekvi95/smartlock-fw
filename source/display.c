@@ -13,8 +13,6 @@
 #include "epaper_2in13.h"
 
 #define IMAGE_SIZE ((EPD_WIDTH % 8 == 0)? (EPD_WIDTH / 8 ): (EPD_WIDTH / 8 + 1)) * EPD_HEIGHT
-//#define LOCKED_STRING "$*,^"
-//#define UNLOCKED_STRING "$*,`"
 
 #define LOCKED_CHAR '^'
 #define UNLOCKED_CHAR '`'
@@ -28,6 +26,10 @@
 
 char * default_text = "Swipe card";
 
+/**
+ * @brief Status of the lock
+ * 
+ */
 typedef struct {
 	bool locked;
 	bool sigfoxInit;
@@ -39,6 +41,10 @@ typedef struct {
 // Default status
 LockStatus status = {true, false, false, false, 100};
 
+/**
+ * @brief Initialize Waveshare display and display NXP logo for a moment
+ * 
+ */
 void initDisplay(void)
 {
 	/* Initialize Waveshare display with full update */
@@ -49,6 +55,13 @@ void initDisplay(void)
 	EPD_Clear();
 }
 
+/**
+ * @brief Display text on the waveshare display
+ * Also displays status bar 
+ * 
+ * @param main_text Main text that will be displayed with font size 24
+ * @param second_text Secondary text will be displayed with font size 12
+ */
 void displayText(const char * main_text, const char * second_text)
 {
 	static unsigned char BlackImage[IMAGE_SIZE];
@@ -126,4 +139,29 @@ void triggerCharging()
 	}
 }
 
+/**
+ * @brief Returns status of the battery for the Sigfox message
+ * 
+ * @return uint8_t batt status
+ */
+uint8_t getBatteryMsg()
+{
+	#define CHARGING_MSG 0
+	#define FULL_MSG 3
+	#define MED_MSG 2
+	#define LOW_MSG 1
+
+	uint8_t batt;
+	
+	if (status.charging)
+		batt = CHARGING_MSG;
+	else if (status.battery > 60)
+		batt = FULL_MSG;
+	else if (status.battery > 30)
+		batt = MED_MSG;
+	else
+		batt = LOW_MSG;
+
+	return batt;
+}
 

@@ -2,7 +2,7 @@
  * display.h
  *
  *  Created on: Apr 1, 2020
- *      Author: nxf46245
+ *      Author: Marek Vitula
  */
 
 #ifndef DISPLAY_H_
@@ -18,6 +18,7 @@ void setUnlock(void);
 void setSigfox(void);
 void setNFC(void);
 void setBattery(uint8_t battery);
+uint8_t getBatteryMsg(void);
 void triggerCharging();
 
 
