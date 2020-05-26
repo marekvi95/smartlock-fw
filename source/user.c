@@ -12,6 +12,7 @@
 #include <stdint.h>
 #include <string.h>
 
+#include "app_config.h"
 #include "fsl_flash.h"
 
 /*******************************************************************************
@@ -108,7 +109,7 @@ void initDB()
 {
 	user_array_ptr = &arr_user;
 
-	memcpy((*user_array_ptr)[0].mifareKey, default_mifare, MIFARE_SIZE);
+	memcpy((*user_array_ptr)[0].mifareKey, master_mifare, MIFARE_SIZE);
 	memcpy((*user_array_ptr)[0].authKey, master_key, KEY_SIZE);
 	memcpy((*user_array_ptr)[0].uid, master_uid, UID_SIZE);
 
