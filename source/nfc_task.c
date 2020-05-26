@@ -1,8 +1,20 @@
+/*
+ * nfc_task.c
+ *
+ *  Created on: May 14, 2019
+ *      Author: Marek Vitula
+ *  Based on NXP NFC Library example
+ */
+
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
 #include <nfc_task.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
 #include <tool.h>
+#include <stdbool.h>
 #include <Nfc.h>
 #include <sigfox.h>
 #include "board.h"
@@ -12,16 +24,27 @@
 #include "display.h"
 #include "user.h"
 
+/*******************************************************************************
+ * Definitions
+ ******************************************************************************/
 
-#define print_buf(x,y,z)  {int loop; PRINTF(x); for(loop=0;loop<z;loop++) PRINTF("%.2x ", y[loop]); PRINTF("\n");}
+#define print_buf(x,y,z)  {int loop; printf(x); for(loop=0;loop<z;loop++) printf("%.2x ", y[loop]); printf("\n");}
 
+/*******************************************************************************
+ * Variables
+ ******************************************************************************/
 /* Discovery loop configuration according to the targeted modes of operation */
 unsigned char DiscoveryTechnologies[] = {
     MODE_POLL | TECH_PASSIVE_NFCA,
 };
 
+
 /* Mode configuration according to the targeted modes of operation */
 unsigned mode = 0 | NXPNCI_MODE_RW;
+
+/*******************************************************************************
+ * Code
+ ******************************************************************************/
 
 /* Turns the motor for a while in order to unlock the mechanical lock. */
 inline static void unlock(void)
@@ -64,11 +87,30 @@ inline static void lock(void)
 /**
  * @brief Compose Sigfox message
  * 
- * @return char 
+ * @param nfcMsg Pointer to nfc message
+ * @param auth True if user is authenticated
+ * @param lock True if the smartlock will be locked, False if opened
  */
-char composeMsg()
+void composeMsg(char *nfcMsg, bool auth, bool lock)
 {
+    /* Set a Sigfox message *
+     * 1st bit is a type of message *
+     * 2nd value if user is authenticated *
+     * 3rd status of the lock - 0 if lock is open, 1 if lock is closed *
+     * 4th and 5th battery status */
+    
+    #define MSG_TYPE_POS 1
+    #define AUTH_POS 2
+    #define LOCK_STATUS_POS 3
+    #define BATT_POS 4
 
+    unsigned char msg = 0;
+
+    msg = (msg & ~(1U << MSG_TYPE_POS)) | (0 << 1); // Set msg type to 0 -- authentication message
+    msg = (msg & ~(1U << AUTH_POS)) | (auth << 2); // Set second bit to auth
+    msg = (msg & ~(1U << LOCK_STATUS_POS)) | (lock << 3); // Set third bit
+    
+    nfcMsg[0] = msg;
 }
 
 /**
@@ -97,21 +139,19 @@ uint8_t lockApproved(char * nfcMsg, sf_drv_data_t* sfDriverConfig)
     status_t status = kStatus_Success;
     bool sfNonBlockUsed = false;
     int32_t timeoutMs;
-    uint8_t i;
 
     /* Create a Sigfox message. */
 
     if (isLocked())
     {
     	unlock();
-    	nfcMsg[0] = 'O';
+        composeMsg(nfcMsg, true, false);
     }
     else
     {
     	lock();
-    	nfcMsg[0] = 'C';
+        composeMsg(nfcMsg, true, true);
     }
-    nfcMsg[1] = ':';
 
     /* sfNonBlockUsed is set when ACK pin is high. */
     sfNonBlockUsed = !SF_IsAckFrameReady(sfDriverConfig);
