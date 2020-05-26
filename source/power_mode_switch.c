@@ -1,8 +1,9 @@
 /*
  * power_mode_switch.c
- *
+ * Module for switching power modes and handling interrupt requests on LLWU pins
+ * Based on example for power mode switching by NXP
  *  Created on: Mar 7, 2020
- *      Author: nxf46245
+ *      Author: Marek Vitula
  */
 #include <stdio.h>
 #include "fsl_common.h"

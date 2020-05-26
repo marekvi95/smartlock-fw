@@ -2,7 +2,7 @@
  * power_mode_switch.h
  *
  *  Created on: Mar 7, 2020
- *      Author: nxf46245
+ *      Author: Marek Vitula
  */
 
 #ifndef POWER_MODE_SWITCH_H_
