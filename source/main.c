@@ -44,7 +44,9 @@
 #include "fsl_smc.h"
 #include "fsl_rcm.h"
 #include "fsl_pmc.h"
+#include "app_config.h"
 #include "sf/sf.h"
+#include "user.h"
 #include "nfc_task.h"
 #include "display.h"
 
@@ -56,9 +58,8 @@ int main(void) {
 	sf_device_info_t devInfo;
 	status_t status = kStatus_Success;
 
-	/* Sigfox initialization message */
-	unsigned char msg[] = "SigfoxInit";
-	uint32_t msgLen = strlen((char*)msg);
+	/* Sigfox initialization message -- batteru status */
+	unsigned char msg = getBatteryFull();
 
 	/* Init board hardware. */
 	BOARD_InitBootPins(); /* Must configure pins before PMC_ClearPeriphIOIsolationFlag */
@@ -77,6 +78,18 @@ int main(void) {
 
 	initDisplay();
 	displayText("Init...", "please wait");
+
+	
+	#if defined(INIT_FLASH) && INIT_FLASH
+	/* Initialize flash */
+	initDB();
+	initFlash();
+	eraseFlash();
+	writeFlash();
+	#else
+	initFlash();
+	copyFlash();
+	#endif
 
 	status = SIGFOX_SetupDriver(&sfDrvData);
 	if (status != kStatus_Success)
@@ -99,7 +112,7 @@ int main(void) {
 		}
 		if (status == kStatus_Success)
 		{
-			SIGFOX_SendRecords(&sfDrvData, msg, msgLen);
+			SIGFOX_SendRecords(&sfDrvData, &msg, 1);
 			/* Run the NFC task. */
 			setSigfox();
 			displayText("Sigfox OK", "initialization of NFC...");
