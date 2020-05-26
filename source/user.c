@@ -155,7 +155,7 @@ uint8_t insertUser(const unsigned char * uid)
 		if (memcmp((*user_array_ptr)[i].uid, uid, UID_SIZE) == 0)
 		{
 			printf("UID already in DB\n");
-			return -1;
+			return 0;
 		}
 		else if(memcmp((*user_array_ptr)[i].uid, default_uid, UID_SIZE) == 0)
 		{
@@ -163,7 +163,7 @@ uint8_t insertUser(const unsigned char * uid)
 			return 0;
 		}
 	}
-	return -1;
+	return 0;
 }
 
 /**
@@ -179,7 +179,7 @@ uint8_t deleteUser(const unsigned char * uid)
 	if (memcmp(uid, default_uid, UID_SIZE) == 0)
 	{
 		printf("Error: cannot delete default UID\n");
-		return -1;
+		return 0;
 	}
 	for (i=1; i<USERS; i++)
 	{
@@ -190,7 +190,7 @@ uint8_t deleteUser(const unsigned char * uid)
 			return 1;
 		}
 	}
-	return -1;
+	return 0;
 }
 
 
@@ -201,6 +201,7 @@ uint8_t deleteUser(const unsigned char * uid)
  * @param authKey authoritzation key saved on a card
  * @param mifareKey mifare key
  * @return uint8_t returns True if uid is in the DB
+ * 			return 2 if the user is master user
  */
 uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifareKey)
 {
@@ -209,7 +210,15 @@ uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifar
 	if (memcmp(uid, default_uid, UID_SIZE) == 0)
 	{
 		printf("Error: cannot get authentication for default UID\n");
-		return -1;
+		return 0;
+	}
+
+	if (memcmp(uid, master_uid, UID_SIZE) == 0)
+	{
+		printf("Master USER tag detected\n");
+		memcpy(mifareKey, master_mifare, MIFARE_SIZE);
+		memcpy(authKey, master_key, KEY_SIZE);
+		return 2;
 	}
 
 	for(i=0; i<USERS; i++)
@@ -222,7 +231,7 @@ uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifar
 			return 1;
 		}
 	}
-	return -1;
+	return 0;
 }
 
 /**
