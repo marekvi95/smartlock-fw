@@ -8,6 +8,14 @@
 #ifndef APP_CONFIG_H_
 #define APP_CONFIG_H_
 
+/* Set to 1 for the first time flash initialization
+ *  DB of users will be initialized and saved to flash
+ */
+#define INIT_FLASH 1
+
+/* Set to 1 if you want to use sleep modes  */
+#define SLEEP_MODE 0
+
 /* Select RCZ standard. Use:
  * - "sfNetStandardETSI" for RCZ1 or
  * - "sfNetStandardFCC_USA" for RCZ2 */

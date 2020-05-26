@@ -120,15 +120,16 @@ static Status tml_Rx(uint8_t *pBuff, uint16_t buffLen, uint16_t *pBytesRead) {
 
 static Status tml_WaitForRx(uint32_t timeout) {
 	if (timeout == 0) {
+	#if defined(SLEEP_MODES) && SLEEP_MODES
 	//	put the MCU to sleep here
 	targetPowerMode = kAPP_PowerModeLls; /* Set up target power mode */
 	curPowerState = SMC_GetPowerModeState(SMC);
-	// APP_GetWakeupConfig(targetPowerMode);
-//	APP_PowerPreSwitchHook(curPowerState, targetPowerMode);
-//	APP_SetWakeupConfig(targetPowerMode);
-//	APP_PowerModeSwitch(curPowerState, targetPowerMode); /* Go sleep */
-//	APP_PowerPostSwitchHook(curPowerState, targetPowerMode); /* After wakeup hook */
-
+	APP_GetWakeupConfig(targetPowerMode);
+	APP_PowerPreSwitchHook(curPowerState, targetPowerMode);
+	APP_SetWakeupConfig(targetPowerMode);
+	APP_PowerModeSwitch(curPowerState, targetPowerMode); /* Go sleep */
+	APP_PowerPostSwitchHook(curPowerState, targetPowerMode); /* After wakeup hook */
+	#endif
 	 while ((GPIO_PinRead(BOARD_INITPINS_NFC_INT_GPIO, BOARD_INITPINS_NFC_INT_PIN) == 0))
 	 	;
 	} else {
