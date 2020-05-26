@@ -25,7 +25,7 @@
 #define SF_XTAL                     sfXtal276
 
 /* Runtime of the motor while locking/unlocking in milliseconds. */
-#define SF_MOTOR_RUNTIME_MS         2500
+#define SF_MOTOR_RUNTIME_MS         1000
 
 /* Sigfox message size in bytes
  * without added padding */
