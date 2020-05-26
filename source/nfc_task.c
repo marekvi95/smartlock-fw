@@ -94,21 +94,21 @@ inline static void lock(void)
 void composeMsg(char *nfcMsg, bool auth, bool lock)
 {
     /* Set a Sigfox message *
-     * 1st bit is a type of message *
-     * 2nd value if user is authenticated *
-     * 3rd status of the lock - 0 if lock is open, 1 if lock is closed *
-     * 4th and 5th battery status */
+     * 7th bit is a type of message *
+     * 6th value if user is authenticated *
+     * 5th status of the lock - 0 if lock is open, 1 if lock is closed *
+     * 4th and 3rd battery status */
     
-    #define MSG_TYPE_POS 1
-    #define AUTH_POS 2
-    #define LOCK_STATUS_POS 3
+    #define MSG_TYPE_POS 7
+    #define AUTH_POS 6
+    #define LOCK_STATUS_POS 5
     #define BATT_POS 4
 
     unsigned char msg = 0;
 
-    msg = (msg & ~(1U << MSG_TYPE_POS)) | (0 << 1); // Set msg type to 0 -- authentication message
-    msg = (msg & ~(1U << AUTH_POS)) | (auth << 2); // Set second bit to auth
-    msg = (msg & ~(1U << LOCK_STATUS_POS)) | (lock << 3); // Set third bit
+    msg = (msg & ~(1U << MSG_TYPE_POS)) | (0 << MSG_TYPE_POS); // Set msg type to 0 -- authentication message
+    msg = (msg & ~(1U << AUTH_POS)) | (auth << AUTH_POS); // Set  bit to auth
+    msg = (msg & ~(1U << LOCK_STATUS_POS)) | (lock << LOCK_STATUS_POS); // Set lock status
     
     nfcMsg[0] = msg;
 }
@@ -162,8 +162,7 @@ uint8_t lockApproved(bool approved, char * nfcMsg, sf_drv_data_t* sfDriverConfig
 
     /* Send data via Sigfox */
     displayText("Sending...", (char*)nfcMsg);
-    PRINTF("   Sending \"%s\" via Sigfox\n\n", nfcMsg);
-
+    print_buf("Sending Sigfox message: ", nfcMsg, SF_MSG_SIZE);
 
     if (!sfNonBlockUsed)
     {
@@ -197,7 +196,6 @@ uint8_t lockApproved(bool approved, char * nfcMsg, sf_drv_data_t* sfDriverConfig
     	displayText("TX Failed", "Waiting 2s");
     	PRINTF("Transmission failed\n\n");
     	WAIT_AML_WaitMs(2000);
-
     }
 
 	return 1;
