@@ -1015,8 +1015,6 @@ var searchData=
   ['sopt1cfg',['SOPT1CFG',['../struct_s_i_m___type.html#ae691410c960f357d63ab3b479cb59641',1,'SIM_Type']]],
   ['sopt2',['SOPT2',['../struct_s_i_m___type.html#a3f8dc2ae265d799ec159ccd2c2fddabd',1,'SIM_Type']]],
   ['sopt4',['SOPT4',['../struct_s_i_m___type.html#a5e152370dc7f083dff49c4e56e669435',1,'SIM_Type']]],
-  ['sopt4_5ftpm1ch0src_5ftpm1_5fch0',['SOPT4_TPM1CH0SRC_TPM1_CH0',['../group__pin__mux.html#gafe84c0554cf1aac1a55b2ff9a0b80fa3',1,'pin_mux.h']]],
-  ['sopt4_5ftpm2ch0src_5ftpm2_5fch0',['SOPT4_TPM2CH0SRC_TPM2_CH0',['../group__pin__mux.html#ga55543c830d60f930f9231ce0c7f48925',1,'pin_mux.h']]],
   ['sopt5',['SOPT5',['../struct_s_i_m___type.html#ad3423d05c1b61a09639d9ea8b5d3ea66',1,'SIM_Type']]],
   ['sopt7',['SOPT7',['../struct_s_i_m___type.html#a9a5cff1a3ad3808a7b9478791a37915d',1,'SIM_Type']]],
   ['sourceclkhz',['sourceClkHz',['../structsf__spi__config__t.html#ac83aea11badb20dd2844adf51262c9d0',1,'sf_spi_config_t']]],

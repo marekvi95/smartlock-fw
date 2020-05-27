@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Smartlock: smartlock-fw</title>
+<title>Smartlock: user_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,16 +60,29 @@ $(function() {
 </div>
 
 </div><!-- top -->
-<div class="PageDoc"><div class="header">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">smartlock-fw </div>  </div>
+<div class="title">user_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This repository contains source code of firmware for the <b>smartlock</b>. This project started as the final thesis at the Brno University of Technology. The aim of this project is to create a smartlock that that could be used for securing the objects.</p>
-<p>The source code is written in C and could be compiled using NXP MCUXpresso IDE or using the Makefile.</p>
-<h2>Smartlock</h2>
-<p>Battery powered smartlock using IoT networks and NFC technology for the user authentication. Hardware design is in this repo: <a href="https://github.com/marekvi95/smartlock-hw">https://github.com/marekvi95/smartlock-hw</a> </p>
-</div></div><!-- PageDoc -->
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a319c6ef936319307265e5745afb99418"><td class="memItemLeft" align="right" valign="top"><a id="a319c6ef936319307265e5745afb99418"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>mifareKey</b> [MIFARE_SIZE]</td></tr>
+<tr class="separator:a319c6ef936319307265e5745afb99418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a179a3b28c2334eccadec5e20a92edf02"><td class="memItemLeft" align="right" valign="top"><a id="a179a3b28c2334eccadec5e20a92edf02"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>authKey</b> [KEY_SIZE]</td></tr>
+<tr class="separator:a179a3b28c2334eccadec5e20a92edf02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a3377375fa3d583b090c2de9e93633"><td class="memItemLeft" align="right" valign="top"><a id="a77a3377375fa3d583b090c2de9e93633"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>uid</b> [UID_SIZE]</td></tr>
+<tr class="separator:a77a3377375fa3d583b090c2de9e93633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>source/user.c</li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

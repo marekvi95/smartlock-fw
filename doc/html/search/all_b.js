@@ -646,6 +646,7 @@ var searchData=
   ['load',['LOAD',['../struct_sys_tick___type.html#a0c1333686137b7e25a46bd548a5b5bc3',1,'SysTick_Type']]],
   ['lockaccess',['LOCKACCESS',['../struct_m_t_b___type.html#a3b3db55ca4412212bfe2c7454f2c6d5e',1,'MTB_Type']]],
   ['lockstat',['LOCKSTAT',['../struct_m_t_b___type.html#a5937017796e3c90bd8d70273e5205549',1,'MTB_Type']]],
+  ['lockstatus',['LockStatus',['../struct_lock_status.html',1,'']]],
   ['lpo_5fclk_5ffreq',['LPO_CLK_FREQ',['../group__clock.html#ga8f4a4e93b0c473d5f1c6bc8dad73acab',1,'fsl_clock.h']]],
   ['lptmr',['Lptmr',['../group__lptmr.html',1,'']]],
   ['lptmr0',['LPTMR0',['../group___l_p_t_m_r___peripheral___access___layer.html#gaba0c3bc8a32ad5a884c99e019dbdef85',1,'K32L2B31A.h']]],

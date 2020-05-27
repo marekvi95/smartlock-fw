@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Smartlock: smartlock-fw</title>
+<title>Smartlock: LockStatus Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,16 +60,40 @@ $(function() {
 </div>
 
 </div><!-- top -->
-<div class="PageDoc"><div class="header">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">smartlock-fw </div>  </div>
+<div class="title">LockStatus Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This repository contains source code of firmware for the <b>smartlock</b>. This project started as the final thesis at the Brno University of Technology. The aim of this project is to create a smartlock that that could be used for securing the objects.</p>
-<p>The source code is written in C and could be compiled using NXP MCUXpresso IDE or using the Makefile.</p>
-<h2>Smartlock</h2>
-<p>Battery powered smartlock using IoT networks and NFC technology for the user authentication. Hardware design is in this repo: <a href="https://github.com/marekvi95/smartlock-hw">https://github.com/marekvi95/smartlock-hw</a> </p>
-</div></div><!-- PageDoc -->
+
+<p>Status of the lock.  
+ <a href="struct_lock_status.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a18a0f1e6c3d21c252b14ea6ae162e2ff"><td class="memItemLeft" align="right" valign="top"><a id="a18a0f1e6c3d21c252b14ea6ae162e2ff"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>locked</b></td></tr>
+<tr class="separator:a18a0f1e6c3d21c252b14ea6ae162e2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbdc3376a5ca467b13e4ba7a1218aacb"><td class="memItemLeft" align="right" valign="top"><a id="adbdc3376a5ca467b13e4ba7a1218aacb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>sigfoxInit</b></td></tr>
+<tr class="separator:adbdc3376a5ca467b13e4ba7a1218aacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ef7e155e401431a5e8f0b8df6f2d40"><td class="memItemLeft" align="right" valign="top"><a id="a52ef7e155e401431a5e8f0b8df6f2d40"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>NFCInit</b></td></tr>
+<tr class="separator:a52ef7e155e401431a5e8f0b8df6f2d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3cf53e375d57f1f6692704d2701265"><td class="memItemLeft" align="right" valign="top"><a id="a1a3cf53e375d57f1f6692704d2701265"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>charging</b></td></tr>
+<tr class="separator:a1a3cf53e375d57f1f6692704d2701265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3af094c3bf50a379d93d688425f62e"><td class="memItemLeft" align="right" valign="top"><a id="aef3af094c3bf50a379d93d688425f62e"></a>
+int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>battery</b></td></tr>
+<tr class="separator:aef3af094c3bf50a379d93d688425f62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Status of the lock. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>source/display.c</li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

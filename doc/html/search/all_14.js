@@ -189,5 +189,6 @@ var searchData=
   ['usbtrc0',['USBTRC0',['../struct_u_s_b___type.html#ac89afa76ff77065c1cf493a11c82b831',1,'USB_Type']]],
   ['usec_5fto_5fcount',['USEC_TO_COUNT',['../group__ksdk__common.html#gad5639aadf668899775fc7506a5e19dc1',1,'fsl_common.h']]],
   ['useglobaltimebase',['useGlobalTimeBase',['../struct__tpm__config.html#af416ab48aec0988cb89bfd89ec771062',1,'_tpm_config']]],
+  ['user_5ft',['user_t',['../structuser__t.html',1,'']]],
   ['userdata',['userData',['../struct__dma__handle.html#a2e294dd14122c554baa0665072b4ca7a',1,'_dma_handle::userData()'],['../struct__i2c__master__handle.html#a2e294dd14122c554baa0665072b4ca7a',1,'_i2c_master_handle::userData()'],['../struct__i2c__slave__handle.html#a2e294dd14122c554baa0665072b4ca7a',1,'_i2c_slave_handle::userData()'],['../struct__i2c__master__dma__handle.html#a2e294dd14122c554baa0665072b4ca7a',1,'_i2c_master_dma_handle::userData()'],['../struct__lpuart__handle.html#a2e294dd14122c554baa0665072b4ca7a',1,'_lpuart_handle::userData()'],['../struct__spi__master__handle.html#a2e294dd14122c554baa0665072b4ca7a',1,'_spi_master_handle::userData()'],['../struct__spi__dma__handle.html#a2e294dd14122c554baa0665072b4ca7a',1,'_spi_dma_handle::userData()'],['../struct__uart__handle.html#a2e294dd14122c554baa0665072b4ca7a',1,'_uart_handle::userData()']]]
 ];

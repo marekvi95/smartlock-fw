@@ -4,7 +4,6 @@ var searchData=
   ['nested_20vectored_20interrupt_20controller_20_28nvic_29',['Nested Vectored Interrupt Controller (NVIC)',['../group___c_m_s_i_s___n_v_i_c.html',1,'']]],
   ['n',['N',['../structarm__dct4__instance__f32.html#a37d49571fe35012087153c093705cd11',1,'arm_dct4_instance_f32::N()'],['../structarm__dct4__instance__q31.html#a37d49571fe35012087153c093705cd11',1,'arm_dct4_instance_q31::N()'],['../structarm__dct4__instance__q15.html#a37d49571fe35012087153c093705cd11',1,'arm_dct4_instance_q15::N()'],['../union_a_p_s_r___type.html#abae0610bc2a97bbf7f689e953e0b451f',1,'APSR_Type::N()'],['../unionx_p_s_r___type.html#abae0610bc2a97bbf7f689e953e0b451f',1,'xPSR_Type::N()']]],
   ['nby2',['Nby2',['../structarm__dct4__instance__f32.html#afa64b1618089e35c2b55cff71cb29715',1,'arm_dct4_instance_f32::Nby2()'],['../structarm__dct4__instance__q31.html#afa64b1618089e35c2b55cff71cb29715',1,'arm_dct4_instance_q31::Nby2()'],['../structarm__dct4__instance__q15.html#afa64b1618089e35c2b55cff71cb29715',1,'arm_dct4_instance_q15::Nby2()']]],
-  ['ndefrecord_5ft',['NdefRecord_t',['../struct_ndef_record__t.html',1,'']]],
   ['netstandard',['netStandard',['../structsf__user__config__t.html#ab90aa96aca46c0b99f92de71ca11d792',1,'sf_user_config_t']]],
   ['next',['next',['../structlist__element__tag.html#a4620116f3b0b7da92291c039d1966b23',1,'list_element_tag']]],
   ['nonmaskableint_5firqn',['NonMaskableInt_IRQn',['../group___interrupt__vector__numbers.html#gga666eb0caeb12ec0e281415592ae89083ade177d9c70c89e084093024b932a4e30',1,'K32L2B31A.h']]],
