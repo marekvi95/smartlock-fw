@@ -267,6 +267,7 @@ void masterProcedure(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
     #define KEY_MFC         0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF // default Mifare key
     #define WRITE_SIZE 17
     bool status;
+    status_t result;
     unsigned char Resp[256];
     unsigned char RespSize;
     /* Authenticate sector 1 with generic keys */
@@ -287,7 +288,21 @@ void masterProcedure(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
         return;
     }
 
-    /* 2. Get auth of the user */
+    /* 2. Erase and write flash */
+    result = eraseFlash();
+    if (!result)
+	{
+		printf("Error during flash erase\n");
+		return;
+	}
+    result = writeFlash();
+    if (!result)
+	{
+		printf("Error during flash write\n");
+		return;
+	}
+
+    /* 3. Get auth of the user */
     status = getAuth(RfIntf.Info.NFC_APP.NfcId, authKey, mifareKey);
     if (!status)
     {
@@ -301,7 +316,7 @@ void masterProcedure(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 
     memcpy(Auth + 3, mifareKey, MIFARE_SIZE); // Copy mifare key to auth from index 3
 
-    /* 3. Authenticate sector */
+    /* 4. Authenticate sector */
     status = NxpNci_ReaderTagCmd(Auth, sizeof(Auth), Resp, &RespSize);
     if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
     {
@@ -313,7 +328,7 @@ void masterProcedure(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
     WritePart2[0] = 0x10;
     memcpy(WritePart2 + 1, authKey, KEY_SIZE); // Copy keys to write array
 
-    /* 4. Write block with key */
+    /* 5. Write block with key */
     status = NxpNci_ReaderTagCmd(WritePart1, sizeof(WritePart1), Resp, &RespSize);
     if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
     {
@@ -329,7 +344,7 @@ void masterProcedure(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
     }
     PRINTF(" Block %d written\n", WritePart1[2]);
 
-    /* 5. Read block */
+    /* 6. Read block */
     status = NxpNci_ReaderTagCmd(Read, sizeof(Read), Resp, &RespSize);
     if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
     {
@@ -373,7 +388,7 @@ void readTag(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 
         if(masterFlag)
         {
-            master = false;
+            masterFlag = false;
             masterProcedure(RfIntf, sfDriverConfig);
             return;
         }
