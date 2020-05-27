@@ -252,7 +252,7 @@ status_t readKey(unsigned char * authKey, unsigned char * mifareKey)
     return status;
 }
 
-// TODO: Finish master procedure for adding new tags to DB
+#if defined(MASTER_MODE) && MASTER_MODE
 /**
  * @brief Master procedure is called when the master tag is detected
  *  - procedure for saving new tags to the DB
@@ -380,22 +380,26 @@ void readTag(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 		unsigned char mifareKey[MIFARE_SIZE] = {0};
         char msg[SF_MSG_SIZE] = {0};
         uint8_t authStatus = 0;
-        static bool masterFlag = false;
 
 		PRINTF("\tSENS_RES = 0x%.2x 0x%.2x\n", RfIntf.Info.NFC_APP.SensRes[0], RfIntf.Info.NFC_APP.SensRes[1]);
 		print_buf("\tNFCID = ", RfIntf.Info.NFC_APP.NfcId, RfIntf.Info.NFC_APP.NfcIdLen);
 		if(RfIntf.Info.NFC_APP.SelResLen != 0) PRINTF("\tSEL_RES = 0x%.2x\n", RfIntf.Info.NFC_APP.SelRes[0]);
 
+        #if defined(MASTER_MODE) && MASTER_MODE
+        static bool masterFlag = false;
+        
         if(masterFlag)
         {
             masterFlag = false;
             masterProcedure(RfIntf, sfDriverConfig);
             return;
         }
+        #endif
 
         memcpy(msg + 1, RfIntf.Info.NFC_APP.NfcId, UID_SIZE); // Copy UID to the first index of sigfox msg
         authStatus = getAuth(RfIntf.Info.NFC_APP.NfcId, keyDB, mifareKey); // Find tag in DB
-        
+
+        #if defined(MASTER_MODE) && MASTER_MODE
         /* if auth status > 1 master tag is detected */
         if(authStatus > 1)
         {

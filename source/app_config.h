@@ -48,4 +48,7 @@
  * Sector number is block/4 */
 #define BLK_NB_MFC 4
 
+/* Master mode allows inserting new tags */
+#define MASTER_MODE 0
+
 #endif /* APP_CONFIG_H_ */
