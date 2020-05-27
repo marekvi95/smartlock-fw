@@ -38,7 +38,6 @@ unsigned char DiscoveryTechnologies[] = {
     MODE_POLL | TECH_PASSIVE_NFCA,
 };
 
-
 /* Mode configuration according to the targeted modes of operation */
 unsigned mode = 0 | NXPNCI_MODE_RW;
 
@@ -53,10 +52,10 @@ inline static void unlock(void)
 	PRINTF("UNLOCKING \n");
 	__disable_irq();
 	GPIO_PinWrite(BOARD_INITPINS_PSAVE_GPIO, BOARD_INITPINS_PSAVE_PIN, 0);
-	GPIO_PinWrite(BOARD_INITPINS_IN1A_GPIO, BOARD_INITPINS_IN1A_PIN, 0);
-	GPIO_PinWrite(BOARD_INITPINS_IN2A_GPIO, BOARD_INITPINS_IN2A_PIN, 0);
-	GPIO_PinWrite(BOARD_INITPINS_IN1B_GPIO, BOARD_INITPINS_IN1B_PIN, 1);
-	GPIO_PinWrite(BOARD_INITPINS_IN2B_GPIO, BOARD_INITPINS_IN2B_PIN, 1);
+	GPIO_PinWrite(BOARD_INITPINS_IN1A_GPIO, BOARD_INITPINS_IN1A_PIN, 1);
+	GPIO_PinWrite(BOARD_INITPINS_IN2A_GPIO, BOARD_INITPINS_IN2A_PIN, 1);
+	GPIO_PinWrite(BOARD_INITPINS_IN1B_GPIO, BOARD_INITPINS_IN1B_PIN, 0);
+	GPIO_PinWrite(BOARD_INITPINS_IN2B_GPIO, BOARD_INITPINS_IN2B_PIN, 0);
 	WAIT_AML_WaitMs(SF_MOTOR_RUNTIME_MS);
 	GPIO_PinWrite(BOARD_INITPINS_IN1B_GPIO, BOARD_INITPINS_IN1B_PIN, 0);
 	GPIO_PinWrite(BOARD_INITPINS_IN2B_GPIO, BOARD_INITPINS_IN2B_PIN, 0);
@@ -72,10 +71,10 @@ inline static void lock(void)
 	PRINTF("LOCKING \n");
 	__disable_irq();
 	GPIO_PinWrite(BOARD_INITPINS_PSAVE_GPIO, BOARD_INITPINS_PSAVE_PIN, 0);
-	GPIO_PinWrite(BOARD_INITPINS_IN1A_GPIO, BOARD_INITPINS_IN1A_PIN, 1);
-	GPIO_PinWrite(BOARD_INITPINS_IN2A_GPIO, BOARD_INITPINS_IN2A_PIN, 1);
-	GPIO_PinWrite(BOARD_INITPINS_IN1B_GPIO, BOARD_INITPINS_IN1B_PIN, 0);
-	GPIO_PinWrite(BOARD_INITPINS_IN2B_GPIO, BOARD_INITPINS_IN2B_PIN, 0);
+	GPIO_PinWrite(BOARD_INITPINS_IN1A_GPIO, BOARD_INITPINS_IN1A_PIN, 0);
+	GPIO_PinWrite(BOARD_INITPINS_IN2A_GPIO, BOARD_INITPINS_IN2A_PIN, 0);
+	GPIO_PinWrite(BOARD_INITPINS_IN1B_GPIO, BOARD_INITPINS_IN1B_PIN, 1);
+	GPIO_PinWrite(BOARD_INITPINS_IN2B_GPIO, BOARD_INITPINS_IN2B_PIN, 1);
 	WAIT_AML_WaitMs(SF_MOTOR_RUNTIME_MS);
 	GPIO_PinWrite(BOARD_INITPINS_IN1A_GPIO, BOARD_INITPINS_IN1A_PIN, 0);
 	GPIO_PinWrite(BOARD_INITPINS_IN2A_GPIO, BOARD_INITPINS_IN2A_PIN, 0);
@@ -214,6 +213,7 @@ status_t readKey(unsigned char * authKey, unsigned char * mifareKey)
     unsigned char Resp[256];
     unsigned char RespSize;
     unsigned char Auth[AUTH_SIZE];
+    uint8_t retries = 0;
 
     /* Read block */
     unsigned char Read[] = {0x10, 0x30, BLK_NB_MFC};
@@ -311,13 +311,13 @@ void masterProcedure(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 
     /* 2. Erase and write flash */
     result = eraseFlash();
-    if (!result)
+    if (!(result))
 	{
 		printf("Error during flash erase\n");
 		return;
 	}
     result = writeFlash();
-    if (!result)
+    if (!(result))
 	{
 		printf("Error during flash write\n");
 		return;
@@ -375,6 +375,7 @@ void masterProcedure(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
     PRINTF(" Read block %d:", Read[2]); print_buf(" ", (Resp+1), RespSize-2);
     return;
 }
+#endif
 
 /**
  * @brief Displays information about the discovered cards
@@ -440,8 +441,11 @@ void readTag(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
                 masterFlag = true;
                 displayText("Master mode", "Next detected tag will be saved to DB");
 		    }
+            return;
         }
-		else if(authStatus)
+		#endif
+
+        if(authStatus)
 		{
 			PRINTF(" - UID approved\n");
             print_buf("Authentication KEY:", keyDB, KEY_SIZE);
@@ -557,9 +561,6 @@ void task_nfc(sf_drv_data_t* sfDriverConfig)
         if ((RfInterface.ModeTech & MODE_MASK) == MODE_POLL)
         {
             task_nfc_reader(RfInterface, sfDriverConfig);
-
-//            /* Start Discovery - Do not check the return value! It returns NXPNCI_ERROR in case NXP badge was read! */
-//            NxpNci_StartDiscovery(DiscoveryTechnologies,sizeof(DiscoveryTechnologies));
         }
         else
         {
