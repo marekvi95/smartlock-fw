@@ -224,8 +224,19 @@ status_t readKey(unsigned char * authKey, unsigned char * mifareKey)
 
     memcpy(Auth + 3, mifareKey, MIFARE_SIZE); // Copy mifare key to auth from index 3
 
-    /* Authenticate */
-    status |= NxpNci_ReaderTagCmd(Auth, sizeof(Auth), Resp, &RespSize);
+    /* Authenticate with three retries*/
+    do 
+    {
+        status = NxpNci_ReaderTagCmd(Auth, sizeof(Auth), Resp, &RespSize);
+        retries++;
+        printf("Retry number %d from 3\n", retries);
+
+        if (retries > 2)
+            break;
+
+    } while ((status == NFC_ERROR) || (Resp[RespSize-1] != 0));
+    
+    
     if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
     {
     	displayText("Auth. Error", "Try it again, authentication failed");
@@ -236,7 +247,17 @@ status_t readKey(unsigned char * authKey, unsigned char * mifareKey)
     PRINTF(" Authenticate sector %d succeed\n", Auth[1]);
 
     /* Read block */
-    status |= NxpNci_ReaderTagCmd(Read, sizeof(Read), Resp, &RespSize);
+    retries = 0;
+    do 
+    {
+        status = NxpNci_ReaderTagCmd(Read, sizeof(Read), Resp, &RespSize);
+        retries++;
+
+        if (retries > 2)
+            break;
+
+    } while ((status == NFC_ERROR) || (Resp[RespSize-1] != 0));
+    
     if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
     {
     	displayText("Key read NOK", "Key could not be read, try it again");
