@@ -144,7 +144,8 @@ void printDB()
  * @brief Insert user to the first free position in the DB
  *
  * @param uid pointer to array with UID
- * @return uint8_t 0 if user was inserted successfuly or -1 if the user is already there
+ * @return true if user was inserted successfuly or false if the user is already there or 
+ * if the DB is full
  */
 uint8_t insertUser(const unsigned char * uid)
 {
@@ -160,9 +161,10 @@ uint8_t insertUser(const unsigned char * uid)
 		else if(memcmp((*user_array_ptr)[i].uid, default_uid, UID_SIZE) == 0)
 		{
 			memcpy((*user_array_ptr)[i].uid, uid, UID_SIZE);
-			return 0;
+			return 1;
 		}
 	}
+	printf("DB is full\n");
 	return 0;
 }
 
@@ -170,7 +172,7 @@ uint8_t insertUser(const unsigned char * uid)
  * @brief delete UID from the DB (replace it with default UID)
  *
  * @param uid pointer to array with UID
- * @return uint8_t 0 if user was deleted successfuly
+ * @return true if user was deleted successfuly
  */
 uint8_t deleteUser(const unsigned char * uid)
 {
