@@ -1,9 +1,9 @@
 /*
  * nfc_task.c
- *
+ *  Authentication and reading of tags
  *  Created on: May 14, 2019
  *      Author: Marek Vitula
- *  Based on NXP NFC Library example
+ *  Some parts based on NXP NFC Library example
  */
 
 /*******************************************************************************
@@ -252,6 +252,94 @@ status_t readKey(unsigned char * authKey, unsigned char * mifareKey)
     return status;
 }
 
+// TODO: Finish master procedure for adding new tags to DB
+/**
+ * @brief Master procedure is called when the master tag is detected
+ *  - procedure for saving new tags to the DB
+ *   i. tag DB is inserted into DB
+ *   ii. authentication key is written to the tag
+ * 
+ * @param RfIntf 
+ * @param sfDriverConfig 
+ */
+void masterProcedure(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
+{    
+    #define KEY_MFC         0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF // default Mifare key
+    #define WRITE_SIZE 17
+    bool status;
+    unsigned char Resp[256];
+    unsigned char RespSize;
+    /* Authenticate sector 1 with generic keys */
+    unsigned char Auth[AUTH_SIZE];
+    /* Read block 4 */
+    unsigned char Read[] = {0x10, 0x30, BLK_NB_MFC};
+    /* Write block 4 */
+    unsigned char WritePart1[] = {0x10, 0xA0, BLK_NB_MFC};
+    unsigned char WritePart2[WRITE_SIZE];
+    unsigned char authKey[KEY_SIZE] = {0};
+	unsigned char mifareKey[MIFARE_SIZE] = {0};
+
+    /* 1. Insert UID to the user DB */
+    status = insertUser(RfIntf.Info.NFC_APP.NfcId);
+    if (!status)
+    {
+        PRINTF("Master procedure failed, cannot insert user \n");
+        return;
+    }
+
+    /* 2. Get auth of the user */
+    status = getAuth(RfIntf.Info.NFC_APP.NfcId, authKey, mifareKey);
+    if (!status)
+    {
+        PRINTF("Master procedure failed, cannot get auth of new user \n");
+        return;
+    }
+
+    Auth[0] = 0x40; // authentication command
+    Auth[1] = BLK_NB_MFC/4; // sector number
+    Auth[2] = 0x10;
+
+    memcpy(Auth + 3, mifareKey, MIFARE_SIZE); // Copy mifare key to auth from index 3
+
+    /* 3. Authenticate sector */
+    status = NxpNci_ReaderTagCmd(Auth, sizeof(Auth), Resp, &RespSize);
+    if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
+    {
+        PRINTF(" Authenticate sector %d failed with error 0x%02x\n", Auth[1], Resp[RespSize-1]);
+        return;
+    }
+    PRINTF(" Authenticate sector %d succeed\n", Auth[1]);
+
+    WritePart2[0] = 0x10;
+    memcpy(WritePart2 + 1, authKey, KEY_SIZE); // Copy keys to write array
+
+    /* 4. Write block with key */
+    status = NxpNci_ReaderTagCmd(WritePart1, sizeof(WritePart1), Resp, &RespSize);
+    if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
+    {
+        PRINTF(" Write block %d failed with error 0x%02x\n", WritePart1[2], Resp[RespSize-1]);
+        return;
+    }
+
+    status = NxpNci_ReaderTagCmd(WritePart2, sizeof(WritePart2), Resp, &RespSize);
+    if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
+    {
+        PRINTF(" Write block %d failed with error 0x%02x\n", WritePart1[2], Resp[RespSize-1]);
+        return;
+    }
+    PRINTF(" Block %d written\n", WritePart1[2]);
+
+    /* 5. Read block */
+    status = NxpNci_ReaderTagCmd(Read, sizeof(Read), Resp, &RespSize);
+    if((status == NFC_ERROR) || (Resp[RespSize-1] != 0))
+    {
+        PRINTF(" Read failed with error 0x%02x\n", Resp[RespSize-1]);
+        return;
+    }
+    PRINTF(" Read block %d:", Read[2]); print_buf(" ", (Resp+1), RespSize-2);
+    return;
+}
+
 /**
  * @brief Displays information about the discovered cards
  * 
@@ -276,18 +364,48 @@ void readTag(NxpNci_RfIntf_t RfIntf, sf_drv_data_t* sfDriverConfig)
 		unsigned char keyRead[KEY_SIZE] = {0};
 		unsigned char mifareKey[MIFARE_SIZE] = {0};
         char msg[SF_MSG_SIZE] = {0};
+        uint8_t authStatus = 0;
+        static bool masterFlag = false;
 
 		PRINTF("\tSENS_RES = 0x%.2x 0x%.2x\n", RfIntf.Info.NFC_APP.SensRes[0], RfIntf.Info.NFC_APP.SensRes[1]);
 		print_buf("\tNFCID = ", RfIntf.Info.NFC_APP.NfcId, RfIntf.Info.NFC_APP.NfcIdLen);
 		if(RfIntf.Info.NFC_APP.SelResLen != 0) PRINTF("\tSEL_RES = 0x%.2x\n", RfIntf.Info.NFC_APP.SelRes[0]);
 
-        memcpy(msg + 1, RfIntf.Info.NFC_APP.NfcId, UID_SIZE); // Copy UID to the first index of sigfox msg
+        if(masterFlag)
+        {
+            master = false;
+            masterProcedure(RfIntf, sfDriverConfig);
+            return;
+        }
 
-		if(getAuth(RfIntf.Info.NFC_APP.NfcId, keyDB, mifareKey))
+        memcpy(msg + 1, RfIntf.Info.NFC_APP.NfcId, UID_SIZE); // Copy UID to the first index of sigfox msg
+        authStatus = getAuth(RfIntf.Info.NFC_APP.NfcId, keyDB, mifareKey); // Find tag in DB
+        
+        /* if auth status > 1 master tag is detected */
+        if(authStatus > 1)
+        {
+            PRINTF(" - Master UID approved\n");
+            print_buf("Authentication KEY:", keyDB, KEY_SIZE);
+            print_buf("\nMifare KEY", mifareKey, MIFARE_SIZE);
+
+			readKey(keyRead, mifareKey); // Read key from the NFC tag
+
+		    if (memcmp(keyDB, keyRead, KEY_SIZE) == 0) // Compare key with the DB
+		    {
+		        // null array
+		    	memset(keyRead, 0, KEY_SIZE);
+		    	memset(keyDB, 0, KEY_SIZE);
+                PRINTF(" - Master Key approved\n");    
+                /* set master flag, next card that will be detected will be saved to DB */
+                masterFlag = true;
+                displayText("Master mode", "Next detected tag will be saved to DB");
+		    }
+        }
+		else if(authStatus)
 		{
 			PRINTF(" - UID approved\n");
-			PRINTF("Authentication KEY: %s\n", keyDB);
-			PRINTF("Mifare KEY: %s\n", mifareKey);
+            print_buf("Authentication KEY:", keyDB, KEY_SIZE);
+            print_buf("\nMifare KEY", mifareKey, MIFARE_SIZE);
 
 			readKey(keyRead, mifareKey); // Read key from the NFC tag
 
