@@ -208,7 +208,7 @@ uint8_t deleteUser(const unsigned char * uid)
 uint8_t getAuth(unsigned char* uid, unsigned char* authKey, unsigned char* mifareKey)
 {
 	user_array_ptr = (user_t(*)[])destAdrss;
-	
+
 	if (memcmp(uid, default_uid, UID_SIZE) == 0)
 	{
 		printf("Error: cannot get authentication for default UID\n");

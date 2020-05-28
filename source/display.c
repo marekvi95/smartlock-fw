@@ -152,7 +152,7 @@ uint8_t getBatteryMsg()
 	#define LOW_MSG 1
 
 	uint8_t batt;
-	
+
 	if (status.charging)
 		batt = CHARGING_MSG;
 	else if (status.battery > 60)
